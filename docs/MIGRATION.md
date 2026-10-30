@@ -1,5 +1,7 @@
 # GitHub移行の準備結果
 
+これは2026-10-30 21:55 JST時点の初回準備記録です。その後のGitHub作成・取込み・実CIの結果は[MIGRATION-GITHUB.md](MIGRATION-GITHUB.md)を参照してください。以下の未作成・未実行という記載は当時の状態を保持しています。
+
 **総合PARTIAL。ローカル移行準備は完了、GitHub正式移行は未完了。Stage 3 HOLD。** 2026-10-30 JST。
 
 ## GitHub確認と操作の境界
