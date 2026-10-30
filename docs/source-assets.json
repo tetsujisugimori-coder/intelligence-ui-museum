@@ -1,0 +1,37 @@
+[
+  {
+    "filename": "intelligence-ui-museum-v09-117-exhibits(1).html",
+    "sha256": "17a02c1f914d98150910616e6b29c72a49bc2531a54a44e09ca2377e60e06dee",
+    "size_bytes": 293338
+  },
+  {
+    "filename": "intelligence-ui-museum-v09-117-exhibits.html",
+    "sha256": "17a02c1f914d98150910616e6b29c72a49bc2531a54a44e09ca2377e60e06dee",
+    "size_bytes": 293338
+  },
+  {
+    "filename": "intelligence-ui-museum-v09-package.zip",
+    "sha256": "e81aaa30336534b136e8af2357f51e7d1360030bb68c21e7b256bebbb8d733c9",
+    "size_bytes": 69190
+  },
+  {
+    "filename": "intelligence-ui-museum-v09-verification.md",
+    "sha256": "759ac60319813bd59e725f0d975b40983ba7045d26a0ada7adf1c082780a698c",
+    "size_bytes": 3365
+  },
+  {
+    "filename": "intelligence-ui-museum-v10-stage2r2-package.zip",
+    "sha256": "392da9aff33a05bc71a0bb4a823a199bb43fc3a9229308fe045aee72486f382a",
+    "size_bytes": 18720777
+  },
+  {
+    "filename": "intelligence-ui-museum-v09-117-exhibits-final.html",
+    "sha256": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97",
+    "size_bytes": 293948
+  },
+  {
+    "filename": "intelligence-ui-museum-stage2r2-independent-review-20261030.zip",
+    "sha256": "5cb2c03b83340f8261b451a00332fd89aafa6f9404c5b74863fe858b1d99c3c4",
+    "size_bytes": 2325434
+  }
+]

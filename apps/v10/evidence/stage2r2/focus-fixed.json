@@ -1,0 +1,18 @@
+{
+  "active": true,
+  "clearance": 0.453125,
+  "clipRight": 295,
+  "focusVisible": true,
+  "offset": "4px",
+  "outline": "rgb(209, 118, 36) solid 3px",
+  "rect": {
+    "bottom": 482.015625,
+    "height": 64,
+    "left": 21,
+    "right": 287.546875,
+    "top": 418.015625,
+    "width": 266.546875,
+    "x": 21,
+    "y": 418.015625
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "version": "0.1.0",
+  "name": "intelligence-ui-official-lab",
+  "dependencies": {
+    "@openai/apps-sdk-ui": {
+      "version": "0.2.2",
+      "resolved": "https://registry.npmjs.org/@openai/apps-sdk-ui/-/apps-sdk-ui-0.2.2.tgz",
+      "overridden": false,
+      "dependencies": {
+        "lodash": {
+          "version": "4.17.21",
+          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz",
+          "overridden": false
+        },
+        "rehype-katex": {
+          "version": "7.0.1",
+          "resolved": "https://registry.npmjs.org/rehype-katex/-/rehype-katex-7.0.1.tgz",
+          "overridden": false,
+          "dependencies": {
+            "katex": {
+              "version": "0.16.47",
+              "resolved": "https://registry.npmjs.org/katex/-/katex-0.16.47.tgz",
+              "overridden": false
+            }
+          }
+        },
+        "remark-math": {
+          "version": "6.0.0",
+          "resolved": "https://registry.npmjs.org/remark-math/-/remark-math-6.0.0.tgz",
+          "overridden": false,
+          "dependencies": {
+            "micromark-extension-math": {
+              "version": "3.1.0",
+              "resolved": "https://registry.npmjs.org/micromark-extension-math/-/micromark-extension-math-3.1.0.tgz",
+              "overridden": false,
+              "dependencies": {
+                "katex": {
+                  "version": "0.16.47"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

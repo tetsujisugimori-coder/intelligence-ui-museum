@@ -1,0 +1,218 @@
+{
+  "_id": "@openai/apps-sdk-ui@0.2.2",
+  "_rev": "13-65b17cf35b0fe50ccd836386a1cd2a99",
+  "name": "@openai/apps-sdk-ui",
+  "dist-tags": {
+    "latest": "0.2.2"
+  },
+  "versions": [
+    "0.1.0",
+    "0.2.0",
+    "0.2.1",
+    "0.2.2"
+  ],
+  "time": {
+    "created": "2025-11-20T09:35:55.615Z",
+    "modified": "2026-08-13T21:18:24.563Z",
+    "0.1.0": "2025-11-20T09:35:55.987Z",
+    "0.2.0": "2025-11-23T16:07:53.523Z",
+    "0.2.1": "2025-12-01T16:48:32.246Z",
+    "0.2.2": "2026-05-05T19:26:09.485Z"
+  },
+  "bugs": {
+    "url": "https://github.com/openai/apps-sdk-ui/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/openai/apps-sdk-ui#readme",
+  "repository": {
+    "url": "git+https://github.com/openai/apps-sdk-ui.git",
+    "type": "git"
+  },
+  "description": "Design system for building apps for ChatGPT with Apps SDK",
+  "maintainers": [
+    "dylan-hurd-openai <dylan.hurd@openai.com>",
+    "moustafa-openai <moustafa@openai.com>",
+    "tylersmith-openai <tylersmith@openai.com>",
+    "atty-openai <atty@openai.com>",
+    "tibo-openai <tibo@openai.com>",
+    "dkundel-openai <dkundel@openai.com>",
+    "mbolin-openai <mbolin@openai.com>",
+    "fouad-openai <fouad@openai.com>",
+    "easong-openai <easong@openai.com>",
+    "aibrahim-openai <ahmedibrhm32@gmail.com>",
+    "apcha-oai <apcha@openai.com>",
+    "seratch-openai <seratch@openai.com>",
+    "gabor-openai <gabor@openai.com>"
+  ],
+  "readmeFilename": "README.md",
+  "_contentLength": 31516,
+  "version": "0.2.2",
+  "dist": {
+    "shasum": "82b1c1da43253a87fb1533785e75117f2e202683",
+    "tarball": "https://registry.npmjs.org/@openai/apps-sdk-ui/-/apps-sdk-ui-0.2.2.tgz",
+    "fileCount": 2645,
+    "integrity": "sha512-KaG+6qcVCKVRe51wr2te68OKoHfjRQPDVVkugxiF+SaZlgLpNbxOfyrL/FyUBmHbjh1q4p7eWDYAd75jHseZ9A==",
+    "signatures": [
+      {
+        "sig": "MEUCIQDDAve5GqONUORevbNG0cGSRPsat6VGIag4IqWoJEStpAIgM/CngLCSigDr2A1dF0u4MVzvCyjk6UmbRgqc+oPnkLo=",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      }
+    ],
+    "attestations": {
+      "url": "https://registry.npmjs.org/-/npm/v1/attestations/@openai%2fapps-sdk-ui@0.2.2",
+      "provenance": {
+        "predicateType": "https://slsa.dev/provenance/v1"
+      }
+    },
+    "unpackedSize": 4186008
+  },
+  "exports": {
+    "./css": "./dist/es/styles/index.css",
+    "./theme": {
+      "types": "./dist/types/lib/theme.d.ts",
+      "default": "./dist/es/lib/theme.js"
+    },
+    "./helpers": {
+      "types": "./dist/types/lib/helpers.d.ts",
+      "default": "./dist/es/lib/helpers.js"
+    },
+    "./hooks/*": {
+      "types": "./dist/types/hooks/*.d.ts",
+      "default": "./dist/es/hooks/*.js"
+    },
+    "./dateUtils": {
+      "types": "./dist/types/lib/dateUtils.d.ts",
+      "default": "./dist/es/lib/dateUtils.js"
+    },
+    "./userAgent": {
+      "types": "./dist/types/lib/userAgent.d.ts",
+      "default": "./dist/es/lib/userAgent.js"
+    },
+    "./components/*": {
+      "types": "./dist/types/components/*/index.d.ts",
+      "default": "./dist/es/components/*/index.js"
+    }
+  },
+  "gitHead": "0f00143c7a639906f1621fe58e1b6be7b5bea46d",
+  "private": false,
+  "scripts": {
+    "lint": "npm run lint:ts && npm run lint:css",
+    "test": "vitest run",
+    "build": "npm run build:clean && npm run build:js && npm run build:css && npm run build:assets",
+    "types": "tsc",
+    "format": "prettier --check --cache --ignore-path .gitignore --ignore-path .prettierignore '**/*.{js,jsx,ts,tsx,json,css,md}'",
+    "lint:ts": "eslint . --ignore-pattern dist --ignore-pattern node_modules",
+    "build:js": "tsc -p tsconfig.build.json",
+    "lint:css": "stylelint \"src/**/*.css\" --ignore-path .stylelintignore",
+    "build:css": "node ./scripts/build-css.mjs",
+    "storybook": "storybook dev -p 6006 --config-dir .storybook-base",
+    "format:fix": "prettier --write --cache --ignore-path .gitignore --ignore-path .prettierignore '**/*.{js,jsx,ts,tsx,json,css,md}'",
+    "build:clean": "rm -rf dist",
+    "build:assets": "rsync -a --include='*/' --include='*.d.ts' --exclude='*' src/ dist/types/",
+    "prepublishOnly": "npm run format:fix && npm run lint && npm run types && npm run test && npm run build",
+    "build-storybook": "storybook build --disable-telemetry --config-dir .storybook-base"
+  },
+  "_npmUser": "GitHub Actions <npm-oidc-no-reply@github.com>",
+  "_npmVersion": "11.13.0",
+  "directories": {},
+  "_nodeVersion": "22.14.0",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "luxon": "3.7.1",
+    "lodash": "4.17.21",
+    "radix-ui": "^1.1.3",
+    "remark-gfm": "^4.0.0",
+    "remark-math": "6.0.0",
+    "usehooks-ts": "^3.1.1",
+    "rehype-katex": "7.0.1",
+    "remark-breaks": "^4.0.0",
+    "react-markdown": "^9.0.3",
+    "react-merge-refs": "^2.1.1",
+    "remark-directive": "^3.0.1",
+    "unist-util-visit": "^5.0.0",
+    "react-syntax-highlighter": "^16.1.0"
+  },
+  "_hasShrinkwrap": false,
+  "devDependencies": {
+    "vite": "6.2.4",
+    "jsdom": "24.1.3",
+    "react": "19.0.0",
+    "eslint": "^9.19.0",
+    "openai": "4.87.3",
+    "rollup": "4.35.0",
+    "vitest": "^2.1.5",
+    "globals": "^15.14.0",
+    "postcss": "^8",
+    "prettier": "3.2.5",
+    "happy-dom": "20.0.10",
+    "react-dom": "19.0.0",
+    "storybook": "^8.6.12",
+    "stylelint": "16.18.0",
+    "@eslint/js": "^9.19.0",
+    "@types/mdx": "^2.0.13",
+    "typescript": "5.7.3",
+    "tailwindcss": "4.0.10",
+    "@types/jsdom": "21.1.7",
+    "@types/luxon": "3.6.2",
+    "@types/mdast": "^4.0.4",
+    "@types/react": "19.0.8",
+    "autoprefixer": "10.4.20",
+    "react-router": "^7.1.5",
+    "@mdx-js/react": "^3.1.0",
+    "@types/lodash": "4.17.16",
+    "@mdx-js/rollup": "^3.1.0",
+    "postcss-mixins": "^11.0.3",
+    "postcss-nested": "^7.0.2",
+    "stylelint-scss": "6.12.1",
+    "@storybook/test": "^8.6.12",
+    "stylelint-order": "^6.0.4",
+    "@storybook/react": "^8.6.12",
+    "@types/react-dom": "19.0.3",
+    "@storybook/blocks": "^8.6.12",
+    "eslint-plugin-mdx": "^3.1.5",
+    "postcss-functions": "^4.0.2",
+    "rollup-plugin-dts": "6.2.3",
+    "typescript-eslint": "^8.22.0",
+    "@storybook/theming": "^8.6.12",
+    "eslint-plugin-path": "1.4.0-beta.0",
+    "stylelint-prettier": "^5.0.3",
+    "eslint-plugin-react": "^7.37.4",
+    "vite-tsconfig-paths": "5.1.4",
+    "@tailwindcss/postcss": "4.0.17",
+    "@testing-library/dom": "10.4.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "postcss-value-parser": "4.2.0",
+    "@storybook/components": "^8.6.12",
+    "@storybook/react-vite": "^8.6.12",
+    "@types/postcss-mixins": "9.0.6",
+    "@storybook/addon-links": "^8.6.12",
+    "@storybook/manager-api": "^8.6.12",
+    "@testing-library/react": "16.3.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-storybook": "^0.11.3",
+    "postcss-selector-parser": "7.1.0",
+    "@chromatic-com/storybook": "^3.2.4",
+    "@types/postcss-functions": "4.0.4",
+    "@storybook/addon-toolbars": "^8.6.12",
+    "@testing-library/jest-dom": "^6.5.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "stylelint-config-standard": "^37.0.0",
+    "@storybook/addon-essentials": "^8.6.12",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "@storybook/addon-storysource": "^8.6.12",
+    "eslint-plugin-react-compiler": "19.0.0-beta-27714ef-20250124",
+    "@happy-dom/global-registrator": "20.0.10",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "prettier-plugin-organize-imports": "4.1.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "tailwindcss": "^4.0.10"
+  },
+  "_npmOperationalInternal": {
+    "tmp": "tmp/apps-sdk-ui_0.2.2_1778009169240_0.7759916745772297",
+    "host": "s3://npm-registry-packages-npm-production"
+  }
+}

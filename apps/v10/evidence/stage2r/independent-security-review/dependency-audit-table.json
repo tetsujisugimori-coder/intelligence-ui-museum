@@ -1,0 +1,144 @@
+[
+  {
+    "package": "@openai/apps-sdk-ui",
+    "version": "0.2.2",
+    "severity": "moderate",
+    "direct": true,
+    "advisories": [],
+    "inheritedFindings": [
+      "lodash",
+      "rehype-katex",
+      "remark-math"
+    ],
+    "fixAvailableInNpmAudit": false,
+    "disposition": "HOLD",
+    "reason": "Full source dependency-tree exposure/acceptance unresolved; narrow static six-component distribution acceptance is only a proposal, not authorized."
+  },
+  {
+    "package": "katex",
+    "version": "0.16.47",
+    "severity": "low",
+    "direct": false,
+    "advisories": [
+      {
+        "source": 1241206,
+        "name": "katex",
+        "dependency": "katex",
+        "title": "KaTeX: Existing prototype pollution can bypass trust restrictions",
+        "url": "https://github.com/advisories/GHSA-238p-pmpm-9mq7",
+        "severity": "low",
+        "cwe": [
+          "CWE-807"
+        ],
+        "cvss": {
+          "score": 0,
+          "vectorString": null
+        },
+        "range": ">=0.11.0 <0.18.2"
+      }
+    ],
+    "inheritedFindings": [],
+    "fixAvailableInNpmAudit": true,
+    "disposition": "HOLD",
+    "reason": "Full source dependency-tree exposure/acceptance unresolved; narrow static six-component distribution acceptance is only a proposal, not authorized."
+  },
+  {
+    "package": "lodash",
+    "version": "4.17.21",
+    "severity": "high",
+    "direct": false,
+    "advisories": [
+      {
+        "source": 1115806,
+        "name": "lodash",
+        "dependency": "lodash",
+        "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc",
+        "severity": "high",
+        "cwe": [
+          "CWE-94"
+        ],
+        "cvss": {
+          "score": 8.1,
+          "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        "range": ">=4.0.0 <=4.17.23"
+      },
+      {
+        "source": 1115810,
+        "name": "lodash",
+        "dependency": "lodash",
+        "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh",
+        "severity": "moderate",
+        "cwe": [
+          "CWE-1321"
+        ],
+        "cvss": {
+          "score": 6.5,
+          "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        },
+        "range": "<=4.17.23"
+      },
+      {
+        "source": 1120370,
+        "name": "lodash",
+        "dependency": "lodash",
+        "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg",
+        "severity": "moderate",
+        "cwe": [
+          "CWE-1321"
+        ],
+        "cvss": {
+          "score": 6.5,
+          "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        },
+        "range": ">=4.0.0 <=4.17.22"
+      }
+    ],
+    "inheritedFindings": [],
+    "fixAvailableInNpmAudit": false,
+    "disposition": "HOLD",
+    "reason": "Full source dependency-tree exposure/acceptance unresolved; narrow static six-component distribution acceptance is only a proposal, not authorized."
+  },
+  {
+    "package": "micromark-extension-math",
+    "version": "3.1.0",
+    "severity": "low",
+    "direct": false,
+    "advisories": [],
+    "inheritedFindings": [
+      "katex"
+    ],
+    "fixAvailableInNpmAudit": true,
+    "disposition": "HOLD",
+    "reason": "Full source dependency-tree exposure/acceptance unresolved; narrow static six-component distribution acceptance is only a proposal, not authorized."
+  },
+  {
+    "package": "rehype-katex",
+    "version": "7.0.1",
+    "severity": "low",
+    "direct": false,
+    "advisories": [],
+    "inheritedFindings": [
+      "katex"
+    ],
+    "fixAvailableInNpmAudit": true,
+    "disposition": "HOLD",
+    "reason": "Full source dependency-tree exposure/acceptance unresolved; narrow static six-component distribution acceptance is only a proposal, not authorized."
+  },
+  {
+    "package": "remark-math",
+    "version": "6.0.0",
+    "severity": "low",
+    "direct": false,
+    "advisories": [],
+    "inheritedFindings": [
+      "micromark-extension-math"
+    ],
+    "fixAvailableInNpmAudit": true,
+    "disposition": "HOLD",
+    "reason": "Full source dependency-tree exposure/acceptance unresolved; narrow static six-component distribution acceptance is only a proposal, not authorized."
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "baseline_sha256": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97",
+  "count": 117,
+  "ids_1_to_117": true,
+  "unique_names": 117,
+  "categories": [
+    "AI UI",
+    "OpenAI UI研究室",
+    "アニメーション",
+    "インタラクション",
+    "カード",
+    "データ表示",
+    "ナビゲーション",
+    "ボタン",
+    "ローディング",
+    "入力",
+    "通知"
+  ],
+  "viewer_dataset_equal": true,
+  "public_dist_original_equal": true,
+  "public_dist_viewer_equal": true,
+  "scope": "static dataset and artifact bytes only, no exhibit runtime assertions",
+  "supplied_baseline_manifest_sha256": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97",
+  "baseline_hash_matches": true
+}

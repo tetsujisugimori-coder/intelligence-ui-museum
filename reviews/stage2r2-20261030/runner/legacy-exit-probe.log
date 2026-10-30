@@ -1,0 +1,26 @@
+{"scope":"isolated actual entry, injected engine launch failure, no browser","legacyExit":0,"fixedExit":1}
+✔ complete GREEN matrix (6.783249ms)
+✔ reject assert (0.503284ms)
+✔ reject engine (0.375155ms)
+✔ reject missing (0.376306ms)
+✔ reject duplicate (0.334195ms)
+✔ reject unfinished (0.347905ms)
+✔ reject empty (0.342186ms)
+✔ reject missingAssert (1.361493ms)
+✔ reject fakeGreen (0.315696ms)
+✔ reject duplicateAssert (0.330408ms)
+✔ reject error (0.259043ms)
+✔ reject unexpected (0.511075ms)
+✔ only explicit original visibility RED permitted (0.50732ms)
+✔ nonreproduced baseline RED fails (0.321255ms)
+✔ smoke noJS count and incomplete reports fail (0.118995ms)
+✔ stage2r-browser.cjs real entry launch failure -> nonzero (72.028957ms)
+✔ stage2r-smoke.cjs real entry launch failure -> nonzero (93.356909ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 331.033318

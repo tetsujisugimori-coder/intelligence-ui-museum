@@ -1,0 +1,22 @@
+{
+  "scope": "independent record arithmetic and filesystem hashes, not browser replay",
+  "rows": 16,
+  "conditions_unique": 16,
+  "AX_value_count_geometry_failures": [],
+  "unconfirmed_focus": [
+    [
+      "320",
+      "200",
+      "dark"
+    ],
+    [
+      "1280",
+      "100",
+      "light"
+    ]
+  ],
+  "build_first_second_equal": true,
+  "expected_dist_files": 8,
+  "current_expected_dist_hash_mismatches": [],
+  "extra_current_dist_files": []
+}

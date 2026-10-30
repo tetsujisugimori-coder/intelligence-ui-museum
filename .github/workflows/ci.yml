@@ -1,0 +1,54 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  preservation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/verify-migration.py
+      - run: npm run test:runner
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: apps/v10/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/prepare-work.py
+      - run: npm ci --ignore-scripts
+        working-directory: .work/v10
+      - run: npm run build
+        working-directory: .work/v10
+      - run: npm test
+        working-directory: .work/v10
+      - run: node scripts/verify-baseline.mjs
+        working-directory: .work/v10
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-verification-${{ github.sha }}
+          path: |
+            .work/v10/dist/
+            .work/v10/evidence/authenticity-tests.json

@@ -1,0 +1,7 @@
+{
+  "scope": "current clean dist exact map to installed official files by node_modules suffix; not fresh tarball re-download",
+  "map": "dist/assets/index-ItwAwdWS.js.map",
+  "map_sha256": "f9f0f77cf8db1730dc8c337639419b0305ba7c0704dee6cd1b42b6497df39fbe",
+  "official_sources": 38,
+  "mismatch": []
+}

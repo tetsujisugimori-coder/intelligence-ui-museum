@@ -1,0 +1,152 @@
+[
+  {
+    "viewport": 320,
+    "case": "provenance_all",
+    "ok": true
+  },
+  {
+    "viewport": 320,
+    "case": "descriptions_all",
+    "ok": true
+  },
+  {
+    "viewport": 320,
+    "case": "stages_rendered",
+    "ok": true
+  },
+  {
+    "viewport": 320,
+    "case": "no_body_overflow",
+    "ok": true
+  },
+  {
+    "viewport": 320,
+    "case": "search_106",
+    "ok": true
+  },
+  {
+    "viewport": 320,
+    "case": "search_115",
+    "ok": true
+  },
+  {
+    "viewport": 320,
+    "case": "zoom_200_percent_no_body_overflow",
+    "ok": true
+  },
+  {
+    "viewport": 375,
+    "case": "provenance_all",
+    "ok": true
+  },
+  {
+    "viewport": 375,
+    "case": "descriptions_all",
+    "ok": true
+  },
+  {
+    "viewport": 375,
+    "case": "stages_rendered",
+    "ok": true
+  },
+  {
+    "viewport": 375,
+    "case": "no_body_overflow",
+    "ok": true
+  },
+  {
+    "viewport": 375,
+    "case": "search_106",
+    "ok": true
+  },
+  {
+    "viewport": 375,
+    "case": "search_115",
+    "ok": true
+  },
+  {
+    "viewport": 375,
+    "case": "zoom_200_percent_no_body_overflow",
+    "ok": true
+  },
+  {
+    "viewport": 390,
+    "case": "provenance_all",
+    "ok": true
+  },
+  {
+    "viewport": 390,
+    "case": "descriptions_all",
+    "ok": true
+  },
+  {
+    "viewport": 390,
+    "case": "stages_rendered",
+    "ok": true
+  },
+  {
+    "viewport": 390,
+    "case": "no_body_overflow",
+    "ok": true
+  },
+  {
+    "viewport": 390,
+    "case": "search_106",
+    "ok": true
+  },
+  {
+    "viewport": 390,
+    "case": "search_115",
+    "ok": true
+  },
+  {
+    "viewport": 390,
+    "case": "zoom_200_percent_no_body_overflow",
+    "ok": true
+  },
+  {
+    "viewport": 1280,
+    "case": "provenance_all",
+    "ok": true
+  },
+  {
+    "viewport": 1280,
+    "case": "descriptions_all",
+    "ok": true
+  },
+  {
+    "viewport": 1280,
+    "case": "stages_rendered",
+    "ok": true
+  },
+  {
+    "viewport": 1280,
+    "case": "no_body_overflow",
+    "ok": true
+  },
+  {
+    "viewport": 1280,
+    "case": "search_106",
+    "ok": true
+  },
+  {
+    "viewport": 1280,
+    "case": "search_115",
+    "ok": true
+  },
+  {
+    "viewport": 1280,
+    "case": "zoom_200_percent_no_body_overflow",
+    "ok": true
+  },
+  {
+    "viewport": 1280,
+    "case": "108_drop_filename",
+    "ok": true
+  },
+  {
+    "viewport": 1280,
+    "case": "107_paste",
+    "ok": true
+  }
+]

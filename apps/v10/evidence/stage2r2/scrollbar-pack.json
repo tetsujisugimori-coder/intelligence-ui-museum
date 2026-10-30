@@ -1,0 +1,151 @@
+[
+  {
+    "id": "react-remove-scroll-bar@2.3.8",
+    "name": "react-remove-scroll-bar",
+    "version": "2.3.8",
+    "size": 4937,
+    "unpackedSize": 24936,
+    "shasum": "99c20f908ee467b385b68a3469b4a3e750012223",
+    "integrity": "sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==",
+    "filename": "react-remove-scroll-bar-2.3.8.tgz",
+    "files": [
+      {
+        "path": "README.md",
+        "size": 1716,
+        "mode": 420
+      },
+      {
+        "path": "constants/package.json",
+        "size": 234,
+        "mode": 420
+      },
+      {
+        "path": "dist/es5/component.d.ts",
+        "size": 415,
+        "mode": 420
+      },
+      {
+        "path": "dist/es5/component.js",
+        "size": 3807,
+        "mode": 420
+      },
+      {
+        "path": "dist/es5/constants.d.ts",
+        "size": 415,
+        "mode": 420
+      },
+      {
+        "path": "dist/es5/constants.js",
+        "size": 571,
+        "mode": 420
+      },
+      {
+        "path": "dist/es5/index.d.ts",
+        "size": 332,
+        "mode": 420
+      },
+      {
+        "path": "dist/es5/index.js",
+        "size": 1186,
+        "mode": 420
+      },
+      {
+        "path": "dist/es5/utils.d.ts",
+        "size": 328,
+        "mode": 420
+      },
+      {
+        "path": "dist/es5/utils.js",
+        "size": 1156,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2015/component.d.ts",
+        "size": 415,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2015/component.js",
+        "size": 3395,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2015/constants.d.ts",
+        "size": 415,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2015/constants.js",
+        "size": 375,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2015/index.d.ts",
+        "size": 332,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2015/index.js",
+        "size": 332,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2015/utils.d.ts",
+        "size": 328,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2015/utils.js",
+        "size": 998,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2019/component.d.ts",
+        "size": 415,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2019/component.js",
+        "size": 2811,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2019/constants.d.ts",
+        "size": 415,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2019/constants.js",
+        "size": 383,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2019/index.d.ts",
+        "size": 332,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2019/index.js",
+        "size": 332,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2019/utils.d.ts",
+        "size": 328,
+        "mode": 420
+      },
+      {
+        "path": "dist/es2019/utils.js",
+        "size": 949,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 2221,
+        "mode": 420
+      }
+    ],
+    "entryCount": 27,
+    "bundled": []
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "node": "v24.22.1",
+  "npm": "11.9.0",
+  "browser": "CUA cloud Chromium; exact browser build not exposed by used API",
+  "native_runner_browser_path": "NOT RUN"
+}

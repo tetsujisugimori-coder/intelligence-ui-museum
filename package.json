@@ -1,0 +1,10 @@
+{
+  "name": "intelligence-ui-museum",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "verify:migration": "python3 scripts/verify-migration.py",
+    "test:runner": "cd apps/v10 && node --test scripts/stage2r-runner.test.cjs",
+    "prepare:work": "python3 scripts/prepare-work.py"
+  }
+}

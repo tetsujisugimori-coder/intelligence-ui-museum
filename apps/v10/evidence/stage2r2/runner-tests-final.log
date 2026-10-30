@@ -1,0 +1,25 @@
+✔ complete GREEN matrix (2.383118ms)
+✔ reject assert (0.53278ms)
+✔ reject engine (1.123396ms)
+✔ reject missing (0.336154ms)
+✔ reject duplicate (0.318108ms)
+✔ reject unfinished (0.405709ms)
+✔ reject empty (0.359019ms)
+✔ reject missingAssert (0.330386ms)
+✔ reject fakeGreen (0.388703ms)
+✔ reject duplicateAssert (1.0461ms)
+✔ reject error (0.261202ms)
+✔ reject unexpected (0.509245ms)
+✔ only explicit original visibility RED permitted (0.93293ms)
+✔ nonreproduced baseline RED fails (0.406691ms)
+✔ smoke noJS count and incomplete reports fail (0.15309ms)
+✔ stage2r-browser.cjs real entry launch failure -> nonzero (91.135415ms)
+✔ stage2r-smoke.cjs real entry launch failure -> nonzero (65.77537ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 282.351619

@@ -1,0 +1,37 @@
+{
+  "type": "supplied evidence reanalysis, not new browser execution",
+  "records": 16,
+  "unique_conditions": 16,
+  "both_AX_match_count_1": 16,
+  "value_a_to_b": 16,
+  "no_page_overflow_both": 16,
+  "focus_active_visible": 14,
+  "focus_unconfirmed": [
+    {
+      "width": "320",
+      "theme": "dark",
+      "text": "200",
+      "buttonFocus": {
+        "active": false,
+        "clipRight": 295,
+        "offset": "0px",
+        "outline": "rgb(13, 13, 13) none 3px",
+        "right": 287.546875,
+        "visible": false
+      }
+    },
+    {
+      "width": "1280",
+      "theme": "light",
+      "text": "100",
+      "buttonFocus": {
+        "active": false,
+        "clipRight": 1215.609375,
+        "offset": "0px",
+        "outline": "rgb(255, 255, 255) none 3px",
+        "right": 209.640625,
+        "visible": false
+      }
+    }
+  ]
+}

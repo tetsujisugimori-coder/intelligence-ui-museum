@@ -1,0 +1,28 @@
+{
+  "active": false,
+  "ancestor": {
+    "bottom": 2020.3125,
+    "height": 2639.203125,
+    "left": 14,
+    "right": 296,
+    "top": -618.890625,
+    "width": 282,
+    "x": 14,
+    "y": -618.890625
+  },
+  "bodyEntirelyHidden": false,
+  "clipRight": 1.546875,
+  "focusVisible": false,
+  "offset": "0px",
+  "outline": "rgb(255, 255, 255) none 3px",
+  "rect": {
+    "bottom": 482.015625,
+    "height": 64,
+    "left": 23,
+    "right": 289.546875,
+    "top": 418.015625,
+    "width": 266.546875,
+    "x": 23,
+    "y": 418.015625
+  }
+}

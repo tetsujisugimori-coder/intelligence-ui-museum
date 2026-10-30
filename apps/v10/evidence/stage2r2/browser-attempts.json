@@ -1,0 +1,24 @@
+{
+  "attempts": [
+    {
+      "condition": "390/light/root100 initial keyboard matrix",
+      "result": "selector deadline; partial run excluded from final matrix"
+    },
+    {
+      "measurement": "TreeWalker",
+      "result": "unsupported read-only API; replaced with recursive childNodes and Range"
+    },
+    {
+      "measurement": "parseFloat in evaluate",
+      "result": "unsupported API; actual CSS strings recorded and fixed known 3+4 outline calculated outside"
+    },
+    {
+      "measurement": "hidden input getAttribute",
+      "result": "selector deadline; replaced with html read-only DOM value query"
+    },
+    {
+      "retry": "full keyboard/focus retry after public auth check",
+      "result": "Runtime.evaluate timeout, not completed; no browser success inferred"
+    }
+  ]
+}

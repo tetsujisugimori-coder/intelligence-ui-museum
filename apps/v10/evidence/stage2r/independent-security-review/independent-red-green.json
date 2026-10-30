@@ -1,0 +1,178 @@
+[
+  {
+    "engine": "chromium",
+    "version": "before",
+    "name": "Button",
+    "text": "公式ボタンを実行",
+    "rect": {
+      "x": 31,
+      "y": 150.15625,
+      "width": 287.8125,
+      "height": 64,
+      "top": 150.15625,
+      "right": 318.8125,
+      "bottom": 214.15625,
+      "left": 31
+    },
+    "clips": [
+      {
+        "class": "exhibit",
+        "right": 318.8125,
+        "clipRight": 305
+      }
+    ],
+    "textClips": [],
+    "visible": false
+  },
+  {
+    "engine": "chromium",
+    "version": "before",
+    "name": "Select",
+    "text": "表示モード：一覧",
+    "rect": {
+      "x": 31,
+      "y": 150.21875,
+      "width": 258,
+      "height": 64,
+      "top": 150.21875,
+      "right": 289,
+      "bottom": 214.21875,
+      "left": 31
+    },
+    "clips": [],
+    "textClips": [
+      {
+        "text": "一覧",
+        "right": 286.90625,
+        "clipRight": 243.09375
+      }
+    ],
+    "visible": false
+  },
+  {
+    "engine": "chromium",
+    "version": "after",
+    "name": "Button",
+    "text": "公式ボタンを実行",
+    "rect": {
+      "x": 23,
+      "y": 150.15625,
+      "width": 266.53125,
+      "height": 64,
+      "top": 150.15625,
+      "right": 289.53125,
+      "bottom": 214.15625,
+      "left": 23
+    },
+    "clips": [],
+    "textClips": [],
+    "visible": true
+  },
+  {
+    "engine": "chromium",
+    "version": "after",
+    "name": "Select",
+    "text": "一覧",
+    "rect": {
+      "x": 23,
+      "y": 149.828125,
+      "width": 274,
+      "height": 64,
+      "top": 149.828125,
+      "right": 297,
+      "bottom": 213.828125,
+      "left": 23
+    },
+    "clips": [],
+    "textClips": [],
+    "visible": true
+  },
+  {
+    "engine": "webkit",
+    "version": "before",
+    "name": "Button",
+    "text": "公式ボタンを実行",
+    "rect": {
+      "x": 31,
+      "y": 150.15625,
+      "width": 287.828125,
+      "height": 64,
+      "top": 150.15625,
+      "right": 318.828125,
+      "bottom": 214.15625,
+      "left": 31
+    },
+    "clips": [
+      {
+        "class": "exhibit",
+        "right": 318.828125,
+        "clipRight": 305
+      }
+    ],
+    "textClips": [],
+    "visible": false
+  },
+  {
+    "engine": "webkit",
+    "version": "before",
+    "name": "Select",
+    "text": "表示モード：一覧",
+    "rect": {
+      "x": 31,
+      "y": 150.21875,
+      "width": 258,
+      "height": 64,
+      "top": 150.21875,
+      "right": 289,
+      "bottom": 214.21875,
+      "left": 31
+    },
+    "clips": [],
+    "textClips": [
+      {
+        "text": "一覧",
+        "right": 286.9072265625,
+        "clipRight": 243.09375
+      }
+    ],
+    "visible": false
+  },
+  {
+    "engine": "webkit",
+    "version": "after",
+    "name": "Button",
+    "text": "公式ボタンを実行",
+    "rect": {
+      "x": 23,
+      "y": 150.15625,
+      "width": 266.546875,
+      "height": 64,
+      "top": 150.15625,
+      "right": 289.546875,
+      "bottom": 214.15625,
+      "left": 23
+    },
+    "clips": [],
+    "textClips": [],
+    "visible": true
+  },
+  {
+    "engine": "webkit",
+    "version": "after",
+    "name": "Select",
+    "text": "一覧",
+    "rect": {
+      "x": 23,
+      "y": 150.828125,
+      "width": 274,
+      "height": 64,
+      "top": 150.828125,
+      "right": 297,
+      "bottom": 214.828125,
+      "left": 23
+    },
+    "clips": [],
+    "textClips": [],
+    "visible": true
+  }
+]

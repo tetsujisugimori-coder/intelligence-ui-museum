@@ -1,0 +1,68 @@
+[
+  {
+    "component": "Button",
+    "package": "@openai/apps-sdk-ui",
+    "version": "0.2.2",
+    "source_commit": "0f00143c7a639906f1621fe58e1b6be7b5bea46d",
+    "import": "import { Button } from '@openai/apps-sdk-ui/components/Button';",
+    "v09_id": 82,
+    "v09_name": "SDK Button styles",
+    "official_modified": false,
+    "custom_role": "React state, observation output, explanation, comparison frame; no host bridge"
+  },
+  {
+    "component": "Badge",
+    "package": "@openai/apps-sdk-ui",
+    "version": "0.2.2",
+    "source_commit": "0f00143c7a639906f1621fe58e1b6be7b5bea46d",
+    "import": "import { Badge } from '@openai/apps-sdk-ui/components/Badge';",
+    "v09_id": null,
+    "v09_name": "比較対象なし",
+    "official_modified": false,
+    "custom_role": "React state, observation output, explanation, comparison frame; no host bridge"
+  },
+  {
+    "component": "Select",
+    "package": "@openai/apps-sdk-ui",
+    "version": "0.2.2",
+    "source_commit": "0f00143c7a639906f1621fe58e1b6be7b5bea46d",
+    "import": "import { Select } from '@openai/apps-sdk-ui/components/Select';",
+    "v09_id": 16,
+    "v09_name": "Select",
+    "official_modified": false,
+    "custom_role": "React state, observation output, explanation, comparison frame; no host bridge"
+  },
+  {
+    "component": "Switch",
+    "package": "@openai/apps-sdk-ui",
+    "version": "0.2.2",
+    "source_commit": "0f00143c7a639906f1621fe58e1b6be7b5bea46d",
+    "import": "import { Switch } from '@openai/apps-sdk-ui/components/Switch';",
+    "v09_id": 85,
+    "v09_name": "SDK Switch",
+    "official_modified": false,
+    "custom_role": "React state, observation output, explanation, comparison frame; no host bridge"
+  },
+  {
+    "component": "Tooltip",
+    "package": "@openai/apps-sdk-ui",
+    "version": "0.2.2",
+    "source_commit": "0f00143c7a639906f1621fe58e1b6be7b5bea46d",
+    "import": "import { Tooltip } from '@openai/apps-sdk-ui/components/Tooltip';",
+    "v09_id": 47,
+    "v09_name": "Tooltip",
+    "official_modified": false,
+    "custom_role": "React state, observation output, explanation, comparison frame; no host bridge"
+  },
+  {
+    "component": "Alert",
+    "package": "@openai/apps-sdk-ui",
+    "version": "0.2.2",
+    "source_commit": "0f00143c7a639906f1621fe58e1b6be7b5bea46d",
+    "import": "import { Alert } from '@openai/apps-sdk-ui/components/Alert';",
+    "v09_id": 86,
+    "v09_name": "SDK Alert",
+    "official_modified": false,
+    "custom_role": "React state, observation output, explanation, comparison frame; no host bridge"
+  }
+]

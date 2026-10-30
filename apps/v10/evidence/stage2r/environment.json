@@ -1,0 +1,11 @@
+{
+  "node": "v24.22.1",
+  "playwright": "1.62.1",
+  "platform": "linux",
+  "release": "6.18.55",
+  "arch": "x64",
+  "chromium": "153.0.8010.0 @sparticuz/chromium153.0.0 binary (test-only external installation)",
+  "webkit": "26.5 Playwright webkit2336",
+  "fonts": "Noto CJK",
+  "setup": "WebKit shared libraries extracted from Ubuntu snapshot .deb into scratch; custom browser launcher; official app packages untouched"
+}

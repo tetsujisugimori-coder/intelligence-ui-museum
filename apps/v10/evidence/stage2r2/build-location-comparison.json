@@ -1,0 +1,6 @@
+{
+  "clean_outside_vs_final_dist_differences": [
+    "assets/index-ItwAwdWS.js.map"
+  ],
+  "note": "source map relative paths depend on output directory; final-dist same-location two-build equality is authoritative"
+}

@@ -1,0 +1,13 @@
+{
+  "src/main.tsx": "00619ab95d037862711c12f1c7233f152186e2704b96ef079614d40a683115f3",
+  "src/main.css": "445e598ab07bd068265ec0c2717cdd29611157537e582b0db217a5cc398fee9e",
+  "index.html": "4e8b4f8159ad6c9e6399920ba8a7c5ca8ef2c16ec17b69ac859ad20de2c8fe4f",
+  "package.json": "465450a25a4fba6112b0173aeab0b3bbce10d98a583d5b68e37636ebdea50c75",
+  "package-lock.json": "d62b5a4f1ffeb6d5463ea64304f561dbef919a30c96050defd115c8b81ae1b46",
+  "scripts/verify-baseline.mjs": "548640e53d3b26fba87be76feac25b7ee41b85e51c1f5da0cd4f84d4d7ea7f2a",
+  "scripts/stage2r-browser.cjs": "c8b2792d0213ec2facaf343a6ebe34a8fe636e4ed40b1e5f542cd03e228c9aa4",
+  "scripts/licenses.mjs": "f6fcb5aa85003c9f9a537b33b74a4332a4d982cd9704ecc834d61eb9c0f86a4d",
+  "public/THIRD_PARTY_NOTICES.txt": "e1335c421d3b5da01c742b4c3013836b1f77bf7449bc6f02a9893a477508eeab",
+  "dist/THIRD_PARTY_NOTICES.txt": "e1335c421d3b5da01c742b4c3013836b1f77bf7449bc6f02a9893a477508eeab",
+  "docs/stage2r-license-review.md": "63141fbe8386f47f949b748a5cbb763b46964290e9fd1473b0d4b21a39889a8a"
+}

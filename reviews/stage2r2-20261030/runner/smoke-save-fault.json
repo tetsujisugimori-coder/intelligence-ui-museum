@@ -1,0 +1,35 @@
+{
+  "scope": "unmodified submitted runner with synthetic browser API, NOT real product/browser result",
+  "exitCode": 1,
+  "observations": [
+    {
+      "event": "alert-click",
+      "clicks": 1,
+      "closed": true
+    },
+    {
+      "event": "alert-click",
+      "clicks": 2,
+      "closed": true
+    },
+    {
+      "event": "uncaught-pageerror",
+      "handled": false
+    },
+    {
+      "event": "alert-click",
+      "clicks": 1,
+      "closed": true
+    },
+    {
+      "event": "alert-click",
+      "clicks": 2,
+      "closed": true
+    },
+    {
+      "event": "uncaught-pageerror",
+      "handled": false
+    }
+  ],
+  "captures": []
+}

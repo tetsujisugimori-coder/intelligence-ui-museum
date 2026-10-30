@@ -1,0 +1,4613 @@
+{
+  "records": [
+    {
+      "width": "320",
+      "text": "100",
+      "theme": "light",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 1275.75,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": 1243.75,
+            "width": 133.25,
+            "x": 21,
+            "y": 1243.75
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 1268.75,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": 1249.75,
+                "width": 112,
+                "x": 31.625,
+                "y": 1249.75
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 310,
+        "root": "16px",
+        "scroll": 310,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 3303.5,
+            "height": 32,
+            "left": 23,
+            "right": 287,
+            "top": 3271.5,
+            "width": 264,
+            "x": 23,
+            "y": 3271.5
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3296.5,
+                "height": 19,
+                "left": 38.953125,
+                "right": 66.953125,
+                "top": 3277.5,
+                "width": 28,
+                "x": 38.953125,
+                "y": 3277.5
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 295,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 154.25,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": -1562.25,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": -1594.25,
+            "width": 133.25,
+            "x": 21,
+            "y": -1594.25
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -1569.25,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": -1588.25,
+                "width": 112,
+                "x": 31.625,
+                "y": -1588.25
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 310,
+        "root": "16px",
+        "scroll": 310,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 465.5,
+            "height": 32,
+            "left": 23,
+            "right": 287,
+            "top": 433.5,
+            "width": 264,
+            "x": 23,
+            "y": 433.5
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 458.5,
+                "height": 19,
+                "left": 38.953125,
+                "right": 80.953125,
+                "top": 439.5,
+                "width": 42,
+                "x": 38.953125,
+                "y": 439.5
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "320",
+      "text": "200",
+      "theme": "light",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 3646.015625,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": 3582.015625,
+            "width": 266.546875,
+            "x": 21,
+            "y": 3582.015625
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3633.015625,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": 3595.015625,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": 3595.015625
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 310,
+        "root": "32px",
+        "scroll": 310,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 8212.078125,
+            "height": 64,
+            "left": 23,
+            "right": 287,
+            "top": 8148.078125,
+            "width": 264,
+            "x": 23,
+            "y": 8148.078125
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 8199.078125,
+                "height": 38,
+                "left": 54.90625,
+                "right": 110.921875,
+                "top": 8161.078125,
+                "width": 56.015625,
+                "x": 54.90625,
+                "y": 8161.078125
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 295,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 287.546875,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": -4083.984375,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": -4147.984375,
+            "width": 266.546875,
+            "x": 21,
+            "y": -4147.984375
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -4096.984375,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": -4134.984375,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": -4134.984375
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 310,
+        "root": "32px",
+        "scroll": 310,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 482.078125,
+            "height": 64,
+            "left": 23,
+            "right": 287,
+            "top": 418.078125,
+            "width": 264,
+            "x": 23,
+            "y": 418.078125
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 469.078125,
+                "height": 38,
+                "left": 54.90625,
+                "right": 138.921875,
+                "top": 431.078125,
+                "width": 84.015625,
+                "x": 54.90625,
+                "y": 431.078125
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "375",
+      "text": "100",
+      "theme": "light",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 1167,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": 1135,
+            "width": 133.25,
+            "x": 21,
+            "y": 1135
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 1160,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": 1141,
+                "width": 112,
+                "x": 31.625,
+                "y": 1141
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 365,
+        "root": "16px",
+        "scroll": 365,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 3086,
+            "height": 32,
+            "left": 23,
+            "right": 342,
+            "top": 3054,
+            "width": 319,
+            "x": 23,
+            "y": 3054
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3079,
+                "height": 19,
+                "left": 38.953125,
+                "right": 66.953125,
+                "top": 3060,
+                "width": 28,
+                "x": 38.953125,
+                "y": 3060
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 350,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 154.25,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": -1453,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": -1485,
+            "width": 133.25,
+            "x": 21,
+            "y": -1485
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -1460,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": -1479,
+                "width": 112,
+                "x": 31.625,
+                "y": -1479
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 365,
+        "root": "16px",
+        "scroll": 365,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 466,
+            "height": 32,
+            "left": 23,
+            "right": 342,
+            "top": 434,
+            "width": 319,
+            "x": 23,
+            "y": 434
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 459,
+                "height": 19,
+                "left": 38.953125,
+                "right": 80.953125,
+                "top": 440,
+                "width": 42,
+                "x": 38.953125,
+                "y": 440
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "375",
+      "text": "200",
+      "theme": "light",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 3187.671875,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": 3123.671875,
+            "width": 266.546875,
+            "x": 21,
+            "y": 3123.671875
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3174.671875,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": 3136.671875,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": 3136.671875
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 365,
+        "root": "32px",
+        "scroll": 365,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 7241,
+            "height": 64,
+            "left": 23,
+            "right": 342,
+            "top": 7177,
+            "width": 319,
+            "x": 23,
+            "y": 7177
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 7228,
+                "height": 38,
+                "left": 54.90625,
+                "right": 110.921875,
+                "top": 7190,
+                "width": 56.015625,
+                "x": 54.90625,
+                "y": 7190
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 350,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 287.546875,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": -3571.328125,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": -3635.328125,
+            "width": 266.546875,
+            "x": 21,
+            "y": -3635.328125
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -3584.328125,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": -3622.328125,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": -3622.328125
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 365,
+        "root": "32px",
+        "scroll": 365,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 482,
+            "height": 64,
+            "left": 23,
+            "right": 342,
+            "top": 418,
+            "width": 319,
+            "x": 23,
+            "y": 418
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 469,
+                "height": 38,
+                "left": 54.90625,
+                "right": 138.921875,
+                "top": 431,
+                "width": 84.015625,
+                "x": 54.90625,
+                "y": 431
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "320",
+      "text": "100",
+      "theme": "dark",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 1275.75,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": 1243.75,
+            "width": 133.25,
+            "x": 21,
+            "y": 1243.75
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 1268.75,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": 1249.75,
+                "width": 112,
+                "x": 31.625,
+                "y": 1249.75
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 310,
+        "root": "16px",
+        "scroll": 310,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 3303.5,
+            "height": 32,
+            "left": 23,
+            "right": 287,
+            "top": 3271.5,
+            "width": 264,
+            "x": 23,
+            "y": 3271.5
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3296.5,
+                "height": 19,
+                "left": 38.953125,
+                "right": 66.953125,
+                "top": 3277.5,
+                "width": 28,
+                "x": 38.953125,
+                "y": 3277.5
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 295,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 154.25,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": -1562.25,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": -1594.25,
+            "width": 133.25,
+            "x": 21,
+            "y": -1594.25
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -1569.25,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": -1588.25,
+                "width": 112,
+                "x": 31.625,
+                "y": -1588.25
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 310,
+        "root": "16px",
+        "scroll": 310,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 465.5,
+            "height": 32,
+            "left": 23,
+            "right": 287,
+            "top": 433.5,
+            "width": 264,
+            "x": 23,
+            "y": 433.5
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 458.5,
+                "height": 19,
+                "left": 38.953125,
+                "right": 80.953125,
+                "top": 439.5,
+                "width": 42,
+                "x": 38.953125,
+                "y": 439.5
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "320",
+      "text": "200",
+      "theme": "dark",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 3646.015625,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": 3582.015625,
+            "width": 266.546875,
+            "x": 21,
+            "y": 3582.015625
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3633.015625,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": 3595.015625,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": 3595.015625
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 310,
+        "root": "32px",
+        "scroll": 310,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 8212.078125,
+            "height": 64,
+            "left": 23,
+            "right": 287,
+            "top": 8148.078125,
+            "width": 264,
+            "x": 23,
+            "y": 8148.078125
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 8199.078125,
+                "height": 38,
+                "left": 54.90625,
+                "right": 110.921875,
+                "top": 8161.078125,
+                "width": 56.015625,
+                "x": 54.90625,
+                "y": 8161.078125
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": false,
+        "clipRight": 295,
+        "offset": "0px",
+        "outline": "rgb(13, 13, 13) none 3px",
+        "right": 287.546875,
+        "visible": false
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": -4083.984375,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": -4147.984375,
+            "width": 266.546875,
+            "x": 21,
+            "y": -4147.984375
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -4096.984375,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": -4134.984375,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": -4134.984375
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 310,
+        "root": "32px",
+        "scroll": 310,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 482.078125,
+            "height": 64,
+            "left": 23,
+            "right": 287,
+            "top": 418.078125,
+            "width": 264,
+            "x": 23,
+            "y": 418.078125
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 469.078125,
+                "height": 38,
+                "left": 54.90625,
+                "right": 138.921875,
+                "top": 431.078125,
+                "width": 84.015625,
+                "x": 54.90625,
+                "y": 431.078125
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "375",
+      "text": "100",
+      "theme": "dark",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 1167,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": 1135,
+            "width": 133.25,
+            "x": 21,
+            "y": 1135
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 1160,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": 1141,
+                "width": 112,
+                "x": 31.625,
+                "y": 1141
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 365,
+        "root": "16px",
+        "scroll": 365,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 3086,
+            "height": 32,
+            "left": 23,
+            "right": 342,
+            "top": 3054,
+            "width": 319,
+            "x": 23,
+            "y": 3054
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3079,
+                "height": 19,
+                "left": 38.953125,
+                "right": 66.953125,
+                "top": 3060,
+                "width": 28,
+                "x": 38.953125,
+                "y": 3060
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 350,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 154.25,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": -1453,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": -1485,
+            "width": 133.25,
+            "x": 21,
+            "y": -1485
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -1460,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": -1479,
+                "width": 112,
+                "x": 31.625,
+                "y": -1479
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 365,
+        "root": "16px",
+        "scroll": 365,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 466,
+            "height": 32,
+            "left": 23,
+            "right": 342,
+            "top": 434,
+            "width": 319,
+            "x": 23,
+            "y": 434
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 459,
+                "height": 19,
+                "left": 38.953125,
+                "right": 80.953125,
+                "top": 440,
+                "width": 42,
+                "x": 38.953125,
+                "y": 440
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "375",
+      "text": "200",
+      "theme": "dark",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 3187.671875,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": 3123.671875,
+            "width": 266.546875,
+            "x": 21,
+            "y": 3123.671875
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3174.671875,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": 3136.671875,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": 3136.671875
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 365,
+        "root": "32px",
+        "scroll": 365,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 7241,
+            "height": 64,
+            "left": 23,
+            "right": 342,
+            "top": 7177,
+            "width": 319,
+            "x": 23,
+            "y": 7177
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 7228,
+                "height": 38,
+                "left": 54.90625,
+                "right": 110.921875,
+                "top": 7190,
+                "width": 56.015625,
+                "x": 54.90625,
+                "y": 7190
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 350,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 287.546875,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": -3571.328125,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": -3635.328125,
+            "width": 266.546875,
+            "x": 21,
+            "y": -3635.328125
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -3584.328125,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": -3622.328125,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": -3622.328125
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 365,
+        "root": "32px",
+        "scroll": 365,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 482,
+            "height": 64,
+            "left": 23,
+            "right": 342,
+            "top": 418,
+            "width": 319,
+            "x": 23,
+            "y": 418
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 469,
+                "height": 38,
+                "left": 54.90625,
+                "right": 138.921875,
+                "top": 431,
+                "width": 84.015625,
+                "x": 54.90625,
+                "y": 431
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "390",
+      "text": "100",
+      "theme": "light",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 1131,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": 1099,
+            "width": 133.25,
+            "x": 21,
+            "y": 1099
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 1124,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": 1105,
+                "width": 112,
+                "x": 31.625,
+                "y": 1105
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 380,
+        "root": "16px",
+        "scroll": 380,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 3050,
+            "height": 32,
+            "left": 23,
+            "right": 357,
+            "top": 3018,
+            "width": 334,
+            "x": 23,
+            "y": 3018
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3043,
+                "height": 19,
+                "left": 38.953125,
+                "right": 66.953125,
+                "top": 3024,
+                "width": 28,
+                "x": 38.953125,
+                "y": 3024
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 365,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 154.25,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": -1453,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": -1485,
+            "width": 133.25,
+            "x": 21,
+            "y": -1485
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -1460,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": -1479,
+                "width": 112,
+                "x": 31.625,
+                "y": -1479
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 380,
+        "root": "16px",
+        "scroll": 380,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 466,
+            "height": 32,
+            "left": 23,
+            "right": 357,
+            "top": 434,
+            "width": 334,
+            "x": 23,
+            "y": 434
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 459,
+                "height": 19,
+                "left": 38.953125,
+                "right": 80.953125,
+                "top": 440,
+                "width": 42,
+                "x": 38.953125,
+                "y": 440
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "390",
+      "text": "200",
+      "theme": "light",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 3024.5,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": 2960.5,
+            "width": 266.546875,
+            "x": 21,
+            "y": 2960.5
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3011.5,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": 2973.5,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": 2973.5
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 380,
+        "root": "32px",
+        "scroll": 380,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 7023.4375,
+            "height": 64,
+            "left": 23,
+            "right": 357,
+            "top": 6959.4375,
+            "width": 334,
+            "x": 23,
+            "y": 6959.4375
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 7010.4375,
+                "height": 38,
+                "left": 54.90625,
+                "right": 110.921875,
+                "top": 6972.4375,
+                "width": 56.015625,
+                "x": 54.90625,
+                "y": 6972.4375
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 365,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 287.546875,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": -3516.5,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": -3580.5,
+            "width": 266.546875,
+            "x": 21,
+            "y": -3580.5
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -3529.5,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": -3567.5,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": -3567.5
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 380,
+        "root": "32px",
+        "scroll": 380,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 482.4375,
+            "height": 64,
+            "left": 23,
+            "right": 357,
+            "top": 418.4375,
+            "width": 334,
+            "x": 23,
+            "y": 418.4375
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 469.4375,
+                "height": 38,
+                "left": 54.90625,
+                "right": 138.921875,
+                "top": 431.4375,
+                "width": 84.015625,
+                "x": 54.90625,
+                "y": 431.4375
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "1280",
+      "text": "100",
+      "theme": "light",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 826.71875,
+            "height": 32,
+            "left": 76.390625,
+            "right": 209.640625,
+            "top": 794.71875,
+            "width": 133.25,
+            "x": 76.390625,
+            "y": 794.71875
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 819.71875,
+                "height": 19,
+                "left": 87.015625,
+                "right": 199.015625,
+                "top": 800.71875,
+                "width": 112,
+                "x": 87.015625,
+                "y": 800.71875
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 1270,
+        "root": "16px",
+        "scroll": 1270,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 2078.65625,
+            "height": 32,
+            "left": 76.390625,
+            "right": 612.5,
+            "top": 2046.65625,
+            "width": 536.109375,
+            "x": 76.390625,
+            "y": 2046.65625
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 2071.65625,
+                "height": 19,
+                "left": 92.34375,
+                "right": 120.34375,
+                "top": 2052.65625,
+                "width": 28,
+                "x": 92.34375,
+                "y": 2052.65625
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": false,
+        "clipRight": 1215.609375,
+        "offset": "0px",
+        "outline": "rgb(255, 255, 255) none 3px",
+        "right": 209.640625,
+        "visible": false
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": -786.28125,
+            "height": 32,
+            "left": 76.390625,
+            "right": 209.640625,
+            "top": -818.28125,
+            "width": 133.25,
+            "x": 76.390625,
+            "y": -818.28125
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -793.28125,
+                "height": 19,
+                "left": 87.015625,
+                "right": 199.015625,
+                "top": -812.28125,
+                "width": 112,
+                "x": 87.015625,
+                "y": -812.28125
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 1270,
+        "root": "16px",
+        "scroll": 1270,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 465.65625,
+            "height": 32,
+            "left": 76.390625,
+            "right": 612.5,
+            "top": 433.65625,
+            "width": 536.109375,
+            "x": 76.390625,
+            "y": 433.65625
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 458.65625,
+                "height": 19,
+                "left": 92.34375,
+                "right": 134.34375,
+                "top": 439.65625,
+                "width": 42,
+                "x": 92.34375,
+                "y": 439.65625
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "1280",
+      "text": "200",
+      "theme": "light",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 1483.09375,
+            "height": 64,
+            "left": 76.390625,
+            "right": 342.9375,
+            "top": 1419.09375,
+            "width": 266.546875,
+            "x": 76.390625,
+            "y": 1419.09375
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 1470.09375,
+                "height": 38,
+                "left": 97.65625,
+                "right": 321.671875,
+                "top": 1432.09375,
+                "width": 224.015625,
+                "x": 97.65625,
+                "y": 1432.09375
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 1270,
+        "root": "32px",
+        "scroll": 1270,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 3421,
+            "height": 64,
+            "left": 76.390625,
+            "right": 612.5,
+            "top": 3357,
+            "width": 536.109375,
+            "x": 76.390625,
+            "y": 3357
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3408,
+                "height": 38,
+                "left": 108.296875,
+                "right": 164.3125,
+                "top": 3370,
+                "width": 56.015625,
+                "x": 108.296875,
+                "y": 3370
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 1215.609375,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 342.9375,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": -1455.90625,
+            "height": 64,
+            "left": 76.390625,
+            "right": 342.9375,
+            "top": -1519.90625,
+            "width": 266.546875,
+            "x": 76.390625,
+            "y": -1519.90625
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -1468.90625,
+                "height": 38,
+                "left": 97.65625,
+                "right": 321.671875,
+                "top": -1506.90625,
+                "width": 224.015625,
+                "x": 97.65625,
+                "y": -1506.90625
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 1270,
+        "root": "32px",
+        "scroll": 1270,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 482,
+            "height": 64,
+            "left": 76.390625,
+            "right": 612.5,
+            "top": 418,
+            "width": 536.109375,
+            "x": 76.390625,
+            "y": 418
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 469,
+                "height": 38,
+                "left": 108.296875,
+                "right": 192.3125,
+                "top": 431,
+                "width": 84.015625,
+                "x": 108.296875,
+                "y": 431
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "390",
+      "text": "100",
+      "theme": "dark",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 1131,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": 1099,
+            "width": 133.25,
+            "x": 21,
+            "y": 1099
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 1124,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": 1105,
+                "width": 112,
+                "x": 31.625,
+                "y": 1105
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 380,
+        "root": "16px",
+        "scroll": 380,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 3050,
+            "height": 32,
+            "left": 23,
+            "right": 357,
+            "top": 3018,
+            "width": 334,
+            "x": 23,
+            "y": 3018
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3043,
+                "height": 19,
+                "left": 38.953125,
+                "right": 66.953125,
+                "top": 3024,
+                "width": 28,
+                "x": 38.953125,
+                "y": 3024
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 365,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 154.25,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": -1453,
+            "height": 32,
+            "left": 21,
+            "right": 154.25,
+            "top": -1485,
+            "width": 133.25,
+            "x": 21,
+            "y": -1485
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -1460,
+                "height": 19,
+                "left": 31.625,
+                "right": 143.625,
+                "top": -1479,
+                "width": 112,
+                "x": 31.625,
+                "y": -1479
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 380,
+        "root": "16px",
+        "scroll": 380,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 466,
+            "height": 32,
+            "left": 23,
+            "right": 357,
+            "top": 434,
+            "width": 334,
+            "x": 23,
+            "y": 434
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 459,
+                "height": 19,
+                "left": 38.953125,
+                "right": 80.953125,
+                "top": 440,
+                "width": 42,
+                "x": 38.953125,
+                "y": 440
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "390",
+      "text": "200",
+      "theme": "dark",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 3024.5,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": 2960.5,
+            "width": 266.546875,
+            "x": 21,
+            "y": 2960.5
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3011.5,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": 2973.5,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": 2973.5
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 380,
+        "root": "32px",
+        "scroll": 380,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 7023.4375,
+            "height": 64,
+            "left": 23,
+            "right": 357,
+            "top": 6959.4375,
+            "width": 334,
+            "x": 23,
+            "y": 6959.4375
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 7010.4375,
+                "height": 38,
+                "left": 54.90625,
+                "right": 110.921875,
+                "top": 6972.4375,
+                "width": 56.015625,
+                "x": 54.90625,
+                "y": 6972.4375
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 365,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 287.546875,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": -3516.5,
+            "height": 64,
+            "left": 21,
+            "right": 287.546875,
+            "top": -3580.5,
+            "width": 266.546875,
+            "x": 21,
+            "y": -3580.5
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -3529.5,
+                "height": 38,
+                "left": 42.265625,
+                "right": 266.28125,
+                "top": -3567.5,
+                "width": 224.015625,
+                "x": 42.265625,
+                "y": -3567.5
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 380,
+        "root": "32px",
+        "scroll": 380,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 482.4375,
+            "height": 64,
+            "left": 23,
+            "right": 357,
+            "top": 418.4375,
+            "width": 334,
+            "x": 23,
+            "y": 418.4375
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 469.4375,
+                "height": 38,
+                "left": 54.90625,
+                "right": 138.921875,
+                "top": 431.4375,
+                "width": 84.015625,
+                "x": 54.90625,
+                "y": 431.4375
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "1280",
+      "text": "100",
+      "theme": "dark",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 826.71875,
+            "height": 32,
+            "left": 76.390625,
+            "right": 209.640625,
+            "top": 794.71875,
+            "width": 133.25,
+            "x": 76.390625,
+            "y": 794.71875
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 819.71875,
+                "height": 19,
+                "left": 87.015625,
+                "right": 199.015625,
+                "top": 800.71875,
+                "width": 112,
+                "x": 87.015625,
+                "y": 800.71875
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 1270,
+        "root": "16px",
+        "scroll": 1270,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 2078.65625,
+            "height": 32,
+            "left": 76.390625,
+            "right": 612.5,
+            "top": 2046.65625,
+            "width": 536.109375,
+            "x": 76.390625,
+            "y": 2046.65625
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 2071.65625,
+                "height": 19,
+                "left": 92.34375,
+                "right": 120.34375,
+                "top": 2052.65625,
+                "width": 28,
+                "x": 92.34375,
+                "y": 2052.65625
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 1215.609375,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 209.640625,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": -786.28125,
+            "height": 32,
+            "left": 76.390625,
+            "right": 209.640625,
+            "top": -818.28125,
+            "width": 133.25,
+            "x": 76.390625,
+            "y": -818.28125
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -793.28125,
+                "height": 19,
+                "left": 87.015625,
+                "right": 199.015625,
+                "top": -812.28125,
+                "width": 112,
+                "x": 87.015625,
+                "y": -812.28125
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 1270,
+        "root": "16px",
+        "scroll": 1270,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "14px",
+          "rect": {
+            "bottom": 465.65625,
+            "height": 32,
+            "left": 76.390625,
+            "right": 612.5,
+            "top": 433.65625,
+            "width": 536.109375,
+            "x": 76.390625,
+            "y": 433.65625
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 458.65625,
+                "height": 19,
+                "left": 92.34375,
+                "right": 134.34375,
+                "top": 439.65625,
+                "width": 42,
+                "x": 92.34375,
+                "y": 439.65625
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    },
+    {
+      "width": "1280",
+      "text": "200",
+      "theme": "dark",
+      "geometry": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 1483.09375,
+            "height": 64,
+            "left": 76.390625,
+            "right": 342.9375,
+            "top": 1419.09375,
+            "width": 266.546875,
+            "x": 76.390625,
+            "y": 1419.09375
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 1470.09375,
+                "height": 38,
+                "left": 97.65625,
+                "right": 321.671875,
+                "top": 1432.09375,
+                "width": 224.015625,
+                "x": 97.65625,
+                "y": 1432.09375
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 1270,
+        "root": "32px",
+        "scroll": 1270,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 3421,
+            "height": 64,
+            "left": 76.390625,
+            "right": 612.5,
+            "top": 3357,
+            "width": 536.109375,
+            "x": 76.390625,
+            "y": 3357
+          },
+          "text": "表示モード：一覧",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 3408,
+                "height": 38,
+                "left": 108.296875,
+                "right": 164.3125,
+                "top": 3370,
+                "width": 56.015625,
+                "x": 108.296875,
+                "y": 3370
+              },
+              "text": "一覧"
+            }
+          ]
+        },
+        "value": "a"
+      },
+      "listAX": 1,
+      "buttonCount": "実行回数：3 / disabled：false / loading：false",
+      "buttonFocus": {
+        "active": true,
+        "clipRight": 1215.609375,
+        "offset": "4px",
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "right": 342.9375,
+        "visible": true
+      },
+      "cardAX": 1,
+      "card": {
+        "button": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": -1455.90625,
+            "height": 64,
+            "left": 76.390625,
+            "right": 342.9375,
+            "top": -1519.90625,
+            "width": 266.546875,
+            "x": 76.390625,
+            "y": -1519.90625
+          },
+          "text": "公式ボタンを実行",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": -1468.90625,
+                "height": 38,
+                "left": 97.65625,
+                "right": 321.671875,
+                "top": -1506.90625,
+                "width": 224.015625,
+                "x": 97.65625,
+                "y": -1506.90625
+              },
+              "text": "公式ボタンを実行"
+            }
+          ]
+        },
+        "client": 1270,
+        "root": "32px",
+        "scroll": 1270,
+        "select": {
+          "anc": [
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "SECTION"
+            },
+            {
+              "scroll": 0,
+              "tag": "MAIN"
+            },
+            {
+              "scroll": 0,
+              "tag": "DIV"
+            },
+            {
+              "scroll": 0,
+              "tag": "BODY"
+            },
+            {
+              "scroll": 0,
+              "tag": "HTML"
+            }
+          ],
+          "clips": [],
+          "font": "28px",
+          "rect": {
+            "bottom": 482,
+            "height": 64,
+            "left": 76.390625,
+            "right": 612.5,
+            "top": 418,
+            "width": 536.109375,
+            "x": 76.390625,
+            "y": 418
+          },
+          "text": "表示モード：カード",
+          "texts": [
+            {
+              "cuts": [],
+              "rect": {
+                "bottom": 469,
+                "height": 38,
+                "left": 108.296875,
+                "right": 192.3125,
+                "top": 431,
+                "width": 84.015625,
+                "x": 108.296875,
+                "y": 431
+              },
+              "text": "カード"
+            }
+          ]
+        },
+        "value": "b"
+      }
+    }
+  ],
+  "scope": "Chromium iframe widths; root synthetic enlargement, not native text zoom"
+}

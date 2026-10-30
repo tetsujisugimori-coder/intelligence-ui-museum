@@ -1,0 +1,40 @@
+{
+  "zip_sha256": "7e79400531e42f1dead2c7ca2a57b04a76a9741ec5e4ba380b7b3d3489a9b925",
+  "source_manifest_total": 234,
+  "source_manifest_mismatches": [],
+  "base_commit": "daa42f25dfadd22a1deb5fcbe8c6f98c75a2397f",
+  "comparison": {
+    "src/main.tsx": {
+      "sha256": "463bb8e77c9a42cd4bc15a7ecb1f20a958ac55c2b8350cddf659bc6ac945e60d",
+      "same_as_saved_package": false
+    },
+    "src/main.css": {
+      "sha256": "ad0791ec49dbe792972c6638253aa37cd825b72831003ab7769be26d68da03fa",
+      "same_as_saved_package": false
+    },
+    "package-lock.json": {
+      "sha256": "d62b5a4f1ffeb6d5463ea64304f561dbef919a30c96050defd115c8b81ae1b46",
+      "same_as_saved_package": true
+    },
+    "package.json": {
+      "sha256": "465450a25a4fba6112b0173aeab0b3bbce10d98a583d5b68e37636ebdea50c75",
+      "same_as_saved_package": true
+    },
+    "public/v09-original.html": {
+      "sha256": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97",
+      "same_as_saved_package": true
+    },
+    "public/v09-viewer.html": {
+      "sha256": "535a9f26834c6c6ef6a178636832fa990793949a61dc19db7e48d689ad82d3b3",
+      "same_as_saved_package": true
+    },
+    "scripts/stage2r-browser.cjs": {
+      "sha256": "1b5eaf6a994fe36120829c487f41f64196d09a816d6046e288c87904288f4976",
+      "same_as_saved_package": false
+    },
+    "scripts/stage2r-smoke.cjs": {
+      "sha256": "db5462e8211b74ea74c43c7f5d4bd5d52912652476e094a6884430d1642b7cc6",
+      "same_as_saved_package": false
+    }
+  }
+}
