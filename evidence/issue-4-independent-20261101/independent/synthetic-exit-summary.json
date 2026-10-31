@@ -1,0 +1,38 @@
+[
+  {
+    "case": "contract",
+    "exit": 0
+  },
+  {
+    "case": "normal",
+    "exit": 0
+  },
+  {
+    "case": "alert",
+    "exit": 1
+  },
+  {
+    "case": "pageerror",
+    "exit": 1
+  },
+  {
+    "case": "goto-pageerror",
+    "exit": 1
+  },
+  {
+    "case": "save-error",
+    "exit": 1
+  },
+  {
+    "case": "missing-errors",
+    "exit": 1
+  },
+  {
+    "case": "missing-condition",
+    "exit": 1
+  },
+  {
+    "case": "missing-finish",
+    "exit": 1
+  }
+]
