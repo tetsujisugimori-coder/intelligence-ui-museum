@@ -17,8 +17,10 @@ function failures(report, kind) {
    const key=JSON.stringify([r.engine,r.width,r.theme,r.text,r.mode,r.prefix||'']);
    if(seen.has(key))bad.push('duplicate condition');seen.add(key);
    if(r.error || !Array.isArray(r.checks) || !r.checks.length)bad.push('incomplete condition');
+   if((r.status!==undefined && r.status!=='PASS') || (r.skipped!==undefined && r.skipped!==false) || (r.skip!==undefined && r.skip!==false))bad.push('skipped or non-passing condition');
    if(!['chromium','webkit'].includes(r.engine)||![320,375,390,1280].includes(r.width)||!['light','dark'].includes(r.theme)||![100,200].includes(r.text)||!['root','browser-font'].includes(r.mode)|| (r.mode==='browser-font'&&(r.engine!=='chromium'||r.text!==200)))bad.push('unexpected condition');
    if(!sameChecks((r.checks||[]).map(x=>x.name),r.prefix?BASE_CHECKS:MATRIX_CHECKS))bad.push('missing, duplicate or unexpected assertion');
+   if((r.checks||[]).some(x=>(x.skipped!==undefined && x.skipped!==false)||(x.skip!==undefined && x.skip!==false)))bad.push('skipped assertion');
    const js=(r.checks||[]).find(x=>x.name==='JavaScript errors');
    if(!js || !Array.isArray(js.detail) || js.detail.length)bad.push('missing or nonempty JavaScript errors detail');
    const failed=(r.checks||[]).filter(x=>x.pass!==true);
@@ -34,6 +36,7 @@ function failures(report, kind) {
   for(const r of report.conditions){
    const key=JSON.stringify([r.engine,r.width||'',!!r.sixComponents,!!r.noJS]);if(seen.has(key))bad.push('duplicate condition');seen.add(key);
    if(!['chromium','webkit'].includes(r.engine)||r.error||!Array.isArray(r.errors)||r.errors.length)bad.push('condition error');
+   if((r.status!==undefined && r.status!=='PASS') || (r.skipped!==undefined && r.skipped!==false) || (r.skip!==undefined && r.skip!==false))bad.push('skipped or non-passing condition');
    if(r.noJS){if(r.cards!==117)bad.push('noJS baseline count');}
    else if(r.status!=='PASS'||!sameChecks(r.checks,r.sixComponents?SIX_CHECKS:V09_CHECKS))bad.push('failed smoke condition');
   }

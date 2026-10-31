@@ -1,0 +1,189 @@
+{
+  "started": "2026-10-31T23:34:31.128Z",
+  "conditions": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "checks": [
+        "117 rendered cards",
+        "search, category switching",
+        "theme",
+        "Modal open/Escape",
+        "Primary and Select interactions (3 exhibits including Modal)"
+      ],
+      "errors": [],
+      "document": {
+        "client": 320,
+        "scroll": 320
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "checks": [
+        "117 rendered cards",
+        "search, category switching",
+        "theme",
+        "Modal open/Escape",
+        "Primary and Select interactions (3 exhibits including Modal)"
+      ],
+      "errors": [],
+      "document": {
+        "client": 375,
+        "scroll": 375
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "checks": [
+        "117 rendered cards",
+        "search, category switching",
+        "theme",
+        "Modal open/Escape",
+        "Primary and Select interactions (3 exhibits including Modal)"
+      ],
+      "errors": [],
+      "document": {
+        "client": 390,
+        "scroll": 390
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "checks": [
+        "117 rendered cards",
+        "search, category switching",
+        "theme",
+        "Modal open/Escape",
+        "Primary and Select interactions (3 exhibits including Modal)"
+      ],
+      "errors": [],
+      "document": {
+        "client": 1280,
+        "scroll": 1280
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "sixComponents": true,
+      "checks": [
+        "Badge",
+        "Switch",
+        "Tooltip visible on hover and hidden after Escape",
+        "Alert color/close/reopen",
+        "already-loaded offline Button"
+      ],
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "noJS": true,
+      "errors": [],
+      "cards": 117,
+      "text": "ボタン / 001\nPrimary\n\n操作にはJavaScriptが必要。展示名は静的に保持しています。"
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "checks": [
+        "117 rendered cards",
+        "search, category switching",
+        "theme",
+        "Modal open/Escape",
+        "Primary and Select interactions (3 exhibits including Modal)"
+      ],
+      "errors": [],
+      "document": {
+        "client": 320,
+        "scroll": 320
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "checks": [
+        "117 rendered cards",
+        "search, category switching",
+        "theme",
+        "Modal open/Escape",
+        "Primary and Select interactions (3 exhibits including Modal)"
+      ],
+      "errors": [],
+      "document": {
+        "client": 375,
+        "scroll": 375
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "checks": [
+        "117 rendered cards",
+        "search, category switching",
+        "theme",
+        "Modal open/Escape",
+        "Primary and Select interactions (3 exhibits including Modal)"
+      ],
+      "errors": [],
+      "document": {
+        "client": 390,
+        "scroll": 390
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "checks": [
+        "117 rendered cards",
+        "search, category switching",
+        "theme",
+        "Modal open/Escape",
+        "Primary and Select interactions (3 exhibits including Modal)"
+      ],
+      "errors": [],
+      "document": {
+        "client": 1280,
+        "scroll": 1280
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "sixComponents": true,
+      "checks": [
+        "Badge",
+        "Switch",
+        "Tooltip visible on hover and hidden after Escape",
+        "Alert color/close/reopen",
+        "already-loaded offline Button"
+      ],
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "noJS": true,
+      "errors": [],
+      "cards": 117,
+      "text": "ボタン / 001\nPrimary\n\n操作にはJavaScriptが必要。展示名は静的に保持しています。"
+    }
+  ],
+  "unverified": [
+    "Native WebKit text-only zoom (root enlargement is synthetic)",
+    "iPhone Safari",
+    "VoiceOver",
+    "all117 exhibit operations"
+  ],
+  "failures": [],
+  "finished": "2026-10-31T23:34:40.545Z"
+}

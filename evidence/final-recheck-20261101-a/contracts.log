@@ -1,0 +1,33 @@
+✔ complete GREEN matrix (2.3589ms)
+✔ reject assert (0.735ms)
+✔ reject engine (0.2494ms)
+✔ reject missing (0.1853ms)
+✔ reject duplicate (0.1837ms)
+✔ reject unfinished (0.217ms)
+✔ reject empty (0.1936ms)
+✔ reject missingAssert (0.2062ms)
+✔ reject fakeGreen (0.3748ms)
+✔ reject duplicateAssert (0.3088ms)
+✔ reject error (0.2644ms)
+✔ reject unexpected (0.2672ms)
+✔ only explicit original visibility RED permitted (0.3665ms)
+✔ nonreproduced baseline RED fails (0.2365ms)
+✔ smoke noJS count and incomplete reports fail (0.071ms)
+✔ stage2r-browser.cjs real entry launch failure -> nonzero (132.1822ms)
+✔ stage2r-smoke.cjs real entry launch failure -> nonzero (42.6436ms)
+✔ smoke synthetic normal propagates (41.3184ms)
+✔ smoke synthetic reopen failure propagates (46.8978ms)
+✔ smoke synthetic six-components pageerror propagates (41.7096ms)
+✔ matrix rejects late or missing pageerror evidence (0.547ms)
+✔ matrix rejects skipped conditions even if checks appear green (0.5687ms)
+✔ smoke noJS rejects skipped conditions and preserves normal (0.3651ms)
+✔ matrix rejects a skipped assertion even if pass is true (0.2193ms)
+✔ both browser servers reject a link escaping the app root (7.4107ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 444.2158

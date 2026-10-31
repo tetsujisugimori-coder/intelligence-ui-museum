@@ -1,0 +1,52 @@
+[
+  {
+    "mode": "normal",
+    "exit": 0,
+    "conditions": 12,
+    "finished": true,
+    "validator": []
+  },
+  {
+    "mode": "alert",
+    "exit": 1,
+    "conditions": 12,
+    "finished": true,
+    "validator": [
+      "condition error",
+      "skipped or non-passing condition",
+      "failed smoke condition"
+    ]
+  },
+  {
+    "mode": "pageerror",
+    "exit": 1,
+    "conditions": 12,
+    "finished": true,
+    "validator": [
+      "condition error"
+    ]
+  },
+  {
+    "mode": "timeout",
+    "exit": 1,
+    "conditions": 12,
+    "finished": true,
+    "validator": [
+      "condition error",
+      "skipped or non-passing condition",
+      "failed smoke condition",
+      "noJS baseline count"
+    ]
+  },
+  {
+    "mode": "crash",
+    "exit": 1,
+    "conditions": 0,
+    "finished": true,
+    "validator": [
+      "expected 12 smoke conditions",
+      "missing width",
+      "missing smoke mode"
+    ]
+  }
+]
