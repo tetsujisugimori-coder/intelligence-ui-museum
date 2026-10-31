@@ -1,0 +1,110 @@
+[
+  {
+    "engine": "chromium",
+    "width": 375,
+    "checks": [
+      {
+        "name": "Tab and visible focus",
+        "focus": {
+          "tag": "INPUT",
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "name": "reserved shortcut rejected via touch"
+      },
+      {
+        "name": "reserved key not prevented, synthetic dispatch"
+      },
+      {
+        "name": "reset all new demonstrations"
+      },
+      {
+        "name": "synthetic text enlargement document overflow"
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "checks": [
+      {
+        "name": "Tab and visible focus",
+        "focus": {
+          "tag": "INPUT",
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "name": "reserved shortcut rejected via touch"
+      },
+      {
+        "name": "reserved key not prevented, synthetic dispatch"
+      },
+      {
+        "name": "reset all new demonstrations"
+      },
+      {
+        "name": "synthetic text enlargement document overflow"
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "width": 375,
+    "checks": [
+      {
+        "name": "Tab and visible focus",
+        "focus": {
+          "tag": "INPUT",
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "name": "reserved shortcut rejected via touch"
+      },
+      {
+        "name": "reserved key not prevented, synthetic dispatch"
+      },
+      {
+        "name": "reset all new demonstrations"
+      }
+    ],
+    "errors": [],
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(await p.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth))\n\n    at <workspace>\\apps\\v11\\accessibility-test.cjs:7:71"
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "checks": [
+      {
+        "name": "Tab and visible focus",
+        "focus": {
+          "tag": "INPUT",
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "name": "reserved shortcut rejected via touch"
+      },
+      {
+        "name": "reserved key not prevented, synthetic dispatch"
+      },
+      {
+        "name": "reset all new demonstrations"
+      }
+    ],
+    "errors": [],
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(await p.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth))\n\n    at <workspace>\\apps\\v11\\accessibility-test.cjs:7:71"
+  }
+]

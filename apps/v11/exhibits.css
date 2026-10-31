@@ -1,0 +1,13 @@
+.v11-demo { display:grid; gap:.65rem; min-width:0; width:100%; }
+.v11-demo label { display:inline-block; margin:.2rem; }
+.v11-demo output { display:block; overflow-wrap:anywhere; }
+.v11-lists, .v11-board { display:flex; flex-wrap:wrap; gap:.5rem; align-items:start; }
+.v11-lists fieldset, .v11-column { flex:1 1 9rem; min-width:0; }
+.v11-column { border:1px solid currentColor; border-radius:.5rem; padding:.4rem; }
+.v11-task { border:1px solid currentColor; padding:.4rem; margin:.3rem 0; border-radius:.4rem; }
+.v11-demo table { max-width:100%; border-collapse:collapse; }
+.v11-demo td, .v11-demo th { padding:.2rem; }
+.v11-demo button:focus-visible, .v11-task:focus-visible, .v11-demo input:focus-visible, .v11-demo select:focus-visible { outline:3px solid #e39a25; outline-offset:2px; }
+.v11-demo { grid-template-columns: minmax(0, 1fr); }
+.v11-demo label, .v11-demo fieldset { min-width:0; max-width:100%; box-sizing:border-box; }
+.v11-demo input[type=time] { min-width:0; max-width:100%; width:100%; box-sizing:border-box; }
