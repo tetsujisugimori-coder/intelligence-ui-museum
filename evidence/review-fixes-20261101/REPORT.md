@@ -24,3 +24,9 @@ Stage Aは `apps/v10/scripts/stage2r-browser.cjs`、`stage2r-result.cjs`、`stag
 ## Linux CI初回と対応（2026-11-01 JST）
 
 初回 `41250087411` はbrowser-v11 FAIL。WebKit 375pxで旧ModalのEscape直後にopen数を同期照会して1となり、390pxとChromiumは成功した。エラーと経過は `linux-first-ci-additional.json`。短い描画・イベント処理のタイミング差の可能性として、Escape後に最大5秒の非表示待機を追加し、非表示にならなければ引き続きFAILとする。製品の異常がないと断定せず、後続の実CIと独立再レビューで確認する。
+
+## 訂正記録（2026-11-01 JST）
+
+本報告書冒頭の Stage B 開始 HEAD `23125bdd23ba1fff291f245a9f652dc44adee679e` は転記誤りです。正しくは `23125bdd23ba1fff291f245a9f652dc44adefbbf` です。Stage A の旧 HEAD の末尾が混入しました。
+
+確認根拠：Git のコミット `23125bdd23ba1fff291f245a9f652dc44adefbbf` は `Add six interactive v11 museum exhibits`、tree `5d5ed6a74a5210a4209950fdcea195277890391a`。Stage A 更新を取り込んだマージ `c34361ec14cab20067974cae113a42204e35d205` の第1親も同じ Stage B 開始 HEAD です。元の本文は歴史的記録としてそのまま保持し、この訂正を末尾に追記しました。追記前本文の SHA-256 は `d108242f9fc4f5c8ddb92cbf56b6822a57a360228b695dfd03feea5833440d02` です。
