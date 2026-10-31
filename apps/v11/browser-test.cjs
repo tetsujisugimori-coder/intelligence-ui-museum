@@ -1,4 +1,4 @@
-const { chromium,webkit }=require(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/playwright');
+const { chromium,webkit }=require(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES ? require('node:path').join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES,'playwright') : 'playwright');
 const assert=require('node:assert/strict'),fs=require('fs'),path=require('path');
 const out=process.env.EVIDENCE_DIR||'.work/results/v11';fs.mkdirSync(out,{recursive:true});
 const results=[];

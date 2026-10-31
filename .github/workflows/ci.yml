@@ -54,3 +54,24 @@ jobs:
           path: |
             .work/v10/dist/
             .work/v10/evidence/authenticity-tests.json
+  browser-v11:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: apps/v11/package-lock.json
+      - run: npm ci --ignore-scripts
+        working-directory: apps/v11
+      - run: npx playwright install --with-deps chromium webkit
+        working-directory: apps/v11
+      - run: node apps/v11/run-browser-ci.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-browser-verification-${{ github.sha }}
+          path: .work/v11-ci-evidence/
+          if-no-files-found: warn

@@ -11,3 +11,8 @@ expected=[('Time Picker','入力'),('Transfer List','入力'),('Kanban Board','�
 assert [(x['name'],x['category']) for x in b[117:]]==expected
 assert all(x['provenance']['出自区分']=='独自実装' and x['provenance']['OpenAI公式との関連']=='公式SDK・APIを使用しない' for x in b[117:])
 print('PASS: 123 consecutive IDs, original 117 complete dataset equality, six names/categories/origins')
+
+html=Path('apps/v11/index.html').read_text(encoding='utf8')
+assert '<title>Intelligence UI Museum | v11 123 exhibits</title>' in html
+assert len({x['category'] for x in b})==11
+print('PASS: v11 title and 11 categories')

@@ -1,0 +1,36 @@
+[
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "key": {
+      "key": "a",
+      "ctrl": true,
+      "meta": false,
+      "prevented": true,
+      "trusted": true
+    },
+    "state": "候補を取得しました。 候補：Ctrl+A / 登録：なし / キー待ち",
+    "focus": {
+      "tag": "BODY",
+      "body": true,
+      "html": "<body><header><small class=\"muted\">MUSEUM v11 / 123 EXHIBITS / EDUCATIONAL REPRODUCTIONS / REV 20261026.1</small><h1>Intelligence UI Museum</h1><p class=\"muted\">123展示・11カテゴリー。OpenA"
+    }
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "key": {
+      "key": "a",
+      "ctrl": true,
+      "meta": false,
+      "prevented": true,
+      "trusted": true
+    },
+    "state": "候補を取得しました。 候補：Ctrl+A / 登録：なし / キー待ち",
+    "focus": {
+      "tag": "BODY",
+      "body": true,
+      "html": "<body><header><small class=\"muted\">MUSEUM v11 / 123 EXHIBITS / EDUCATIONAL REPRODUCTIONS / REV 20261026.1</small><h1>Intelligence UI Museum</h1><p class=\"muted\">123展示・11カテゴリー。OpenA"
+    }
+  }
+]
