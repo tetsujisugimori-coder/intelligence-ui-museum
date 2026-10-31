@@ -20,3 +20,24 @@ for(const [name,env,expected] of [
 });
 
 test('matrix rejects late or missing pageerror evidence',()=>{const r=matrix(),js=r.conditions[0].checks.find(x=>x.name==='JavaScript errors');js.detail.push('late pageerror');assert(failures(r,'matrix').length);js.detail=[];assert.deepEqual(failures(r,'matrix'),[]);delete js.detail;assert(failures(r,'matrix').length)});
+
+test('matrix rejects skipped conditions even if checks appear green',()=>{for(const change of [x=>x.status='SKIP',x=>x.skipped=true,x=>x.skip=true]){const r=matrix();change(r.conditions[0]);assert(failures(r,'matrix').length)}});
+test('smoke noJS rejects skipped conditions and preserves normal',()=>{const raw={finished:'fixture',failures:[],conditions:['chromium','webkit'].flatMap(engine=>[...[320,375,390,1280].map(width=>({engine,width,status:'PASS',errors:[],checks:['117 rendered cards','search, category switching','theme','Modal open/Escape','Primary and Select interactions (3 exhibits including Modal)']})),{engine,sixComponents:true,status:'PASS',errors:[],checks:['Badge','Switch','Tooltip visible on hover and hidden after Escape','Alert color/close/reopen','already-loaded offline Button']},{engine,noJS:true,cards:117,errors:[]}])};assert.deepEqual(failures(raw,'smoke'),[]);for(const change of [x=>x.status='SKIP',x=>x.skipped=true,x=>x.skip=true]){const r=structuredClone(raw);change(r.conditions.find(x=>x.noJS));assert(failures(r,'smoke').length)}});
+
+test('matrix rejects a skipped assertion even if pass is true',()=>{const r=matrix();r.conditions[0].checks[0].skipped=true;assert(failures(r,'matrix').length)});
+
+// Exercise both real HTTP handlers against a real link to a sibling directory.
+test('both browser servers reject a link escaping the app root',()=>{
+ const vm=require('node:vm'),os=require('node:os'),path=require('node:path'),base=fs.mkdtempSync(path.join(os.tmpdir(),'museum-boundary-'));
+ const realTemp=fs.realpathSync(os.tmpdir()),realBase=fs.realpathSync(base),rel=path.relative(realTemp,realBase);
+ assert(rel && rel!=='..' && !rel.startsWith('..'+path.sep) && !path.isAbsolute(rel));
+ const root=path.join(base,'root'),outside=path.join(base,'outside'),link=path.join(root,'escape');fs.mkdirSync(root);fs.mkdirSync(outside);fs.writeFileSync(path.join(root,'inside.txt'),'inside');fs.writeFileSync(path.join(outside,'marker.txt'),'outside');fs.symlinkSync(outside,link,process.platform==='win32'?'junction':'dir');
+ try{for(const file of ['stage2r-smoke.cjs','stage2r-browser.cjs']){
+  let handler;const server={listen(...a){a.at(-1)()},address(){return {port:1}},close(){}};const fakeProcess={env:{CODEX_PRIMARY_RUNTIME_NODE_MODULES:'fixture',APP_ROOT:root,EVIDENCE_DIR:base},exitCode:0};
+  const shimFs={...fs,mkdirSync(){},writeFileSync(){}};const fakePw={chromium:{launch:async()=>{throw Error('fixture launch')}},webkit:{launch:async()=>{throw Error('fixture launch')}}};
+  vm.runInNewContext(fs.readFileSync('scripts/'+file,'utf8'),{require:n=>n==='http'?{createServer:h=>(handler=h,server)}:n==='fs'?shimFs:n.includes('playwright')?fakePw:n==='./stage2r-result.cjs'?{failures:()=>[]}:require(n),process:fakeProcess,console:{log(){},error(){}},URL});
+  function request(url){const res={statusCode:200,setHeader(){},end(data){this.body=data?.toString()||''}};handler({url},res);return res}
+  const inside=request('/inside.txt');assert.equal(inside.statusCode,200,file);assert.equal(inside.body,'inside',file);
+  const escaped=request('/escape/marker.txt');assert.equal(escaped.statusCode,403,file);assert.equal(escaped.body,'',file);
+ }}finally{if(process.platform==='win32')fs.rmdirSync(link);else fs.unlinkSync(link);fs.unlinkSync(path.join(root,'inside.txt'));fs.unlinkSync(path.join(outside,'marker.txt'));fs.rmdirSync(root);fs.rmdirSync(outside);fs.rmdirSync(base)}
+});

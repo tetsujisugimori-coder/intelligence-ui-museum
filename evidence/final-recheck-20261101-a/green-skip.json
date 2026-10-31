@@ -1,0 +1,38 @@
+[
+  {
+    "name": "normal",
+    "failures": []
+  },
+  {
+    "name": "noJS-status-skip",
+    "failures": [
+      "skipped or non-passing condition"
+    ]
+  },
+  {
+    "name": "noJS-skipped-flag",
+    "failures": [
+      "skipped or non-passing condition"
+    ]
+  },
+  {
+    "name": "ordinary-status-skip",
+    "failures": [
+      "skipped or non-passing condition",
+      "failed smoke condition"
+    ]
+  },
+  {
+    "name": "missing-condition",
+    "failures": [
+      "expected 12 smoke conditions",
+      "missing smoke mode"
+    ]
+  },
+  {
+    "name": "unfinished",
+    "failures": [
+      "unfinished report"
+    ]
+  }
+]

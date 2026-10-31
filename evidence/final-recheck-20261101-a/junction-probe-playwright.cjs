@@ -1,0 +1,4 @@
+const fs=require('fs');const pw=require(process.env.REAL_PLAYWRIGHT);let done=false;
+function proxy(target,overrides){return new Proxy(target,{get(obj,key){if(key in overrides)return overrides[key];const v=obj[key];return typeof v==='function'?v.bind(obj):v}})}
+function wrap(type){return proxy(type,{launch:async options=>{const browser=await type.launch(options);return proxy(browser,{newContext:async opts=>{const ctx=await browser.newContext(opts);return proxy(ctx,{newPage:async()=>{const p=await ctx.newPage();return proxy(p,{goto:async (url,...rest)=>{if(!done){done=true;const response=await fetch(new URL('/escape/marker.txt',url));const body=await response.text();fs.writeFileSync(process.env.SYMLINK_RESULT,JSON.stringify({status:response.status,body},null,2));}return p.goto(url,...rest)}})}})}})}})}
+module.exports={...pw,chromium:wrap(pw.chromium),webkit:wrap(pw.webkit)};
