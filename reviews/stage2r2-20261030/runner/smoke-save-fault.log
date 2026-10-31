@@ -1,0 +1,4 @@
+Error: isolated successful-path save failure
+    at Object.writeFileSync (/workspace/scratch/e622c1e9421e/stage2r2-review/runner-work/smoke-reopen-probe.cjs:7:207)
+    at evalmachine.<anonymous>:13:199
+exitCode 1 records undefined Alert deliberately remains closed after second click 2

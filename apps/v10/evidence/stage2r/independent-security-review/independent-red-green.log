@@ -1,0 +1,66 @@
+[
+  {
+    engine: 'chromium',
+    version: 'before',
+    name: 'Button',
+    visible: false,
+    clips: [ [Object] ],
+    textClips: []
+  },
+  {
+    engine: 'chromium',
+    version: 'before',
+    name: 'Select',
+    visible: false,
+    clips: [],
+    textClips: [ [Object] ]
+  },
+  {
+    engine: 'chromium',
+    version: 'after',
+    name: 'Button',
+    visible: true,
+    clips: [],
+    textClips: []
+  },
+  {
+    engine: 'chromium',
+    version: 'after',
+    name: 'Select',
+    visible: true,
+    clips: [],
+    textClips: []
+  },
+  {
+    engine: 'webkit',
+    version: 'before',
+    name: 'Button',
+    visible: false,
+    clips: [ [Object] ],
+    textClips: []
+  },
+  {
+    engine: 'webkit',
+    version: 'before',
+    name: 'Select',
+    visible: false,
+    clips: [],
+    textClips: [ [Object] ]
+  },
+  {
+    engine: 'webkit',
+    version: 'after',
+    name: 'Button',
+    visible: true,
+    clips: [],
+    textClips: []
+  },
+  {
+    engine: 'webkit',
+    version: 'after',
+    name: 'Select',
+    visible: true,
+    clips: [],
+    textClips: []
+  }
+]

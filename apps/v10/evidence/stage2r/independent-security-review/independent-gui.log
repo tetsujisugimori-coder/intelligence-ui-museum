@@ -1,0 +1,170 @@
+[
+  {
+    engine: 'chromium',
+    theme: 'light',
+    error: undefined,
+    button: {
+      text: '公式ボタンを実行',
+      font: '28px',
+      rect: [Object],
+      outline: 'rgb(209, 118, 36) solid 3px',
+      offset: '4px',
+      clips: [],
+      active: true,
+      focusVisible: true
+    },
+    select: {
+      text: '一覧',
+      font: '14px',
+      rect: [Object],
+      outline: 'rgb(24, 37, 37) none 3px',
+      offset: '0px',
+      clips: [],
+      active: true,
+      focusVisible: true
+    },
+    selected: 'カード',
+    keyboard: '一覧',
+    errors: [],
+    csp: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object]
+    ]
+  },
+  {
+    engine: 'chromium',
+    theme: 'dark',
+    error: undefined,
+    button: {
+      text: '公式ボタンを実行',
+      font: '28px',
+      rect: [Object],
+      outline: 'rgb(209, 118, 36) solid 3px',
+      offset: '4px',
+      clips: [],
+      active: true,
+      focusVisible: true
+    },
+    select: {
+      text: '一覧',
+      font: '14px',
+      rect: [Object],
+      outline: 'rgb(230, 239, 235) none 3px',
+      offset: '0px',
+      clips: [],
+      active: true,
+      focusVisible: true
+    },
+    selected: 'カード',
+    keyboard: '一覧',
+    errors: [],
+    csp: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object]
+    ]
+  },
+  {
+    engine: 'webkit',
+    theme: 'light',
+    error: undefined,
+    button: {
+      text: '公式ボタンを実行',
+      font: '28px',
+      rect: [Object],
+      outline: '3px solid rgb(209, 118, 36)',
+      offset: '4px',
+      clips: [],
+      active: true,
+      focusVisible: true
+    },
+    select: {
+      text: '一覧',
+      font: '28px',
+      rect: [Object],
+      outline: '3px none rgb(24, 37, 37)',
+      offset: '0px',
+      clips: [],
+      active: true,
+      focusVisible: true
+    },
+    selected: 'カード',
+    keyboard: '一覧',
+    errors: [],
+    csp: [
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object]
+    ]
+  },
+  {
+    engine: 'webkit',
+    theme: 'dark',
+    error: undefined,
+    button: {
+      text: '公式ボタンを実行',
+      font: '28px',
+      rect: [Object],
+      outline: '3px solid rgb(209, 118, 36)',
+      offset: '4px',
+      clips: [],
+      active: true,
+      focusVisible: true
+    },
+    select: {
+      text: '一覧',
+      font: '28px',
+      rect: [Object],
+      outline: '3px none rgb(230, 239, 235)',
+      offset: '0px',
+      clips: [],
+      active: true,
+      focusVisible: true
+    },
+    selected: 'カード',
+    keyboard: '一覧',
+    errors: [],
+    csp: [
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object]
+    ]
+  }
+]

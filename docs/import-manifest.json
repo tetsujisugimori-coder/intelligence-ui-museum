@@ -1,0 +1,1521 @@
+{
+  "schema_version": 1,
+  "decision": "PARTIAL / Stage 3 HOLD",
+  "upstream_git": {
+    "head": "66032de7efa08eec999da14b1c62f3dec2f4adc0",
+    "tree": "f5f7d93899f2bc725620c3aba0fbdd9b9b786a54",
+    "remote_push": "NOT VERIFIED; original local history only"
+  },
+  "files": [
+    {
+      "source_path": "source/.gitignore",
+      "path": "apps/v10/.gitignore",
+      "sha256": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
+    },
+    {
+      "source_path": "source/.openai/hosting.json",
+      "path": "archive/stage2r2/original-hosting.json",
+      "sha256": "034988f137f6cdda39b1b5d57ef812ab546ae77032674d616657c345bec21dff"
+    },
+    {
+      "source_path": "source/LOG.md",
+      "path": "apps/v10/LOG.md",
+      "sha256": "a93af37e6526e8fdc133282922649fe061eb5e238a8a6d9d28bbcce9d98e7e8e"
+    },
+    {
+      "source_path": "source/README.md",
+      "path": "apps/v10/README.md",
+      "sha256": "cc27721ae438bce5e1750d46bc4abf5889da265704dae2dabf771fcc8abc1b47"
+    },
+    {
+      "source_path": "source/REVIEW-DEPLOYMENT.md",
+      "path": "apps/v10/REVIEW-DEPLOYMENT.md",
+      "sha256": "9bc89916bfa55bc87ea9892dcbabfd35a0474d5eea726967b08f58ad5914d9c6"
+    },
+    {
+      "source_path": "source/baseline/v08.html",
+      "path": "apps/v10/baseline/v08.html",
+      "sha256": "784450da3a0626a4ac0b01cfbf8d2f26735f44e59bc2fa2dffa5da7fa77d1fd4"
+    },
+    {
+      "source_path": "source/baseline/v09-initial-package.zip",
+      "path": "apps/v10/baseline/v09-initial-package.zip",
+      "sha256": "e81aaa30336534b136e8af2357f51e7d1360030bb68c21e7b256bebbb8d733c9"
+    },
+    {
+      "source_path": "source/baseline/v09-initial.html",
+      "path": "apps/v10/baseline/v09-initial.html",
+      "sha256": "17a02c1f914d98150910616e6b29c72a49bc2531a54a44e09ca2377e60e06dee"
+    },
+    {
+      "source_path": "source/dist/THIRD_PARTY_NOTICES.txt",
+      "path": "apps/v10/dist/THIRD_PARTY_NOTICES.txt",
+      "sha256": "e1335c421d3b5da01c742b4c3013836b1f77bf7449bc6f02a9893a477508eeab"
+    },
+    {
+      "source_path": "source/dist/assets/index-B4B2a14B.css",
+      "path": "apps/v10/dist/assets/index-B4B2a14B.css",
+      "sha256": "89fd3282b11361b3a0d7e70fd8b56812c7f065a056310daf09d199b5090730ce"
+    },
+    {
+      "source_path": "source/dist/assets/index-ItwAwdWS.js",
+      "path": "apps/v10/dist/assets/index-ItwAwdWS.js",
+      "sha256": "81d41645e10abe47487fcd714c4e91280351f8973b1a66b21d7f5e1d93076b23"
+    },
+    {
+      "source_path": "source/dist/assets/index-ItwAwdWS.js.map",
+      "path": "apps/v10/dist/assets/index-ItwAwdWS.js.map",
+      "sha256": "217a0c2c12dc34079215a0df31229da0f4455a42c780e39ece7b7a3ce2d55103"
+    },
+    {
+      "source_path": "source/dist/index.html",
+      "path": "apps/v10/dist/index.html",
+      "sha256": "486033965212acddc06372e005ce806faf133d41744c0abb8c72f0c2944ad9b1"
+    },
+    {
+      "source_path": "source/dist/qa.html",
+      "path": "apps/v10/dist/qa.html",
+      "sha256": "4d89460b370442cea96619e8f8781c090ed77acb125bca0282839f5293db4587"
+    },
+    {
+      "source_path": "source/dist/v09-original.html",
+      "path": "apps/v10/dist/v09-original.html",
+      "sha256": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97"
+    },
+    {
+      "source_path": "source/dist/v09-viewer.html",
+      "path": "apps/v10/dist/v09-viewer.html",
+      "sha256": "535a9f26834c6c6ef6a178636832fa990793949a61dc19db7e48d689ad82d3b3"
+    },
+    {
+      "source_path": "source/docs/OpenAI-LICENSE.txt",
+      "path": "apps/v10/docs/OpenAI-LICENSE.txt",
+      "sha256": "f26a46776c890b0d7b45d042cb8a78fdca9c4742a5c7fd97f0f53767411b1cc6"
+    },
+    {
+      "source_path": "source/docs/README.md",
+      "path": "apps/v10/docs/README.md",
+      "sha256": "afb2ab69e226f6b3bf7beeadadbdf8e16425196ec702d27eeec8c8316f1afd61"
+    },
+    {
+      "source_path": "source/docs/comparison.md",
+      "path": "apps/v10/docs/comparison.md",
+      "sha256": "c822cbf4caa04e50f4ea15cc6e9424609e1b90fd0ba24103f70148c69ed7e7bc"
+    },
+    {
+      "source_path": "source/docs/final-report.md",
+      "path": "apps/v10/docs/final-report.md",
+      "sha256": "590c5cda90bdc5651bb14d4d208e4e41e709d9f65c45a8b3c1f906eebc918628"
+    },
+    {
+      "source_path": "source/docs/independent-review.md",
+      "path": "apps/v10/docs/independent-review.md",
+      "sha256": "fc6f3610401ed7808fbf688a6743b05969800b763ba6ed5bdda48d474f8af61b"
+    },
+    {
+      "source_path": "source/docs/npm-metadata.json",
+      "path": "apps/v10/docs/npm-metadata.json",
+      "sha256": "3bf36851efe745e2b9ce8d806254b9740f6484fb92d7b9cd24478821995e4482"
+    },
+    {
+      "source_path": "source/docs/provenance.json",
+      "path": "apps/v10/docs/provenance.json",
+      "sha256": "f1b63a398aa78ed386fb9d2e0acb28f28e3a57645c4b5f7a09528842c4791f08"
+    },
+    {
+      "source_path": "source/docs/react-remove-scroll-bar-LICENSE.txt",
+      "path": "apps/v10/docs/react-remove-scroll-bar-LICENSE.txt",
+      "sha256": "3e6a23f92331b49bfe3a5fdb8a8f18dd3f1be5ddb9c7380659d9667224decc2d"
+    },
+    {
+      "source_path": "source/docs/source-commit.json",
+      "path": "apps/v10/docs/source-commit.json",
+      "sha256": "a8c3c96a0205b8460080d7eedf718672ff9fe6e67ba44a8e85f1ca7eef8fe7d1"
+    },
+    {
+      "source_path": "source/docs/stage0-2-SHA256SUMS.json",
+      "path": "apps/v10/docs/stage0-2-SHA256SUMS.json",
+      "sha256": "9fba66ff8773c5eb00ce690c6f80ff5b206e9d373fa50cd1ad2395342fff0608"
+    },
+    {
+      "source_path": "source/docs/stage2r-final-report.md",
+      "path": "apps/v10/docs/stage2r-final-report.md",
+      "sha256": "9c894af1464713e3c9c6571f711c3c97a89457e1545d1b1cd6d47f78032b7ce0"
+    },
+    {
+      "source_path": "source/docs/stage2r-license-review.md",
+      "path": "apps/v10/docs/stage2r-license-review.md",
+      "sha256": "63141fbe8386f47f949b748a5cbb763b46964290e9fd1473b0d4b21a39889a8a"
+    },
+    {
+      "source_path": "source/docs/stage2r2/acceptance.md",
+      "path": "apps/v10/docs/stage2r2/acceptance.md",
+      "sha256": "9d4b5747a3d705724e7975d34b835c5ba57e86e1c5a7af472e22847c8f954fb1"
+    },
+    {
+      "source_path": "source/docs/stage2r2/browser-results.md",
+      "path": "apps/v10/docs/stage2r2/browser-results.md",
+      "sha256": "523079b09d5ccd81527e0dd0b371a7886238f451205da9df7fdf30eec5b43cf2"
+    },
+    {
+      "source_path": "source/docs/stage2r2/final-report.md",
+      "path": "apps/v10/docs/stage2r2/final-report.md",
+      "sha256": "e381352d28d2243672383f0db4bf54cbfae9e37dca7a1576b123161d17a959f2"
+    },
+    {
+      "source_path": "source/docs/stage2r2/github-handoff.md",
+      "path": "apps/v10/docs/stage2r2/github-handoff.md",
+      "sha256": "f68cf4e09ec2d45629d5ff71d88ca1020c5e489007520c5b48244ae6731e3189"
+    },
+    {
+      "source_path": "source/docs/stage2r2/independent-review.md",
+      "path": "apps/v10/docs/stage2r2/independent-review.md",
+      "sha256": "9820d980e4d9f5f941a515e7503ce1af49c0ecfb44e082108f61b6b671c4532e"
+    },
+    {
+      "source_path": "source/docs/stage2r2/runner-reproduction.md",
+      "path": "apps/v10/docs/stage2r2/runner-reproduction.md",
+      "sha256": "692e5161b2cb5df3a05782017c81c30e6b49e0348708bf180534554454e4046b"
+    },
+    {
+      "source_path": "source/docs/stage2r2/security-license.md",
+      "path": "apps/v10/docs/stage2r2/security-license.md",
+      "sha256": "487bcca577aadeea18865788e5cae5de34f7d5b43e2843a1813a55b8f51b3736"
+    },
+    {
+      "source_path": "source/docs/stage3-design.md",
+      "path": "apps/v10/docs/stage3-design.md",
+      "sha256": "04b4a6b7d48052f12341520d41a2d2175702315ee5429db27c6bf373fbecceed"
+    },
+    {
+      "source_path": "source/evidence/authenticity-tests.json",
+      "path": "apps/v10/evidence/authenticity-tests.json",
+      "sha256": "fdb033f5556060c0355dfc3be3f4f91531f20e7e2802867d4a53f5f06345660e"
+    },
+    {
+      "source_path": "source/evidence/baseline-manifest.json",
+      "path": "apps/v10/evidence/baseline-manifest.json",
+      "sha256": "274419be470b906220f755364364df041f7fdafac7a804d67f84b656d6ebf23c"
+    },
+    {
+      "source_path": "source/evidence/baseline-tests.log",
+      "path": "apps/v10/evidence/baseline-tests.log",
+      "sha256": "0f1c1c8e0805399967a76c707f0909eb4d31bb17db170bbe038a5d90bf9d471f"
+    },
+    {
+      "source_path": "source/evidence/browser-layout-matrix.json",
+      "path": "apps/v10/evidence/browser-layout-matrix.json",
+      "sha256": "c0c80449d90d1f91ce2d47069fd14b928ea174e5445eeed675f8c2c43c10357b"
+    },
+    {
+      "source_path": "source/evidence/browser-verification.md",
+      "path": "apps/v10/evidence/browser-verification.md",
+      "sha256": "cc14da87f831e135d716e43c56242953e73d0893aaa86f6af179ada3dac35a94"
+    },
+    {
+      "source_path": "source/evidence/build.log",
+      "path": "apps/v10/evidence/build.log",
+      "sha256": "272b6a23b361415e4524b13fa47cbc11c244ce2438ddfbbb28657275e91f0454"
+    },
+    {
+      "source_path": "source/evidence/dependency-tree.json",
+      "path": "apps/v10/evidence/dependency-tree.json",
+      "sha256": "149664f92d733410c38e128484d3af98b4afae6acbbde07e5ec5606d03eccb76"
+    },
+    {
+      "source_path": "source/evidence/desktop-comparison.jpg",
+      "path": "apps/v10/evidence/desktop-comparison.jpg",
+      "sha256": "4c7c8519c6bdb8f40c8f0af78c40bf7c4363be794e0c75099cd4cc0162fd0366"
+    },
+    {
+      "source_path": "source/evidence/install.log",
+      "path": "apps/v10/evidence/install.log",
+      "sha256": "2f6d117d18f250770ae4010451013c5e33cd4bd84a9b3326b1b62504dc1daede"
+    },
+    {
+      "source_path": "source/evidence/library-source-metadata.json",
+      "path": "apps/v10/evidence/library-source-metadata.json",
+      "sha256": "f9e0ebabd635904e9a1cbaa7ea61998cc36a5ba18106bb6b2cf4390cdccf76eb"
+    },
+    {
+      "source_path": "source/evidence/license-generation.log",
+      "path": "apps/v10/evidence/license-generation.log",
+      "sha256": "59046f8b12cee43c0ddbc8a59cba64bb6d63d51031878e3d58dfb0db8614f358"
+    },
+    {
+      "source_path": "source/evidence/licenses.json",
+      "path": "apps/v10/evidence/licenses.json",
+      "sha256": "016e5a3a83cdd58d4cc5811f49797bdf10e474a96f1d17b39d23b5ad3315b184"
+    },
+    {
+      "source_path": "source/evidence/live-v09-response.html",
+      "path": "apps/v10/evidence/live-v09-response.html",
+      "sha256": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97"
+    },
+    {
+      "source_path": "source/evidence/mobile-dark-text200.jpg",
+      "path": "apps/v10/evidence/mobile-dark-text200.jpg",
+      "sha256": "8281b53b3cfcda7e3e566a6b1f9751ef065e585e174bc2fa81a9d6f43025f50b"
+    },
+    {
+      "source_path": "source/evidence/npm-audit-production.json",
+      "path": "apps/v10/evidence/npm-audit-production.json",
+      "sha256": "bc938105c57e77d5ad63cfbbb32610822b74c53d44a71d1d522024363b860e29"
+    },
+    {
+      "source_path": "source/evidence/npm-audit.json",
+      "path": "apps/v10/evidence/npm-audit.json",
+      "sha256": "bc938105c57e77d5ad63cfbbb32610822b74c53d44a71d1d522024363b860e29"
+    },
+    {
+      "source_path": "source/evidence/official-SelectControl.js",
+      "path": "apps/v10/evidence/official-SelectControl.js",
+      "sha256": "661184dd4989b5c33d96719cf70f55c0d3c4bbe205758c59e85d7fb8abeb0bdb"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance-run.log",
+      "path": "apps/v10/evidence/stage2r/acceptance-run.log",
+      "sha256": "5c48eb5341084e703940014dcf67d93464a07bd033ca6ec226d1c44cc00ebf83"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-dark-browser-font-Button.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-dark-browser-font-Button.png",
+      "sha256": "06405e2873d925a268a47054be481f411fffd0f4e62b537bdebcc7bb23d164b2"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-dark-browser-font-Select.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-dark-browser-font-Select.png",
+      "sha256": "5de9e5694017f26a58cfe53704ba507a2a4b4694122ff985a90cce1a840ed989"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-dark-browser-font-focus.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-dark-browser-font-focus.png",
+      "sha256": "f68aaa531e51d9659187807db8733b0d6a2151a03cf50b9813db7123aa639e6b"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-dark-browser-font-popup.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-dark-browser-font-popup.png",
+      "sha256": "ec1644ef68d6a5fd77c6346510ddf6ffb07580944a06d944e036b86b7289b94e"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-dark-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-dark-root-Button.png",
+      "sha256": "06405e2873d925a268a47054be481f411fffd0f4e62b537bdebcc7bb23d164b2"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-dark-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-dark-root-Select.png",
+      "sha256": "5de9e5694017f26a58cfe53704ba507a2a4b4694122ff985a90cce1a840ed989"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-dark-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-dark-root-focus.png",
+      "sha256": "9f18e9409ce4929e0c92fde8bdd568543ef5b61ce4094ea40aa5edcd615b1e5a"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-dark-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-dark-root-popup.png",
+      "sha256": "38bdde4d0700b69fe69d8a94919286008cf6640a7a7a1517504ce2aff9aaeac5"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-light-browser-font-Button.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-light-browser-font-Button.png",
+      "sha256": "e255ee81d90baee34ba2973f3d81a17571ce9a987f7ce1b5a971abe127d7c155"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-light-browser-font-Select.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-light-browser-font-Select.png",
+      "sha256": "ed562bbee6e2cd7832ed927c54983aa0eeee819a5f75c1e25fff15ad7d82c98d"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-light-browser-font-focus.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-light-browser-font-focus.png",
+      "sha256": "1013dac437fb41700f22c178003ec23ceee3b1087fe3a1ad018e88f3d9fdac89"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-light-browser-font-popup.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-light-browser-font-popup.png",
+      "sha256": "40c5a313faf11c90ca6ed53acce1063fd351cbdf0419c7d37dcb6b3e5c69b0ab"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-light-root-Button.png",
+      "sha256": "e255ee81d90baee34ba2973f3d81a17571ce9a987f7ce1b5a971abe127d7c155"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-light-root-Select.png",
+      "sha256": "ed562bbee6e2cd7832ed927c54983aa0eeee819a5f75c1e25fff15ad7d82c98d"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-light-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-light-root-focus.png",
+      "sha256": "30a17e157d5b902d88253055af19a742023e28b3b50992a6e3de39eb50fc7a9e"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-chromium-light-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-chromium-light-root-popup.png",
+      "sha256": "40c5a313faf11c90ca6ed53acce1063fd351cbdf0419c7d37dcb6b3e5c69b0ab"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-webkit-dark-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-webkit-dark-root-Button.png",
+      "sha256": "aa36290c505f3976b695e51a560640655c0423dbe608266de25a57b343744543"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-webkit-dark-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-webkit-dark-root-Select.png",
+      "sha256": "5e88431bfe37875486ee9ab81ec70d5b47917976a0c579eff5c2d22b25f49c96"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-webkit-dark-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-webkit-dark-root-focus.png",
+      "sha256": "670f9f35ccb52ad54a99042e48b00511769f236bcdc8c131039f88366e8f26b2"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-webkit-dark-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-webkit-dark-root-popup.png",
+      "sha256": "08f387c254111f7cc48d2d5ed834ac99c911c2a8a73900bf215a1a65a93dff2b"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-webkit-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-webkit-light-root-Button.png",
+      "sha256": "4a79b5000f999251623a39558294a7b255ffe72f3dea414da3370bdc8c3b08ae"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-webkit-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-webkit-light-root-Select.png",
+      "sha256": "0b330c011ec8d487059a3189d73c1709185d3aa3c7c8e754efd8213aeb2ed8c6"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-webkit-light-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-webkit-light-root-focus.png",
+      "sha256": "5b3448fd6b8135746115e806da0431bed3cbf54ef86e3dcabbece23d29155c15"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/after-webkit-light-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/after-webkit-light-root-popup.png",
+      "sha256": "50313df1a219499d401e3138aa1e998bd03cecb0cff5b7e3c97d22c6dc1e4103"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/before-chromium-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/before-chromium-light-root-Button.png",
+      "sha256": "e50718be8257c0598ea87bf01b79dc867ee3ee1da35c70b39bf66dcc6eda0f7e"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/before-chromium-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/before-chromium-light-root-Select.png",
+      "sha256": "0c125fd8cc66b7fd185437a401c0c307203f572172c6e30d5a2c78bbc11c0d4a"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/before-webkit-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/before-webkit-light-root-Button.png",
+      "sha256": "da41e68ff219f25fc7de8a40d6e91ef477f5588fd23e5925b6e617a3bf4acf6f"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/before-webkit-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/acceptance/before-webkit-light-root-Select.png",
+      "sha256": "8fe6e815a35fef830e4d4d3383c2e8ec9d2046763e75892c54cfa29e6976dfe3"
+    },
+    {
+      "source_path": "source/evidence/stage2r/acceptance/matrix.json",
+      "path": "apps/v10/evidence/stage2r/acceptance/matrix.json",
+      "sha256": "4778d9578c42231d9ec8385d032337a9469ec5b86581cf518b1267c7904bef1d"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-chromium-dark-browser-font-Button.png",
+      "path": "apps/v10/evidence/stage2r/after-chromium-dark-browser-font-Button.png",
+      "sha256": "ab9a2a0c9e432d0e8b024f81dd38743e4a7468080d48287d5b0c0c7184473493"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-chromium-dark-browser-font-Select.png",
+      "path": "apps/v10/evidence/stage2r/after-chromium-dark-browser-font-Select.png",
+      "sha256": "ea423743e3bb8bd2b332a77690ea5f41188a6f20aad6c055268b57831958e8d0"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-chromium-dark-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/after-chromium-dark-root-Button.png",
+      "sha256": "a6569e74371f842e68c2055f3f89b21c5231d87051cf9dbe72cdce3aa3d1e174"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-chromium-dark-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/after-chromium-dark-root-Select.png",
+      "sha256": "075b1bb9a92f59e83288af88e83cc3ddc247c1a511e9f9c76f02979e49143685"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-chromium-light-browser-font-Button.png",
+      "path": "apps/v10/evidence/stage2r/after-chromium-light-browser-font-Button.png",
+      "sha256": "9fb9db37db987da39e6c1623d5a69d52c7bc6a4df98b29195880e1e69b70da43"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-chromium-light-browser-font-Select.png",
+      "path": "apps/v10/evidence/stage2r/after-chromium-light-browser-font-Select.png",
+      "sha256": "4177c1cf501c45902344e2f08e489da0c7367a105c818db9ec04941f5595bb06"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-chromium-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/after-chromium-light-root-Button.png",
+      "sha256": "b229d47436d60299589b868615c50251a0f90c47c00988d84c4c7ad5ef3324de"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-chromium-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/after-chromium-light-root-Select.png",
+      "sha256": "f0b567e2dbb2f91f3b5bf0fbea6bf1dfca75b0247917b2eb178b1634fa92debc"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-webkit-dark-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/after-webkit-dark-root-Button.png",
+      "sha256": "05db691be5b64f51a1a1ef3789807f8f005fe20396942c8de6b29e72a03bbff7"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-webkit-dark-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/after-webkit-dark-root-Select.png",
+      "sha256": "78559e2189ed4f81cdf3c57a2517d52e1c45d20da5ad6e0779a4da4247d5dcea"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-webkit-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/after-webkit-light-root-Button.png",
+      "sha256": "b5b7ac9baf66fe73c40a6072186ae06e4963c553488d522f24d7f909224d0377"
+    },
+    {
+      "source_path": "source/evidence/stage2r/after-webkit-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/after-webkit-light-root-Select.png",
+      "sha256": "1247f5dd15b5d193503fb0347512274be30841b38519a54f1002f11c36040daa"
+    },
+    {
+      "source_path": "source/evidence/stage2r/apt-update.log",
+      "path": "apps/v10/evidence/stage2r/apt-update.log",
+      "sha256": "b71dd832d1de008f2f5d0cab1d53bb69247844916e152233919a4e0a671afdf7"
+    },
+    {
+      "source_path": "source/evidence/stage2r/baseline-build.log",
+      "path": "apps/v10/evidence/stage2r/baseline-build.log",
+      "sha256": "1c74995ea9db28ab06f374b94f380e4c87b32bf990cb166fa20281e33e077f4c"
+    },
+    {
+      "source_path": "source/evidence/stage2r/baseline-static.log",
+      "path": "apps/v10/evidence/stage2r/baseline-static.log",
+      "sha256": "e3e271443220b18fa66cacf3a9fb5649d401f650a4f5f12b289b9069dc8792b3"
+    },
+    {
+      "source_path": "source/evidence/stage2r/before-chromium-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/before-chromium-light-root-Button.png",
+      "sha256": "e8c3e231b0883a2fa9262115bfbb7818da65a0ed3f57bca31ebee985a43e173c"
+    },
+    {
+      "source_path": "source/evidence/stage2r/before-chromium-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/before-chromium-light-root-Select.png",
+      "sha256": "b8aecc0d4b09041dea2256916facfcdc518cbaf41212fa59a1c83706c6ecca67"
+    },
+    {
+      "source_path": "source/evidence/stage2r/before-webkit-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/before-webkit-light-root-Button.png",
+      "sha256": "f4d09c90de6edf1c67c81e2838eb56ba1fa62df40a6b275e5375be30c8a8cd46"
+    },
+    {
+      "source_path": "source/evidence/stage2r/before-webkit-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/before-webkit-light-root-Select.png",
+      "sha256": "3407871e203e8136e5ea92a43dbe620821c867fbd5288f9c174e5e8b84dace07"
+    },
+    {
+      "source_path": "source/evidence/stage2r/chromium-install.log",
+      "path": "apps/v10/evidence/stage2r/chromium-install.log",
+      "sha256": "c52043032522cac999d6b47be3fa5ed90a237c6223c68c3b92d086aa8f4dbfa5"
+    },
+    {
+      "source_path": "source/evidence/stage2r/commands.md",
+      "path": "apps/v10/evidence/stage2r/commands.md",
+      "sha256": "a546e42eff2624387c6f89d52431354190e37b87c96851029f68b4fe011cbc55"
+    },
+    {
+      "source_path": "source/evidence/stage2r/environment.json",
+      "path": "apps/v10/evidence/stage2r/environment.json",
+      "sha256": "b88f1dd7f850bc3e8b75bb2022ba459eabb932aecbbe994c24e4e423e928d992"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/before.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/before.png",
+      "sha256": "c4d61cfe66868fa44592c372d79eaa61f9afaf71b402d6faf163e08b05f8df87"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix-run.log",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix-run.log",
+      "sha256": "f01cb286405343afe57561439a419f4704f0a28512e56762d5922ba5633e4853"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-browser-font-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-browser-font-Button.png",
+      "sha256": "ab9a2a0c9e432d0e8b024f81dd38743e4a7468080d48287d5b0c0c7184473493"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-browser-font-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-browser-font-Select.png",
+      "sha256": "ea423743e3bb8bd2b332a77690ea5f41188a6f20aad6c055268b57831958e8d0"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-browser-font-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-browser-font-focus.png",
+      "sha256": "d915a13db2da1e52be9e9a91180ffd2443b4a4cb8a101559d00db32c234acde8"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-browser-font-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-browser-font-popup.png",
+      "sha256": "71cd4fb845e59bd0c297b0f63735538eea7b14e6938daed320b206bd1633b49b"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-root-Button.png",
+      "sha256": "a6569e74371f842e68c2055f3f89b21c5231d87051cf9dbe72cdce3aa3d1e174"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-root-Select.png",
+      "sha256": "075b1bb9a92f59e83288af88e83cc3ddc247c1a511e9f9c76f02979e49143685"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-root-focus.png",
+      "sha256": "2c3f418caafd3751654d4da7c6e1265cd18fe98f09b2909fe4b1382f5d35e3e2"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-dark-root-popup.png",
+      "sha256": "8376cd45adcad5383774ed670120104f1b573d4ead9907b6cfdacf5a334d4832"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-browser-font-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-browser-font-Button.png",
+      "sha256": "9fb9db37db987da39e6c1623d5a69d52c7bc6a4df98b29195880e1e69b70da43"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-browser-font-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-browser-font-Select.png",
+      "sha256": "4177c1cf501c45902344e2f08e489da0c7367a105c818db9ec04941f5595bb06"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-browser-font-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-browser-font-focus.png",
+      "sha256": "e18cf45b464652fd0192e596f9e40e538946dc65b804f3a2de4416b043475e6e"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-browser-font-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-browser-font-popup.png",
+      "sha256": "cf0c478dc18b076727594d8c4f326d42b022bf2d2d127f481f72468d3540a90b"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-root-Button.png",
+      "sha256": "b229d47436d60299589b868615c50251a0f90c47c00988d84c4c7ad5ef3324de"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-root-Select.png",
+      "sha256": "f0b567e2dbb2f91f3b5bf0fbea6bf1dfca75b0247917b2eb178b1634fa92debc"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-root-focus.png",
+      "sha256": "536ea9960ec5fce774ca6840a80b91446a1b14a0b174aa94df0b57b487e1e787"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-chromium-light-root-popup.png",
+      "sha256": "10a4c99e67d6fe289cd7bc2a3a2c00419c161b695e2607c042ef4bca26da97ad"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-dark-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-dark-root-Button.png",
+      "sha256": "05db691be5b64f51a1a1ef3789807f8f005fe20396942c8de6b29e72a03bbff7"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-dark-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-dark-root-Select.png",
+      "sha256": "03f8ff81d07708be4817c0f746bdd53af432a9f555fc006b7d85824432f5b550"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-dark-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-dark-root-focus.png",
+      "sha256": "e407b61be879e96ddc1fc7a0ae8b5ae535f7a68d610d4e5d1996c905452741f9"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-dark-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-dark-root-popup.png",
+      "sha256": "9795a6a64641f4c61a8395e50f39e87b53f2c80a974b02106d6f26add1af77d7"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-light-root-Button.png",
+      "sha256": "b5b7ac9baf66fe73c40a6072186ae06e4963c553488d522f24d7f909224d0377"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-light-root-Select.png",
+      "sha256": "a8f980b9904a1c786ecf4b0b9bbec5c217f4c88dd296269d41998363ca289f24"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-light-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-light-root-focus.png",
+      "sha256": "666104ca2997409c0a8031d64ea4242aa515d1754dd3fb6432015cbf3ed7df74"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-light-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/after-webkit-light-root-popup.png",
+      "sha256": "32a2b6ae6dfc855dd682f0c69c44d685ad570ef8e41e619f0a5c74a8ee52f33d"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/before-chromium-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/before-chromium-light-root-Button.png",
+      "sha256": "e8c3e231b0883a2fa9262115bfbb7818da65a0ed3f57bca31ebee985a43e173c"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/before-chromium-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/before-chromium-light-root-Select.png",
+      "sha256": "b8aecc0d4b09041dea2256916facfcdc518cbaf41212fa59a1c83706c6ecca67"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/before-webkit-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/before-webkit-light-root-Button.png",
+      "sha256": "f4d09c90de6edf1c67c81e2838eb56ba1fa62df40a6b275e5375be30c8a8cd46"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/before-webkit-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/before-webkit-light-root-Select.png",
+      "sha256": "72c247c52b3b3f1de9b54c4de6729da821fb16dab37584c5bacf16ada3d76579"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/finalmatrix/matrix.json",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/finalmatrix/matrix.json",
+      "sha256": "24d18a85f6e14a4582db91eba76374c74bb8e4b6b636bc4c2e568fd363250bdb"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/matrix-run.log",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/matrix-run.log",
+      "sha256": "64ffe6bac81d202acb0138b6c9eb048dbc6c7e7d481357d0e9598012bbbb3628"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/matrix-run2.log",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/matrix-run2.log",
+      "sha256": "b02fad9b1986e7583529e1f9f2132092abe4d71d7810a36423a95a65b4777869"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/matrix.json",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/matrix.json",
+      "sha256": "a17432a8056105a73696437a5037490e44a545cb1c10de75936a1ea605e2a267"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix-run.log",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix-run.log",
+      "sha256": "0b0e99f867382075a0a7bd0e8f152a5b76992e906af570d01ea9a869ff24242e"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-browser-font-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-browser-font-Button.png",
+      "sha256": "06405e2873d925a268a47054be481f411fffd0f4e62b537bdebcc7bb23d164b2"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-browser-font-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-browser-font-Select.png",
+      "sha256": "5de9e5694017f26a58cfe53704ba507a2a4b4694122ff985a90cce1a840ed989"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-browser-font-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-browser-font-focus.png",
+      "sha256": "8c51ead967ba746d5225292b011476e339c5a3bc56d878fd9b5f24f27a69b54e"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-browser-font-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-browser-font-popup.png",
+      "sha256": "30e77e2de1d83ca7358260519adf220cdf577c8a5841547a997e861bb2c56e5a"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-root-Button.png",
+      "sha256": "06405e2873d925a268a47054be481f411fffd0f4e62b537bdebcc7bb23d164b2"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-root-Select.png",
+      "sha256": "5de9e5694017f26a58cfe53704ba507a2a4b4694122ff985a90cce1a840ed989"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-root-focus.png",
+      "sha256": "6e70bdb145e6e6374c467123f3f5878899ddadd37fa4c22fc5987bc10bb49d83"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-dark-root-popup.png",
+      "sha256": "60e27e551e86b4e554b174eaceae09938071fc9dfceacaa3722be3e47c00a972"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-browser-font-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-browser-font-Button.png",
+      "sha256": "e255ee81d90baee34ba2973f3d81a17571ce9a987f7ce1b5a971abe127d7c155"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-browser-font-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-browser-font-Select.png",
+      "sha256": "ed562bbee6e2cd7832ed927c54983aa0eeee819a5f75c1e25fff15ad7d82c98d"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-browser-font-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-browser-font-focus.png",
+      "sha256": "7733730a3f1d2cb679c6d98cf0310f5327aa92dc833bc76cba2a52f583bf3c22"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-browser-font-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-browser-font-popup.png",
+      "sha256": "40c5a313faf11c90ca6ed53acce1063fd351cbdf0419c7d37dcb6b3e5c69b0ab"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-root-Button.png",
+      "sha256": "e255ee81d90baee34ba2973f3d81a17571ce9a987f7ce1b5a971abe127d7c155"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-root-Select.png",
+      "sha256": "ed562bbee6e2cd7832ed927c54983aa0eeee819a5f75c1e25fff15ad7d82c98d"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-root-focus.png",
+      "sha256": "7733730a3f1d2cb679c6d98cf0310f5327aa92dc833bc76cba2a52f583bf3c22"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-chromium-light-root-popup.png",
+      "sha256": "40c5a313faf11c90ca6ed53acce1063fd351cbdf0419c7d37dcb6b3e5c69b0ab"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-dark-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-dark-root-Button.png",
+      "sha256": "aa36290c505f3976b695e51a560640655c0423dbe608266de25a57b343744543"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-dark-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-dark-root-Select.png",
+      "sha256": "5e88431bfe37875486ee9ab81ec70d5b47917976a0c579eff5c2d22b25f49c96"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-dark-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-dark-root-focus.png",
+      "sha256": "5d40cbe6458e1f07a08edb9fca69f0bafc8d3a2e6fd12f3fc37e4210441e1edc"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-dark-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-dark-root-popup.png",
+      "sha256": "50adf1b520d9933c97d03083cd45a07d6ad662a4d688df0ac4dc0f5a357ba666"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-light-root-Button.png",
+      "sha256": "4a79b5000f999251623a39558294a7b255ffe72f3dea414da3370bdc8c3b08ae"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-light-root-Select.png",
+      "sha256": "0b330c011ec8d487059a3189d73c1709185d3aa3c7c8e754efd8213aeb2ed8c6"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-light-root-focus.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-light-root-focus.png",
+      "sha256": "bf25ae6ae86d3bfb71bbe42da35691e21c02cf4e95221b9de029b0495a4fe0b7"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-light-root-popup.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/after-webkit-light-root-popup.png",
+      "sha256": "c90fc6ca16dfe4dcd658afdf33d672ac803d2c1a34b6f4769f912087c9f724dc"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/before-chromium-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/before-chromium-light-root-Button.png",
+      "sha256": "e50718be8257c0598ea87bf01b79dc867ee3ee1da35c70b39bf66dcc6eda0f7e"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/before-chromium-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/before-chromium-light-root-Select.png",
+      "sha256": "0c125fd8cc66b7fd185437a401c0c307203f572172c6e30d5a2c78bbc11c0d4a"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/before-webkit-light-root-Button.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/before-webkit-light-root-Button.png",
+      "sha256": "da41e68ff219f25fc7de8a40d6e91ef477f5588fd23e5925b6e617a3bf4acf6f"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/before-webkit-light-root-Select.png",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/before-webkit-light-root-Select.png",
+      "sha256": "8fe6e815a35fef830e4d4d3383c2e8ec9d2046763e75892c54cfa29e6976dfe3"
+    },
+    {
+      "source_path": "source/evidence/stage2r/failed-attempts/verified-matrix/matrix.json",
+      "path": "apps/v10/evidence/stage2r/failed-attempts/verified-matrix/matrix.json",
+      "sha256": "9ff1ef7899c7246735bec33d2f615f1db85bd6d05b0e824bccdd0e23d8571afa"
+    },
+    {
+      "source_path": "source/evidence/stage2r/final-baseline.log",
+      "path": "apps/v10/evidence/stage2r/final-baseline.log",
+      "sha256": "9f95383d25f72e95b3111994b841ebcb9f3a036d442b26a080c4e78143c9f18b"
+    },
+    {
+      "source_path": "source/evidence/stage2r/final-build.log",
+      "path": "apps/v10/evidence/stage2r/final-build.log",
+      "sha256": "92709e961b5fce3c8e8fa9ca3131ae133d778fa6973209c7f0a5274612104636"
+    },
+    {
+      "source_path": "source/evidence/stage2r/final-static.log",
+      "path": "apps/v10/evidence/stage2r/final-static.log",
+      "sha256": "e3e271443220b18fa66cacf3a9fb5649d401f650a4f5f12b289b9069dc8792b3"
+    },
+    {
+      "source_path": "source/evidence/stage2r/fixed-build.log",
+      "path": "apps/v10/evidence/stage2r/fixed-build.log",
+      "sha256": "bd8b188fc3d3b892c17909d6dd6541033e5d28566b071853db9db1ca34d70f43"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/GHSA-238p-pmpm-9mq7.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/GHSA-238p-pmpm-9mq7.json",
+      "sha256": "6277a7d401ec4950b60372d3f2da4ef53b9400d193bb077c351c2eb4640a9bb6"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/GHSA-f23m-r3pf-42rh.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/GHSA-f23m-r3pf-42rh.json",
+      "sha256": "bc2a491c4f8a9b0f319123243351bb53601108ceed88dd88af335f5c99fe6d7f"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/GHSA-r5fr-rjxr-66jc.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/GHSA-r5fr-rjxr-66jc.json",
+      "sha256": "dbf77a1d9ba6ab5ee43e73ac435fe5f3d51137d4de8b367281aac05c03a7612e"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/GHSA-xxjr-mmjv-4gpg.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/GHSA-xxjr-mmjv-4gpg.json",
+      "sha256": "47f1435cee16f15e8f6f9ebcf540477d97e96cb80f638962cb4a17f537ac4860"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/SECURITY-REVIEW.md",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/SECURITY-REVIEW.md",
+      "sha256": "701281141cf96cb17a519f016e04763828bf774ebfbb35425eb8721e2545969c"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/apps-sdk-ui-0.2.2.tgz",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/apps-sdk-ui-0.2.2.tgz",
+      "sha256": "4bd4f51bc299e373278d62e4add789d84de483ca51a87fa6cec1398bc870a288"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/dependency-audit-table.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/dependency-audit-table.json",
+      "sha256": "f84c05a8f5c7bac14e71dc5fbef66487dedc03ef1ae135b30fd7cb74dd55d130"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/gui-review.cjs",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/gui-review.cjs",
+      "sha256": "24637f049966bb2f81fabf190caedc340df530179bab5c75233d14fcaa6f5242"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-chromium-dark-button.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-chromium-dark-button.png",
+      "sha256": "ab9a2a0c9e432d0e8b024f81dd38743e4a7468080d48287d5b0c0c7184473493"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-chromium-dark-select.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-chromium-dark-select.png",
+      "sha256": "feb37f643cfdd51c3e9c95bb1483ae82b33a820c6463602aeeb77c097569c4b0"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-chromium-light-button.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-chromium-light-button.png",
+      "sha256": "9fb9db37db987da39e6c1623d5a69d52c7bc6a4df98b29195880e1e69b70da43"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-chromium-light-select.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-chromium-light-select.png",
+      "sha256": "8d26513aa12ffa59777dd7759f804d8106b91c1e0c088d357f194a68f8c1f1e2"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-gui.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-gui.json",
+      "sha256": "7419b80a5905b3e97c89ae5370cdf6c2d2c316f26a6de638c44845d31a44dc37"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-gui.log",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-gui.log",
+      "sha256": "ec3c55d8324d197cac32d6bc2ee03078bb1801b3b34d8109f3dd3d8b61d06731"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-red-green.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-red-green.json",
+      "sha256": "dc19b089b6db4991939e5bb916765992264b6fd7e1c76b0f1efaa2219a90e1e9"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-red-green.log",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-red-green.log",
+      "sha256": "4151c1ab178554b2539db86b0565e43256bf0919acb8d78b3ee1579c49e4c482"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-rg-chromium-after-Button.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-rg-chromium-after-Button.png",
+      "sha256": "a6569e74371f842e68c2055f3f89b21c5231d87051cf9dbe72cdce3aa3d1e174"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-rg-chromium-after-Select.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-rg-chromium-after-Select.png",
+      "sha256": "075b1bb9a92f59e83288af88e83cc3ddc247c1a511e9f9c76f02979e49143685"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-rg-chromium-before-Button.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-rg-chromium-before-Button.png",
+      "sha256": "21a206665d3e841c9a573597e4d5b7326778c666d9fa4d61a47ebc574ede093d"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-rg-chromium-before-Select.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-rg-chromium-before-Select.png",
+      "sha256": "b76dfbacc8d03fcf08d8ceb19859047aeeb7b687e7bb955028f7fec26c2cb392"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-rg-webkit-after-Button.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-rg-webkit-after-Button.png",
+      "sha256": "05db691be5b64f51a1a1ef3789807f8f005fe20396942c8de6b29e72a03bbff7"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-rg-webkit-after-Select.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-rg-webkit-after-Select.png",
+      "sha256": "03f8ff81d07708be4817c0f746bdd53af432a9f555fc006b7d85824432f5b550"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-rg-webkit-before-Button.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-rg-webkit-before-Button.png",
+      "sha256": "d972c7dfd94eaf3a09460dcb61fc47a41f04788211348f9a594d37ed3e1fa965"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-rg-webkit-before-Select.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-rg-webkit-before-Select.png",
+      "sha256": "5ce7d58ce8f65030de6ffa84d76069be25090d6c964f94c2a4e66a3823bd3506"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-webkit-dark-button.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-webkit-dark-button.png",
+      "sha256": "1979ce781eadfebe8ae6059bcd76aae7bf78c519877e97e771475e9e8019bfb7"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-webkit-dark-select.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-webkit-dark-select.png",
+      "sha256": "bbad62727130e796730d7ba2fcc6d8f56c4e64c6df008ef3ac1f60b63689d6ab"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-webkit-light-button.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-webkit-light-button.png",
+      "sha256": "8f0f448e00cc56d5294039f3a6d689f7f5e5bc47be162103fa257de66204531a"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/independent-webkit-light-select.png",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/independent-webkit-light-select.png",
+      "sha256": "93978a2f53553d245e7c9b6561e71784162bb003f844da43f01251be20c4582a"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/npm-audit-current.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/npm-audit-current.json",
+      "sha256": "bc938105c57e77d5ad63cfbbb32610822b74c53d44a71d1d522024363b860e29"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/npm-audit-current.stderr",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/npm-audit-current.stderr",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/official-bundle-content.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/official-bundle-content.json",
+      "sha256": "758f075bdd1cb5ff5a1764164d380d93d12e001d6aef22c4591f72c11fc0288f"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/official-integrity.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/official-integrity.json",
+      "sha256": "8fad7181d919b338ce200db60280e7610d1a6a4bd4d1f250f7c0fbf13e8cf738"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/official-registry-metadata.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/official-registry-metadata.json",
+      "sha256": "29ffbdd8c87633b782253efcaadd615cc49ecae9e399246037de7df18ac873d5"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/react-remove-scroll-bar-2.3.8-metadata.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/react-remove-scroll-bar-2.3.8-metadata.json",
+      "sha256": "826c618ece09367334160c1ab3a272fd54f8f12e3b0a45f75b0f2660d285855a"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/red-green-review.cjs",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/red-green-review.cjs",
+      "sha256": "7584e1b734b65e5fbc903fd331913aa40d0b52142602e6760dc7484e3fae74af"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/release-license-attempts.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/release-license-attempts.json",
+      "sha256": "982723b894af0772323a33a7ba8e5ab76b835e46acc465f7836c89352846ad36"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/repo-tags.txt",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/repo-tags.txt",
+      "sha256": "43e5fbc546532f261a7186f69fc114091e753307ca0c0acf4647fdd2c6c1a05a"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/review-commands.md",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/review-commands.md",
+      "sha256": "f886ffa3d349d613b5787bd219527eb65482dd572002f16a4789633ea1f13086"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/reviewed-source-sha256-final.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/reviewed-source-sha256-final.json",
+      "sha256": "e397a3dad4c548e8cc40af3c5b7043110ef6b8630be995199aa5ed53636a13ea"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/reviewed-source-sha256.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/reviewed-source-sha256.json",
+      "sha256": "8517de9be9b62665e14b7b3fe13be1ce123fbaae282e3dca3c4ba516012bb6b6"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/v09-structure.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/v09-structure.json",
+      "sha256": "48ba4c825b536690da88257c481e130a2f31c84f1808ce01070f6c52bd71fbd6"
+    },
+    {
+      "source_path": "source/evidence/stage2r/independent-security-review/vulnerable-dependency-paths.json",
+      "path": "apps/v10/evidence/stage2r/independent-security-review/vulnerable-dependency-paths.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_path": "source/evidence/stage2r/input-verification.json",
+      "path": "apps/v10/evidence/stage2r/input-verification.json",
+      "sha256": "fa1ae0d97f12d775f5e44669b23a59e761fcc055631181c62a2b69d2fe526b70"
+    },
+    {
+      "source_path": "source/evidence/stage2r/lzo-download.log",
+      "path": "apps/v10/evidence/stage2r/lzo-download.log",
+      "sha256": "3ba7de6fd842a203ea2683b0b636ee1b805e7dbc446c55b1299270c52256e8d3"
+    },
+    {
+      "source_path": "source/evidence/stage2r/notice-coverage.json",
+      "path": "apps/v10/evidence/stage2r/notice-coverage.json",
+      "sha256": "d43607f6341bdc8702e514cba7b10c64a8d9c4c91e76be9fe426e5d1e02364d3"
+    },
+    {
+      "source_path": "source/evidence/stage2r/rebuild-comparison.json",
+      "path": "apps/v10/evidence/stage2r/rebuild-comparison.json",
+      "sha256": "4469dd95fd3e2f8ac1af2d1a296e13e8302b015277cc99f9fb6edc27b6a900ab"
+    },
+    {
+      "source_path": "source/evidence/stage2r/review-input-manifest.json",
+      "path": "apps/v10/evidence/stage2r/review-input-manifest.json",
+      "sha256": "dc7ca44847bc138df520ee982a1d3f28634dab694ced0d67203e0ba2d715b46b"
+    },
+    {
+      "source_path": "source/evidence/stage2r/smoke-run.log",
+      "path": "apps/v10/evidence/stage2r/smoke-run.log",
+      "sha256": "1d32c8be2ab02f8c949fa3ae615efb75c77110517ac05a530900a2cf5e33da0c"
+    },
+    {
+      "source_path": "source/evidence/stage2r/smoke/smoke.json",
+      "path": "apps/v10/evidence/stage2r/smoke/smoke.json",
+      "sha256": "795f9a0130c9b5f3c1d9b375bcd98183f999a57957677131bdcc8844a80811ce"
+    },
+    {
+      "source_path": "source/evidence/stage2r/webkit-deps-download-local.log",
+      "path": "apps/v10/evidence/stage2r/webkit-deps-download-local.log",
+      "sha256": "41a5a9e3f0a223fdab232d852368ec711b85077dbabb4a4c9715cabe3f2b6027"
+    },
+    {
+      "source_path": "source/evidence/stage2r/webkit-deps-download.log",
+      "path": "apps/v10/evidence/stage2r/webkit-deps-download.log",
+      "sha256": "bee4424ce13804ed417642a61c2158f905ed5dedb603f335fbfd93838f9e02bb"
+    },
+    {
+      "source_path": "source/evidence/stage2r/webkit-deps-install.log",
+      "path": "apps/v10/evidence/stage2r/webkit-deps-install.log",
+      "sha256": "dae30932e726f356963c1184317759081d77dc5c148e6ede053830a04f19d89a"
+    },
+    {
+      "source_path": "source/evidence/stage2r/webkit-deps-root.log",
+      "path": "apps/v10/evidence/stage2r/webkit-deps-root.log",
+      "sha256": "cf9bfa211b2709d64db51e94f098946b6231b4bf6266bb3305a5c492393537ab"
+    },
+    {
+      "source_path": "source/evidence/stage2r/webkit-install.log",
+      "path": "apps/v10/evidence/stage2r/webkit-install.log",
+      "sha256": "06dd02f233691813e6ce4598c7b2f265aad3360abb1063b4fd74d274aad074da"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/authenticity-current-final.json",
+      "path": "apps/v10/evidence/stage2r2/authenticity-current-final.json",
+      "sha256": "89877ad0e7676f1f3b882c26b28bed7ffaeeabb7df3ed3ea49cdec0386147ea8"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/authenticity-current.json",
+      "path": "apps/v10/evidence/stage2r2/authenticity-current.json",
+      "sha256": "10e9c5cabc072f1f6e9b87b1a9f41c68850fcef7f306a5977b3446126ebf5aa4"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/base-to-package.json",
+      "path": "apps/v10/evidence/stage2r2/base-to-package.json",
+      "sha256": "78421810571ccba316722a8078c5209f36c6246cfa1a66fd6239a018f8afdb11"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/baseline-final.log",
+      "path": "apps/v10/evidence/stage2r2/baseline-final.log",
+      "sha256": "9f95383d25f72e95b3111994b841ebcb9f3a036d442b26a080c4e78143c9f18b"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/browser-attempts.json",
+      "path": "apps/v10/evidence/stage2r2/browser-attempts.json",
+      "sha256": "3381a3bbcc3fe260568616f2a5a6019cd899c3ab47604fd140e2c6c0d39a5b91"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/build-1.log",
+      "path": "apps/v10/evidence/stage2r2/build-1.log",
+      "sha256": "5e7ea6f56dbe070d12ea6be9ce45458a4cad44bb1ce2f195ede070a99a98d56d"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/build-focus.log",
+      "path": "apps/v10/evidence/stage2r2/build-focus.log",
+      "sha256": "f847a6a3ca1cf7f75155ccd8954552cecf4f24f6d601430093d42c20473cd6bd"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/build-location-comparison.json",
+      "path": "apps/v10/evidence/stage2r2/build-location-comparison.json",
+      "sha256": "c0b5b609ef3d28c7901f7f3f37d5b0c4fa0d31ce4c56b39b1ee2e160d2fa785b"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/button-focus-active.jpg",
+      "path": "apps/v10/evidence/stage2r2/button-focus-active.jpg",
+      "sha256": "ff83ac9a0121890cc90919aa98970242cf4bf53fa1ded441068c3763a74bbd4f"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/button-focus-before.jpg",
+      "path": "apps/v10/evidence/stage2r2/button-focus-before.jpg",
+      "sha256": "9dce391c84795d834d900a12e8d6307c11417c4c1f50436e1008b3e3652df512"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/button-focus-fixed-visible.jpg",
+      "path": "apps/v10/evidence/stage2r2/button-focus-fixed-visible.jpg",
+      "sha256": "b93b3dd94f1d7f4df4f17852a9f41481ac8998f47b979792cf9501af9cdab95a"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/button-focus-fixed.jpg",
+      "path": "apps/v10/evidence/stage2r2/button-focus-fixed.jpg",
+      "sha256": "9ad3d11e1162be924b2769745f8d67fa0b5504b9f23af56a1880582da4128598"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/clean-build-a.log",
+      "path": "apps/v10/evidence/stage2r2/clean-build-a.log",
+      "sha256": "3cb3dc2646996c4d814836581020fd8001116ae26dfbdfe8962e7e6b22e5919a"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/clean-build-b.log",
+      "path": "apps/v10/evidence/stage2r2/clean-build-b.log",
+      "sha256": "7222557a37acd0ce1fd427d5e39fda209c4189761e03915f9203a4ac4550ba45"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/cua-final-matrix.json",
+      "path": "apps/v10/evidence/stage2r2/cua-final-matrix.json",
+      "sha256": "65cddbc151952e775c379548ead65116a7784711a0098491cc3f381a3f36413c"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/cua-final-summary.json",
+      "path": "apps/v10/evidence/stage2r2/cua-final-summary.json",
+      "sha256": "7e430ffc05ac99bdc0d570d574a243a7f165f5b0fc28fe46049db6b4f1a6dce7"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/cua-matrix.json",
+      "path": "apps/v10/evidence/stage2r2/cua-matrix.json",
+      "sha256": "d61ee4f71b7ee7ce1c9e3ba595810f50e9cec07bb4c6aa523ea5039a154e3355"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/dependency-paths.json",
+      "path": "apps/v10/evidence/stage2r2/dependency-paths.json",
+      "sha256": "5166db74ee1a98d53f0d7f0e5b90b3fc2e9a7f1eee5933f1ec072d6ab3432c35"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/final-build-a.log",
+      "path": "apps/v10/evidence/stage2r2/final-build-a.log",
+      "sha256": "f0ae91180913574edf1fa688ea04a1f27a6060bb3093a7f3ed590f134c58cd71"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/final-build-b.log",
+      "path": "apps/v10/evidence/stage2r2/final-build-b.log",
+      "sha256": "0c955a61fc523594194311d3356c022ef321c13f52ea97b59cd3f6288c83ffa9"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/final-dist-a.json",
+      "path": "apps/v10/evidence/stage2r2/final-dist-a.json",
+      "sha256": "eb2c71e2394d3e65ea19b15d7ebd5f05f57e2f3bcb53dcead81ae58432c74cd0"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/final-rebuild.json",
+      "path": "apps/v10/evidence/stage2r2/final-rebuild.json",
+      "sha256": "b21ec2e6803b1b351c57cf79ee31b29c5550e2b8abbd2153107acf183333ac49"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/focus-active.json",
+      "path": "apps/v10/evidence/stage2r2/focus-active.json",
+      "sha256": "39cc8c4c55a51a7f2b33fdb53a92c0dc01a7353dbe5c50999bf1b43c9f2c7e8a"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/focus-before.json",
+      "path": "apps/v10/evidence/stage2r2/focus-before.json",
+      "sha256": "d03bb5c16e5b0f8707d574b6573f9781aa7998e8cfc2d53dc9c761e12b808252"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/focus-fixed.json",
+      "path": "apps/v10/evidence/stage2r2/focus-fixed.json",
+      "sha256": "12b08e14c793f9538d0f696f8f16268a7b0e01219b3f5f5225efbfa29426bf9e"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/github-discovery.json",
+      "path": "apps/v10/evidence/stage2r2/github-discovery.json",
+      "sha256": "5ca6633691c9303dd49b04a22a28d0689978c8b700b35e7ad58824e3f5c95de9"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/historical-evidence-preservation.json",
+      "path": "apps/v10/evidence/stage2r2/historical-evidence-preservation.json",
+      "sha256": "33a7cc9709f6671e91adb47ba0fa15fb31284529d2787822fb0b852443dde0d9"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/identity.json",
+      "path": "apps/v10/evidence/stage2r2/identity.json",
+      "sha256": "9572cd400d3688fc3e7d7acfe065e774d001b510f23fb0c02f347e316085a263"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/independent/count-boundary.json",
+      "path": "apps/v10/evidence/stage2r2/independent/count-boundary.json",
+      "sha256": "a6f62edef2671608a994dd4f12266f769b3cfb6ab8df3a539893c08db9da945f"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/independent/current-map-reconciliation.json",
+      "path": "apps/v10/evidence/stage2r2/independent/current-map-reconciliation.json",
+      "sha256": "6aaff3b9019034b67bd9810b9ed19d45169c06b64dffd5d1dd2bcbb06601fcac"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/independent/final-record-reconciliation.json",
+      "path": "apps/v10/evidence/stage2r2/independent/final-record-reconciliation.json",
+      "sha256": "d67ceb08bf28f4c2214ed657f8162e127542c54fb9f1adfe768708fae4675a32"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/independent/missing-assert-after.json",
+      "path": "apps/v10/evidence/stage2r2/independent/missing-assert-after.json",
+      "sha256": "3450e0e6350356323cbcd026b9f2fd80f240275a569593f7d05d4d39afe2ac9d"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/independent/missing-assert-reproduction.json",
+      "path": "apps/v10/evidence/stage2r2/independent/missing-assert-reproduction.json",
+      "sha256": "ed10b29f3c1478d6ab9d031e554eba26d5d33b32ec81eb2c602578a2544d1457"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/independent/reviewed-source-sha256.txt",
+      "path": "apps/v10/evidence/stage2r2/independent/reviewed-source-sha256.txt",
+      "sha256": "ba9f1d1cf1be616b65b82d3213c4dfef9d66e2f6da00de5372bf868a9fd32cf5"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/independent/runner-tests-after.log",
+      "path": "apps/v10/evidence/stage2r2/independent/runner-tests-after.log",
+      "sha256": "6c2f54475d59ffd6ff242926d7e16b6fe6e99b76c8a96eae5899a73c87dd3c45"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/independent/runner-tests-final.log",
+      "path": "apps/v10/evidence/stage2r2/independent/runner-tests-final.log",
+      "sha256": "b40fefbf0c7eabc5ded304d250cb01adc95604ce7d84b6816f1cdeaa6d884929"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/independent/runner-tests.log",
+      "path": "apps/v10/evidence/stage2r2/independent/runner-tests.log",
+      "sha256": "b5ad2937ff124b87db668fdfc4e657a0de4bcd5137696db6ae9d607583fff827"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/keyboard.json",
+      "path": "apps/v10/evidence/stage2r2/keyboard.json",
+      "sha256": "919fbaaf14e79b0cea3ecb2ae03b68b2f9133a3c2176c03219aa3c6417529a78"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/npm-audit-current.json",
+      "path": "apps/v10/evidence/stage2r2/npm-audit-current.json",
+      "sha256": "bc938105c57e77d5ad63cfbbb32610822b74c53d44a71d1d522024363b860e29"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/npm-audit-current.stderr",
+      "path": "apps/v10/evidence/stage2r2/npm-audit-current.stderr",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/official-pack.json",
+      "path": "apps/v10/evidence/stage2r2/official-pack.json",
+      "sha256": "92523108aacf676951c3bcc934f33a2741af5642ecfca8d504f6f859e6f48886"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/official-pack.stderr",
+      "path": "apps/v10/evidence/stage2r2/official-pack.stderr",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/outer-manifest.json",
+      "path": "apps/v10/evidence/stage2r2/outer-manifest.json",
+      "sha256": "cd01c3c4fdf46f149110d4d55c73a16726207273f045092c20f8564c4ec7cd0e"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/rebuild-equality.json",
+      "path": "apps/v10/evidence/stage2r2/rebuild-equality.json",
+      "sha256": "1cf16b798ae3c01098c7e837088c2484759313c2f1f05d134bc02f3aaa352a02"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/runner-red-green-v2.log",
+      "path": "apps/v10/evidence/stage2r2/runner-red-green-v2.log",
+      "sha256": "5d4b7fdd58ef0ec86b2c89a09b2093e97990e2a8b2fc0352d2f2931e1ede9ba3"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/runner-red-green.log",
+      "path": "apps/v10/evidence/stage2r2/runner-red-green.log",
+      "sha256": "8b88a747c52fdbdd52b686b60ff8f230c9e91d22a239a8f66ef119afd3d974f7"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/runner-tests-final.log",
+      "path": "apps/v10/evidence/stage2r2/runner-tests-final.log",
+      "sha256": "de2f53a269a43bfeeddad5444228e9da938bdafa310bed4f81d9b13ae85013fa"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/runner-tests-v2.log",
+      "path": "apps/v10/evidence/stage2r2/runner-tests-v2.log",
+      "sha256": "f6c923f974ca82a8a6e9c2dd72d6ffb71f67a90d94c321cbf93d88e3b94da6fa"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/runner-tests.log",
+      "path": "apps/v10/evidence/stage2r2/runner-tests.log",
+      "sha256": "88c26ba44275a93e87255e038b0e5078df356170887a1897017f500dd063e390"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/runtime.json",
+      "path": "apps/v10/evidence/stage2r2/runtime.json",
+      "sha256": "4d89d550d3e2a68167d51d7a6d4290928b24c042b034a26ca96c401e1d5c270e"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/scrollbar-metadata.json",
+      "path": "apps/v10/evidence/stage2r2/scrollbar-metadata.json",
+      "sha256": "870fb48018d7519e6fc107404f2af6438c331dc3d4e75a0d2c77876d553a11b7"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/scrollbar-metadata.stderr",
+      "path": "apps/v10/evidence/stage2r2/scrollbar-metadata.stderr",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/scrollbar-pack.json",
+      "path": "apps/v10/evidence/stage2r2/scrollbar-pack.json",
+      "sha256": "49e55ca541cff5fc8a37268cc23e2e57901a7e19053a122be9439000b4682345"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/scrollbar-pack.stderr",
+      "path": "apps/v10/evidence/stage2r2/scrollbar-pack.stderr",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/served-map-final.json",
+      "path": "apps/v10/evidence/stage2r2/served-map-final.json",
+      "sha256": "2bcf1a258c0208802865a0a7d881695791f3acd171b46e4c234b710825060ebd"
+    },
+    {
+      "source_path": "source/evidence/stage2r2/static-tests-final.log",
+      "path": "apps/v10/evidence/stage2r2/static-tests-final.log",
+      "sha256": "f20be8ad64856560a9d5ae16df60a10589cc1bbc7d1667bb6d5e250673ee47a1"
+    },
+    {
+      "source_path": "source/evidence/static-test.log",
+      "path": "apps/v10/evidence/static-test.log",
+      "sha256": "e3e271443220b18fa66cacf3a9fb5649d401f650a4f5f12b289b9069dc8792b3"
+    },
+    {
+      "source_path": "source/index.html",
+      "path": "apps/v10/index.html",
+      "sha256": "d6418b451ca5a1d4abacb5372edd1973cd05e525636064d3556d163f3ab14e20"
+    },
+    {
+      "source_path": "source/package-lock.json",
+      "path": "apps/v10/package-lock.json",
+      "sha256": "d62b5a4f1ffeb6d5463ea64304f561dbef919a30c96050defd115c8b81ae1b46"
+    },
+    {
+      "source_path": "source/package.json",
+      "path": "apps/v10/package.json",
+      "sha256": "465450a25a4fba6112b0173aeab0b3bbce10d98a583d5b68e37636ebdea50c75"
+    },
+    {
+      "source_path": "source/public/THIRD_PARTY_NOTICES.txt",
+      "path": "apps/v10/public/THIRD_PARTY_NOTICES.txt",
+      "sha256": "e1335c421d3b5da01c742b4c3013836b1f77bf7449bc6f02a9893a477508eeab"
+    },
+    {
+      "source_path": "source/public/qa.html",
+      "path": "apps/v10/public/qa.html",
+      "sha256": "4d89460b370442cea96619e8f8781c090ed77acb125bca0282839f5293db4587"
+    },
+    {
+      "source_path": "source/public/v09-original.html",
+      "path": "apps/v10/public/v09-original.html",
+      "sha256": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97"
+    },
+    {
+      "source_path": "source/public/v09-viewer.html",
+      "path": "apps/v10/public/v09-viewer.html",
+      "sha256": "535a9f26834c6c6ef6a178636832fa990793949a61dc19db7e48d689ad82d3b3"
+    },
+    {
+      "source_path": "source/scripts/licenses.mjs",
+      "path": "apps/v10/scripts/licenses.mjs",
+      "sha256": "f6fcb5aa85003c9f9a537b33b74a4332a4d982cd9704ecc834d61eb9c0f86a4d"
+    },
+    {
+      "source_path": "source/scripts/stage2r-browser.cjs",
+      "path": "apps/v10/scripts/stage2r-browser.cjs",
+      "sha256": "f228b3e10717dd72669da28e01ca4e144edcbb95f6a7e07df64ed5b4bc166fb5"
+    },
+    {
+      "source_path": "source/scripts/stage2r-result.cjs",
+      "path": "apps/v10/scripts/stage2r-result.cjs",
+      "sha256": "780b4f67f37f4875a7b2e4c47c9eec8ccad822708c67e2d89c30e3fc9a965483"
+    },
+    {
+      "source_path": "source/scripts/stage2r-runner.test.cjs",
+      "path": "apps/v10/scripts/stage2r-runner.test.cjs",
+      "sha256": "7c7a276ffca7e9f770050cb27f125d2fc56667547d5fee60d5cd66418537da51"
+    },
+    {
+      "source_path": "source/scripts/stage2r-smoke.cjs",
+      "path": "apps/v10/scripts/stage2r-smoke.cjs",
+      "sha256": "d80d451b91d8867058e94bad6d929be0253f43d4f5673c11adc117a2607bb46b"
+    },
+    {
+      "source_path": "source/scripts/verify-baseline.mjs",
+      "path": "apps/v10/scripts/verify-baseline.mjs",
+      "sha256": "548640e53d3b26fba87be76feac25b7ee41b85e51c1f5da0cd4f84d4d7ea7f2a"
+    },
+    {
+      "source_path": "source/scripts/verify.mjs",
+      "path": "apps/v10/scripts/verify.mjs",
+      "sha256": "e41602b251b2a00792b92649dc69ab0a8936ca1a593c8f08ac7eec59f6a86595"
+    },
+    {
+      "source_path": "source/src/main.css",
+      "path": "apps/v10/src/main.css",
+      "sha256": "ad0791ec49dbe792972c6638253aa37cd825b72831003ab7769be26d68da03fa"
+    },
+    {
+      "source_path": "source/src/main.tsx",
+      "path": "apps/v10/src/main.tsx",
+      "sha256": "463bb8e77c9a42cd4bc15a7ecb1f20a958ac55c2b8350cddf659bc6ac945e60d"
+    },
+    {
+      "source_path": "source/tsconfig.json",
+      "path": "apps/v10/tsconfig.json",
+      "sha256": "14630e0fa05a8b7a0a962de955e24fe2c0632569b6d29617355e9b16cfd5f6ff"
+    },
+    {
+      "source_path": "source/vite.config.ts",
+      "path": "apps/v10/vite.config.ts",
+      "sha256": "a0a856a315d3d2388ceb10da455927cd0ded36e1fd4b2e177758b3563f079eaf"
+    }
+  ]
+}

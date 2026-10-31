@@ -1,0 +1,38 @@
+[
+  {
+    "library_file_id": "libfile_80c874b3a04081919972c617b3b12991",
+    "filename": "intelligence-ui-museum-v09-117-exhibits-final.html",
+    "selection": "v09 baseline; matches latest v10 and independent review"
+  },
+  {
+    "library_file_id": "libfile_96a14b129af8819190b79950bfeecb81",
+    "filename": "intelligence-ui-museum-v09-117-exhibits.html",
+    "selection": "initial baseline retained"
+  },
+  {
+    "library_file_id": "libfile_7a81106bf91081918231770b39f788d7",
+    "filename": "intelligence-ui-museum-v09-117-exhibits(1).html",
+    "selection": "byte-identical initial duplicate"
+  },
+  {
+    "library_file_id": "libfile_dd43cf581bbc81918d9a4767f2856e2e",
+    "filename": "intelligence-ui-museum-v09-package.zip",
+    "selection": "initial package preserved"
+  },
+  {
+    "library_file_id": "libfile_aa97118f520c8191ad7e088e88edaf85",
+    "filename": "intelligence-ui-museum-v09-verification.md",
+    "selection": "initial verification; also preserved in initial zip"
+  },
+  {
+    "library_file_id": "libfile_ff784d5eb06081919974f8fbafc12e62",
+    "filename": "intelligence-ui-museum-v10-stage2r2-package.zip",
+    "selection": "302-source import; matches review target"
+  },
+  {
+    "library_file_id": "libfile_97d97c02a68081918ed1c6466342f343",
+    "version_id": "1",
+    "filename": "intelligence-ui-museum-stage2r2-independent-review-20261030.zip",
+    "selection": "latest independent review; evidence unchanged"
+  }
+]

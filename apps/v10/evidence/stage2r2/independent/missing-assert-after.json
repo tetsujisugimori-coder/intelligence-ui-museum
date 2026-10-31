@@ -1,0 +1,8 @@
+{
+  "purpose": "same independent adversarial shape after fix",
+  "conditions": 40,
+  "requiredProductAssertions": 0,
+  "failures": [
+    "missing, duplicate or unexpected assertion"
+  ]
+}

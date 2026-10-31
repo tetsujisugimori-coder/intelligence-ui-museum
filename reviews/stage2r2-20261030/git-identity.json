@@ -1,0 +1,17 @@
+{
+  "tree_files": 302,
+  "source_vs_tree_mismatches": [],
+  "old_evidence_files": 192,
+  "old_evidence_changed": [],
+  "patch_exact_match": false,
+  "patch_sha256": "ddffba313cc82982a8056b0eae02b9325627d17f53ab79ba0abe9f6eebe222d1",
+  "patch_scoped_paths": [
+    "scripts/stage2r-browser.cjs",
+    "scripts/stage2r-result.cjs",
+    "scripts/stage2r-runner.test.cjs",
+    "scripts/stage2r-smoke.cjs",
+    "src/main.css",
+    "src/main.tsx"
+  ],
+  "patch_scoped_exact_match": true
+}

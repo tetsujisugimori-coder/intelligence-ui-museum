@@ -1,0 +1,31 @@
+{
+  "scope": "independent matching boundary check, not GUI",
+  "three": [
+    {
+      "n": 3,
+      "match": true
+    },
+    {
+      "n": 30,
+      "match": false
+    },
+    {
+      "n": 300,
+      "match": false
+    }
+  ],
+  "one": [
+    {
+      "n": 1,
+      "match": true
+    },
+    {
+      "n": 10,
+      "match": false
+    },
+    {
+      "n": 100,
+      "match": false
+    }
+  ]
+}

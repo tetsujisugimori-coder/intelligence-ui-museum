@@ -1,0 +1,1704 @@
+[
+  {
+    "engine": "chromium",
+    "theme": "light",
+    "zoom": "native-browser-font32",
+    "rootFont": "32px",
+    "button": {
+      "text": "公式ボタンを実行",
+      "font": "28px",
+      "rect": {
+        "x": 23,
+        "y": 418.15625,
+        "width": 266.53125,
+        "height": 64,
+        "top": 418.15625,
+        "right": 289.53125,
+        "bottom": 482.15625,
+        "left": 23
+      },
+      "outline": "rgb(209, 118, 36) solid 3px",
+      "offset": "4px",
+      "clips": [],
+      "active": true,
+      "focusVisible": true
+    },
+    "buttonCount": "実行回数：1 / disabled：false / loading：false",
+    "select": {
+      "text": "一覧",
+      "font": "14px",
+      "rect": {
+        "x": 23,
+        "y": 433.8125,
+        "width": 274,
+        "height": 32,
+        "top": 433.8125,
+        "right": 297,
+        "bottom": 465.8125,
+        "left": 23
+      },
+      "outline": "rgb(24, 37, 37) none 3px",
+      "offset": "0px",
+      "clips": [],
+      "active": true,
+      "focusVisible": true
+    },
+    "changed": {
+      "text": "カード",
+      "font": "14px",
+      "rect": {
+        "x": 23,
+        "y": 433.8125,
+        "width": 274,
+        "height": 32,
+        "top": 433.8125,
+        "right": 297,
+        "bottom": 465.8125,
+        "left": 23
+      },
+      "outline": "rgb(24, 37, 37) none 3px",
+      "offset": "0px",
+      "clips": [],
+      "active": false,
+      "focusVisible": false
+    },
+    "selected": "カード",
+    "keyboard": "一覧",
+    "errors": [],
+    "requests": [
+      "http://127.0.0.1:33087/?theme=light",
+      "http://127.0.0.1:33087/assets/index-i00O3cS1.js",
+      "http://127.0.0.1:33087/assets/index-BUxARw6E.css",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=82&theme=light",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=16&theme=light",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=85&theme=light",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=47&theme=light",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=86&theme=light"
+    ],
+    "requestFailures": [
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      }
+    ],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:33087/?theme=light",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/assets/index-BUxARw6E.css",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/assets/index-i00O3cS1.js",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=82&theme=light",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=16&theme=light",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=85&theme=light",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=47&theme=light",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=86&theme=light",
+        "status": 200
+      }
+    ],
+    "csp": [
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      }
+    ],
+    "cspMeta": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'self'"
+  },
+  {
+    "engine": "chromium",
+    "theme": "dark",
+    "zoom": "native-browser-font32",
+    "rootFont": "32px",
+    "button": {
+      "text": "公式ボタンを実行",
+      "font": "28px",
+      "rect": {
+        "x": 23,
+        "y": 418.15625,
+        "width": 266.53125,
+        "height": 64,
+        "top": 418.15625,
+        "right": 289.53125,
+        "bottom": 482.15625,
+        "left": 23
+      },
+      "outline": "rgb(209, 118, 36) solid 3px",
+      "offset": "4px",
+      "clips": [],
+      "active": true,
+      "focusVisible": true
+    },
+    "buttonCount": "実行回数：1 / disabled：false / loading：false",
+    "select": {
+      "text": "一覧",
+      "font": "14px",
+      "rect": {
+        "x": 23,
+        "y": 433.8125,
+        "width": 274,
+        "height": 32,
+        "top": 433.8125,
+        "right": 297,
+        "bottom": 465.8125,
+        "left": 23
+      },
+      "outline": "rgb(230, 239, 235) none 3px",
+      "offset": "0px",
+      "clips": [],
+      "active": true,
+      "focusVisible": true
+    },
+    "changed": {
+      "text": "カード",
+      "font": "14px",
+      "rect": {
+        "x": 23,
+        "y": 433.8125,
+        "width": 274,
+        "height": 32,
+        "top": 433.8125,
+        "right": 297,
+        "bottom": 465.8125,
+        "left": 23
+      },
+      "outline": "rgb(230, 239, 235) none 3px",
+      "offset": "0px",
+      "clips": [],
+      "active": false,
+      "focusVisible": false
+    },
+    "selected": "カード",
+    "keyboard": "一覧",
+    "errors": [],
+    "requests": [
+      "http://127.0.0.1:33087/?theme=dark",
+      "http://127.0.0.1:33087/assets/index-i00O3cS1.js",
+      "http://127.0.0.1:33087/assets/index-BUxARw6E.css",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+      "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=82&theme=dark",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=16&theme=dark",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=85&theme=dark",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=47&theme=dark",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=86&theme=dark"
+    ],
+    "requestFailures": [
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      },
+      {
+        "url": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "failure": {
+          "errorText": "csp"
+        }
+      }
+    ],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:33087/?theme=dark",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/assets/index-BUxARw6E.css",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/assets/index-i00O3cS1.js",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=82&theme=dark",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=16&theme=dark",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=85&theme=dark",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=47&theme=dark",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=86&theme=dark",
+        "status": 200
+      }
+    ],
+    "csp": [
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      }
+    ],
+    "cspMeta": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'self'"
+  },
+  {
+    "engine": "webkit",
+    "theme": "light",
+    "zoom": "synthetic-root32",
+    "rootFont": "32px",
+    "button": {
+      "text": "公式ボタンを実行",
+      "font": "28px",
+      "rect": {
+        "x": 23,
+        "y": 418.15625,
+        "width": 266.546875,
+        "height": 64,
+        "top": 418.15625,
+        "right": 289.546875,
+        "bottom": 482.15625,
+        "left": 23
+      },
+      "outline": "3px solid rgb(209, 118, 36)",
+      "offset": "4px",
+      "clips": [],
+      "active": true,
+      "focusVisible": true
+    },
+    "buttonCount": "実行回数：1 / disabled：false / loading：false",
+    "select": {
+      "text": "一覧",
+      "font": "28px",
+      "rect": {
+        "x": 23,
+        "y": 417.828125,
+        "width": 274,
+        "height": 64,
+        "top": 417.828125,
+        "right": 297,
+        "bottom": 481.828125,
+        "left": 23
+      },
+      "outline": "3px none rgb(24, 37, 37)",
+      "offset": "0px",
+      "clips": [],
+      "active": true,
+      "focusVisible": true
+    },
+    "changed": {
+      "text": "カード",
+      "font": "28px",
+      "rect": {
+        "x": 23,
+        "y": 402.828125,
+        "width": 274,
+        "height": 64,
+        "top": 402.828125,
+        "right": 297,
+        "bottom": 466.828125,
+        "left": 23
+      },
+      "outline": "3px none rgb(24, 37, 37)",
+      "offset": "0px",
+      "clips": [],
+      "active": false,
+      "focusVisible": false
+    },
+    "selected": "カード",
+    "keyboard": "一覧",
+    "errors": [],
+    "requests": [
+      "http://127.0.0.1:33087/?theme=light&text=200",
+      "http://127.0.0.1:33087/assets/index-i00O3cS1.js",
+      "http://127.0.0.1:33087/assets/index-BUxARw6E.css",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=82&theme=light",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=16&theme=light",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=85&theme=light",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=47&theme=light",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=86&theme=light"
+    ],
+    "requestFailures": [],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:33087/?theme=light&text=200",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/assets/index-i00O3cS1.js",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/assets/index-BUxARw6E.css",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=82&theme=light",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=16&theme=light",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=85&theme=light",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=47&theme=light",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=86&theme=light",
+        "status": 200
+      }
+    ],
+    "csp": [
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      }
+    ],
+    "cspMeta": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'self'"
+  },
+  {
+    "engine": "webkit",
+    "theme": "dark",
+    "zoom": "synthetic-root32",
+    "rootFont": "32px",
+    "button": {
+      "text": "公式ボタンを実行",
+      "font": "28px",
+      "rect": {
+        "x": 23,
+        "y": 418.15625,
+        "width": 266.546875,
+        "height": 64,
+        "top": 418.15625,
+        "right": 289.546875,
+        "bottom": 482.15625,
+        "left": 23
+      },
+      "outline": "3px solid rgb(209, 118, 36)",
+      "offset": "4px",
+      "clips": [],
+      "active": true,
+      "focusVisible": true
+    },
+    "buttonCount": "実行回数：1 / disabled：false / loading：false",
+    "select": {
+      "text": "一覧",
+      "font": "28px",
+      "rect": {
+        "x": 23,
+        "y": 417.828125,
+        "width": 274,
+        "height": 64,
+        "top": 417.828125,
+        "right": 297,
+        "bottom": 481.828125,
+        "left": 23
+      },
+      "outline": "3px none rgb(230, 239, 235)",
+      "offset": "0px",
+      "clips": [],
+      "active": true,
+      "focusVisible": true
+    },
+    "changed": {
+      "text": "カード",
+      "font": "28px",
+      "rect": {
+        "x": 23,
+        "y": 402.828125,
+        "width": 274,
+        "height": 64,
+        "top": 402.828125,
+        "right": 297,
+        "bottom": 466.828125,
+        "left": 23
+      },
+      "outline": "3px none rgb(230, 239, 235)",
+      "offset": "0px",
+      "clips": [],
+      "active": false,
+      "focusVisible": false
+    },
+    "selected": "カード",
+    "keyboard": "一覧",
+    "errors": [],
+    "requests": [
+      "http://127.0.0.1:33087/?theme=dark&text=200",
+      "http://127.0.0.1:33087/assets/index-i00O3cS1.js",
+      "http://127.0.0.1:33087/assets/index-BUxARw6E.css",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=82&theme=dark",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=16&theme=dark",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=85&theme=dark",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=47&theme=dark",
+      "http://127.0.0.1:33087/v09-viewer.html?exhibit=86&theme=dark"
+    ],
+    "requestFailures": [],
+    "responses": [
+      {
+        "url": "http://127.0.0.1:33087/?theme=dark&text=200",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/assets/index-i00O3cS1.js",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/assets/index-BUxARw6E.css",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=82&theme=dark",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=16&theme=dark",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=85&theme=dark",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=47&theme=dark",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:33087/v09-viewer.html?exhibit=86&theme=dark",
+        "status": 200
+      }
+    ],
+    "csp": [
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+        "directive": "font-src"
+      },
+      {
+        "uri": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+        "directive": "font-src"
+      }
+    ],
+    "cspMeta": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'self'"
+  }
+]

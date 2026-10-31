@@ -2,7 +2,9 @@
 
 UIを操作して、状態・仕組み・出自を比較する教材。OpenAIの公式製品ではありません。
 
-移行状態は **PARTIAL**。GitHubの作成・push・Issue・Draft PR・Actions実行は未完了です。Stage 3の公開・機能拡張は **HOLD** を維持します。
+Private GitHubへの取り込みと[Draft PR #2](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/2)提出まで完了。原本保全・buildの実CIと、隔離ブランチでのCI失敗伝播RED→GREENを確認しました。PRは未マージ。総合 **PARTIAL**、Stage 3の公開・機能拡張は **HOLD** を維持します。
+
+開発管理先：[intelligence-ui-museum](https://github.com/tetsujisugimori-coder/intelligence-ui-museum)。mainは運用入口のみ、移行ソースは上記PRの`chore/github-migration`ブランチです。現在の契約ではPrivateリポジトリのmain保護は強制されないため、PR経由・force push禁止を運用規則として守ります。
 
 ## 構成
 
@@ -14,7 +16,7 @@ UIを操作して、状態・仕組み・出自を比較する教材。OpenAIの
 |`reviews/stage2r2-20261030/`|最新の独立レビュー原文と証拠|
 |`docs/`|移行記録、開発手順、残件、Issue・PR本文案|
 
-開始は [開発手順](docs/DEVELOPMENT.md)、判定は [移行報告](docs/MIGRATION.md)、残件は [BACKLOG](docs/BACKLOG.md) を参照。
+開始は [開発手順](docs/DEVELOPMENT.md)、現在の判定は [GitHub移行報告](docs/MIGRATION-GITHUB.md)、初回準備記録は [移行準備報告](docs/MIGRATION.md)、残件は [BACKLOG](docs/BACKLOG.md) を参照。
 
 ```sh
 python3 scripts/verify-migration.py

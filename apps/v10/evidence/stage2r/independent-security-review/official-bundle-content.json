@@ -1,0 +1,141 @@
+{
+  "count": 27,
+  "matches": 27,
+  "files": [
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/lib/environment.js",
+      "matchesInstalled": true,
+      "sha256": "2959f66b53a9cfe2f39e6e79f08b53507d9414f6165f59fafb0439a5042fb2a3"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/lib/helpers.js",
+      "matchesInstalled": true,
+      "sha256": "e358ce776cc7074b9adeb85a3d6dc254de2ea232abc695438458ba8a482bc48a"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/lib/renderHelpers.js",
+      "matchesInstalled": true,
+      "sha256": "bff9fbbe9905bb735f3edd8d5ad861c02ccb8e2ad2043d1632c048b56b8300a3"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/AppsSDKUIContext.js",
+      "matchesInstalled": true,
+      "sha256": "4a309deab4cf5f348f27daa772bc75f8e817abf37df20a980d71b9d8b2b12a80"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Indicator/LoadingIndicator.js",
+      "matchesInstalled": true,
+      "sha256": "f510da721ef5fa6caab6d194cae871fb81950aa044249ec7804bb3d035908353"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/getDisableAnimations.js",
+      "matchesInstalled": true,
+      "sha256": "4a8cdbeca71163d6589c8822861066119b58d2e9eb9abb4a0db54940837d2028"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/shared.js",
+      "matchesInstalled": true,
+      "sha256": "5113ed41b65557ce7e1407ddf36c1a97cb37705aa90e4cf91f35796021fedabb"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/transitionReducer.js",
+      "matchesInstalled": true,
+      "sha256": "43af17cc7248c777943f5c845fc28df178837333de97cdd7328cf572c695a982"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/TransitionGroup.js",
+      "matchesInstalled": true,
+      "sha256": "0db248b8115e3b2cbd3a4f582df739689629b34d4519ba40227185fe93219986"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Button/Button.js",
+      "matchesInstalled": true,
+      "sha256": "e72f2a9656856e896f0858a0cbdc22fd48aee7e651ed7f867ee0c915cd69d1c3"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Icon/svg/Check.js",
+      "matchesInstalled": true,
+      "sha256": "d2282a0d185003e2d3ff0fb91397923fc03ee4c9266b3dcc566b36c8b7c4af0a"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Icon/svg/CheckCircle.js",
+      "matchesInstalled": true,
+      "sha256": "d06580184ea52b54ac888049cdd1a6f4f0deeac16d69d7fff28a7f017911be46"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Icon/svg/ChevronDownVector.js",
+      "matchesInstalled": true,
+      "sha256": "ecc8c1164eb67b81a35b89136e810a9440da93be41c79b7b0520ce32ea70e1fe"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Icon/svg/DropdownVector.js",
+      "matchesInstalled": true,
+      "sha256": "2d2f638f9ee9c184c03e925a97cd753ef59b5bdc5fb9391c51c18d53f3d0503d"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Icon/svg/Info.js",
+      "matchesInstalled": true,
+      "sha256": "f50afd37be6f5f0e50c717eb999f87c999be113ad9e7d97c40c8ada4d4ac27e4"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Icon/svg/Search.js",
+      "matchesInstalled": true,
+      "sha256": "23fb18ea2262de5f25d85855becd92c21c0d942a8f33ccd4acf516e67035207b"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Icon/svg/Warning.js",
+      "matchesInstalled": true,
+      "sha256": "9cab844584a2a7e5e6e0dfd57bebf6ad865cdb8d0215ee7a0352c55fdf88e82b"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Icon/svg/X.js",
+      "matchesInstalled": true,
+      "sha256": "e3793852ab96ef26b0b8e1f34967faa389edbf0d3b0d03a9dede51a9299f5d06"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Badge/index.js",
+      "matchesInstalled": true,
+      "sha256": "2a585e87a429980c459be858f89f0c8c2fa7c66ceaaf4725bfddf4f3767d7750"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/hooks/useLatestValue.js",
+      "matchesInstalled": true,
+      "sha256": "50b4c2ca9984c1e3074849296ba2f3a53e60c65ca9a343645caf3852d2734d57"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/hooks/useEscCloseStack.js",
+      "matchesInstalled": true,
+      "sha256": "3065647c46d18b837f2917c1731602e83f0924b3afffacdc92f04cea079910c5"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Input/Input.js",
+      "matchesInstalled": true,
+      "sha256": "2eab4b2da5618d34db7eeeaad82c3cbf7f612a2cbfae4e55c15ff32ab824eb1d"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/SelectControl/SelectControl.js",
+      "matchesInstalled": true,
+      "sha256": "661184dd4989b5c33d96719cf70f55c0d3c4bbe205758c59e85d7fb8abeb0bdb"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/Tooltip.js",
+      "matchesInstalled": true,
+      "sha256": "cf24917f98e6e9f70e65709af0a99a43e621e77a23f86a29f2513807a578f437"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+      "matchesInstalled": true,
+      "sha256": "828c01098b08de45dee0338bca2486f0f4026786f034a1e9ca8eef1bbfc1f41b"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Switch/Switch.js",
+      "matchesInstalled": true,
+      "sha256": "52bbcec444896fd3de8fc4686fdc77bf8a1fbbcfd0892b25a017b7d5336b8426"
+    },
+    {
+      "source": "../../node_modules/@openai/apps-sdk-ui/dist/es/components/Alert/Alert.js",
+      "matchesInstalled": true,
+      "sha256": "2d17596b8d01c39dcc9b2fb29fb62d5f2fa0e48c46e7216b34dd114b3efff8e2"
+    }
+  ]
+}

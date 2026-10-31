@@ -1,0 +1,8 @@
+{
+  "src/main.tsx": true,
+  "src/main.css": true,
+  "package-lock.json": true,
+  "public/v09-original.html": true,
+  "scripts/stage2r-browser.cjs": true,
+  "scripts/stage2r-smoke.cjs": true
+}

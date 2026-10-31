@@ -1,0 +1,78 @@
+{
+  "scope": "isolated synthetic result-validator and subprocess fault injection; not browser or CI",
+  "tests": 18,
+  "results": [
+    {
+      "name": "complete 12-condition smoke",
+      "result": "PASS"
+    },
+    {
+      "name": "smoke rejects missing",
+      "result": "PASS"
+    },
+    {
+      "name": "smoke rejects duplicate",
+      "result": "PASS"
+    },
+    {
+      "name": "smoke rejects wrongCount",
+      "result": "PASS"
+    },
+    {
+      "name": "smoke rejects fakeGreen",
+      "result": "PASS"
+    },
+    {
+      "name": "smoke rejects missingCheck",
+      "result": "PASS"
+    },
+    {
+      "name": "smoke rejects pageError",
+      "result": "PASS"
+    },
+    {
+      "name": "smoke rejects unfinished",
+      "result": "PASS"
+    },
+    {
+      "name": "smoke rejects engine",
+      "result": "PASS"
+    },
+    {
+      "name": "matrix validbaseline",
+      "result": "PASS"
+    },
+    {
+      "name": "matrix unrelatedRED",
+      "result": "PASS"
+    },
+    {
+      "name": "matrix missingRED",
+      "result": "PASS"
+    },
+    {
+      "name": "matrix stringpass",
+      "result": "PASS"
+    },
+    {
+      "name": "count regex rejects 30/300 and 10/100",
+      "result": "PASS"
+    },
+    {
+      "name": "stage2r-browser.cjs launch failure nonzero",
+      "result": "PASS"
+    },
+    {
+      "name": "stage2r-browser.cjs save failure nonzero",
+      "result": "PASS"
+    },
+    {
+      "name": "stage2r-smoke.cjs launch failure nonzero",
+      "result": "PASS"
+    },
+    {
+      "name": "stage2r-smoke.cjs save failure nonzero",
+      "result": "PASS"
+    }
+  ]
+}

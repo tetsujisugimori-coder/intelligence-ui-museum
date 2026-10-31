@@ -1,0 +1,17 @@
+{
+  "gitHead": "b3b1287aad81def2e2ae707274b74531b61ddbaf",
+  "license": "MIT",
+  "dist": {
+    "integrity": "sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==",
+    "shasum": "99c20f908ee467b385b68a3469b4a3e750012223",
+    "tarball": "https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.8.tgz",
+    "fileCount": 27,
+    "unpackedSize": 24936,
+    "signatures": [
+      {
+        "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+        "sig": "MEUCIHlomVu71lQb8ZijaHqU1MLX+jfxogM47L/EfAgq1+nWAiEA5rJQaLl579SuaDGQcqDm9ikUi3EcxmDkxW7PSq8Auh0="
+      }
+    ]
+  }
+}

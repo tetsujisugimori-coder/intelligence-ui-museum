@@ -1,0 +1,63 @@
+{
+  "saved_tgz_sha512_integrity": "sha512-KaG+6qcVCKVRe51wr2te68OKoHfjRQPDVVkugxiF+SaZlgLpNbxOfyrL/FyUBmHbjh1q4p7eWDYAd75jHseZ9A==",
+  "lock_integrity": "sha512-KaG+6qcVCKVRe51wr2te68OKoHfjRQPDVVkugxiF+SaZlgLpNbxOfyrL/FyUBmHbjh1q4p7eWDYAd75jHseZ9A==",
+  "saved_tgz_matches_lock": true,
+  "saved_tgz_files": 2645,
+  "html_js": "assets/index-ItwAwdWS.js",
+  "js_map": "index-ItwAwdWS.js.map",
+  "map_lodash_katex": [],
+  "scrollbar_sources": [
+    "../../node_modules/react-remove-scroll-bar/dist/es2015/constants.js",
+    "../../node_modules/react-remove-scroll-bar/dist/es2015/utils.js",
+    "../../node_modules/react-remove-scroll-bar/dist/es2015/component.js"
+  ],
+  "dist_files": 8,
+  "dist_matches_supplied_first_second": true,
+  "independent_build_executed": false,
+  "dependency_versions": {
+    "node_modules/katex": "0.16.47",
+    "node_modules/lodash": "4.17.21",
+    "node_modules/react-remove-scroll-bar": "2.3.8"
+  },
+  "css_external_urls": [
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2",
+    "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2",
+    "https://tailwindcss.com"
+  ],
+  "official_sdk_direct_sources": 27,
+  "official_sdk_direct_sources_match_saved_tgz": true,
+  "nested_dependency_sources": 11,
+  "nested_dependency_sources_status": "Not SDK tarball members; independent installed comparison unavailable. Previous mismatch list is scope mismatch, not content tampering.",
+  "map_sources_under_sdk_path": 38,
+  "sources_not_members_of_sdk_tgz": [
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-primitive/dist/index.mjs",
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-visually-hidden/dist/index.mjs",
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-presence/dist/index.mjs",
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs",
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-focus-scope/dist/index.mjs",
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-portal/dist/index.mjs",
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popper/node_modules/@floating-ui/react-dom/dist/floating-ui.react-dom.mjs",
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popper/dist/index.mjs",
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popover/dist/index.mjs",
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-switch/dist/index.mjs",
+    "../../node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tooltip/dist/index.mjs"
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  'expected 12 smoke conditions',
+  'missing width',
+  'missing smoke mode'
+]
+Error: injected save failure
+    at Object.writeFileSync ([eval]:1:5813)
+    at evalmachine.<anonymous>:13:199

@@ -1,0 +1,221 @@
+{
+  "scope": "unmodified submitted runner with synthetic browser API, NOT real product/browser result",
+  "exitCode": 0,
+  "observations": [
+    {
+      "event": "alert-click",
+      "clicks": 1,
+      "closed": true
+    },
+    {
+      "event": "alert-click",
+      "clicks": 2,
+      "closed": true
+    },
+    {
+      "event": "uncaught-pageerror",
+      "handled": false
+    },
+    {
+      "event": "alert-click",
+      "clicks": 1,
+      "closed": true
+    },
+    {
+      "event": "alert-click",
+      "clicks": 2,
+      "closed": true
+    },
+    {
+      "event": "uncaught-pageerror",
+      "handled": false
+    }
+  ],
+  "captures": [
+    {
+      "started": "2026-10-30T12:29:37.645Z",
+      "conditions": [
+        {
+          "engine": "chromium",
+          "width": 320,
+          "checks": [
+            "117 rendered cards",
+            "search, category switching",
+            "theme",
+            "Modal open/Escape",
+            "Primary and Select interactions (3 exhibits including Modal)"
+          ],
+          "errors": [],
+          "document": {
+            "client": 390,
+            "scroll": 390
+          },
+          "status": "PASS"
+        },
+        {
+          "engine": "chromium",
+          "width": 375,
+          "checks": [
+            "117 rendered cards",
+            "search, category switching",
+            "theme",
+            "Modal open/Escape",
+            "Primary and Select interactions (3 exhibits including Modal)"
+          ],
+          "errors": [],
+          "document": {
+            "client": 390,
+            "scroll": 390
+          },
+          "status": "PASS"
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "checks": [
+            "117 rendered cards",
+            "search, category switching",
+            "theme",
+            "Modal open/Escape",
+            "Primary and Select interactions (3 exhibits including Modal)"
+          ],
+          "errors": [],
+          "document": {
+            "client": 390,
+            "scroll": 390
+          },
+          "status": "PASS"
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "checks": [
+            "117 rendered cards",
+            "search, category switching",
+            "theme",
+            "Modal open/Escape",
+            "Primary and Select interactions (3 exhibits including Modal)"
+          ],
+          "errors": [],
+          "document": {
+            "client": 390,
+            "scroll": 390
+          },
+          "status": "PASS"
+        },
+        {
+          "engine": "chromium",
+          "sixComponents": true,
+          "checks": [
+            "Badge",
+            "Switch",
+            "Tooltip visible on hover and hidden after Escape",
+            "Alert color/close/reopen",
+            "already-loaded offline Button"
+          ],
+          "status": "PASS"
+        },
+        {
+          "engine": "chromium",
+          "noJS": true,
+          "cards": 117,
+          "text": "fixture"
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "checks": [
+            "117 rendered cards",
+            "search, category switching",
+            "theme",
+            "Modal open/Escape",
+            "Primary and Select interactions (3 exhibits including Modal)"
+          ],
+          "errors": [],
+          "document": {
+            "client": 390,
+            "scroll": 390
+          },
+          "status": "PASS"
+        },
+        {
+          "engine": "webkit",
+          "width": 375,
+          "checks": [
+            "117 rendered cards",
+            "search, category switching",
+            "theme",
+            "Modal open/Escape",
+            "Primary and Select interactions (3 exhibits including Modal)"
+          ],
+          "errors": [],
+          "document": {
+            "client": 390,
+            "scroll": 390
+          },
+          "status": "PASS"
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "checks": [
+            "117 rendered cards",
+            "search, category switching",
+            "theme",
+            "Modal open/Escape",
+            "Primary and Select interactions (3 exhibits including Modal)"
+          ],
+          "errors": [],
+          "document": {
+            "client": 390,
+            "scroll": 390
+          },
+          "status": "PASS"
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "checks": [
+            "117 rendered cards",
+            "search, category switching",
+            "theme",
+            "Modal open/Escape",
+            "Primary and Select interactions (3 exhibits including Modal)"
+          ],
+          "errors": [],
+          "document": {
+            "client": 390,
+            "scroll": 390
+          },
+          "status": "PASS"
+        },
+        {
+          "engine": "webkit",
+          "sixComponents": true,
+          "checks": [
+            "Badge",
+            "Switch",
+            "Tooltip visible on hover and hidden after Escape",
+            "Alert color/close/reopen",
+            "already-loaded offline Button"
+          ],
+          "status": "PASS"
+        },
+        {
+          "engine": "webkit",
+          "noJS": true,
+          "cards": 117,
+          "text": "fixture"
+        }
+      ],
+      "unverified": [
+        "Native WebKit text-only zoom (root enlargement is synthetic)",
+        "iPhone Safari",
+        "VoiceOver",
+        "all117 exhibit operations"
+      ],
+      "failures": [],
+      "finished": "2026-10-30T12:29:37.647Z"
+    }
+  ]
+}
