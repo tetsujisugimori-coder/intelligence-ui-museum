@@ -10,3 +10,11 @@ test('smoke noJS count and incomplete reports fail',()=>{assert(failures({finish
 function probe(source){const program=`const vm=require('vm');const path=require('path');const native=require;const server={listen(...args){args.at(-1)()},address(){return {port:1}},close(){}};vm.runInNewContext(${JSON.stringify(source)},{require:n=>n==='http'?{createServer:()=>server}:n==='fs'?{mkdirSync(){},writeFileSync(){}}:n.includes('playwright')?{chromium:{launch:async()=>{throw Error('isolated launch failure')}},webkit:{launch:async()=>{throw Error('isolated launch failure')}}}:n==='./stage2r-result.cjs'?native(path.resolve('scripts/stage2r-result.cjs')):native(n),process,console:{log(){},error(){}},URL});`;return spawnSync(process.execPath,['-e',program],{encoding:'utf8'});}
 for(const file of ['stage2r-browser.cjs','stage2r-smoke.cjs'])test(file+' real entry launch failure -> nonzero',()=>{const p=probe(fs.readFileSync('scripts/'+file,'utf8'));assert.equal(p.status,1,p.stderr)});
 if(process.argv.includes('--legacy-evidence')){const legacy=spawnSync('git',['show','daa42f25dfadd22a1deb5fcbe8c6f98c75a2397f:scripts/stage2r-browser.cjs'],{encoding:'utf8'});const red=probe(legacy.stdout);const green=probe(fs.readFileSync('scripts/stage2r-browser.cjs','utf8'));console.log(JSON.stringify({scope:'isolated actual entry, injected engine launch failure, no browser',legacyExit:red.status,fixedExit:green.status}));assert.equal(red.status,0);assert.equal(green.status,1);}
+
+// Exercise the real smoke entry with a controlled browser model. These are not product/browser tests.
+for(const [name,env,expected] of [
+ ['normal',{},0], ['reopen failure',{ALERT_FAULT:'1'},1], ['six-components pageerror',{PAGE_ERROR:'1'},1]
+]) test('smoke synthetic '+name+' propagates',()=>{
+ const p=spawnSync(process.execPath,['scripts/stage2r-smoke-fault-probe.cjs'],{encoding:'utf8',env:{...process.env,...env}});
+ assert.equal(p.status,expected,p.stderr);const report=JSON.parse(p.stdout.trim());assert.equal(report.captures[0].conditions.length,12);
+});

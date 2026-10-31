@@ -31,7 +31,7 @@ function failures(report, kind) {
   if(report.conditions.length!==12)bad.push('expected 12 smoke conditions');
   for(const r of report.conditions){
    const key=JSON.stringify([r.engine,r.width||'',!!r.sixComponents,!!r.noJS]);if(seen.has(key))bad.push('duplicate condition');seen.add(key);
-   if(!['chromium','webkit'].includes(r.engine)||r.error||(r.errors||[]).length)bad.push('condition error');
+   if(!['chromium','webkit'].includes(r.engine)||r.error||!Array.isArray(r.errors)||r.errors.length)bad.push('condition error');
    if(r.noJS){if(r.cards!==117)bad.push('noJS baseline count');}
    else if(r.status!=='PASS'||!sameChecks(r.checks,r.sixComponents?SIX_CHECKS:V09_CHECKS))bad.push('failed smoke condition');
   }
