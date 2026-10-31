@@ -20,3 +20,7 @@ Windows Node 24.20.0、Playwright 1.56.1、Chromium 151.0.7922.34、Playwright W
 ## 変更ファイル
 
 Stage Aは `apps/v10/scripts/stage2r-browser.cjs`、`stage2r-result.cjs`、`stage2r-runner.test.cjs` と新規 `evidence/issue-4-independent-20261101/`。Stage Bは `.github/workflows/ci.yml`、`apps/v11/exhibits.js`・`index.html`・`verify.py`・`README.md`、既存ブラウザ試験4本のPlaywright解決方法、専用 `package.json` / `package-lock.json`、新規 `regression-test.cjs` / `run-browser-ci.cjs`、本証拠ディレクトリ。CIはv10依存を更新せず、v11試験用にPlaywright 1.56.1を別lockで固定。
+
+## Linux CI初回と対応（2026-11-01 JST）
+
+初回 `41250087411` はbrowser-v11 FAIL。WebKit 375pxで旧ModalのEscape直後にopen数を同期照会して1となり、390pxとChromiumは成功した。エラーと経過は `linux-first-ci-additional.json`。短い描画・イベント処理のタイミング差の可能性として、Escape後に最大5秒の非表示待機を追加し、非表示にならなければ引き続きFAILとする。製品の異常がないと断定せず、後続の実CIと独立再レビューで確認する。
