@@ -19,6 +19,8 @@ function failures(report, kind) {
    if(r.error || !Array.isArray(r.checks) || !r.checks.length)bad.push('incomplete condition');
    if(!['chromium','webkit'].includes(r.engine)||![320,375,390,1280].includes(r.width)||!['light','dark'].includes(r.theme)||![100,200].includes(r.text)||!['root','browser-font'].includes(r.mode)|| (r.mode==='browser-font'&&(r.engine!=='chromium'||r.text!==200)))bad.push('unexpected condition');
    if(!sameChecks((r.checks||[]).map(x=>x.name),r.prefix?BASE_CHECKS:MATRIX_CHECKS))bad.push('missing, duplicate or unexpected assertion');
+   const js=(r.checks||[]).find(x=>x.name==='JavaScript errors');
+   if(!js || !Array.isArray(js.detail) || js.detail.length)bad.push('missing or nonempty JavaScript errors detail');
    const failed=(r.checks||[]).filter(x=>x.pass!==true);
    if(r.prefix){
     // Only the two original visibility regressions are expected RED.

@@ -1,0 +1,2 @@
+posix {"inside":"/tmp/example-root/sub/file.html","sibling":"/tmp/example-root-other/secret","outside":"/tmp/secret","pass":true}
+win32 {"inside":"C:\\temp\\example-root\\sub\\file.html","sibling":"C:\\temp\\example-root-other\\secret","outside":"C:\\temp\\secret","pass":true}

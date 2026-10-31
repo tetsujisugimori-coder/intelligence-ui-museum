@@ -1,0 +1,9 @@
+{
+  "case": "matrix late pageerror after assertion",
+  "liveErrors": [
+    "late pageerror after JavaScript errors assertion"
+  ],
+  "recordedPass": true,
+  "failures": [],
+  "validatorExitWouldBe": 0
+}
