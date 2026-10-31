@@ -1,0 +1,16 @@
+{
+  "processExit": 1,
+  "summary": {
+    "summary": [
+      {
+        "script": "browser-test.cjs",
+        "code": null,
+        "signal": "SIGTERM",
+        "timedOut": true
+      }
+    ],
+    "exitCode": 1
+  },
+  "newTemporaryDirectoriesAfter": [],
+  "serverStillListening": false
+}

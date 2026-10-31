@@ -1,0 +1,1170 @@
+[
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 375,
+    "motion": "reduce",
+    "errors": [],
+    "modal": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 312,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 328.59999999962747,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 328.90000000037253,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 336.5,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 362.30000000074506,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 369.59999999962747,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 369.7000000011176,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 377.5,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 409.59999999962747,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 416.80000000074506,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 417,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 424.90000000037253,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "selectFocused": {
+      "events": [
+        {
+          "key": "B",
+          "shift": true,
+          "prevented": true,
+          "trusted": true,
+          "target": "SELECT"
+        }
+      ],
+      "state": "候補を取得しました。 候補：Shift+B / 登録：なし",
+      "value": "A"
+    },
+    "search": {
+      "value": "Keyboard Shortcut Recorder",
+      "start": 0,
+      "end": 26
+    },
+    "status": "FOCUS_FAULT",
+    "error": "Shift+B was prevented when native select held focus"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 375,
+    "motion": "no-preference",
+    "errors": [],
+    "modal": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 278.59999999962747,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 292.5,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 292.90000000037253,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 297.7999999988824,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 331.09999999962747,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 337.5,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 337.69999999925494,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 342.5,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 360.40000000037253,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 366.59999999962747,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 366.69999999925494,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 371.19999999925494,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "selectFocused": {
+      "events": [
+        {
+          "key": "B",
+          "shift": true,
+          "prevented": true,
+          "trusted": true,
+          "target": "SELECT"
+        }
+      ],
+      "state": "候補を取得しました。 候補：Shift+B / 登録：なし",
+      "value": "A"
+    },
+    "search": {
+      "value": "Keyboard Shortcut Recorder",
+      "start": 0,
+      "end": 26
+    },
+    "status": "FOCUS_FAULT",
+    "error": "Shift+B was prevented when native select held focus"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 390,
+    "motion": "reduce",
+    "errors": [],
+    "modal": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 282.69999999925494,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 297.69999999925494,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 298,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 306.09999999962747,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 339.2999999988824,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 345.90000000037253,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 346,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 353.19999999925494,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 374.90000000037253,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 382,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 382,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 389.5,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "selectFocused": {
+      "events": [
+        {
+          "key": "B",
+          "shift": true,
+          "prevented": true,
+          "trusted": true,
+          "target": "SELECT"
+        }
+      ],
+      "state": "候補を取得しました。 候補：Shift+B / 登録：なし",
+      "value": "A"
+    },
+    "search": {
+      "value": "Keyboard Shortcut Recorder",
+      "start": 0,
+      "end": 26
+    },
+    "status": "FOCUS_FAULT",
+    "error": "Shift+B was prevented when native select held focus"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 390,
+    "motion": "no-preference",
+    "errors": [],
+    "modal": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 280.90000000037253,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 295.80000000074506,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 296,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 300.7000000011176,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 320.5,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 326.40000000037253,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 326.40000000037253,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 331,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 350.7000000011176,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 356.7000000011176,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 356.80000000074506,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 361.30000000074506,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "selectFocused": {
+      "events": [
+        {
+          "key": "B",
+          "shift": true,
+          "prevented": true,
+          "trusted": true,
+          "target": "SELECT"
+        }
+      ],
+      "state": "候補を取得しました。 候補：Shift+B / 登録：なし",
+      "value": "A"
+    },
+    "search": {
+      "value": "Keyboard Shortcut Recorder",
+      "start": 0,
+      "end": 26
+    },
+    "status": "FOCUS_FAULT",
+    "error": "Shift+B was prevented when native select held focus"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 375,
+    "motion": "reduce",
+    "errors": [],
+    "modal": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 298,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 353,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 353,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 389,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 496,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 545,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 545,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 581,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 718,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 774,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 774,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 810,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "selectFocused": {
+      "events": [
+        {
+          "key": "B",
+          "shift": true,
+          "prevented": true,
+          "trusted": true,
+          "target": "SELECT"
+        }
+      ],
+      "state": "候補を取得しました。 候補：Shift+B / 登録：なし",
+      "value": "A"
+    },
+    "search": {
+      "value": "Keyboard Shortcut Recorder",
+      "start": 0,
+      "end": 26
+    },
+    "status": "FOCUS_FAULT",
+    "error": "Shift+B was prevented when native select held focus"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 375,
+    "motion": "no-preference",
+    "errors": [],
+    "modal": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 256,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 293,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 293,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 309,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 417,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 447,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 447,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 463,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 587,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 612,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 612,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 628,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "selectFocused": {
+      "events": [
+        {
+          "key": "B",
+          "shift": true,
+          "prevented": true,
+          "trusted": true,
+          "target": "SELECT"
+        }
+      ],
+      "state": "候補を取得しました。 候補：Shift+B / 登録：なし",
+      "value": "A"
+    },
+    "search": {
+      "value": "Keyboard Shortcut Recorder",
+      "start": 0,
+      "end": 26
+    },
+    "status": "FOCUS_FAULT",
+    "error": "Shift+B was prevented when native select held focus"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 390,
+    "motion": "reduce",
+    "errors": [],
+    "modal": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 282,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 361,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 361,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 399,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 517,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 567,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 567,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 602,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 725,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 771,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 771,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 805,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "selectFocused": {
+      "events": [
+        {
+          "key": "B",
+          "shift": true,
+          "prevented": true,
+          "trusted": true,
+          "target": "SELECT"
+        }
+      ],
+      "state": "候補を取得しました。 候補：Shift+B / 登録：なし",
+      "value": "A"
+    },
+    "search": {
+      "value": "Keyboard Shortcut Recorder",
+      "start": 0,
+      "end": 26
+    },
+    "status": "FOCUS_FAULT",
+    "error": "Shift+B was prevented when native select held focus"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 390,
+    "motion": "no-preference",
+    "errors": [],
+    "modal": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 238,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 273,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 274,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 290,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 396,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 427,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 427,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 443,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 552,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 578,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 578,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 593,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "selectFocused": {
+      "events": [
+        {
+          "key": "B",
+          "shift": true,
+          "prevented": true,
+          "trusted": true,
+          "target": "SELECT"
+        }
+      ],
+      "state": "候補を取得しました。 候補：Shift+B / 登録：なし",
+      "value": "A"
+    },
+    "search": {
+      "value": "Keyboard Shortcut Recorder",
+      "start": 0,
+      "end": 26
+    },
+    "status": "FOCUS_FAULT",
+    "error": "Shift+B was prevented when native select held focus"
+  }
+]

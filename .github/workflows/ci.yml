@@ -25,6 +25,7 @@ jobs:
       - run: npm run test:runner
       - run: python3 apps/v11/verify.py
       - run: node --check apps/v11/exhibits.js
+      - run: node --test apps/v11/result-contract.test.cjs
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -68,10 +69,20 @@ jobs:
         working-directory: apps/v11
       - run: npx playwright install --with-deps chromium webkit
         working-directory: apps/v11
+      - run: python3 scripts/prepare-work.py
+      - name: Stage A smoke on Linux
+        run: node scripts/stage2r-smoke.cjs
+        working-directory: .work/v10
+        timeout-minutes: 5
+        env:
+          CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/apps/v11/node_modules
+          EVIDENCE_DIR: ${{ github.workspace }}/.work/stage-a-linux
       - run: node apps/v11/run-browser-ci.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: v11-browser-verification-${{ github.sha }}
-          path: .work/v11-ci-evidence/
+          path: |
+            .work/v11-ci-evidence/
+            .work/stage-a-linux/
           if-no-files-found: warn

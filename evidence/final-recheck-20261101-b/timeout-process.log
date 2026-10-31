@@ -1,0 +1,3 @@
+Error: browser-test.cjs failed: {"script":"browser-test.cjs","code":null,"signal":"SIGTERM","timedOut":true}
+    at <workspace>\apps\v11\run-browser-ci.cjs:14:635
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

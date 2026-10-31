@@ -14,4 +14,6 @@
 
 Shortcut Recorderは通常操作を保護するため、教材の記録対象をShift+BとShift+Kに限定します。Ctrl、Meta、Altを含む組合せ、Tab、F5などは捕捉・抑止しません。端末固有の予約操作を全て確認したという意味ではありません。
 
-CIの `browser-v11` はv11専用lockfileのPlaywrightを導入し、ChromiumとWebKitを準備して `node apps/v11/run-browser-ci.cjs` を実行します。runnerはランダムポートと新しい隔離コピーを使い、12表示条件・追加4条件・JS無効2条件・予約キー／通知フォーカス2条件を検査します。さらにpageerrorを注入し、失敗を検知できることを検査します。各子試験は4分で打切り、結果・画像・ログはCI artifactへ保存します。ローカルで同じrunnerを実行するときは `npm ci --prefix apps/v11` とPlaywrightブラウザの導入後、既存しない `EVIDENCE_DIR` を指定してください。
+CIの `browser-v11` はv11専用lockfileのPlaywrightを導入し、ChromiumとWebKitを準備して `node apps/v11/run-browser-ci.cjs` を実行します。runnerはランダムポートと新しい隔離コピーを使い、12表示条件・追加4条件・JS無効2条件・予約キー／通知フォーカス2条件・Modalの状態遷移8条件（各3回）を検査します。結果の条件・assert・エラー・PNGの寸法・CRC・終端・画像データ、ログの欠落やSKIPも検査します。Stage A smokeもLinuxの隔離v10コピーで実行します。さらにpageerrorを注入し、失敗を検知できることを検査します。各子試験は4分で打切り、結果・画像・ログはCI artifactへ保存します。ローカルで同じrunnerを実行するときは `npm ci --prefix apps/v11` とPlaywrightブラウザの導入後、既存しない `EVIDENCE_DIR` を指定してください。
+
+記録開始後に別のコントロールへフォーカスを移すと記録を中止し、そのコントロールのキー操作を妨げません。2026-11-01 JST。
