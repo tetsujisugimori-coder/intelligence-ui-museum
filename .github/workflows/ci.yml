@@ -86,3 +86,38 @@ jobs:
             .work/v11-ci-evidence/
             .work/stage-a-linux/
           if-no-files-found: warn
+
+  browser-stage-a:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/prepare-work.py
+      - run: npm ci --ignore-scripts
+        working-directory: .work/v10
+      - run: npm run build
+        working-directory: .work/v10
+      - run: npm ci --ignore-scripts
+        working-directory: tools/stage-a-browser
+      - run: npx playwright install --with-deps chromium webkit
+        working-directory: tools/stage-a-browser
+      - name: Normal smoke 12 / matrix 40 and real-browser negative controls
+        working-directory: .work/v10
+        env:
+          CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/tools/stage-a-browser/node_modules
+          EVIDENCE_DIR: evidence/ra-acceptance
+        run: node scripts/stage2r-browser-acceptance.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage-a-browser-${{ github.sha }}
+          path: .work/v10/evidence/ra-acceptance/
+          if-no-files-found: error
+
+
