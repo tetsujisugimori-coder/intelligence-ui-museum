@@ -1,0 +1,58 @@
+{
+  "baseline_head": "98a2bf210c2347062419979393226cddcbf3df7a",
+  "platform": "Linux Debian 13, Node 24.22.1, Playwright 1.56.1, Chromium 141.0.7390.37, WebKit 26.0",
+  "scope": "implementer self-verification; not independent re-review",
+  "old_smoke": {
+    "conditions": 12,
+    "pass": 12,
+    "exit": 0,
+    "natural_modal_failure_reproduced": false
+  },
+  "old_matrix": {
+    "conditions": 40,
+    "select_focus_failures": 40,
+    "exit": 1
+  },
+  "modal_delay_model": {
+    "injected_delay_ms": 150,
+    "baseline_exit": 1,
+    "fixed_exit": 0,
+    "natural_product_delay": false
+  },
+  "fixed_smoke": {
+    "conditions": 12,
+    "pass": 12,
+    "exit": 0
+  },
+  "fixed_matrix": {
+    "conditions": 40,
+    "pass": 40,
+    "exit": 0
+  },
+  "contracts": {
+    "pass": 25,
+    "fail": 0,
+    "skip": 0
+  },
+  "negative_controls": {
+    "modal_stuck": "nonzero both engines",
+    "focus_missing": "nonzero both engines",
+    "focus_hidden": "nonzero both engines",
+    "late_pageerror": "nonzero both engines, JS-enabled conditions only",
+    "cleanup_failure": "nonzero; partial result rejected",
+    "process_timeout": "intentional 1ms process deadline rejected; not product latency"
+  },
+  "harness_correction": "Initial late-pageerror injection incorrectly targeted no-JS, producing an incomplete report. Preserved as failed experiment; corrected scope passed.",
+  "limits": [
+    "Windows not rerun",
+    "iPhone Safari/VoiceOver not tested",
+    "old Linux modal root cause remains UNKNOWN",
+    "full archive migration check deferred to CI full checkout"
+  ],
+  "sources": {
+    "apps/v10/scripts/stage2r-smoke.cjs": "250a35e7801845298c71f271f8e6a78cc67645cc9ba87ab1a970bbd3fe6db59a",
+    "apps/v10/scripts/stage2r-browser.cjs": "9754f1f25efcd4ae4063d3635c94e8a14ccc3b6f23aeb7bcb9fb5cf17b24eb99",
+    "apps/v10/scripts/stage2r-smoke-fault-probe.cjs": "c6de0e2ebdc134dc7ec04a920775cca170bf67827fdf529a1c2ad7c1fdcad8da",
+    "apps/v10/scripts/stage2r-browser-acceptance.cjs": "21b0e335ed7416ad4010cea47029533fdbcafb38a2d5559956aba006a15654f2"
+  }
+}
