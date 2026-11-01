@@ -56,6 +56,14 @@ jobs:
   browser-stage-a:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - suite: regression
+            cases: normal-smoke,normal-matrix,modal-delayed,modal-stuck,focus-missing,focus-hidden,late-pageerror,cleanup-failure,runner-timeout
+          - suite: clip
+            cases: focus-clipped
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -78,11 +86,16 @@ jobs:
         env:
           CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/tools/stage-a-browser/node_modules
           EVIDENCE_DIR: evidence/ra-acceptance
-        run: node scripts/stage2r-browser-acceptance.cjs
+          ACCEPTANCE_CASES: ${{ matrix.cases }}
+        run: |
+          node scripts/stage2r-browser-acceptance.cjs
+          if [ "${{ matrix.suite }}" = "clip" ]; then
+            EVIDENCE_DIR=evidence/ra-acceptance/focus-controls node scripts/stage2r-focus-controls.cjs
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: stage-a-browser-${{ github.sha }}
+          name: stage-a-browser-${{ matrix.suite }}-${{ github.sha }}
           path: .work/v10/evidence/ra-acceptance/
           if-no-files-found: error
 

@@ -1,0 +1,8 @@
+[
+  'expected 12 smoke conditions',
+  'missing width',
+  'missing smoke mode'
+]
+Error: injected cleanup failure
+    at c.close (/tmp/museum-real-fault-8eBinS/playwright/index.js:15:118)
+    at async /workspace/scratch/a17e096081cc/intelligence-ui-museum/.work/v10/scripts/stage2r-smoke.cjs:17:582

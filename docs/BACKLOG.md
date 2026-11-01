@@ -20,3 +20,5 @@
 117展示の全操作、実機iPhone Safari、VoiceOverは未検証範囲として保持し、新たな一律必須ゲートにはしない。最新の判断原文は`reviews/stage2r2-20261030/FINAL-REVIEW.md`。C-01/C-02はIssue #4、Stage 3の残件はIssue #5でも管理する。
 
 2026-10-30 JST
+
+2026-11-01 JST: Issue #11 / PR #7 R-A2-CLIPを局所補強。画素差・正負対照・全matrix負対照を追加。実装者自己検証と独立判定を区別し、独立再レビューまでP2閉鎖保留・マージNO。詳細は `docs/R-A2-CLIP-20261101.md`。Issue #9/#10・旧Linux Modal原因UNKNOWN・Stage 3 HOLDは維持。
