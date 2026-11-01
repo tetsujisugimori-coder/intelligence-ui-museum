@@ -8,7 +8,7 @@ function geometry(e){
  }
  const boxes=[{pseudo:'element',x:r.x,y:r.y,width:r.width,height:r.height}];
  const s=getComputedStyle(e,'::after'),num=x=>parseFloat(x);
- if(s.content!=='none'&&s.content!=='normal'){
+ if(s.content!=='none'&&s.content!=='normal'&&s.display!=='none'&&s.visibility==='visible'&&Number(s.opacity)>0){
   if(s.position!=='absolute'||root.position==='static'||s.transform!=='none'||s.filter!=='none'||(s.maskImage&&s.maskImage!=='none'))unknown.push('unsupported pseudo geometry/compositing');
   else{
    const width=num(s.width)+(s.boxSizing==='border-box'?0:num(s.paddingLeft)+num(s.paddingRight)+num(s.borderLeftWidth)+num(s.borderRightWidth));

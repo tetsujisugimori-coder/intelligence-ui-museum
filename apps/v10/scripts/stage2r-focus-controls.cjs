@@ -7,6 +7,7 @@ const out=path.resolve(process.env.EVIDENCE_DIR||'evidence/focus-controls');fs.m
 const cases=[
  ['after',true,''],
  ['body',true,'#Select .stage [role=button]{outline:3px solid magenta;outline-offset:2px} #Select .stage [role=button]::after{outline:none;box-shadow:none}'],
+ ...['display:none','visibility:hidden','opacity:0'].map(css=>['body-with-'+css,true,'#Select .stage [role=button]{outline:3px solid magenta;outline-offset:2px} #Select .stage [role=button]::after{'+css+'}']),
  ['shadow',true,'#Select .stage [role=button]::after{outline:none;box-shadow:0 0 0 3px #0169cc}'],
  ['safe-clip',true,'#Select .stage [role=button]{clip-path:inset(-12px)}'],
  ['pseudo-inset',true,'#Select .stage [role=button]::after{inset:6px}'],
@@ -28,7 +29,7 @@ const records=[];
   try{
    await p.setContent(`<style>body{margin:0;background:white}#Select{padding:60px 30px}.stage{padding:16px;width:280px;height:100px;box-sizing:border-box}#Select .stage [role=button]{position:relative;display:inline-flex;align-items:center;width:200px;height:40px;box-sizing:border-box;background:#eee;border:0;outline:none;color:#111}#Select .stage [role=button]::after{content:"";position:absolute;inset:0;outline:2px solid #0169cc;border-radius:8px;pointer-events:none}${css}</style><section id="Select"><div class="stage"><span role="button" tabindex="0">表示モード 一覧</span></div></section>`);
    const control=p.locator('[role=button]');await control.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');
-   const result=await focusPixels(p,control,modules,path.join(out,`${engine}-${name}`));
+   const result=await focusPixels(p,control,modules,path.join(out,`${engine}-${name.replace(/:/g,'-')}`));
    const record={engine,browser:browser.version(),name,expected,result,pass:result.pass===expected};records.push(record);
    assert.equal(result.pass,expected,`${engine}/${name}: unexpected rendered verdict`);
    if(name==='unknown')assert.equal(result.status,'UNVERIFIED');

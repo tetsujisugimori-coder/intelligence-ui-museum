@@ -1,0 +1,912 @@
+{
+  "scope": "rendering fixtures, not product interaction or WCAG conformance",
+  "records": [
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "name": "body-with-display:none",
+      "expected": true,
+      "result": {
+        "pass": false,
+        "status": "UNVERIFIED",
+        "boxes": [
+          {
+            "pseudo": "element",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40
+          }
+        ],
+        "ancestors": [
+          {
+            "tag": "SPAN",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 46,
+              "y": 76,
+              "width": 200,
+              "height": 40,
+              "top": 76,
+              "right": 246,
+              "bottom": 116,
+              "left": 46
+            }
+          },
+          {
+            "tag": "DIV",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 30,
+              "y": 60,
+              "width": 280,
+              "height": 100,
+              "top": 60,
+              "right": 310,
+              "bottom": 160,
+              "left": 30
+            }
+          },
+          {
+            "tag": "SECTION",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 220,
+              "top": 0,
+              "right": 390,
+              "bottom": 220,
+              "left": 0
+            }
+          },
+          {
+            "tag": "BODY",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          },
+          {
+            "tag": "HTML",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          }
+        ],
+        "unknown": [
+          "unresolved pseudo box"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 400
+        },
+        "active": true,
+        "focusVisible": true
+      },
+      "pass": false
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "name": "body-with-visibility:hidden",
+      "expected": true,
+      "result": {
+        "boxes": [
+          {
+            "pseudo": "element",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40
+          },
+          {
+            "pseudo": "::after",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40
+          }
+        ],
+        "ancestors": [
+          {
+            "tag": "SPAN",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 46,
+              "y": 76,
+              "width": 200,
+              "height": 40,
+              "top": 76,
+              "right": 246,
+              "bottom": 116,
+              "left": 46
+            }
+          },
+          {
+            "tag": "DIV",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 30,
+              "y": 60,
+              "width": 280,
+              "height": 100,
+              "top": 60,
+              "right": 310,
+              "bottom": 160,
+              "left": 30
+            }
+          },
+          {
+            "tag": "SECTION",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 220,
+              "top": 0,
+              "right": 390,
+              "bottom": 220,
+              "left": 0
+            }
+          },
+          {
+            "tag": "BODY",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          },
+          {
+            "tag": "HTML",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          }
+        ],
+        "unknown": [],
+        "viewport": {
+          "width": 390,
+          "height": 400
+        },
+        "active": true,
+        "focusVisible": true,
+        "pass": true,
+        "unstable": 0,
+        "changed": 1524,
+        "indicators": [
+          {
+            "pseudo": "element",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40,
+            "pixels": 1524,
+            "minimum": 120,
+            "spanX": 210,
+            "spanY": 50,
+            "pass": true
+          },
+          {
+            "pseudo": "::after",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40,
+            "pixels": 1524,
+            "minimum": 120,
+            "spanX": 210,
+            "spanY": 50,
+            "pass": true
+          }
+        ],
+        "threshold": {
+          "channelDelta": 24,
+          "stabilityDelta": 8
+        },
+        "reason": "visible indicator extent evaluated",
+        "status": "PASS",
+        "stableGeometry": true,
+        "clip": {
+          "x": 22,
+          "y": 52,
+          "width": 248,
+          "height": 88
+        }
+      },
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "name": "body-with-opacity:0",
+      "expected": true,
+      "result": {
+        "boxes": [
+          {
+            "pseudo": "element",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40
+          },
+          {
+            "pseudo": "::after",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40
+          }
+        ],
+        "ancestors": [
+          {
+            "tag": "SPAN",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 46,
+              "y": 76,
+              "width": 200,
+              "height": 40,
+              "top": 76,
+              "right": 246,
+              "bottom": 116,
+              "left": 46
+            }
+          },
+          {
+            "tag": "DIV",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 30,
+              "y": 60,
+              "width": 280,
+              "height": 100,
+              "top": 60,
+              "right": 310,
+              "bottom": 160,
+              "left": 30
+            }
+          },
+          {
+            "tag": "SECTION",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 220,
+              "top": 0,
+              "right": 390,
+              "bottom": 220,
+              "left": 0
+            }
+          },
+          {
+            "tag": "BODY",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          },
+          {
+            "tag": "HTML",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          }
+        ],
+        "unknown": [],
+        "viewport": {
+          "width": 390,
+          "height": 400
+        },
+        "active": true,
+        "focusVisible": true,
+        "pass": true,
+        "unstable": 0,
+        "changed": 1524,
+        "indicators": [
+          {
+            "pseudo": "element",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40,
+            "pixels": 1524,
+            "minimum": 120,
+            "spanX": 210,
+            "spanY": 50,
+            "pass": true
+          },
+          {
+            "pseudo": "::after",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40,
+            "pixels": 1524,
+            "minimum": 120,
+            "spanX": 210,
+            "spanY": 50,
+            "pass": true
+          }
+        ],
+        "threshold": {
+          "channelDelta": 24,
+          "stabilityDelta": 8
+        },
+        "reason": "visible indicator extent evaluated",
+        "status": "PASS",
+        "stableGeometry": true,
+        "clip": {
+          "x": 22,
+          "y": 52,
+          "width": 248,
+          "height": 88
+        }
+      },
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "name": "body-with-display:none",
+      "expected": true,
+      "result": {
+        "pass": false,
+        "status": "UNVERIFIED",
+        "boxes": [
+          {
+            "pseudo": "element",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40
+          }
+        ],
+        "ancestors": [
+          {
+            "tag": "SPAN",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 46,
+              "y": 76,
+              "width": 200,
+              "height": 40,
+              "top": 76,
+              "right": 246,
+              "bottom": 116,
+              "left": 46
+            }
+          },
+          {
+            "tag": "DIV",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 30,
+              "y": 60,
+              "width": 280,
+              "height": 100,
+              "top": 60,
+              "right": 310,
+              "bottom": 160,
+              "left": 30
+            }
+          },
+          {
+            "tag": "SECTION",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 220,
+              "top": 0,
+              "right": 390,
+              "bottom": 220,
+              "left": 0
+            }
+          },
+          {
+            "tag": "BODY",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          },
+          {
+            "tag": "HTML",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          }
+        ],
+        "unknown": [
+          "unresolved pseudo box"
+        ],
+        "viewport": {
+          "width": 390,
+          "height": 400
+        },
+        "active": true,
+        "focusVisible": true
+      },
+      "pass": false
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "name": "body-with-visibility:hidden",
+      "expected": true,
+      "result": {
+        "boxes": [
+          {
+            "pseudo": "element",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40
+          },
+          {
+            "pseudo": "::after",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40
+          }
+        ],
+        "ancestors": [
+          {
+            "tag": "SPAN",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 46,
+              "y": 76,
+              "width": 200,
+              "height": 40,
+              "top": 76,
+              "right": 246,
+              "bottom": 116,
+              "left": 46
+            }
+          },
+          {
+            "tag": "DIV",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 30,
+              "y": 60,
+              "width": 280,
+              "height": 100,
+              "top": 60,
+              "right": 310,
+              "bottom": 160,
+              "left": 30
+            }
+          },
+          {
+            "tag": "SECTION",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 220,
+              "top": 0,
+              "right": 390,
+              "bottom": 220,
+              "left": 0
+            }
+          },
+          {
+            "tag": "BODY",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          },
+          {
+            "tag": "HTML",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          }
+        ],
+        "unknown": [],
+        "viewport": {
+          "width": 390,
+          "height": 400
+        },
+        "active": true,
+        "focusVisible": true,
+        "pass": true,
+        "unstable": 0,
+        "changed": 1524,
+        "indicators": [
+          {
+            "pseudo": "element",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40,
+            "pixels": 1524,
+            "minimum": 120,
+            "spanX": 210,
+            "spanY": 50,
+            "pass": true
+          },
+          {
+            "pseudo": "::after",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40,
+            "pixels": 1524,
+            "minimum": 120,
+            "spanX": 210,
+            "spanY": 50,
+            "pass": true
+          }
+        ],
+        "threshold": {
+          "channelDelta": 24,
+          "stabilityDelta": 8
+        },
+        "reason": "visible indicator extent evaluated",
+        "status": "PASS",
+        "stableGeometry": true,
+        "clip": {
+          "x": 22,
+          "y": 52,
+          "width": 248,
+          "height": 88
+        }
+      },
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "name": "body-with-opacity:0",
+      "expected": true,
+      "result": {
+        "boxes": [
+          {
+            "pseudo": "element",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40
+          },
+          {
+            "pseudo": "::after",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40
+          }
+        ],
+        "ancestors": [
+          {
+            "tag": "SPAN",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 46,
+              "y": 76,
+              "width": 200,
+              "height": 40,
+              "top": 76,
+              "right": 246,
+              "bottom": 116,
+              "left": 46
+            }
+          },
+          {
+            "tag": "DIV",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 30,
+              "y": 60,
+              "width": 280,
+              "height": 100,
+              "top": 60,
+              "right": 310,
+              "bottom": 160,
+              "left": 30
+            }
+          },
+          {
+            "tag": "SECTION",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 220,
+              "top": 0,
+              "right": 390,
+              "bottom": 220,
+              "left": 0
+            }
+          },
+          {
+            "tag": "BODY",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          },
+          {
+            "tag": "HTML",
+            "clipPath": "none",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "visibility": "visible",
+            "opacity": "1",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 400,
+              "top": 0,
+              "right": 390,
+              "bottom": 400,
+              "left": 0
+            }
+          }
+        ],
+        "unknown": [],
+        "viewport": {
+          "width": 390,
+          "height": 400
+        },
+        "active": true,
+        "focusVisible": true,
+        "pass": true,
+        "unstable": 0,
+        "changed": 1524,
+        "indicators": [
+          {
+            "pseudo": "element",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40,
+            "pixels": 1524,
+            "minimum": 120,
+            "spanX": 210,
+            "spanY": 50,
+            "pass": true
+          },
+          {
+            "pseudo": "::after",
+            "x": 46,
+            "y": 76,
+            "width": 200,
+            "height": 40,
+            "pixels": 1524,
+            "minimum": 120,
+            "spanX": 210,
+            "spanY": 50,
+            "pass": true
+          }
+        ],
+        "threshold": {
+          "channelDelta": 24,
+          "stabilityDelta": 8
+        },
+        "reason": "visible indicator extent evaluated",
+        "status": "PASS",
+        "stableGeometry": true,
+        "clip": {
+          "x": 22,
+          "y": 52,
+          "width": 248,
+          "height": 88
+        }
+      },
+      "pass": true
+    }
+  ],
+  "status": "FAIL"
+}
