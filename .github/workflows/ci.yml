@@ -54,7 +54,7 @@ jobs:
             .work/v10/evidence/authenticity-tests.json
 
   browser-stage-a:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     strategy:
       fail-fast: false
