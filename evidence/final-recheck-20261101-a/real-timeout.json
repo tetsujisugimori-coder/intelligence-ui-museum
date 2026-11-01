@@ -1,0 +1,105 @@
+{
+  "started": "2026-10-31T23:34:59.892Z",
+  "conditions": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "checks": [],
+      "errors": [],
+      "status": "FAIL",
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "checks": [],
+      "errors": [],
+      "status": "FAIL",
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "checks": [],
+      "errors": [],
+      "status": "FAIL",
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "checks": [],
+      "errors": [],
+      "status": "FAIL",
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "chromium",
+      "sixComponents": true,
+      "checks": [],
+      "errors": [],
+      "status": "FAIL",
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "chromium",
+      "noJS": true,
+      "errors": [],
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "checks": [],
+      "errors": [],
+      "status": "FAIL",
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "checks": [],
+      "errors": [],
+      "status": "FAIL",
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "checks": [],
+      "errors": [],
+      "status": "FAIL",
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "checks": [],
+      "errors": [],
+      "status": "FAIL",
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "webkit",
+      "sixComponents": true,
+      "checks": [],
+      "errors": [],
+      "status": "FAIL",
+      "error": "synthetic timeout injected"
+    },
+    {
+      "engine": "webkit",
+      "noJS": true,
+      "errors": [],
+      "error": "synthetic timeout injected"
+    }
+  ],
+  "unverified": [
+    "Native WebKit text-only zoom (root enlargement is synthetic)",
+    "iPhone Safari",
+    "VoiceOver",
+    "all117 exhibit operations"
+  ],
+  "failures": [],
+  "finished": "2026-10-31T23:35:01.721Z"
+}

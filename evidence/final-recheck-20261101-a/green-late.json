@@ -1,0 +1,10 @@
+{
+  "recordedPass": true,
+  "errors": [
+    "injected late pageerror"
+  ],
+  "failures": [
+    "missing or nonempty JavaScript errors detail"
+  ],
+  "validatorExitWouldBe": 1
+}

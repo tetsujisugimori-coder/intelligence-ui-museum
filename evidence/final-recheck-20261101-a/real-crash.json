@@ -1,0 +1,12 @@
+{
+  "started": "2026-10-31T23:35:02.276Z",
+  "conditions": [],
+  "unverified": [
+    "Native WebKit text-only zoom (root enlargement is synthetic)",
+    "iPhone Safari",
+    "VoiceOver",
+    "all117 exhibit operations"
+  ],
+  "failures": [],
+  "finished": "2026-10-31T23:35:02.783Z"
+}

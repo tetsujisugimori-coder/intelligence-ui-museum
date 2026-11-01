@@ -1,0 +1,38 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> intelligence-ui-museum@0.0.0 test:runner
+> cd apps/v10 && node --test scripts/stage2r-runner.test.cjs
+
+✔ complete GREEN matrix (2.510941ms)
+✔ reject assert (1.10911ms)
+✔ reject engine (0.420068ms)
+✔ reject missing (0.500265ms)
+✔ reject duplicate (0.395742ms)
+✔ reject unfinished (0.34026ms)
+✔ reject empty (0.872883ms)
+✔ reject missingAssert (0.281504ms)
+✔ reject fakeGreen (0.484832ms)
+✔ reject duplicateAssert (0.423993ms)
+✔ reject error (0.335383ms)
+✔ reject unexpected (0.56431ms)
+✔ only explicit original visibility RED permitted (0.486044ms)
+✔ nonreproduced baseline RED fails (0.61244ms)
+✔ smoke noJS count and incomplete reports fail (0.128769ms)
+✔ stage2r-browser.cjs real entry launch failure -> nonzero (59.942951ms)
+✔ stage2r-smoke.cjs real entry launch failure -> nonzero (61.908885ms)
+✔ smoke synthetic normal propagates (84.372403ms)
+✔ smoke synthetic reopen failure propagates (87.436488ms)
+✔ smoke synthetic six-components pageerror propagates (66.241333ms)
+✔ matrix rejects late or missing pageerror evidence (1.333921ms)
+✔ matrix rejects skipped conditions even if checks appear green (1.791814ms)
+✔ smoke noJS rejects skipped conditions and preserves normal (0.792686ms)
+✔ matrix rejects a skipped assertion even if pass is true (0.365066ms)
+✔ both browser servers reject a link escaping the app root (6.24543ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 473.8324

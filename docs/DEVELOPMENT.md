@@ -28,7 +28,7 @@ v09のみを見る場合はリポジトリルートで`python3 -m http.server 80
 
 ## ブラウザ試験
 
-既存runnerは外部Playwrightと実行可能ブラウザを必要とする。smoke runnerには`/tmp/chromium`への固定参照と、最新独立レビューのC-01/C-02が残っている。現状を汎用GUI受入済みとして扱わない。修正は別Issue・PRでRED→GREENを残す。`CODEX_PRIMARY_RUNTIME_NODE_MODULES`、`APP_ROOT`、`EVIDENCE_DIR`、WebKitパス等の実設定はapps/v10の旧手順を参照し、Windowsで無条件に動くとはしない。新しい結果は`.work/`などに出し、既存evidenceへ上書きしない。
+既存runnerは外部Playwrightと実行可能ブラウザを必要とする。runnerはPlaywrightの標準ブラウザを使い、必要に応じて`CHROMIUM_EXECUTABLE`で指定する。Issue #4のC-01/C-02修正を含むが、これを汎用GUI受入済みとして扱わない。`CODEX_PRIMARY_RUNTIME_NODE_MODULES`、`APP_ROOT`、`EVIDENCE_DIR`、WebKitパス等の実設定はapps/v10の旧手順を参照し、Windowsで無条件に動くとはしない。新しい結果は`.work/`などに出し、既存evidenceへ上書きしない。
 
 ## CIと変更の流れ
 

@@ -1,0 +1,35 @@
+{
+  "base": "1c45d45e2bc5abb7f2618e81b93a1bc32a921a67",
+  "base_tree": "d7737e38d50a494c617a2237b77264def2eca395",
+  "unchanged_R_A1_result_and_25_contracts": {
+    "apps/v10/scripts/stage2r-smoke.cjs": true,
+    "apps/v10/scripts/stage2r-result.cjs": true,
+    "apps/v10/scripts/stage2r-runner.test.cjs": true
+  },
+  "old_runner_byte_equal_to_base": true,
+  "old_runner_sha256": "9754f1f25efcd4ae4063d3635c94e8a14ccc3b6f23aeb7bcb9fb5cf17b24eb99",
+  "stage_b_head": "9aa70a32dceb022ad6252f608b7af1d88ad57440",
+  "stage_b_blobs": [
+    "100644 blob f434afa26be76cafa86170a86dd28762da2e2b6d\tapps/v11/README.md",
+    "100644 blob 95116ad71a4661a905350df445effc1dd3e6d5f1\tapps/v11/accessibility-test.cjs",
+    "100644 blob 930126d44bf4bb7ab5b9bdf11949dffc212fcd32\tapps/v11/browser-test.cjs",
+    "100644 blob 12fe63173ec3666a3da8e817ab4d5c0e641eda0a\tapps/v11/capture.cjs",
+    "100644 blob 44109f260753ae8197f2e46174bfbd18700b4f60\tapps/v11/exhibits.css",
+    "100644 blob 679e5d50717e9b114a64e413e6d482afb6f881a2\tapps/v11/exhibits.js",
+    "100644 blob b32713746b9442f22e503823ac34311f1ac77ad1\tapps/v11/index.html",
+    "100644 blob 9c42afbec3bcf9bc4051bd596d1064ceac4cceca\tapps/v11/modal-measure.cjs",
+    "100644 blob 97a4effae0da0744533c63fa39e4e84c69683e7b\tapps/v11/nojs-test.cjs",
+    "100644 blob d6260523b3bee8603f18a9073ac6b4e63bfd7d06\tapps/v11/package-lock.json",
+    "100644 blob 88edd211c36971800afdc76b86f4918ccbbc9eef\tapps/v11/package.json",
+    "100644 blob 654dec642fae3295f387e337aa968ede47184681\tapps/v11/regression-test.cjs",
+    "100644 blob 7bc5c1a012f74b17eb33cfc58423bba43b7c2129\tapps/v11/result-contract.cjs",
+    "100644 blob 115ff104577b437b253bd40c696bdfcfa0cc64f6\tapps/v11/result-contract.test.cjs",
+    "100644 blob 45dc48b092cf1dfc67be4c940f15ab62dbae3806\tapps/v11/run-browser-ci.cjs",
+    "100644 blob 6170647b51cc68237aa102dda37d9a39681d5bfb\tapps/v11/verify.py"
+  ],
+  "stage_b_blob_count": 16,
+  "v11_ids_1_to_123": true,
+  "old_117_full_dataset_equal": true,
+  "categories": 11,
+  "scope": "static protection only; no Stage B browser review or changes"
+}

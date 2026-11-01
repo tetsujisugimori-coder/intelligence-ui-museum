@@ -1,0 +1,29 @@
+✔ complete GREEN matrix (4.8288ms)
+✔ reject assert (2.9296ms)
+✔ reject engine (0.4625ms)
+✔ reject missing (0.3749ms)
+✔ reject duplicate (0.9485ms)
+✔ reject unfinished (0.4963ms)
+✔ reject empty (0.655ms)
+✔ reject missingAssert (0.5041ms)
+✔ reject fakeGreen (0.6385ms)
+✔ reject duplicateAssert (0.8789ms)
+✔ reject error (0.4474ms)
+✔ reject unexpected (0.5875ms)
+✔ only explicit original visibility RED permitted (1.0514ms)
+✔ nonreproduced baseline RED fails (0.6343ms)
+✔ smoke noJS count and incomplete reports fail (0.178ms)
+✔ stage2r-browser.cjs real entry launch failure -> nonzero (127.7544ms)
+✔ stage2r-smoke.cjs real entry launch failure -> nonzero (94.9177ms)
+✔ smoke synthetic normal propagates (98.6913ms)
+✔ smoke synthetic reopen failure propagates (94.8915ms)
+✔ smoke synthetic six-components pageerror propagates (91.3254ms)
+✔ matrix rejects late or missing pageerror evidence (0.5654ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 698.2138

@@ -1,0 +1,6 @@
+{
+  "apps/v10/scripts/stage2r-browser.cjs": "39bb5ef91f1d54e6fc7cf9a32fd7512c6f35251054819e9d600cfd850a876efc",
+  "apps/v10/scripts/stage2r-browser-acceptance.cjs": "4c7c22266724c10593cc8ea3562193748a875a22c7eb1ae069da5719e05a5f8f",
+  "apps/v10/scripts/stage2r-focus-pixels.cjs": "880f466f041a8687d36dde79dedb3ac656a837fd9b900f6b77668f549bd1cd27",
+  "apps/v10/scripts/stage2r-focus-controls.cjs": "dfed1068d7f11f182e7c4b43e66e3ffbd41d3c3294c1e94317ef6ce483f6532c"
+}

@@ -1,0 +1,30 @@
+{
+  "started": "2026-11-01T14:30:06.551Z",
+  "conditions": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "checks": [
+        "117 rendered cards",
+        "search, category switching",
+        "theme",
+        "Modal open/Escape",
+        "Primary and Select interactions (3 exhibits including Modal)"
+      ],
+      "errors": [],
+      "document": {
+        "client": 320,
+        "scroll": 320
+      },
+      "status": "PASS"
+    }
+  ],
+  "unverified": [
+    "Native WebKit text-only zoom (root enlargement is synthetic)",
+    "iPhone Safari",
+    "VoiceOver",
+    "all117 exhibit operations"
+  ],
+  "failures": [],
+  "finished": "2026-11-01T14:30:08.114Z"
+}
