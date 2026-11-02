@@ -17,3 +17,7 @@ Shortcut Recorderは通常操作を保護するため、教材の記録対象を
 CIの `browser-v11` はv11専用lockfileのPlaywrightを導入し、ChromiumとWebKitを準備して `node apps/v11/run-browser-ci.cjs` を実行します。runnerはランダムポートと新しい隔離コピーを使い、12表示条件・追加4条件・JS無効2条件・予約キー／通知フォーカス2条件・Modalの状態遷移8条件（各3回）を検査します。結果の条件・assert・エラー・PNGの寸法・CRC・終端・画像データ、ログの欠落やSKIPも検査します。Stage A smokeもLinuxの隔離v10コピーで実行します。さらにpageerrorを注入し、失敗を検知できることを検査します。各子試験は4分で打切り、結果・画像・ログはCI artifactへ保存します。ローカルで同じrunnerを実行するときは `npm ci --prefix apps/v11` とPlaywrightブラウザの導入後、既存しない `EVIDENCE_DIR` を指定してください。
 
 記録開始後に別のコントロールへフォーカスを移すと記録を中止し、そのコントロールのキー操作を妨げません。2026-11-01 JST。
+
+## 2026-11-02 JST：119選択保持の局所修正
+
+左右に残る既存選択は別項目の移送後も保持します。移送した項目は未選択、Undoは所属を戻して全選択解除（従来仕様）。安定ID・左右別選択Setを使い、native checkboxのcheckedを再描画へ反映します。実キー・逆方向・連続移送・Undo・Resetの6検査群×両engine×3幅をCIへ追加。旧レビューHEADを同じ試験で拒否する負対照も必須です。新しい証拠は `evidence/pr8-transfer-20261102/`。自己検証と独立再レビューを区別し、Stage 3 HOLDを継続します。
