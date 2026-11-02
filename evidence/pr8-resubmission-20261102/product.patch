@@ -1,0 +1,50 @@
+diff --git a/apps/v11/exhibits.js b/apps/v11/exhibits.js
+index 679e5d5..731ad50 100644
+--- a/apps/v11/exhibits.js
++++ b/apps/v11/exhibits.js
+@@ -16,7 +16,44 @@ function v11Init(root){
+  const cards=root.matches?.('.card')?[root]:root.querySelectorAll('.card');
+  for(const card of cards){const id=+card.dataset.id;if(id<118||id>123)continue;const $=s=>card.querySelector(s), all=s=>[...card.querySelectorAll(s)], out=$('[data-state]'), host=$('.v11-demo');
+  if(id===118){const time=$('[data-time]'),min=$('[data-min]'),max=$('[data-max]'),fmt=$('[data-format]');function update(){time.min=min.value;time.max=max.value;let err=!min.value||!max.value?'範囲を入力してください':min.value>max.value?'最小は最大以下にしてください':!time.value?'時刻を入力してください':time.value<min.value||time.value>max.value?'範囲外です。範囲内に変更してください':'';time.setAttribute('aria-invalid',String(!!err));min.setAttribute('aria-invalid',String(!min.value||!!(min.value&&max.value&&min.value>max.value)));max.setAttribute('aria-invalid',String(!max.value||!!(min.value&&max.value&&min.value>max.value))); const [h,m]=(time.value||'00:00').split(':').map(Number),display=fmt.value==='12'?`${h%12||12}:${String(m).padStart(2,'0')} ${h<12?'AM':'PM'}`:time.value;out.textContent=`${err?err+' / ':''}現在値：${display}（${time.value||'未入力' }） / 範囲 ${min.value}–${max.value}`;}host.addEventListener('input',update);host.addEventListener('change',update);host.addEventListener('click',e=>{if(e.target.dataset.adjust){const [h,m]=(time.value||'00:00').split(':').map(Number);const value=(h*60+m+Number(e.target.dataset.adjust)+1440)%1440;time.value=String(Math.floor(value/60)).padStart(2,'0')+':'+String(value%60).padStart(2,'0');update();}});update();}
+- if(id===119){let left=['設計','実装','検証','公開準備'],right=[],history=[];function draw(){for(const [side,arr] of [['left',left],['right',right]])$(`[data-${side}]`).innerHTML=arr.map(x=>`<label><input type="checkbox" data-item="${x}" data-side="${side}"> ${x}</label><br>`).join('')||'<span>項目なし</span>';out.textContent=`左 ${left.length}件、右 ${right.length}件、選択 ${all('[data-item]:checked').length}件`; $('[data-undo]').disabled=!history.length;}host.addEventListener('change',drawSelection);function drawSelection(){out.textContent=`左 ${left.length}件、右 ${right.length}件、選択 ${all('[data-item]:checked').length}件`;}host.addEventListener('click',e=>{const move=e.target.dataset.move;if(move){let from=move.toLowerCase().includes('right')?left:right,to=from===left?right:left;const names=move.startsWith('all')?[...from]:all(`[data-side="${from===left?'left':'right'}"]:checked`).map(x=>x.dataset.item);if(!names.length){out.textContent='移送する項目を選んでください';return;}history.push([[...left],[...right]]);for(const n of names){from.splice(from.indexOf(n),1);to.push(n)}draw();}else if(e.target.matches('[data-undo]')&&history.length){[left,right]=history.pop();draw();}});draw();}
++ if(id===119){
++  // Stable IDs and separate side selections survive replacement of the checkbox DOM.
++  const items=[{id:'design',name:'設計'},{id:'implement',name:'実装'},{id:'verify',name:'検証'},{id:'release',name:'公開準備'}];
++  let left=items.map(x=>x.id),right=[],history=[];
++  const selected={left:new Set(),right:new Set()},name=id=>items.find(x=>x.id===id).name;
++  function draw(){
++   for(const [side,arr] of [['left',left],['right',right]]){
++    for(const id of selected[side])if(!arr.includes(id))selected[side].delete(id);
++    $(`[data-${side}]`).innerHTML=arr.map(id=>`<label><input type="checkbox" data-item="${name(id)}" data-item-id="${id}" data-side="${side}" ${selected[side].has(id)?'checked':''}> ${name(id)}</label><br>`).join('')||'<span>項目なし</span>';
++   }
++   drawSelection();$('[data-undo]').disabled=!history.length;
++  }
++  function drawSelection(){out.textContent=`左 ${left.length}件、右 ${right.length}件、選択 ${selected.left.size+selected.right.size}件`;}
++  host.addEventListener('change',e=>{
++   if(!e.target.matches('[data-item-id]'))return;
++   const selection=selected[e.target.dataset.side],id=e.target.dataset.itemId;
++   if(e.target.checked)selection.add(id);else selection.delete(id);
++   drawSelection();
++  });
++  host.addEventListener('click',e=>{
++   const move=e.target.dataset.move;
++   if(move){
++    const side=move.toLowerCase().includes('right')?'left':'right',from=side==='left'?left:right,to=side==='left'?right:left;
++    const ids=move.startsWith('all')?[...from]:from.filter(id=>selected[side].has(id));
++    if(!ids.length){out.textContent='移送する項目を選んでください';return;}
++    history.push([[...left],[...right]]);
++    for(const id of ids){from.splice(from.indexOf(id),1);to.push(id);selected[side].delete(id);}
++    // Moved items remain unchecked, matching the original transfer policy.
++    e.target.focus({preventScroll:true});draw();
++   }else if(e.target.matches('[data-undo]')&&history.length){
++    [left,right]=history.pop();selected.left.clear();selected.right.clear();
++    // Undo restores membership and clears selection, as before this fix.
++    // The final Undo disables its button; keep focus on an available control.
++    const target=history.length?e.target:$('[data-move="right"]');target.focus({preventScroll:true});draw();
++   }
++  });
++  draw();
++ }
+  if(id===120){let columns=[['調査','設計'],['実装'],['検証']],history=[];const names=['未着手','進行中','完了'];function draw(focus){$('[data-board]').innerHTML=columns.map((col,i)=>`<section class="v11-column" data-column="${i}"><h4>${names[i]}</h4>${col.map(n=>`<div class="v11-task" draggable="true" data-task="${n}" tabindex="0"><strong title="ドラッグできます">☰ ${n}</strong><label>移動先 <select aria-label="${n}の移動先">${names.map((v,j)=>`<option value="${j}" ${i===j?'selected':''}>${v}</option>`).join('')}</select></label><button type="button" data-kanban-move="${n}">移動</button></div>`).join('')||'<p>カードなし</p>'}</section>`).join('');$('[data-undo]').disabled=!history.length;if(focus)card.querySelector(`[data-task="${focus}"]`)?.focus();}function move(n,dest){const src=columns.findIndex(a=>a.includes(n));dest=+dest;if(src===dest){out.textContent=`${n}は既に${names[dest]}です`;return;}history.push({columns:columns.map(a=>[...a]),focus:n});columns[src].splice(columns[src].indexOf(n),1);columns[dest].push(n);draw(n);out.textContent=`${n}：${names[src]}から${names[dest]}へ移動`;}let dragged='';host.addEventListener('dragstart',e=>{const task=e.target.closest('[data-task]');if(task){dragged=task.dataset.task;e.dataTransfer.setData('text/plain',dragged)}});host.addEventListener('dragover',e=>{if(e.target.closest('[data-column]'))e.preventDefault()});host.addEventListener('drop',e=>{const col=e.target.closest('[data-column]');if(col){e.preventDefault();const n=e.dataTransfer.getData('text/plain')||dragged;if(columns.some(a=>a.includes(n)))move(n,col.dataset.column)}});host.addEventListener('click',e=>{if(e.target.dataset.kanbanMove){const task=e.target.closest('[data-task]');move(task.dataset.task,task.querySelector('select').value)}else if(e.target.matches('[data-undo]')&&history.length){const previous=history.pop();columns=previous.columns;draw(previous.focus);out.textContent='直前の移動を取り消しました'}});draw();out.textContent='各カードの現在位置は列名で表示';}
+  if(id===121){const sets=[[[1,3,7],[2,8,4],[6,5,9]],[[9,5,2],[7,3,1],[4,8,6]]],days=['月','火','水'],hours=['朝','昼','夜'];function draw(){const data=sets[+$('[data-sample]').value],strength=+$('[data-strength]').value;$('[data-heat]').innerHTML=`<table><caption>曜日と時間帯の値</caption><thead><tr><th>曜日</th>${hours.map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${data.map((row,i)=>`<tr><th scope="row">${days[i]}</th>${row.map((v,j)=>`<td><button type="button" data-cell="${i},${j}" style="background:rgba(60,130,220,${.1+v*strength/35});color:inherit" aria-label="${days[i]} ${hours[j]} ${v}">${v}</button></td>`).join('')}</tr>`).join('')}</tbody></table>`;out.textContent=`${$('[data-sample] option:checked').textContent}、強度 ${strength}。セルを選択してください`; }host.addEventListener('input',e=>{if(e.target.matches('[data-strength]'))draw()});host.addEventListener('change',e=>{if(e.target.matches('[data-sample]'))draw()});host.addEventListener('click',e=>{if(e.target.dataset.cell){const [i,j]=e.target.dataset.cell.split(',').map(Number);out.textContent=`${days[i]} ${hours[j]}：${sets[+$('[data-sample]').value][i][j]}`}});draw();}
+  if(id===122){let candidate='',registered='',recording=false;function show(msg=''){out.textContent=`${msg} 候補：${candidate||'なし'} / 登録：${registered||'なし'}${recording?' / キー待ち':''}`;}function valid(key,mods){return mods.length===1&&mods[0]==='Shift'&&['B','K'].includes(key);}function set(key,mods){if(!valid(key,mods)){show('使用できない組合せです（予約済み・未確認または無効）。Shift+B / Shift+Kを選んでください。');return false}candidate=[...mods,key].join('+');show('候補を取得しました。');return true;}function end(){recording=false;$('[data-record]').textContent='記録開始';}host.addEventListener('mousedown',e=>{if(e.target.matches('[data-record]'))e.preventDefault()});host.addEventListener('click',e=>{if(e.target.matches('[data-record]')){recording=true;e.target.textContent='記録中（Escで中止）';e.target.focus({preventScroll:true});show();}if(e.target.matches('[data-compose]'))set($('[data-key]').value,all('[data-mod]:checked').map(x=>x.dataset.mod));if(e.target.matches('[data-register]')){if(!candidate)show('候補がありません。');else if(candidate===registered)show('同じ組合せは登録済みです。');else{registered=candidate;show('登録しました。')}}if(e.target.matches('[data-clear]')){registered='';show('登録を解除しました。')}});host.addEventListener('focusout',e=>{if(recording&&e.target.matches('[data-record]')){end();show('フォーカス移動で記録を中止しました。')}});host.addEventListener('keydown',e=>{if(!recording||!e.target.matches('[data-record]'))return;if(e.key==='Escape'){end();show('記録を中止しました。');return;}if(['Control','Alt','Shift','Meta'].includes(e.key)){show('修飾キー単独では登録できません。キー入力を待っています。');return;}const mods=[e.ctrlKey&&'Ctrl',e.altKey&&'Alt',e.shiftKey&&'Shift',e.metaKey&&'Meta'].filter(Boolean),key=e.key.toUpperCase();if(valid(key,mods)){e.preventDefault();end();set(key,mods)}else{end();show('予約済み・未確認または無効な組合せです。通常操作を優先します。')}});show();}

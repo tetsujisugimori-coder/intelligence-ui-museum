@@ -1,0 +1,2 @@
+PASS: 302 original bundle hashes; protected historical files; v09 byte equality; 117 identities / 11 categories; v08 105 identities; viewer dataset
+Scope: static preservation only; no browser, build, current dependency audit or remote CI assertion
