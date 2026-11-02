@@ -102,7 +102,7 @@ jobs:
           path: .work/v10/evidence/ra-acceptance/
           if-no-files-found: error
   browser-v11:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
