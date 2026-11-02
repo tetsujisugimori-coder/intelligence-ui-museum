@@ -21,3 +21,7 @@ CIの `browser-v11` はv11専用lockfileのPlaywrightを導入し、ChromiumとW
 ## 2026-11-02 JST：119選択保持の局所修正
 
 左右に残る既存選択は別項目の移送後も保持します。移送した項目は未選択、Undoは所属を戻して全選択解除（従来仕様）。安定ID・左右別選択Setを使い、native checkboxのcheckedを再描画へ反映します。実キー・逆方向・連続移送・Undo・Resetの6検査群×両engine×3幅をCIへ追加。旧レビューHEADを同じ試験で拒否する負対照も必須です。新しい証拠は `evidence/pr8-transfer-20261102/`。自己検証と独立再レビューを区別し、Stage 3 HOLDを継続します。
+
+### 実測文字2倍と従来root CSS試験の区別
+
+従来accessibility-testの `synthetic text enlargement document overflow` はroot font-size:200%のみです。固定14pxのdescriptionは14pxのままなので、結果にscopeと実測前後値を追記しました。旧assert・件数を維持し、別の `text-zoom-test.cjs` で6展示の元computed font-sizeを採取して各要素を2倍へ設定します。description 14→28pxを必須とし、各card・文書の横超過、文字range/overflow clipping、focus枠、移送・Undoの実キー操作と画像を検査します。これはブラウザ内CSSによる検証条件であり、物理OSの文字拡大や実機Safari/支援技術の成功とは扱いません。両engine×375/390/1280pxの6条件。過去の「文字200%」成功を実文字拡大の成功へ読み替えません。

@@ -1,6 +1,7 @@
 'use strict';
 // Isolated browser verification. No historical evidence or source is modified.
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),{spawn}=require('node:child_process');
+const {validateTextZoom}=require('./text-zoom-contract.cjs');
 const {validateTransfer}=require('./transfer-contract.cjs');
 const {validateRecords,validatePngs}=require('./result-contract.cjs');
 const repo=path.resolve(__dirname,'../..'),work=path.join(repo,'.work');fs.mkdirSync(work,{recursive:true});
@@ -16,7 +17,9 @@ function verify(file,kind,fault=false){return validateRecords(JSON.parse(fs.read
 validatePngs(path.join(output,'normal'));
 const transferDir=path.join(output,'transfer'),transfer=await run('transfer-test.cjs',transferDir);summary.push(transfer);
 if(transfer.code!==0||transfer.signal||transfer.timedOut)throw Error('Transfer acceptance failed');validateTransfer(JSON.parse(fs.readFileSync(path.join(transferDir,'transfer.json'))));
+const textDir=path.join(output,'text-zoom'),text=await run('text-zoom-test.cjs',textDir);summary.push(text);
+if(text.code!==0||text.signal||text.timedOut)throw Error('Actual text zoom acceptance failed');validateTextZoom(JSON.parse(fs.readFileSync(path.join(textDir,'text-zoom.json'))));
 const red=await run('transfer-red.cjs',path.join(output,'transfer-red'));summary.push(red);
 if(red.code!==0||red.signal||red.timedOut)throw Error('Old HEAD negative control failed');
-const dir=path.join(output,'fault-injection'),r=await run('regression-test.cjs',dir,{V11_INJECT_PAGEERROR:'1'});summary.push(r);if(r.code===0||r.signal||r.timedOut)throw Error('Injected pageerror was not detected');const records=verify(path.join(dir,'regression.json'),'regression',true);if(!fs.statSync(path.join(dir,'regression-test.cjs.log')).size)throw Error('Empty fault log');if(records.some(x=>!x.errors.some(e=>e.includes('v11 injected pageerror'))))throw Error('Fault run failed for a reason other than injected pageerror');console.log('PASS: 12 browser, 4 accessibility, 2 no-JS, 2 focused regression and 8 modal conditions; injected pageerror failed as expected');
+const dir=path.join(output,'fault-injection'),r=await run('regression-test.cjs',dir,{V11_INJECT_PAGEERROR:'1'});summary.push(r);if(r.code===0||r.signal||r.timedOut)throw Error('Injected pageerror was not detected');const records=verify(path.join(dir,'regression.json'),'regression',true);if(!fs.statSync(path.join(dir,'regression-test.cjs.log')).size)throw Error('Empty fault log');if(records.some(x=>!x.errors.some(e=>e.includes('v11 injected pageerror'))))throw Error('Fault run failed for a reason other than injected pageerror');console.log('PASS: 12 browser, 4 accessibility, 2 no-JS, 2 focused regression and 8 modal conditions; plus 6 transfer, 6 actual text zoom, 6 old HEAD rejection conditions; injected pageerror failed as expected');
 }catch(e){console.error(e);process.exitCode=1}finally{try{if(server.listening){server.closeAllConnections?.();await new Promise((resolve,reject)=>server.close(error=>error?reject(error):resolve()))}}catch(e){console.error(e);process.exitCode=1}try{fs.rmSync(temp,{recursive:true,force:true})}catch(e){console.error(e);process.exitCode=1}try{fs.writeFileSync(path.join(output,'runner-summary.json'),JSON.stringify({summary,exitCode:process.exitCode||0},null,2))}catch(e){console.error(e);process.exitCode=1}}})().catch(e=>{console.error(e);process.exitCode=1});
