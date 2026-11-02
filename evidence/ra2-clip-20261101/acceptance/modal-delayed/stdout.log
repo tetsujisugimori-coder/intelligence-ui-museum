@@ -1,0 +1,60 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "width": 375,
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "noJS": true,
+    "cards": 117
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "width": 375,
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "noJS": true,
+    "cards": 117
+  }
+]

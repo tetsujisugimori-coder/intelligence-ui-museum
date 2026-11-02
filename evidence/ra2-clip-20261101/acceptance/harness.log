@@ -1,0 +1,10 @@
+normal-smoke PASS 0
+normal-matrix PASS 0
+modal-delayed PASS 0
+modal-stuck PASS 1
+focus-missing PASS 1
+focus-hidden PASS 1
+late-pageerror PASS 1
+cleanup-failure PASS (incomplete result rejected)
+runner-timeout PASS (intentional 1ms process timeout, not product failure)
+focus-clipped PASS 1

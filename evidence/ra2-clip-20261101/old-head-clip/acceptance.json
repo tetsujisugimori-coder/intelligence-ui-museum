@@ -1,0 +1,14 @@
+{
+  "finished": "2026-11-01T14:22:40.591Z",
+  "scope": "real Chromium/WebKit; fault-injected controls separate from normal product runs",
+  "records": [
+    {
+      "name": "focus-clipped",
+      "kind": "matrix",
+      "exit": 0,
+      "signal": null,
+      "pass": false
+    }
+  ],
+  "status": "FAIL"
+}

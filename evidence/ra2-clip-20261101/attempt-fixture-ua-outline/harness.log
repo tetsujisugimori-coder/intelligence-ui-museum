@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: chromium/visibility: unexpected rendered verdict
+
+true !== false
+
+    at /workspace/scratch/a17e096081cc/intelligence-ui-museum/.work/v10/scripts/stage2r-focus-controls.cjs:33:11 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: true,
+  expected: false,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "status": "FAIL",
+    "error": "page.waitForFunction: Timeout 5000ms exceeded."
+  },
+  {
+    "engine": "chromium",
+    "width": 375,
+    "status": "FAIL",
+    "error": "page.waitForFunction: Timeout 5000ms exceeded."
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "status": "FAIL",
+    "error": "page.waitForFunction: Timeout 5000ms exceeded."
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "status": "FAIL",
+    "error": "page.waitForFunction: Timeout 5000ms exceeded."
+  },
+  {
+    "engine": "chromium",
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "noJS": true,
+    "cards": 117
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "status": "FAIL",
+    "error": "page.waitForFunction: Timeout 5000ms exceeded."
+  },
+  {
+    "engine": "webkit",
+    "width": 375,
+    "status": "FAIL",
+    "error": "page.waitForFunction: Timeout 5000ms exceeded."
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "status": "FAIL",
+    "error": "page.waitForFunction: Timeout 5000ms exceeded."
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "status": "FAIL",
+    "error": "page.waitForFunction: Timeout 5000ms exceeded."
+  },
+  {
+    "engine": "webkit",
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "noJS": true,
+    "cards": 117
+  }
+]

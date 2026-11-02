@@ -1,0 +1,8 @@
+#!/bin/sh
+WK_MUSEUM=/root/.cache/ms-playwright/webkit-2215/minibrowser-wpe
+export WEBKIT_EXEC_PATH="$WK_MUSEUM/bin"
+export WEBKIT_INJECTED_BUNDLE_PATH="$WK_MUSEUM/lib"
+export WEBKIT_INSPECTOR_RESOURCES_PATH="$WK_MUSEUM/share"
+export WEBKIT_FORCE_COMPLEX_TEXT=1
+export LD_LIBRARY_PATH="$WK_MUSEUM/lib:$WK_MUSEUM/sys/lib:/tmp/museum-browser-libs/usr/lib/x86_64-linux-gnu:/tmp/museum-browser-libs/lib/x86_64-linux-gnu"
+exec "$WK_MUSEUM/bin/MiniBrowser" "$@"
