@@ -1,0 +1,112 @@
+[
+  {
+    "engine": "chromium",
+    "width": 375,
+    "checks": [
+      {
+        "name": "old Primary, Select and Modal representative operations"
+      },
+      {
+        "name": "invalid time range and empty transfer recovery"
+      },
+      {
+        "name": "Tab and visible focus",
+        "focus": {
+          "tag": "INPUT",
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "name": "reserved shortcut rejected via touch"
+      },
+      {
+        "name": "reserved key not prevented, synthetic dispatch"
+      },
+      {
+        "name": "reset all new demonstrations"
+      },
+      {
+        "name": "synthetic text enlargement document overflow"
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "checks": [
+      {
+        "name": "old Primary, Select and Modal representative operations"
+      },
+      {
+        "name": "invalid time range and empty transfer recovery"
+      },
+      {
+        "name": "Tab and visible focus",
+        "focus": {
+          "tag": "INPUT",
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "name": "reserved shortcut rejected via touch"
+      },
+      {
+        "name": "reserved key not prevented, synthetic dispatch"
+      },
+      {
+        "name": "reset all new demonstrations"
+      },
+      {
+        "name": "synthetic text enlargement document overflow"
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "width": 375,
+    "checks": [],
+    "errors": [],
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 0\n\n    at <ci-workspace>/apps/v11/accessibility-test.cjs:3:870"
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "checks": [
+      {
+        "name": "old Primary, Select and Modal representative operations"
+      },
+      {
+        "name": "invalid time range and empty transfer recovery"
+      },
+      {
+        "name": "Tab and visible focus",
+        "focus": {
+          "tag": "INPUT",
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "name": "reserved shortcut rejected via touch"
+      },
+      {
+        "name": "reserved key not prevented, synthetic dispatch"
+      },
+      {
+        "name": "reset all new demonstrations"
+      },
+      {
+        "name": "synthetic text enlargement document overflow"
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,16 @@
+✔ browser: accept complete recorded results and reject omissions, duplicates, skip (1.0432ms)
+✔ additional: accept complete recorded results and reject omissions, duplicates, skip (0.2598ms)
+✔ nojs: accept complete recorded results and reject omissions, duplicates, skip (0.1166ms)
+✔ regression: accept complete recorded results and reject omissions, duplicates, skip (0.2833ms)
+✔ browser and focused regression require actual checks and empty pageerror lists (0.8855ms)
+✔ fault report requires the intended pageerror and all focused checks (0.4196ms)
+✔ PNG screenshots require correct dimensions, complete chunks and valid image data (53.1391ms)
+✔ modal results require three complete event and focus traces per condition (0.7226ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 165.2422

@@ -1,0 +1,12 @@
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6880435Z # Subtest: matrix rejects skipped conditions even if checks appear green
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6881657Z ok 22 - matrix rejects skipped conditions even if checks appear green
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6938267Z # Subtest: smoke noJS rejects skipped conditions and preserves normal
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6939328Z ok 23 - smoke noJS rejects skipped conditions and preserves normal
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6942131Z # Subtest: matrix rejects a skipped assertion even if pass is true
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6943549Z ok 24 - matrix rejects a skipped assertion even if pass is true
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6946634Z # Subtest: both browser servers reject a link escaping the app root
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6947750Z ok 25 - both browser servers reject a link escaping the app root
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6950410Z # tests 25
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6951037Z # pass 25
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6951345Z # fail 0
+preservation	Run npm run test:runner	2026-10-31T23:36:20.6952005Z # skipped 0

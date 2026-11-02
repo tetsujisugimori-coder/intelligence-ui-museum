@@ -1,0 +1,202 @@
+[
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "checks": [
+      {
+        "name": "real Control+A not suppressed",
+        "event": {
+          "key": "a",
+          "ctrl": true,
+          "meta": false,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Control+C not suppressed",
+        "event": {
+          "key": "c",
+          "ctrl": true,
+          "meta": false,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Control+V not suppressed",
+        "event": {
+          "key": "v",
+          "ctrl": true,
+          "meta": false,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Control+X not suppressed",
+        "event": {
+          "key": "x",
+          "ctrl": true,
+          "meta": false,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Meta+A not suppressed",
+        "event": {
+          "key": "a",
+          "ctrl": false,
+          "meta": true,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Meta+C not suppressed",
+        "event": {
+          "key": "c",
+          "ctrl": false,
+          "meta": true,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Meta+V not suppressed",
+        "event": {
+          "key": "v",
+          "ctrl": false,
+          "meta": true,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Meta+X not suppressed",
+        "event": {
+          "key": "x",
+          "ctrl": false,
+          "meta": true,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "Ctrl/Meta listed and Alt/combined modifiers not suppressed, synthetic events"
+      },
+      {
+        "name": "Tab F5 and unmodified key not suppressed, synthetic events"
+      },
+      {
+        "name": "modifier only, Escape, normal recording, duplicate, clear"
+      },
+      {
+        "name": "read, sequential first/middle/last/empty deletion, Tab, read all, add, reset focus"
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "checks": [
+      {
+        "name": "real Control+A not suppressed",
+        "event": {
+          "key": "a",
+          "ctrl": true,
+          "meta": false,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Control+C not suppressed",
+        "event": {
+          "key": "c",
+          "ctrl": true,
+          "meta": false,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Control+V not suppressed",
+        "event": {
+          "key": "v",
+          "ctrl": true,
+          "meta": false,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Control+X not suppressed",
+        "event": {
+          "key": "x",
+          "ctrl": true,
+          "meta": false,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Meta+A not suppressed",
+        "event": {
+          "key": "a",
+          "ctrl": false,
+          "meta": true,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Meta+C not suppressed",
+        "event": {
+          "key": "c",
+          "ctrl": false,
+          "meta": true,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Meta+V not suppressed",
+        "event": {
+          "key": "v",
+          "ctrl": false,
+          "meta": true,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "real Meta+X not suppressed",
+        "event": {
+          "key": "x",
+          "ctrl": false,
+          "meta": true,
+          "prevented": false,
+          "trusted": true
+        }
+      },
+      {
+        "name": "Ctrl/Meta listed and Alt/combined modifiers not suppressed, synthetic events"
+      },
+      {
+        "name": "Tab F5 and unmodified key not suppressed, synthetic events"
+      },
+      {
+        "name": "modifier only, Escape, normal recording, duplicate, clear"
+      },
+      {
+        "name": "read, sequential first/middle/last/empty deletion, Tab, read all, add, reset focus"
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  }
+]

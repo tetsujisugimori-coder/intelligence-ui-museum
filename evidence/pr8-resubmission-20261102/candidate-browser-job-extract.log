@@ -1,0 +1,5 @@
+2026-11-02T03:46:02.6162347Z Ubuntu
+2026-11-02T03:46:02.6167705Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-02T03:46:07.6206684Z HEAD is now at ca3dc64 Merge e3679d199d845f854e7378fdf0b983d3a65e238f into 6477d0bc3fcd207210524abeaace97d0e506e886
+2026-11-02T03:49:30.4652370Z PASS: 12 browser, 4 accessibility, 2 no-JS, 2 focused regression and 8 modal conditions; plus 6 transfer, 6 actual text zoom, 6 old HEAD rejection conditions; injected pageerror failed as expected
+2026-11-02T03:49:33.3065870Z Artifact v11-browser-verification-ca3dc64e247a9aa10b198d14488ecb07b114851e.zip successfully finalized. Artifact ID 13115450073

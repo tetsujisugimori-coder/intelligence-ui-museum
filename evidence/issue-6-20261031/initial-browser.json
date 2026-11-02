@@ -1,0 +1,220 @@
+[
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 375,
+    "theme": "dark",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength",
+      "122 alternative, registration, duplicate, clear, keyboard",
+      "123 add, announce, read, read all, delete",
+      "no document overflow or pageerror"
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 375,
+    "theme": "light",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength",
+      "122 alternative, registration, duplicate, clear, keyboard",
+      "123 add, announce, read, read all, delete",
+      "no document overflow or pageerror"
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 390,
+    "theme": "dark",
+    "checks": [],
+    "errors": [],
+    "status": "FAIL",
+    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8765/apps/v11/\", waiting until \"load\"\u001b[22m\n\n    at <workspace>\\apps\\v11\\browser-test.cjs:6:9"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 390,
+    "theme": "light",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength",
+      "122 alternative, registration, duplicate, clear, keyboard",
+      "123 add, announce, read, read all, delete",
+      "no document overflow or pageerror"
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 1280,
+    "theme": "dark",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength",
+      "122 alternative, registration, duplicate, clear, keyboard",
+      "123 add, announce, read, read all, delete",
+      "no document overflow or pageerror"
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 1280,
+    "theme": "light",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength",
+      "122 alternative, registration, duplicate, clear, keyboard",
+      "123 add, announce, read, read all, delete",
+      "no document overflow or pageerror"
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 375,
+    "theme": "dark",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength"
+    ],
+    "errors": [],
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Ctrl\\+B/. Input:\n\n'候補：Ctrl+K / 登録：なし / キー待ち'\n\n    at <workspace>\\apps\\v11\\browser-test.cjs:13:524"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 375,
+    "theme": "light",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength"
+    ],
+    "errors": [],
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Ctrl\\+B/. Input:\n\n'候補：Ctrl+K / 登録：なし / キー待ち'\n\n    at <workspace>\\apps\\v11\\browser-test.cjs:13:524"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 390,
+    "theme": "dark",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength"
+    ],
+    "errors": [],
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Ctrl\\+B/. Input:\n\n'候補：Ctrl+K / 登録：なし / キー待ち'\n\n    at <workspace>\\apps\\v11\\browser-test.cjs:13:524"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 390,
+    "theme": "light",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength"
+    ],
+    "errors": [],
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Ctrl\\+B/. Input:\n\n'候補：Ctrl+K / 登録：なし / キー待ち'\n\n    at <workspace>\\apps\\v11\\browser-test.cjs:13:524"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 1280,
+    "theme": "dark",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength"
+    ],
+    "errors": [],
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Ctrl\\+B/. Input:\n\n'候補：Ctrl+K / 登録：なし / キー待ち'\n\n    at <workspace>\\apps\\v11\\browser-test.cjs:13:524"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 1280,
+    "theme": "light",
+    "checks": [
+      "123 cards",
+      "theme",
+      "search category",
+      "118 invalid, format, keyboard, reset",
+      "119 select, transfer all, undo",
+      "120 keyboard move, focus, undo, drag",
+      "121 sample, selection, strength"
+    ],
+    "errors": [],
+    "status": "FAIL",
+    "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Ctrl\\+B/. Input:\n\n'候補：Ctrl+K / 登録：なし / キー待ち'\n\n    at <workspace>\\apps\\v11\\browser-test.cjs:13:524"
+  }
+]

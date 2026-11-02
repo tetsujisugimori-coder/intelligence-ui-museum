@@ -1,0 +1,47 @@
+[
+  {
+    "engine": "chromium",
+    "width": 375,
+    "version": "154.0.8037.57",
+    "theme": "dark",
+    "checks": [],
+    "observations": [],
+    "errors": [],
+    "consoleErrors": [],
+    "fonts": [],
+    "geometry": [],
+    "focus": [],
+    "error": "page.evaluate: TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\n    at eval (eval at evaluate (:311:30), <anonymous>:1:91)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/intelligence-ui-museum/apps/v11/text-zoom-test.cjs:15:25",
+    "status": "FAIL"
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "version": "154.0.8037.57",
+    "theme": "light",
+    "checks": [],
+    "observations": [],
+    "errors": [],
+    "consoleErrors": [],
+    "fonts": [],
+    "geometry": [],
+    "focus": [],
+    "error": "page.evaluate: TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\n    at eval (eval at evaluate (:311:30), <anonymous>:1:91)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/intelligence-ui-museum/apps/v11/text-zoom-test.cjs:15:25",
+    "status": "FAIL"
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "version": "154.0.8037.57",
+    "theme": "dark",
+    "checks": [],
+    "observations": [],
+    "errors": [],
+    "consoleErrors": [],
+    "fonts": [],
+    "geometry": [],
+    "focus": [],
+    "error": "page.evaluate: TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\n    at eval (eval at evaluate (:311:30), <anonymous>:1:91)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /workspace/intelligence-ui-museum/apps/v11/text-zoom-test.cjs:15:25",
+    "status": "FAIL"
+  }
+]

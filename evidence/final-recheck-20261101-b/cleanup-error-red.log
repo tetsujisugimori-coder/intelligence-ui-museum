@@ -1,0 +1,5 @@
+PASS: 12 browser, 4 accessibility, 2 no-JS, 2 focused regression and 8 modal conditions; injected pageerror failed as expected
+Error: synthetic cleanup failure
+    at fs.rmSync (<workspace>\.work\final-b-cleanup-20261101\inject.cjs:1:428)
+    at <workspace>\apps\v11\run-browser-ci.cjs:17:280
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

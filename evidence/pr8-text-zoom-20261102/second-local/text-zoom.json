@@ -1,0 +1,62 @@
+[
+  {
+    "engine": "chromium",
+    "width": 375,
+    "version": "154.0.8037.57",
+    "theme": "dark",
+    "checks": [],
+    "observations": [],
+    "errors": [],
+    "consoleErrors": [],
+    "fonts": [],
+    "geometry": [],
+    "focus": [],
+    "rootCss": {
+      "before": 16,
+      "after": 32,
+      "root": 32
+    },
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n16 !== 14\n\n    at /workspace/intelligence-ui-museum/apps/v11/text-zoom-test.cjs:16:11",
+    "status": "FAIL"
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "version": "154.0.8037.57",
+    "theme": "light",
+    "checks": [],
+    "observations": [],
+    "errors": [],
+    "consoleErrors": [],
+    "fonts": [],
+    "geometry": [],
+    "focus": [],
+    "rootCss": {
+      "before": 16,
+      "after": 32,
+      "root": 32
+    },
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n16 !== 14\n\n    at /workspace/intelligence-ui-museum/apps/v11/text-zoom-test.cjs:16:11",
+    "status": "FAIL"
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "version": "154.0.8037.57",
+    "theme": "dark",
+    "checks": [],
+    "observations": [],
+    "errors": [],
+    "consoleErrors": [],
+    "fonts": [],
+    "geometry": [],
+    "focus": [],
+    "rootCss": {
+      "before": 16,
+      "after": 32,
+      "root": 32
+    },
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n16 !== 14\n\n    at /workspace/intelligence-ui-museum/apps/v11/text-zoom-test.cjs:16:11",
+    "status": "FAIL"
+  }
+]

@@ -1,0 +1,24 @@
+✔ browser: accept complete recorded results and reject omissions, duplicates, skip (2.246374ms)
+✔ additional: accept complete recorded results and reject omissions, duplicates, skip (0.707003ms)
+✔ nojs: accept complete recorded results and reject omissions, duplicates, skip (0.293808ms)
+✔ regression: accept complete recorded results and reject omissions, duplicates, skip (0.685274ms)
+✔ browser and focused regression require actual checks and empty pageerror lists (2.085609ms)
+✔ fault report requires the intended pageerror and all focused checks (0.456814ms)
+✔ PNG screenshots require correct dimensions, complete chunks and valid image data (96.513538ms)
+✔ modal results require three complete event and focus traces per condition (1.101435ms)
+✔ accept measured text doubling with all six cards and visible focus (1.703959ms)
+✔ reject root-only enlargement mislabeled as actual text doubling (1.557347ms)
+✔ reject absent, clipped, overflowing or unfocused text evidence (8.982192ms)
+✔ accept six complete transfer results and the exact old HEAD failure pattern (2.370038ms)
+✔ reject selected=false after subsequent transfer even with status PASS (1.206826ms)
+✔ reject missing/duplicate conditions, missing checks, skip and errors (11.78189ms)
+✔ reject invisible focus and missing stable ID (1.055949ms)
+✔ reject old HEAD incorrectly accepted and unrelated failure (0.681491ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 183.331139

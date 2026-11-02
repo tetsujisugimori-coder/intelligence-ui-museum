@@ -1,0 +1,37 @@
+{
+  "baseline_head": "31b99a457e6532ae98ed62bda3b1dd0748eed8d4",
+  "new_stage_a_parent": "1c45d45e2bc5abb7f2618e81b93a1bc32a921a67",
+  "product_changes": false,
+  "normal_conditions": 28,
+  "normal_exit": 0,
+  "contract_pass": 8,
+  "contract_skip": 0,
+  "pageerror_fault_conditions": 2,
+  "pageerror_fault_exit": 1,
+  "parent_summary_exit": 0,
+  "png_validation": "PASS",
+  "dataset": "123 consecutive IDs; old117 full equality;11 categories; independent origin labels retained",
+  "limits": [
+    "implementer self-verification, independent review pending",
+    "Windows/iPhone Safari/VoiceOver not rerun",
+    "initial contract missing-fixture failure retained separately; fetched fixtures sizes and Git blob SHAs matched"
+  ],
+  "product_sources": {
+    "apps/v11/README.md": "4c1cc6f3b9ac7677ab231ba554f3ab3cf5d824527f8522c21b1f9efce577f5fd",
+    "apps/v11/accessibility-test.cjs": "93d3ee10a02e6a1923a51f5ff817ddac2d76e8539a95962511735d364017642f",
+    "apps/v11/result-contract.cjs": "45250b15e3b45f796ca25bb3dea98f23750264004eae0d20d37a327e512b3fbd",
+    "apps/v11/exhibits.css": "3239f709423fa0feced232597dae8e5fd2dc7c54bf4ffaaa7408a3ea44045389",
+    "apps/v11/index.html": "a5bbcd8ad2d71979c330e32e618247792bbc641ebd7282815e638db433059c03",
+    "apps/v11/capture.cjs": "cea270ddbbb30fde42e18608a84be3373ec2a4c0e436dcc8bcdd551814b1b449",
+    "apps/v11/regression-test.cjs": "8ac358b11cd02660145c4264abbe36d2d025f7df4b73dbf453895d5a4a348f23",
+    "apps/v11/nojs-test.cjs": "c190c99b8cd5c6f73feac3febb8fe139f1627ac286b5f1078738735ad9cf031f",
+    "apps/v11/browser-test.cjs": "523e887bbdc2cfe78467fa454e70e45b2dfcaba7613578d66e1aa37b501b3b0a",
+    "apps/v11/package.json": "ccd7b19c094d78157729cee678cf42fab86a645865159d780bb078e061f7d2ec",
+    "apps/v11/package-lock.json": "8ea5b9fd1a4112cca8311cef4e2436ef323eadd78c3744927f1ccac3b068dd1b",
+    "apps/v11/exhibits.js": "7e3bbfb86b829716b4568fdff0ddf5fc2c833fa115ae158eacce6cd5cf409295",
+    "apps/v11/run-browser-ci.cjs": "206a84e0ab5f04a8576a698707d9639964e34dcd6e694c3d3558261dcef084ea",
+    "apps/v11/verify.py": "55ca8a7e3b6b99888b53dce51f7ce9b2d31e17f3a580ddec13ec69930bedede8",
+    "apps/v11/modal-measure.cjs": "9b9768e2fdec1bf686da6d73859dc4a7f87bc35584703bf67c4463da94c3615f",
+    "apps/v11/result-contract.test.cjs": "afc3d1d6c57ef973906fa92db0eb276e874bd2dd7aebc340b19adbd8946eccdc"
+  }
+}

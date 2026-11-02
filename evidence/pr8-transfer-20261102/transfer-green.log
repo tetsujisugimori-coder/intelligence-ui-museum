@@ -1,0 +1,1468 @@
+[
+  {
+    "engine": "chromium",
+    "version": "154.0.8037.57",
+    "width": 375,
+    "theme": "dark",
+    "checks": [
+      {
+        "name": "A existing destination selection and no-op control",
+        "pass": true
+      },
+      {
+        "name": "B sequential multiple transfer and separate sides",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ []\n- [\n-   '設計'\n- ]\n\n    at selected (/workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:8:45)\n    at async /workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:17:156\n    at async check (/workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:9:50)\n    at async exercise (/workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:15:2)\n    at async /workspace/intelligence-ui-museum/apps/v11/transfer-test.cjs:11:136"
+      },
+      {
+        "name": "C reverse transfer preserves destination selection",
+        "pass": true
+      },
+      {
+        "name": "D Undo restores membership and clears selections",
+        "pass": true
+      },
+      {
+        "name": "E real keyboard focus and native checkbox semantics",
+        "pass": true
+      },
+      {
+        "name": "F all transfer, empty recovery and reset",
+        "pass": true
+      }
+    ],
+    "observations": [
+      {
+        "label": "A before",
+        "items": [
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 3件、右 1件、選択 1件",
+        "focus": {
+          "tag": "INPUT",
+          "item": "設計",
+          "move": null,
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "A no-op control",
+        "items": [
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "移送する項目を選んでください",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "A after",
+        "items": [
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": "",
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 2件、右 2件、選択 1件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "failure: B sequential multiple transfer and separate sides",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 2件、右 2件、選択 0件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "C reverse",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": true,
+            "checkedAttribute": "",
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 3件、右 1件、選択 1件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "left",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "D two Undo",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 4件、右 0件、選択 0件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "E checkbox Space",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": true,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 4件、右 0件、選択 1件",
+        "focus": {
+          "tag": "INPUT",
+          "item": "設計",
+          "move": null,
+          "undo": false,
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "E keyboard after transfer",
+        "items": [
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": "",
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 2件、右 2件、選択 1件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "F reset",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 4件、右 0件、選択 0件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": null,
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      }
+    ],
+    "errors": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (File not found)"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "engine": "chromium",
+    "version": "154.0.8037.57",
+    "width": 390,
+    "theme": "light",
+    "checks": [
+      {
+        "name": "A existing destination selection and no-op control",
+        "pass": true
+      },
+      {
+        "name": "B sequential multiple transfer and separate sides",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ []\n- [\n-   '設計'\n- ]\n\n    at selected (/workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:8:45)\n    at async /workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:17:156\n    at async check (/workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:9:50)\n    at async exercise (/workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:15:2)\n    at async /workspace/intelligence-ui-museum/apps/v11/transfer-test.cjs:11:136"
+      },
+      {
+        "name": "C reverse transfer preserves destination selection",
+        "pass": true
+      },
+      {
+        "name": "D Undo restores membership and clears selections",
+        "pass": true
+      },
+      {
+        "name": "E real keyboard focus and native checkbox semantics",
+        "pass": true
+      },
+      {
+        "name": "F all transfer, empty recovery and reset",
+        "pass": true
+      }
+    ],
+    "observations": [
+      {
+        "label": "A before",
+        "items": [
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 3件、右 1件、選択 1件",
+        "focus": {
+          "tag": "INPUT",
+          "item": "設計",
+          "move": null,
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "A no-op control",
+        "items": [
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "移送する項目を選んでください",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "A after",
+        "items": [
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": "",
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 2件、右 2件、選択 1件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "failure: B sequential multiple transfer and separate sides",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 2件、右 2件、選択 0件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "C reverse",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": true,
+            "checkedAttribute": "",
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 3件、右 1件、選択 1件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "left",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "D two Undo",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 4件、右 0件、選択 0件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "E checkbox Space",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": true,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 4件、右 0件、選択 1件",
+        "focus": {
+          "tag": "INPUT",
+          "item": "設計",
+          "move": null,
+          "undo": false,
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "E keyboard after transfer",
+        "items": [
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": "",
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 2件、右 2件、選択 1件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "F reset",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 4件、右 0件、選択 0件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": null,
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      }
+    ],
+    "errors": [],
+    "consoleErrors": [],
+    "status": "FAIL"
+  },
+  {
+    "engine": "chromium",
+    "version": "154.0.8037.57",
+    "width": 1280,
+    "theme": "dark",
+    "checks": [
+      {
+        "name": "A existing destination selection and no-op control",
+        "pass": true
+      },
+      {
+        "name": "B sequential multiple transfer and separate sides",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ []\n- [\n-   '設計'\n- ]\n\n    at selected (/workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:8:45)\n    at async /workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:17:156\n    at async check (/workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:9:50)\n    at async exercise (/workspace/intelligence-ui-museum/apps/v11/transfer-scenarios.cjs:15:2)\n    at async /workspace/intelligence-ui-museum/apps/v11/transfer-test.cjs:11:136"
+      },
+      {
+        "name": "C reverse transfer preserves destination selection",
+        "pass": true
+      },
+      {
+        "name": "D Undo restores membership and clears selections",
+        "pass": true
+      },
+      {
+        "name": "E real keyboard focus and native checkbox semantics",
+        "pass": true
+      },
+      {
+        "name": "F all transfer, empty recovery and reset",
+        "pass": true
+      }
+    ],
+    "observations": [
+      {
+        "label": "A before",
+        "items": [
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 3件、右 1件、選択 1件",
+        "focus": {
+          "tag": "INPUT",
+          "item": "設計",
+          "move": null,
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "A no-op control",
+        "items": [
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "移送する項目を選んでください",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "A after",
+        "items": [
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": "",
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 2件、右 2件、選択 1件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "failure: B sequential multiple transfer and separate sides",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 2件、右 2件、選択 0件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "C reverse",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": true,
+            "checkedAttribute": "",
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 3件、右 1件、選択 1件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "left",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "D two Undo",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 4件、右 0件、選択 0件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "E checkbox Space",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": true,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 4件、右 0件、選択 1件",
+        "focus": {
+          "tag": "INPUT",
+          "item": "設計",
+          "move": null,
+          "undo": false,
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "E keyboard after transfer",
+        "items": [
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "right",
+            "checked": true,
+            "checkedAttribute": "",
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "right",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 2件、右 2件、選択 1件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": "right",
+          "undo": false,
+          "visible": true,
+          "outline": "3px"
+        }
+      },
+      {
+        "label": "F reset",
+        "items": [
+          {
+            "name": "設計",
+            "id": "design",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "実装",
+            "id": "implement",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "検証",
+            "id": "verify",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          },
+          {
+            "name": "公開準備",
+            "id": "release",
+            "side": "left",
+            "checked": false,
+            "checkedAttribute": null,
+            "ariaChecked": null,
+            "nativeType": "checkbox"
+          }
+        ],
+        "text": "左 4件、右 0件、選択 0件",
+        "focus": {
+          "tag": "BUTTON",
+          "item": null,
+          "move": null,
+          "undo": false,
+          "visible": false,
+          "outline": "3px"
+        }
+      }
+    ],
+    "errors": [],
+    "consoleErrors": [],
+    "status": "FAIL"
+  }
+]

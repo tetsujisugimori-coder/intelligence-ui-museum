@@ -1,0 +1,42 @@
+
+> intelligence-ui-museum@0.0.0 test:runner
+> cd apps/v10 && node --test scripts/stage2r-runner.test.cjs
+
+✔ complete GREEN matrix (4.006518ms)
+✔ reject assert (1.50818ms)
+✔ reject engine (0.510472ms)
+✔ reject missing (0.313439ms)
+✔ reject duplicate (0.341857ms)
+✔ reject unfinished (0.376688ms)
+✔ reject empty (0.490513ms)
+✔ reject missingAssert (0.399007ms)
+✔ reject fakeGreen (0.910065ms)
+✔ reject duplicateAssert (0.899637ms)
+✔ reject error (0.508639ms)
+✔ reject unexpected (0.527454ms)
+✔ only explicit original visibility RED permitted (0.711396ms)
+✔ nonreproduced baseline RED fails (0.609528ms)
+✔ smoke noJS count and incomplete reports fail (0.202219ms)
+✔ stage2r-browser.cjs real entry launch failure -> nonzero (45.554417ms)
+✔ stage2r-smoke.cjs real entry launch failure -> nonzero (38.948591ms)
+✔ smoke synthetic normal propagates (40.893803ms)
+✔ smoke synthetic reopen failure propagates (54.547361ms)
+✔ smoke synthetic six-components pageerror propagates (45.743858ms)
+✔ matrix rejects late or missing pageerror evidence (1.192511ms)
+✔ matrix rejects skipped conditions even if checks appear green (1.414608ms)
+✔ smoke noJS rejects skipped conditions and preserves normal (0.691341ms)
+✔ matrix rejects a skipped assertion even if pass is true (0.58437ms)
+✔ both browser servers reject a link escaping the app root (7.198427ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 325.960511
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

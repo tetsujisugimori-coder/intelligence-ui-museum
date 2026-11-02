@@ -1,0 +1,1042 @@
+[
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 375,
+    "motion": "reduce",
+    "trials": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 304.19999999925494,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 320.69999999925494,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 320.69999999925494,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 328.19999999925494,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 351.19999999925494,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 359.59999999962747,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 359.80000000074506,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 367.69999999925494,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 389.19999999925494,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 397.5,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 397.59999999962747,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 404.90000000037253,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 375,
+    "motion": "no-preference",
+    "trials": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 263.1000000014901,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 278.80000000074506,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 278.80000000074506,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 284.30000000074506,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 303.80000000074506,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 311.6000000014901,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 311.6000000014901,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 316.2000000011176,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 335.7000000011176,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 344.1000000014901,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 344.1000000014901,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 348.80000000074506,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 390,
+    "motion": "reduce",
+    "trials": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 274.5,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 289.30000000074506,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 289.30000000074506,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 297.5,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 319.2000000011176,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 327,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 327.09999999962747,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 334.7000000011176,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 356.09999999962747,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 364,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 364,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 371.2000000011176,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "version": "151.0.7922.34",
+    "width": 390,
+    "motion": "no-preference",
+    "trials": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 257.30000000074506,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 272.5,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 272.59999999962747,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 277.7000000011176,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 296.90000000037253,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 304,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 304.09999999962747,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 308.59999999962747,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 325.2000000011176,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 333,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 333.09999999962747,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 337.90000000037253,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 375,
+    "motion": "reduce",
+    "trials": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 188,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 249,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 250,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 289,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 309,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 357,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 358,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 393,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 413,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 467,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 467,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 505,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 375,
+    "motion": "no-preference",
+    "trials": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 157,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 195,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 195,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 211,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 233,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 263,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 263,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 280,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 299,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 328,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 328,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 345,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 390,
+    "motion": "reduce",
+    "trials": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 191,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 250,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 250,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 285,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 304,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 352,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 352,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 388,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 408,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 459,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 459,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 494,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "version": "26.0",
+    "width": 390,
+    "motion": "no-preference",
+    "trials": [
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 144,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 193,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 193,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 209,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 230,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 256,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 256,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 272,
+            "open": null
+          }
+        ]
+      },
+      {
+        "before": {
+          "open": true,
+          "display": "block",
+          "visibility": "visible",
+          "animation": "none",
+          "animationDuration": "0s",
+          "transitionDuration": "0s"
+        },
+        "immediateCount": 0,
+        "immediateVisible": false,
+        "afterCount": 0,
+        "focusRestored": true,
+        "trace": [
+          {
+            "event": "mutation",
+            "time": 290,
+            "open": true
+          },
+          {
+            "event": "keydown",
+            "time": 318,
+            "target": "BUTTON",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "cancel",
+            "time": 319,
+            "target": "DIALOG",
+            "open": true,
+            "defaultPrevented": false
+          },
+          {
+            "event": "mutation",
+            "time": 335,
+            "open": null
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "status": "PASS"
+  }
+]

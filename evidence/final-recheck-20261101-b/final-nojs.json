@@ -1,0 +1,14 @@
+[
+  {
+    "engine": "chromium",
+    "cards": 117,
+    "count": "117 / 123 展示（静的表示）",
+    "status": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "cards": 117,
+    "count": "117 / 123 展示（静的表示）",
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "node": "v24.19.0",
+  "playwright": "1.56.1",
+  "localBrowser": "/usr/bin/chromium 154.0.8037.57",
+  "fixedBrowserInstall": "NOT_TESTED locally: download destination policy denied (403 Domain forbidden); fixed Chromium/WebKit to run in GitHub CI",
+  "reviewHead": "b9d3b840162c8d03fa5d2f62c89793ea55ce7d03",
+  "reviewTree": "502b90b0d62c9b0dd9d1b30c8531f0a12bcfc565",
+  "base": "6477d0bc3fcd207210524abeaace97d0e506e886"
+}

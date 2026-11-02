@@ -23,6 +23,9 @@ jobs:
           python-version: '3.12'
       - run: python3 scripts/verify-migration.py
       - run: npm run test:runner
+      - run: python3 apps/v11/verify.py
+      - run: node --check apps/v11/exhibits.js
+      - run: node --test apps/v11/result-contract.test.cjs apps/v11/transfer-contract.test.cjs apps/v11/text-zoom-contract.test.cjs
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -98,4 +101,37 @@ jobs:
           name: stage-a-browser-${{ matrix.suite }}-${{ github.sha }}
           path: .work/v10/evidence/ra-acceptance/
           if-no-files-found: error
+  browser-v11:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: apps/v11/package-lock.json
+      - run: npm ci --ignore-scripts
+        working-directory: apps/v11
+      - run: npx playwright install --with-deps chromium webkit
+        working-directory: apps/v11
+      - run: python3 scripts/prepare-work.py
+      - name: Stage A smoke on Linux
+        run: node scripts/stage2r-smoke.cjs
+        working-directory: .work/v10
+        timeout-minutes: 5
+        env:
+          CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/apps/v11/node_modules
+          EVIDENCE_DIR: ${{ github.workspace }}/.work/stage-a-linux
+      - run: node apps/v11/run-browser-ci.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-browser-verification-${{ github.sha }}
+          path: |
+            .work/v11-ci-evidence/
+            .work/stage-a-linux/
+          if-no-files-found: warn
 
