@@ -1,0 +1,10 @@
+# Issues #12 and #13 self-verification
+
+Baseline: 3b90ddbb77787b759c014a24d99f05ca98dda89f. This is author testing, not independent review. The historical #8 evidence is unchanged. These measurements are synthetic CSS text scaling, not native text zoom or iPhone Safari, VoiceOver, or OS text scaling.
+
+The original harness applies fixed 28px after regeneration; an added assertion at the same post-reset point produced 28px instead of 32px on Chromium 141 at widths 375, 390, 1280 (old-red.json). Its normal expectations did not catch that error. The replacement restores the original cascade, measures each live element before scaling and reapplies the doubled result after child replacement. Six Chromium/WebKit text-zoom runs passed, with 16px controls measured at 32px before and after operations. This is test instrumentation, not a product text-size change.
+
+The Chromium 375px dark 2x image before the CSS change visibly truncates the native select. Widening the column flex basis from 9rem to 14rem permits wrapping to one column when needed. The corresponding Chromium and WebKit 375px screenshots show the whole selected label and native arrow. No pixel OCR is claimed. The standalone kanban-zoom-test.cjs checks focus, keyboard selection, move, Undo, reset, page overflow and pageerror in 24 browser/width/theme/scale conditions, all with reduced motion; its output is kanban-matrix.json. Screenshots other than the three samples were checked by automated capture, not all manually inspected. Widths 375/390/1280, dark/light, synthetic 1x/2x, Chromium 141 and WebKit 26.0. Use a disposable copy of apps/v11 served locally, npm ci, then run MUSEUM_URL=... EVIDENCE_DIR=... node kanban-zoom-test.cjs. For the full runner use run-browser-ci.cjs.
+
+Known limitations: native select rendering differs across platforms; no physical iPhone Safari, VoiceOver or OS-level text zoom. Issue #9, #10, #5 and old Linux Modal root cause remain separate; Stage 3 remains HOLD. Do not treat this record as blanket testing of 123 exhibits.
+2026-11-03 JST
