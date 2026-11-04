@@ -1,0 +1,749 @@
+{
+  "sourceHead": "1b4befda87c97bd70da2c1d6065427034d12660a",
+  "sourceTree": "99d5f7f904f95fbd64d4ff4fb3aebf72511da29d",
+  "captureRunId": "c4b05c31-1cf1-46cf-8479-9af0cffb0068",
+  "environment": {
+    "platform": "linux",
+    "arch": "x64",
+    "node": "v22.23.4",
+    "playwright": "1.56.1",
+    "os": "7.0.0-1017-azure"
+  },
+  "fontFingerprint": "b41f8fa78f7b218f07fb182acf0a82f73802a2125810254302cb613b1d5dd492",
+  "versions": {
+    "chromium": "141.0.7390.37",
+    "webkit": "26.0"
+  },
+  "policy": {
+    "channelTolerance": 12,
+    "maxDifferentPixels": 2
+  },
+  "review": {
+    "reviewer": "Codex self visual review 2026-11-04 JST",
+    "reason": "All 48 native select images inspected; complete 未着手 and 進行中 glyphs, fixed PR14 main source. Independent baseline review pending.",
+    "at": "2026-11-04T09:08:59.025Z",
+    "independent": false
+  },
+  "images": [
+    {
+      "label": "todo",
+      "file": "chromium-375-dark-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "8bf1989dbfc86fde18aab6ff69c2cde9c0b5eb0469310937cffb427b55c13303"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-375-dark-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "e063655d4bac2637aa607fe7eb09035132ba1d8e2bc32ceb7050998c248388a8"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-375-dark-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "d6b32e829088c8d4d11816aeddc98f36935264da03e03f003719971d41c8f994"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-375-dark-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "b126a79ec60379b641ebf41bceecaeee220a78a70f42cdff2c65edacac86d30c"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-375-light-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "bfbc486d7e0b3c14fbe2473ff77e3bcc34aa704941f309c1108401f12492a474"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-375-light-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "ea381c966e0e8552f9e7a1c0c9bfbb2976a4a1a6ee011fe897bcef0d32edb8e1"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-375-light-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "48db540cee9f36fcfc2769aa6cd0a942e91e7c09aa8e5a3982eb587f822e60a4"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-375-light-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "088c8520fd4fb20bd70eaade5ae7c20b7f06d52cb8245b48dd90b93cf02174ed"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-390-dark-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "0034a3693b661aff5c5104f9730bd17bc86e18fb8faf52e9615ef226a0d9b952"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-390-dark-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "e063655d4bac2637aa607fe7eb09035132ba1d8e2bc32ceb7050998c248388a8"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-390-dark-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "d6b32e829088c8d4d11816aeddc98f36935264da03e03f003719971d41c8f994"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-390-dark-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "b126a79ec60379b641ebf41bceecaeee220a78a70f42cdff2c65edacac86d30c"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-390-light-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "0edc86179b74434f3ede10964540b43f6d2885f07a5d9d3c4316a79985da3436"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-390-light-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "ea381c966e0e8552f9e7a1c0c9bfbb2976a4a1a6ee011fe897bcef0d32edb8e1"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-390-light-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "48db540cee9f36fcfc2769aa6cd0a942e91e7c09aa8e5a3982eb587f822e60a4"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-390-light-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "088c8520fd4fb20bd70eaade5ae7c20b7f06d52cb8245b48dd90b93cf02174ed"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-1280-dark-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "a5dc4487dc50994140af7d490d871adb2eb784012d56e8c33caffacb39a4e5dc"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-1280-dark-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "a6779663e67c1a0d9d51cabecb97ec8331a5bf942c08cfe12c0fafa27dd02cf7"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-1280-dark-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "f44e471d378ae500a33dd1aa7c7ed899439eedc7d3ea8b0d89effd4e80d38d45"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-1280-dark-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "0ebd9fde7704dcd06de9015cb5b4cf4a7b778e012f4d3647a6893426c06ec53e"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-1280-light-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "c135b5d270bdc9db159f93d56e5c22a23a6abac813f6552717259959558262c2"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-1280-light-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 22
+      },
+      "sha256": "3e03d2b4a2be84967cc692e4bfc17999bf2e33f65874cd2d25aeff320bae4d26"
+    },
+    {
+      "label": "todo",
+      "file": "chromium-1280-light-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "afcbacecebbb50989c5c97621c1f7a7822cbf293ea3484267c0d61f447fb2023"
+    },
+    {
+      "label": "doing",
+      "file": "chromium-1280-light-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 43
+      },
+      "sha256": "54c55858438c996f8401d384f1f8546fd00aab14bb6fe6e0c5ca713c92abe44a"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-375-dark-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "260173310488f25928a72b0e58de5e341fb48df0ea014bec5d6be884c18c4986"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-375-dark-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "67d7c00b73fac524651707737be7cf21f284baedff007d48365ae69043f3f570"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-375-dark-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "aea47dbc6bb599e3fd5ab44b5f7300aa1990bd7cff181c973e59d14e29cecde1"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-375-dark-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "954f3f45d0f56933f95a0dae5a742f3d8d2b9024a5bb4b8556cf4a445789c8d8"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-375-light-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "e0da045659ef0a9347d70e84ae37ca05970a7bd3e88432a966047560130e6f7e"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-375-light-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "89510616fdffd843d183799be9b048bc1df457b1f06d102004c9ba49cd7d1094"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-375-light-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "beadadd12901a6351e1aa3bd16360ed1d042521a2e5f151abbb1132c497886de"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-375-light-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "97cca045989697ae15fd73f655c0bb460b2eb33a64162c745d98a2d4cd460dd0"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-390-dark-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "b064947e7b9648712b3774a31477c70f236ebc296eb6a471b56fa48650d955c5"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-390-dark-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "400fe78c6382a214912f5b9df9f80c4aea342ffa618059352e3ffa2e48cd2ce0"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-390-dark-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "6772f256f9edd577542ede813b56ba882e5cb748f91ae5232732767419fec100"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-390-dark-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "72af98a78bc91084c784584c072445372901185877ca27885271ad9fdc212659"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-390-light-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "1b441a0ad53ee88c0f650c8a3aadb2a57e8a0ca866c394688e0ef3db0706b9b3"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-390-light-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "d8b38cc73a50bb5c4ad3b4dbb2893659c6bf7ffa0147414d95ed6c4f51c4f017"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-390-light-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "9780409386e2b6e3a48193849c6bdfd91ea1aa8fe7d8e70957118fcbae3db1b1"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-390-light-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "a439dcc3baf1dcfcdcca7cc9305f7751b994a4e515c30153115f35c2d14dd6a9"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-1280-dark-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "66219c6204c1a08e94bbc36186253959b9660eb479ea287fe6365f04f1e09f53"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-1280-dark-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "75bc73657f485dfa82b22cc4dff741ef808be22ab7ddab161d71ecfdf61837fe"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-1280-dark-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "951aeb2a29e47d3837b921a6412e06a821e0d2dab539ea271c185f430828663f"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-1280-dark-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "3b0617f10e2a6111f4243d9ca4617bac66afdd6b5609ff355b89ca590ee66efe"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-1280-light-1-todo.png",
+      "text": "未着手",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "ae559c1686cf03d3f89c08b51aba96ff750ad6e8f73e42c4af1608d32b2a786a"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-1280-light-1-doing.png",
+      "text": "進行中",
+      "font": "16px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "16px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 48,
+        "height": 31
+      },
+      "sha256": "2d0eb9cecd12f363ee4610df4345cbd88221fec8a047e3a5fb47ecbeaa6f1e5f"
+    },
+    {
+      "label": "todo",
+      "file": "webkit-1280-light-2-todo.png",
+      "text": "未着手",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "a95b65abd5888d7917bd0b76e180637ed01e689e9e5cfbfdb5f6692f58c4d8fb"
+    },
+    {
+      "label": "doing",
+      "file": "webkit-1280-light-2-doing.png",
+      "text": "進行中",
+      "font": "32px system-ui, sans-serif",
+      "fontFamily": "system-ui, sans-serif",
+      "fontSize": "32px",
+      "roi": {
+        "x": 10,
+        "y": 10,
+        "width": 96,
+        "height": 54
+      },
+      "sha256": "9595447674bbcd8d0cfaa1180590daecd7d00e05a529a57c5ea2177913451a21"
+    }
+  ]
+}

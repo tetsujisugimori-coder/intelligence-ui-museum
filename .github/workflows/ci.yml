@@ -151,13 +151,8 @@ jobs:
       - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - run: npm ci --ignore-scripts
         working-directory: apps/v11
-      - name: Capture initial baseline candidates (acceptance remains FAIL)
-        env:
-          KANBAN_BOOTSTRAP: '1'
-        run: |
-          node apps/v11/run-kanban-ci.cjs
-          echo 'Baseline images require explicit review and a separate commit.'
-          exit 1
+      - name: Native select label images, 24 operations, real old HEAD and failure controls
+        run: node apps/v11/run-kanban-ci.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
