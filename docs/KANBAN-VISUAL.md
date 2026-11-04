@@ -26,7 +26,9 @@ P3-01 supersedes the original CSS border/padding + Canvas measureText crop:
 native select paints are offset from that estimate (including text beyond its
 right edge in all 48 approved images). Historical manifest `roi` fields and
 baseline PNGs remain unchanged as provenance; those fields are no longer used
-by the production comparator. Capture no longer computes a Canvas ROI.
+by the production comparator. Capture retains that historical Canvas estimate
+only as diagnostic metadata for old-harness replay and baseline compatibility;
+it does not determine the current comparison region.
 
 For each RGBA pixel, any channel difference greater than **12/255** counts as
 different; at most **2 pixels** are allowed. The same policy and crop apply to
@@ -91,9 +93,9 @@ range in 375/dark/2× images. The runner loads the unmodified reviewed comparato
 sources from Git at `e40d92bcc97fa1bf214b0d613aac2d144fd2138f`: all 48 verdicts
 must be PASS before the fix (four false acceptances), while the current gate must
 reject exactly those four with 12/13/19/26 differing pixels. The same images,
-baseline PNGs, dimensions and 12/2 tolerance are used. New captures no longer
-estimate text ROI; this legacy replay supplies the historical manifest ROI as
-legacy-only metadata. Archived captures retain their original metadata.
+baseline PNGs, dimensions and 12/2 tolerance are used. Captures retain their
+diagnostic historical ROI metadata; legacy replay can also supply it from the
+historical manifest when absent. Current acceptance ignores that estimate.
 
 To recalculate a downloaded historical CI artifact without launching browsers:
 

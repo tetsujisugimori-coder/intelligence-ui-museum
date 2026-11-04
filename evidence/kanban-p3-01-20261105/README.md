@@ -21,7 +21,10 @@ approved select raster, adopted here. The new ROI is x=0, y=0, width/height from
 the immutable normal baseline PNG. Current images cannot shrink it. Widget
 chrome and arrow differences also fail; that stricter scope is acceptable in
 this fixed environment. Dimension changes fail, with no alignment/rescaling.
-Tolerance remains channel difference >12, maximum 2 different pixels.
+Tolerance remains channel difference >12, maximum 2 different pixels. Capture
+retains the old estimate only as diagnostic metadata for archived-harness replay
+and compatibility with the explicit baseline adoption command; it is ignored
+by the production comparison and cannot shrink the fixed region.
 
 `visual-review.json` records all 48 individual images. The implementer viewed
 all four `contact-*.png` sheets (12 images each) and confirmed full text and

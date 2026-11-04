@@ -19,8 +19,8 @@ function replay(report, dir, identity, child, baseline, out) {
   const legacy = require(path.join(harness, "kanban-contract.cjs"));
   const copied = path.join(out, "capture"); fs.cpSync(dir, copied, { recursive: true });
   const mutated = JSON.parse(JSON.stringify(report)), base = JSON.parse(fs.readFileSync(path.join(baseline, "manifest.json")));
-  // Preserve old capture ROI if present. New captures no longer estimate it;
-  // replay those with the exact historical, approved ROI to isolate the fix.
+  // Preserve diagnostic capture ROI when present. If absent, replay with the
+  // exact historical metadata; this never chooses the production region.
   for (const r of mutated.rows) for (const i of r.images) i.roi ??= base.images.find(b => b.file === i.file).roi;
   injectReviewErasure(mutated, copied, path.join(out, "mutation.json"));
   legacy.validateCapture(mutated, copied, identity, child);
