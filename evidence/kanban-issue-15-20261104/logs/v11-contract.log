@@ -1,0 +1,25 @@
+笨・browser: accept complete recorded results and reject omissions, duplicates, skip (1.0828ms)
+笨・additional: accept complete recorded results and reject omissions, duplicates, skip (0.277ms)
+笨・nojs: accept complete recorded results and reject omissions, duplicates, skip (0.1187ms)
+笨・regression: accept complete recorded results and reject omissions, duplicates, skip (0.3012ms)
+笨・browser and focused regression require actual checks and empty pageerror lists (0.9284ms)
+笨・fault report requires the intended pageerror and all focused checks (0.2881ms)
+笨・PNG screenshots require correct dimensions, complete chunks and valid image data (43.6173ms)
+笨・modal results require three complete event and focus traces per condition (0.7437ms)
+笨・accept measured text doubling with all six cards and visible focus (1.0152ms)
+笨・reject root-only enlargement mislabeled as actual text doubling (0.5473ms)
+笨・reject absent, clipped, overflowing or unfocused text evidence (4.2071ms)
+笨・reject missing snapshots or a downgraded regenerated 16px control (0.9126ms)
+笨・accept six complete transfer results and the exact old HEAD failure pattern (1.2735ms)
+笨・reject selected=false after subsequent transfer even with status PASS (1.1548ms)
+笨・reject missing/duplicate conditions, missing checks, skip and errors (4.2414ms)
+笨・reject invisible focus and missing stable ID (0.3033ms)
+笨・reject old HEAD incorrectly accepted and unrelated failure (0.213ms)
+邃ｹ tests 17
+邃ｹ suites 0
+邃ｹ pass 17
+邃ｹ fail 0
+邃ｹ cancelled 0
+邃ｹ skipped 0
+邃ｹ todo 0
+邃ｹ duration_ms 196.7302
