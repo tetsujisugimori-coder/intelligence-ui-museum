@@ -1,0 +1,77 @@
+{
+  "kind": "synthetic review erasure; NOT a product change",
+  "mutations": [
+    {
+      "file": "chromium-375-dark-2-todo.png",
+      "region": {
+        "x": 106,
+        "y": 10,
+        "width": 6,
+        "height": 43
+      },
+      "background": [
+        107,
+        107,
+        107,
+        255
+      ],
+      "changedPixels": 12,
+      "changedPixelsAnyChannel": 12,
+      "sha256": "a61663e918a212b042c0cce89891f9977210c6cc257141dd67b8c3db1569392c"
+    },
+    {
+      "file": "chromium-375-dark-2-doing.png",
+      "region": {
+        "x": 106,
+        "y": 10,
+        "width": 6,
+        "height": 43
+      },
+      "background": [
+        107,
+        107,
+        107,
+        255
+      ],
+      "changedPixels": 13,
+      "changedPixelsAnyChannel": 14,
+      "sha256": "a452c15dd3c8b47e38483fbeb07b0feb523c39f8f10cce44c39644798c801dac"
+    },
+    {
+      "file": "webkit-375-dark-2-todo.png",
+      "region": {
+        "x": 106,
+        "y": 10,
+        "width": 6,
+        "height": 54
+      },
+      "background": [
+        52,
+        52,
+        52,
+        255
+      ],
+      "changedPixels": 19,
+      "changedPixelsAnyChannel": 20,
+      "sha256": "113ac72deea7085dab8990ef5b19287b1db955c8e451cb1355cb7fa766dd7ad8"
+    },
+    {
+      "file": "webkit-375-dark-2-doing.png",
+      "region": {
+        "x": 106,
+        "y": 10,
+        "width": 6,
+        "height": 54
+      },
+      "background": [
+        52,
+        52,
+        52,
+        255
+      ],
+      "changedPixels": 26,
+      "changedPixelsAnyChannel": 26,
+      "sha256": "5e0c5756e4ac9066341d4c6811d60efb20c7721a15104bfee474e250859eed17"
+    }
+  ]
+}

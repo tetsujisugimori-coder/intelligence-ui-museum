@@ -13,14 +13,20 @@ keyboard focus restoration/visible outline, document overflow and pageerror are
 asserted. The original `kanban-zoom-test.cjs` remains unchanged and runs on the
 real old source as a demonstration of its 24/24 false acceptance.
 
-The image verdict compares the actual rasterized label area with 48 committed
-normal-source images in `apps/v11/kanban-baselines/`. DOM text, canvas text
-metrics and geometry only identify the crop; they do **not** decide readability.
-The crop starts after the native select border and padding, covers the full
-measured three-character label width and the interior line height, and excludes
-the arrow and most unrelated chrome. The committed manifest fixes that crop;
-the current run cannot shrink it. Out-of-image crop pixels are magenta failures.
-No image is resized or aligned to hide a missing suffix.
+The image verdict compares the **entire native select raster** with each of the
+48 committed normal-source images in `apps/v11/kanban-baselines/`. The fixed ROI
+is `(0, 0, approved PNG width, approved PNG height)`. It includes all four text
+edges, arrow and widget chrome. The current image, DOM metrics, Canvas metrics
+and detected ink never determine or shrink it. PNG dimension changes fail, and
+missing pixels inside the approved raster are magenta differences. No image is
+resized or aligned. Chrome differences may also require review; this is a
+deliberately strict regression gate, not a claim of a new product defect.
+
+P3-01 supersedes the original CSS border/padding + Canvas measureText crop:
+native select paints are offset from that estimate (including text beyond its
+right edge in all 48 approved images). Historical manifest `roi` fields and
+baseline PNGs remain unchanged as provenance; those fields are no longer used
+by the production comparator. Capture no longer computes a Canvas ROI.
 
 For each RGBA pixel, any channel difference greater than **12/255** counts as
 different; at most **2 pixels** are allowed. The same policy and crop apply to
@@ -70,6 +76,44 @@ In the pinned container, after `npm ci --ignore-scripts` in `apps/v11`:
 ```sh
 EVIDENCE_DIR=.work/kanban-fresh node apps/v11/run-kanban-ci.cjs
 ```
+
+Every normal run now also requires 48 normal images accepted, 48 real suffix
+erasures rejected, and 144 prefix/top/bottom erasures rejected. Erasure bands
+start at each approved raster's actual glyph edge; each must change more than
+2 pixels by more than 12/255 and be rejected for an image difference, with no
+dimension change. A complete capture copy with updated SHA-256 is validated
+before comparing its 48 erased suffixes. Diagnostic glyph masks are generated
+from approved images only, in a visually reviewed chrome-free interior window;
+they select synthetic controls and overlays, **never** the production ROI.
+
+The exact review four controls erase x=106..111 and the historical ROI's vertical
+range in 375/dark/2× images. The runner loads the unmodified reviewed comparator
+sources from Git at `e40d92bcc97fa1bf214b0d613aac2d144fd2138f`: all 48 verdicts
+must be PASS before the fix (four false acceptances), while the current gate must
+reject exactly those four with 12/13/19/26 differing pixels. The same images,
+baseline PNGs, dimensions and 12/2 tolerance are used. New captures no longer
+estimate text ROI; this legacy replay supplies the historical manifest ROI as
+legacy-only metadata. Archived captures retain their original metadata.
+
+To recalculate a downloaded historical CI artifact without launching browsers:
+
+```sh
+node apps/v11/kanban-audit.cjs ARTIFACT_DIRECTORY .work/NEW-audit
+```
+
+This validates capture/HEAD/tree/source hashes, PNG identity, 20 existing
+controls, 192 edge erasures, the four RED→GREEN controls and real old images.
+It is explicitly archived-image recalculation, not fresh browser execution.
+All audit/runner output directories must be new.
+
+For intentional end-to-end failure propagation, manually dispatch CI on this
+branch with `kanban_failure_control=true`. After fresh capture, the runner
+erases the exact four review regions, updates PNG SHA-256 and capture metadata,
+and proceeds through capture validation to the normal image comparison. The
+Kanban runner/job must fail with `current label paint regression`; its artifact
+contains `intentional-review-erasure.json`, updated capture and difference PNGs.
+Default/PR runs never inject this fault. This modifies no product source or
+approved image. The failure job and normal job use the same submitted HEAD.
 
 The output directory must not exist. A fresh run UUID, parent-controlled target
 HEAD/tree, child exit/signal/timeout, timestamps, complete condition/state sets,

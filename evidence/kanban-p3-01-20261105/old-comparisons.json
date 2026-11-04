@@ -1,0 +1,1394 @@
+[
+  {
+    "condition": "chromium-375-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 809,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 42
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 42
+    },
+    "actualSha256": "3e5a4db49ee22f78672d50ac4cbe0a12140f1c0e28dde75d63bfa77958c1336f",
+    "baselineSha256": "8bf1989dbfc86fde18aab6ff69c2cde9c0b5eb0469310937cffb427b55c13303",
+    "diffSha256": "de136842c76760dd8ef350b82324d9577decb7723a73557fd0af2ff9b2511b2b"
+  },
+  {
+    "condition": "chromium-375-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 843,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 43
+    },
+    "actualSha256": "4cc5e113cacd3fb4bd22ff6b9a10d5785f7bbe1ec0073804355595b880a738ae",
+    "baselineSha256": "e063655d4bac2637aa607fe7eb09035132ba1d8e2bc32ceb7050998c248388a8",
+    "diffSha256": "98317ac1bff16a9060dd59c1d21b989c5bb815ab57fc6b2360a0dd3387500af9"
+  },
+  {
+    "condition": "chromium-375-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 1874,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 118,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "ec917e14243a03be68bf84f05752c8feb28ffed1cc75b2db28968fb5498af954",
+    "baselineSha256": "d6b32e829088c8d4d11816aeddc98f36935264da03e03f003719971d41c8f994",
+    "diffSha256": "b7c3b1fbe241a579358731a4cec70d98719d862b6827d2b55462988b61d81e26"
+  },
+  {
+    "condition": "chromium-375-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2825,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 118,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "68d478c0be767f8c816b023239d76e090dbca8ebaed567e3ae53557cd693c66e",
+    "baselineSha256": "b126a79ec60379b641ebf41bceecaeee220a78a70f42cdff2c65edacac86d30c",
+    "diffSha256": "733ea1d5a9d63b6a9125baa6d6c98865105be8097b406076929877b32746e04e"
+  },
+  {
+    "condition": "chromium-375-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 819,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 42
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 42
+    },
+    "actualSha256": "759b2851917809bb8fab29a0d5db09eee9e7e2b307e6a4484d97d9c4e6a37fca",
+    "baselineSha256": "bfbc486d7e0b3c14fbe2473ff77e3bcc34aa704941f309c1108401f12492a474",
+    "diffSha256": "cef1e78560418b3e5f7ed04b4f04de2e3a9838fdd0a46b8c7097c12b2c052700"
+  },
+  {
+    "condition": "chromium-375-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 850,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 43
+    },
+    "actualSha256": "3d4aaccbcfaf02308c0db1c44c809c05588759354471e628beecd3bae37c8da5",
+    "baselineSha256": "ea381c966e0e8552f9e7a1c0c9bfbb2976a4a1a6ee011fe897bcef0d32edb8e1",
+    "diffSha256": "336de01e83f3b49c0619d206db2a18301b6dafab04ff119b78b7e4bab5d1085d"
+  },
+  {
+    "condition": "chromium-375-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 1904,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 118,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "fd5fddcadf6da38d26e867a3337f2134eccfd2d25896f2afc7dcb9f4f16d3acf",
+    "baselineSha256": "48db540cee9f36fcfc2769aa6cd0a942e91e7c09aa8e5a3982eb587f822e60a4",
+    "diffSha256": "6310bb027e82ff1ebb6b1106e2da19bf431c10911529a2f4bdf6394607c54213"
+  },
+  {
+    "condition": "chromium-375-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2847,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 118,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "86a76d314ab1602ed4b5c5b25d99a06a844a743714291eb830112884c4f2467a",
+    "baselineSha256": "088c8520fd4fb20bd70eaade5ae7c20b7f06d52cb8245b48dd90b93cf02174ed",
+    "diffSha256": "1984e53e11e68e303e8051a8920417843a5ae3e1443b5b47cfabd57b9359f393"
+  },
+  {
+    "condition": "chromium-390-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 887,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 43
+    },
+    "actualSha256": "dccbcfad08003c9bb6fea94ad17ed385bd7b332dc4ec2234f85e149612f764a6",
+    "baselineSha256": "0034a3693b661aff5c5104f9730bd17bc86e18fb8faf52e9615ef226a0d9b952",
+    "diffSha256": "96de7bd1c7435b9df0e02d51707856a41af2e3a045718a6810f54968b653e34a"
+  },
+  {
+    "condition": "chromium-390-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 834,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 43
+    },
+    "actualSha256": "5547ac8f84228ab4a50b038aee789afedad77cb48dba76d2beae208e3960a5bb",
+    "baselineSha256": "e063655d4bac2637aa607fe7eb09035132ba1d8e2bc32ceb7050998c248388a8",
+    "diffSha256": "7d8eec473f3921525954a17540a99f0e3669ca843adbea34048223f23b4632af"
+  },
+  {
+    "condition": "chromium-390-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 1367,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 126,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "403b83cfa0d6af34ce30b4b9e644844cf44adb9669c7ed2cbc61be244e4ea08c",
+    "baselineSha256": "d6b32e829088c8d4d11816aeddc98f36935264da03e03f003719971d41c8f994",
+    "diffSha256": "e79d95b02751f08e1c9cf503728f7e468a1a4a6d0e27ba28a00c8c0fb39f3654"
+  },
+  {
+    "condition": "chromium-390-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2445,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 126,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "752554443b081a22176df3b3ed70bf80fd0a3f240fb020bec1628d31a5533765",
+    "baselineSha256": "b126a79ec60379b641ebf41bceecaeee220a78a70f42cdff2c65edacac86d30c",
+    "diffSha256": "166b5cfa5d6c3a77b14b8d0d24caca697bfafd6697104ad41390061d5c289bcf"
+  },
+  {
+    "condition": "chromium-390-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 897,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 43
+    },
+    "actualSha256": "39df7922b993b6443f7d1df7a397fe8f9da8ceff0b578e0d5a670cb096194556",
+    "baselineSha256": "0edc86179b74434f3ede10964540b43f6d2885f07a5d9d3c4316a79985da3436",
+    "diffSha256": "be81c56146338d3c5f7bc6816451fb8ad56f5f43d676a4195d81e9fc681f568f"
+  },
+  {
+    "condition": "chromium-390-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 850,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 43
+    },
+    "actualSha256": "10a16660d09f1562552122e8b8a772f36985e440e62f0629ea961d124eb736c0",
+    "baselineSha256": "ea381c966e0e8552f9e7a1c0c9bfbb2976a4a1a6ee011fe897bcef0d32edb8e1",
+    "diffSha256": "75fd452b6422d37e3722930fb3bedb3086b54e9aef3f09563c81770592a01586"
+  },
+  {
+    "condition": "chromium-390-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 1398,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 126,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "731a999a9b60a8d860cf922b6b726ca2be76b576f98f3883aca1bb82c9370254",
+    "baselineSha256": "48db540cee9f36fcfc2769aa6cd0a942e91e7c09aa8e5a3982eb587f822e60a4",
+    "diffSha256": "d69a863c0ad26c656b7d82cd851bd47d5ecdb89025de94491defd1f091a6d369"
+  },
+  {
+    "condition": "chromium-390-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2502,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 126,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "3226c3f7207207d87e423efed4733a3898662ee6e98697eaf18b860b0b66758c",
+    "baselineSha256": "088c8520fd4fb20bd70eaade5ae7c20b7f06d52cb8245b48dd90b93cf02174ed",
+    "diffSha256": "3e64dfc9494d17793f90a48de47adc081d752bd81ff00fb746f90076f0efdaf3"
+  },
+  {
+    "condition": "chromium-1280-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 975,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 43
+    },
+    "actualSha256": "2b40ba299c5333917029f26226f748a0f0a749aa8594dc655ed4c2630f9bda95",
+    "baselineSha256": "a5dc4487dc50994140af7d490d871adb2eb784012d56e8c33caffacb39a4e5dc",
+    "diffSha256": "3fe54a32bc9958511ea099aab99578f25d3d00caa6c4ca63c7be4c69a333d210"
+  },
+  {
+    "condition": "chromium-1280-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 195,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 43
+    },
+    "actualSha256": "a39e0eb12f1ca8c2ee243193d335b280e90dbe2baff978b00dbef0f7f8ff4e6d",
+    "baselineSha256": "a6779663e67c1a0d9d51cabecb97ec8331a5bf942c08cfe12c0fafa27dd02cf7",
+    "diffSha256": "19b3337639058828b16dbd6870c6dddc8867aa317ff861ad68c6f77b4dac42c4"
+  },
+  {
+    "condition": "chromium-1280-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 1805,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 123,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "82bda45394bfa0627ddc1e0fc12c9bd0e755b55928b259d05c5c36450cdb8133",
+    "baselineSha256": "f44e471d378ae500a33dd1aa7c7ed899439eedc7d3ea8b0d89effd4e80d38d45",
+    "diffSha256": "78a6f3a6bef1569b81437d45db9a3fa23c99659b79c0ea83f456cf9996e08e37"
+  },
+  {
+    "condition": "chromium-1280-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2546,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 123,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "cb14a90433ff9c500b09be1c9b619b683d85e3663ef4a46c9cf5285d0bf57d14",
+    "baselineSha256": "0ebd9fde7704dcd06de9015cb5b4cf4a7b778e012f4d3647a6893426c06ec53e",
+    "diffSha256": "4be9ef3d7dcecbf594067fdfff00d4e488269497c7d23a296bb1e01878753e61"
+  },
+  {
+    "condition": "chromium-1280-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 994,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 43
+    },
+    "actualSha256": "6c3936c27a0fd17350f218827f70e362a802204fc2c3feab316e32eee0f03875",
+    "baselineSha256": "c135b5d270bdc9db159f93d56e5c22a23a6abac813f6552717259959558262c2",
+    "diffSha256": "e734edb657ae14704b8b0e6f7e441e75366c07c83ed6fc9195258ae987c31b65"
+  },
+  {
+    "condition": "chromium-1280-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 233,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "baselineDimensions": {
+      "width": 89,
+      "height": 43
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 89,
+      "height": 43
+    },
+    "actualSha256": "d94e6a100f5bb6b5e9845de5366b902699d3254c5eb312945e42c4ceeafa5610",
+    "baselineSha256": "3e03d2b4a2be84967cc692e4bfc17999bf2e33f65874cd2d25aeff320bae4d26",
+    "diffSha256": "2f2f55e2dec3a095a05a01c0879395dc62103f53597dd3298c7fac2b60afd3d9"
+  },
+  {
+    "condition": "chromium-1280-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 1862,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 123,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "ff89e3b56f5606dd9a6872e12f10b60c19567411dbc4dab6db79470e592a8d21",
+    "baselineSha256": "afcbacecebbb50989c5c97621c1f7a7822cbf293ea3484267c0d61f447fb2023",
+    "diffSha256": "2b7b51084faef6f4cd0bab4b36798bf3216dacc6d8c76eec11552a3a58a3efa3"
+  },
+  {
+    "condition": "chromium-1280-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2615,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 123,
+      "height": 64
+    },
+    "baselineDimensions": {
+      "width": 137,
+      "height": 64
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 137,
+      "height": 64
+    },
+    "actualSha256": "9152cc28beed9cbd360fb0f32913a490305478f763c19db8b199d8d620e6c6f4",
+    "baselineSha256": "54c55858438c996f8401d384f1f8546fd00aab14bb6fe6e0c5ca713c92abe44a",
+    "diffSha256": "b3df8a0b706552011685f5c41a4975ba600c388e560e02b019fc67e05ca2ab20"
+  },
+  {
+    "condition": "webkit-375-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 203,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "66219c6204c1a08e94bbc36186253959b9660eb479ea287fe6365f04f1e09f53",
+    "baselineSha256": "260173310488f25928a72b0e58de5e341fb48df0ea014bec5d6be884c18c4986",
+    "diffSha256": "bfd17ba2cdf3fc7424d23b78754d4eb654d860576284a0cf53e4cc9327826e7b"
+  },
+  {
+    "condition": "webkit-375-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 267,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "fe04358d2ef03d095cb4191313de696433608997f6d7669032bf6f252e69915c",
+    "baselineSha256": "67d7c00b73fac524651707737be7cf21f284baedff007d48365ae69043f3f570",
+    "diffSha256": "70d9c9c7195f53338672a64544cae028c2ccc58882d11da4dfdc56be7ac8bae1"
+  },
+  {
+    "condition": "webkit-375-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2620,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 118,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "65f86fbeb8a1aea1679f5181ea36eb409ed10ccb42817d036a15c21a1584e836",
+    "baselineSha256": "aea47dbc6bb599e3fd5ab44b5f7300aa1990bd7cff181c973e59d14e29cecde1",
+    "diffSha256": "8b457c20657218067f0307b5b39991b10a21221828f58d64ad7afa9f1d375d5c"
+  },
+  {
+    "condition": "webkit-375-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2465,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 118,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "978447e5842e6fa2da5d973dea2dad168f9e556809f52e1cd376d83e3cf2bfc6",
+    "baselineSha256": "954f3f45d0f56933f95a0dae5a742f3d8d2b9024a5bb4b8556cf4a445789c8d8",
+    "diffSha256": "93a069bced2a225e60a5d2fa84261c27488e38dd7bf690323618ad21ccf47a74"
+  },
+  {
+    "condition": "webkit-375-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 206,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "ae559c1686cf03d3f89c08b51aba96ff750ad6e8f73e42c4af1608d32b2a786a",
+    "baselineSha256": "e0da045659ef0a9347d70e84ae37ca05970a7bd3e88432a966047560130e6f7e",
+    "diffSha256": "1850e42e1bc299b48ed8e228268bf9395479b49503c87c3ada1a501a196ac359"
+  },
+  {
+    "condition": "webkit-375-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 270,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "8b0ecd95fbeb5d26704cacc5eb57020a978069a8b9d671909927cdb59b7d4a3f",
+    "baselineSha256": "89510616fdffd843d183799be9b048bc1df457b1f06d102004c9ba49cd7d1094",
+    "diffSha256": "eea5fc18eaa07513743bbcf218f7fbf6bc1c92c2640ff70f06a695ef13958145"
+  },
+  {
+    "condition": "webkit-375-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2579,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 118,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "a74a118cd003b976ecd360d174b60628b33d2d175705d387a32f14d6a1737f5c",
+    "baselineSha256": "beadadd12901a6351e1aa3bd16360ed1d042521a2e5f151abbb1132c497886de",
+    "diffSha256": "1618635b055913fc248e68843c9a7260163a22e744f96069c81acaeea8071687"
+  },
+  {
+    "condition": "webkit-375-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2368,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 118,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "a55de35a856789f4a16e5243a8b249bbd9e9cea193fec0e49144e4d75c19fa1e",
+    "baselineSha256": "97cca045989697ae15fd73f655c0bb460b2eb33a64162c745d98a2d4cd460dd0",
+    "diffSha256": "7e795e5393ef671c668d3dbf96d5cf423009718f189e269150803d80697982ef"
+  },
+  {
+    "condition": "webkit-390-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 203,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "09772264e9969b1c713991a1b544e523d70b090ed0d6a7201071f25fd8364913",
+    "baselineSha256": "b064947e7b9648712b3774a31477c70f236ebc296eb6a471b56fa48650d955c5",
+    "diffSha256": "81e02ece660c30da9c49ec8aeebb0ee855c529cb60e082ea3fdc23567511f6c6"
+  },
+  {
+    "condition": "webkit-390-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 248,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "75bc73657f485dfa82b22cc4dff741ef808be22ab7ddab161d71ecfdf61837fe",
+    "baselineSha256": "400fe78c6382a214912f5b9df9f80c4aea342ffa618059352e3ffa2e48cd2ce0",
+    "diffSha256": "4a96d7274636471ba62791689bdffb3ac0801bc9af351a0d41fca993f88c66e2"
+  },
+  {
+    "condition": "webkit-390-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2036,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 126,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "4bf43c3638821cd167ae8ef748735a211ac0583297aaff28deba500f029d4337",
+    "baselineSha256": "6772f256f9edd577542ede813b56ba882e5cb748f91ae5232732767419fec100",
+    "diffSha256": "99952d8ac8b42c988a088abbd5f404877e494e342b669d8489c098c2d984d38a"
+  },
+  {
+    "condition": "webkit-390-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2097,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 126,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "7165c1321a9e319121f11eca8c391ab67ea40663f81bb5edf271b72536ffcfe3",
+    "baselineSha256": "72af98a78bc91084c784584c072445372901185877ca27885271ad9fdc212659",
+    "diffSha256": "43b0fb8366aa90f47e2a8b35beeeb0a8d5403f6e3c19c4e5e156c30db5e689ca"
+  },
+  {
+    "condition": "webkit-390-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 206,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "4cc0e800c84a2200cfb9d6491677d0b6e24ad1e4fa4652fada2af53f4ce8d574",
+    "baselineSha256": "1b441a0ad53ee88c0f650c8a3aadb2a57e8a0ca866c394688e0ef3db0706b9b3",
+    "diffSha256": "53c25861dd26b5120a07e36eff7bd3fb6c0a232723fab251b6a32fff81309265"
+  },
+  {
+    "condition": "webkit-390-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 263,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "2d0eb9cecd12f363ee4610df4345cbd88221fec8a047e3a5fb47ecbeaa6f1e5f",
+    "baselineSha256": "d8b38cc73a50bb5c4ad3b4dbb2893659c6bf7ffa0147414d95ed6c4f51c4f017",
+    "diffSha256": "0215596c854b9eacb19e2411fbd2673ea0cc1de4e544da9dc3a38cb756dffe70"
+  },
+  {
+    "condition": "webkit-390-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 1933,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 126,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "9c9151f2a487cf659404bc7dc1767b88483e587eac4b458087d2af218ffe143e",
+    "baselineSha256": "9780409386e2b6e3a48193849c6bdfd91ea1aa8fe7d8e70957118fcbae3db1b1",
+    "diffSha256": "bd4fed0ddb51fdd8c2933790d181c733d3024ac132092afc083b3634f8267de8"
+  },
+  {
+    "condition": "webkit-390-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2046,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 126,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "10788cde9ab58d348540f5430c79a28c82604b00bfcb3c6df0748535b91e4f77",
+    "baselineSha256": "a439dcc3baf1dcfcdcca7cc9305f7751b994a4e515c30153115f35c2d14dd6a9",
+    "diffSha256": "71dd9aeb11e074b75b968146583c94f8d156773c76d5e20269541c9c8f2a641a"
+  },
+  {
+    "condition": "webkit-1280-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 507,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "992697aed63ea335752332b5d28b6f902d881fbd2384aaf9846773efbf15d8a0",
+    "baselineSha256": "66219c6204c1a08e94bbc36186253959b9660eb479ea287fe6365f04f1e09f53",
+    "diffSha256": "2f22fe61db004914afdd8dcbbf4981aa0c03ddcdb92867a968634ee292ee80fb"
+  },
+  {
+    "condition": "webkit-1280-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 855,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "850df0c31a65252aa5fd92c3fd78fa930dcf527f777db585f92e55c7b9287864",
+    "baselineSha256": "75bc73657f485dfa82b22cc4dff741ef808be22ab7ddab161d71ecfdf61837fe",
+    "diffSha256": "a6567a5146c2473ff268d88f89721cfe778147d8028420d6db576c669085cb1e"
+  },
+  {
+    "condition": "webkit-1280-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2503,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 123,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "5f3b2f93f3e1e5edb69e65db10b0b90fa41f926453fbd93fc9e785533606a498",
+    "baselineSha256": "951aeb2a29e47d3837b921a6412e06a821e0d2dab539ea271c185f430828663f",
+    "diffSha256": "16ccaf848a82496108772a0d61c16ee2f18fc7df9b7f996fda39ebe84bb63264"
+  },
+  {
+    "condition": "webkit-1280-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2234,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 123,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "9896628a18e1c8584aa3eb3f4c9de9ae2c84c1ea443c1413e9caef089762d40e",
+    "baselineSha256": "3b0617f10e2a6111f4243d9ca4617bac66afdd6b5609ff355b89ca590ee66efe",
+    "diffSha256": "fa2f78dda84a00e6040644ec2b1c474b670af4055f964e9f0a3a699b769f8f48"
+  },
+  {
+    "condition": "webkit-1280-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 510,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "7b9c943565989da40ac1ab4875cb2abd7231bfb526a2c66cd54fec60cb449654",
+    "baselineSha256": "ae559c1686cf03d3f89c08b51aba96ff750ad6e8f73e42c4af1608d32b2a786a",
+    "diffSha256": "f90034884b2beba7c413b7ac43c194eee19c4140199fcfd35b610d1229584f72"
+  },
+  {
+    "condition": "webkit-1280-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 857,
+    "dimensionMismatch": false,
+    "actualDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "baselineDimensions": {
+      "width": 95,
+      "height": 52
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 95,
+      "height": 52
+    },
+    "actualSha256": "e45866333ab1d7101f0776e755d7071ad9a5048794e31a4a61a0eea10a8697c2",
+    "baselineSha256": "2d0eb9cecd12f363ee4610df4345cbd88221fec8a047e3a5fb47ecbeaa6f1e5f",
+    "diffSha256": "687c5b74ddd6da4fa7e31221cde9a20b12b663a35acf8f52b75957092f86f723"
+  },
+  {
+    "condition": "webkit-1280-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2391,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 123,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "749ab3e90d242be793a8b155041a537b64595bf2ea1de4feeed3936f1d501e44",
+    "baselineSha256": "a95b65abd5888d7917bd0b76e180637ed01e689e9e5cfbfdb5f6692f58c4d8fb",
+    "diffSha256": "c762571a6b903a7151a554da8c1411eca3b5ca6a7a043cc8dc3771daece3a176"
+  },
+  {
+    "condition": "webkit-1280-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "select raster dimensions differ from approved baseline",
+    "differentPixels": 2192,
+    "dimensionMismatch": true,
+    "actualDimensions": {
+      "width": 123,
+      "height": 75
+    },
+    "baselineDimensions": {
+      "width": 143,
+      "height": 75
+    },
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 0,
+      "y": 0,
+      "width": 143,
+      "height": 75
+    },
+    "actualSha256": "3cfa120df7a7d355cd56ce9776ac7b1cf34a5986ea9ca7888af25ae598ed39c2",
+    "baselineSha256": "9595447674bbcd8d0cfaa1180590daecd7d00e05a529a57c5ea2177913451a21",
+    "diffSha256": "a2128185b4cac5637a2b5b77050a9bed4076a797563d70f116bbed9fe9def776"
+  }
+]

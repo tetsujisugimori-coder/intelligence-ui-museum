@@ -88,16 +88,15 @@ function compareCapture(report, dir, baselineDir, diffDir) {
         "baseline checksum mismatch",
       );
       assert.equal(i.text, b.text);
-      assert.deepEqual(
-        i.roi,
-        b.roi,
-        "text ROI must cover the approved full label",
-      );
-      assert(b.roi.width > 0 && b.roi.height > 0);
+      // The approved raster fixes the region, never current DOM/canvas metrics
+      // or current ink bounds. Native widgets need not paint at CSS padding.
+      // Historical manifest.roi is retained as evidence, but is not an oracle.
+      const approved = read(path.join(baselineDir, b.file)).png;
+      const roi = { x: 0, y: 0, width: approved.width, height: approved.height };
       const result = compare(
         path.join(dir, i.file),
         path.join(baselineDir, b.file),
-        b.roi,
+        roi,
         path.join(diffDir, i.file),
       );
       comparisons.push({ condition: key(r), label: i.label, ...result });
@@ -124,7 +123,7 @@ function validateComparisons(rows) {
       assert.match(r[k], /^[0-9a-f]{64}$/);
     assert.equal(
       r.status,
-      r.differentPixels <= policy.maxDifferentPixels ? "PASS" : "FAIL",
+      !r.dimensionMismatch && r.differentPixels <= policy.maxDifferentPixels ? "PASS" : "FAIL",
     );
   }
 }

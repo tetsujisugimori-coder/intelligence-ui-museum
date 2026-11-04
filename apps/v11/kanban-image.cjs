@@ -18,7 +18,7 @@ function crop(png, roi) {
       const dst = (y * roi.width + x) * 4,
         sx = x + roi.x,
         sy = y + roi.y;
-      if (sx >= png.width || sy >= png.height) {
+      if (sx < 0 || sy < 0 || sx >= png.width || sy >= png.height) {
         out.data.set([255, 0, 255, 255], dst);
       } else
         png.data.copy(
@@ -51,13 +51,18 @@ function compare(actualFile, baselineFile, roi, diffFile) {
     );
   }
   fs.writeFileSync(diffFile, PNG.sync.write(diff));
+  const dimensionMismatch = a.png.width !== b.png.width || a.png.height !== b.png.height;
+  const passed = !dimensionMismatch && differentPixels <= policy.maxDifferentPixels;
   return {
-    status: differentPixels <= policy.maxDifferentPixels ? "PASS" : "FAIL",
+    status: passed ? "PASS" : "FAIL",
     reason:
-      differentPixels <= policy.maxDifferentPixels
+      dimensionMismatch ? "select raster dimensions differ from approved baseline" : passed
         ? "label paint matches approved baseline"
         : "label paint differs (including clipped or missing glyphs)",
     differentPixels,
+    dimensionMismatch,
+    actualDimensions: { width: a.png.width, height: a.png.height },
+    baselineDimensions: { width: b.png.width, height: b.png.height },
     policy,
     roi,
     actualSha256: sha(a.bytes),

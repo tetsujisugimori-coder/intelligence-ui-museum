@@ -1,0 +1,21 @@
+{
+  "kind": "archived CI recalculation and synthetic image controls, not new browser execution",
+  "run": 41807277710,
+  "artifact": 13310507180,
+  "head": "e40d92bcc97fa1bf214b0d613aac2d144fd2138f",
+  "tree": "a2a45930d647284db34f58f7039eb17718808393",
+  "zipSha256": "d1de8074afe60e85bc832914283bffbea7f9026ee004e4c3b45b5e5bf0c02653",
+  "baselinePngReplacement": false,
+  "toleranceChanged": false,
+  "imageAlignmentOrResize": false,
+  "storedCaptureCopies": "All label PNGs and capture metadata included. Unmodified state-card PNGs and child logs omitted to avoid duplicate history; restore those from immutable artifact before standalone validateCapture. Reproduce with kanban-audit.cjs and the complete original artifact.",
+  "localEnvironment": "Windows, Node v24.20.0, existing Playwright 1.56.1 PNG codec. No local Docker or WSL distribution; fixed-container fresh browser execution is delegated to CI.",
+  "developmentAttempt": "Initial local replay erased x106..111 over full PNG height, also erasing chrome: 30 rather than 12 pixels in Chromium todo. This was not the review condition. Corrected only the erasure vertical band to historical ROI; exact 12/13/19/26 reproduced. Failed attempt remains under .work/p3-01/review-replay; not counted as acceptance.",
+  "localChecks": {
+    "v11Dataset": "PASS",
+    "v11Contracts": "17/17 PASS",
+    "migration": "environment failure: sandbox temp path permission; CI required",
+    "runner": "24/25 PASS; symlink EPERM on Windows; CI required"
+  },
+  "restrictions": "Stage 3 HOLD; Draft; no issue closure, merge or Sites publication; physical Safari/VoiceOver/OS text enlargement NOT_TESTED"
+}

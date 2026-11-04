@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      kanban_failure_control:
+        description: 'Intentionally erase review suffix pixels after fresh capture (Kanban must fail)'
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -153,6 +158,8 @@ jobs:
         working-directory: apps/v11
       - name: Native select label images, 24 operations, real old HEAD and failure controls
         run: node apps/v11/run-kanban-ci.cjs
+        env:
+          KANBAN_INJECT_REVIEW_ERASURE: ${{ github.event_name == 'workflow_dispatch' && inputs.kanban_failure_control && '1' || '0' }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:

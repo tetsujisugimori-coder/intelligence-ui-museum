@@ -126,7 +126,9 @@ function controls(report, dir, identity, child, baseline, out) {
     if (kind === "stale-image") fs.utimesSync(file, new Date(0), new Date(0));
     if (kind === "clipped-suffix") {
       const png = read(file).png;
-      const roi = image.roi;
+      // Preserve the original synthetic control, independent of capture metrics.
+      const roi = JSON.parse(fs.readFileSync(path.join(baseline, "manifest.json")))
+        .images.find((i) => i.file === image.file).roi;
       for (let y = roi.y; y < Math.min(png.height, roi.y + roi.height); y++)
         for (
           let x = roi.x + Math.floor((roi.width * 2) / 3);

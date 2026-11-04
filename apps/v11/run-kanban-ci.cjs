@@ -129,6 +129,10 @@ async function child(script, dir, identity) {
         capture = JSON.parse(fs.readFileSync(path.join(dir, "capture.json")));
       const run = { label, source: src, identity, child: result };
       summary.runs.push(run);
+      if (label === "current" && process.env.KANBAN_INJECT_REVIEW_ERASURE === "1")
+        require("./kanban-boundary-controls.cjs").injectReviewErasure(
+          capture, dir, path.join(out, "intentional-review-erasure.json"),
+        );
       validateCapture(capture, dir, identity, result);
       if (label === "old") {
         const legacy = path.join(out, "legacy-old"),
@@ -173,6 +177,12 @@ async function child(script, dir, identity) {
             baseline,
             path.join(out, "controls"),
           ).length;
+          summary.boundaryControls = require("./kanban-boundary-controls.cjs").boundaryControls(
+            capture, dir, identity, result, baseline, path.join(out, "boundaries"),
+          );
+          summary.reviewReplay = require("./kanban-review-replay.cjs").replay(
+            capture, dir, identity, result, baseline, path.join(out, "review-replay"),
+          );
         } else
           for (const engine of ["chromium", "webkit"])
             for (const label of ["todo", "doing"])

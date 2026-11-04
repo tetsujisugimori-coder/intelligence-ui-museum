@@ -84,31 +84,12 @@ async function exercise(page, row, dir) {
     const select = c.locator(`[data-task="${name}"] select`);
     await select.scrollIntoViewIfNeeded();
     const meta = await select.evaluate((e) => {
-      const s = getComputedStyle(e),
-        canvas = document.createElement("canvas"),
-        ctx = canvas.getContext("2d");
-      ctx.font = `${s.fontWeight} ${s.fontSize} ${s.fontFamily}`;
+      const s = getComputedStyle(e);
       return {
         text: e.selectedOptions[0].textContent,
         font: s.font,
         fontFamily: s.fontFamily,
         fontSize: s.fontSize,
-        roi: {
-          x: Math.ceil(
-            parseFloat(s.borderLeftWidth) + parseFloat(s.paddingLeft),
-          ),
-          y: Math.ceil(parseFloat(s.borderTopWidth) + parseFloat(s.paddingTop)),
-          width: Math.ceil(
-            ctx.measureText(e.selectedOptions[0].textContent).width,
-          ),
-          height: Math.floor(
-            e.getBoundingClientRect().height -
-              parseFloat(s.borderTopWidth) -
-              parseFloat(s.borderBottomWidth) -
-              parseFloat(s.paddingTop) -
-              parseFloat(s.paddingBottom),
-          ),
-        },
       };
     });
     const file = `${key(row)}-${label}.png`;
