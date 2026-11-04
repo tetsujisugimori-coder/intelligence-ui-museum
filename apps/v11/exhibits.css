@@ -11,7 +11,3 @@
 .v11-demo { grid-template-columns: minmax(0, 1fr); }
 .v11-demo label, .v11-demo fieldset { min-width:0; max-width:100%; box-sizing:border-box; }
 .v11-demo input[type=time] { min-width:0; max-width:100%; width:100%; box-sizing:border-box; }
-
-/* Keep a native select readable when text doubles on narrow boards. */
-.v11-column { flex-basis:14rem; }
-.v11-task select { max-width:100%; }
