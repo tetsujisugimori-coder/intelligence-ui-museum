@@ -1,0 +1,42 @@
+{
+  "started": "2026-11-04T09:12:33.927Z",
+  "harnessHead": "5067e7b9cca6855dc021715d222a699067c9c46f",
+  "harnessTree": "2ceb4cf3df26f4c6f411592c00c21e0271e6804d",
+  "runId": "e9358e79-7b48-470e-a581-619f2f0c5418",
+  "runs": [
+    {
+      "label": "current",
+      "source": {
+        "head": "5067e7b9cca6855dc021715d222a699067c9c46f",
+        "tree": "2ceb4cf3df26f4c6f411592c00c21e0271e6804d",
+        "files": {
+          "index.html": "a5bbcd8ad2d71979c330e32e618247792bbc641ebd7282815e638db433059c03",
+          "exhibits.js": "2c1dbe3142629c2df988704b05c5ecf66857127f7db273a629960239a3f63a76",
+          "exhibits.css": "3239f709423fa0feced232597dae8e5fd2dc7c54bf4ffaaa7408a3ea44045389"
+        }
+      },
+      "identity": {
+        "runId": "dca3c718-704a-4cf1-bcae-e2d8e9333554",
+        "targetHead": "5067e7b9cca6855dc021715d222a699067c9c46f",
+        "targetTree": "2ceb4cf3df26f4c6f411592c00c21e0271e6804d",
+        "started": 1793783553954
+      },
+      "child": {
+        "code": 0,
+        "signal": null,
+        "timedOut": false
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "label": "current",
+      "total": 48,
+      "failed": 46
+    }
+  ],
+  "status": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: current label paint regression\n    at /__w/intelligence-ui-museum/intelligence-ui-museum/apps/v11/run-kanban-ci.cjs:12:340\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)",
+  "finished": "2026-11-04T09:13:22.145Z",
+  "exitCode": 1
+}

@@ -1,0 +1,7 @@
+{
+  "kind": "stale-image",
+  "base": "../../current",
+  "image": "chromium-375-dark-2-todo.png",
+  "runId": "5390bff6-3724-410f-9a34-dcfaa9f99efb",
+  "expected": "rejected"
+}

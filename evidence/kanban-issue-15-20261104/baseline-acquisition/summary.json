@@ -1,0 +1,35 @@
+{
+  "started": "2026-11-04T09:05:13.783Z",
+  "harnessHead": "4dc762c3007b37fec911cc29792b710a8836446d",
+  "harnessTree": "730a116b3755b58ea641a3e4c97f3fd1d7c53907",
+  "runId": "a070aa93-d357-4c62-aaaa-64f8e3ce3ba7",
+  "runs": [
+    {
+      "label": "fixed",
+      "source": {
+        "head": "1b4befda87c97bd70da2c1d6065427034d12660a",
+        "tree": "99d5f7f904f95fbd64d4ff4fb3aebf72511da29d",
+        "files": {
+          "index.html": "a5bbcd8ad2d71979c330e32e618247792bbc641ebd7282815e638db433059c03",
+          "exhibits.js": "2c1dbe3142629c2df988704b05c5ecf66857127f7db273a629960239a3f63a76",
+          "exhibits.css": "54be52529802ae1353cffb5658dfdde8badc9cb880d40e94c65a8cdb7f52f49a"
+        }
+      },
+      "identity": {
+        "runId": "c4b05c31-1cf1-46cf-8479-9af0cffb0068",
+        "targetHead": "1b4befda87c97bd70da2c1d6065427034d12660a",
+        "targetTree": "99d5f7f904f95fbd64d4ff4fb3aebf72511da29d",
+        "started": 1793783113811
+      },
+      "child": {
+        "code": 0,
+        "signal": null,
+        "timedOut": false
+      }
+    }
+  ],
+  "comparisons": [],
+  "status": "CAPTURE_ONLY_NOT_ACCEPTANCE",
+  "finished": "2026-11-04T09:06:01.068Z",
+  "exitCode": 0
+}

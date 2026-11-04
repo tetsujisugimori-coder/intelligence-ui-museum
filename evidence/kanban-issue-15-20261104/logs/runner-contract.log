@@ -1,0 +1,37 @@
+
+> intelligence-ui-museum@0.0.0 test:runner
+> cd apps/v10 && node --test scripts/stage2r-runner.test.cjs
+
+笨・complete GREEN matrix (2.1006ms)
+笨・reject assert (0.6638ms)
+笨・reject engine (0.2373ms)
+笨・reject missing (0.1904ms)
+笨・reject duplicate (0.1847ms)
+笨・reject unfinished (0.1975ms)
+笨・reject empty (0.1951ms)
+笨・reject missingAssert (0.1903ms)
+笨・reject fakeGreen (0.4533ms)
+笨・reject duplicateAssert (0.2522ms)
+笨・reject error (0.2533ms)
+笨・reject unexpected (0.2614ms)
+笨・only explicit original visibility RED permitted (0.3495ms)
+笨・nonreproduced baseline RED fails (0.2246ms)
+笨・smoke noJS count and incomplete reports fail (0.0732ms)
+笨・stage2r-browser.cjs real entry launch failure -> nonzero (193.711ms)
+笨・stage2r-smoke.cjs real entry launch failure -> nonzero (44.5574ms)
+笨・smoke synthetic normal propagates (46.9922ms)
+笨・smoke synthetic reopen failure propagates (48.0688ms)
+笨・smoke synthetic six-components pageerror propagates (44.9722ms)
+笨・matrix rejects late or missing pageerror evidence (0.5481ms)
+笨・matrix rejects skipped conditions even if checks appear green (0.5537ms)
+笨・smoke noJS rejects skipped conditions and preserves normal (0.3571ms)
+笨・matrix rejects a skipped assertion even if pass is true (0.2411ms)
+笨・both browser servers reject a link escaping the app root (8.3508ms)
+邃ｹ tests 25
+邃ｹ suites 0
+邃ｹ pass 25
+邃ｹ fail 0
+邃ｹ cancelled 0
+邃ｹ skipped 0
+邃ｹ todo 0
+邃ｹ duration_ms 532.0658
