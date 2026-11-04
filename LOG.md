@@ -13,3 +13,5 @@
 ## 2026-11-02 JST — 再提出証拠
 
 P2/P3実装HEAD e3679d1のCI browser-v11は正常28・新規Transfer6・実文字6・旧HEAD拒否6・pageerror2を成功。元レビューと新規保全差分を証拠化し、最終CIの数値をログから読戻せるよう新規試験JSONをstdoutにも出力する（合否条件不変）。ブラウザ配布先403に加え、connector発行artifact download URLも環境へ転送時403で、ZIPのローカル展開照合は未実施。CI自身の厳格validatorによる検査と、artifact生成・checksum metadata確認を区別する。最終HEAD全ジョブの終端確認を継続。
+
+2026-11-03: Issues #12 / #13 の合成文字拡大計測と Kanban の列幅を改善。新規自己検証は evidence/zoom-issues-12-13-20261103/ を参照。Stage 3 HOLD と実機未検証を維持。

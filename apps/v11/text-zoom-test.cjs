@@ -16,19 +16,24 @@ const out=process.env.EVIDENCE_DIR;fs.mkdirSync(out,{recursive:true});const rows
    assert.equal(r.rootCss.before,14);assert.equal(r.rootCss.after,14);assert.equal(r.rootCss.root,32);
    r.fonts=await page.evaluate(()=>{
     document.documentElement.style.removeProperty('font-size');
-    const nodes=[...document.querySelectorAll('.card')].filter(c=>+c.dataset.id>=118).flatMap(c=>[c,...c.querySelectorAll('*')]);
-    const sizes=nodes.map(el=>({el,before:parseFloat(getComputedStyle(el).fontSize)}));
-    // Snapshot all original sizes before changing inherited styles.
-    for(const {el,before} of sizes)el.style.setProperty('font-size',`${before*2}px`,'important');
+    // Restore the unscaled cascade before measuring *all* live nodes. Recompute
+    // after DOM replacement, never deriving a baseline from an enlarged parent.
+    const saved=new WeakMap(); let observer;
+    function apply(){
+     const nodes=[...document.querySelectorAll('.card')].filter(c=>+c.dataset.id>=118).flatMap(c=>[c,...c.querySelectorAll('*')]);
+     for(const el of nodes){const old=saved.get(el);if(old){if(old.value)el.style.setProperty('font-size',old.value,old.priority);else el.style.removeProperty('font-size')}}
+     const sizes=nodes.map(el=>({el,before:parseFloat(getComputedStyle(el).fontSize)}));
+     for(const {el,before} of sizes){if(!saved.has(el))saved.set(el,{value:el.style.getPropertyValue('font-size'),priority:el.style.getPropertyPriority('font-size')});el.dataset.zoomBaseline=String(before);el.style.setProperty('font-size',`${before*2}px`,'important')}
+     return sizes;
+    }
+    const sizes=apply();observer=new MutationObserver(apply);
+    observer.observe(document.body,{subtree:true,childList:true});
+    window.verifyTextZoom=()=>[...document.querySelectorAll('.card')].filter(c=>+c.dataset.id>=118).flatMap(c=>[c,...c.querySelectorAll('*')]).filter(el=>Math.abs(parseFloat(getComputedStyle(el).fontSize)-Number(el.dataset.zoomBaseline)*2)>.05 || !el.dataset.zoomBaseline).map(el=>({tag:el.tagName,baseline:el.dataset.zoomBaseline,actual:getComputedStyle(el).fontSize}));
     return [118,119,120,121,122,123].map(id=>{const el=document.querySelector(`[data-id="${id}"] p.description`);return {id,before:sizes.find(x=>x.el===el).before,after:parseFloat(getComputedStyle(el).fontSize)}});
    });
    assert(r.fonts.every(x=>x.before===14&&x.after===28));
-   // Transfer re-renders its native inputs. Enlarge replacements from the saved
-   // baseline by applying the measured 28px native control rule as well.
-   await page.addStyleTag({content:'.card[data-id="119"] [data-item] { font-size:28px !important; }'});
-   await exercise(page,r,shot);assert(r.checks.every(x=>x.pass));
-   // Reset replaces nodes; restore the measured styles before geometry/focus checks.
-   await page.evaluate(()=>{for(const c of [...document.querySelectorAll('.card')].filter(c=>+c.dataset.id>=118))for(const el of c.querySelectorAll('*')){if(!el.style.getPropertyValue('font-size'))el.style.setProperty('font-size','28px','important')}});
+   const assertZoom=async label=>{const sample=await page.evaluate(()=>({errors:window.verifyTextZoom(),controls:[...document.querySelectorAll('.card[data-id=\"119\"] .v11-demo button, .card[data-id=\"119\"] .v11-demo input')].map(el=>({tag:el.tagName,before:Number(el.dataset.zoomBaseline),after:parseFloat(getComputedStyle(el).fontSize)}))}));r.zoomSnapshots??=[];r.zoomSnapshots.push({label,...sample});assert.deepEqual(sample.errors,[],`incorrect font scaling: ${label}`);assert(sample.controls.some(x=>x.before===16&&x.after===32),'16px controls must be 32px');};
+   await assertZoom('initial');await exercise(page,r,shot);assert(r.checks.every(x=>x.pass));await assertZoom('after transfer and reset');
    for(const id of [118,119,120,121,122,123]){
     const card=page.locator(`[data-id="${id}"]`);await card.scrollIntoViewIfNeeded();
     // Direct text ranges detect actual clipped text under overflow clipping ancestors.
