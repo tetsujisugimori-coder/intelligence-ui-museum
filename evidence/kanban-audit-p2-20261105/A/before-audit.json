@@ -1,0 +1,9 @@
+{
+  "kind": "archived CI recalculation; NOT new browser execution",
+  "inputHarnessHead": "f9db21c4da541a20d416011bb3f866f69302e402",
+  "inputHarnessTree": "767d07994c79e0b94ffca3c6fd4f2d5242fbf88a",
+  "started": "2026-11-05T02:32:31.779Z",
+  "runs": [],
+  "status": "PASS",
+  "finished": "2026-11-05T02:32:31.780Z"
+}

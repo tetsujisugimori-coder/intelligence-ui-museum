@@ -108,6 +108,13 @@ controls, 192 edge erasures, the four RED→GREEN controls and real old images.
 It is explicitly archived-image recalculation, not fresh browser execution.
 All audit/runner output directories must be new.
 
+The strict [audit acceptance contract](KANBAN-AUDIT.md) requires complete
+successful current/old evidence, recorded comparisons and control results, and
+all 11 audit phases to finish before PASS. Failed/partial evidence returns
+structured FAIL and nonzero, rather than best-effort diagnostic PASS. The real
+CLI's positive, A/B RED→GREEN and omission/contradiction tests now run on each
+new fixed-environment browser artifact in CI.
+
 For intentional end-to-end failure propagation, manually dispatch CI on this
 branch with `kanban_failure_control=true`. After fresh capture, the runner
 erases the exact four review regions, updates PNG SHA-256 and capture metadata,

@@ -1,0 +1,33 @@
+{
+  "started": "2026-11-04T20:47:44.848Z",
+  "harnessHead": "f9db21c4da541a20d416011bb3f866f69302e402",
+  "harnessTree": "767d07994c79e0b94ffca3c6fd4f2d5242fbf88a",
+  "runId": "049f2862-ccde-4140-9f0b-863997eb40af",
+  "runs": [],
+  "comparisons": [
+    {
+      "label": "current",
+      "total": 48,
+      "failed": 0
+    },
+    {
+      "label": "old",
+      "total": 48,
+      "failed": 48
+    }
+  ],
+  "controls": 20,
+  "boundaryControls": {
+    "normalAccepted": 48,
+    "suffixRejected": 48,
+    "edgeControls": 192
+  },
+  "reviewReplay": {
+    "status": "PASS",
+    "oldFalseAcceptances": 4,
+    "newImageRejections": 4
+  },
+  "status": "FAIL",
+  "finished": "2026-11-04T20:49:55.770Z",
+  "exitCode": 1
+}

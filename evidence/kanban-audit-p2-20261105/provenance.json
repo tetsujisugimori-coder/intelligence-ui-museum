@@ -1,0 +1,20 @@
+{
+  "kind": "precommit working-code CLI reproduction, not a browser run",
+  "baseArtifact": 13361393667,
+  "baseRun": 41909726108,
+  "baseHead": "f9db21c4da541a20d416011bb3f866f69302e402",
+  "baseTree": "767d07994c79e0b94ffca3c6fd4f2d5242fbf88a",
+  "oldCliHead": "f9db21c4da541a20d416011bb3f866f69302e402",
+  "A": "Only input-summary.json; zero PNGs. Copy of base summary with status FAIL, exitCode 1, runs [].",
+  "B": "Copy complete base artifact and replace summary.json with B/input-summary.json (runs old only). Other base files unchanged.",
+  "newExpected": {
+    "A": "FAIL, exit 1, SUMMARY_STATUS; all later phases NOT_RUN",
+    "B": "FAIL, exit 1, RUN_SET; all later phases NOT_RUN"
+  },
+  "oldObserved": {
+    "A": "PASS, exit 0, zero image checks",
+    "B": "PASS, exit 0, only old branch; current/192/review checks omitted"
+  },
+  "preservation": "Original artifact and past evidence unchanged. Source file SHA256 binds the working implementation without relabeling old evidence as a new HEAD.",
+  "independentReview": "NOT_RUN by implementation agent; separate reviewer arranged by parent; previous PASS is not a basis for audit acceptance."
+}
