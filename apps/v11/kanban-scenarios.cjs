@@ -1,0 +1,172 @@
+"use strict";
+const assert = require("node:assert/strict"),
+  fs = require("node:fs"),
+  path = require("node:path");
+const states = ["initial", "moved", "undo", "reset"];
+const conditions = ["chromium", "webkit"].flatMap((engine) =>
+  [375, 390, 1280].flatMap((width) =>
+    ["dark", "light"].flatMap((theme) =>
+      [1, 2].map((zoom) => ({ engine, width, theme, zoom })),
+    ),
+  ),
+);
+const key = (r) => `${r.engine}-${r.width}-${r.theme}-${r.zoom}`;
+async function scale(page) {
+  await page.evaluate(() => {
+    const saved = new WeakMap();
+    function apply() {
+      const nodes = [...document.querySelectorAll(".card")]
+        .filter((c) => +c.dataset.id >= 118)
+        .flatMap((c) => [c, ...c.querySelectorAll("*")]);
+      for (const e of nodes) {
+        const x = saved.get(e);
+        if (x) {
+          if (x.value) e.style.setProperty("font-size", x.value, x.prio);
+          else e.style.removeProperty("font-size");
+        }
+      }
+      const sizes = nodes.map((e) => [
+        e,
+        parseFloat(getComputedStyle(e).fontSize),
+      ]);
+      for (const [e, n] of sizes) {
+        if (!saved.has(e))
+          saved.set(e, {
+            value: e.style.getPropertyValue("font-size"),
+            prio: e.style.getPropertyPriority("font-size"),
+          });
+        e.style.setProperty("font-size", `${n * 2}px`, "important");
+      }
+    }
+    apply();
+    new MutationObserver(apply).observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+  });
+}
+async function exercise(page, row, dir) {
+  const errors = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto(process.env.MUSEUM_URL, { waitUntil: "domcontentloaded" });
+  if (row.theme === "light") await page.locator("#theme").click();
+  if (row.zoom === 2) await scale(page);
+  await page.evaluate(() => document.fonts.ready);
+  const c = page.locator('[data-id="120"]'),
+    task = c.locator('[data-task="調査"]');
+  row.snapshots = [];
+  row.images = [];
+  async function snapshot(state) {
+    const fonts = await c
+      .locator("select")
+      .evaluateAll((es) => es.map((e) => getComputedStyle(e).fontSize));
+    assert.equal(fonts.length, 4);
+    assert(fonts.every((f) => f === (row.zoom === 2 ? "32px" : "16px")));
+    const geometry = await page.evaluate(() => ({
+      client: document.documentElement.clientWidth,
+      scroll: document.documentElement.scrollWidth,
+    }));
+    assert(geometry.scroll <= geometry.client);
+    assert.deepEqual(errors, []);
+    row.snapshots.push({ state, fonts, geometry, errors: [...errors] });
+    await c.screenshot({
+      path: path.join(dir, `${key(row)}-${state}.png`),
+      animations: "disabled",
+    });
+  }
+  await task.locator("select").scrollIntoViewIfNeeded();
+  await snapshot("initial");
+  // These are actual native select paints, not a DOM-width readability verdict.
+  for (const [label, name] of [
+    ["todo", "調査"],
+    ["doing", "実装"],
+  ]) {
+    const select = c.locator(`[data-task="${name}"] select`);
+    await select.scrollIntoViewIfNeeded();
+    // Retain the historical Canvas estimate as diagnostic metadata for the
+    // frozen old-harness replay only. Production comparison ignores image.roi
+    // and uses the entire approved raster, including all native paint offsets.
+    const meta = await select.evaluate((e) => {
+      const s = getComputedStyle(e),
+        canvas = document.createElement("canvas"),
+        ctx = canvas.getContext("2d");
+      ctx.font = `${s.fontWeight} ${s.fontSize} ${s.fontFamily}`;
+      return {
+        text: e.selectedOptions[0].textContent,
+        font: s.font,
+        fontFamily: s.fontFamily,
+        fontSize: s.fontSize,
+        roi: {
+          x: Math.ceil(
+            parseFloat(s.borderLeftWidth) + parseFloat(s.paddingLeft),
+          ),
+          y: Math.ceil(parseFloat(s.borderTopWidth) + parseFloat(s.paddingTop)),
+          width: Math.ceil(
+            ctx.measureText(e.selectedOptions[0].textContent).width,
+          ),
+          height: Math.floor(
+            e.getBoundingClientRect().height -
+              parseFloat(s.borderTopWidth) -
+              parseFloat(s.borderBottomWidth) -
+              parseFloat(s.paddingTop) -
+              parseFloat(s.paddingBottom),
+          ),
+        },
+      };
+    });
+    const file = `${key(row)}-${label}.png`;
+    await select.screenshot({
+      path: path.join(dir, file),
+      animations: "disabled",
+    });
+    row.images.push({ label, file, ...meta });
+  }
+  const sel = task.locator("select");
+  await sel.focus();
+  await page.keyboard.press("Tab");
+  await page.keyboard.press("Shift+Tab");
+  const focus = await sel.evaluate((e) => ({
+    active: e === document.activeElement,
+    visible: e.matches(":focus-visible"),
+    outline: parseFloat(getComputedStyle(e).outlineWidth),
+  }));
+  assert(focus.active && focus.visible && focus.outline > 0);
+  row.selectFocus = focus;
+  await page.keyboard.press("ArrowDown");
+  await page.keyboard.press("Enter");
+  assert.equal(await sel.inputValue(), "1");
+  await task.getByRole("button", { name: "移動", exact: true }).focus();
+  await page.keyboard.press("Enter");
+  assert.equal(
+    await c.locator('[data-column="1"] [data-task="調査"]').count(),
+    1,
+  );
+  assert(await task.evaluate((e) => e === document.activeElement));
+  row.movedFocus = await task.evaluate(
+    (e) =>
+      e.matches(":focus-visible") &&
+      parseFloat(getComputedStyle(e).outlineWidth) > 0,
+  );
+  assert(row.movedFocus);
+  await snapshot("moved");
+  await c.locator("[data-undo]").focus();
+  await page.keyboard.press("Enter");
+  assert.equal(
+    await c.locator('[data-column="0"] [data-task="調査"]').count(),
+    1,
+  );
+  assert(await task.evaluate((e) => e === document.activeElement));
+  row.undoFocus = await task.evaluate(
+    (e) =>
+      e.matches(":focus-visible") &&
+      parseFloat(getComputedStyle(e).outlineWidth) > 0,
+  );
+  assert(row.undoFocus);
+  await snapshot("undo");
+  await c.getByRole("button", { name: "Kanban Boardをリセット" }).click();
+  assert.equal(await c.locator('[data-column="0"] [data-task]').count(), 2);
+  assert.equal(await task.locator("select").inputValue(), "0");
+  await snapshot("reset");
+  row.errors = errors;
+}
+module.exports = { exercise, conditions, key, states };

@@ -4,6 +4,15 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      kanban_failure_control:
+        description: 'Intentionally erase review suffix pixels after fresh capture (Kanban must fail)'
+        type: boolean
+        default: false
+      kanban_audit_test_failure:
+        description: 'Intentionally fail the audit CLI test suite after checks (CI must fail)'
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -134,4 +143,42 @@ jobs:
             .work/v11-ci-evidence/
             .work/stage-a-linux/
           if-no-files-found: warn
+
+  kanban-visual:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble@sha256:42f02d323c310069b4d54c94bd91a608966a486c3492c48ae0b1cea747ec5ca2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - run: npm ci --ignore-scripts
+        working-directory: apps/v11
+      - name: Native select label images, 24 operations, real old HEAD and failure controls
+        run: node apps/v11/run-kanban-ci.cjs
+        env:
+          KANBAN_INJECT_REVIEW_ERASURE: ${{ github.event_name == 'workflow_dispatch' && inputs.kanban_failure_control && '1' || '0' }}
+      - name: Audit CLI complete evidence, RED GREEN and incomplete evidence controls
+        id: audit-tests
+        run: node apps/v11/kanban-audit.test.cjs .work/kanban-ci .work/kanban-audit-cli
+        env:
+          KANBAN_AUDIT_TEST_FORCE_FAILURE: ${{ github.event_name == 'workflow_dispatch' && inputs.kanban_audit_test_failure && '1' || '0' }}
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.audit-tests.outcome != 'skipped'
+        with:
+          name: kanban-audit-cli-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/kanban-audit-cli/
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kanban-visual-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/kanban-ci/
+          if-no-files-found: error
 

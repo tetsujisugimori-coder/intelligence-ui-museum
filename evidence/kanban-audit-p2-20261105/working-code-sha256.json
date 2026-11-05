@@ -1,0 +1,10 @@
+{
+  "kind": "precommit working-code fingerprints, not a rewritten historical HEAD",
+  "from": "f9db21c4da541a20d416011bb3f866f69302e402",
+  "hashes": {
+    "kanban-audit.cjs": "e2954321992662adc9d6c4aaf0d6fc99b6b045bc16ce5736d3489e92c6364a6e",
+    "kanban-audit-main.cjs": "8d55e3ed782c62defe08762882eb265cea59433d4683b7730f04855267ce997f",
+    "kanban-audit-contract.cjs": "58d3eadedebc0817c2832e2a1897f03a510bf72c627aacb687e031d79e73dde8",
+    "kanban-audit.test.cjs": "bf0b2f437f074eb9ded964ae8f28e30607502e1f78bfaa786ef7e8ae69e9222f"
+  }
+}

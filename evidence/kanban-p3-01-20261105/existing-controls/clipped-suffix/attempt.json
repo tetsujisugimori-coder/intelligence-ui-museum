@@ -1,0 +1,7 @@
+{
+  "kind": "clipped-suffix",
+  "base": "../../current",
+  "image": "chromium-375-dark-2-todo.png",
+  "runId": "bf0276cb-2425-4203-9ca0-51203f2089eb",
+  "expected": "rejected"
+}

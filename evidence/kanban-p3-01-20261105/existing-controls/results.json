@@ -1,0 +1,140 @@
+[
+  {
+    "name": "valid current capture",
+    "expected": "accepted",
+    "observed": "accepted",
+    "status": "PASS"
+  },
+  {
+    "name": "valid image comparison verdicts",
+    "expected": "accepted",
+    "observed": "accepted",
+    "status": "PASS"
+  },
+  {
+    "name": "comparison not executed",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: comparison processing not executed\n    at validateComparisons (<workspace>\\apps\\v11\\kanban-contract.cjs:109:3)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:70:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:67:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "missing comparison",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: comparison processing incomplete\n\n47 !== 48\n\n    at validateComparisons (<workspace>\\apps\\v11\\kanban-contract.cjs:113:10)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:70:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:67:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate comparison",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  [\n    'chromium-375-dark-1|todo',\n+   'chromium-375-dark-1|todo',\n    'chromium-375-dark-1|doing',\n    'chromium-375-dark-2|todo',\n    'chromium-375-dark-2|doing',\n    'chromium-375-light-1|todo',\n    'chromium-375-light-1|doing',\n...\n    'webkit-1280-light-2|todo',\n-   'webkit-1280-light-2|doing'\n  ]\n\n    at validateComparisons (<workspace>\\apps\\v11\\kanban-contract.cjs:114:10)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:70:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:67:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "missing verdict",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: comparison verdict missing\n    at validateComparisons (<workspace>\\apps\\v11\\kanban-contract.cjs:119:5)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:70:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:67:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "actual child exit 7",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: capture child nonzero\n\n7 !== 0\n\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:15:10)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:80:7\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:75:3)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "missing condition",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: missing conditions\n\n23 !== 24\n\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:21:10)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:106:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:101:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate condition",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    'chromium-375-dark-1',\n+   'chromium-375-dark-1',\n-   'chromium-375-dark-2',\n    'chromium-375-light-1',\n    'chromium-375-light-2',\n    'chromium-390-dark-1',\n    'chromium-390-dark-2',\n    'chromium-390-light-1',\n\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:22:10)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:106:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:101:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "target HEAD mismatch",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: targetHead mismatch\n+ actual - expected\n\n+ '0000000000000000000000000000000000000000'\n- 'e40d92bcc97fa1bf214b0d613aac2d144fd2138f'\n\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:20:12)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:106:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:101:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "target tree mismatch",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: targetTree mismatch\n+ actual - expected\n\n+ '0000000000000000000000000000000000000000'\n- 'a2a45930d647284db34f58f7039eb17718808393'\n\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:20:12)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:106:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:101:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "stale run token",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: runId mismatch\n+ actual - expected\n\n+ 'old-run'\n- 'bf0276cb-2425-4203-9ca0-51203f2089eb'\n\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:20:12)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:106:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:101:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "old result timestamp",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: stale report\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:23:3)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:106:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:101:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "missing comparison image record",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    'todo',\n-   'doing'\n  ]\n\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:43:12)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:106:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:101:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "font size changed after Undo",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   '28px',\n    '16px',\n    '16px',\n    '16px',\n-   '16px'\n  ]\n\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:38:14)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:106:9\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:101:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)",
+    "status": "PASS"
+  },
+  {
+    "name": "missing",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "Error: ENOENT: no such file or directory, stat '<workspace>\\.work\\p3-01-final-audit\\existing-controls\\missing\\chromium-375-dark-2-todo.png'\n    at Object.statSync (node:fs:1795:25)\n    at freshRead (<workspace>\\apps\\v11\\kanban-contract.cjs:9:8)\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:51:13)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:145:11\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:141:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)",
+    "status": "PASS"
+  },
+  {
+    "name": "corrupt",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "Error: unrecognised content at end of stream\n    at Id.process (<workspace>\\apps\\v11\\node_modules\\playwright-core\\lib\\utilsBundleImpl\\index.js:18:30094)\n    at Md.exports (<workspace>\\apps\\v11\\node_modules\\playwright-core\\lib\\utilsBundleImpl\\index.js:18:30981)\n    at wl.read (<workspace>\\apps\\v11\\node_modules\\playwright-core\\lib\\utilsBundleImpl\\index.js:18:32078)\n    at read (<workspace>\\apps\\v11\\kanban-image.cjs:10:24)\n    at freshRead (<workspace>\\apps\\v11\\kanban-contract.cjs:12:10)\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:51:13)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:145:11\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:141:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)",
+    "status": "PASS"
+  },
+  {
+    "name": "stale-image",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: stale image timestamp\n    at freshRead (<workspace>\\apps\\v11\\kanban-contract.cjs:8:3)\n    at validateCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:51:13)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:145:11\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:141:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)",
+    "status": "PASS"
+  },
+  {
+    "name": "clipped-suffix",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "AssertionError [ERR_ASSERTION]: synthetic missing suffix rejected by image comparator\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:153:11\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:141:5)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
+    "status": "PASS"
+  },
+  {
+    "name": "missing baseline",
+    "expected": "rejected",
+    "observed": "rejected",
+    "error": "Error: ENOENT: no such file or directory, open '<workspace>\\.work\\p3-01-final-audit\\existing-controls\\absent\\manifest.json'\n    at Object.readFileSync (node:fs:484:20)\n    at compareCapture (<workspace>\\apps\\v11\\kanban-contract.cjs:60:8)\n    at <workspace>\\apps\\v11\\kanban-controls.cjs:188:7\n    at check (<workspace>\\apps\\v11\\kanban-controls.cjs:21:7)\n    at Object.controls (<workspace>\\apps\\v11\\kanban-controls.cjs:185:3)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit.cjs:33:63)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)",
+    "status": "PASS"
+  }
+]

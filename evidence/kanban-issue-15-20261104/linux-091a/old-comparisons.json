@@ -1,0 +1,962 @@
+[
+  {
+    "condition": "chromium-375-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 425,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "3e5a4db49ee22f78672d50ac4cbe0a12140f1c0e28dde75d63bfa77958c1336f",
+    "baselineSha256": "8bf1989dbfc86fde18aab6ff69c2cde9c0b5eb0469310937cffb427b55c13303",
+    "diffSha256": "2a451eedb256f4228a2953c2df8da849607ccd85b2f3f80eb08b9c1b7e06fd67"
+  },
+  {
+    "condition": "chromium-375-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 302,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "4cc5e113cacd3fb4bd22ff6b9a10d5785f7bbe1ec0073804355595b880a738ae",
+    "baselineSha256": "e063655d4bac2637aa607fe7eb09035132ba1d8e2bc32ceb7050998c248388a8",
+    "diffSha256": "bbe845db80d8fe19eaddc9366cbfe798b2b48e34c788f351dc645b7db231c300"
+  },
+  {
+    "condition": "chromium-375-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 519,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "ec917e14243a03be68bf84f05752c8feb28ffed1cc75b2db28968fb5498af954",
+    "baselineSha256": "d6b32e829088c8d4d11816aeddc98f36935264da03e03f003719971d41c8f994",
+    "diffSha256": "3fea3bcf598a0af423eab39e7f9a2d19aa252aa64264afc5d89d46f82033702a"
+  },
+  {
+    "condition": "chromium-375-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 852,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "68d478c0be767f8c816b023239d76e090dbca8ebaed567e3ae53557cd693c66e",
+    "baselineSha256": "b126a79ec60379b641ebf41bceecaeee220a78a70f42cdff2c65edacac86d30c",
+    "diffSha256": "54e4dba0d69f1385c4bdf5da407f8a938a23a16fe25293dde97d874d5a0a04ca"
+  },
+  {
+    "condition": "chromium-375-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 435,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "759b2851917809bb8fab29a0d5db09eee9e7e2b307e6a4484d97d9c4e6a37fca",
+    "baselineSha256": "bfbc486d7e0b3c14fbe2473ff77e3bcc34aa704941f309c1108401f12492a474",
+    "diffSha256": "83c524a88dcda4fd6eb1829f61dd11d1ad1e0bdce9ab5864321035a17490394f"
+  },
+  {
+    "condition": "chromium-375-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 306,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "3d4aaccbcfaf02308c0db1c44c809c05588759354471e628beecd3bae37c8da5",
+    "baselineSha256": "ea381c966e0e8552f9e7a1c0c9bfbb2976a4a1a6ee011fe897bcef0d32edb8e1",
+    "diffSha256": "5c3edf9331d8cb6d117129c7f703a38c4be5c5df97357a0c613e7c258d6f953f"
+  },
+  {
+    "condition": "chromium-375-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 549,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "fd5fddcadf6da38d26e867a3337f2134eccfd2d25896f2afc7dcb9f4f16d3acf",
+    "baselineSha256": "48db540cee9f36fcfc2769aa6cd0a942e91e7c09aa8e5a3982eb587f822e60a4",
+    "diffSha256": "ad72da328903a7d554d236203558e512ab5505a118a58f3fe6beb7730dd9a8c4"
+  },
+  {
+    "condition": "chromium-375-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 873,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "86a76d314ab1602ed4b5c5b25d99a06a844a743714291eb830112884c4f2467a",
+    "baselineSha256": "088c8520fd4fb20bd70eaade5ae7c20b7f06d52cb8245b48dd90b93cf02174ed",
+    "diffSha256": "99a5b390768d695fdf0d3a980557c8a629706d886bd5a9cf3efe158418e4eafb"
+  },
+  {
+    "condition": "chromium-390-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 425,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "dccbcfad08003c9bb6fea94ad17ed385bd7b332dc4ec2234f85e149612f764a6",
+    "baselineSha256": "0034a3693b661aff5c5104f9730bd17bc86e18fb8faf52e9615ef226a0d9b952",
+    "diffSha256": "2a451eedb256f4228a2953c2df8da849607ccd85b2f3f80eb08b9c1b7e06fd67"
+  },
+  {
+    "condition": "chromium-390-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 382,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "5547ac8f84228ab4a50b038aee789afedad77cb48dba76d2beae208e3960a5bb",
+    "baselineSha256": "e063655d4bac2637aa607fe7eb09035132ba1d8e2bc32ceb7050998c248388a8",
+    "diffSha256": "eaa52bb016cb0820d5dedd041d29ed725df342b14f4c35474050e2715f3ca2b8"
+  },
+  {
+    "condition": "chromium-390-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 441,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "403b83cfa0d6af34ce30b4b9e644844cf44adb9669c7ed2cbc61be244e4ea08c",
+    "baselineSha256": "d6b32e829088c8d4d11816aeddc98f36935264da03e03f003719971d41c8f994",
+    "diffSha256": "5d2cba9cc72dc3dd91a508617b5f6b633387a7ffd4aa4cca44f54772e029864a"
+  },
+  {
+    "condition": "chromium-390-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 1035,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "752554443b081a22176df3b3ed70bf80fd0a3f240fb020bec1628d31a5533765",
+    "baselineSha256": "b126a79ec60379b641ebf41bceecaeee220a78a70f42cdff2c65edacac86d30c",
+    "diffSha256": "b46f978fd9ea14d61985fb3bd5afd6db34d1f0cc9a1489db3407ea2ff60a4dd4"
+  },
+  {
+    "condition": "chromium-390-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 435,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "39df7922b993b6443f7d1df7a397fe8f9da8ceff0b578e0d5a670cb096194556",
+    "baselineSha256": "0edc86179b74434f3ede10964540b43f6d2885f07a5d9d3c4316a79985da3436",
+    "diffSha256": "83c524a88dcda4fd6eb1829f61dd11d1ad1e0bdce9ab5864321035a17490394f"
+  },
+  {
+    "condition": "chromium-390-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 398,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "10a16660d09f1562552122e8b8a772f36985e440e62f0629ea961d124eb736c0",
+    "baselineSha256": "ea381c966e0e8552f9e7a1c0c9bfbb2976a4a1a6ee011fe897bcef0d32edb8e1",
+    "diffSha256": "2c3db39014499950a1f4ed28b34c06c46727bdf2505e8949892ce9bed8c5f7db"
+  },
+  {
+    "condition": "chromium-390-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 472,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "731a999a9b60a8d860cf922b6b726ca2be76b576f98f3883aca1bb82c9370254",
+    "baselineSha256": "48db540cee9f36fcfc2769aa6cd0a942e91e7c09aa8e5a3982eb587f822e60a4",
+    "diffSha256": "b6febe3e8096cabddf52aa947c9c66ad35679c5c019a842f1da400e2d1f653f6"
+  },
+  {
+    "condition": "chromium-390-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 1092,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "3226c3f7207207d87e423efed4733a3898662ee6e98697eaf18b860b0b66758c",
+    "baselineSha256": "088c8520fd4fb20bd70eaade5ae7c20b7f06d52cb8245b48dd90b93cf02174ed",
+    "diffSha256": "8760ecc581e44647a3e9f436655fd9345001c23b64e4a2fc4d0f911927719c3c"
+  },
+  {
+    "condition": "chromium-1280-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 419,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "2b40ba299c5333917029f26226f748a0f0a749aa8594dc655ed4c2630f9bda95",
+    "baselineSha256": "a5dc4487dc50994140af7d490d871adb2eb784012d56e8c33caffacb39a4e5dc",
+    "diffSha256": "1b0670d4910afb7ae3ecd00b3ed634238510d1a838332ac003f3debc00ad714c"
+  },
+  {
+    "condition": "chromium-1280-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 183,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "a39e0eb12f1ca8c2ee243193d335b280e90dbe2baff978b00dbef0f7f8ff4e6d",
+    "baselineSha256": "a6779663e67c1a0d9d51cabecb97ec8331a5bf942c08cfe12c0fafa27dd02cf7",
+    "diffSha256": "4f198ca91085aee4b19b59ef556d57fa9c50cb76cdd05c7ea22c510741aef4a1"
+  },
+  {
+    "condition": "chromium-1280-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 548,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "82bda45394bfa0627ddc1e0fc12c9bd0e755b55928b259d05c5c36450cdb8133",
+    "baselineSha256": "f44e471d378ae500a33dd1aa7c7ed899439eedc7d3ea8b0d89effd4e80d38d45",
+    "diffSha256": "5ad470684f2473aa093a1d0a0849b502b0de959f6f946e5d54938e5853534a8a"
+  },
+  {
+    "condition": "chromium-1280-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 957,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "cb14a90433ff9c500b09be1c9b619b683d85e3663ef4a46c9cf5285d0bf57d14",
+    "baselineSha256": "0ebd9fde7704dcd06de9015cb5b4cf4a7b778e012f4d3647a6893426c06ec53e",
+    "diffSha256": "af0ad1472c557160657cec0294ec963f32c9507928475a4e66b2f61aa41e5210"
+  },
+  {
+    "condition": "chromium-1280-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 434,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "6c3936c27a0fd17350f218827f70e362a802204fc2c3feab316e32eee0f03875",
+    "baselineSha256": "c135b5d270bdc9db159f93d56e5c22a23a6abac813f6552717259959558262c2",
+    "diffSha256": "a7533aa48892e2f306e278a32faf9bf6b2f3429db002f2ec4440068d7ce87634"
+  },
+  {
+    "condition": "chromium-1280-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 220,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 22
+    },
+    "actualSha256": "d94e6a100f5bb6b5e9845de5366b902699d3254c5eb312945e42c4ceeafa5610",
+    "baselineSha256": "3e03d2b4a2be84967cc692e4bfc17999bf2e33f65874cd2d25aeff320bae4d26",
+    "diffSha256": "4fa5803d248220abc27b2d274d6da300a9be4368defca4c83683816c15266c69"
+  },
+  {
+    "condition": "chromium-1280-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 604,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "ff89e3b56f5606dd9a6872e12f10b60c19567411dbc4dab6db79470e592a8d21",
+    "baselineSha256": "afcbacecebbb50989c5c97621c1f7a7822cbf293ea3484267c0d61f447fb2023",
+    "diffSha256": "05f9cb96f7def235f74f4e3e2b233eed9144bdc5d7b5b341ddd8e8c738c9007c"
+  },
+  {
+    "condition": "chromium-1280-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 1026,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 43
+    },
+    "actualSha256": "9152cc28beed9cbd360fb0f32913a490305478f763c19db8b199d8d620e6c6f4",
+    "baselineSha256": "54c55858438c996f8401d384f1f8546fd00aab14bb6fe6e0c5ca713c92abe44a",
+    "diffSha256": "8a4d1460d926d8f49cb2d99661a171947d4f8665c452482e21f86297c3158aa9"
+  },
+  {
+    "condition": "webkit-375-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 194,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "66219c6204c1a08e94bbc36186253959b9660eb479ea287fe6365f04f1e09f53",
+    "baselineSha256": "260173310488f25928a72b0e58de5e341fb48df0ea014bec5d6be884c18c4986",
+    "diffSha256": "06edc5b7a6c55a1e4eb331d235a2189b3952c713c679df7944f5c1254cc471e0"
+  },
+  {
+    "condition": "webkit-375-dark-1",
+    "label": "doing",
+    "status": "PASS",
+    "reason": "label paint matches approved baseline",
+    "differentPixels": 2,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "fe04358d2ef03d095cb4191313de696433608997f6d7669032bf6f252e69915c",
+    "baselineSha256": "67d7c00b73fac524651707737be7cf21f284baedff007d48365ae69043f3f570",
+    "diffSha256": "e203259e6ba13cf829ee3056244a26cf0ce6f25c5b1b7edf4391348c6a4fd23b"
+  },
+  {
+    "condition": "webkit-375-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 605,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "65f86fbeb8a1aea1679f5181ea36eb409ed10ccb42817d036a15c21a1584e836",
+    "baselineSha256": "aea47dbc6bb599e3fd5ab44b5f7300aa1990bd7cff181c973e59d14e29cecde1",
+    "diffSha256": "849b9d4db89cda855c3cf72fc5274ae585cbfe61805c6cced5e7a7d505e740f5"
+  },
+  {
+    "condition": "webkit-375-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 208,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "978447e5842e6fa2da5d973dea2dad168f9e556809f52e1cd376d83e3cf2bfc6",
+    "baselineSha256": "954f3f45d0f56933f95a0dae5a742f3d8d2b9024a5bb4b8556cf4a445789c8d8",
+    "diffSha256": "8879964d142e8bcdbe333cec16d646212c01ec3ddb68cc9a53ec2fc60ee793b3"
+  },
+  {
+    "condition": "webkit-375-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 199,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "ae559c1686cf03d3f89c08b51aba96ff750ad6e8f73e42c4af1608d32b2a786a",
+    "baselineSha256": "e0da045659ef0a9347d70e84ae37ca05970a7bd3e88432a966047560130e6f7e",
+    "diffSha256": "29ffc58318357a3fc330295a7b5c83750ae5b46876dd081dbcc1db52a4a358ea"
+  },
+  {
+    "condition": "webkit-375-light-1",
+    "label": "doing",
+    "status": "PASS",
+    "reason": "label paint matches approved baseline",
+    "differentPixels": 0,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "8b0ecd95fbeb5d26704cacc5eb57020a978069a8b9d671909927cdb59b7d4a3f",
+    "baselineSha256": "89510616fdffd843d183799be9b048bc1df457b1f06d102004c9ba49cd7d1094",
+    "diffSha256": "1bbaadd0a852720f14ba27fcbb4279722a991b3a3ea9ad3a99ecd2c87d201909"
+  },
+  {
+    "condition": "webkit-375-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 580,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "a74a118cd003b976ecd360d174b60628b33d2d175705d387a32f14d6a1737f5c",
+    "baselineSha256": "beadadd12901a6351e1aa3bd16360ed1d042521a2e5f151abbb1132c497886de",
+    "diffSha256": "cf096c1fc5b3c26592c65e95dd75f5612df35b509ad4fe6018532561b7dba587"
+  },
+  {
+    "condition": "webkit-375-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 194,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "a55de35a856789f4a16e5243a8b249bbd9e9cea193fec0e49144e4d75c19fa1e",
+    "baselineSha256": "97cca045989697ae15fd73f655c0bb460b2eb33a64162c745d98a2d4cd460dd0",
+    "diffSha256": "ca23ef9b8a2fe4e6e4db6c91a0f9df14d948296f359c029deab5238e7534c9cb"
+  },
+  {
+    "condition": "webkit-390-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 194,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "09772264e9969b1c713991a1b544e523d70b090ed0d6a7201071f25fd8364913",
+    "baselineSha256": "b064947e7b9648712b3774a31477c70f236ebc296eb6a471b56fa48650d955c5",
+    "diffSha256": "c3065a579da6741aef9ea6dea713dd19087a41e870ab59968404aab4c7dcffe5"
+  },
+  {
+    "condition": "webkit-390-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 236,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "75bc73657f485dfa82b22cc4dff741ef808be22ab7ddab161d71ecfdf61837fe",
+    "baselineSha256": "400fe78c6382a214912f5b9df9f80c4aea342ffa618059352e3ffa2e48cd2ce0",
+    "diffSha256": "de7c4337831b414f46de6c96d60ba0906eb5621b8cc20b0ece9b06581a4110bb"
+  },
+  {
+    "condition": "webkit-390-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 528,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "4bf43c3638821cd167ae8ef748735a211ac0583297aaff28deba500f029d4337",
+    "baselineSha256": "6772f256f9edd577542ede813b56ba882e5cb748f91ae5232732767419fec100",
+    "diffSha256": "e0edf96157617e7827dbd6462e7387d51971ef36f12d88978ddce5cdd638ca12"
+  },
+  {
+    "condition": "webkit-390-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 576,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "7165c1321a9e319121f11eca8c391ab67ea40663f81bb5edf271b72536ffcfe3",
+    "baselineSha256": "72af98a78bc91084c784584c072445372901185877ca27885271ad9fdc212659",
+    "diffSha256": "8fa05ad5adca0f242843ea396f84ed1713dfa872def23ac99e0af96f6f87ea2b"
+  },
+  {
+    "condition": "webkit-390-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 199,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "4cc0e800c84a2200cfb9d6491677d0b6e24ad1e4fa4652fada2af53f4ce8d574",
+    "baselineSha256": "1b441a0ad53ee88c0f650c8a3aadb2a57e8a0ca866c394688e0ef3db0706b9b3",
+    "diffSha256": "b1a54b6dab4cb3c9047cb47b3d429f4fd0555b6a6ff58de344df458fff149095"
+  },
+  {
+    "condition": "webkit-390-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 250,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "2d0eb9cecd12f363ee4610df4345cbd88221fec8a047e3a5fb47ecbeaa6f1e5f",
+    "baselineSha256": "d8b38cc73a50bb5c4ad3b4dbb2893659c6bf7ffa0147414d95ed6c4f51c4f017",
+    "diffSha256": "559284eecec70a139822e2cc88010c200fab5dfdaa9f08b8a39b90d8070aa295"
+  },
+  {
+    "condition": "webkit-390-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 510,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "9c9151f2a487cf659404bc7dc1767b88483e587eac4b458087d2af218ffe143e",
+    "baselineSha256": "9780409386e2b6e3a48193849c6bdfd91ea1aa8fe7d8e70957118fcbae3db1b1",
+    "diffSha256": "23a5747a98fde548acb4c8b9bbce361f7eeccd7e5a8b3a70ebb83155b483fdba"
+  },
+  {
+    "condition": "webkit-390-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 610,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "10788cde9ab58d348540f5430c79a28c82604b00bfcb3c6df0748535b91e4f77",
+    "baselineSha256": "a439dcc3baf1dcfcdcca7cc9305f7751b994a4e515c30153115f35c2d14dd6a9",
+    "diffSha256": "619a3d9dd0d64c3afb2125123cea182f7d458708bc660575ee4f69106ab14d82"
+  },
+  {
+    "condition": "webkit-1280-dark-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 231,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "992697aed63ea335752332b5d28b6f902d881fbd2384aaf9846773efbf15d8a0",
+    "baselineSha256": "66219c6204c1a08e94bbc36186253959b9660eb479ea287fe6365f04f1e09f53",
+    "diffSha256": "6159026ddd04eb1d7ad036841e9fe89481cf340fc3db8207c61cc2e5868a99a7"
+  },
+  {
+    "condition": "webkit-1280-dark-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 378,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "850df0c31a65252aa5fd92c3fd78fa930dcf527f777db585f92e55c7b9287864",
+    "baselineSha256": "75bc73657f485dfa82b22cc4dff741ef808be22ab7ddab161d71ecfdf61837fe",
+    "diffSha256": "695ee17e1c32dc718d43a26f6ed7615bd271b68a7e91c66ebb115b891ea8f888"
+  },
+  {
+    "condition": "webkit-1280-dark-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 614,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "5f3b2f93f3e1e5edb69e65db10b0b90fa41f926453fbd93fc9e785533606a498",
+    "baselineSha256": "951aeb2a29e47d3837b921a6412e06a821e0d2dab539ea271c185f430828663f",
+    "diffSha256": "78aa3b5b70ad8d0f01d297f85c9fba77e66593f617889a4f6cb8aaea33e936dc"
+  },
+  {
+    "condition": "webkit-1280-dark-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 500,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "9896628a18e1c8584aa3eb3f4c9de9ae2c84c1ea443c1413e9caef089762d40e",
+    "baselineSha256": "3b0617f10e2a6111f4243d9ca4617bac66afdd6b5609ff355b89ca590ee66efe",
+    "diffSha256": "a3560d1141d50c1b53122720579c597db3ef33e02ac0c1e47fd27925f79c5248"
+  },
+  {
+    "condition": "webkit-1280-light-1",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 232,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "7b9c943565989da40ac1ab4875cb2abd7231bfb526a2c66cd54fec60cb449654",
+    "baselineSha256": "ae559c1686cf03d3f89c08b51aba96ff750ad6e8f73e42c4af1608d32b2a786a",
+    "diffSha256": "2d3fe1239debcba0bfa3dc0a58c325dd576c025a2d705b0e243e09a101379d63"
+  },
+  {
+    "condition": "webkit-1280-light-1",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 380,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 48,
+      "height": 31
+    },
+    "actualSha256": "e45866333ab1d7101f0776e755d7071ad9a5048794e31a4a61a0eea10a8697c2",
+    "baselineSha256": "2d0eb9cecd12f363ee4610df4345cbd88221fec8a047e3a5fb47ecbeaa6f1e5f",
+    "diffSha256": "6a12a6ce79ddc22a0c616a92027a751c22572f6b400657b9c3594e08266cc37a"
+  },
+  {
+    "condition": "webkit-1280-light-2",
+    "label": "todo",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 583,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "749ab3e90d242be793a8b155041a537b64595bf2ea1de4feeed3936f1d501e44",
+    "baselineSha256": "a95b65abd5888d7917bd0b76e180637ed01e689e9e5cfbfdb5f6692f58c4d8fb",
+    "diffSha256": "3ba00c457b28f7afb06d4676df699ff2e0780e370fb9bd2b955c3734c1bfad8c"
+  },
+  {
+    "condition": "webkit-1280-light-2",
+    "label": "doing",
+    "status": "FAIL",
+    "reason": "label paint differs (including clipped or missing glyphs)",
+    "differentPixels": 543,
+    "policy": {
+      "channelTolerance": 12,
+      "maxDifferentPixels": 2
+    },
+    "roi": {
+      "x": 10,
+      "y": 10,
+      "width": 96,
+      "height": 54
+    },
+    "actualSha256": "3cfa120df7a7d355cd56ce9776ac7b1cf34a5986ea9ca7888af25ae598ed39c2",
+    "baselineSha256": "9595447674bbcd8d0cfaa1180590daecd7d00e05a529a57c5ea2177913451a21",
+    "diffSha256": "e6bd596ad8ecfda8a62579ed7ddfbf5ba42c1d13974e4fd4772edf1c31789308"
+  }
+]

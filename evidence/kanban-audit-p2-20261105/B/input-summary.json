@@ -1,0 +1,62 @@
+{
+  "started": "2026-11-04T20:47:44.848Z",
+  "harnessHead": "f9db21c4da541a20d416011bb3f866f69302e402",
+  "harnessTree": "767d07994c79e0b94ffca3c6fd4f2d5242fbf88a",
+  "runId": "049f2862-ccde-4140-9f0b-863997eb40af",
+  "runs": [
+    {
+      "label": "old",
+      "source": {
+        "head": "3b90ddbb77787b759c014a24d99f05ca98dda89f",
+        "tree": "0b1714d642778e26507f8ba94b8be63c034deb5c",
+        "files": {
+          "index.html": "a5bbcd8ad2d71979c330e32e618247792bbc641ebd7282815e638db433059c03",
+          "exhibits.js": "2c1dbe3142629c2df988704b05c5ecf66857127f7db273a629960239a3f63a76",
+          "exhibits.css": "3239f709423fa0feced232597dae8e5fd2dc7c54bf4ffaaa7408a3ea44045389"
+        }
+      },
+      "identity": {
+        "runId": "a9dad2e1-85bb-4c88-8caa-ccdf9b28170c",
+        "targetHead": "3b90ddbb77787b759c014a24d99f05ca98dda89f",
+        "targetTree": "0b1714d642778e26507f8ba94b8be63c034deb5c",
+        "started": 1793825324516
+      },
+      "child": {
+        "code": 0,
+        "signal": null,
+        "timedOut": false
+      },
+      "legacyChild": {
+        "code": 0,
+        "signal": null,
+        "timedOut": false
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "label": "current",
+      "total": 48,
+      "failed": 0
+    },
+    {
+      "label": "old",
+      "total": 48,
+      "failed": 48
+    }
+  ],
+  "controls": 20,
+  "boundaryControls": {
+    "normalAccepted": 48,
+    "suffixRejected": 48,
+    "edgeControls": 192
+  },
+  "reviewReplay": {
+    "status": "PASS",
+    "oldFalseAcceptances": 4,
+    "newImageRejections": 4
+  },
+  "status": "PASS",
+  "finished": "2026-11-04T20:49:55.770Z",
+  "exitCode": 0
+}

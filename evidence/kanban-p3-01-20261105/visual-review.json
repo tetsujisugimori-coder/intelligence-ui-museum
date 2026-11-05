@@ -1,0 +1,825 @@
+{
+  "reviewer": "implementation agent; self visual review",
+  "independent": false,
+  "atJST": "2026-11-05T05:40:06.033413+09:00",
+  "method": "Viewed all four 12-image contact sheets generated from unchanged approved PNGs. Green=full comparison raster; red=diagnostic glyph bounds (frame outside ink). Coordinates are original pixels; contact display is nearest-neighbor 3x only, never comparison input.",
+  "scope": "Initial todo/doing only; all glyphs complete; four sides inside full raster; no missing ink outside diagnostic box, arrow excluded from diagnostic mask. Does not assess completed label or popup.",
+  "images": [
+    {
+      "file": "chromium-375-dark-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 42
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 61,
+        "top": 12,
+        "bottom": 27
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-375-dark-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 43
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 60,
+        "top": 12,
+        "bottom": 28
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-375-dark-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 109,
+        "top": 15,
+        "bottom": 47
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-375-dark-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 106,
+        "top": 15,
+        "bottom": 46
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-375-light-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 42
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 61,
+        "top": 12,
+        "bottom": 27
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-375-light-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 43
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 60,
+        "top": 12,
+        "bottom": 28
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-375-light-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 109,
+        "top": 15,
+        "bottom": 47
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-375-light-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 106,
+        "top": 15,
+        "bottom": 46
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-390-dark-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 43
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 61,
+        "top": 12,
+        "bottom": 27
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-390-dark-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 43
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 60,
+        "top": 12,
+        "bottom": 28
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-390-dark-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 109,
+        "top": 15,
+        "bottom": 47
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-390-dark-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 106,
+        "top": 15,
+        "bottom": 46
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-390-light-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 43
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 61,
+        "top": 12,
+        "bottom": 27
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-390-light-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 43
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 60,
+        "top": 12,
+        "bottom": 28
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-390-light-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 109,
+        "top": 15,
+        "bottom": 47
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-390-light-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 106,
+        "top": 15,
+        "bottom": 46
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-1280-dark-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 43
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 62,
+        "top": 13,
+        "bottom": 28
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-1280-dark-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 43
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 60,
+        "top": 12,
+        "bottom": 28
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-1280-dark-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 109,
+        "top": 14,
+        "bottom": 46
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-1280-dark-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 106,
+        "top": 16,
+        "bottom": 47
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-1280-light-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 43
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 62,
+        "top": 13,
+        "bottom": 28
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-1280-light-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 89,
+        "height": 43
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 60,
+        "top": 12,
+        "bottom": 28
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-1280-light-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 15,
+        "right": 109,
+        "top": 14,
+        "bottom": 46
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "chromium-1280-light-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 64
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 106,
+        "top": 16,
+        "bottom": 47
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-375-dark-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 62,
+        "top": 16,
+        "bottom": 32
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-375-dark-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 61,
+        "top": 16,
+        "bottom": 32
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-375-dark-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 110,
+        "top": 19,
+        "bottom": 51
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-375-dark-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 107,
+        "top": 20,
+        "bottom": 51
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-375-light-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 62,
+        "top": 16,
+        "bottom": 32
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-375-light-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 61,
+        "top": 16,
+        "bottom": 32
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-375-light-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 110,
+        "top": 19,
+        "bottom": 51
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-375-light-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 107,
+        "top": 20,
+        "bottom": 51
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-390-dark-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 62,
+        "top": 17,
+        "bottom": 33
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-390-dark-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 61,
+        "top": 17,
+        "bottom": 33
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-390-dark-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 110,
+        "top": 20,
+        "bottom": 52
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-390-dark-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 107,
+        "top": 21,
+        "bottom": 52
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-390-light-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 62,
+        "top": 17,
+        "bottom": 33
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-390-light-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 61,
+        "top": 17,
+        "bottom": 33
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-390-light-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 110,
+        "top": 20,
+        "bottom": 52
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-390-light-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 107,
+        "top": 21,
+        "bottom": 52
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-1280-dark-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 63,
+        "top": 16,
+        "bottom": 32
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-1280-dark-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 61,
+        "top": 17,
+        "bottom": 33
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-1280-dark-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 110,
+        "top": 19,
+        "bottom": 51
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-1280-dark-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 107,
+        "top": 20,
+        "bottom": 51
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-1280-light-1-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 63,
+        "top": 16,
+        "bottom": 32
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-1280-light-1-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 95,
+        "height": 52
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 61,
+        "top": 17,
+        "bottom": 33
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-1280-light-2-todo.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 110,
+        "top": 19,
+        "bottom": 51
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    },
+    {
+      "file": "webkit-1280-light-2-doing.png",
+      "fullRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 143,
+        "height": 75
+      },
+      "glyphBounds": {
+        "left": 16,
+        "right": 107,
+        "top": 20,
+        "bottom": 51
+      },
+      "allFourEdgesIncluded": true,
+      "fullTextVisuallyConfirmed": true
+    }
+  ]
+}

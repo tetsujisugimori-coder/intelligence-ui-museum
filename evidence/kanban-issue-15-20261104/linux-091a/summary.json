@@ -1,0 +1,75 @@
+{
+  "started": "2026-11-04T09:10:50.812Z",
+  "harnessHead": "091a7e87ca5c33d06b3c019d39eb7e300f4c0d86",
+  "harnessTree": "797792e7854c574ac2cc39f197b9b905edb8419a",
+  "runId": "c2790f23-c930-4662-81a0-9a7f34c679cb",
+  "runs": [
+    {
+      "label": "current",
+      "source": {
+        "head": "091a7e87ca5c33d06b3c019d39eb7e300f4c0d86",
+        "tree": "797792e7854c574ac2cc39f197b9b905edb8419a",
+        "files": {
+          "index.html": "a5bbcd8ad2d71979c330e32e618247792bbc641ebd7282815e638db433059c03",
+          "exhibits.js": "2c1dbe3142629c2df988704b05c5ecf66857127f7db273a629960239a3f63a76",
+          "exhibits.css": "54be52529802ae1353cffb5658dfdde8badc9cb880d40e94c65a8cdb7f52f49a"
+        }
+      },
+      "identity": {
+        "runId": "73374e3a-2c30-414e-a5d5-98a1e3c5d0ce",
+        "targetHead": "091a7e87ca5c33d06b3c019d39eb7e300f4c0d86",
+        "targetTree": "797792e7854c574ac2cc39f197b9b905edb8419a",
+        "started": 1793783450841
+      },
+      "child": {
+        "code": 0,
+        "signal": null,
+        "timedOut": false
+      }
+    },
+    {
+      "label": "old",
+      "source": {
+        "head": "3b90ddbb77787b759c014a24d99f05ca98dda89f",
+        "tree": "0b1714d642778e26507f8ba94b8be63c034deb5c",
+        "files": {
+          "index.html": "a5bbcd8ad2d71979c330e32e618247792bbc641ebd7282815e638db433059c03",
+          "exhibits.js": "2c1dbe3142629c2df988704b05c5ecf66857127f7db273a629960239a3f63a76",
+          "exhibits.css": "3239f709423fa0feced232597dae8e5fd2dc7c54bf4ffaaa7408a3ea44045389"
+        }
+      },
+      "identity": {
+        "runId": "e182d9a9-34a8-4b2b-b221-dd74853c355a",
+        "targetHead": "3b90ddbb77787b759c014a24d99f05ca98dda89f",
+        "targetTree": "0b1714d642778e26507f8ba94b8be63c034deb5c",
+        "started": 1793783496581
+      },
+      "child": {
+        "code": 0,
+        "signal": null,
+        "timedOut": false
+      },
+      "legacyChild": {
+        "code": 0,
+        "signal": null,
+        "timedOut": false
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "label": "current",
+      "total": 48,
+      "failed": 0
+    },
+    {
+      "label": "old",
+      "total": 48,
+      "failed": 46
+    }
+  ],
+  "controls": 14,
+  "status": "PASS",
+  "finished": "2026-11-04T09:12:40.830Z",
+  "exitCode": 0
+}

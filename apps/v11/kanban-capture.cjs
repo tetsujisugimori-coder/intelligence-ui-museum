@@ -1,0 +1,82 @@
+"use strict";
+const fs = require("node:fs"),
+  path = require("node:path"),
+  { chromium, webkit } = require("playwright");
+const { exercise, conditions, key } = require("./kanban-scenarios.cjs");
+const { sha, read } = require("./kanban-image.cjs");
+(async () => {
+  const dir = path.resolve(process.env.EVIDENCE_DIR);
+  if (fs.existsSync(path.join(dir, "capture.json")))
+    throw Error("Refusing reused capture");
+  fs.mkdirSync(dir, { recursive: true });
+  const runId = process.env.KANBAN_RUN_ID;
+  if (!runId || !process.env.KANBAN_TARGET_HEAD)
+    throw Error("Missing run identity");
+  let report = {
+    runId,
+    targetHead: process.env.KANBAN_TARGET_HEAD,
+    targetTree: process.env.KANBAN_TARGET_TREE,
+    started: new Date().toISOString(),
+    ...require("./kanban-fonts.cjs").fonts(),
+    environment: {
+      platform: process.platform,
+      arch: process.arch,
+      node: process.version,
+      playwright: require("playwright/package.json").version,
+      os: require("node:os").release(),
+    },
+    rows: [],
+  };
+  try {
+    for (const [engine, type] of Object.entries({ chromium, webkit })) {
+      const browser = await type.launch();
+      try {
+        for (const condition of conditions.filter((c) => c.engine === engine)) {
+          const context = await browser.newContext({
+            viewport: { width: condition.width, height: 900 },
+            deviceScaleFactor: 1,
+            locale: "ja-JP",
+            timezoneId: "UTC",
+            reducedMotion: "reduce",
+            colorScheme: "dark",
+          });
+          const row = { ...condition, version: browser.version() };
+          try {
+            await exercise(await context.newPage(), row, dir);
+            for (const i of row.images)
+              i.sha256 = sha(read(path.join(dir, i.file)).bytes);
+            row.status = "PASS";
+          } catch (e) {
+            row.status = "FAIL";
+            row.error = e.stack;
+            process.exitCode = 1;
+          } finally {
+            report.rows.push(row);
+            fs.writeFileSync(
+              path.join(dir, "capture.json"),
+              JSON.stringify(report, null, 2),
+            );
+            await context.close();
+          }
+        }
+      } finally {
+        await browser.close();
+      }
+    }
+  } finally {
+    report.finished = new Date().toISOString();
+    report.exitCode = process.exitCode || 0;
+    fs.writeFileSync(
+      path.join(dir, "capture.json"),
+      JSON.stringify(report, null, 2),
+    );
+    console.log(
+      report.rows
+        .map((r) => `${key(r)} ${r.status} ${r.error || ""}`)
+        .join("\n"),
+    );
+  }
+})().catch((e) => {
+  console.error(e);
+  process.exitCode = 1;
+});

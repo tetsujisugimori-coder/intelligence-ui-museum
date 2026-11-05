@@ -1,0 +1,57 @@
+{
+  "status": "FAIL",
+  "exitCode": 1,
+  "error": {
+    "code": "SUMMARY_STATUS",
+    "phase": "summary-contract",
+    "message": "[SUMMARY_STATUS] input summary is not successful acceptance evidence",
+    "stack": "Error: [SUMMARY_STATUS] input summary is not successful acceptance evidence\n    at need (<workspace>\\apps\\v11\\kanban-audit-contract.cjs:22:24)\n    at Object.summaryContract (<workspace>\\apps\\v11\\kanban-audit-contract.cjs:60:3)\n    at <workspace>\\apps\\v11\\kanban-audit-main.cjs:27:53\n    at phase (<workspace>\\apps\\v11\\kanban-audit-main.cjs:16:18)\n    at Object.<anonymous> (<workspace>\\apps\\v11\\kanban-audit-main.cjs:27:19)\n    at Module._compile (node:internal/modules/cjs/loader:1929:14)\n    at Object..js (node:internal/modules/cjs/loader:2060:10)\n    at Module.load (node:internal/modules/cjs/loader:1651:32)\n    at Module._load (node:internal/modules/cjs/loader:1443:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)"
+  },
+  "checks": [
+    {
+      "name": "summary-contract",
+      "status": "FAIL"
+    },
+    {
+      "name": "capture-evidence",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "recorded-comparisons",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "legacy-evidence",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "original-control-records",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "p3-records",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "current-recalculation",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "old-recalculation",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "original-control-reexecution",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "boundary-reexecution",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "review-reexecution",
+      "status": "NOT_RUN"
+    }
+  ],
+  "runs": []
+}

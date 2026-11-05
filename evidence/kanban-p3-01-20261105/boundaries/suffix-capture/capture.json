@@ -1,0 +1,2724 @@
+{
+  "runId": "bf0276cb-2425-4203-9ca0-51203f2089eb",
+  "targetHead": "e40d92bcc97fa1bf214b0d613aac2d144fd2138f",
+  "targetTree": "a2a45930d647284db34f58f7039eb17718808393",
+  "started": "2026-11-04T09:25:29.601Z",
+  "fontFiles": [
+    {
+      "file": "opentype/ipafont-gothic/ipag.ttf",
+      "sha256": "503af4a8b84d1079b8e2e358dc7f7a7fb8cb7a1f212f35eaef6782dbfc75a55e"
+    },
+    {
+      "file": "opentype/ipafont-gothic/ipagp.ttf",
+      "sha256": "a63f6153841e56ec9df1b31a54d98d3f41d8aaa1c3d8df30a33502296f5b8068"
+    },
+    {
+      "file": "opentype/tlwg/Loma-Bold.otf",
+      "sha256": "16f3cdd73f47abf8bde2aafd9569b36388f6ae388e98088a77c3312fbaa98b80"
+    },
+    {
+      "file": "opentype/tlwg/Loma-BoldOblique.otf",
+      "sha256": "d7e3ba82a6605b3e6f126d4a77b78cbf0694f17a5a79fb8e9709936234b04700"
+    },
+    {
+      "file": "opentype/tlwg/Loma-Oblique.otf",
+      "sha256": "133e6af2dcdfea629bc734f2bbbbd7d66cff2040ffb0b197571740c23d87e3c6"
+    },
+    {
+      "file": "opentype/tlwg/Loma.otf",
+      "sha256": "e14126fe603116a6da8fb54822e8521589983d17d78cae489e98faed4b2f4cd2"
+    },
+    {
+      "file": "opentype/unifont/unifont_csur.otf",
+      "sha256": "065b75985f258df8573371bd9bda0a37a39ac85a38b0062a37f15654c2eb7341"
+    },
+    {
+      "file": "opentype/unifont/unifont_jp_sample.otf",
+      "sha256": "80668b601ceffe8030eef4215e9148b9ddc5c3802e3dba86a306c76fc1f7f9d4"
+    },
+    {
+      "file": "opentype/unifont/unifont_jp.otf",
+      "sha256": "218eb241082aa4f47399f7c2058e25abffa8d081b312542bc91740681f006597"
+    },
+    {
+      "file": "opentype/unifont/unifont_sample.otf",
+      "sha256": "5b73116f46a3fc4726e4b2f0a51f9c163526444d55b8db88c4ab8ec9453fcb20"
+    },
+    {
+      "file": "opentype/unifont/unifont_upper_sample.otf",
+      "sha256": "68dfc1d34d533c8dada07a8dd84294635afdc4790904fa956ea735ca1d20c127"
+    },
+    {
+      "file": "opentype/unifont/unifont_upper.otf",
+      "sha256": "f9a49517cb5a06e02692b403bc21f96ea767128db52f089d31261a8968d3ace8"
+    },
+    {
+      "file": "opentype/unifont/unifont.otf",
+      "sha256": "2498b80f9664fef91e6988d7e082146a2082a7e7bb4a2deb2fbf9a365aa2970c"
+    },
+    {
+      "file": "truetype/fonts-japanese-gothic.ttf",
+      "sha256": "503af4a8b84d1079b8e2e358dc7f7a7fb8cb7a1f212f35eaef6782dbfc75a55e"
+    },
+    {
+      "file": "truetype/freefont/FreeMono.ttf",
+      "sha256": "9691040d4d89266db211cd9da1094cf1991beaaf5e01cc752bc1dab84d483534"
+    },
+    {
+      "file": "truetype/freefont/FreeMonoBold.ttf",
+      "sha256": "7a5ded6ffe5ba84c7c478de521ad0653efae4d2b92b251216bc390c6022e91ac"
+    },
+    {
+      "file": "truetype/freefont/FreeMonoBoldOblique.ttf",
+      "sha256": "04d540f1fe223d24a391f1c50f98eab6529b2a8fa670d628fad7e8443224967b"
+    },
+    {
+      "file": "truetype/freefont/FreeMonoOblique.ttf",
+      "sha256": "c350255406bf9dd314c8261d49118b2d44c38d7c2555884eba43dffea7bd7313"
+    },
+    {
+      "file": "truetype/freefont/FreeSans.ttf",
+      "sha256": "350badd6ab6a58e7fd7a0ea2ae0c10174941a08e1cd06b3c6010e10b3d5ae319"
+    },
+    {
+      "file": "truetype/freefont/FreeSansBold.ttf",
+      "sha256": "e0a07c1e9495262c430fde74e80daadd0b2a353eb444a47b265c62f5a5836af5"
+    },
+    {
+      "file": "truetype/freefont/FreeSansBoldOblique.ttf",
+      "sha256": "f26d93f22f70bd97270a6b5506497a8c9e84c64399343cf1c08a50e4016cf967"
+    },
+    {
+      "file": "truetype/freefont/FreeSansOblique.ttf",
+      "sha256": "31f2e994c6bb0f6c8a8f1d27ae25b4b754ef072154220bb4db2a69e8e3d1193f"
+    },
+    {
+      "file": "truetype/freefont/FreeSerif.ttf",
+      "sha256": "c57bf5de095af4e070c2acb5bce634316409ed4203b5098f4fdadb691dc7b3d2"
+    },
+    {
+      "file": "truetype/freefont/FreeSerifBold.ttf",
+      "sha256": "f078f2ac5d38addc71e2c123d86584341360b5bf27bc1cf238574ebe4f5a0f4d"
+    },
+    {
+      "file": "truetype/freefont/FreeSerifBoldItalic.ttf",
+      "sha256": "c59455ea29607bbf62b0cfdffdc118ade887acd86a68c2c9873fb1187b021e58"
+    },
+    {
+      "file": "truetype/freefont/FreeSerifItalic.ttf",
+      "sha256": "775b2ed7b9026f288b60f2479e07ee8e3147daa89d75848f11eb21faab662070"
+    },
+    {
+      "file": "truetype/liberation/LiberationMono-Bold.ttf",
+      "sha256": "626655e94dd82f3f42549daf995c921b0915fa8ab1f4b839559e8892ea41d240"
+    },
+    {
+      "file": "truetype/liberation/LiberationMono-BoldItalic.ttf",
+      "sha256": "15eb161953e3ecc7fc05a3fec8a59e0f4e0a54a4e375736adf8e98d65981f813"
+    },
+    {
+      "file": "truetype/liberation/LiberationMono-Italic.ttf",
+      "sha256": "a71b2c25c89da05cf0e7c4dbba8d473fdead0b181ae56165217747d2c1f39215"
+    },
+    {
+      "file": "truetype/liberation/LiberationMono-Regular.ttf",
+      "sha256": "395fa5ab8d40c8eba390ced528744ea75a7f69aabf3e68b6f925ca0e39a27370"
+    },
+    {
+      "file": "truetype/liberation/LiberationSans-Bold.ttf",
+      "sha256": "3973aa5054fb467dd5627245d3dc82e37bf16fe075756156a570455871351582"
+    },
+    {
+      "file": "truetype/liberation/LiberationSans-BoldItalic.ttf",
+      "sha256": "c80fa7f2ffa0e01d4d8dcd6a6d1e43eda665222d1b4db597dde1174c456006cf"
+    },
+    {
+      "file": "truetype/liberation/LiberationSans-Italic.ttf",
+      "sha256": "830c5fa600505fb4c1a271b4271c53c44bae43f492b2a240d0e98a3a7a380121"
+    },
+    {
+      "file": "truetype/liberation/LiberationSans-Regular.ttf",
+      "sha256": "4659bc0c58c5028dd488ec928d41d9265db43d9b669fc14ca8b0832daca7b144"
+    },
+    {
+      "file": "truetype/liberation/LiberationSerif-Bold.ttf",
+      "sha256": "9e66c25e20868756bf12eb24a520a4552727c9cd108f577f7ae33e3c0110e39c"
+    },
+    {
+      "file": "truetype/liberation/LiberationSerif-BoldItalic.ttf",
+      "sha256": "379010e87421a883f7bbfa7936d23dfe0257a54ce850819b74556e9f2c615a8a"
+    },
+    {
+      "file": "truetype/liberation/LiberationSerif-Italic.ttf",
+      "sha256": "eaeaf7f2b12544ecde64290c1fa7ec403ff70fd58b313637b265400b20249242"
+    },
+    {
+      "file": "truetype/liberation/LiberationSerif-Regular.ttf",
+      "sha256": "705903ae1382f0150f115d6f10a30f5b2f3d6ade649c474afe6366c39174fb65"
+    },
+    {
+      "file": "truetype/noto/NotoColorEmoji.ttf",
+      "sha256": "93cdc4ee9aa40e2afceecc63da0ca05ec7aab4bec991ece51a6b52389f48a477"
+    },
+    {
+      "file": "truetype/wqy/wqy-zenhei.ttc",
+      "sha256": "79c18ebe7b811951e8311bad7103ebeae8c337ed9988ea69e8a78a66cfe029b9"
+    }
+  ],
+  "fontFingerprint": "b41f8fa78f7b218f07fb182acf0a82f73802a2125810254302cb613b1d5dd492",
+  "environment": {
+    "platform": "linux",
+    "arch": "x64",
+    "node": "v22.23.4",
+    "playwright": "1.56.1",
+    "os": "7.0.0-1017-azure"
+  },
+  "rows": [
+    {
+      "engine": "chromium",
+      "width": 375,
+      "theme": "dark",
+      "zoom": 1,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-375-dark-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "2f0d7c35ac01826d4fff76ef126c2945770b0a7366bcdf04355071babfd7ba77"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-375-dark-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "49fbf814000f2b95b24941d0cb8f90b6767454b92eb85da48a4b885748ec3ce9"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "theme": "dark",
+      "zoom": 2,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-375-dark-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "79aa3353d67480ac24258914783b042b5c3a3bceeb3132553ff56767d6f7fa0d"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-375-dark-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "7d1829923503c14e03ddb6f544a6387658d0c4fc823fca3e9e3913d02e1d7896"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "theme": "light",
+      "zoom": 1,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-375-light-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "c81e4a1a2eae76e24f5fa6ce4d6252ab8c8a8ea544ee33d0786e85fc8ceaf8cd"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-375-light-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "12e4f5991695296093067cdd8a6e6f1b21bb630b5359bf9caa4d2598d9d46f0f"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "theme": "light",
+      "zoom": 2,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-375-light-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "45142749cb98f4295a0a39f32c1338d53262ba7d450309313a6c03f66f7018a5"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-375-light-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "6cfd96da37ca24d11ada5604810ac384445904744b2c7683542209d11bd8ec0e"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "zoom": 1,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-390-dark-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "2017aab7d3d104e10b54710571b2829cf8f3474527fbd92b47ac7b52d006a051"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-390-dark-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "49fbf814000f2b95b24941d0cb8f90b6767454b92eb85da48a4b885748ec3ce9"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "zoom": 2,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-390-dark-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "79aa3353d67480ac24258914783b042b5c3a3bceeb3132553ff56767d6f7fa0d"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-390-dark-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "7d1829923503c14e03ddb6f544a6387658d0c4fc823fca3e9e3913d02e1d7896"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "zoom": 1,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-390-light-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "3d683139cd4ff44b196096163f5266f74be24c367f355bd4dc00f113c0847e6d"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-390-light-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "12e4f5991695296093067cdd8a6e6f1b21bb630b5359bf9caa4d2598d9d46f0f"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "zoom": 2,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-390-light-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "45142749cb98f4295a0a39f32c1338d53262ba7d450309313a6c03f66f7018a5"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-390-light-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "6cfd96da37ca24d11ada5604810ac384445904744b2c7683542209d11bd8ec0e"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "dark",
+      "zoom": 1,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-1280-dark-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "7562b97a062dd9482494705be2136037f331f242c4577dfee2abd51616c13efe"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-1280-dark-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "0c48cad67ee2aaf226aff11b1c90c2b8cf7c7805842a020ae608bd2af405decf"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "dark",
+      "zoom": 2,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-1280-dark-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "bed3ad519166a7093612a67363c7c65e6b3b248b95ede18a4c9f29e7519498c8"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-1280-dark-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "a6c4a664b4d8f681097bb0510672c70ff708e38b90a43d51740d701aee86630b"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "light",
+      "zoom": 1,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-1280-light-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "483ee0fa72fb66475a9261ba88cc31e2449d4bcbf7860dd987d8afce94880ad5"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-1280-light-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 22
+          },
+          "sha256": "bd5be10d2e4b9654592732a8799f866bcc6e22a914812c591a08d682d4d16700"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "light",
+      "zoom": 2,
+      "version": "141.0.7390.37",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "chromium-1280-light-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "9eecfd5512d635317b7183a3dece9160fab3e4fa66a5eb749c1a097258553d21"
+        },
+        {
+          "label": "doing",
+          "file": "chromium-1280-light-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 43
+          },
+          "sha256": "80f3a7438033acb5980024419f425915d13a21a30d904da9a8ec5d406cec0cd5"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "theme": "dark",
+      "zoom": 1,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-375-dark-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "04fd7b5ba0017e8cbea3e79afd043cbf7e1b5e672998b51c80ca787ddf4159e4"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-375-dark-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "9c7e0a69e8dd6f1106e8c3e0e109154634671bdc258a1171dc47f87de5723448"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "theme": "dark",
+      "zoom": 2,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-375-dark-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "83c464eacf79ef7249e92e1f3c7caf862ee7741d038c7e0cb382f99517d4fc0a"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-375-dark-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "a6394c1b150787b6bb0fdffa53f6bb2df3354c92434107453f3e62b5b36b9031"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "theme": "light",
+      "zoom": 1,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-375-light-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "95e0b6c40cc8ce53e5e0ea8cc1346162ece2009fde0943155446ddcca5179d0b"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-375-light-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "ca0fbfb722a1f043040f8e0d3b1f5b5e12f0ee91bec368391c6c513accc1a394"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "theme": "light",
+      "zoom": 2,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 375,
+            "scroll": 375
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-375-light-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "a01d4114ad918bc5e48d8913f9b1d92291a6c8989402fcda2d36b3f2a1e42b0a"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-375-light-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "8ff9bda5e9650c8c5febe53d5e450996aa0212b536a7e3578667d9b05b1f6cee"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "zoom": 1,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-390-dark-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "ada59102875f2c8d73ac4023b7c3e609eae6f1f4371918c7c97892856d02df0e"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-390-dark-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "00b7e7951db91dc9b79e6978799b3317d97a189512bdc6da33623573b1c97508"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "zoom": 2,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-390-dark-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "01197a2dfc240fd2ecf294dc50c790546b51632271991996233aca96b31fafea"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-390-dark-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "bf8ca00b2d8f114ee743f710ba0414fccc35cc6191072ce5e4e918e645ae5930"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "zoom": 1,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-390-light-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "c3def916142ea482f8bfdb9da389d16aad31db52b11316104131f9e43eb64295"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-390-light-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "fdc0fd0261f45cdbb707c64c4d0c203098468b5009857adbc9bc492bef9759b5"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "zoom": 2,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 390,
+            "scroll": 390
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-390-light-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "9791b823a526fd47b8c02a051bfa6b6ae94a23a1a6602489bb1c6da2c6dd7701"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-390-light-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "445a0084f80078933650bf00e0881176412adac11f9ab7b8a9b4cddb8d67b7c6"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "dark",
+      "zoom": 1,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-1280-dark-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "822030f59972b2d6b7d17f7b83fec9e3c01781eab83beacb8228363ed8c02465"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-1280-dark-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "47c009a386bd96f0bf4cdfb621f57f975856c09ef1f18cdf3414976a641a6cb6"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "dark",
+      "zoom": 2,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-1280-dark-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "c3c705fe539261ed085637b0d1dfe5642c5af9e03ae73b453ac529a6f1b061b9"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-1280-dark-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "adab63b9b8ca54b445887f5f74f783320abe04acd0c8fd4bad70ac67a57ddd80"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "light",
+      "zoom": 1,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "16px",
+            "16px",
+            "16px",
+            "16px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-1280-light-1-todo.png",
+          "text": "未着手",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "6fca89508fb77d33c4727f1938aac732f3ab873c660a96fa3687d2e6846507c1"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-1280-light-1-doing.png",
+          "text": "進行中",
+          "font": "16px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 48,
+            "height": 31
+          },
+          "sha256": "96638cc98edfcb418ca4b1e56f26f5c6c7497bc8f730fbf28b47dca771a579a6"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "light",
+      "zoom": 2,
+      "version": "26.0",
+      "snapshots": [
+        {
+          "state": "initial",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "moved",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "undo",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        },
+        {
+          "state": "reset",
+          "fonts": [
+            "32px",
+            "32px",
+            "32px",
+            "32px"
+          ],
+          "geometry": {
+            "client": 1280,
+            "scroll": 1280
+          },
+          "errors": []
+        }
+      ],
+      "images": [
+        {
+          "label": "todo",
+          "file": "webkit-1280-light-2-todo.png",
+          "text": "未着手",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "6f34a308fdfc48a0e0144ee87a66f540cb9bf1c08c0b761676fac52bb880e131"
+        },
+        {
+          "label": "doing",
+          "file": "webkit-1280-light-2-doing.png",
+          "text": "進行中",
+          "font": "32px system-ui, sans-serif",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "32px",
+          "roi": {
+            "x": 10,
+            "y": 10,
+            "width": 96,
+            "height": 54
+          },
+          "sha256": "2c9df23493b4d9fb91e388ed43f06ddd7a2b74fe245699e7f8a7f653e5e843c7"
+        }
+      ],
+      "selectFocus": {
+        "active": true,
+        "visible": true,
+        "outline": 3
+      },
+      "movedFocus": true,
+      "undoFocus": true,
+      "errors": [],
+      "status": "PASS"
+    }
+  ],
+  "finished": "2026-11-04T09:26:02.570Z",
+  "exitCode": 0
+}
