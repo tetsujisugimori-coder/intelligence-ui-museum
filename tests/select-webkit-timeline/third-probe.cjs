@@ -9,7 +9,7 @@ function installProbe(level) {
   const record=(type,extra={})=>{if(events.length>=10000){overflow=true;return;}events.push(level==='events'?{type,ms:performance.now(),scrollX,scrollY,active:id(document.activeElement),hasFocus:document.hasFocus(),...extra}:{...take(type),...extra});};
   for(const name of ['focusin','focusout','keydown','keyup','pointerdown','pointerup','click','scroll'])document.addEventListener(name,e=>record(name,{key:e.key,target:id(e.target),trusted:e.isTrusted}),true);
   const observer=new MutationObserver(ms=>{if(ms.some(m=>m.target.closest?.('#Select')||[...m.addedNodes,...m.removedNodes].some(n=>n.querySelector?.('[role=option]')||n.getAttribute?.('role')==='option')))record('select-mutation');});
-  if(level==='full')observer.observe(document.documentElement,{subtree:true,childList:true,attributes:true,attributeFilter:['aria-expanded','style','data-state']});
+  if(level==='full')observer.observe(document,{subtree:true,childList:true,attributes:true,attributeFilter:['aria-expanded','style','data-state']});
   if(level==='full'){
     const original=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(...args){record('scrollIntoView',{target:id(this),arguments:args});return original.apply(this,args);};
     const tick=()=>{if(frames.length<6000)frames.push(take('raf'));else overflow=true;requestAnimationFrame(tick);};requestAnimationFrame(tick);

@@ -1,0 +1,45 @@
+{
+  "kind": "isolated validator counterexamples, not browser faults",
+  "source": "/workspace/scratch/e622c1e9421e/intelligence-third-diagnosis/tests/select-webkit-timeline/run.cjs",
+  "sha256": "aa689f937532ad2364a072b837a645e3c00741ff66789170497335f70fb72969",
+  "rows": [
+    {
+      "name": "normal",
+      "expectedReject": false,
+      "actualReject": false,
+      "reasons": []
+    },
+    {
+      "name": "collect-error",
+      "expectedReject": true,
+      "actualReject": false,
+      "reasons": []
+    },
+    {
+      "name": "screenshot-error",
+      "expectedReject": true,
+      "actualReject": false,
+      "reasons": []
+    },
+    {
+      "name": "missing-pageerror-record",
+      "expectedReject": true,
+      "actualReject": false,
+      "reasons": []
+    },
+    {
+      "name": "empty-snapshot-records",
+      "expectedReject": true,
+      "actualReject": false,
+      "reasons": []
+    },
+    {
+      "name": "offscreen",
+      "expectedReject": true,
+      "actualReject": true,
+      "reasons": [
+        "OPTION_OUTSIDE_VIEWPORT"
+      ]
+    }
+  ]
+}

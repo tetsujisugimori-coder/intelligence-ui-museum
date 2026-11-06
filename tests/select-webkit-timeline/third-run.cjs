@@ -41,12 +41,14 @@ try{for(let i=0;i<n;i++){
  const auditReasons=require('./third-audit.cjs').audit(result,{head,tree,runner:sha(code),source:productSource,ids},p);
  const complete=auditReasons.length===0;
  const traceFiles=fs.existsSync(dest)?fs.readdirSync(dest).filter(f=>/^third-trace-/.test(f)):[];
- const traceValid=traceFiles.length===expected&&traceFiles.every(f=>{const t=JSON.parse(fs.readFileSync(path.join(dest,f)));return !t.collectionError&&(env.THIRD_PROBE==='none'||(Array.isArray(t.events)&&t.events.length>0&&!t.overflow));});
+ const traceReasons=traceFiles.length===expected?[]:['TRACE_COUNT_MISMATCH'];
+ for(let j=1;j<=expected;j++){const name=`third-trace-${j}.json`;try{const t=JSON.parse(fs.readFileSync(path.join(dest,name)));traceReasons.push(...require('./third-audit.cjs').traceAudit(t,env.THIRD_PROBE));}catch{traceReasons.push('TRACE_FILE_MISSING_OR_INVALID');}}
+ const traceValid=traceReasons.length===0;
  const unexpectedSelect=select.filter(r=>!r.select?.pass&&!String(r.select?.error).includes('THIRD_POLICY_FORCED_CLICK_NOT_TESTED'));
- runs.push({auditReasons,unexpectedSelect:unexpectedSelect.map(r=>({id:r.id,error:r.select?.error})),run:i+1,exit:p.status,signal:p.signal,error:p.error?String(p.error):null,complete,traceValid,originalSuiteStatus:result?.status||'NOT_TESTED',select});
+ runs.push({traceReasons,auditReasons,unexpectedSelect:unexpectedSelect.map(r=>({id:r.id,error:r.select?.error})),run:i+1,exit:p.status,signal:p.signal,error:p.error?String(p.error):null,complete,traceValid,originalSuiteStatus:result?.status||'NOT_TESTED',select});
  console.log(JSON.stringify({lane,engine,focus,run:i+1,exit:p.status,complete,traceValid}));
 }}finally{fs.unlinkSync(generated);}
-const result={schema:1,head,tree,sourceRunnerCommit:'ea6f19acfd60b37e9b147daa92e79838fd2f3070',sourceRunnerHash:SOURCE_HASH,executedHash:sha(code),lane,engine,focus,repeats:n,platform:os.platform(),release:os.release(),node:process.version,interventions,limits:['Original later disabled force-click rejected as NOT_TESTED, not silently executed','Original suite FAIL is not diagnostic proof of Select failure; inspect per-check errors','No product/SDK changes; old evidence not overwritten'],runs};
+const result={schema:1,head,tree,sourceRunnerCommit:'ea6f19acfd60b37e9b147daa92e79838fd2f3070',sourceRunnerHash:SOURCE_HASH,executedHash:sha(code),lane,engine,focus,repeats:n,platform:os.platform(),release:os.release(),node:process.version,diagnosticHashes:Object.fromEntries(['third-run.cjs','third-preload.cjs','third-probe.cjs','third-audit.cjs'].map(f=>[f,sha(fs.readFileSync(path.join(__dirname,f)))])),interventions,limits:['Original later disabled force-click rejected as NOT_TESTED, not silently executed','Original suite FAIL is not diagnostic proof of Select failure; inspect per-check errors','No product/SDK changes; old evidence not overwritten'],runs};
 result.status=runs.length===n&&runs.every(r=>r.complete&&r.traceValid)?'COMPLETE':'INCOMPLETE';
 fs.writeFileSync(path.join(out,'third-results.json'),JSON.stringify(result,null,2));
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);

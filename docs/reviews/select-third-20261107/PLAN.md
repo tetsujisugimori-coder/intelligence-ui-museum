@@ -25,3 +25,7 @@ Audit rejects missing/duplicate/wrong condition IDs, missing checks, source/HEAD
 ## Environment limits
 
 User Windows computer reported offline at start. Fresh Linux build succeeded with pinned lock. Initial npm cache and browser-path setup failures are separate environment errors. WebKit local launch lacks shared libraries and is NOT_TESTED; Windows Actions execution is requested in the workflow and not assumed successful. Playwright WebKit is not Safari.
+
+## Preflight findings and corrections
+
+Independent review found the legacy verdict accepted collectError. The new audit initially accepted an events-only object as a full trace even with no rAF/final state. Both synthetic RED counterexamples are preserved; corrected validators reject them. A local live full-probe run then exposed an init-time null documentElement error before DOM creation. Observing document instead fixes this instrumentation bug; the failing run had pageerror and INCOMPLETE, not a product failure. Corrected local Linux WebKit smoke reached all normal Select paths before the explicit disabled force-click policy stop. These preliminary runs are not final-HEAD Windows evidence.
