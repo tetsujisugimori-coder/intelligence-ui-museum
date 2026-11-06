@@ -26,7 +26,7 @@ if(lane==='exact'||lane==='minimal'){
  }
 }
 const dirtyAtStart=execFileSync('git',['status','--porcelain'],{cwd:repo,encoding:'utf8'}).trim();
-const generated=path.join(__dirname,'.third-generated-'+process.pid+'.cjs');fs.writeFileSync(generated,code);
+const generated=path.join(__dirname,'.third-generated-'+crypto.randomUUID()+'.cjs');fs.writeFileSync(generated,code,{flag:'wx'});
 const runs=[];
 const app=path.resolve(process.env.APP_ROOT||path.join(repo,'.work/v10'));
 const productSource=Object.fromEntries(['src/main.tsx','src/main.css','src/select-focus-return.ts','package.json','package-lock.json'].map(f=>{const expected=sha(execFileSync('git',['show',`HEAD:apps/v10/${f}`],{cwd:repo}));if(sha(fs.readFileSync(path.join(app,f)))!==expected)throw Error('Isolated source does not match HEAD: '+f);return [f,expected];}));
