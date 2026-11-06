@@ -1,0 +1,569 @@
+{
+  "started": "2026-11-05T18:08:22.254Z",
+  "head": "401c554ae87a6d846b1655bc9af12a92d7002633",
+  "cases": [
+    {
+      "width": 320,
+      "theme": "dark",
+      "root": 200,
+      "method": "mouse-select",
+      "browser": "154.0.8037.57",
+      "errors": [],
+      "before": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "SPAN",
+        "id": "select-trigger-:r0:",
+        "role": "button",
+        "text": "表示モード：一覧"
+      },
+      "open": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "DIV",
+        "id": "select-list-:r8:",
+        "role": null,
+        "text": "一覧カード選択不可"
+      },
+      "after": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      },
+      "value": "b",
+      "returned": false,
+      "tabAfter": {
+        "hasFocus": false,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      }
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "root": 200,
+      "method": "keyboard-select",
+      "browser": "154.0.8037.57",
+      "errors": [],
+      "before": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "SPAN",
+        "id": "select-trigger-:r0:",
+        "role": "button",
+        "text": "表示モード：一覧"
+      },
+      "open": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "DIV",
+        "id": "select-list-:r8:",
+        "role": null,
+        "text": "一覧カード選択不可"
+      },
+      "after": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      },
+      "value": "b",
+      "returned": false,
+      "tabAfter": {
+        "hasFocus": false,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      }
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "root": 200,
+      "method": "Escape",
+      "browser": "154.0.8037.57",
+      "errors": [],
+      "before": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "SPAN",
+        "id": "select-trigger-:r0:",
+        "role": "button",
+        "text": "表示モード：一覧"
+      },
+      "open": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "DIV",
+        "id": "select-list-:r8:",
+        "role": null,
+        "text": "一覧カード選択不可"
+      },
+      "after": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      },
+      "value": "a",
+      "returned": false,
+      "tabAfter": {
+        "hasFocus": false,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      }
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "root": 200,
+      "method": "tooltip-fresh-tab",
+      "browser": "154.0.8037.57",
+      "errors": [],
+      "tabPath": [
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        }
+      ],
+      "active": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      },
+      "tooltipError": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('tooltip') to be visible\u001b[22m\n",
+      "tooltipDom": [],
+      "closed": true,
+      "focusAfterEscape": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "IFRAME",
+        "id": "",
+        "role": null,
+        "text": ""
+      }
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "root": 200,
+      "method": "tooltip-fresh-focus",
+      "browser": "154.0.8037.57",
+      "errors": [],
+      "active": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BUTTON",
+        "id": "",
+        "role": null,
+        "text": "説明を見る"
+      },
+      "tooltip": "公式Tooltipの説明",
+      "describedBy": "radix-:r7:",
+      "tooltipDom": [
+        {
+          "text": "公式Tooltipの説明",
+          "rect": {
+            "x": 43,
+            "y": 418,
+            "width": 146.640625,
+            "height": 44.296875,
+            "top": 418,
+            "right": 189.640625,
+            "bottom": 462.296875,
+            "left": 43
+          },
+          "style": {
+            "visibility": "visible",
+            "opacity": "1"
+          }
+        }
+      ],
+      "closed": true,
+      "focusAfterEscape": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BUTTON",
+        "id": "",
+        "role": null,
+        "text": "説明を見る"
+      }
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "root": 100,
+      "method": "mouse-select",
+      "browser": "154.0.8037.57",
+      "errors": [],
+      "before": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "SPAN",
+        "id": "select-trigger-:r0:",
+        "role": "button",
+        "text": "表示モード：一覧"
+      },
+      "open": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "DIV",
+        "id": "select-list-:r8:",
+        "role": null,
+        "text": "一覧カード選択不可"
+      },
+      "after": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      },
+      "value": "b",
+      "returned": false,
+      "tabAfter": {
+        "hasFocus": false,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      }
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "root": 100,
+      "method": "keyboard-select",
+      "browser": "154.0.8037.57",
+      "errors": [],
+      "before": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "SPAN",
+        "id": "select-trigger-:r0:",
+        "role": "button",
+        "text": "表示モード：一覧"
+      },
+      "open": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "DIV",
+        "id": "select-list-:r8:",
+        "role": null,
+        "text": "一覧カード選択不可"
+      },
+      "after": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      },
+      "value": "b",
+      "returned": false,
+      "tabAfter": {
+        "hasFocus": false,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      }
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "root": 100,
+      "method": "Escape",
+      "browser": "154.0.8037.57",
+      "errors": [],
+      "before": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "SPAN",
+        "id": "select-trigger-:r0:",
+        "role": "button",
+        "text": "表示モード：一覧"
+      },
+      "open": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "DIV",
+        "id": "select-list-:r8:",
+        "role": null,
+        "text": "一覧カード選択不可"
+      },
+      "after": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      },
+      "value": "a",
+      "returned": false,
+      "tabAfter": {
+        "hasFocus": false,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      }
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "root": 100,
+      "method": "tooltip-fresh-tab",
+      "browser": "154.0.8037.57",
+      "errors": [],
+      "tabPath": [
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        },
+        {
+          "hasFocus": true,
+          "visibility": "visible",
+          "tag": "BODY",
+          "id": "",
+          "role": null,
+          "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+        }
+      ],
+      "active": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BODY",
+        "id": "",
+        "role": null,
+        "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage 3 HOLD。依存監査6件、厳密な文字2"
+      },
+      "tooltipError": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('tooltip') to be visible\u001b[22m\n",
+      "tooltipDom": [],
+      "closed": true,
+      "focusAfterEscape": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "IFRAME",
+        "id": "",
+        "role": null,
+        "text": ""
+      }
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "root": 100,
+      "method": "tooltip-fresh-focus",
+      "browser": "154.0.8037.57",
+      "errors": [],
+      "active": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BUTTON",
+        "id": "",
+        "role": null,
+        "text": "説明を見る"
+      },
+      "tooltip": "公式Tooltipの説明",
+      "describedBy": "radix-:r7:",
+      "tooltipDom": [
+        {
+          "text": "公式Tooltipの説明",
+          "rect": {
+            "x": 61,
+            "y": 429,
+            "width": 146.640625,
+            "height": 44.296875,
+            "top": 429,
+            "right": 207.640625,
+            "bottom": 473.296875,
+            "left": 61
+          },
+          "style": {
+            "visibility": "visible",
+            "opacity": "1"
+          }
+        }
+      ],
+      "closed": true,
+      "focusAfterEscape": {
+        "hasFocus": true,
+        "visibility": "visible",
+        "tag": "BUTTON",
+        "id": "",
+        "role": null,
+        "text": "説明を見る"
+      }
+    }
+  ],
+  "finished": "2026-11-05T18:08:55.321Z"
+}

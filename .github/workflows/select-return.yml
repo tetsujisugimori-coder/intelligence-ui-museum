@@ -1,0 +1,77 @@
+name: Select return regression
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: select-return-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  select-return:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Freeze tested identity and prepare independent builds
+        run: |
+          mkdir -p .work/select-red-root .work/select-evidence
+          git rev-parse HEAD HEAD^{tree} > .work/select-evidence/git-identity.txt
+          git diff --exit-code
+          git archive a5766c4dae9bcda791b57bb06c263a5036249343 apps/v10 | tar -x -C .work/select-red-root
+          python3 scripts/prepare-work.py
+          cp -a .work/v10 .work/select-build2
+          sha256sum apps/v10/src/* apps/v10/package*.json > .work/select-evidence/source-SHA256SUMS
+      - name: Preserve original independent RED evidence for readback
+        run: |
+          git show 98b4c22aa6c7e7831af5789d354535ba6bb368ca:reviews/stage3-1-independent-20261106/selected-evidence.tar.gz > .work/select-evidence/original-review.tar.gz
+          echo 'f2807499f61672b6d2608ad8011a3efac1deb7945f498ae28c6ba996f9a23b96  .work/select-evidence/original-review.tar.gz' | sha256sum --check
+      - run: npm ci --ignore-scripts && npm run build
+        working-directory: .work/select-red-root/apps/v10
+      - run: npm ci --ignore-scripts && npm run build && npm test && node scripts/verify-baseline.mjs
+        working-directory: .work/v10
+      - run: npm ci --ignore-scripts && npm run build
+        working-directory: .work/select-build2
+      - name: Reproducible build and official SDK unchanged
+        run: |
+          diff -r .work/v10/dist .work/select-build2/dist
+          diff -r .work/select-red-root/apps/v10/node_modules/@openai/apps-sdk-ui .work/v10/node_modules/@openai/apps-sdk-ui
+          cmp .work/select-red-root/apps/v10/package-lock.json .work/v10/package-lock.json
+          find .work/v10/node_modules/@openai/apps-sdk-ui -type f -print0 | sort -z | xargs -0 sha256sum > .work/select-evidence/sdk-SHA256SUMS
+      - run: npm ci --ignore-scripts && npx playwright install --with-deps chromium webkit
+        working-directory: tools/stage-a-browser
+      - name: Same six RED conditions in Chromium and WebKit
+        env:
+          CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/tools/stage-a-browser/node_modules
+          APP_ROOT: ${{ github.workspace }}/.work/select-red-root/apps/v10
+          EVIDENCE_DIR: ${{ github.workspace }}/.work/select-evidence/red
+          SELECT_EXPECT: red
+        run: node apps/v10/scripts/select-return-browser.cjs
+      - name: GREEN matrix, focus pixels, regressions and seven failure controls
+        env:
+          CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/tools/stage-a-browser/node_modules
+          APP_ROOT: ${{ github.workspace }}/.work/v10
+          EVIDENCE_DIR: ${{ github.workspace }}/.work/select-evidence/green
+        run: node apps/v10/scripts/select-return-browser.cjs
+      - name: Independently authored browser review and fault detection
+        env:
+          CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/tools/stage-a-browser/node_modules
+          RED_ROOT: ${{ github.workspace }}/.work/select-red-root/apps/v10
+          GREEN_ROOT: ${{ github.workspace }}/.work/v10
+        run: |
+          for engine in chromium webkit; do
+            SELECT_ENGINE=$engine EVIDENCE_DIR="$GITHUB_WORKSPACE/.work/select-evidence/independent-$engine" node tests/select-return-independent/run.cjs
+            SELECT_ENGINE=$engine EVIDENCE_DIR="$GITHUB_WORKSPACE/.work/select-evidence/independent-faults-$engine" node tests/select-return-independent/faults.cjs
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: select-return-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/select-evidence/
+          if-no-files-found: error

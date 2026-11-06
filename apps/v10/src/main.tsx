@@ -1,5 +1,6 @@
 import './main.css';
-import { StrictMode, useState } from 'react';
+import { StrictMode, useEffect, useRef, useState } from 'react';
+import { attachSelectFocusReturn } from './select-focus-return';
 import { createRoot } from 'react-dom/client';
 import { Button } from '@openai/apps-sdk-ui/components/Button';
 import { Badge } from '@openai/apps-sdk-ui/components/Badge';
@@ -19,7 +20,12 @@ const mapping:Record<Name,{id:number|null;name:string;notes:string;keys:string}>
 };
 // Stable public TriggerView: the hidden prefix names the field without consuming width.
 function DisplayModeTrigger({label}:{label:string}){
- return <><span className="sr-only">表示モード：</span>{label}</>;
+ const labelRef=useRef<HTMLSpanElement>(null);
+ useEffect(()=>{
+  const trigger=labelRef.current?.closest<HTMLElement>('[role="button"]');
+  if(trigger) return attachSelectFocusReturn(trigger);
+ },[]);
+ return <span ref={labelRef}><span className="sr-only">表示モード：</span>{label}</span>;
 }
 function Demo({name}:{name:Name}){
  const [count,setCount]=useState(0),[loading,setLoading]=useState(false),[disabled,setDisabled]=useState(false),[checked,setChecked]=useState(false),[value,setValue]=useState('a'),[color,setColor]=useState<'success'|'warning'|'danger'>('success'),[visible,setVisible]=useState(true),[observed,setObserved]=useState('未操作');

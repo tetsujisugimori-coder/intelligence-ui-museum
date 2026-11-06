@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "officialFiles": 2645,
+  "mismatches": [],
+  "packIntegrity": "sha512-KaG+6qcVCKVRe51wr2te68OKoHfjRQPDVVkugxiF+SaZlgLpNbxOfyrL/FyUBmHbjh1q4p7eWDYAd75jHseZ9A==",
+  "lockIntegrity": "sha512-KaG+6qcVCKVRe51wr2te68OKoHfjRQPDVVkugxiF+SaZlgLpNbxOfyrL/FyUBmHbjh1q4p7eWDYAd75jHseZ9A==",
+  "tarballSHA256": "4bd4f51bc299e373278d62e4add789d84de483ca51a87fa6cec1398bc870a288",
+  "note": "npm-installed nested node_modules are dependencies, not published SDK tarball files; full raw diff reports that extra directory."
+}
