@@ -19,7 +19,8 @@ const out = path.resolve(process.env.DIAG_OUT || path.join(repo, '.work/select-w
 const sourceFiles = ['src/main.tsx', 'src/main.css', 'src/select-focus-return.ts', 'package.json', 'package-lock.json'];
 const sha = data => crypto.createHash('sha256').update(data).digest('hex');
 const focusModes = ['tab', 'direct', 'legacy'];
-const views = ['visible', 'offscreen'];
+const prelude = process.env.DIAG_PRELUDE || 'none';
+const views = prelude === 's3' ? ['inherited'] : ['visible', 'offscreen'];
 const paces = ['rapid', 'settled'];
 
 function verdict(row) {
@@ -30,6 +31,7 @@ function verdict(row) {
     if (!row.states.beforeClick.option.inViewport) reasons.push('OPTION_OUTSIDE_VIEWPORT');
     if (!row.states.beforeClick.option.hitTest) reasons.push('OPTION_NOT_HIT_TESTABLE');
   }
+  if (!row.states?.beforeClick?.popup?.exists) reasons.push('POPUP_GEOMETRY_MISSING');
   if (row.error) reasons.push('ACTION_FAILED');
   if (!row.states || !row.states.afterClick || row.states.afterClick.value !== 'b') reasons.push('VALUE_NOT_UPDATED');
   if (!row.states || !row.states.afterClick || !row.states.afterClick.focusOnTrigger) reasons.push('FOCUS_NOT_RETURNED');
@@ -43,7 +45,7 @@ function verdict(row) {
 if (process.argv.includes('--selftest')) {
   const example = {
     states: { focus: { focusOnTrigger: true },
-      beforeClick: { option: { exists: true, inViewport: true, hitTest: true } },
+      beforeClick: { option: { exists: true, inViewport: true, hitTest: true }, popup: { exists: true } },
       afterClick: { value: 'b', focusOnTrigger: true } },
     timeline: { events: [{ type: 'focusin' }], snapshots: [{},{},{},{}], overflow: false },
     pageerrors: [], unexpectedConsole: []
@@ -55,7 +57,8 @@ if (process.argv.includes('--selftest')) {
     ['focus-lost', x => { x.states.focus.focusOnTrigger = false; }, 'FOCUS_NOT_ON_TRIGGER'],
     ['empty', x => { x.timeline.events = []; }, 'TIMELINE_INCOMPLETE'],
     ['no-click', x => { x.error = 'Timeout'; }, 'ACTION_FAILED'],
-    ['pageerror', x => { x.pageerrors.push('uncaught'); }, 'PAGE_ERROR']
+    ['pageerror', x => { x.pageerrors.push('uncaught'); }, 'PAGE_ERROR'],
+    ['missing-popup', x => { x.states.beforeClick.popup.exists = false; }, 'POPUP_GEOMETRY_MISSING']
   ]) {
     const copy = structuredClone(example);
     mutate(copy);
@@ -65,6 +68,7 @@ if (process.argv.includes('--selftest')) {
   process.exit(0);
 }
 assert(focusModes.includes(mode), 'DIAG_MODE must be tab/direct/legacy');
+assert(['none', 's3'].includes(prelude), 'DIAG_PRELUDE must be none/s3');
 assert(['webkit','chromium'].includes(engine), 'DIAG_ENGINE must be webkit/chromium');
 assert(Number.isSafeInteger(repeats) && repeats > 0 && repeats <= 50, 'positive bounded DIAG_REPEATS required');
 assert(!fs.existsSync(out), 'evidence destination must be fresh');
@@ -80,7 +84,7 @@ const identity = {
     file, sha(fs.readFileSync(path.join(root, file)))
   ])),
   platform: os.platform(), release: os.release(), node: process.version,
-  mode, engine, repeats, views, paces
+  mode, engine, repeats, views, paces, prelude,
 };
 const server = http.createServer((request, response) => {
   try {
@@ -124,7 +128,23 @@ function addProbe() {
   const take = phase => {
     const option = [...document.querySelectorAll('[role=option]')]
       .find(el => el.textContent?.includes('カード')) || null;
-    const popup = option?.closest('[role=listbox]') || document.querySelector('[role=listbox]');
+    let popup = option?.closest('[role=listbox]') || document.querySelector('[role=listbox]');
+    let popupLocator = popup ? 'role=listbox' : 'none';
+    if (!popup && option) {
+      for (let parent = option.parentElement; parent && parent !== document.body; parent = parent.parentElement) {
+        const computed = getComputedStyle(parent);
+        if (parent.hasAttribute('data-radix-popper-content-wrapper') ||
+            computed.position === 'fixed' || computed.position === 'absolute') {
+          popup = parent;
+          popupLocator = 'positioned-ancestor';
+          break;
+        }
+      }
+    }
+    if (!popup && option?.parentElement) {
+      popup = option.parentElement;
+      popupLocator = 'parent-fallback';
+    }
     const state = { phase, ms: performance.now(), scrollX, scrollY,
       documentScroll: { top: document.documentElement.scrollTop, height: document.documentElement.scrollHeight },
       viewport: { width: innerWidth, height: innerHeight,
@@ -132,7 +152,7 @@ function addProbe() {
       active: descriptor(document.activeElement), focusOnTrigger: document.activeElement === trigger,
       focusVisible: trigger.matches(':focus-visible'), expanded: trigger.getAttribute('aria-expanded'),
       value: document.querySelector('#official-select')?.value,
-      trigger: info(trigger), option: info(option), popup: info(popup) };
+      trigger: info(trigger), option: info(option), popup: info(popup), popupLocator };
     snapshots.push(state);
     return state;
   };
@@ -188,11 +208,12 @@ async function trial(browser, id, view, pace, baseUrl) {
     const t = page.locator('#Select .stage [role=button]');
     const option = page.getByRole('option', { name: 'カード', exact: true });
     await t.waitFor({ state: 'visible', timeout: 5000 });
+    if (prelude === 's3') row.preludeState = await require('./replay-prelude.cjs').priorS3Actions(page);
     await page.evaluate(addProbe);
     await page.evaluate(where => {
       const trigger = document.querySelector('#official-select').closest('[role=button]');
       if (where === 'visible') trigger.scrollIntoView({ block: 'center', behavior: 'instant' });
-      else window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
+      else if (where === 'offscreen') window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
     }, view);
     await take('start');
     if (mode === 'tab') {
@@ -270,7 +291,7 @@ async function trial(browser, id, view, pace, baseUrl) {
     const result = { status, issue: 28, identity, expected, actual: rows.length,
       counts, launchError, ended: new Date().toISOString(),
       conditions: { viewport: '375x1000', theme: 'dark', rootScale: '200%',
-        focusMode: mode, origin: 'native app lab; Playwright WebKit is not Safari' },
+        focusMode: mode, prelude, origin: 'native app lab; Playwright WebKit is not Safari' },
       rows: rows.map(r => ({ id: r.id, status: r.status, reasons: r.reasons, error: r.error,
         focus: r.states?.focus?.focusOnTrigger,
         beforeClick: { scrollY: r.states?.beforeClick?.scrollY,
