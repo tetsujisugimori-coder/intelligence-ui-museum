@@ -1,0 +1,4905 @@
+{
+  "status": "FAIL",
+  "exitCode": 1,
+  "mode": "RED-reproduction",
+  "testedAt": "2026-11-06T02:50:18.754Z",
+  "expected": 12,
+  "identity": {
+    "src/main.tsx": "463bb8e77c9a42cd4bc15a7ecb1f20a958ac55c2b8350cddf659bc6ac945e60d",
+    "src/main.css": "ad0791ec49dbe792972c6638253aa37cd825b72831003ab7769be26d68da03fa",
+    "package.json": "465450a25a4fba6112b0173aeab0b3bbce10d98a583d5b68e37636ebdea50c75",
+    "package-lock.json": "d62b5a4f1ffeb6d5463ea64304f561dbef919a30c96050defd115c8b81ae1b46"
+  },
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "rows": [
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "condition": {
+        "id": "A",
+        "width": 320,
+        "theme": "dark",
+        "text": 200
+      },
+      "way": "mouse",
+      "before": {
+        "active": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "sameOpener": true,
+        "body": false,
+        "connected": true,
+        "focusVisible": true,
+        "expanded": "false",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(2, 133, 255) solid 2px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418.078125,
+          "width": 274,
+          "height": 64,
+          "top": 418.078125,
+          "right": 297,
+          "bottom": 482.078125,
+          "left": 23
+        },
+        "opens": 0,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 425.6000000000349,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 426.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 427.1000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 427.30000000004657,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 428.20000000001164,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 428.6000000000349,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 428.6000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 428.80000000004657,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          }
+        ]
+      },
+      "menu": {
+        "active": {
+          "tag": "DIV",
+          "id": "select-list-:r8:",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": false,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "true",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(230, 239, 235) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418.078125,
+          "width": 274,
+          "height": 64,
+          "top": 418.078125,
+          "right": 297,
+          "bottom": 482.078125,
+          "left": 23
+        },
+        "opens": 1,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 425.6000000000349,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 426.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 427.1000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 427.30000000004657,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 428.20000000001164,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 428.6000000000349,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 428.6000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 428.80000000004657,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 450,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 453.70000000001164,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 454.30000000004657,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 456.30000000004657,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          }
+        ]
+      },
+      "after": {
+        "active": {
+          "tag": "BODY",
+          "id": "",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": true,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "false",
+        "value": "b",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(230, 239, 235) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418.078125,
+          "width": 274,
+          "height": 64,
+          "top": 418.078125,
+          "right": 297,
+          "bottom": 482.078125,
+          "left": 23
+        },
+        "opens": 1,
+        "closes": 1,
+        "calls": [],
+        "events": [
+          {
+            "time": 425.6000000000349,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 426.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 427.1000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 427.30000000004657,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 428.20000000001164,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 428.6000000000349,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 428.6000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 428.80000000004657,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 450,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 453.70000000001164,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 454.30000000004657,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 456.30000000004657,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 501.30000000004657,
+            "type": "pointerdown",
+            "target": {
+              "tag": "DIV",
+              "id": "",
+              "role": null,
+              "text": "カード"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 501.6000000000349,
+            "type": "pointerup",
+            "target": {
+              "tag": "DIV",
+              "id": "",
+              "role": null,
+              "text": "カード"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 502.5,
+            "type": "focusout",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 504.20000000001164,
+            "type": "close",
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          }
+        ]
+      },
+      "errors": [],
+      "verdict": {
+        "pass": false,
+        "issues": [
+          "WRONG_FOCUS",
+          "BODY_FOCUS",
+          "RESTORE_COUNT"
+        ]
+      },
+      "expectationMatched": true
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "condition": {
+        "id": "A",
+        "width": 320,
+        "theme": "dark",
+        "text": 200
+      },
+      "way": "keyboard",
+      "before": {
+        "active": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "sameOpener": true,
+        "body": false,
+        "connected": true,
+        "focusVisible": true,
+        "expanded": "false",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(2, 133, 255) solid 2px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418.078125,
+          "width": 274,
+          "height": 64,
+          "top": 418.078125,
+          "right": 297,
+          "bottom": 482.078125,
+          "left": 23
+        },
+        "opens": 0,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 368.5,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 369.30000000004657,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 369.70000000001164,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 369.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 370.6000000000349,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 370.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 370.9000000000233,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 371,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          }
+        ]
+      },
+      "menu": {
+        "active": {
+          "tag": "DIV",
+          "id": "select-list-:r8:",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": false,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "true",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(230, 239, 235) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418.078125,
+          "width": 274,
+          "height": 64,
+          "top": 418.078125,
+          "right": 297,
+          "bottom": 482.078125,
+          "left": 23
+        },
+        "opens": 1,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 368.5,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 369.30000000004657,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 369.70000000001164,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 369.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 370.6000000000349,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 370.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 370.9000000000233,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 371,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 386.9000000000233,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 390.5,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 390.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 392.9000000000233,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          }
+        ]
+      },
+      "after": {
+        "active": {
+          "tag": "BODY",
+          "id": "",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": true,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "false",
+        "value": "b",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(230, 239, 235) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418.078125,
+          "width": 274,
+          "height": 64,
+          "top": 418.078125,
+          "right": 297,
+          "bottom": 482.078125,
+          "left": 23
+        },
+        "opens": 1,
+        "closes": 1,
+        "calls": [],
+        "events": [
+          {
+            "time": 368.5,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 369.30000000004657,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 369.70000000001164,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 369.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 370.6000000000349,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 370.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 370.9000000000233,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 371,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 386.9000000000233,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 390.5,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 390.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 392.9000000000233,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 404.20000000001164,
+            "type": "keydown",
+            "key": "ArrowDown",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 406.1000000000349,
+            "type": "keydown",
+            "key": "Enter",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 406.30000000004657,
+            "type": "pointerup",
+            "target": {
+              "tag": "DIV",
+              "id": "",
+              "role": "option",
+              "text": "カード"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 407.1000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 408.20000000001164,
+            "type": "close",
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          }
+        ]
+      },
+      "errors": [],
+      "verdict": {
+        "pass": false,
+        "issues": [
+          "WRONG_FOCUS",
+          "BODY_FOCUS",
+          "RESTORE_COUNT"
+        ]
+      },
+      "expectationMatched": true
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "condition": {
+        "id": "A",
+        "width": 320,
+        "theme": "dark",
+        "text": 200
+      },
+      "way": "escape",
+      "before": {
+        "active": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "sameOpener": true,
+        "body": false,
+        "connected": true,
+        "focusVisible": true,
+        "expanded": "false",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(2, 133, 255) solid 2px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418.078125,
+          "width": 274,
+          "height": 64,
+          "top": 418.078125,
+          "right": 297,
+          "bottom": 482.078125,
+          "left": 23
+        },
+        "opens": 0,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 373.3999999999651,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 374.8999999999651,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 375.3999999999651,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 375.5999999999767,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 378.0999999999767,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 378.3999999999651,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 378.3999999999651,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 378.5999999999767,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          }
+        ]
+      },
+      "menu": {
+        "active": {
+          "tag": "DIV",
+          "id": "select-list-:r8:",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": false,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "true",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(230, 239, 235) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418.078125,
+          "width": 274,
+          "height": 64,
+          "top": 418.078125,
+          "right": 297,
+          "bottom": 482.078125,
+          "left": 23
+        },
+        "opens": 1,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 373.3999999999651,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 374.8999999999651,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 375.3999999999651,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 375.5999999999767,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 378.0999999999767,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 378.3999999999651,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 378.3999999999651,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 378.5999999999767,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 394.3999999999651,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 398,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 398.5,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 400.5,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          }
+        ]
+      },
+      "after": {
+        "active": {
+          "tag": "BODY",
+          "id": "",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": true,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "false",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(230, 239, 235) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418.078125,
+          "width": 274,
+          "height": 64,
+          "top": 418.078125,
+          "right": 297,
+          "bottom": 482.078125,
+          "left": 23
+        },
+        "opens": 1,
+        "closes": 1,
+        "calls": [],
+        "events": [
+          {
+            "time": 373.3999999999651,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 374.8999999999651,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 375.3999999999651,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 375.5999999999767,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 378.0999999999767,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 378.3999999999651,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 378.3999999999651,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 378.5999999999767,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 394.3999999999651,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 398,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 398.5,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 400.5,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 410.69999999995343,
+            "type": "keydown",
+            "key": "Escape",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 411.5999999999767,
+            "type": "focusout",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 412.69999999995343,
+            "type": "close",
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          }
+        ]
+      },
+      "errors": [],
+      "verdict": {
+        "pass": false,
+        "issues": [
+          "WRONG_FOCUS",
+          "BODY_FOCUS",
+          "RESTORE_COUNT"
+        ]
+      },
+      "expectationMatched": true
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "condition": {
+        "id": "B",
+        "width": 1280,
+        "theme": "light",
+        "text": 100
+      },
+      "way": "mouse",
+      "before": {
+        "active": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "sameOpener": true,
+        "body": false,
+        "connected": true,
+        "focusVisible": true,
+        "expanded": "false",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(24, 37, 37) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(1, 105, 204) solid 2px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 81.390625,
+          "y": 433.65625,
+          "width": 536.109375,
+          "height": 32,
+          "top": 433.65625,
+          "right": 617.5,
+          "bottom": 465.65625,
+          "left": 81.390625
+        },
+        "opens": 0,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 388.20000000001164,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 389.1000000000349,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 389.6000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 389.70000000001164,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 392.20000000001164,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 392.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 392.79999999998836,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 392.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          }
+        ]
+      },
+      "menu": {
+        "active": {
+          "tag": "DIV",
+          "id": "select-list-:r8:",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": false,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "true",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(24, 37, 37) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(24, 37, 37) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 81.390625,
+          "y": 433.65625,
+          "width": 536.109375,
+          "height": 32,
+          "top": 433.65625,
+          "right": 617.5,
+          "bottom": 465.65625,
+          "left": 81.390625
+        },
+        "opens": 1,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 388.20000000001164,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 389.1000000000349,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 389.6000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 389.70000000001164,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 392.20000000001164,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 392.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 392.79999999998836,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 392.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 412.20000000001164,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 416.29999999998836,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 416.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 419.29999999998836,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          }
+        ]
+      },
+      "after": {
+        "active": {
+          "tag": "BODY",
+          "id": "",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": true,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "false",
+        "value": "b",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(24, 37, 37) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(24, 37, 37) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 81.390625,
+          "y": 433.65625,
+          "width": 536.109375,
+          "height": 32,
+          "top": 433.65625,
+          "right": 617.5,
+          "bottom": 465.65625,
+          "left": 81.390625
+        },
+        "opens": 1,
+        "closes": 1,
+        "calls": [],
+        "events": [
+          {
+            "time": 388.20000000001164,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 389.1000000000349,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 389.6000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 389.70000000001164,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 392.20000000001164,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 392.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 392.79999999998836,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 392.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 412.20000000001164,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 416.29999999998836,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 416.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 419.29999999998836,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 457,
+            "type": "pointerdown",
+            "target": {
+              "tag": "DIV",
+              "id": "",
+              "role": null,
+              "text": "カード"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 457.20000000001164,
+            "type": "pointerup",
+            "target": {
+              "tag": "DIV",
+              "id": "",
+              "role": null,
+              "text": "カード"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 458.1000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 459.70000000001164,
+            "type": "close",
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          }
+        ]
+      },
+      "errors": [],
+      "verdict": {
+        "pass": false,
+        "issues": [
+          "WRONG_FOCUS",
+          "BODY_FOCUS",
+          "RESTORE_COUNT"
+        ]
+      },
+      "expectationMatched": true
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "condition": {
+        "id": "B",
+        "width": 1280,
+        "theme": "light",
+        "text": 100
+      },
+      "way": "keyboard",
+      "before": {
+        "active": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "sameOpener": true,
+        "body": false,
+        "connected": true,
+        "focusVisible": true,
+        "expanded": "false",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(24, 37, 37) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(1, 105, 204) solid 2px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 81.390625,
+          "y": 433.65625,
+          "width": 536.109375,
+          "height": 32,
+          "top": 433.65625,
+          "right": 617.5,
+          "bottom": 465.65625,
+          "left": 81.390625
+        },
+        "opens": 0,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 403.5,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 404.4000000000233,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 404.80000000004657,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 404.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 405.5,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 405.80000000004657,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 405.80000000004657,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 406,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          }
+        ]
+      },
+      "menu": {
+        "active": {
+          "tag": "DIV",
+          "id": "select-list-:r8:",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": false,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "true",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(24, 37, 37) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(24, 37, 37) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 81.390625,
+          "y": 433.65625,
+          "width": 536.109375,
+          "height": 32,
+          "top": 433.65625,
+          "right": 617.5,
+          "bottom": 465.65625,
+          "left": 81.390625
+        },
+        "opens": 1,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 403.5,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 404.4000000000233,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 404.80000000004657,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 404.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 405.5,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 405.80000000004657,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 405.80000000004657,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 406,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 423,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 427.30000000004657,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 427.70000000001164,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 429.80000000004657,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          }
+        ]
+      },
+      "after": {
+        "active": {
+          "tag": "BODY",
+          "id": "",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": true,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "false",
+        "value": "b",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(24, 37, 37) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(24, 37, 37) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 81.390625,
+          "y": 433.65625,
+          "width": 536.109375,
+          "height": 32,
+          "top": 433.65625,
+          "right": 617.5,
+          "bottom": 465.65625,
+          "left": 81.390625
+        },
+        "opens": 1,
+        "closes": 1,
+        "calls": [],
+        "events": [
+          {
+            "time": 403.5,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 404.4000000000233,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 404.80000000004657,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 404.9000000000233,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 405.5,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 405.80000000004657,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 405.80000000004657,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 406,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 423,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 427.30000000004657,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 427.70000000001164,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 429.80000000004657,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 443.1000000000349,
+            "type": "keydown",
+            "key": "ArrowDown",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 445.6000000000349,
+            "type": "keydown",
+            "key": "Enter",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 445.80000000004657,
+            "type": "pointerup",
+            "target": {
+              "tag": "DIV",
+              "id": "",
+              "role": "option",
+              "text": "カード"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 447.1000000000349,
+            "type": "focusout",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 449,
+            "type": "close",
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          }
+        ]
+      },
+      "errors": [],
+      "verdict": {
+        "pass": false,
+        "issues": [
+          "WRONG_FOCUS",
+          "BODY_FOCUS",
+          "RESTORE_COUNT"
+        ]
+      },
+      "expectationMatched": true
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "condition": {
+        "id": "B",
+        "width": 1280,
+        "theme": "light",
+        "text": 100
+      },
+      "way": "escape",
+      "before": {
+        "active": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "sameOpener": true,
+        "body": false,
+        "connected": true,
+        "focusVisible": true,
+        "expanded": "false",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(24, 37, 37) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(1, 105, 204) solid 2px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 81.390625,
+          "y": 433.65625,
+          "width": 536.109375,
+          "height": 32,
+          "top": 433.65625,
+          "right": 617.5,
+          "bottom": 465.65625,
+          "left": 81.390625
+        },
+        "opens": 0,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 382.5999999999767,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 383.29999999998836,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 383.70000000001164,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 383.79999999998836,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 384.5,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 384.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 384.79999999998836,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 385,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          }
+        ]
+      },
+      "menu": {
+        "active": {
+          "tag": "DIV",
+          "id": "select-list-:r8:",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": false,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "true",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(24, 37, 37) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(24, 37, 37) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 81.390625,
+          "y": 433.65625,
+          "width": 536.109375,
+          "height": 32,
+          "top": 433.65625,
+          "right": 617.5,
+          "bottom": 465.65625,
+          "left": 81.390625
+        },
+        "opens": 1,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 382.5999999999767,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 383.29999999998836,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 383.70000000001164,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 383.79999999998836,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 384.5,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 384.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 384.79999999998836,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 385,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 403,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 406.79999999998836,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 407.29999999998836,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 409.3999999999651,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          }
+        ]
+      },
+      "after": {
+        "active": {
+          "tag": "BODY",
+          "id": "",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": true,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "false",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(24, 37, 37) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(24, 37, 37) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 81.390625,
+          "y": 433.65625,
+          "width": 536.109375,
+          "height": 32,
+          "top": 433.65625,
+          "right": 617.5,
+          "bottom": 465.65625,
+          "left": 81.390625
+        },
+        "opens": 1,
+        "closes": 1,
+        "calls": [],
+        "events": [
+          {
+            "time": 382.5999999999767,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 383.29999999998836,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 383.70000000001164,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 383.79999999998836,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 384.5,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 384.70000000001164,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 384.79999999998836,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 385,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 403,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 406.79999999998836,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 407.29999999998836,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 409.3999999999651,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 427.5,
+            "type": "keydown",
+            "key": "Escape",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 428.5999999999767,
+            "type": "focusout",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 430,
+            "type": "close",
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          }
+        ]
+      },
+      "errors": [],
+      "verdict": {
+        "pass": false,
+        "issues": [
+          "WRONG_FOCUS",
+          "BODY_FOCUS",
+          "RESTORE_COUNT"
+        ]
+      },
+      "expectationMatched": true
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "condition": {
+        "id": "A",
+        "width": 320,
+        "theme": "dark",
+        "text": 200
+      },
+      "way": "mouse",
+      "before": {
+        "active": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "sameOpener": true,
+        "body": false,
+        "connected": true,
+        "focusVisible": true,
+        "expanded": "false",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(2, 133, 255) solid 2px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418,
+          "width": 274,
+          "height": 64,
+          "top": 418,
+          "right": 297,
+          "bottom": 482,
+          "left": 23
+        },
+        "opens": 0,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 218,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 341,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 342,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 342,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 398,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 436,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 436,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 436,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          }
+        ]
+      },
+      "menu": {
+        "active": {
+          "tag": "DIV",
+          "id": "select-list-:r8:",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": false,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "true",
+        "value": "a",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(230, 239, 235) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418,
+          "width": 274,
+          "height": 64,
+          "top": 418,
+          "right": 297,
+          "bottom": 482,
+          "left": 23
+        },
+        "opens": 1,
+        "closes": 0,
+        "calls": [],
+        "events": [
+          {
+            "time": 218,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 341,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 342,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 342,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 398,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 436,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 436,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 436,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 597,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 604,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 604,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 608,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          }
+        ]
+      },
+      "after": {
+        "active": {
+          "tag": "BODY",
+          "id": "",
+          "role": null
+        },
+        "sameOpener": false,
+        "body": true,
+        "connected": true,
+        "focusVisible": false,
+        "expanded": "false",
+        "value": "b",
+        "hasFocus": true,
+        "visibility": "visible",
+        "style": {
+          "outline": "rgb(230, 239, 235) none 0px",
+          "boxShadow": "none",
+          "afterOutline": "rgb(230, 239, 235) none 0px",
+          "afterShadow": "none"
+        },
+        "rect": {
+          "x": 23,
+          "y": 418,
+          "width": 274,
+          "height": 64,
+          "top": 418,
+          "right": 297,
+          "bottom": 482,
+          "left": 23
+        },
+        "opens": 1,
+        "closes": 1,
+        "calls": [],
+        "events": [
+          {
+            "time": 218,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 341,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 342,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 342,
+            "type": "focusin",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 398,
+            "type": "keydown",
+            "key": "Shift",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 436,
+            "type": "keydown",
+            "key": "Tab",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            }
+          },
+          {
+            "time": 436,
+            "type": "focusout",
+            "target": {
+              "tag": "SUMMARY",
+              "id": "",
+              "role": null,
+              "text": "出自・実装と確認ポイント"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 436,
+            "type": "focusin",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 597,
+            "type": "keydown",
+            "key": " ",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            }
+          },
+          {
+            "time": 604,
+            "type": "focusout",
+            "target": {
+              "tag": "SPAN",
+              "id": "select-trigger-:r0:",
+              "role": "button",
+              "text": "表示モード：一覧"
+            },
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          },
+          {
+            "time": 604,
+            "type": "focusin",
+            "target": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 608,
+            "type": "open",
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 1349,
+            "type": "pointerdown",
+            "target": {
+              "tag": "DIV",
+              "id": "",
+              "role": null,
+              "text": "カード"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 1350,
+            "type": "pointerup",
+            "target": {
+              "tag": "DIV",
+              "id": "",
+              "role": null,
+              "text": "カード"
+            },
+            "active": {
+              "tag": "DIV",
+              "id": "select-list-:r8:",
+              "role": null,
+              "text": "一覧カード選択不可"
+            }
+          },
+          {
+            "time": 1353,
+            "type": "close",
+            "active": {
+              "tag": "BODY",
+              "id": "",
+              "role": null,
+              "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PART"
+            }
+          }
+        ]
+      },
+      "errors": [],
+      "verdict": {
+        "pass": false,
+        "issues": [
+          "WRONG_FOCUS",
+          "BODY_FOCUS",
+          "RESTORE_COUNT"
+        ]
+      },
+      "expectationMatched": true
+    }
+  ],
+  "faults": [],
+  "regressions": [],
+  "failures": [
+    "Error: page.evaluate: TypeError: null is not an object (evaluating 'document.getElementById('official-select').closest')"
+  ],
+  "limitations": [
+    "CSS root 200% is not native OS text scaling",
+    "Playwright WebKit is not real Safari or VoiceOver",
+    "No full v10 acceptance or Stage 3 release decision"
+  ]
+}

@@ -72,9 +72,12 @@ async function snapshot(p) {
   });
 }
 async function fresh(browser, c, url) {
-  const p = await browser.newPage({ viewport: { width: c.width, height: 900 } });
+  const p = await browser.newPage({ viewport: { width: c.width, height: 1000 } });
   const errors = []; p.on('pageerror', e => errors.push(String(e)));
   await p.goto(`${url}/?theme=${c.theme}&text=${c.text}`); await p.bringToFront();
+  // Page load can precede React's first committed control in WebKit.
+  await p.locator('#official-select').waitFor({ state: 'attached' });
+  await trigger(p).waitFor({ state: 'visible' });
   await instrument(p); return { p, errors };
 }
 async function open(p) {

@@ -55,3 +55,23 @@ PR #21 初回HEAD 5601a18b019de0d674088cfac38ed6b142e66e55 / tree 9f8804fef4f798
 原票はRED12件、GREEN44件、failures空。実装者runnerの両engine結果を原票から確認したもので、これをこちらの独立WebKit実行と呼ばない。WebKit A-keyboardとB-Escape PNGを目視し、表示値と青いfocus輪郭を確認。
 
 独自run/faults harnessを tests/select-return-independent/ へ移し、engine/root/output/module pathの環境変数対応、既存出力directoryの拒否、非0終了の契約を追加。製品/SDKは無変更。Chromiumで可搬版を再実行しrun24件とfaults5件が期待一致、exit0。独立WebKitは次のCI接続待ち。最終HEADはまだ未確定。
+
+## 追補: 固定sleep除去後の独立再実行
+
+2026-11-06 JST。可搬版run/faultsからwaitForTimeoutを全除去。製品は変更せず、close属性とoption hiddenの状態待ち、復帰先identity最大2秒待ち、2 paint frameの観測へ変更した。REDはTimeoutErrorによる復帰未観測とBODYの両方を要求。GREENはidentity一致を要求。Tabは閉鎖を期待せず既存open挙動を維持。faultsは各故障のfocus先/call数を状態待ちで確認。
+
+Chromiumで新規state-run/state-faultsへ実行。run24ケース（RED12/GREEN12）期待一致、faults5件（正常1/故障4）期待一致、双方exit0。runの指定主経路は旧6件/新6件。repeatの初回/二回目を含む復帰対象の観測は各variant10回で、REDは10回すべて最大2000msのidentity待ちがtimeout、GREENは10回すべて一致。Tab/outsideはidentity復帰を待たない。以前の固定sleep版原票は上書きせず保持。
+
+## 追補: 旧archive内部の独立照合完了
+
+2026-11-06 JST。CI経由で取得されたoriginal-review.tar.gzをこちらでSHA256計算し、既知BUNDLEの f2807499f61672b6d2608ad8011a3efac1deb7945f498ae28c6ba996f9a23b96 と一致。展開済みbrowser/front-check/focus-return.cjsおよび.jsonを自分で読取確認した。
+
+旧HEAD401c554ae87a6d846b1655bc9af12a92d7002633、開始2026-11-05T18:08:22.254Z（JST 11月6日03:08）。Chromium154.0.8037.57。Selectのみ抽出するとA=320/dark/root200、B=1280/light/root100のmouse-select / keyboard-select / Escapeで6件。すべてafter BODY、hasFocus=true、visibility=visible、returned=false、pageerrorなし。mouse/keyboard値b、Escape値a。別のTooltip4件をSelect件数に混ぜない。
+
+元scriptはfresh context/page、bringToFront、trigger focus→Tab→Shift+Tab→Space、option hidden後に厳密DOM identityを最大2000ms待つ。旧scriptの最終returnedはid比較だが、BODY/空idの生観測とbefore trigger idから失敗は確認できる。今回の独立版は厳密DOM identityを直接判定する。元height1000に対して今回ローカル独立版height900で、ブラウザversionも異なる。幅/theme/root/キー手順/最大復帰待ちを揃えた再現であり全環境完全同一とはしない。
+
+historical-verification.jsonに元ファイルhashと6件の抜粋を保存。旧archive未確認という前段の時点注記はこの追補で解消。最終HEAD/CIの結合は引き続き待ち。
+
+## 最終CI前のviewport整合
+
+2026-11-06 JST。依頼元との原script照合を受け、独立run.cjsのheightだけ900→1000へ変更。これは元front-checkのviewportに揃える試験条件の変更であり、製品変更ではない。過去ローカル900pxの原票は保全。1000pxの実行結果は次のCIで別途評価し、既存900px結果をその成功証拠に置換しない。browser版差は残る。

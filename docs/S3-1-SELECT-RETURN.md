@@ -83,3 +83,15 @@ offline npm cache不足→通常registry取得成功。部分snapshotの初回�
 `CODEX_PRIMARY_RUNTIME_NODE_MODULES=/absolute/tools/stage-a-browser/node_modules APP_ROOT=/absolute/.work/v10 EVIDENCE_DIR=/new/output node apps/v10/scripts/select-return-browser.cjs`
 
 旧HEAD fresh buildへ同じコマンドを向けSELECT_EXPECT=redを追加。各outputは未存在を要求。SELECT_ENGINES=chromiumはローカル限定実行用で、両engine成功とは報告しない。CIは両engine・RED/GREEN・独立2build/SDK不変を実行し、全生JSON/PNG/hashをartifactへ保存。
+
+## 追補: CI両engineと旧原票の回収
+
+初回HEAD5601a18の専用CI42135548280と既存CI42135548325は成功。artifactのZIP digestと内部全hash・HEAD/treeをダウンロード後に照合した。Chromium141/WebKit26の重点各6件は旧全BODY→新全同一trigger。追加32件、focus画素8件、負対照14件、回帰4条件も期待一致。詳細はevidence/select-return-20261106/README.md。
+
+旧独立archiveも通常のCI checkoutから既知commit98b4c22のblobを取り出せた。元BUNDLEのSHA256に完全一致。展開したbrowser/front-check/focus-return.json/.cjsを実読し、A/Bとmouse/keyboard/Escapeの6件、BODY、値b/b/a、active document/visibleを照合した。旧archive内部NOT_READの留保はこの追補で解消。元Chromium154と今回141/WebKit26の環境差は明記し、旧資料を新規件数へ加算しない。原票をraw/original-front-check.*へ保全した。
+
+追補HEAD3004ed2のCI42152699198では、WebKitでReact初回mount前に観測器を取り付けてinput nullとなり、RED7件後にFAIL/exit1。GREEN/独立stepはSKIPPED。この失敗原票をraw/ci-3004ed2-red-failure.jsonへ保存した。正式harnessにinput attached/trigger visibleの状態待ちを追加し、製品やSDKを変更せず再試験する。旧件数を成功に読み替えない。
+
+独立担当harnessの150/100ms固定待ちは、closed/option hidden/期待focusの最大2秒状態待ちと2 paint frameへ置き換えた。REDは元レビュー同様に最大2秒の復帰待ちがTimeoutErrorとなることを要求し、別errorを握りつぶさない。独立版をChromium/WebKit CIへ接続。最終の独立判定・CI・HEAD/treeはPR最終追記で照合し、ここに未来の成功は記入しない。
+
+元script再読取でviewport高さ1000を確認。初期ローカル/CIの900とは区別し、最終harnessはA/B幅・theme・rootに加えて高さ1000も揃えた。元Chromium154と今回Chromium141/Playwright WebKit26は同一環境とは称しない。

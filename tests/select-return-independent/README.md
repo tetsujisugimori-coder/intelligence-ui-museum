@@ -17,3 +17,7 @@
 正常対照1件と故障4件（復帰無効/誤target/BODY強制/二重focus）。正常は契約受理、故障は拒否が期待値。全期待一致でexit0、不一致/実行障害はexit1。
 
 ChromiumとWebKitを各々実行する。Playwright WebKitは実Safari/VoiceOverの代用ではない。root200%は実OS文字拡大ではない。v10全体FAILおよびStage3 HOLDの変更根拠にはしない。
+
+待ちの契約: 固定sleepなし。closeはoption hiddenとaria-expanded=falseを待つ。復帰対象のGREENは最大2秒で厳密DOM identity一致、REDは同じ最大2秒identity待ちがTimeoutErrorになることを要求し、その後BODYを検査する（タイムアウトは製品復帰が観測されなかった証拠）。Tabは閉鎖を待たず既存open状態を検査。観測前に2 requestAnimationFrameを通す。faultsは注入ごとのfocus先/call数を最大2秒の状態待ちで観測する。
+
+viewport: 最終CIのrun.cjsは元front-checkの6件条件と揃えて高さ1000pxを使用する。変更前のローカル独立原票（results、portable-run、state-run）は高さ900pxで保存されており、上書きしない。幅/theme/root拡大/キー操作/最大2秒identity待ちは対応する。旧Chromium154と今回Chromium141/WebKit26のbrowser差は残る。
