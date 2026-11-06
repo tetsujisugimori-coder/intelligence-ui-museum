@@ -1,0 +1,2494 @@
+{
+  "testedAt": "2026-11-06T10:45:02.896Z",
+  "engine": "chromium",
+  "viewport": {
+    "width": 375,
+    "height": 1000
+  },
+  "theme": "dark",
+  "text": 200,
+  "rows": [
+    {
+      "index": 0,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 301.0999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 346.4000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 358.4000000000233,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 373.79999999993015,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 374.19999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 376.5,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 377,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 386.5,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 411.69999999995343,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 412.4000000000233,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 412.5,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 412.5999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 415.5999999999767,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 419,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 438.0999999999767,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 1,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 339,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 367.60000000009313,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 380.10000000009313,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 401.10000000009313,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 402,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 406.4000000000233,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 407.80000000004657,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 408.10000000009313,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 444.20000000006985,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 445,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 445.10000000009313,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 445.30000000004657,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 449.70000000006985,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 456.9000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 461.70000000006985,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 2,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": false,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 322.5999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 374.5999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 386.30000000004657,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 408.0999999999767,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 408.69999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 411.5,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 412.19999999995343,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 420.9000000000233,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 446,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 446.69999999995343,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 446.9000000000233,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 447.0999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 450.0999999999767,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 454.30000000004657,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 457.80000000004657,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 3,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": false,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 353.9000000000233,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 385.5999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 402.29999999993015,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 419.5,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 420.0999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 423.5,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 423.9000000000233,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 428.5,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 468.5999999999767,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 469.29999999993015,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 469.5999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 469.79999999993015,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 473.5999999999767,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 479,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 483.69999999995343,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 4,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 320,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 345,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 357.10000000009313,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 399.4000000000233,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 401,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 408.80000000004657,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 410.5,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 411.30000000004657,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 442.5,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 443.20000000006985,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 443.4000000000233,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 443.80000000004657,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 448.9000000000233,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 454.5,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 459.9000000000233,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 5,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 333.30000000004657,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 361.69999999995343,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 381.4000000000233,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 405.69999999995343,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 406.5999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 411.5,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 412.19999999995343,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 417.30000000004657,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 453.5,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 454.30000000004657,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 454.5999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 454.69999999995343,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 459.30000000004657,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 464.30000000004657,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 483.30000000004657,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 6,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 305.5,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 346.9000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 358,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 375.80000000004657,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 376.30000000004657,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 379.10000000009313,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 379.60000000009313,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 389.30000000004657,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 413.5,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 414.30000000004657,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 414.4000000000233,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 414.80000000004657,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 420.20000000006985,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 424.70000000006985,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 443.5,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 7,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 355.69999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 396.29999999993015,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 407.4000000000233,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 424.4000000000233,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 424.79999999993015,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 428.5999999999767,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 429.19999999995343,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 438.4000000000233,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 461,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 462,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 462.19999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 462.5,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 466,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 472.69999999995343,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 478.79999999993015,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 8,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 294,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 342.0999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 355.79999999993015,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 373.5999999999767,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 374.19999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 377.5,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 378.79999999993015,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 384.89999999990687,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 407.69999999995343,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 408.5,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 408.5999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 408.79999999993015,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 412.5999999999767,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 418.79999999993015,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 423.69999999995343,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 9,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": false,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 325.5999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 374.69999999995343,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 396,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 426.69999999995343,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 427.69999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 434.0999999999767,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 434.9000000000233,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 435.80000000004657,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 470.5999999999767,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 471.5999999999767,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 471.69999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 471.9000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 476.5999999999767,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 481.19999999995343,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 486.0999999999767,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 10,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 318.0999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 344.0999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 357.69999999995343,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 376.29999999993015,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 377.0999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 380.5999999999767,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 381.19999999995343,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 384.79999999993015,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 406.29999999993015,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 407,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 407.0999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 407.29999999993015,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 411.5999999999767,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 418.5999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 423.9000000000233,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 11,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": false,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 316,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 357.0999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 371.30000000004657,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 388,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 388.5999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 392.30000000004657,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 393.19999999995343,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 393.69999999995343,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 431.69999999995343,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 432.5,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 432.69999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 433,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 437.4000000000233,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 443.30000000004657,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 448.4000000000233,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 12,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 309.0999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 351.29999999993015,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 363.19999999995343,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 383.69999999995343,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 384.29999999993015,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 388.5999999999767,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 389.29999999993015,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 391.29999999993015,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 430,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 430.79999999993015,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 431,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 431.19999999995343,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 435.0999999999767,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 441.5999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 445.9000000000233,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 13,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 337.30000000004657,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 364.19999999995343,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 375.9000000000233,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 396.5,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 397,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 400.5999999999767,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 401,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 403.9000000000233,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 429.5,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 430.5999999999767,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 430.69999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 430.9000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 435.5,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 438.4000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 456.80000000004657,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 14,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 307.30000000004657,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 336.4000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 352.80000000004657,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 373.80000000004657,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 374.70000000006985,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 378.5,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 379.4000000000233,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 379.70000000006985,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 415.5,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 416.5,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 416.60000000009313,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 416.9000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 420.9000000000233,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 424.20000000006985,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 443.80000000004657,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 15,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 351,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 378.4000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 393.5,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 412.0999999999767,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 412.9000000000233,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 417.80000000004657,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 418.5999999999767,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 418.9000000000233,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 456.4000000000233,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 457.0999999999767,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 457.19999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 457.5,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 462.19999999995343,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 468.5,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 474.69999999995343,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 16,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": false,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 325.5,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 366.4000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 378.80000000004657,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 402.5,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 403.0999999999767,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 408.0999999999767,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 408.9000000000233,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 409.5999999999767,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 450.5,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 451.20000000006985,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 451.4000000000233,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 451.5999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 455.70000000006985,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 459.70000000006985,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 465.0999999999767,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 17,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": false,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 348.69999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 377.0999999999767,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 394.19999999995343,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 414.5999999999767,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 415.19999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 418.80000000004657,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 419.69999999995343,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 420,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 454.4000000000233,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 455.19999999995343,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 455.4000000000233,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 455.69999999995343,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 460,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 465.4000000000233,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 471.9000000000233,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 18,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 339,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 368.5,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 382.4000000000233,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 405.10000000009313,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 405.80000000004657,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 410.30000000004657,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 410.9000000000233,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 411.20000000006985,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 444.5,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 445.20000000006985,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 445.4000000000233,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 445.60000000009313,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 449.9000000000233,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 455.5,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 460.9000000000233,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    },
+    {
+      "index": 19,
+      "errors": [],
+      "initialVisible": true,
+      "afterTab": {
+        "tipVisible": false,
+        "active": "<summary>出自・実装と確認ポイント</summary>"
+      },
+      "returnVisibleWait": true,
+      "final": {
+        "same": true,
+        "focusVisible": true,
+        "documentFocus": true,
+        "scrollY": 10966,
+        "tipVisible": false,
+        "events": [
+          {
+            "type": "scroll",
+            "time": 314.9000000000233,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 356.5,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 367.29999999993015,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "keydown",
+            "time": 381.4000000000233,
+            "key": "Tab",
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "focusout",
+            "time": 381.79999999993015,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 384.5,
+            "tip": false,
+            "scrollY": 10966
+          },
+          {
+            "type": "focusin",
+            "time": 385.29999999993015,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "scroll",
+            "time": 385.5,
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 421.5999999999767,
+            "key": "Shift",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "keydown",
+            "time": 422.19999999995343,
+            "key": "Tab",
+            "active": "SUMMARY",
+            "text": "出自・実装と確認ポイント",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusout",
+            "time": 422.19999999995343,
+            "active": "BODY",
+            "text": "v10 Stage 2-R · レビュー公開版Button・Selectの表示修正版。公式6部品を直接利用。総合PARTIAL／Stage ",
+            "scrollY": 11535
+          },
+          {
+            "type": "focusin",
+            "time": 422.5,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 425.79999999993015,
+            "tip": true,
+            "scrollY": 10966
+          },
+          {
+            "type": "scroll",
+            "time": 431.29999999993015,
+            "active": "BUTTON",
+            "text": "説明を見る",
+            "scrollY": 10966
+          },
+          {
+            "type": "mutation",
+            "time": 435.0999999999767,
+            "tip": false,
+            "scrollY": 10966
+          }
+        ]
+      },
+      "pass": false
+    }
+  ],
+  "status": "FAIL",
+  "scope": "20 fresh pages; center scroll before initial focus, Tab and Shift+Tab with two animation frames. No product mutation."
+}
