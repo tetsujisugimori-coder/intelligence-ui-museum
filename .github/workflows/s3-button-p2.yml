@@ -34,9 +34,16 @@ jobs:
           S3_ENGINES: chromium,webkit
           REVIEW_OUT: .work/s3-button-fixed
         run: node tests/s3-reaccept-independent/button-ring.cjs
+      - name: Reject real-product outline negative controls
+        if: always()
+        env:
+          REVIEW_OUT: .work/s3-button-fixed-controls
+        run: node tests/s3-reaccept-independent/button-ring-controls.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: s3-button-regression-${{ github.event.pull_request.head.sha || github.sha }}
-          path: .work/s3-button-fixed/
+          path: |
+            .work/s3-button-fixed/
+            .work/s3-button-fixed-controls/
           if-no-files-found: warn

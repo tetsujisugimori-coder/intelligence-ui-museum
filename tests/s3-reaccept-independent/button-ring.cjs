@@ -11,6 +11,8 @@ const out = path.resolve(process.env.REVIEW_OUT || path.join(repo, '.work/s3-but
 const pw = require(path.join(modules, 'playwright'));
 const { PNG } = require(path.join(modules, 'playwright-core/lib/utilsBundle.js'));
 const engines = (process.env.S3_ENGINES || 'chromium,webkit').split(',');
+assert(engines.length > 0 && engines.every(engine => ['chromium', 'webkit'].includes(engine)) &&
+  new Set(engines).size === engines.length, 'engines must be supported and unique');
 if (fs.existsSync(out)) throw Error('fresh output directory required');
 fs.mkdirSync(out, { recursive: true });
 const server = http.createServer((request, response) => {
@@ -53,17 +55,27 @@ async function suppressFocus(p, button) {
         for (const theme of ['light', 'dark'])
         for (const text of [100, 200]) {
           const id = [width, theme, text].join('-');
-          const row = { id, engine, width, theme, text };
+          const row = { id, engine, width, theme, text, browserVersion: browser.version() };
           const p = await browser.newPage({ viewport: { width, height: 1000 } });
           try {
-            await p.goto('http://127.0.0.1:' + server.address().port + '/?theme=' + theme + '&text=' + text);
+            await p.goto('http://127.0.0.1:' + server.address().port + '/?theme=' + theme + '&text=' + text, { waitUntil: 'domcontentloaded' });
             await p.bringToFront();
+            // Freeze visual transitions before the first capture as well as the
+            // suppression controls; otherwise the on/off pair can compare different
+            // phases of the SDK's animated pseudo elements at fractional coordinates.
+            await p.evaluate(() => {
+              const style = document.createElement('style');
+              style.textContent = '#Button .stage button,#Button .stage button::before,#Button .stage button::after{transition:none!important;animation:none!important}';
+              document.head.append(style);
+            });
             const button = p.locator('#Button .stage button');
             await button.waitFor();
             await button.focus();
             await p.keyboard.press('Tab');
             await p.keyboard.press('Shift+Tab');
-            await button.scrollIntoViewIfNeeded();
+            // Inspect the complete halo, including the seven pixels outside the
+            // control; a merely visible button can still sit flush at viewport y=0.
+            await button.evaluate(element => element.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'instant' }));
             await frames(p);
             row.geometry = await button.evaluate(element => {
               const rect = element.getBoundingClientRect(), style = getComputedStyle(element);
@@ -78,7 +90,7 @@ async function suppressFocus(p, button) {
             });
             const g = row.geometry;
             assert(g.active && g.focusVisible, 'real keyboard focus must be visible');
-            assert(g.outlineWidth >= 3 && g.offset >= 4, 'do not hide or shrink original focus outline');
+            assert(g.outlineWidth === 3 && g.offset === 4, 'preserve the original 3px outline and 4px offset');
             row.expected = {
               left: g.button.left - g.outlineWidth - g.offset,
               right: g.button.right + g.outlineWidth + g.offset,
@@ -107,8 +119,22 @@ async function suppressFocus(p, button) {
             style = await suppressFocus(p, button);
             row.images.push(await shot('unclipped-off'));
             await style.evaluate(element => element.remove());
+            // SECTION-only controls cannot reveal clipping inherited from the stage,
+            // the button, or another ancestor: both images would contain the defect.
+            // Keep that original diagnostic pair, and add an independent paint reference
+            // that removes clipping/masking from the actual button and its ancestor chain.
+            await button.evaluate(element => {
+              for (let node = element; node && node !== document.documentElement; node = node.parentElement) {
+                for (const [property, value] of [['overflow', 'visible'], ['clip-path', 'none'], ['mask', 'none']])
+                  node.style.setProperty(property, value, 'important');
+              }
+            });
+            row.images.push(await shot('all-unclipped-on'));
+            style = await suppressFocus(p, button);
+            row.images.push(await shot('all-unclipped-off'));
+            await style.evaluate(element => element.remove());
             let originalPixels = 0, unclippedPixels = 0;
-            const missing = [];
+            const missing = [], missingAll = [];
             for (let y = 0; y < images[0].height; y++) {
               for (let x = 0; x < images[0].width; x++) {
                 const index = (y * images[0].width + x) * 4;
@@ -117,14 +143,36 @@ async function suppressFocus(p, button) {
                 if (on) originalPixels++;
                 if (unclip) unclippedPixels++;
                 if (unclip && !on) missing.push({ x: x + region.x, y: y + region.y });
+                if (delta(images[4], images[5], index) >= 24 && !on)
+                  missingAll.push({ x: x + region.x, y: y + region.y });
               }
             }
+            // An opaque overlay can survive every clipping counterfactual. Require
+            // actual focus paint at all four outer cardinal points as well, using
+            // geometry and the original on/off images, never the counterfactual.
+            const b = g.button;
+            const cardinalPoints = {
+              left: [Math.ceil(b.left - 7), Math.floor((b.top + b.bottom) / 2)],
+              right: [Math.floor(b.right + 6), Math.floor((b.top + b.bottom) / 2)],
+              top: [Math.floor((b.left + b.right) / 2), Math.ceil(b.top - 7)],
+              bottom: [Math.floor((b.left + b.right) / 2), Math.floor(b.bottom + 6)],
+            };
+            const cardinal = Object.fromEntries(Object.entries(cardinalPoints).map(([side, [x, y]]) => {
+              const px = x - region.x, py = y - region.y;
+              const inImage = px >= 0 && py >= 0 && px < images[0].width && py < images[0].height;
+              const contrast = inImage ? delta(images[0], images[1], (py * images[0].width + px) * 4) : 0;
+              return [side, { x, y, contrast, painted: inImage && contrast >= 24 }];
+            }));
             row.paint = {
               originalPixels, unclippedPixels, missingPixels: missing.length,
               missingColumns: [...new Set(missing.map(pixel => pixel.x))],
+              missingAllClipPixels: missingAll.length,
+              missingAllClipColumns: [...new Set(missingAll.map(pixel => pixel.x))],
+              cardinal,
             };
             row.status = originalPixels > 100 && unclippedPixels > 100 &&
-              missing.length === 0 ? 'PASS' : 'FAIL';
+              missing.length === 0 && missingAll.length === 0 &&
+              Object.values(cardinal).every(point => point.painted) ? 'PASS' : 'FAIL';
           } catch (error) {
             row.status = 'UNKNOWN';
             row.error = String(error);
@@ -145,7 +193,8 @@ async function suppressFocus(p, button) {
       rows.every(row => row.status === 'PASS') ? 'PASS' : 'FAIL';
     fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify({
       status, engines, rows, errors, testedAt: new Date().toISOString(),
-      scope: 'original/unclipped on-off PNG pixel contrast, Chromium + WebKit, 4 widths x 2 themes x 2 root scales',
+      formalMatrix: engines.length === 2 && rows.length === 32,
+      scope: 'original/SECTION-unclipped/all-ancestor-unclipped on-off PNG pixel contrast; selected engines x 4 widths x 2 themes x 2 root scales',
     }, null, 2));
     console.log(JSON.stringify({
       status, total: rows.length, pass: rows.filter(row => row.status === 'PASS').length,
