@@ -1,0 +1,1988 @@
+{
+  "files": {
+    "delegates/audit-initial.zip": {
+      "sha256": "d3b2eeda3748cd3b48f3f4e17b1bdeb7223b749c8f8d77dceba0bffeb59d4e6a",
+      "bytes": 302637
+    },
+    "delegates/button.zip": {
+      "sha256": "c9df17fe272f14a62c4b8896496ccb9793bd80d68c00991003fe23f7466cdf09",
+      "bytes": 9120051
+    },
+    "delegates/integrated-windows.zip": {
+      "sha256": "06306fb0030f79dd5e89ce94f0e13ce64121353bf80bfe30106b0df89b56a978",
+      "bytes": 18561776
+    },
+    "delegates/select-baseline.zip": {
+      "sha256": "00d3578895e53a2f3f87b8539533d3f96eef8eb7be9dc006ae181b9efe9b2725",
+      "bytes": 4521423
+    },
+    "delegates/tooltip-supplement.md": {
+      "sha256": "1c6a7688bd4e9ed4cac91bfa0a63ed80472b0775cfc3c59a994cef00433b31ae",
+      "bytes": 1802
+    },
+    "delegates/tooltip.zip": {
+      "sha256": "da4c505e0ed011ee9515d26736a21135faadcfb897aceee890a5b39b9171268f",
+      "bytes": 11499316
+    },
+    "primary-audit/parent-audit-20261106/contradictory-fault-error.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/contradictory-fault-error.stdout.log": {
+      "sha256": "28174eef7b39ff9eadea50b9619ff1801acbeceec03773b54358b83a3628a5f6",
+      "bytes": 103
+    },
+    "primary-audit/parent-audit-20261106/contradictory-focus-row.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/contradictory-focus-row.stdout.log": {
+      "sha256": "0955c206c34ce2dedcd730aa8d966b6e01c591bc76f6a05c017a7b43ed0d3a6b",
+      "bytes": 74
+    },
+    "primary-audit/parent-audit-20261106/duplicate-fault-engines.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/duplicate-fault-engines.stdout.log": {
+      "sha256": "576e609db9d222a38a0c8be88c2c7a507031bc4d7842c5bd77464aecc3d46ac6",
+      "bytes": 401
+    },
+    "primary-audit/parent-audit-20261106/duplicate-focus-fault.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/duplicate-focus-fault.stdout.log": {
+      "sha256": "c7fb479769f485ed444572cb5d9afe3748adf2e42e0137b9ca0c848659a62ac2",
+      "bytes": 89
+    },
+    "primary-audit/parent-audit-20261106/duplicate-replacement-image.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/duplicate-replacement-image.stdout.log": {
+      "sha256": "a37d219e8d2f05306dc99b82d673dc2ffba79f216012548ac0a0808cb16011e3",
+      "bytes": 73
+    },
+    "primary-audit/parent-audit-20261106/empty-focus.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/empty-focus.stdout.log": {
+      "sha256": "408b06fd2c975a091a313c113214fc8cc3f01d08cae36d5484a6d89dfdbe46cc",
+      "bytes": 159
+    },
+    "primary-audit/parent-audit-20261106/empty-matrix.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/empty-matrix.stdout.log": {
+      "sha256": "1afe6224557ab878cd4610c4ef9ff0ea971033ddf5edafbe6f661740abc281a5",
+      "bytes": 98
+    },
+    "primary-audit/parent-audit-20261106/missing-errors-assertion.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/missing-errors-assertion.stdout.log": {
+      "sha256": "627a1ef2e9332f970abb3b6476e9054439f859a9180dd02e8311086dda55da70",
+      "bytes": 75
+    },
+    "primary-audit/parent-audit-20261106/missing-stage-log.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/missing-stage-log.stdout.log": {
+      "sha256": "0bd8e80c87a2a90ca2354628943d18b2487c69b3004385e6000ccfaacf2a8de7",
+      "bytes": 98
+    },
+    "primary-audit/parent-audit-20261106/normal-synthetic-contract.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/normal-synthetic-contract.stdout.log": {
+      "sha256": "09be4af24ec2b3be0d0adfb7a8abaac1a278bc4a8f7a210075a2d1146d67fac4",
+      "bytes": 41
+    },
+    "primary-audit/parent-audit-20261106/results.json": {
+      "sha256": "6479c3694015bb690b00d3f76259b42e2f5bd49a4a0b7284dc446c4579aeb64e",
+      "bytes": 5316
+    },
+    "primary-audit/parent-audit-20261106/sdk-failed.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/sdk-failed.stdout.log": {
+      "sha256": "74231f6530c0cc9beeebfa29dd36bb3ea3e63f97c88b4698999fd4d71b749135",
+      "bytes": 89
+    },
+    "primary-audit/parent-audit-20261106/shared-stale-source.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/shared-stale-source.stdout.log": {
+      "sha256": "07b5b1e6db40f1a3e2f0bdbb2af03fb9a1ce1c6238236b23192f236ba2b4ceef",
+      "bytes": 87
+    },
+    "primary-audit/parent-audit-20261106/stale-runner.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/stale-runner.stdout.log": {
+      "sha256": "f900c52607ab76cb7d180b399c24a673412accc4054d342e4b46e083c89c5bb9",
+      "bytes": 87
+    },
+    "primary-audit/parent-audit-20261106/unexecuted-stage.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/unexecuted-stage.stdout.log": {
+      "sha256": "31b615978c55d6aab22f3da2ac2610c2179439721512db07d88c460900e46ba2",
+      "bytes": 79
+    },
+    "primary-audit/parent-audit-20261106/unhashed-result.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-20261106/unhashed-result.stdout.log": {
+      "sha256": "114d5bf41e50eded9246fa27ac83a88d3f32eed37cd4d7d4c5b16d4c8ca9cd48",
+      "bytes": 103
+    },
+    "primary-audit/parent-audit-final-16.exit": {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    "primary-audit/parent-audit-final-16.log": {
+      "sha256": "ef693d65c275821466dc2a0fad7f886303ec8870f7a62606d0a17e1fea57ac5d",
+      "bytes": 1280
+    },
+    "primary-audit/parent-audit-final-16/contradictory-fault-error.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/contradictory-fault-error.stdout.log": {
+      "sha256": "28174eef7b39ff9eadea50b9619ff1801acbeceec03773b54358b83a3628a5f6",
+      "bytes": 103
+    },
+    "primary-audit/parent-audit-final-16/contradictory-focus-row.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/contradictory-focus-row.stdout.log": {
+      "sha256": "0955c206c34ce2dedcd730aa8d966b6e01c591bc76f6a05c017a7b43ed0d3a6b",
+      "bytes": 74
+    },
+    "primary-audit/parent-audit-final-16/contradictory-stage-error.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/contradictory-stage-error.stdout.log": {
+      "sha256": "31b615978c55d6aab22f3da2ac2610c2179439721512db07d88c460900e46ba2",
+      "bytes": 79
+    },
+    "primary-audit/parent-audit-final-16/duplicate-fault-engines.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/duplicate-fault-engines.stdout.log": {
+      "sha256": "576e609db9d222a38a0c8be88c2c7a507031bc4d7842c5bd77464aecc3d46ac6",
+      "bytes": 401
+    },
+    "primary-audit/parent-audit-final-16/duplicate-focus-fault.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/duplicate-focus-fault.stdout.log": {
+      "sha256": "c7fb479769f485ed444572cb5d9afe3748adf2e42e0137b9ca0c848659a62ac2",
+      "bytes": 89
+    },
+    "primary-audit/parent-audit-final-16/duplicate-replacement-image.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/duplicate-replacement-image.stdout.log": {
+      "sha256": "a37d219e8d2f05306dc99b82d673dc2ffba79f216012548ac0a0808cb16011e3",
+      "bytes": 73
+    },
+    "primary-audit/parent-audit-final-16/empty-focus.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/empty-focus.stdout.log": {
+      "sha256": "408b06fd2c975a091a313c113214fc8cc3f01d08cae36d5484a6d89dfdbe46cc",
+      "bytes": 159
+    },
+    "primary-audit/parent-audit-final-16/empty-matrix.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/empty-matrix.stdout.log": {
+      "sha256": "1afe6224557ab878cd4610c4ef9ff0ea971033ddf5edafbe6f661740abc281a5",
+      "bytes": 98
+    },
+    "primary-audit/parent-audit-final-16/missing-errors-assertion.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/missing-errors-assertion.stdout.log": {
+      "sha256": "627a1ef2e9332f970abb3b6476e9054439f859a9180dd02e8311086dda55da70",
+      "bytes": 75
+    },
+    "primary-audit/parent-audit-final-16/missing-stage-log.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/missing-stage-log.stdout.log": {
+      "sha256": "0bd8e80c87a2a90ca2354628943d18b2487c69b3004385e6000ccfaacf2a8de7",
+      "bytes": 98
+    },
+    "primary-audit/parent-audit-final-16/normal-synthetic-contract.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/normal-synthetic-contract.stdout.log": {
+      "sha256": "09be4af24ec2b3be0d0adfb7a8abaac1a278bc4a8f7a210075a2d1146d67fac4",
+      "bytes": 41
+    },
+    "primary-audit/parent-audit-final-16/results.json": {
+      "sha256": "a5f7b5222559fcbb533b7d1862e6f40b1113f05c30f3567669c02118936599ea",
+      "bytes": 5624
+    },
+    "primary-audit/parent-audit-final-16/sdk-failed.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/sdk-failed.stdout.log": {
+      "sha256": "74231f6530c0cc9beeebfa29dd36bb3ea3e63f97c88b4698999fd4d71b749135",
+      "bytes": 89
+    },
+    "primary-audit/parent-audit-final-16/shared-stale-source.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/shared-stale-source.stdout.log": {
+      "sha256": "07b5b1e6db40f1a3e2f0bdbb2af03fb9a1ce1c6238236b23192f236ba2b4ceef",
+      "bytes": 87
+    },
+    "primary-audit/parent-audit-final-16/stale-runner.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/stale-runner.stdout.log": {
+      "sha256": "f900c52607ab76cb7d180b399c24a673412accc4054d342e4b46e083c89c5bb9",
+      "bytes": 87
+    },
+    "primary-audit/parent-audit-final-16/unexecuted-stage.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/unexecuted-stage.stdout.log": {
+      "sha256": "31b615978c55d6aab22f3da2ac2610c2179439721512db07d88c460900e46ba2",
+      "bytes": 79
+    },
+    "primary-audit/parent-audit-final-16/unhashed-result.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-audit/parent-audit-final-16/unhashed-result.stdout.log": {
+      "sha256": "114d5bf41e50eded9246fa27ac83a88d3f32eed37cd4d7d4c5b16d4c8ca9cd48",
+      "bytes": 103
+    },
+    "primary-audit/parent-audit-output.log": {
+      "sha256": "1558f4e9395a3b6c3423262abca6a3dee2b0e7ac055d5b8bec29cadf9f0c1917",
+      "bytes": 1196
+    },
+    "primary-audit/parent-audit.exit": {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    "primary-browser/button/parent-controls8-af38afb.exit": {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    "primary-browser/button/parent-controls8-af38afb.log": {
+      "sha256": "d7a79f88707fda4bd690a0fad5ece28ec2a8e60814029ca77671eb0985def0aa",
+      "bytes": 298
+    },
+    "primary-browser/button/parent-controls8-af38afb/INDEPENDENT-IDENTITY.json": {
+      "sha256": "6014974f97b965f719c85a6412f8fedf1c5fb1e2897e182e7c0e12f87bcfdbef",
+      "bytes": 2526
+    },
+    "primary-browser/button/parent-controls8-af38afb/controls.json": {
+      "sha256": "e6df9ff398d6f783f6696c88c140086e7b3ca570765d40e167e37c545642ebad",
+      "bytes": 600
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip.stdout.txt": {
+      "sha256": "71db655d90e1fc53465e95f5e74b44cad9479e44a3fd3755077bb433adb76caa",
+      "bytes": 168
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/chromium-375-light-100-all-unclipped-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/chromium-375-light-100-all-unclipped-on.png": {
+      "sha256": "5a8b40a543eed4c5b9c2d3824459758cfe0742e4b365ddf622808dc8098e3927",
+      "bytes": 4743
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/chromium-375-light-100-original-off.png": {
+      "sha256": "e2088d2464fa1bd6cd564dd599218666ac811e8256224ffd5274901c65f4f488",
+      "bytes": 1304
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/chromium-375-light-100-original-on.png": {
+      "sha256": "60447a6343dfef9e23921e9a5f9df8fc9954015cfdf68fdf8d86b6b4c4ef15df",
+      "bytes": 2385
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/chromium-375-light-100-unclipped-off.png": {
+      "sha256": "e2088d2464fa1bd6cd564dd599218666ac811e8256224ffd5274901c65f4f488",
+      "bytes": 1304
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/chromium-375-light-100-unclipped-on.png": {
+      "sha256": "945599d0ea582032b0c039d28e1afdef09c97afefcd5bff40433aa2859d49151",
+      "bytes": 2390
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/results.json": {
+      "sha256": "bac2125e4a7c07e6e51b74d035c04a04cafa0a4cbd888ae77ef88b95fec5c606",
+      "bytes": 6839
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/webkit-375-light-100-all-unclipped-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/webkit-375-light-100-all-unclipped-on.png": {
+      "sha256": "61f7de9661bf67178d1c40c7c5c25127d3290fa50af051675d474e62d5d91ac2",
+      "bytes": 4901
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/webkit-375-light-100-original-off.png": {
+      "sha256": "48aa240a8c9da853b0a9f4aba7620dc58ebbc5d894a720c5ba580fe02ae3fee7",
+      "bytes": 1499
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/webkit-375-light-100-original-on.png": {
+      "sha256": "981c6c1f709f13cc955aa13eba1165c672adbadbbc9911581c07d34bf4cfb8f5",
+      "bytes": 2688
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/webkit-375-light-100-unclipped-off.png": {
+      "sha256": "48aa240a8c9da853b0a9f4aba7620dc58ebbc5d894a720c5ba580fe02ae3fee7",
+      "bytes": 1499
+    },
+    "primary-browser/button/parent-controls8-af38afb/half-stage-clip/webkit-375-light-100-unclipped-on.png": {
+      "sha256": "981c6c1f709f13cc955aa13eba1165c672adbadbbc9911581c07d34bf4cfb8f5",
+      "bytes": 2688
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel.stdout.txt": {
+      "sha256": "71db655d90e1fc53465e95f5e74b44cad9479e44a3fd3755077bb433adb76caa",
+      "bytes": 168
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/chromium-375-light-100-all-unclipped-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/chromium-375-light-100-all-unclipped-on.png": {
+      "sha256": "5a8b40a543eed4c5b9c2d3824459758cfe0742e4b365ddf622808dc8098e3927",
+      "bytes": 4743
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/chromium-375-light-100-original-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/chromium-375-light-100-original-on.png": {
+      "sha256": "9d852d9f4ed40e9d3c592873c983c92760615e6ab781d70a7081ba142b6239d3",
+      "bytes": 4685
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/chromium-375-light-100-unclipped-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/chromium-375-light-100-unclipped-on.png": {
+      "sha256": "72708ace2b94de8088d2ccfd19ce4183842990a805f0599800a41528dcd60bde",
+      "bytes": 4695
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/results.json": {
+      "sha256": "45980e1373fcb897f0887fd825ceb85a431c53765a91d93d8f7cb331e4788c77",
+      "bytes": 4431
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/webkit-375-light-100-all-unclipped-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/webkit-375-light-100-all-unclipped-on.png": {
+      "sha256": "61f7de9661bf67178d1c40c7c5c25127d3290fa50af051675d474e62d5d91ac2",
+      "bytes": 4901
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/webkit-375-light-100-original-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/webkit-375-light-100-original-on.png": {
+      "sha256": "1720e999dbe813bb9a8d049d0886cc04a192411d4ec4041c56f4ed0dcba801fa",
+      "bytes": 4840
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/webkit-375-light-100-unclipped-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-controls8-af38afb/left-one-pixel/webkit-375-light-100-unclipped-on.png": {
+      "sha256": "1720e999dbe813bb9a8d049d0886cc04a192411d4ec4041c56f4ed0dcba801fa",
+      "bytes": 4840
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay.stdout.txt": {
+      "sha256": "71db655d90e1fc53465e95f5e74b44cad9479e44a3fd3755077bb433adb76caa",
+      "bytes": 168
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/chromium-375-light-100-all-unclipped-off.png": {
+      "sha256": "b2370c203c5c890ad66dea8b8ed1e63cfa186b2ba30f6bc1926e2292a12adee8",
+      "bytes": 1261
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/chromium-375-light-100-all-unclipped-on.png": {
+      "sha256": "e0a652821030735e12c17e21096fadec513457caed29295d68b3398bb57ba051",
+      "bytes": 2320
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/chromium-375-light-100-original-off.png": {
+      "sha256": "e2088d2464fa1bd6cd564dd599218666ac811e8256224ffd5274901c65f4f488",
+      "bytes": 1304
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/chromium-375-light-100-original-on.png": {
+      "sha256": "096f53a2b97032b43c7c27c1d989bb64018d6bec22fd8d08a6a5ef9ebc3d1443",
+      "bytes": 2388
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/chromium-375-light-100-unclipped-off.png": {
+      "sha256": "b2370c203c5c890ad66dea8b8ed1e63cfa186b2ba30f6bc1926e2292a12adee8",
+      "bytes": 1261
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/chromium-375-light-100-unclipped-on.png": {
+      "sha256": "e0a652821030735e12c17e21096fadec513457caed29295d68b3398bb57ba051",
+      "bytes": 2320
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/results.json": {
+      "sha256": "89744b17131b1f2e9e6a240263cdfec08b02cadeb4449218b725d64b82f9d483",
+      "bytes": 4377
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/webkit-375-light-100-all-unclipped-off.png": {
+      "sha256": "e58814414af2d833499e159fa2b527b4129302f8bc571c5789d5fea5fafdf5b9",
+      "bytes": 1461
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/webkit-375-light-100-all-unclipped-on.png": {
+      "sha256": "56b4de0df3714bfad38f0446fc3731dd0eb8c51ce69a7f99e7890fa3cb6c95ad",
+      "bytes": 2582
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/webkit-375-light-100-original-off.png": {
+      "sha256": "48aa240a8c9da853b0a9f4aba7620dc58ebbc5d894a720c5ba580fe02ae3fee7",
+      "bytes": 1499
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/webkit-375-light-100-original-on.png": {
+      "sha256": "981c6c1f709f13cc955aa13eba1165c672adbadbbc9911581c07d34bf4cfb8f5",
+      "bytes": 2688
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/webkit-375-light-100-unclipped-off.png": {
+      "sha256": "e58814414af2d833499e159fa2b527b4129302f8bc571c5789d5fea5fafdf5b9",
+      "bytes": 1461
+    },
+    "primary-browser/button/parent-controls8-af38afb/opaque-left-overlay/webkit-375-light-100-unclipped-on.png": {
+      "sha256": "56b4de0df3714bfad38f0446fc3731dd0eb8c51ce69a7f99e7890fa3cb6c95ad",
+      "bytes": 2582
+    },
+    "primary-browser/button/parent-controls8-af38afb/outline-removed.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary-browser/button/parent-controls8-af38afb/outline-removed.stdout.txt": {
+      "sha256": "558979cf421314d0d4ed90fe64b65eeebac67edb363ab3aca6cb13b67c1f6844",
+      "bytes": 326
+    },
+    "primary-browser/button/parent-controls8-af38afb/outline-removed/results.json": {
+      "sha256": "2c0d64d472027f2f0c7316e2b5b4b8155b0ab7f05e5ac85f68d180bede2b0705",
+      "bytes": 2195
+    },
+    "primary-browser/button/parent-formal32-af38afb.exit": {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    "primary-browser/button/parent-formal32-af38afb.log": {
+      "sha256": "452c2342c6dacc9f3559c8e4ec6a42733be0969e53d6789ac35d04b2303dd602",
+      "bytes": 64
+    },
+    "primary-browser/button/parent-formal32-af38afb/INDEPENDENT-IDENTITY.json": {
+      "sha256": "242c4e98d41f048db9f3724b269dce3dec37d0cfad94a792979fd468fa493715",
+      "bytes": 2525
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-100-all-unclipped-off.png": {
+      "sha256": "61a984ebdbb3f3492945cd2eb857cb81bcc006b3c67464ba31f2fb728ef6acab",
+      "bytes": 2903
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-100-all-unclipped-on.png": {
+      "sha256": "058d257211234f9aebfb42d85bf47dfc11f4a41ce48a79e69dc2a518390dbfca",
+      "bytes": 4808
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-100-original-off.png": {
+      "sha256": "61a984ebdbb3f3492945cd2eb857cb81bcc006b3c67464ba31f2fb728ef6acab",
+      "bytes": 2903
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-100-original-on.png": {
+      "sha256": "322918312a622a7d38daa7eb01702fcdade553167180d91f892697bf81e47b1e",
+      "bytes": 4808
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-100-unclipped-off.png": {
+      "sha256": "61a984ebdbb3f3492945cd2eb857cb81bcc006b3c67464ba31f2fb728ef6acab",
+      "bytes": 2903
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-100-unclipped-on.png": {
+      "sha256": "322918312a622a7d38daa7eb01702fcdade553167180d91f892697bf81e47b1e",
+      "bytes": 4808
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-200-all-unclipped-off.png": {
+      "sha256": "ce9053d8a3383f33083292729455f8417a5050531f7951df24b72f39ceaa4c1a",
+      "bytes": 5971
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-200-all-unclipped-on.png": {
+      "sha256": "8c95dbea030cf6f4b60596dbe125154ddfd489c9ce2b335e0ac3cd61850dcd52",
+      "bytes": 9751
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-200-original-off.png": {
+      "sha256": "ce9053d8a3383f33083292729455f8417a5050531f7951df24b72f39ceaa4c1a",
+      "bytes": 5971
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-200-original-on.png": {
+      "sha256": "3befb38f794f2974d892b597607e3e6fc3fa135767e61e85eddd8484eea78b03",
+      "bytes": 9750
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-200-unclipped-off.png": {
+      "sha256": "ce9053d8a3383f33083292729455f8417a5050531f7951df24b72f39ceaa4c1a",
+      "bytes": 5971
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-dark-200-unclipped-on.png": {
+      "sha256": "3befb38f794f2974d892b597607e3e6fc3fa135767e61e85eddd8484eea78b03",
+      "bytes": 9750
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-100-all-unclipped-off.png": {
+      "sha256": "b1493027ecf8959e9dc5ec6f070e5b9e1b335e8624387b10df3ab6dc8e2f201b",
+      "bytes": 2714
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-100-all-unclipped-on.png": {
+      "sha256": "5fc6ab7ecefba614ae31ffc7e67d9f36d4c627916b5b9595e1c8694256a02023",
+      "bytes": 4632
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-100-original-off.png": {
+      "sha256": "b1493027ecf8959e9dc5ec6f070e5b9e1b335e8624387b10df3ab6dc8e2f201b",
+      "bytes": 2714
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-100-original-on.png": {
+      "sha256": "35561c289629777eeb53c51d04ed273ea3c27fc2b9f129a93edb4621cc18f1ab",
+      "bytes": 4632
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-100-unclipped-off.png": {
+      "sha256": "b1493027ecf8959e9dc5ec6f070e5b9e1b335e8624387b10df3ab6dc8e2f201b",
+      "bytes": 2714
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-100-unclipped-on.png": {
+      "sha256": "35561c289629777eeb53c51d04ed273ea3c27fc2b9f129a93edb4621cc18f1ab",
+      "bytes": 4632
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-200-all-unclipped-off.png": {
+      "sha256": "5ce20ebba6a66ccf5bb323dda3305ad19bb72fe80dcc1f4a182c842f365d4437",
+      "bytes": 5717
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-200-all-unclipped-on.png": {
+      "sha256": "909a93d34dba9885ddd140e31f1e1237e6f5a0781c0f28d1a92298869f6fd3c9",
+      "bytes": 9571
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-200-original-off.png": {
+      "sha256": "5ce20ebba6a66ccf5bb323dda3305ad19bb72fe80dcc1f4a182c842f365d4437",
+      "bytes": 5717
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-200-original-on.png": {
+      "sha256": "909a93d34dba9885ddd140e31f1e1237e6f5a0781c0f28d1a92298869f6fd3c9",
+      "bytes": 9571
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-200-unclipped-off.png": {
+      "sha256": "5ce20ebba6a66ccf5bb323dda3305ad19bb72fe80dcc1f4a182c842f365d4437",
+      "bytes": 5717
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-1280-light-200-unclipped-on.png": {
+      "sha256": "909a93d34dba9885ddd140e31f1e1237e6f5a0781c0f28d1a92298869f6fd3c9",
+      "bytes": 9571
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-100-all-unclipped-off.png": {
+      "sha256": "f66a7059c8b3d5ff084d10db9ba42e3c02cb56e3a58f5a1df482642ece50097a",
+      "bytes": 2933
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-100-all-unclipped-on.png": {
+      "sha256": "aa7339ad1567613a8b16ca2d87be775cfb95fdf802676e0e69abe18ef017c898",
+      "bytes": 4869
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-100-original-off.png": {
+      "sha256": "f66a7059c8b3d5ff084d10db9ba42e3c02cb56e3a58f5a1df482642ece50097a",
+      "bytes": 2933
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-100-original-on.png": {
+      "sha256": "aa7339ad1567613a8b16ca2d87be775cfb95fdf802676e0e69abe18ef017c898",
+      "bytes": 4869
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-100-unclipped-off.png": {
+      "sha256": "f66a7059c8b3d5ff084d10db9ba42e3c02cb56e3a58f5a1df482642ece50097a",
+      "bytes": 2933
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-100-unclipped-on.png": {
+      "sha256": "d3cd1648b56a167baa8ba7626c3133509823543440b31f26bbd66343ab870315",
+      "bytes": 4869
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-200-all-unclipped-off.png": {
+      "sha256": "d0c84ad615d6243127c55cb48ae7a3705835f7d4a78050db8e956ad6faa4fd54",
+      "bytes": 5977
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-200-all-unclipped-on.png": {
+      "sha256": "077db82d433ff041893fade91c3fc8f0f994db34e123e3f5b040c1741c98227f",
+      "bytes": 9733
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-200-original-off.png": {
+      "sha256": "d0c84ad615d6243127c55cb48ae7a3705835f7d4a78050db8e956ad6faa4fd54",
+      "bytes": 5977
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-200-original-on.png": {
+      "sha256": "6becde8753202194189aae74dc1f9a830cfdad728d6d5a1d52ed80b0761b6fdd",
+      "bytes": 9738
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-200-unclipped-off.png": {
+      "sha256": "d0c84ad615d6243127c55cb48ae7a3705835f7d4a78050db8e956ad6faa4fd54",
+      "bytes": 5977
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-dark-200-unclipped-on.png": {
+      "sha256": "077db82d433ff041893fade91c3fc8f0f994db34e123e3f5b040c1741c98227f",
+      "bytes": 9733
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-100-all-unclipped-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-100-all-unclipped-on.png": {
+      "sha256": "3b5c9b6e0680b60fdbeb81fb6c01ca116e98b48714cf1e86e950451813f070b5",
+      "bytes": 4745
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-100-original-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-100-original-on.png": {
+      "sha256": "32344fc86a91332244fed68ac81d5353ad413451655e11f4df96c9fa68aacf73",
+      "bytes": 4695
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-100-unclipped-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-100-unclipped-on.png": {
+      "sha256": "3d06a4db08e758de948f7acff26106c7523640b09330c5d924244a2ce1c73ce9",
+      "bytes": 4747
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-200-all-unclipped-off.png": {
+      "sha256": "a50dadd5d155f0f5c0ec6e72d8a47fd2ea8a804bebef07ef7e63166068784391",
+      "bytes": 5821
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-200-all-unclipped-on.png": {
+      "sha256": "2c3ccebad24118fd25b20bac5febc63f2bd661d6875ca03e30e13e9a5c5436b2",
+      "bytes": 9533
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-200-original-off.png": {
+      "sha256": "a50dadd5d155f0f5c0ec6e72d8a47fd2ea8a804bebef07ef7e63166068784391",
+      "bytes": 5821
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-200-original-on.png": {
+      "sha256": "d18d8c8dfa368b3796e93496d13296a66e6e4ad01523c89ed7438e4f10edc503",
+      "bytes": 9536
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-200-unclipped-off.png": {
+      "sha256": "a50dadd5d155f0f5c0ec6e72d8a47fd2ea8a804bebef07ef7e63166068784391",
+      "bytes": 5821
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-320-light-200-unclipped-on.png": {
+      "sha256": "2c3ccebad24118fd25b20bac5febc63f2bd661d6875ca03e30e13e9a5c5436b2",
+      "bytes": 9533
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-100-all-unclipped-off.png": {
+      "sha256": "f66a7059c8b3d5ff084d10db9ba42e3c02cb56e3a58f5a1df482642ece50097a",
+      "bytes": 2933
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-100-all-unclipped-on.png": {
+      "sha256": "10c493f028f08ac547d884358a57a374322b89f2d88d40dc3224d562b6efec8a",
+      "bytes": 4863
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-100-original-off.png": {
+      "sha256": "f66a7059c8b3d5ff084d10db9ba42e3c02cb56e3a58f5a1df482642ece50097a",
+      "bytes": 2933
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-100-original-on.png": {
+      "sha256": "10c493f028f08ac547d884358a57a374322b89f2d88d40dc3224d562b6efec8a",
+      "bytes": 4863
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-100-unclipped-off.png": {
+      "sha256": "f66a7059c8b3d5ff084d10db9ba42e3c02cb56e3a58f5a1df482642ece50097a",
+      "bytes": 2933
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-100-unclipped-on.png": {
+      "sha256": "c0de50dbd2743c55ff294403df5acf3e81290666c1b5bedf7aedcf98a9c79f04",
+      "bytes": 4864
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-200-all-unclipped-off.png": {
+      "sha256": "d0c84ad615d6243127c55cb48ae7a3705835f7d4a78050db8e956ad6faa4fd54",
+      "bytes": 5977
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-200-all-unclipped-on.png": {
+      "sha256": "406651995879885398dbb1b202a5de8bcb35a50c7307116add683b29f539a907",
+      "bytes": 9741
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-200-original-off.png": {
+      "sha256": "d0c84ad615d6243127c55cb48ae7a3705835f7d4a78050db8e956ad6faa4fd54",
+      "bytes": 5977
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-200-original-on.png": {
+      "sha256": "406651995879885398dbb1b202a5de8bcb35a50c7307116add683b29f539a907",
+      "bytes": 9741
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-200-unclipped-off.png": {
+      "sha256": "d0c84ad615d6243127c55cb48ae7a3705835f7d4a78050db8e956ad6faa4fd54",
+      "bytes": 5977
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-dark-200-unclipped-on.png": {
+      "sha256": "495fd7df437dd4f13a3820c4172e11873c063ef575175cf99fd6da4e175e3816",
+      "bytes": 9735
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-100-all-unclipped-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-100-all-unclipped-on.png": {
+      "sha256": "2fa390089bf54ea296ae838891c7254e825305f02f5680fde16c1e2d1e511504",
+      "bytes": 4737
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-100-original-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-100-original-on.png": {
+      "sha256": "2fa390089bf54ea296ae838891c7254e825305f02f5680fde16c1e2d1e511504",
+      "bytes": 4737
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-100-unclipped-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-100-unclipped-on.png": {
+      "sha256": "5a8b40a543eed4c5b9c2d3824459758cfe0742e4b365ddf622808dc8098e3927",
+      "bytes": 4743
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-200-all-unclipped-off.png": {
+      "sha256": "a50dadd5d155f0f5c0ec6e72d8a47fd2ea8a804bebef07ef7e63166068784391",
+      "bytes": 5821
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-200-all-unclipped-on.png": {
+      "sha256": "8ce552990ec72c1a4707e03e87024183fa56bcdc758e88973d5f8d8e65fc9844",
+      "bytes": 9554
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-200-original-off.png": {
+      "sha256": "a50dadd5d155f0f5c0ec6e72d8a47fd2ea8a804bebef07ef7e63166068784391",
+      "bytes": 5821
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-200-original-on.png": {
+      "sha256": "8ce552990ec72c1a4707e03e87024183fa56bcdc758e88973d5f8d8e65fc9844",
+      "bytes": 9554
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-200-unclipped-off.png": {
+      "sha256": "a50dadd5d155f0f5c0ec6e72d8a47fd2ea8a804bebef07ef7e63166068784391",
+      "bytes": 5821
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-375-light-200-unclipped-on.png": {
+      "sha256": "2bfda26c6331cb3a4525c6afb99cb0cec6f7f4e4ef559dc37a869b339874bbb0",
+      "bytes": 9549
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-100-all-unclipped-off.png": {
+      "sha256": "f66a7059c8b3d5ff084d10db9ba42e3c02cb56e3a58f5a1df482642ece50097a",
+      "bytes": 2933
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-100-all-unclipped-on.png": {
+      "sha256": "10c493f028f08ac547d884358a57a374322b89f2d88d40dc3224d562b6efec8a",
+      "bytes": 4863
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-100-original-off.png": {
+      "sha256": "f66a7059c8b3d5ff084d10db9ba42e3c02cb56e3a58f5a1df482642ece50097a",
+      "bytes": 2933
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-100-original-on.png": {
+      "sha256": "10c493f028f08ac547d884358a57a374322b89f2d88d40dc3224d562b6efec8a",
+      "bytes": 4863
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-100-unclipped-off.png": {
+      "sha256": "f66a7059c8b3d5ff084d10db9ba42e3c02cb56e3a58f5a1df482642ece50097a",
+      "bytes": 2933
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-100-unclipped-on.png": {
+      "sha256": "c0de50dbd2743c55ff294403df5acf3e81290666c1b5bedf7aedcf98a9c79f04",
+      "bytes": 4864
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-200-all-unclipped-off.png": {
+      "sha256": "e7dfcb4a6dd8abdeabbc0048c1b1713ae033517f41b86fa03a59cabd58f9cc52",
+      "bytes": 5977
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-200-all-unclipped-on.png": {
+      "sha256": "d18437f4b3a5bd63994c5499310160225c6eb2fe0a76e820e8627d10d92748ef",
+      "bytes": 9733
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-200-original-off.png": {
+      "sha256": "e7dfcb4a6dd8abdeabbc0048c1b1713ae033517f41b86fa03a59cabd58f9cc52",
+      "bytes": 5977
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-200-original-on.png": {
+      "sha256": "ea4d87d2c65d8d6088ee3f354ccf6b38ff1171bdf5ee65d74273ff9cd2f3355c",
+      "bytes": 9737
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-200-unclipped-off.png": {
+      "sha256": "e7dfcb4a6dd8abdeabbc0048c1b1713ae033517f41b86fa03a59cabd58f9cc52",
+      "bytes": 5977
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-dark-200-unclipped-on.png": {
+      "sha256": "d18437f4b3a5bd63994c5499310160225c6eb2fe0a76e820e8627d10d92748ef",
+      "bytes": 9733
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-100-all-unclipped-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-100-all-unclipped-on.png": {
+      "sha256": "2fa390089bf54ea296ae838891c7254e825305f02f5680fde16c1e2d1e511504",
+      "bytes": 4737
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-100-original-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-100-original-on.png": {
+      "sha256": "2fa390089bf54ea296ae838891c7254e825305f02f5680fde16c1e2d1e511504",
+      "bytes": 4737
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-100-unclipped-off.png": {
+      "sha256": "fd8e353b94a5702b68cdcb0db1475932090a4cdfb2e1365a1ddf6a3cddef6e02",
+      "bytes": 2738
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-100-unclipped-on.png": {
+      "sha256": "5a8b40a543eed4c5b9c2d3824459758cfe0742e4b365ddf622808dc8098e3927",
+      "bytes": 4743
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-200-all-unclipped-off.png": {
+      "sha256": "1bdfd140e835c5ef4397928161d571a0078e59833ec17e63adebc3aac9580ee6",
+      "bytes": 5821
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-200-all-unclipped-on.png": {
+      "sha256": "45a54400d3a3241881e8f4c4414c99b975e2b1b172e729f36dd58810f64f683c",
+      "bytes": 9531
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-200-original-off.png": {
+      "sha256": "1bdfd140e835c5ef4397928161d571a0078e59833ec17e63adebc3aac9580ee6",
+      "bytes": 5821
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-200-original-on.png": {
+      "sha256": "1c5746e7a5644729a83ab99db3e471edb657fc81169d899e77fa3efbba70fe03",
+      "bytes": 9533
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-200-unclipped-off.png": {
+      "sha256": "1bdfd140e835c5ef4397928161d571a0078e59833ec17e63adebc3aac9580ee6",
+      "bytes": 5821
+    },
+    "primary-browser/button/parent-formal32-af38afb/chromium-390-light-200-unclipped-on.png": {
+      "sha256": "45a54400d3a3241881e8f4c4414c99b975e2b1b172e729f36dd58810f64f683c",
+      "bytes": 9531
+    },
+    "primary-browser/button/parent-formal32-af38afb/results.json": {
+      "sha256": "c01f7749cf2059a437d457775bef1cee8483bf2967245774519e7a885c912f50",
+      "bytes": 66115
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-100-all-unclipped-off.png": {
+      "sha256": "de23c6017263bc4d7113945542f877d256353791798102b53ef5cf0c59525d33",
+      "bytes": 2864
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-100-all-unclipped-on.png": {
+      "sha256": "499c9b7ec2f65009737245b9ced3aed8fafcd81ae530e6560ba5a81a64590d7a",
+      "bytes": 4870
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-100-original-off.png": {
+      "sha256": "de23c6017263bc4d7113945542f877d256353791798102b53ef5cf0c59525d33",
+      "bytes": 2864
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-100-original-on.png": {
+      "sha256": "499c9b7ec2f65009737245b9ced3aed8fafcd81ae530e6560ba5a81a64590d7a",
+      "bytes": 4870
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-100-unclipped-off.png": {
+      "sha256": "de23c6017263bc4d7113945542f877d256353791798102b53ef5cf0c59525d33",
+      "bytes": 2864
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-100-unclipped-on.png": {
+      "sha256": "499c9b7ec2f65009737245b9ced3aed8fafcd81ae530e6560ba5a81a64590d7a",
+      "bytes": 4870
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-200-all-unclipped-off.png": {
+      "sha256": "a170c62d2536a9f8c0ff7c9cba1fea796619c7dc054a719947399040b5427885",
+      "bytes": 5247
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-200-all-unclipped-on.png": {
+      "sha256": "1f9ad115686800a0bc1b62db0246b49135dd8446351f41710bfcb7b3f8a1c6d0",
+      "bytes": 9059
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-200-original-off.png": {
+      "sha256": "a170c62d2536a9f8c0ff7c9cba1fea796619c7dc054a719947399040b5427885",
+      "bytes": 5247
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-200-original-on.png": {
+      "sha256": "1f9ad115686800a0bc1b62db0246b49135dd8446351f41710bfcb7b3f8a1c6d0",
+      "bytes": 9059
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-200-unclipped-off.png": {
+      "sha256": "a170c62d2536a9f8c0ff7c9cba1fea796619c7dc054a719947399040b5427885",
+      "bytes": 5247
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-dark-200-unclipped-on.png": {
+      "sha256": "1f9ad115686800a0bc1b62db0246b49135dd8446351f41710bfcb7b3f8a1c6d0",
+      "bytes": 9059
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-100-all-unclipped-off.png": {
+      "sha256": "f19f48b9da8fa4cf62be946db7dce0afab7e992c6b798d817812ad649d16f183",
+      "bytes": 2681
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-100-all-unclipped-on.png": {
+      "sha256": "0248e7b31879dbae1bf93972da7d05e62d6d3f7a0c05510778667d0a1987044d",
+      "bytes": 4768
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-100-original-off.png": {
+      "sha256": "f19f48b9da8fa4cf62be946db7dce0afab7e992c6b798d817812ad649d16f183",
+      "bytes": 2681
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-100-original-on.png": {
+      "sha256": "0248e7b31879dbae1bf93972da7d05e62d6d3f7a0c05510778667d0a1987044d",
+      "bytes": 4768
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-100-unclipped-off.png": {
+      "sha256": "f19f48b9da8fa4cf62be946db7dce0afab7e992c6b798d817812ad649d16f183",
+      "bytes": 2681
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-100-unclipped-on.png": {
+      "sha256": "0248e7b31879dbae1bf93972da7d05e62d6d3f7a0c05510778667d0a1987044d",
+      "bytes": 4768
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-200-all-unclipped-off.png": {
+      "sha256": "25a763ff3a94f187f677ec4a38581c2d2fdb32e0f05ec25dc61c9024d611cb5d",
+      "bytes": 4942
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-200-all-unclipped-on.png": {
+      "sha256": "5ec1ba559a59070885c89fa656a22b5e28d334a2092913f72a821c8850f4a09d",
+      "bytes": 8944
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-200-original-off.png": {
+      "sha256": "25a763ff3a94f187f677ec4a38581c2d2fdb32e0f05ec25dc61c9024d611cb5d",
+      "bytes": 4942
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-200-original-on.png": {
+      "sha256": "5ec1ba559a59070885c89fa656a22b5e28d334a2092913f72a821c8850f4a09d",
+      "bytes": 8944
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-200-unclipped-off.png": {
+      "sha256": "25a763ff3a94f187f677ec4a38581c2d2fdb32e0f05ec25dc61c9024d611cb5d",
+      "bytes": 4942
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-1280-light-200-unclipped-on.png": {
+      "sha256": "5ec1ba559a59070885c89fa656a22b5e28d334a2092913f72a821c8850f4a09d",
+      "bytes": 8944
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-100-all-unclipped-off.png": {
+      "sha256": "40896479ecdbba3f8f6fba2fcab82922cd5dc8b2665a2a88ebd1ca1de4a0ad72",
+      "bytes": 2853
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-100-all-unclipped-on.png": {
+      "sha256": "d1c50b836099b769d199cff9b7f3cb0c43902cc0a36cb028b2fd0a0a5917302b",
+      "bytes": 4926
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-100-original-off.png": {
+      "sha256": "40896479ecdbba3f8f6fba2fcab82922cd5dc8b2665a2a88ebd1ca1de4a0ad72",
+      "bytes": 2853
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-100-original-on.png": {
+      "sha256": "10ff0f6223d2665b97d003554e5652b8cf8995e3dfe8f83cee9a86d89f507c14",
+      "bytes": 4919
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-100-unclipped-off.png": {
+      "sha256": "40896479ecdbba3f8f6fba2fcab82922cd5dc8b2665a2a88ebd1ca1de4a0ad72",
+      "bytes": 2853
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-100-unclipped-on.png": {
+      "sha256": "d1c50b836099b769d199cff9b7f3cb0c43902cc0a36cb028b2fd0a0a5917302b",
+      "bytes": 4926
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-200-all-unclipped-off.png": {
+      "sha256": "aa4916600a9172b219f1b8f4d5415426a260f6ccee7ab110cfcd2c7477b61609",
+      "bytes": 5313
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-200-all-unclipped-on.png": {
+      "sha256": "97d0564980ab852ae948f7e57b034df0498bfab5f230022646abcd5df4f2b4c1",
+      "bytes": 9214
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-200-original-off.png": {
+      "sha256": "aa4916600a9172b219f1b8f4d5415426a260f6ccee7ab110cfcd2c7477b61609",
+      "bytes": 5313
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-200-original-on.png": {
+      "sha256": "7fb5d59fe49808d8124f1e8e4f1f27427228867d0e07b085039a911d1955a7fe",
+      "bytes": 9212
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-200-unclipped-off.png": {
+      "sha256": "aa4916600a9172b219f1b8f4d5415426a260f6ccee7ab110cfcd2c7477b61609",
+      "bytes": 5313
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-dark-200-unclipped-on.png": {
+      "sha256": "97d0564980ab852ae948f7e57b034df0498bfab5f230022646abcd5df4f2b4c1",
+      "bytes": 9214
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-100-all-unclipped-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-100-all-unclipped-on.png": {
+      "sha256": "61f7de9661bf67178d1c40c7c5c25127d3290fa50af051675d474e62d5d91ac2",
+      "bytes": 4901
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-100-original-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-100-original-on.png": {
+      "sha256": "50df3dbd689c3f26c1ab3e82eb1345bcf202bb61c43d35c2ba7a16d1978c4259",
+      "bytes": 4899
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-100-unclipped-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-100-unclipped-on.png": {
+      "sha256": "61f7de9661bf67178d1c40c7c5c25127d3290fa50af051675d474e62d5d91ac2",
+      "bytes": 4901
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-200-all-unclipped-off.png": {
+      "sha256": "085194393c5caba33b9c1ac2eac6d366d127f390a59e15d2df02de5d8f353217",
+      "bytes": 5003
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-200-all-unclipped-on.png": {
+      "sha256": "62754549f68dbced0e59eb35f5d7437dde66dfc6acb024b3ed40856ca850d4a0",
+      "bytes": 9069
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-200-original-off.png": {
+      "sha256": "085194393c5caba33b9c1ac2eac6d366d127f390a59e15d2df02de5d8f353217",
+      "bytes": 5003
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-200-original-on.png": {
+      "sha256": "bed5dba4181d008050284a3906673341f36c59f8f52a47c3196608dd07775db5",
+      "bytes": 9064
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-200-unclipped-off.png": {
+      "sha256": "085194393c5caba33b9c1ac2eac6d366d127f390a59e15d2df02de5d8f353217",
+      "bytes": 5003
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-320-light-200-unclipped-on.png": {
+      "sha256": "62754549f68dbced0e59eb35f5d7437dde66dfc6acb024b3ed40856ca850d4a0",
+      "bytes": 9069
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-100-all-unclipped-off.png": {
+      "sha256": "40896479ecdbba3f8f6fba2fcab82922cd5dc8b2665a2a88ebd1ca1de4a0ad72",
+      "bytes": 2853
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-100-all-unclipped-on.png": {
+      "sha256": "d1c50b836099b769d199cff9b7f3cb0c43902cc0a36cb028b2fd0a0a5917302b",
+      "bytes": 4926
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-100-original-off.png": {
+      "sha256": "40896479ecdbba3f8f6fba2fcab82922cd5dc8b2665a2a88ebd1ca1de4a0ad72",
+      "bytes": 2853
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-100-original-on.png": {
+      "sha256": "10ff0f6223d2665b97d003554e5652b8cf8995e3dfe8f83cee9a86d89f507c14",
+      "bytes": 4919
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-100-unclipped-off.png": {
+      "sha256": "40896479ecdbba3f8f6fba2fcab82922cd5dc8b2665a2a88ebd1ca1de4a0ad72",
+      "bytes": 2853
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-100-unclipped-on.png": {
+      "sha256": "d1c50b836099b769d199cff9b7f3cb0c43902cc0a36cb028b2fd0a0a5917302b",
+      "bytes": 4926
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-200-all-unclipped-off.png": {
+      "sha256": "aa4916600a9172b219f1b8f4d5415426a260f6ccee7ab110cfcd2c7477b61609",
+      "bytes": 5313
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-200-all-unclipped-on.png": {
+      "sha256": "97d0564980ab852ae948f7e57b034df0498bfab5f230022646abcd5df4f2b4c1",
+      "bytes": 9214
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-200-original-off.png": {
+      "sha256": "aa4916600a9172b219f1b8f4d5415426a260f6ccee7ab110cfcd2c7477b61609",
+      "bytes": 5313
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-200-original-on.png": {
+      "sha256": "7fb5d59fe49808d8124f1e8e4f1f27427228867d0e07b085039a911d1955a7fe",
+      "bytes": 9212
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-200-unclipped-off.png": {
+      "sha256": "aa4916600a9172b219f1b8f4d5415426a260f6ccee7ab110cfcd2c7477b61609",
+      "bytes": 5313
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-dark-200-unclipped-on.png": {
+      "sha256": "97d0564980ab852ae948f7e57b034df0498bfab5f230022646abcd5df4f2b4c1",
+      "bytes": 9214
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-100-all-unclipped-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-100-all-unclipped-on.png": {
+      "sha256": "61f7de9661bf67178d1c40c7c5c25127d3290fa50af051675d474e62d5d91ac2",
+      "bytes": 4901
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-100-original-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-100-original-on.png": {
+      "sha256": "50df3dbd689c3f26c1ab3e82eb1345bcf202bb61c43d35c2ba7a16d1978c4259",
+      "bytes": 4899
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-100-unclipped-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-100-unclipped-on.png": {
+      "sha256": "61f7de9661bf67178d1c40c7c5c25127d3290fa50af051675d474e62d5d91ac2",
+      "bytes": 4901
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-200-all-unclipped-off.png": {
+      "sha256": "085194393c5caba33b9c1ac2eac6d366d127f390a59e15d2df02de5d8f353217",
+      "bytes": 5003
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-200-all-unclipped-on.png": {
+      "sha256": "62754549f68dbced0e59eb35f5d7437dde66dfc6acb024b3ed40856ca850d4a0",
+      "bytes": 9069
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-200-original-off.png": {
+      "sha256": "085194393c5caba33b9c1ac2eac6d366d127f390a59e15d2df02de5d8f353217",
+      "bytes": 5003
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-200-original-on.png": {
+      "sha256": "bed5dba4181d008050284a3906673341f36c59f8f52a47c3196608dd07775db5",
+      "bytes": 9064
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-200-unclipped-off.png": {
+      "sha256": "085194393c5caba33b9c1ac2eac6d366d127f390a59e15d2df02de5d8f353217",
+      "bytes": 5003
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-375-light-200-unclipped-on.png": {
+      "sha256": "62754549f68dbced0e59eb35f5d7437dde66dfc6acb024b3ed40856ca850d4a0",
+      "bytes": 9069
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-100-all-unclipped-off.png": {
+      "sha256": "40896479ecdbba3f8f6fba2fcab82922cd5dc8b2665a2a88ebd1ca1de4a0ad72",
+      "bytes": 2853
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-100-all-unclipped-on.png": {
+      "sha256": "d1c50b836099b769d199cff9b7f3cb0c43902cc0a36cb028b2fd0a0a5917302b",
+      "bytes": 4926
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-100-original-off.png": {
+      "sha256": "40896479ecdbba3f8f6fba2fcab82922cd5dc8b2665a2a88ebd1ca1de4a0ad72",
+      "bytes": 2853
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-100-original-on.png": {
+      "sha256": "10ff0f6223d2665b97d003554e5652b8cf8995e3dfe8f83cee9a86d89f507c14",
+      "bytes": 4919
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-100-unclipped-off.png": {
+      "sha256": "40896479ecdbba3f8f6fba2fcab82922cd5dc8b2665a2a88ebd1ca1de4a0ad72",
+      "bytes": 2853
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-100-unclipped-on.png": {
+      "sha256": "d1c50b836099b769d199cff9b7f3cb0c43902cc0a36cb028b2fd0a0a5917302b",
+      "bytes": 4926
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-200-all-unclipped-off.png": {
+      "sha256": "aa4916600a9172b219f1b8f4d5415426a260f6ccee7ab110cfcd2c7477b61609",
+      "bytes": 5313
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-200-all-unclipped-on.png": {
+      "sha256": "97d0564980ab852ae948f7e57b034df0498bfab5f230022646abcd5df4f2b4c1",
+      "bytes": 9214
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-200-original-off.png": {
+      "sha256": "aa4916600a9172b219f1b8f4d5415426a260f6ccee7ab110cfcd2c7477b61609",
+      "bytes": 5313
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-200-original-on.png": {
+      "sha256": "7fb5d59fe49808d8124f1e8e4f1f27427228867d0e07b085039a911d1955a7fe",
+      "bytes": 9212
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-200-unclipped-off.png": {
+      "sha256": "aa4916600a9172b219f1b8f4d5415426a260f6ccee7ab110cfcd2c7477b61609",
+      "bytes": 5313
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-dark-200-unclipped-on.png": {
+      "sha256": "97d0564980ab852ae948f7e57b034df0498bfab5f230022646abcd5df4f2b4c1",
+      "bytes": 9214
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-100-all-unclipped-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-100-all-unclipped-on.png": {
+      "sha256": "61f7de9661bf67178d1c40c7c5c25127d3290fa50af051675d474e62d5d91ac2",
+      "bytes": 4901
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-100-original-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-100-original-on.png": {
+      "sha256": "50df3dbd689c3f26c1ab3e82eb1345bcf202bb61c43d35c2ba7a16d1978c4259",
+      "bytes": 4899
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-100-unclipped-off.png": {
+      "sha256": "cf4f6654a5ec0a68ad362bf755b2ab2d76a3c6797de5faddad1279f8b67f532f",
+      "bytes": 2728
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-100-unclipped-on.png": {
+      "sha256": "61f7de9661bf67178d1c40c7c5c25127d3290fa50af051675d474e62d5d91ac2",
+      "bytes": 4901
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-200-all-unclipped-off.png": {
+      "sha256": "085194393c5caba33b9c1ac2eac6d366d127f390a59e15d2df02de5d8f353217",
+      "bytes": 5003
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-200-all-unclipped-on.png": {
+      "sha256": "62754549f68dbced0e59eb35f5d7437dde66dfc6acb024b3ed40856ca850d4a0",
+      "bytes": 9069
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-200-original-off.png": {
+      "sha256": "085194393c5caba33b9c1ac2eac6d366d127f390a59e15d2df02de5d8f353217",
+      "bytes": 5003
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-200-original-on.png": {
+      "sha256": "bed5dba4181d008050284a3906673341f36c59f8f52a47c3196608dd07775db5",
+      "bytes": 9064
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-200-unclipped-off.png": {
+      "sha256": "085194393c5caba33b9c1ac2eac6d366d127f390a59e15d2df02de5d8f353217",
+      "bytes": 5003
+    },
+    "primary-browser/button/parent-formal32-af38afb/webkit-390-light-200-unclipped-on.png": {
+      "sha256": "62754549f68dbced0e59eb35f5d7437dde66dfc6acb024b3ed40856ca850d4a0",
+      "bytes": 9069
+    },
+    "primary-browser/tooltip/parent-tooltip-aa20-formal40.exit": {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    "primary-browser/tooltip/parent-tooltip-aa20-formal40.log": {
+      "sha256": "3176485133ba2977b4557f3d23320d1b11d70f6c0d0dd7fd4af9834812d68b33",
+      "bytes": 87
+    },
+    "primary-browser/tooltip/parent-tooltip-aa20-formal40/INDEPENDENT-IDENTITY.json": {
+      "sha256": "741392aa89deaa6622cbb75303b7c2b4d9af81933e5cc0384e33b9bca6b93c02",
+      "bytes": 2625
+    },
+    "primary-browser/tooltip/parent-tooltip-aa20-formal40/chromium-0.png": {
+      "sha256": "778eed67430fba124da09a2c7b10ced4b186ffc4ff3e91e27ddd3b98dcb2bd9c",
+      "bytes": 76478
+    },
+    "primary-browser/tooltip/parent-tooltip-aa20-formal40/chromium-escape.png": {
+      "sha256": "778eed67430fba124da09a2c7b10ced4b186ffc4ff3e91e27ddd3b98dcb2bd9c",
+      "bytes": 76478
+    },
+    "primary-browser/tooltip/parent-tooltip-aa20-formal40/chromium-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-aa20-formal40/results.json": {
+      "sha256": "78f8215bb798e86b598d38a95133ce44e16cfd04590dbd5d3e787dc1c6c41d79",
+      "bytes": 749556
+    },
+    "primary-browser/tooltip/parent-tooltip-aa20-formal40/webkit-0.png": {
+      "sha256": "476b3b60f8d39f0e60bb860683ba237f0635f12666c58c18039de4049a298ec6",
+      "bytes": 59323
+    },
+    "primary-browser/tooltip/parent-tooltip-aa20-formal40/webkit-escape.png": {
+      "sha256": "476b3b60f8d39f0e60bb860683ba237f0635f12666c58c18039de4049a298ec6",
+      "bytes": 59323
+    },
+    "primary-browser/tooltip/parent-tooltip-aa20-formal40/webkit-return.png": {
+      "sha256": "e64d9acca862c15c49f4c9fa8e5d65a6f20e224fa8baec234ed6502a23d1e22f",
+      "bytes": 62446
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20.exit": {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20.log": {
+      "sha256": "250171e77a12d8422ff3ff101f45f1fbcc41dd3440a194f178fdedf4f86d73b2",
+      "bytes": 1643
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-0-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-1-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-10-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-11-return.png": {
+      "sha256": "dffb701c7daf1c5fa52bedea31bebc13d4975ede7fd1ee9c8177b900966107d5",
+      "bytes": 80140
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-12-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-13-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-14-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-15-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-16-return.png": {
+      "sha256": "dffb701c7daf1c5fa52bedea31bebc13d4975ede7fd1ee9c8177b900966107d5",
+      "bytes": 80140
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-17-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-18-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-19-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-2-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-3-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-4-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-5-return.png": {
+      "sha256": "dffb701c7daf1c5fa52bedea31bebc13d4975ede7fd1ee9c8177b900966107d5",
+      "bytes": 80140
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-6-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-7-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-8-return.png": {
+      "sha256": "dffb701c7daf1c5fa52bedea31bebc13d4975ede7fd1ee9c8177b900966107d5",
+      "bytes": 80140
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-9-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/chromium-return.png": {
+      "sha256": "03c064e6bf4312b22e548bd965f3dd42ec9ce93b638b96f7c02493503c1b72b7",
+      "bytes": 80131
+    },
+    "primary-browser/tooltip/parent-tooltip-baseline20/results.json": {
+      "sha256": "e7982cc7b6ef95ae92d574b04923d18525c97b63755958c54e14150acc4d40a8",
+      "bytes": 806098
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40.exit": {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40.log": {
+      "sha256": "925bdeb0aa04fcc4e90fbaeca6d2bcb12ce4ff5f9f2eac93b1265eb0a48a6135",
+      "bytes": 4476
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/INDEPENDENT-IDENTITY.json": {
+      "sha256": "0b8d3cbcffe7d7a1e21e11b42c92208bffab7f56ff811dc33067c12710095073",
+      "bytes": 2625
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-0.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-click-leave-blur-initial.png": {
+      "sha256": "e19758f60c40af949b6d33f8bbcf8c2eb82415a7fdbf99f76c5198fac50cee3e",
+      "bytes": 79146
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-click-leave-blur-leave.png": {
+      "sha256": "e19758f60c40af949b6d33f8bbcf8c2eb82415a7fdbf99f76c5198fac50cee3e",
+      "bytes": 79146
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-click-leave-blur.png": {
+      "sha256": "509788c0c3553668880c7db2361345f8a4d06f9cdcc65e6308b21eecb1f87470",
+      "bytes": 75282
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-escape-hover-initial.png": {
+      "sha256": "02e5ab76925efa20b3032603103bbcc2072b83292133ab5dec740595f45e71c6",
+      "bytes": 83812
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-escape-hover-leave.png": {
+      "sha256": "0968126cc361410a6fbaedd5e2217bf37cfe9fd72f418eaddfceeeee0c011486",
+      "bytes": 80178
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-escape-hover.png": {
+      "sha256": "509788c0c3553668880c7db2361345f8a4d06f9cdcc65e6308b21eecb1f87470",
+      "bytes": 75282
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-escape.png": {
+      "sha256": "575cd04c44be0f15d044a6b9a2fcaee720f69e7003fd41bc74438011b05561ef",
+      "bytes": 76491
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-hover-click-leave-blur-initial.png": {
+      "sha256": "e19758f60c40af949b6d33f8bbcf8c2eb82415a7fdbf99f76c5198fac50cee3e",
+      "bytes": 79146
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-hover-click-leave-blur-leave.png": {
+      "sha256": "e19758f60c40af949b6d33f8bbcf8c2eb82415a7fdbf99f76c5198fac50cee3e",
+      "bytes": 79146
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-hover-click-leave-blur.png": {
+      "sha256": "509788c0c3553668880c7db2361345f8a4d06f9cdcc65e6308b21eecb1f87470",
+      "bytes": 75282
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-keyboard-enter-space-initial.png": {
+      "sha256": "02e5ab76925efa20b3032603103bbcc2072b83292133ab5dec740595f45e71c6",
+      "bytes": 83812
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-keyboard-enter-space-leave.png": {
+      "sha256": "0968126cc361410a6fbaedd5e2217bf37cfe9fd72f418eaddfceeeee0c011486",
+      "bytes": 80178
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-keyboard-enter-space.png": {
+      "sha256": "509788c0c3553668880c7db2361345f8a4d06f9cdcc65e6308b21eecb1f87470",
+      "bytes": 75282
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/chromium-return.png": {
+      "sha256": "dffb701c7daf1c5fa52bedea31bebc13d4975ede7fd1ee9c8177b900966107d5",
+      "bytes": 80140
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/results.json": {
+      "sha256": "5c1f2302c8e88880ef239c22ac9a66b811d48415c20962946d4251c2a7cff7a1",
+      "bytes": 3258587
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-0.png": {
+      "sha256": "4e99778f213ab8e601a21e0bbf3666a2c9019e15926f038da5dde06576803872",
+      "bytes": 50985
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-click-leave-blur-initial.png": {
+      "sha256": "fec6eb1ed23fc8e6c75cafe62f19681dd7c03ecb2a39b33d24aa6f2eb1bd6aa4",
+      "bytes": 61252
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-click-leave-blur-leave.png": {
+      "sha256": "fec6eb1ed23fc8e6c75cafe62f19681dd7c03ecb2a39b33d24aa6f2eb1bd6aa4",
+      "bytes": 61252
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-click-leave-blur.png": {
+      "sha256": "509a3e8b987a26921b4b5aaecf185991de33ec96710fb563ef63385f68457f1e",
+      "bytes": 59961
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-escape-hover-initial.png": {
+      "sha256": "46b7acfd3e69b2f756eb7aaf5e2026604f8eb23cf18ff5ba7005e4d569a9d493",
+      "bytes": 65393
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-escape-hover-leave.png": {
+      "sha256": "f12a727ad4be471fd7ee8ace3a633787b91d3f63427141b743effed8115ac336",
+      "bytes": 62338
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-escape-hover.png": {
+      "sha256": "f3a0eb5718e7749f2597c86833d683bf3b1b7528967b179b550fd0704380eaa9",
+      "bytes": 58032
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-escape.png": {
+      "sha256": "f12a727ad4be471fd7ee8ace3a633787b91d3f63427141b743effed8115ac336",
+      "bytes": 62338
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-hover-click-leave-blur-initial.png": {
+      "sha256": "fec6eb1ed23fc8e6c75cafe62f19681dd7c03ecb2a39b33d24aa6f2eb1bd6aa4",
+      "bytes": 61252
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-hover-click-leave-blur-leave.png": {
+      "sha256": "fec6eb1ed23fc8e6c75cafe62f19681dd7c03ecb2a39b33d24aa6f2eb1bd6aa4",
+      "bytes": 61252
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-hover-click-leave-blur.png": {
+      "sha256": "509a3e8b987a26921b4b5aaecf185991de33ec96710fb563ef63385f68457f1e",
+      "bytes": 59961
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-keyboard-enter-space-initial.png": {
+      "sha256": "46b7acfd3e69b2f756eb7aaf5e2026604f8eb23cf18ff5ba7005e4d569a9d493",
+      "bytes": 65393
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-keyboard-enter-space-leave.png": {
+      "sha256": "f12a727ad4be471fd7ee8ace3a633787b91d3f63427141b743effed8115ac336",
+      "bytes": 62338
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-keyboard-enter-space.png": {
+      "sha256": "f3a0eb5718e7749f2597c86833d683bf3b1b7528967b179b550fd0704380eaa9",
+      "bytes": 58032
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-green40/webkit-return.png": {
+      "sha256": "46b7acfd3e69b2f756eb7aaf5e2026604f8eb23cf18ff5ba7005e4d569a9d493",
+      "bytes": 65393
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20.exit": {
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "bytes": 3
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20.log": {
+      "sha256": "1af1fdd2abf7b122a6a7b9a816d05725e88ab2e3bc37d53899ce7f0b9a0afebc",
+      "bytes": 2335
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-0.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-1.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-10.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-11.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-12.png": {
+      "sha256": "2c65bd0ff989ea76cf7ce3a6f571e208e3d9e8412a2bef0732d7d00f53f18dab",
+      "bytes": 63039
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-13.png": {
+      "sha256": "2c65bd0ff989ea76cf7ce3a6f571e208e3d9e8412a2bef0732d7d00f53f18dab",
+      "bytes": 63039
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-14.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-15.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-16.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-17.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-18.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-19.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-2.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-3.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-4.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-5.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-6.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-7.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-8.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-9.png": {
+      "sha256": "2877b577a97ee35ea5f969e58f779c75a3dbb444a515b19d59c495304f058696",
+      "bytes": 63043
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-click-leave-blur-initial.png": {
+      "sha256": "e19758f60c40af949b6d33f8bbcf8c2eb82415a7fdbf99f76c5198fac50cee3e",
+      "bytes": 79146
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-click-leave-blur-leave.png": {
+      "sha256": "e19758f60c40af949b6d33f8bbcf8c2eb82415a7fdbf99f76c5198fac50cee3e",
+      "bytes": 79146
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-click-leave-blur.png": {
+      "sha256": "509788c0c3553668880c7db2361345f8a4d06f9cdcc65e6308b21eecb1f87470",
+      "bytes": 75282
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-escape-hover-initial.png": {
+      "sha256": "02e5ab76925efa20b3032603103bbcc2072b83292133ab5dec740595f45e71c6",
+      "bytes": 83812
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-escape-hover-leave.png": {
+      "sha256": "0968126cc361410a6fbaedd5e2217bf37cfe9fd72f418eaddfceeeee0c011486",
+      "bytes": 80178
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-escape-hover.png": {
+      "sha256": "509788c0c3553668880c7db2361345f8a4d06f9cdcc65e6308b21eecb1f87470",
+      "bytes": 75282
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-escape.png": {
+      "sha256": "575cd04c44be0f15d044a6b9a2fcaee720f69e7003fd41bc74438011b05561ef",
+      "bytes": 76491
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-hover-click-leave-blur-initial.png": {
+      "sha256": "e19758f60c40af949b6d33f8bbcf8c2eb82415a7fdbf99f76c5198fac50cee3e",
+      "bytes": 79146
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-hover-click-leave-blur-leave.png": {
+      "sha256": "e19758f60c40af949b6d33f8bbcf8c2eb82415a7fdbf99f76c5198fac50cee3e",
+      "bytes": 79146
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-hover-click-leave-blur.png": {
+      "sha256": "509788c0c3553668880c7db2361345f8a4d06f9cdcc65e6308b21eecb1f87470",
+      "bytes": 75282
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-keyboard-enter-space-initial.png": {
+      "sha256": "02e5ab76925efa20b3032603103bbcc2072b83292133ab5dec740595f45e71c6",
+      "bytes": 83812
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-keyboard-enter-space-leave.png": {
+      "sha256": "0968126cc361410a6fbaedd5e2217bf37cfe9fd72f418eaddfceeeee0c011486",
+      "bytes": 80178
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-keyboard-enter-space.png": {
+      "sha256": "509788c0c3553668880c7db2361345f8a4d06f9cdcc65e6308b21eecb1f87470",
+      "bytes": 75282
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/chromium-return.png": {
+      "sha256": "575cd04c44be0f15d044a6b9a2fcaee720f69e7003fd41bc74438011b05561ef",
+      "bytes": 76491
+    },
+    "primary-browser/tooltip/parent-tooltip-rapid-red20/results.json": {
+      "sha256": "b2f0dd9105b84fbc7ade39b2532cbab2faad94e40363e07d051beca9d6dbcd4d",
+      "bytes": 1665238
+    },
+    "primary-browser/tooltip/parent-tooltip-transient-negative2.exit": {
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "bytes": 3
+    },
+    "primary-browser/tooltip/parent-tooltip-transient-negative2.log": {
+      "sha256": "e0ef8ffa5561508208641c7e7aa10449721bee252bb0ece89d22d4ad7d136b98",
+      "bytes": 213
+    },
+    "primary-browser/tooltip/parent-tooltip-transient-negative2/EXPECTED-FAIL-VERIFICATION.json": {
+      "sha256": "eaf08662b5076bceb913abab2d1ba01d5ea1f14b2579e2a30dcfa9507d70c955",
+      "bytes": 409
+    },
+    "primary-browser/tooltip/parent-tooltip-transient-negative2/INDEPENDENT-IDENTITY.json": {
+      "sha256": "fd3319859f8998f57b81c9b3c8a562748861500c19f695c735047897cd244550",
+      "bytes": 2631
+    },
+    "primary-browser/tooltip/parent-tooltip-transient-negative2/chromium-0-return.png": {
+      "sha256": "575cd04c44be0f15d044a6b9a2fcaee720f69e7003fd41bc74438011b05561ef",
+      "bytes": 76491
+    },
+    "primary-browser/tooltip/parent-tooltip-transient-negative2/chromium-return.png": {
+      "sha256": "575cd04c44be0f15d044a6b9a2fcaee720f69e7003fd41bc74438011b05561ef",
+      "bytes": 76491
+    },
+    "primary-browser/tooltip/parent-tooltip-transient-negative2/results.json": {
+      "sha256": "6113167ad9baacf64d4448f68b693f3558ba730d9074e773b85709c2965a99a3",
+      "bytes": 78191
+    },
+    "primary-browser/tooltip/parent-tooltip-transient-negative2/webkit-0-return.png": {
+      "sha256": "f12a727ad4be471fd7ee8ace3a633787b91d3f63427141b743effed8115ac336",
+      "bytes": 62338
+    },
+    "primary-browser/tooltip/parent-tooltip-transient-negative2/webkit-return.png": {
+      "sha256": "f12a727ad4be471fd7ee8ace3a633787b91d3f63427141b743effed8115ac336",
+      "bytes": 62338
+    },
+    "primary/ACTION-BLOCKER.json": {
+      "sha256": "a2c1b36cebec67b8946a1b4ee6fea2daf6e13a1e4d050495b1d1799d61abf99d",
+      "bytes": 1159
+    },
+    "primary/FINAL-REPORT.txt": {
+      "sha256": "6705d685cacc4d4b162868831533bbc45f4bd7b8ba6ef8058b16bfd12a330ee7",
+      "bytes": 12843
+    },
+    "primary/SELECT-RESIDUAL-ISSUE-DRAFT.txt": {
+      "sha256": "296627d421978b939b72e3d56a1648f57a8d211eee04ce94ffa241d464a207f8",
+      "bytes": 2069
+    },
+    "primary/argument-0-tooltip.stderr.log": {
+      "sha256": "b5905d430e10ad38ac6edbaacb3fac2aaedce34ac3b69b92fa4b27c046a38a15",
+      "bytes": 1005
+    },
+    "primary/argument-0-tooltip.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary/argument-1-tooltip.stderr.log": {
+      "sha256": "b5905d430e10ad38ac6edbaacb3fac2aaedce34ac3b69b92fa4b27c046a38a15",
+      "bytes": 1005
+    },
+    "primary/argument-1-tooltip.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary/argument-2-tooltip.stderr.log": {
+      "sha256": "b5905d430e10ad38ac6edbaacb3fac2aaedce34ac3b69b92fa4b27c046a38a15",
+      "bytes": 1005
+    },
+    "primary/argument-2-tooltip.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary/argument-3-tooltip.stderr.log": {
+      "sha256": "b5905d430e10ad38ac6edbaacb3fac2aaedce34ac3b69b92fa4b27c046a38a15",
+      "bytes": 1005
+    },
+    "primary/argument-3-tooltip.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary/argument-4-tooltip.stderr.log": {
+      "sha256": "b5905d430e10ad38ac6edbaacb3fac2aaedce34ac3b69b92fa4b27c046a38a15",
+      "bytes": 1005
+    },
+    "primary/argument-4-tooltip.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary/argument-5-tooltip.stderr.log": {
+      "sha256": "b5905d430e10ad38ac6edbaacb3fac2aaedce34ac3b69b92fa4b27c046a38a15",
+      "bytes": 1005
+    },
+    "primary/argument-5-tooltip.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary/argument-6-tooltip.stderr.log": {
+      "sha256": "b5905d430e10ad38ac6edbaacb3fac2aaedce34ac3b69b92fa4b27c046a38a15",
+      "bytes": 1005
+    },
+    "primary/argument-6-tooltip.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary/argument-7-button.stderr.log": {
+      "sha256": "0a1f924af497936ab4819b3e2d91dba5df121b871a1101a4e9f7448f84d40cfc",
+      "bytes": 899
+    },
+    "primary/argument-7-button.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary/argument-8-button.stderr.log": {
+      "sha256": "0a1f924af497936ab4819b3e2d91dba5df121b871a1101a4e9f7448f84d40cfc",
+      "bytes": 899
+    },
+    "primary/argument-8-button.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "primary/argument-validation.json": {
+      "sha256": "b310b36a0131ef0f9fd86efa69259df59958bda0506389b288c4900f2368841d",
+      "bytes": 1788
+    },
+    "primary/author-artifact-inspection.json": {
+      "sha256": "5eef36d08979154c96e15068cd53d3cd23487176ca83fe07dd0c90edfa7779f5",
+      "bytes": 10448
+    },
+    "primary/author-button.zip": {
+      "sha256": "4c017375beff055dac1e425d70013baf922067863430861a1b2d3cab82e33d01",
+      "bytes": 873243
+    },
+    "primary/author-tooltip.zip": {
+      "sha256": "abca85288ec1c8f688b46e350e67e2f3dfc4c75a06105f5fcc0c0f7bbbe8ff8f",
+      "bytes": 202072
+    },
+    "primary/bind-evidence.py": {
+      "sha256": "0a91781de20acee635b217dbf63601740f3780408fa0167a994a849b99744216",
+      "bytes": 1526
+    },
+    "primary/build-delivery.py": {
+      "sha256": "d8e7da4d919e854c4b41831337e732809d1023dc1221f265d5336fc7f7ce6c19",
+      "bytes": 3259
+    },
+    "primary/check-arguments.py": {
+      "sha256": "a2cf39009339cc841b524150270d778e2b29192c08a98c363aef7db5aec69c84",
+      "bytes": 1443
+    },
+    "primary/ci-initial.json": {
+      "sha256": "898586340a7e0f83765feb88b5bb727cb07cd83991bdad90e8ac5d4124b89ca7",
+      "bytes": 85707
+    },
+    "primary/ci-integrated-ea6f19a.zip": {
+      "sha256": "886dc6f9f12d49bd109f9c2e7ef677c99a2cb9f7fad6961e54291cb8f13509de",
+      "bytes": 25693625
+    },
+    "primary/ci-integrated-independent-inspection.json": {
+      "sha256": "f60badccdfe800053d753cbc3c72d51e889243b8663d85e016e78cf37634a4aa",
+      "bytes": 1041
+    },
+    "primary/ci-integrated-job-127962795289.log": {
+      "sha256": "128ab3398ca8ea7172eded2f23071c955414ab473ec293b16c65dd140811a702",
+      "bytes": 147176
+    },
+    "primary/ci-integrated-job-127966918656.log": {
+      "sha256": "27748a8be7892605b3525fd7e908ddb5bd415cd884d57275f84176161b61777c",
+      "bytes": 21029
+    },
+    "primary/ci-job-127881048516.log": {
+      "sha256": "fccc16a1864e15bb5ae044b7e0a6d80e9ce27290df4e8eca5604e6f3cfe62f81",
+      "bytes": 172706
+    },
+    "primary/ci-job-127881072500.log": {
+      "sha256": "3be9127f2482c1c624f26a70ba8a7caa9ff632310aaf46992df549bd7bd2ff23",
+      "bytes": 172674
+    },
+    "primary/ci23-attempt1-jobs.json": {
+      "sha256": "2b0f9f175d5f5277c9012e3b098695efdb8ef9dc190d1ed2e44aabea990022ec",
+      "bytes": 16147
+    },
+    "primary/compiled-source-inspection.json": {
+      "sha256": "18e1a5ecf67a13c43eebf01a5dadd6567b14a355ba2dc75ad13b6e867502051a",
+      "bytes": 739
+    },
+    "primary/github-final-snapshot.json": {
+      "sha256": "a14d9aeb98da7df66f9713b9945807cc8fe839d7cf153767f1fcad6dd047db87",
+      "bytes": 79762
+    },
+    "primary/inspect-author-artifacts.py": {
+      "sha256": "3219486243579e7d85cd86826f4cef6410e3dd61029c7090aaf51f53115c9d07",
+      "bytes": 2553
+    },
+    "primary/inspect-compiled-source.py": {
+      "sha256": "f8009de5af3ade9657a21929f2caf7407026747f5acafafcece0a7e44287d07a",
+      "bytes": 953
+    },
+    "primary/inspect-integrated-artifact.py": {
+      "sha256": "5d18f2ebf64c6e2490c6350a8ed1ff5387f08ccbe92452699687b051156791d9",
+      "bytes": 3879
+    },
+    "primary/inspect-review-zips.py": {
+      "sha256": "a6ed4ab49c6376bd8f14abc558ff1705ee8de8f4b643c2ecc04e0a8606931bc0",
+      "bytes": 2497
+    },
+    "primary/prepare-rapid.py": {
+      "sha256": "79674dc9734e2cc8a0bbbd8d4a2f00c2386024c5e9750ef29709ba7e0a88eb2b",
+      "bytes": 1545
+    },
+    "primary/prepare-transient-control.py": {
+      "sha256": "4acad11f86e0433b307e4f290a791be8c2b9defbdc2b6f15c2702f23195f12c8",
+      "bytes": 1416
+    },
+    "primary/preservation-run-no-crlf.exit": {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    "primary/preservation-run-no-crlf.log": {
+      "sha256": "caa72a3eecd9fa018edf612776729f2d837a7d414a540df49a5f1d5f95d9929f",
+      "bytes": 250
+    },
+    "primary/preservation-run.exit": {
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "bytes": 3
+    },
+    "primary/preservation-run.log": {
+      "sha256": "5a1d2d90727eb7226d1c175df1850becd20113e4052b44f5cc2e86961319e6b7",
+      "bytes": 400
+    },
+    "primary/preservation.json": {
+      "sha256": "1268aff69d383aa7c2eb2142b15445cad6ccb7ca3784486da17c334f2e716c78",
+      "bytes": 17647
+    },
+    "primary/preservation.py": {
+      "sha256": "61cb3a52d7e7f4cc82495c1b000fc4cac8dffd33d2d586cb22c5637234a91913",
+      "bytes": 1851
+    },
+    "primary/rapid-provenance.json": {
+      "sha256": "cf2abe19fb9ea64678280c55bfb39b4cc301a518d407b5b62e868d4db0fed887",
+      "bytes": 607
+    },
+    "primary/review-zips-independent-inspection.json": {
+      "sha256": "3f65534caa3d893997fad6bf62f22348f1857b378781fcc67a55b54b53e99276",
+      "bytes": 4435
+    },
+    "primary/runner-correct-cwd.exit": {
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "bytes": 3
+    },
+    "primary/runner-correct-cwd.log": {
+      "sha256": "5f25782821f493a194abd536205fd3f7e6a8ae5322a505a2f26b316d4da1b8db",
+      "bytes": 2789
+    },
+    "primary/runner-unrestricted.exit": {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    "primary/runner-unrestricted.log": {
+      "sha256": "ff6299aa604d9986b3ecac195d2901a1141cfd5cdb4a5472045b2ba2db9f7695",
+      "bytes": 1459
+    },
+    "primary/select27-attempt1-cancelled.log": {
+      "sha256": "d6634ea729ed61e8f1b1c5b221e825b8d79d58122731291732ff6cf5c5126fc8",
+      "bytes": 121121
+    },
+    "primary/tooltip-rapid.cjs": {
+      "sha256": "8076c4c97a8382c814ea912bd5b0b1b4c4d5600c260584fa16968389f2c640df",
+      "bytes": 8639
+    },
+    "primary/tooltip-transient-control.cjs": {
+      "sha256": "a8d0a1a571a99579cbe940e4498a079c73358b434ab6f654504ba581b0206733",
+      "bytes": 9154
+    },
+    "primary/transient-control-provenance.json": {
+      "sha256": "e64148f99ebce3f4350fe779f92c4fc20d3a479f614bafedc34cc2ac6e16581a",
+      "bytes": 476
+    }
+  }
+}

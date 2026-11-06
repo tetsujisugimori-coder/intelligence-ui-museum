@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "reviewVerdict": "PARTIAL",
+  "createdAt": "2026-11-06T15:31:25.495607+00:00",
+  "zip": "s3-p2-independent-review-20261106.zip",
+  "bytes": 78960905,
+  "sha256": "7f35d90d0be607c6d8d6a32be03c2372dda406ade94be7f0d81e43361cc77c97",
+  "entries": 497,
+  "internalHashes": 496,
+  "crcErrors": 0,
+  "hashMismatches": 0,
+  "sourceCompleteLinux": true,
+  "sourceCompleteWindows": false,
+  "mergeRecommendations": {
+    "26": "YES",
+    "27": "YES",
+    "23": "NO"
+  }
+}

@@ -1,0 +1,109 @@
+Intelligence UI Museum S3-1 P2 独立再レビュー
+2026-11-07 JST / 最終GitHub照合: 00:27 JST（CI追記はreview-readbackを参照）
+
+A. 総合判定: PARTIAL
+
+Tooltip #24 と Button #25 の局所修正は独立に支持する。限定マージ推奨は #26 YES / #27 YES / #23 NO。S3-1全体は未受入。Windows WebKitのSelect残件を新しく再現し、元mainでも確認したため、Linux CI成功で全体PASSへ昇格しない。
+
+初回固定HEADからの変更:
+#26 f483d1c015378dbdce24a7680c8082cb3f898ab5 → aa20f218ac526a7c8a162324f6ecac2bd48991d1
+#27 f3893e50a020566b9a6aa2a66666a08108b89c07 → af38afb7524aeee24a7405c5d5db48152100bf00
+#23 68743f6ff857e55f107ec6c1dc7b8e94b8d71511 → ea6f19acfd60b37e9b147daa92e79838fd2f3070
+#23 tree: 4283ea61f64c6db2eda9fb0ff7c07f053e64406b
+mainは77d30ac54e35b8a6408fb5f56db4697adff8a452のまま。3件ともOPEN / Draft / 未マージを最終読戻しした。
+
+B. Tooltip #24: 局所PASS
+
+新規担当Aは提出f483d1cの通常復帰40件が成立しても、Chromiumでclick後の説明維持、Enter/Space、Escape後hover、連続操作後blurの退行を発見した。高速操作後blurはChromium19/20で説明残存。実装者の既存GREENを追認しなかった。
+
+追加commit aa20f21は、公式SDKの公開Tooltip.Root/Trigger/Contentへ局所置換し、単一open状態を管理する。keyboard focus中のscroll-dismissを保護し、pointerdown / blur / Escape / Enter / Spaceは通常の閉鎖へ戻す。SDKの内部visibleとforceOpen解除後の古い状態が競合する経路を除いた。公式6部品import、SDK本体、依存は変更しない。
+
+修正者Aの固定HEAD自己試験: Chromium20+WebKit20の持続・高速操作40/40と追加8/8 PASS。
+その後、主担当の別呼出しで既存拡張経路40/40 PASS、同じ高速Tab/wheel診断40/40 PASS、追加pointer/activation/Escape→hover8/8 PASSを確認。これらの異なるsuiteを合算して件数を水増ししない。20 double-rAFサンプルと8安定double-rAFで収束後の表示を観測した。
+
+元mainのWindows中央スクロール+安定待ち条件は20/20 PASSで、旧Linux20/20失敗の再現とは主張しない。実測ではTab復帰時に追加scrollが発生しなかった。フォント/layout差は推測に留める。新しく明示した即時Tab/ShiftTab+5回交互wheelの一致対照では、元mainはreturn12/20失敗・rapid20/20失敗、pageerror0、修正版は両engine40/40成功。旧版sourcemap内main.tsxはGit77d30acとbyte一致、修正版の埋込sourceもaa20と一致した。
+
+一過性可視の負対照は両engineで初期表示→5サンプル可視→15サンプル非表示・focus維持となり、2/2をreturn FAIL / exit1で拒否。表示待機の延長で通していない。ARIA describedbyと実Tooltip idの対応、Escape、再focus、hover/離脱、非focus閉鎖も新規確認。
+
+残存リスク: 実Safari / VoiceOver / native OS文字拡大はNOT_TESTED。Aの初回探索runnerのbyte-exact snapshotは未保存と明記し、後続snapshotを初回へ流用しない。受入判断には主担当がsourceを固定して新規作成・保存した一致対照を用いた。
+
+C. Button #25: 局所PASS
+
+元mainの新規Chromium16条件は狭幅12 FAIL / 1280px4 PASS。320/375/390×light/dark×root100/200で左x14の1列欠損を再現。
+追加製品修正は不要で、教材CSSの6→7pxを支持する。独自操作・4辺画素oracleも32/32 PASS。検査器修正af38afb後、主担当の新規正式32/32 PASS、4負対照×2engineの8件を全て正理由exit1で拒否した。
+
+原focus on/off、SECTION overflow解除on/offを維持し、全祖先clip/mask解除on/offを追加。輪郭3px/offset4pxを厳密一致で確認し、原画像の4辺画素も要求する。輪郭全消去、SECTION以外の半clip、左1px、opaque左遮蔽を拒否。channelDelta24・欠損許容0は維持。全周検査時のviewport上端切れもPASSにしないよう中央配置と4辺確認を追加した。
+初回新規32条件の1画素差FAIL、sandboxの32 UNKNOWN、負対照のlocalhost timeout、初回build順序失敗を保持し、成功実行へ置き換えて隠していない。移行画像のphase差を最初のon撮影前から揃え、許容差を緩めなかった。
+クリック / Enter / Space / disabled / loading / 文字内包 / 横overflowも独自32条件で確認した。
+
+D. 故障検出: 修正後の検出を支持。Windows全体suiteはPARTIAL
+
+新規に実証した検査器の誤PASS:
+・Tooltip S3_REPEATS=0: count0のPASS/exit0 → 正のsafe integerとunique supported engineを必須化。
+・Button SECTION外半clip: 16/16誤PASS/exit0 → 全祖先対照+原4辺を要求。
+・auditのfault signal/error矛盾、stage exit0+error矛盾: 再hash後も旧gate exit0 → 正理由exit1。
+主担当は0/NaN/Infinity/負数/小数/重複engine/未知engineの9設定を別呼出しで全て正理由exit1確認。subsetと正式両engine完走を区別した。
+主担当の別worktreeで監査正常1+負15の16件を期待どおり再実行。Cも最終ea6で16/16。修正gate hash ea5be300dc4a0670fa71cccabd921d192d02259c3fc2914c9b4523ee137b17e7。
+Windowsの正式runはmatrix31/32、live故障5/6のみ正理由成立となり、run/auditともexit1・complete=falseを正しく維持。Windows実製品audit-controlsはNOT_TESTEDでPASSに数えない。
+
+一方、同ea6のLinux CI完全実製品full-runでは13 stages exit0、正式32、focus44+負14+回帰4、live故障6種×2engineが成立。audit-controlsはsyntheticではなくこの完全原票を入力し、normal exit0と11負対照exit1の12件が全正理由成立した。主担当と親の別cloud環境が元ZIPを実取得して独自照合した。
+
+E. 保全: PASS（静的保全と全展示実操作を区別）
+
+SDK @openai/apps-sdk-ui@0.2.2のfresh registry tarball integrityと両fresh installのown2645ファイルが一致。依存/lock、Select補助source、legacy/v09、v11の差分0。公式6部品import維持。v09原本117件/11カテゴリ/byte一致とv11原データ保全を確認し、117全展示の実操作成功とは呼ばない。
+元RED JSONは#23と#26/#27でbyte一致。Tooltip SHA256 4561315950a299de019f15ec05b6121dbe1186ad040171148e67e872ebad4f19、Button 2e5f2e5703be980137ddeddbbff620a42059c6b31464737ab72cb42606e43fe8。
+元raw archive 4,686,502bytes / fd02ea8c7e670d9e192d699ff39654a6a53cefa656347731d12910dd57521c1dを保全。既存失敗・rawを上書きしない。追加commitはaa20、af38、audit2b6cad6、Windows移植a5f0e4e、stage矛盾5b14416、隔離統合ea6。閾値/失敗検出を緩めない。
+
+F. CI（既存実装者CIと今回の新HEAD CIを区別）
+
+00:27 JST時点の新HEAD照合。全job id・steps・statusはgithub-final-snapshot.json。
+#26 aa20: 通常42236945872 6/6 SUCCESS、Select42236946172 SUCCESS、Tooltip42236945929 SUCCESS(40/40)。job127956912841。
+#27 af38: 通常42236946842 6/6 SUCCESS、Select42236946750 attempt2 SUCCESS、Button42236946798 SUCCESS(32/32+故障8)。job127956915144。Select attempt1はブラウザ導入中にcancelled、原ログ保持。同HEAD再実行を成功扱いした。
+#23 ea6: Select42238639211 SUCCESS、research42238639209のresearch127962795289 / inspect-artifact127966918656ともSUCCESS。通常42238639271はattempt1が5成功/clip導入中cancelled。attempt2は5成功/clip導入中PENDING、job127972308038。6/6 SUCCESSとは記載しない。後続の最終状態はレビュー読戻し補足で明記する。
+
+各run: https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/<上記run id>
+初回提出HEADの通常6/6、Select、専用40/32の成功も別ファイルci-initial.jsonへ保存した。それを新規独立再実行と呼ばない。
+
+G. 証拠と独立性
+
+原JSON、PNG、イベント、geometry、source/build/runner hash、exit、失敗/未実施、CI logs、ZIP/manifest/CRCを保存。実ブラウザはPlaywright1.56.1のChromium141.0.7390.37 / WebKit26.0。主担当/A/B/Cは新規担当で、過去完了threadの実装タスクを再利用していない。専用cloneと役割別worktree、別HTTP port、fresh page/新processを使用した。Windows host・browser binary・既存検査コードは共有するため、別OS/別機材の独立とは主張しない。Aは追加製品修正後は実装者となるため、その40+8は自己試験とし、主担当が別実行で再審査した。独自oracles/stdlib PNG再集計/別cloudのCI ZIP再集計を併用。
+
+凍結ZIP:
+Tooltip: 11,499,316bytes / da4c505e0ed011ee9515d26736a21135faadcfb897aceee890a5b39b9171268f
+Button: 9,120,051bytes / c9df17fe272f14a62c4b8896496ccb9793bd80d68c00991003fe23f7466cdf09
+C初期: 302,637bytes / d3b2eeda3748cd3b48f3f4e17b1bdeb7223b749c8f8d77dceba0bffeb59d4e6a
+C統合Windows: 18,561,776bytes / 06306fb0030f79dd5e89ce94f0e13ce64121353bf80bfe30106b0df89b56a978
+C元main補足: 4,521,423bytes / 00d3578895e53a2f3f87b8539533d3f96eef8eb7be9dc006ae181b9efe9b2725
+Linux CI元ZIP artifact13513916245: 25,693,625bytes / 886dc6f9f12d49bd109f9c2e7ef677c99a2cb9f7fad6961e54291cb8f13509de
+元Linux ZIPは842entries/568内部hash不一致0/742PNG chunkCRC不一致0、HEAD/tree/sourceとcomplete=true一致を主担当が独自再計算。Windows ZIPはcomplete=falseを保持し、正常Linux証拠と混ぜない。総合packageのSHA256は外部PACKAGE-INSPECTION.jsonとGitHub投稿へ記録する。
+
+環境/手順履歴: sandbox browser loopback/cache、Temp/junction権限、Git system core.autocrlfによるarchive変換、誤cwd、初回依存build順序、並列browser負荷下のgoto timeoutを保存。許可済みworkspace TMP・core.autocrlf=false・明示browser cache・必要なsandbox escalation・順次browser実行で切り分けた。製品故障と未実行を混同しない。
+
+H. PR別限定マージ推奨
+
+#26 YES: aa20の局所修正を独立支持。
+#27 YES: af38の局所修正と検査器修正を独立支持。
+#23 NO: Linux全受入成功だけではWindowsの再現残件を解消していない。実際のmergeは全件未実施。
+
+I. S3-1 T1〜T8
+
+T1 PASS: 対象HEAD/tree/sourceと保全固定。
+T2 PASS: 保全/単体、fresh二重build、厳密dist byte一致、型/authenticity/baseline、SDK照合。
+T3 PARTIAL: Linux6部品全成立。Windows Selectの一部操作は未完遂。
+T4 PASS: Windows/Linuxで重点12を含むfocus44、負14、回帰4が成立。
+T5 PARTIAL: Linux32/32。Windows31/32、失敗cellのSelect後半はNOT_TESTED。
+T6 PARTIAL: Linux完全実製品正常1+負11と追加検査器対照は成立。Windows live5/6、正常実製品controls NOT_TESTED。
+T7 PASS（証拠整合性の範囲）: 別担当・原画像照合・package/元ZIP CRCと内部SHA・HEAD/tree/source一致、失敗と独立性の限界を明記。
+T8 FAIL / 未受入: 再現するSelect残件がある。局所2件PASSを全体PASSに転記しない。
+
+J. Stage 3
+
+HOLD解除NO。S3-2公開候補準備NO。main merge、Issue閉鎖、Draft解除、auto-merge、Sites更新/公開は行っていない。
+
+K. 次の対応 / 正確な残件
+
+Windows WebKit Selectのviewport外クリックはP2候補・原因未確定。統合版fresh20は18成功/2失敗、元mainは19成功/1失敗。旧Buttonの既知clipによる前段操作差を明記し、頻度差から回帰とは断定しない。失敗時のscrollY3555、trigger top=-658、card option top=-583、fixed popup(23,-621)、viewport375×1000が一致。focus→Tab→ShiftTab→Spaceが約15ms内で進み、triggerがmenu前から画面外だった。SDKのmount後currentOption.scrollIntoViewとWebKit/runner focus-scroll timingの相互作用は仮説で、SDKは変更しない。
+
+次は実Tab操作とprogrammatic focus、描画境界、SDK scrollの時系列、初期opener可視条件を分離する。force click・待機延長・判定緩和で通す変更は採用しない。ユーザー判断で#26/#27を限定マージするか決め、Select残件の調査と独立再審査後に#23を再評価する。既知P3/TOCTOU、依存の到達性・release LICENSE、CSP/font、認証後asset、実Safari/VoiceOver/native文字拡大は本レビューで解消確認していない。
+
+追加の新規公開Issue作成は自動承認審査に拒否され、未実行・再試行0。理由は、新規公開Issueが外部コミットメントであり、既存レビュー投稿の許可には明示的な新規Issue作成許可が含まれないため。原依頼履歴を再確認したが新しい許可はなく、操作を停止した。既存PR #23への許可済みレビューとこの原稿で残件を記録し、今回の完了を任意の新規Issue承認待ちで止めない。

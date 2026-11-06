@@ -1,0 +1,33 @@
+Title: S3-1: Windows WebKitの高速Select操作で選択肢がviewport外に残る（原因調査）
+
+P2候補・原因未確定。#22 / Draft #23 の独立再受入で確認した残件。
+この原稿の新規公開Issue作成は自動承認審査に拒否され、未投稿です。
+同じ内容は許可済みの既存PR #23レビューへ記録します。
+
+対象: ea6f19acfd60b37e9b147daa92e79838fd2f3070
+tree: 4283ea61f64c6db2eda9fb0ff7c07f053e64406b
+Windows / Playwright1.56.1 WebKit26.0 / SDK0.2.2。
+SDK、依存、lock、Select補助sourceは変更していません。
+
+正式Windows matrixは31/32 PASS。WebKit375×1000/light/root100%で、
+Space開放後「カード」へ通常locator.clickがoutside viewportで5000ms timeout。
+live pageerror故障対照のWebKit1280/light/100にも同症状が混入し、
+故障suiteは5/6の正理由成立にとどまりました。
+run/auditともexit1、manifest.complete=falseを保持。
+Windowsの正常実製品audit-controlsはNOT_TESTEDです。
+
+同じSelect列の独自fresh20診断は18 PASS / 2 FAIL(fresh9/14)。
+scrollY3555、trigger top=-658、カードoption top=-583、
+fixed popper transform(23,-621)、visualViewport375×1000/offset0/scale1。
+focus→Tab→ShiftTab→Spaceが約15ms内で進み、menu前からtriggerが画面外でした。
+製品・runner・WebKitのfocus/scroll timingのどこに原因があるか未確定です。
+read-only rAF計測自体がraceに影響し得る限界もあります。
+
+同HEADのLinux CI42238639209は、正式32、focus44+負14+回帰4、live6、
+完全な実製品full-runのaudit-controls正常1+負11がすべて成立。
+CI成功でWindowsの独立再現失敗を消しません。
+
+次の調査: 元mainとの比較、実キーボード移動とprogrammatic focusの区別、
+描画境界、SDK menu mount後のcurrentOption.scrollIntoViewと自動scrollの競合。
+SDK自体は変更せず、force click・待機延長・閾値緩和で通しません。
+元main比較の実行結果と固定証拠URLは最終A-K報告に含めます。
