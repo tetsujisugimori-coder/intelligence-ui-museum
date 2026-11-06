@@ -1,0 +1,11 @@
+{
+  "pr": 26,
+  "reviewId": 5802576814,
+  "exactFullBodyMatch": true,
+  "characters": 2104,
+  "url": null,
+  "state": "COMMENTED",
+  "commit": null,
+  "readAt": "2026-11-06T15:37:00.754Z",
+  "body": "2026-11-07 00:36:13 JST 独立再レビュー（新規担当・追加修正後の別実行）\n\n**局所PASS、限定マージ推奨YES。実際のmerge・Draft解除・auto-mergeは行っていません。**\n対象HEAD: `aa20f218ac526a7c8a162324f6ecac2bd48991d1`。\n\n旧提出f483d1cは復帰表示だけのGREENでは不十分でした。pointer click、Enter/Space、Escape→hover、高速移動後blurで通常SDK挙動の退行を新規確認。追加aa20は公式Tooltip.Root/Trigger/Contentの公開合成APIでopen状態を一本化し、keyboard scroll-dismiss保護と通常閉鎖を両立させます。SDK/依存/lock/公式6importsは変更していません。\n\n修正担当Aの自己試験40+8とは別に、主担当が新規Chromium/WebKitの既存拡張40/40、持続・高速Tab/wheel40/40、追加8/8を実行。元mainはWindowsの中央安定手順20/20で未再現だったことも保存しています。同じ明示的な高速手順では元mainがreturn12/20・rapid20/20失敗、修正版は両engine40/40成功でした。20 double-rAF samplesと8安定frameで収束後を観測し、表示待機延長で通していません。一過性表示→消失の故障2件もfocus維持のまま正しくexit1。ARIA対応・Escape・再focus・hover/離脱も確認。\n\nS3_REPEATS=0の空PASSを修正。主担当がNaN/Infinity/重複engine等も別実行で正理由exit1を確認しました。prepared sourceとGit HEAD、埋込sourcemap sourceが一致します。\n\n最終HEAD CI: [通常6/6 SUCCESS](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/42236945872)、[Select SUCCESS](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/42236946172)、[Tooltip40/40 SUCCESS](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/42236945929)。既存実装者CIと今回の新規独立結果を区別しています。\n\n共有Windows host / Playwright1.56.1 Chromium141.0.7390.37・WebKit26.0でのレビューです。実Safari/VoiceOver/native OS文字拡大はNOT_TESTED。統合#23には元mainでも再現するSelect残件があり、#26局所PASSを#23全体PASSへ転記しません。総合PARTIAL、#23推奨NO、Stage3 HOLD・S3-2準備NO。\n\n[A〜K報告](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/blob/4a30dd608809e31c13c0de7693901986b72449fd/evidence/s3-p2-independent-20261106/FINAL-REPORT.txt) / [原証拠ZIP](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/blob/4a30dd608809e31c13c0de7693901986b72449fd/evidence/s3-p2-independent-20261106/s3-p2-independent-review-20261106.zip) / [最終CI追記](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/blob/4a30dd608809e31c13c0de7693901986b72449fd/evidence/s3-p2-independent-20261106/FINAL-CI-ADDENDUM.json)\n\nZIP: 78,960,905 bytes / 497 entries / 内部496 SHA256・CRC不一致0。\nSHA256 `7f35d90d0be607c6d8d6a32be03c2372dda406ade94be7f0d81e43361cc77c97`。証拠commitは製品HEADと別です。"
+}

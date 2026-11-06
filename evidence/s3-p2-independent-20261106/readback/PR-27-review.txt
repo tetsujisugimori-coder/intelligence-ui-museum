@@ -1,0 +1,19 @@
+2026-11-07 00:36:13 JST 独立再レビュー（新規担当・検査器修正後の別実行）
+
+**局所PASS、限定マージ推奨YES。実際のmerge・Draft解除・auto-mergeは行っていません。**
+対象HEAD: `af38afb7524aeee24a7405c5d5db48152100bf00`。
+
+元main新規Chromium16条件で狭幅12 FAIL / 1280px4 PASSを再現。製品の6→7px CSS修正を支持し、製品CSSの追加修正は不要でした。SDK/依存/lock/Select補助/v09/v11は変更していません。
+
+旧SECTION対照だけではSECTION外半clipを16/16誤PASSすることを実証しました。af38は元4画像を維持し、全祖先clip/mask解除2画像と原画像4辺画素を追加、3px/4px厳密一致とunique engineを要求します。channelDelta24・欠損許容0を維持し、成功条件を緩めていません。最初の撮影から描画phaseを揃え、viewport上端欠けもPASSにしません。
+
+修正者の自己検証と別に、主担当が確定HEADで正式Chromium/WebKit×320/375/390/1280×light/dark×root100/200の32/32 PASSを新規実行。輪郭全消去・半clip・左1px・opaque左遮蔽の4種×2engine=8件は全て正理由exit1。独自4辺oracle・click/Enter/Space/disabled/loading/文字/横overflowの32条件も支持。初回1画素FAIL、環境UNKNOWN、負対照timeout、build順序失敗を原票に保持しました。
+
+最終HEAD CI: [通常6/6 SUCCESS](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/42236946842)、[Select attempt2 SUCCESS](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/42236946750)、[Button32/32と故障8 SUCCESS](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/42236946798)。Select attempt1の導入中cancelledは別履歴として保持。
+
+共有Windows host / Playwright1.56.1 Chromium141.0.7390.37・WebKit26.0。実Safari/VoiceOver/native OS文字拡大はNOT_TESTED。統合#23のSelect残件は元mainでも再現し、#27局所PASSと全体未受入を分けます。総合PARTIAL、#23推奨NO、Stage3 HOLD・S3-2準備NO。
+
+[A〜K報告](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/blob/4a30dd608809e31c13c0de7693901986b72449fd/evidence/s3-p2-independent-20261106/FINAL-REPORT.txt) / [原証拠ZIP](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/blob/4a30dd608809e31c13c0de7693901986b72449fd/evidence/s3-p2-independent-20261106/s3-p2-independent-review-20261106.zip) / [最終CI追記](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/blob/4a30dd608809e31c13c0de7693901986b72449fd/evidence/s3-p2-independent-20261106/FINAL-CI-ADDENDUM.json)
+
+ZIP: 78,960,905 bytes / 497 entries / 内部496 SHA256・CRC不一致0。
+SHA256 `7f35d90d0be607c6d8d6a32be03c2372dda406ade94be7f0d81e43361cc77c97`。証拠commitは製品HEADと別です。
