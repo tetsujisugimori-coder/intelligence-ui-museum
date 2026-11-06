@@ -1,0 +1,88 @@
+// Isolated S3-1 acceptance; no product writes, no fixed delay success criterion.
+const fs = require('node:fs'), path = require('node:path'), http = require('node:http');
+const crypto = require('node:crypto'), {execFileSync} = require('node:child_process');
+const repo = path.resolve(__dirname, '../..');
+const {measure} = require('../../apps/v10/scripts/stage2r-focus-pixels.cjs');
+const modules = process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES || path.join(repo, 'tools/stage-a-browser/node_modules');
+const pw = require(path.join(modules, 'playwright'));
+const root = path.resolve(process.env.APP_ROOT || path.join(repo, '.work/v10'));
+const out = path.resolve(process.env.EVIDENCE_DIR || path.join(repo, '.work/s3-browser'));
+if (fs.existsSync(out)) throw Error('fresh evidence directory required');
+fs.mkdirSync(out, {recursive:true});
+const hash = b => crypto.createHash('sha256').update(b).digest('hex');
+const files = dir => fs.readdirSync(dir, {withFileTypes:true}).flatMap(e => e.isDirectory() ? files(path.join(dir,e.name)) : [path.join(dir,e.name)]);
+const head = execFileSync('git',['rev-parse','HEAD'],{cwd:repo,encoding:'utf8'}).trim();
+const tree = execFileSync('git',['rev-parse','HEAD^{tree}'],{cwd:repo,encoding:'utf8'}).trim();
+const source = Object.fromEntries(['src/main.tsx','src/main.css','src/select-focus-return.ts','package.json','package-lock.json'].map(f=>[f,hash(fs.readFileSync(path.join(root,f)))]));
+const build = Object.fromEntries(files(path.join(root,'dist')).map(f=>[path.relative(path.join(root,'dist'),f),hash(fs.readFileSync(f))]));
+const CHECKS = ['environment','layout','Button','Badge','Alert','Switch','Select','Tooltip','errors'];
+const rows=[], failures=[];
+const fault=process.env.S3_FAULT || '';
+const assert = (v,m) => {if(!v) throw Error(m);};
+const frames = p => p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
+function visible(e) {
+  const r=e.getBoundingClientRect(), clips=[], texts=[];
+  for(let a=e;a;a=a.parentElement){const s=getComputedStyle(a),b=a.getBoundingClientRect();
+    if(s.display==='none'||s.visibility!=='visible'||+s.opacity===0)clips.push({reason:'hidden',tag:a.tagName});
+    if(/hidden|clip|auto|scroll/.test(s.overflowY)&&(r.top<b.top+a.clientTop-1||r.bottom>b.top+a.clientTop+a.clientHeight+1))clips.push({reason:'vertical clip',tag:a.tagName,rect:b.toJSON()});
+    if(/hidden|clip|auto|scroll/.test(s.overflowX)&&(r.left<b.left+a.clientLeft-1||r.right>b.left+a.clientLeft+a.clientWidth+1))clips.push({reason:'horizontal clip',tag:a.tagName,rect:b.toJSON()});
+  }
+  const walk=document.createTreeWalker(e,NodeFilter.SHOW_TEXT);
+  while(walk.nextNode()) {const n=walk.currentNode;if(!n.textContent.trim()||n.parentElement.closest('.sr-only,[aria-hidden=true]'))continue;
+    const range=document.createRange();range.selectNodeContents(n);
+    for(const tr of range.getClientRects())for(let a=n.parentElement;a;a=a.parentElement){const s=getComputedStyle(a),b=a.getBoundingClientRect();
+      if(/hidden|clip|auto|scroll/.test(s.overflowY)&&(tr.top<b.top+a.clientTop-1||tr.bottom>b.top+a.clientTop+a.clientHeight+1))texts.push({reason:'vertical text clip',text:n.textContent,rect:tr.toJSON(),ancestor:b.toJSON()});
+      if(/hidden|clip|auto|scroll/.test(s.overflowX)&&(tr.left<b.left+a.clientLeft-1||tr.right>b.left+a.clientLeft+a.clientWidth+1))texts.push({text:n.textContent,rect:tr.toJSON(),ancestor:b.toJSON()});
+    }
+  }
+  return {rect:r.toJSON(),text:e.textContent,clips,texts,pass:r.width>0&&r.height>0&&!clips.length&&!texts.length};
+}
+async function ring(p,l,prefix) {
+  await l.scrollIntoViewIfNeeded();
+  await l.evaluate(e=>e.setAttribute('data-s3-ring','yes'));
+  await p.waitForFunction(()=>document.querySelector('[data-s3-ring]').getAnimations({subtree:true}).every(a=>['finished','idle'].includes(a.playState)),null,{timeout:5000});
+  const g=await l.evaluate(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e),a=getComputedStyle(e,'::after');return {rect:r.toJSON(),active:document.activeElement===e,visible:e.matches(':focus-visible'),outline:s.outline,afterOutline:a.outline,shadow:s.boxShadow,afterShadow:a.boxShadow,viewport:{width:innerWidth,height:innerHeight}};});
+  const x=Math.max(0,Math.floor(g.rect.x-24)),y=Math.max(0,Math.floor(g.rect.y-24));
+  const clip={x,y,width:Math.min(g.viewport.width,Math.ceil(g.rect.right+24))-x,height:Math.min(g.viewport.height,Math.ceil(g.rect.bottom+24))-y};
+  const buffers=[];let style;
+  try {
+    buffers.push(await p.screenshot({clip,animations:'disabled',scale:'css'}));
+    style=await p.addStyleTag({content:'[data-s3-ring],[data-s3-ring]::after {outline:none!important;box-shadow:none!important;transition:none!important}'});
+    buffers.push(await p.screenshot({clip,animations:'disabled',scale:'css'}));
+    buffers.push(await p.screenshot({clip,animations:'disabled',scale:'css'}));
+  } finally {if(style)await style.evaluate(e=>e.remove());}
+  buffers.push(await p.screenshot({clip,animations:'disabled',scale:'css'}));
+  const {PNG}=require(path.join(path.dirname(require.resolve(path.join(modules,'playwright-core/package.json'))),'lib/utilsBundle.js'));
+  const measured=measure(buffers.map(b=>PNG.sync.read(b)),clip,[{x:g.rect.x,y:g.rect.y,width:g.rect.width,height:g.rect.height}]);
+  const images=buffers.map((b,i)=>{const file=prefix+'-'+['on','off','off2','on2'][i]+'.png';fs.writeFileSync(path.join(out,file),b);return file;});
+  await l.evaluate(e=>e.removeAttribute('data-s3-ring'));
+  return {...g,...measured,pass:g.active&&g.visible&&measured.pass,images};
+}
+const server=http.createServer((q,s)=>{if(new URL(q.url,'http://localhost').pathname==='/favicon.ico')return s.writeHead(204).end();try{const u=new URL(q.url,'http://localhost'),base=fs.realpathSync(path.join(root,'dist')),f=fs.realpathSync(path.resolve(base,'.'+(u.pathname==='/'?'/index.html':decodeURIComponent(u.pathname))));assert(f.startsWith(base+path.sep),'outside root');s.setHeader('Content-Type',f.endsWith('.js')?'text/javascript':f.endsWith('.css')?'text/css':f.endsWith('.html')?'text/html':'application/octet-stream');s.end(fs.readFileSync(f));}catch{s.writeHead(404).end();}});
+async function condition(browser,engine,width,theme,text,url) {
+  const id=`${engine}-${width}-${theme}-${text}`, row={id,engine,browser:browser.version(),width,height:1000,theme,text,checks:[],errors:[],console:[],events:[],images:[]};
+  rows.push(row);const p=await browser.newPage({viewport:{width,height:1000}});p.setDefaultTimeout(5000);
+  p.on('pageerror',e=>row.errors.push({time:new Date().toISOString(),message:e.message}));
+  p.on('console',m=>{if(m.type()==='error'){const message=m.text();const known=/^Loading the font 'https:\/\/cdn\.openai\.com\/common\/fonts\/katex\/KaTeX_[A-Za-z0-9_-]+\.woff2?' violates the following Content Security Policy directive: "font-src 'self'"\. The action has been blocked\.$/.test(message);row.console.push({time:new Date().toISOString(),message,classification:known?'known-font-CSP':'unexpected'});}});
+  async function check(name,fn){const r={name,pass:false,started:new Date().toISOString()};row.checks.push(r);try{r.detail=await fn();r.pass=true;}catch(e){r.error=String(e);}r.finished=new Date().toISOString();}
+  try {
+    await p.goto(`${url}/?theme=${theme}&text=${text}`);await p.bringToFront();await p.locator('#Button .stage button').waitFor();await p.evaluate(()=>document.fonts.ready);
+    if(fault)await p.evaluate(f=>{
+      if(f==='pageerror')queueMicrotask(()=>{throw Error('S3 injected pageerror');});
+      if(['focus-missing','focus-clipped'].includes(f)){const s=document.createElement('style');s.textContent=f==='focus-missing'?'#Select .stage [role=button],#Select .stage [role=button]::after{outline:none!important;box-shadow:none!important}':'#Select .stage [role=button]{clip-path:inset(4px round 999px)!important}';document.head.append(s);}
+      if(f==='alert-reopen')document.addEventListener('click',e=>{if(e.target.closest('#Alert .controls button')?.textContent.includes('再表示')){e.preventDefault();e.stopImmediatePropagation();}},true);
+      if(['body-focus','wrong-trigger'].includes(f)){const original=HTMLElement.prototype.focus;HTMLElement.prototype.focus=function(...args){if(this.closest?.('#Select .stage')&&this.getAttribute('role')==='button'&&document.activeElement===document.body&&this.getAttribute('aria-expanded')==='false'){if(f==='body-focus')return;return original.apply(document.querySelector('#Button .stage button'),args);}return original.apply(this,args);};}
+    },fault);
+    await check('environment',async()=>{const d=await p.evaluate(()=>({focus:document.hasFocus(),visibility:document.visibilityState,theme:document.documentElement.dataset.theme,font:getComputedStyle(document.documentElement).fontSize}));assert(d.focus&&d.visibility==='visible'&&d.theme===theme&&d.font===(text===200?'32px':'16px'),'environment mismatch');return d;});
+    await check('layout',async()=>{const d=await p.evaluate(()=>({client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));assert(d.scroll<=d.client,'horizontal page overflow');const parts={};for(const name of ['Button','Badge','Alert','Switch','Select','Tooltip']){const l=p.locator(`#${name} .stage`).first();await l.scrollIntoViewIfNeeded();parts[name]=await l.evaluate(visible);assert(parts[name].pass,name+' text or control clipped');}return {document:d,parts};});
+    await check('Button',async()=>{const b=p.locator('#Button .stage button'),o=p.locator('#Button output');await b.click();await b.focus();await p.keyboard.press('Enter');await p.keyboard.press('Space');assert((await o.innerText()).includes('実行回数：3 /'),'click/Enter/Space');await b.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');const paint=await ring(p,b,id+'-Button');row.images.push(...paint.images);assert(paint.pass,'Button ring missing/clipped');const boxes=p.locator('#Button input');await boxes.nth(0).check();assert(await b.isDisabled(),'disabled');await b.evaluate(e=>e.click());assert((await o.innerText()).includes('実行回数：3 /'),'disabled changed');await boxes.nth(0).uncheck();await boxes.nth(1).check();assert(await b.isDisabled(),'loading disabled');await b.evaluate(e=>e.click());assert((await o.innerText()).includes('実行回数：3 /'),'loading changed');await boxes.nth(1).uncheck();return {count:3,disabledStable:true,loadingStable:true,paint};});
+    await check('Badge',async()=>{await p.locator('#Badge select').selectOption('warning');assert((await p.locator('#Badge output').innerText()).includes('warning'),'Badge output');const d=await p.locator('#Badge .samples').evaluate(visible);assert(d.pass&&d.text.includes('状態：warning')&&d.text.includes('outline')&&d.text.includes('solid / pill'),'Badge paint/labels');await p.locator('#Badge .samples').scrollIntoViewIfNeeded();const file=id+'-Badge.png';await p.screenshot({path:path.join(out,file)});row.images.push(file);return d;});
+    await check('Alert',async()=>{await p.locator('#Alert select').selectOption('danger');const control=p.locator('#Alert .controls button');await p.locator('#Alert .alert-demo').waitFor();assert((await p.locator('#Alert [role=status]').innerText()).includes('danger'),'Alert color');await control.focus();await p.keyboard.press('Enter');await p.locator('#Alert .alert-demo').waitFor({state:'hidden'});assert((await p.locator('#Alert output').innerText()).includes('非表示'),'Alert hidden');await p.keyboard.press('Enter');await p.locator('#Alert .alert-demo').waitFor({state:'visible'});assert((await p.locator('#Alert output').innerText()).includes('表示中'),'Alert reopen output');const d=await p.locator('#Alert .alert-demo').evaluate(visible);assert(d.pass,'Alert clipped');const file=id+'-Alert.png';await p.locator('#Alert .alert-demo').scrollIntoViewIfNeeded();await p.screenshot({path:path.join(out,file)});row.images.push(file);return {reopened:true,...d};});
+    await check('Switch',async()=>{const s=p.locator('#Switch [role=switch]'),o=p.locator('#Switch output');await s.click();assert(await s.getAttribute('aria-checked')==='true'&&(await o.innerText()).includes('ON'),'Switch ON');await s.focus();await p.keyboard.press('Space');assert(await s.getAttribute('aria-checked')==='false'&&(await o.innerText()).includes('OFF'),'Switch OFF');await p.locator('#Switch input[type=checkbox]').first().check();assert(await s.isDisabled(),'Switch disabled');await s.evaluate(e=>e.click());assert(await s.getAttribute('aria-checked')==='false','disabled Switch changed');await p.locator('#Switch input[type=checkbox]').first().uncheck();return {mouseON:true,spaceOFF:true,disabledStable:true};});
+    await check('Select',async()=>{const t=p.locator('#Select .stage [role=button]'),v=p.locator('#official-select');await t.evaluate(e=>{window.s3Opener=e;window.s3events=[];for(const type of ['focusin','focusout','keydown','pointerdown'])document.addEventListener(type,x=>window.s3events.push({time:performance.now(),type,key:x.key,target:{tag:x.target.tagName,id:x.target.id,role:x.target.getAttribute('role')}}),true);});await t.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');assert(await t.evaluate(e=>document.activeElement===e),'Tab/ShiftTab');await p.keyboard.press('Space');await p.getByRole('option',{name:'カード',exact:true}).click();await p.waitForFunction(()=>document.activeElement===window.s3Opener,null,{timeout:2000});assert(await v.inputValue()==='b','mouse selection');await p.mouse.move(0,0);await p.keyboard.press('Space');await p.getByRole('option',{name:'カード',exact:true}).waitFor();await p.locator('[data-option-id="b"][data-highlight]').waitFor();await p.waitForFunction(()=>document.activeElement?.id.startsWith('select-list-'),null,{timeout:2000});await p.keyboard.press('ArrowUp');await p.locator('[data-option-id="a"][data-highlight]').waitFor();await p.keyboard.press('Enter');await p.waitForFunction(()=>document.activeElement===window.s3Opener&&window.s3Opener.getAttribute('aria-expanded')==='false',null,{timeout:2000});assert(await v.inputValue()==='a','keyboard selection');await p.keyboard.press('Space');await p.getByRole('option',{name:'カード',exact:true}).waitFor();await p.keyboard.press('Escape');await p.waitForFunction(()=>document.activeElement===window.s3Opener&&window.s3Opener.getAttribute('aria-expanded')==='false',null,{timeout:2000});assert(await v.inputValue()==='a','Escape value');const paint=await ring(p,t,id+'-Select');row.images.push(...paint.images);assert(paint.pass,'Select ring missing/clipped');await p.locator('#Select input[type=checkbox]').check();assert(await t.getAttribute('aria-disabled')==='true','Select disabled');await t.click({force:true});assert(await t.getAttribute('aria-expanded')==='false','disabled Select opened');await p.locator('#Select input[type=checkbox]').uncheck();assert(await v.inputValue()==='a','Select retained');row.events=await p.evaluate(()=>window.s3events);return {sameOpener:true,mouse:'b',keyboard:'a',escape:'a',disabledStable:true,paint};});
+    await check('Tooltip',async()=>{const t=p.locator('#Tooltip .stage button'),tip=p.getByRole('tooltip');await t.hover();await tip.waitFor({state:'visible'});const hover=await tip.evaluate(visible);assert(hover.pass,'Tooltip hover clip');await p.keyboard.press('Escape');await tip.waitFor({state:'hidden'});await p.mouse.move(0,0);await t.evaluate(e=>e.scrollIntoView({block:'center'}));await frames(p);await t.focus();await tip.waitFor({state:'visible'});const keyboard=await tip.evaluate(visible);assert(keyboard.pass,'Tooltip keyboard clip');const box=await tip.boundingBox();assert(box.x>=0&&box.x+box.width<=width&&box.y>=0&&box.y+box.height<=1000,'Tooltip outside viewport');const file=id+'-Tooltip.png';await p.screenshot({path:path.join(out,file)});row.images.push(file);await p.keyboard.press('Tab');await tip.waitFor({state:'hidden'});return {hover,keyboard,box,closedOnBlur:true};});
+    await frames(p);
+  } catch(e){row.error=String(e);}
+  finally {await p.close();await check('errors',async()=>{assert(!row.errors.length,'pageerror');assert(row.console.every(e=>e.classification==='known-font-CSP'),'unexpected console error');return {pageerror:row.errors,console:row.console};});row.status=!row.error&&row.checks.length===CHECKS.length&&row.checks.every(x=>x.pass)?'PASS':'FAIL';console.log(id,row.status,row.checks.filter(x=>!x.pass).map(x=>x.name));}
+}
+(async()=>{await new Promise(r=>server.listen(0,'127.0.0.1',r));try{for(const engine of (process.env.S3_ENGINES||'chromium,webkit').split(',')){const b=await pw[engine].launch({headless:true,...(engine==='chromium'&&process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{})});try{for(const width of (fault?[1280]:[320,375,390,1280]))for(const theme of (fault?['light']:['light','dark']))for(const text of (fault?[100]:[100,200]))await condition(b,engine,width,theme,text,`http://127.0.0.1:${server.address().port}`);}finally{await b.close();}}}catch(e){failures.push(String(e));}finally{server.close();const expected=(process.env.S3_ENGINES||'chromium,webkit').split(',').length*(fault?1:16);const status=rows.length===expected&&rows.every(r=>r.status==='PASS')&&!failures.length?'PASS':'FAIL';const result={schema:1,head,tree,source,build,runner:hash(fs.readFileSync(__filename)),fault,expected,CHECKS,rows,failures,status,finished:new Date().toISOString()};fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(result,null,2));fs.writeFileSync(path.join(out,'SHA256SUMS.json'),JSON.stringify(Object.fromEntries(files(out).filter(f=>!f.endsWith('SHA256SUMS.json')).map(f=>[path.relative(out,f),hash(fs.readFileSync(f))])),null,2));process.exitCode=status==='PASS'?0:1;}})();

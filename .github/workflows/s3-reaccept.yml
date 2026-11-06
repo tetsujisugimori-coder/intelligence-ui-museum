@@ -1,0 +1,40 @@
+name: S3-1 research reacceptance
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts && npx playwright install --with-deps chromium webkit
+        working-directory: tools/stage-a-browser
+      - name: Frozen source, two builds, 32 conditions, focus and live faults
+        run: node scripts/s3-reaccept/run.cjs
+      - name: Read-only evidence audit and incomplete evidence controls
+        run: |
+          node scripts/s3-reaccept/audit.cjs .work/s3-evidence "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})" > .work/s3-audit.json
+          node scripts/s3-reaccept/audit-controls.cjs .work/s3-evidence "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})" .work/s3-audit-controls
+      - name: Separately authored browser review
+        env:
+          REVIEW_OUT: .work/s3-independent
+        run: node tests/s3-reaccept-independent/run.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: s3-reaccept-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            .work/s3-evidence/
+            .work/s3-audit.json
+            .work/s3-audit-controls/
+            .work/s3-independent/
+          if-no-files-found: error
