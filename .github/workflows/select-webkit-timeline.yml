@@ -1,0 +1,94 @@
+name: S3-1 Select WebKit timeline diagnostic (#28)
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/select-webkit-timeline.yml'
+      - 'tests/select-webkit-timeline/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: s3-select-timeline-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  trace:
+    name: ${{ matrix.os }} / ${{ matrix.source }} / ${{ matrix.mode }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - { os: windows-2025, source: current, mode: tab }
+          - { os: windows-2025, source: current, mode: direct }
+          - { os: windows-2025, source: current, mode: legacy }
+          - { os: windows-2025, source: old, mode: tab }
+          - { os: windows-2025, source: old, mode: legacy }
+          - { os: ubuntu-24.04, source: current, mode: tab }
+          - { os: ubuntu-24.04, source: current, mode: legacy }
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Record fixed source and keep old main separate
+        shell: bash
+        run: |
+          mkdir -p .work
+          git rev-parse HEAD HEAD^{tree}
+          if [ "${{ matrix.source }}" = "old" ]; then
+            git worktree add --detach .work/old-src 77d30ac54e35b8a6408fb5f56db4697adff8a452
+            git -C .work/old-src rev-parse HEAD HEAD^{tree}
+          else
+            python scripts/prepare-work.py
+          fi
+      - name: Build only isolated product copy
+        shell: bash
+        run: |
+          if [ "${{ matrix.source }}" = "old" ]; then
+            cd .work/old-src/apps/v10
+          else
+            cd .work/v10
+          fi
+          npm ci --ignore-scripts
+          npm run build
+          npm test
+      - name: Install fixed diagnostic browser
+        shell: bash
+        working-directory: tools/stage-a-browser
+        run: |
+          npm ci --ignore-scripts
+          if [ "${{ runner.os }}" = "Linux" ]; then
+            npx playwright install --with-deps webkit
+          else
+            npx playwright install webkit
+          fi
+      - name: Verify diagnostic rejects known faults
+        shell: bash
+        run: node tests/select-webkit-timeline/run.cjs --selftest
+      - name: Run 20 fresh pages per view/pace (real Tab versus direct focus)
+        shell: bash
+        env:
+          DIAG_MODE: ${{ matrix.mode }}
+          DIAG_ENGINE: webkit
+          DIAG_REPEATS: '20'
+          DIAG_SOURCE_REF: ${{ matrix.source }}
+        run: |
+          if [ "$DIAG_SOURCE_REF" = "old" ]; then
+            export APP_ROOT="$GITHUB_WORKSPACE/.work/old-src/apps/v10"
+          else
+            export APP_ROOT="$GITHUB_WORKSPACE/.work/v10"
+          fi
+          export DIAG_OUT="$GITHUB_WORKSPACE/.work/select-webkit-timeline"
+          node tests/select-webkit-timeline/run.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: s3-select-timeline-${{ matrix.os }}-${{ matrix.source }}-${{ matrix.mode }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/select-webkit-timeline/
+          if-no-files-found: warn
+          retention-days: 14
