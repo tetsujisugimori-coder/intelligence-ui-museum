@@ -1,0 +1,925 @@
+{
+  "testedAt": "2026-11-06T10:46:23.231Z",
+  "engine": "chromium",
+  "browser": "154.0.8037.57",
+  "rows": [
+    {
+      "width": 320,
+      "theme": "light",
+      "text": 100,
+      "id": "320-light-100",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 483.5625,
+          "width": 133.25,
+          "height": 32,
+          "top": 483.5625,
+          "right": 154.25,
+          "bottom": 515.5625,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": 112.625,
+          "width": 292,
+          "height": 1203.0625,
+          "top": 112.625,
+          "right": 306,
+          "bottom": 1315.6875,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 161.25
+      },
+      "images": [
+        "320-light-100-original-on.png",
+        "320-light-100-original-off.png",
+        "320-light-100-unclipped-on.png",
+        "320-light-100-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 1738,
+        "unclippedPixels": 1750,
+        "missingPixels": 12,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 494,
+          "bottom": 505
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "text": 200,
+      "id": "320-light-200",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 406.234375,
+          "width": 266.546875,
+          "height": 64,
+          "top": 406.234375,
+          "right": 287.546875,
+          "bottom": 470.234375,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": -630.671875,
+          "width": 292,
+          "height": 2639.203125,
+          "top": -630.671875,
+          "right": 306,
+          "bottom": 2008.53125,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 294.546875
+      },
+      "images": [
+        "320-light-200-original-on.png",
+        "320-light-200-original-off.png",
+        "320-light-200-unclipped-on.png",
+        "320-light-200-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 3330,
+        "unclippedPixels": 3345,
+        "missingPixels": 16,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 430,
+          "bottom": 445
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "text": 100,
+      "id": "320-dark-100",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 483.5625,
+          "width": 133.25,
+          "height": 32,
+          "top": 483.5625,
+          "right": 154.25,
+          "bottom": 515.5625,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": 112.625,
+          "width": 292,
+          "height": 1203.0625,
+          "top": 112.625,
+          "right": 306,
+          "bottom": 1315.6875,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 161.25
+      },
+      "images": [
+        "320-dark-100-original-on.png",
+        "320-dark-100-original-off.png",
+        "320-dark-100-unclipped-on.png",
+        "320-dark-100-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 1730,
+        "unclippedPixels": 1742,
+        "missingPixels": 12,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 494,
+          "bottom": 505
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "text": 200,
+      "id": "320-dark-200",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 406.234375,
+          "width": 266.546875,
+          "height": 64,
+          "top": 406.234375,
+          "right": 287.546875,
+          "bottom": 470.234375,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": -630.671875,
+          "width": 292,
+          "height": 2639.203125,
+          "top": -630.671875,
+          "right": 306,
+          "bottom": 2008.53125,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 294.546875
+      },
+      "images": [
+        "320-dark-200-original-on.png",
+        "320-dark-200-original-off.png",
+        "320-dark-200-unclipped-on.png",
+        "320-dark-200-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 3321,
+        "unclippedPixels": 3334,
+        "missingPixels": 16,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 430,
+          "bottom": 445
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "text": 100,
+      "id": "375-light-100",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 484,
+          "width": 133.25,
+          "height": 32,
+          "top": 484,
+          "right": 154.25,
+          "bottom": 516,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": 140.25,
+          "width": 347,
+          "height": 1148.6875,
+          "top": 140.25,
+          "right": 361,
+          "bottom": 1288.9375,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 161.25
+      },
+      "images": [
+        "375-light-100-original-on.png",
+        "375-light-100-original-off.png",
+        "375-light-100-unclipped-on.png",
+        "375-light-100-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 1738,
+        "unclippedPixels": 1750,
+        "missingPixels": 12,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 494,
+          "bottom": 505
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "text": 200,
+      "id": "375-light-200",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 460.890625,
+          "width": 266.546875,
+          "height": 64,
+          "top": 460.890625,
+          "right": 287.546875,
+          "bottom": 524.890625,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": -412.84375,
+          "width": 347,
+          "height": 2367.25,
+          "top": -412.84375,
+          "right": 361,
+          "bottom": 1954.40625,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 294.546875
+      },
+      "images": [
+        "375-light-200-original-on.png",
+        "375-light-200-original-off.png",
+        "375-light-200-unclipped-on.png",
+        "375-light-200-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 3329,
+        "unclippedPixels": 3344,
+        "missingPixels": 16,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 485,
+          "bottom": 500
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "text": 100,
+      "id": "375-dark-100",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 484,
+          "width": 133.25,
+          "height": 32,
+          "top": 484,
+          "right": 154.25,
+          "bottom": 516,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": 140.25,
+          "width": 347,
+          "height": 1148.6875,
+          "top": 140.25,
+          "right": 361,
+          "bottom": 1288.9375,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 161.25
+      },
+      "images": [
+        "375-dark-100-original-on.png",
+        "375-dark-100-original-off.png",
+        "375-dark-100-unclipped-on.png",
+        "375-dark-100-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 1730,
+        "unclippedPixels": 1742,
+        "missingPixels": 12,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 494,
+          "bottom": 505
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "text": 200,
+      "id": "375-dark-200",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 460.890625,
+          "width": 266.546875,
+          "height": 64,
+          "top": 460.890625,
+          "right": 287.546875,
+          "bottom": 524.890625,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": -412.84375,
+          "width": 347,
+          "height": 2367.25,
+          "top": -412.84375,
+          "right": 361,
+          "bottom": 1954.40625,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 294.546875
+      },
+      "images": [
+        "375-dark-200-original-on.png",
+        "375-dark-200-original-off.png",
+        "375-dark-200-unclipped-on.png",
+        "375-dark-200-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 3319,
+        "unclippedPixels": 3331,
+        "missingPixels": 16,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 485,
+          "bottom": 500
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "text": 100,
+      "id": "390-light-100",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 484,
+          "width": 133.25,
+          "height": 32,
+          "top": 484,
+          "right": 154.25,
+          "bottom": 516,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": 140.25,
+          "width": 362,
+          "height": 1148.6875,
+          "top": 140.25,
+          "right": 376,
+          "bottom": 1288.9375,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 161.25
+      },
+      "images": [
+        "390-light-100-original-on.png",
+        "390-light-100-original-off.png",
+        "390-light-100-unclipped-on.png",
+        "390-light-100-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 1738,
+        "unclippedPixels": 1750,
+        "missingPixels": 12,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 494,
+          "bottom": 505
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "text": 200,
+      "id": "390-light-200",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 461.109375,
+          "width": 266.546875,
+          "height": 64,
+          "top": 461.109375,
+          "right": 287.546875,
+          "bottom": 525.109375,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": -352.625,
+          "width": 362,
+          "height": 2307.25,
+          "top": -352.625,
+          "right": 376,
+          "bottom": 1954.625,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 294.546875
+      },
+      "images": [
+        "390-light-200-original-on.png",
+        "390-light-200-original-off.png",
+        "390-light-200-unclipped-on.png",
+        "390-light-200-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 3330,
+        "unclippedPixels": 3345,
+        "missingPixels": 16,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 485,
+          "bottom": 500
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "text": 100,
+      "id": "390-dark-100",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 484,
+          "width": 133.25,
+          "height": 32,
+          "top": 484,
+          "right": 154.25,
+          "bottom": 516,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": 140.25,
+          "width": 362,
+          "height": 1148.6875,
+          "top": 140.25,
+          "right": 376,
+          "bottom": 1288.9375,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 161.25
+      },
+      "images": [
+        "390-dark-100-original-on.png",
+        "390-dark-100-original-off.png",
+        "390-dark-100-unclipped-on.png",
+        "390-dark-100-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 1730,
+        "unclippedPixels": 1742,
+        "missingPixels": 12,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 494,
+          "bottom": 505
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "text": 200,
+      "id": "390-dark-200",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 21,
+          "y": 461.109375,
+          "width": 266.546875,
+          "height": 64,
+          "top": 461.109375,
+          "right": 287.546875,
+          "bottom": 525.109375,
+          "left": 21
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 14,
+          "y": -352.625,
+          "width": 362,
+          "height": 2307.25,
+          "top": -352.625,
+          "right": 376,
+          "bottom": 1954.625,
+          "left": 14
+        },
+        "sectionClipPaddingLeft": 15,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 14,
+        "right": 294.546875
+      },
+      "images": [
+        "390-dark-200-original-on.png",
+        "390-dark-200-original-off.png",
+        "390-dark-200-unclipped-on.png",
+        "390-dark-200-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 3321,
+        "unclippedPixels": 3334,
+        "missingPixels": 16,
+        "missingColumns": [
+          14
+        ],
+        "missingBounds": {
+          "left": 14,
+          "right": 14,
+          "top": 485,
+          "bottom": 500
+        }
+      },
+      "status": "FAIL"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "text": 100,
+      "id": "1280-light-100",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 81.390625,
+          "y": 794.71875,
+          "width": 133.25,
+          "height": 32,
+          "top": 794.71875,
+          "right": 214.640625,
+          "bottom": 826.71875,
+          "left": 81.390625
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 58.390625,
+          "y": 512.53125,
+          "width": 1163.21875,
+          "height": 687.5625,
+          "top": 512.53125,
+          "right": 1221.609375,
+          "bottom": 1200.09375,
+          "left": 58.390625
+        },
+        "sectionClipPaddingLeft": 59.390625,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 74.390625,
+        "right": 221.640625
+      },
+      "images": [
+        "1280-light-100-original-on.png",
+        "1280-light-100-original-off.png",
+        "1280-light-100-unclipped-on.png",
+        "1280-light-100-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 1791,
+        "unclippedPixels": 1791,
+        "missingPixels": 0,
+        "missingColumns": [],
+        "missingBounds": null
+      },
+      "status": "PASS"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "text": 200,
+      "id": "1280-light-200",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 81.390625,
+          "y": 468.09375,
+          "width": 266.546875,
+          "height": 64,
+          "top": 468.09375,
+          "right": 347.9375,
+          "bottom": 532.09375,
+          "left": 81.390625
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 58.390625,
+          "y": -7.6875,
+          "width": 1163.21875,
+          "height": 1020.34375,
+          "top": -7.6875,
+          "right": 1221.609375,
+          "bottom": 1012.65625,
+          "left": 58.390625
+        },
+        "sectionClipPaddingLeft": 59.390625,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 74.390625,
+        "right": 354.9375
+      },
+      "images": [
+        "1280-light-200-original-on.png",
+        "1280-light-200-original-off.png",
+        "1280-light-200-unclipped-on.png",
+        "1280-light-200-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 3345,
+        "unclippedPixels": 3345,
+        "missingPixels": 0,
+        "missingColumns": [],
+        "missingBounds": null
+      },
+      "status": "PASS"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "text": 100,
+      "id": "1280-dark-100",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 81.390625,
+          "y": 794.71875,
+          "width": 133.25,
+          "height": 32,
+          "top": 794.71875,
+          "right": 214.640625,
+          "bottom": 826.71875,
+          "left": 81.390625
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 58.390625,
+          "y": 512.53125,
+          "width": 1163.21875,
+          "height": 687.5625,
+          "top": 512.53125,
+          "right": 1221.609375,
+          "bottom": 1200.09375,
+          "left": 58.390625
+        },
+        "sectionClipPaddingLeft": 59.390625,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 74.390625,
+        "right": 221.640625
+      },
+      "images": [
+        "1280-dark-100-original-on.png",
+        "1280-dark-100-original-off.png",
+        "1280-dark-100-unclipped-on.png",
+        "1280-dark-100-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 1782,
+        "unclippedPixels": 1782,
+        "missingPixels": 0,
+        "missingColumns": [],
+        "missingBounds": null
+      },
+      "status": "PASS"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "text": 200,
+      "id": "1280-dark-200",
+      "geometry": {
+        "active": true,
+        "focusVisible": true,
+        "button": {
+          "x": 81.390625,
+          "y": 468.09375,
+          "width": 266.546875,
+          "height": 64,
+          "top": 468.09375,
+          "right": 347.9375,
+          "bottom": 532.09375,
+          "left": 81.390625
+        },
+        "outlineWidth": 3,
+        "offset": 4,
+        "section": {
+          "x": 58.390625,
+          "y": -7.6875,
+          "width": 1163.21875,
+          "height": 1020.34375,
+          "top": -7.6875,
+          "right": 1221.609375,
+          "bottom": 1012.65625,
+          "left": 58.390625
+        },
+        "sectionClipPaddingLeft": 59.390625,
+        "overflow": "hidden"
+      },
+      "expected": {
+        "left": 74.390625,
+        "right": 354.9375
+      },
+      "images": [
+        "1280-dark-200-original-on.png",
+        "1280-dark-200-original-off.png",
+        "1280-dark-200-unclipped-on.png",
+        "1280-dark-200-unclipped-off.png"
+      ],
+      "paint": {
+        "originalPixels": 3334,
+        "unclippedPixels": 3334,
+        "missingPixels": 0,
+        "missingColumns": [],
+        "missingBounds": null
+      },
+      "status": "PASS"
+    }
+  ],
+  "status": "FAIL",
+  "scope": "Original product CSS paint plus overflow:visible diagnostic control only. Expected ring extent is computed outlineWidth+outlineOffset, not another product screenshot."
+}
