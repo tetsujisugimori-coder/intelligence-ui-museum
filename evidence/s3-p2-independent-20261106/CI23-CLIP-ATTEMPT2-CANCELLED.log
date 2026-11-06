@@ -1,0 +1,584 @@
+﻿2026-11-06T15:15:54.0778922Z Current runner version: '2.338.2'
+2026-11-06T15:15:54.0803951Z ##[group]Runner Image Provisioner
+2026-11-06T15:15:54.0804894Z Hosted Compute Agent
+2026-11-06T15:15:54.0805527Z Version: 20261028.624
+2026-11-06T15:15:54.0806182Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-06T15:15:54.0807046Z Build Date: 2026-10-28T21:51:42Z
+2026-11-06T15:15:54.0807743Z Worker ID: {fb1e2bbb-039a-42c4-afcb-a02d01d63a01}
+2026-11-06T15:15:54.0808537Z Region: westus2
+2026-11-06T15:15:54.0809134Z Cloud: Azure
+2026-11-06T15:15:54.0809689Z ##[endgroup]
+2026-11-06T15:15:54.0811835Z ##[group]Operating System
+2026-11-06T15:15:54.0812530Z Ubuntu
+2026-11-06T15:15:54.0813054Z 24.04.5
+2026-11-06T15:15:54.0813685Z LTS
+2026-11-06T15:15:54.0814221Z ##[endgroup]
+2026-11-06T15:15:54.0814914Z ##[group]Runner Image
+2026-11-06T15:15:54.0815541Z Image: ubuntu-24.04
+2026-11-06T15:15:54.0816105Z Version: 20261101.360.1
+2026-11-06T15:15:54.0817451Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-06T15:15:54.0819126Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-06T15:15:54.0820578Z ##[endgroup]
+2026-11-06T15:15:54.0821790Z ##[group]GITHUB_TOKEN Permissions
+2026-11-06T15:15:54.0824046Z Contents: read
+2026-11-06T15:15:54.0824709Z Metadata: read
+2026-11-06T15:15:54.0825386Z ##[endgroup]
+2026-11-06T15:15:54.0827545Z Secret source: Actions
+2026-11-06T15:15:54.0828623Z Cache mode: write
+2026-11-06T15:15:54.0829687Z Prepare workflow directory
+2026-11-06T15:15:54.1171040Z Prepare all required actions
+2026-11-06T15:15:54.1221044Z Getting action download info
+2026-11-06T15:15:54.5551177Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-06T15:15:54.6585036Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-06T15:15:54.7537131Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-06T15:15:54.8327581Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-06T15:15:55.0411115Z Complete job name: browser-stage-a (clip, focus-clipped)
+2026-11-06T15:15:55.1474319Z ##[group]Run actions/checkout@v4
+2026-11-06T15:15:55.1475198Z with:
+2026-11-06T15:15:55.1475764Z   repository: tetsujisugimori-coder/intelligence-ui-museum
+2026-11-06T15:15:55.1479871Z   token: ***
+2026-11-06T15:15:55.1480519Z   ssh-strict: true
+2026-11-06T15:15:55.1480969Z   ssh-user: git
+2026-11-06T15:15:55.1481420Z   persist-credentials: true
+2026-11-06T15:15:55.1481911Z   clean: true
+2026-11-06T15:15:55.1482354Z   sparse-checkout-cone-mode: true
+2026-11-06T15:15:55.1482881Z   fetch-depth: 1
+2026-11-06T15:15:55.1483314Z   fetch-tags: false
+2026-11-06T15:15:55.1483755Z   show-progress: true
+2026-11-06T15:15:55.1484199Z   lfs: false
+2026-11-06T15:15:55.1484603Z   submodules: false
+2026-11-06T15:15:55.1485046Z   set-safe-directory: true
+2026-11-06T15:15:55.1485569Z   allow-unsafe-pr-checkout: false
+2026-11-06T15:15:55.1486357Z ##[endgroup]
+2026-11-06T15:15:55.4584802Z Syncing repository: tetsujisugimori-coder/intelligence-ui-museum
+2026-11-06T15:15:55.4587855Z ##[group]Getting Git version info
+2026-11-06T15:15:55.4589323Z Working directory is '/home/runner/work/intelligence-ui-museum/intelligence-ui-museum'
+2026-11-06T15:15:55.4591581Z [command]/usr/bin/git version
+2026-11-06T15:15:55.4592467Z git version 2.56.0
+2026-11-06T15:15:55.4615024Z ##[endgroup]
+2026-11-06T15:15:55.4632348Z Temporarily overriding HOME='/home/runner/work/_temp/7c098386-5c2c-46db-a5d6-36e796e04050' before making global git config changes
+2026-11-06T15:15:55.4635442Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-06T15:15:55.4639027Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/intelligence-ui-museum/intelligence-ui-museum
+2026-11-06T15:15:55.4696510Z Deleting the contents of '/home/runner/work/intelligence-ui-museum/intelligence-ui-museum'
+2026-11-06T15:15:55.4701817Z ##[group]Initializing the repository
+2026-11-06T15:15:55.4706119Z [command]/usr/bin/git init /home/runner/work/intelligence-ui-museum/intelligence-ui-museum
+2026-11-06T15:15:55.4834689Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-06T15:15:55.4836373Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-06T15:15:55.4837898Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-06T15:15:55.4839154Z hint: call:
+2026-11-06T15:15:55.4839803Z hint:
+2026-11-06T15:15:55.4840821Z hint: 	git config --global init.defaultBranch <name>
+2026-11-06T15:15:55.4841793Z hint:
+2026-11-06T15:15:55.4842710Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-06T15:15:55.4844292Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-06T15:15:55.4845486Z hint:
+2026-11-06T15:15:55.4846131Z hint: 	git branch -m <name>
+2026-11-06T15:15:55.4846896Z hint:
+2026-11-06T15:15:55.4847940Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-06T15:15:55.4850326Z Initialized empty Git repository in /home/runner/work/intelligence-ui-museum/intelligence-ui-museum/.git/
+2026-11-06T15:15:55.4861864Z [command]/usr/bin/git remote add origin https://github.com/tetsujisugimori-coder/intelligence-ui-museum
+2026-11-06T15:15:55.4908617Z ##[endgroup]
+2026-11-06T15:15:55.4910225Z ##[group]Disabling automatic garbage collection
+2026-11-06T15:15:55.4912637Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-06T15:15:55.4958944Z ##[endgroup]
+2026-11-06T15:15:55.4960543Z ##[group]Setting up auth
+2026-11-06T15:15:55.4969699Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T15:15:55.5012637Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-06T15:15:55.5511985Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T15:15:55.5557898Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-06T15:15:55.5798794Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T15:15:55.5849494Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-06T15:15:55.6112315Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-06T15:15:55.6168328Z ##[endgroup]
+2026-11-06T15:15:55.6169192Z ##[group]Fetching the repository
+2026-11-06T15:15:55.6186474Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2c10c4c67a9cfbfb08c45360e386d0bce2d2381b:refs/remotes/pull/23/merge
+2026-11-06T15:15:59.5702714Z From https://github.com/tetsujisugimori-coder/intelligence-ui-museum
+2026-11-06T15:15:59.5704039Z  * [new ref]         2c10c4c67a9cfbfb08c45360e386d0bce2d2381b -> pull/23/merge
+2026-11-06T15:15:59.5708621Z ##[endgroup]
+2026-11-06T15:15:59.5709625Z ##[group]Determining the checkout info
+2026-11-06T15:15:59.5712270Z ##[endgroup]
+2026-11-06T15:15:59.5719104Z [command]/usr/bin/git sparse-checkout disable
+2026-11-06T15:15:59.5784184Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-06T15:15:59.5827865Z ##[group]Checking out the ref
+2026-11-06T15:15:59.5832298Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/23/merge
+2026-11-06T15:16:00.0903749Z Note: switching to 'refs/remotes/pull/23/merge'.
+2026-11-06T15:16:00.0906405Z 
+2026-11-06T15:16:00.0907193Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-06T15:16:00.0908457Z changes and commit them, and you can discard any commits you make in this
+2026-11-06T15:16:00.0909550Z state without impacting any branches by switching back to a branch.
+2026-11-06T15:16:00.0910348Z 
+2026-11-06T15:16:00.0910705Z If you want to create a new branch to retain commits you create, you may
+2026-11-06T15:16:00.0911441Z do so (now or later) by using -c with the switch command. Example:
+2026-11-06T15:16:00.0911846Z 
+2026-11-06T15:16:00.0912035Z   git switch -c <new-branch-name>
+2026-11-06T15:16:00.0912340Z 
+2026-11-06T15:16:00.0912522Z Or undo this operation with:
+2026-11-06T15:16:00.0912788Z 
+2026-11-06T15:16:00.0912939Z   git switch -
+2026-11-06T15:16:00.0913173Z 
+2026-11-06T15:16:00.0913545Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-06T15:16:00.0914061Z 
+2026-11-06T15:16:00.0914495Z HEAD is now at 2c10c4c Merge ea6f19acfd60b37e9b147daa92e79838fd2f3070 into 77d30ac54e35b8a6408fb5f56db4697adff8a452
+2026-11-06T15:16:00.0948603Z ##[endgroup]
+2026-11-06T15:16:00.1008969Z [command]/usr/bin/git log -1 --format=%H
+2026-11-06T15:16:00.1046631Z 2c10c4c67a9cfbfb08c45360e386d0bce2d2381b
+2026-11-06T15:16:00.1348394Z ##[group]Run actions/setup-node@v4
+2026-11-06T15:16:00.1348747Z with:
+2026-11-06T15:16:00.1348992Z   node-version: 22
+2026-11-06T15:16:00.1349257Z   always-auth: false
+2026-11-06T15:16:00.1349515Z   check-latest: false
+2026-11-06T15:16:00.1352470Z   token: ***
+2026-11-06T15:16:00.1352726Z ##[endgroup]
+2026-11-06T15:16:00.2999126Z Found in cache @ /opt/hostedtoolcache/node/22.23.4/x64
+2026-11-06T15:16:00.3006843Z (node:2595) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-06T15:16:00.3008537Z ##[group]Environment details
+2026-11-06T15:16:00.3009886Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-06T15:16:00.7342173Z node: v22.23.4
+2026-11-06T15:16:00.7342914Z npm: 10.9.9
+2026-11-06T15:16:00.7343448Z yarn: 1.22.22
+2026-11-06T15:16:00.7344622Z ##[endgroup]
+2026-11-06T15:16:00.7533679Z ##[group]Run actions/setup-python@v5
+2026-11-06T15:16:00.7533987Z with:
+2026-11-06T15:16:00.7534195Z   python-version: 3.12
+2026-11-06T15:16:00.7534443Z   check-latest: false
+2026-11-06T15:16:00.7537163Z   token: ***
+2026-11-06T15:16:00.7537385Z   update-environment: true
+2026-11-06T15:16:00.7537647Z   allow-prereleases: false
+2026-11-06T15:16:00.7537881Z   freethreaded: false
+2026-11-06T15:16:00.7538095Z ##[endgroup]
+2026-11-06T15:16:00.8926544Z ##[group]Installed versions
+2026-11-06T15:16:00.9038523Z (node:2626) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-06T15:16:00.9039553Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-06T15:16:00.9040476Z Successfully set up CPython (3.12.16)
+2026-11-06T15:16:00.9041130Z ##[endgroup]
+2026-11-06T15:16:00.9173376Z ##[group]Run python3 scripts/prepare-work.py
+2026-11-06T15:16:00.9173951Z [36;1mpython3 scripts/prepare-work.py[0m
+2026-11-06T15:16:00.9216828Z shell: /usr/bin/bash -e {0}
+2026-11-06T15:16:00.9217117Z env:
+2026-11-06T15:16:00.9217407Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:00.9217854Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-06T15:16:00.9218341Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:00.9218726Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:00.9219122Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:00.9219512Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-06T15:16:00.9219838Z ##[endgroup]
+2026-11-06T15:16:01.0389746Z Prepared .work/v10; imported source/evidence unchanged
+2026-11-06T15:16:01.0482506Z ##[group]Run npm ci --ignore-scripts
+2026-11-06T15:16:01.0483005Z [36;1mnpm ci --ignore-scripts[0m
+2026-11-06T15:16:01.0504277Z shell: /usr/bin/bash -e {0}
+2026-11-06T15:16:01.0504527Z env:
+2026-11-06T15:16:01.0504795Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:01.0505483Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-06T15:16:01.0505915Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:01.0506296Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:01.0506678Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:01.0507067Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-06T15:16:01.0507392Z ##[endgroup]
+2026-11-06T15:16:06.3509076Z 
+2026-11-06T15:16:06.3510618Z added 251 packages, and audited 252 packages in 5s
+2026-11-06T15:16:06.3511195Z 
+2026-11-06T15:16:06.3511704Z 120 packages are looking for funding
+2026-11-06T15:16:06.3512373Z   run `npm fund` for details
+2026-11-06T15:16:06.3544804Z 
+2026-11-06T15:16:06.3545588Z 6 vulnerabilities (4 low, 2 high)
+2026-11-06T15:16:06.3546053Z 
+2026-11-06T15:16:06.3546726Z To address issues that do not require attention, run:
+2026-11-06T15:16:06.3547752Z   npm audit fix
+2026-11-06T15:16:06.3551245Z 
+2026-11-06T15:16:06.3552241Z Some issues need review, and may require choosing
+2026-11-06T15:16:06.3553183Z a different dependency.
+2026-11-06T15:16:06.3553749Z 
+2026-11-06T15:16:06.3554231Z Run `npm audit` for details.
+2026-11-06T15:16:06.4137292Z ##[group]Run npm run build
+2026-11-06T15:16:06.4137596Z [36;1mnpm run build[0m
+2026-11-06T15:16:06.4159874Z shell: /usr/bin/bash -e {0}
+2026-11-06T15:16:06.4160382Z env:
+2026-11-06T15:16:06.4160661Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:06.4161116Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-06T15:16:06.4161542Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:06.4161941Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:06.4162363Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:06.4162755Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-06T15:16:06.4163090Z ##[endgroup]
+2026-11-06T15:16:06.5175167Z 
+2026-11-06T15:16:06.5175883Z > intelligence-ui-official-lab@0.1.0 build
+2026-11-06T15:16:06.5176495Z > tsc --noEmit && vite build
+2026-11-06T15:16:06.5176681Z 
+2026-11-06T15:16:08.4271045Z [36mvite v6.4.5 [32mbuilding for production...[36m[39m
+2026-11-06T15:16:08.5055609Z transforming...
+2026-11-06T15:16:08.5948228Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Button/Button.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Button/Button.js" was ignored.[39m
+2026-11-06T15:16:08.5985309Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Button/CopyButton.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Button/CopyButton.js" was ignored.[39m
+2026-11-06T15:16:08.6315281Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Switch/Switch.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Switch/Switch.js" was ignored.[39m
+2026-11-06T15:16:08.6329644Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Select/Select.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Select/Select.js" was ignored.[39m
+2026-11-06T15:16:08.6476252Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/CopyTooltip.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/CopyTooltip.js" was ignored.[39m
+2026-11-06T15:16:08.7367580Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/Tooltip.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/Tooltip.js" was ignored.[39m
+2026-11-06T15:16:08.7385870Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Alert/Alert.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Alert/Alert.js" was ignored.[39m
+2026-11-06T15:16:09.2652868Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/internal.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/internal.js" was ignored.[39m
+2026-11-06T15:16:09.2677634Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/TransitionGroup.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/TransitionGroup.js" was ignored.[39m
+2026-11-06T15:16:09.6180799Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Indicator/CircularProgress.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Indicator/CircularProgress.js" was ignored.[39m
+2026-11-06T15:16:09.6204600Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/AppsSDKUIContext.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/AppsSDKUIContext.js" was ignored.[39m
+2026-11-06T15:16:09.6221031Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/Animate.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/Animate.js" was ignored.[39m
+2026-11-06T15:16:09.6235283Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayoutGroup.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayoutGroup.js" was ignored.[39m
+2026-11-06T15:16:09.6253233Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayout.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayout.js" was ignored.[39m
+2026-11-06T15:16:09.6277927Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/SlotTransitionGroup.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/SlotTransitionGroup.js" was ignored.[39m
+2026-11-06T15:16:09.7745922Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accessible-icon/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accessible-icon/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7753536Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-alert-dialog/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-alert-dialog/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7772678Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-aspect-ratio/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-aspect-ratio/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7782043Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accordion/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accordion/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7807799Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-avatar/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-avatar/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7825747Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-checkbox/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-checkbox/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7846436Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collapsible/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collapsible/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7863812Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-context-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-context-menu/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7885191Z [33mnode_modules/@radix-ui/react-direction/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@radix-ui/react-direction/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7890555Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dialog/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dialog/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7939508Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dropdown-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dropdown-menu/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7960672Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-hover-card/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-hover-card/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.7980245Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-form/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-form/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8010170Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-label/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-label/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8015676Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menubar/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menubar/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8085070Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-password-toggle-field/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-password-toggle-field/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8108619Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-portal/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-portal/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8119042Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-navigation-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-navigation-menu/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8181306Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-one-time-password-field/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-one-time-password-field/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8212514Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-progress/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-progress/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8221301Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-separator/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-separator/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8227950Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popover/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popover/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8275542Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-radio-group/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-radio-group/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8295518Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-scroll-area/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-scroll-area/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8363837Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-switch/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-switch/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8446022Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-slider/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-slider/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8480320Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8486537Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tabs/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tabs/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8499672Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle-group/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle-group/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8512260Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toolbar/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toolbar/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8524121Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-select/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-select/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8584521Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-visually-hidden/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-visually-hidden/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8592114Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toast/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toast/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8639124Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tooltip/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tooltip/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:09.8670304Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Input/Input.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Input/Input.js" was ignored.[39m
+2026-11-06T15:16:09.8682310Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/SelectControl/SelectControl.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/SelectControl/SelectControl.js" was ignored.[39m
+2026-11-06T15:16:10.1389060Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-primitive/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-primitive/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:10.1435037Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-presence/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-presence/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:10.1448905Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collection/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collection/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:10.1504309Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menu/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:10.1616026Z [33mnode_modules/@radix-ui/react-focus-guards/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@radix-ui/react-focus-guards/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:10.1622800Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:10.1640529Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-focus-scope/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-focus-scope/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:10.1661386Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popper/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popper/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:10.1691210Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-roving-focus/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-roving-focus/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:10.1745078Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-arrow/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-arrow/dist/index.mjs" was ignored.[39m
+2026-11-06T15:16:10.9322200Z [32m✓[39m 938 modules transformed.
+2026-11-06T15:16:11.1373662Z rendering chunks...
+2026-11-06T15:16:11.1880816Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-06T15:16:11.1885064Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-06T15:16:11.1889086Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-06T15:16:11.1893203Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-06T15:16:11.1897102Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-06T15:16:11.1901230Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-06T15:16:11.1905127Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-06T15:16:11.1908997Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-06T15:16:11.1913580Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-06T15:16:11.1917450Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-06T15:16:11.2837823Z computing gzip size...
+2026-11-06T15:16:11.3028031Z [2mdist/[22m[32mindex.html                 [39m[1m[2m  1.16 kB[22m[1m[22m[2m │ gzip:   0.85 kB[22m
+2026-11-06T15:16:11.3030270Z [2mdist/[22m[2massets/[22m[35mindex-DZhtnZSN.css  [39m[1m[2m146.04 kB[22m[1m[22m[2m │ gzip:  21.09 kB[22m
+2026-11-06T15:16:11.3032614Z [2mdist/[22m[2massets/[22m[36mindex-RTo4pgDn.js   [39m[1m[2m315.76 kB[22m[1m[22m[2m │ gzip: 104.30 kB[22m[2m │ map: 1,499.63 kB[22m
+2026-11-06T15:16:11.3034158Z [32m✓ built in 2.84s[39m
+2026-11-06T15:16:11.3699635Z ##[group]Run npm ci --ignore-scripts
+2026-11-06T15:16:11.3700318Z [36;1mnpm ci --ignore-scripts[0m
+2026-11-06T15:16:11.3721632Z shell: /usr/bin/bash -e {0}
+2026-11-06T15:16:11.3721886Z env:
+2026-11-06T15:16:11.3722155Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:11.3722610Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-06T15:16:11.3723052Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:11.3723445Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:11.3723821Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:11.3724198Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-06T15:16:11.3724534Z ##[endgroup]
+2026-11-06T15:16:12.0245220Z 
+2026-11-06T15:16:12.0245919Z added 2 packages, and audited 3 packages in 599ms
+2026-11-06T15:16:12.0252937Z 
+2026-11-06T15:16:12.0253201Z found 0 vulnerabilities
+2026-11-06T15:16:12.0379797Z ##[group]Run npx playwright install --with-deps chromium webkit
+2026-11-06T15:16:12.0380601Z [36;1mnpx playwright install --with-deps chromium webkit[0m
+2026-11-06T15:16:12.0403892Z shell: /usr/bin/bash -e {0}
+2026-11-06T15:16:12.0404138Z env:
+2026-11-06T15:16:12.0404402Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:12.0405180Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-06T15:16:12.0405643Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:12.0406037Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:12.0406420Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:16:12.0406803Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-06T15:16:12.0407144Z ##[endgroup]
+2026-11-06T15:16:12.8682511Z Installing dependencies...
+2026-11-06T15:16:12.8747464Z Switching to root user to install dependencies...
+2026-11-06T15:16:12.9526659Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-06T15:16:12.9885459Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-06T15:16:12.9887185Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-06T15:16:12.9917293Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-06T15:16:12.9965941Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-06T15:16:13.0017341Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-06T15:16:13.1274740Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [740 kB]
+2026-11-06T15:16:13.1441428Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [672 kB]
+2026-11-06T15:16:13.1876616Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1425 kB]
+2026-11-06T15:16:13.1957613Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [313 kB]
+2026-11-06T15:16:13.1968939Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1708 kB]
+2026-11-06T15:16:13.2073484Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [343 kB]
+2026-11-06T15:16:13.2121194Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1839 kB]
+2026-11-06T15:16:13.2303688Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [420 kB]
+2026-11-06T15:16:13.2337190Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [50.7 kB]
+2026-11-06T15:16:13.2347225Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]
+2026-11-06T15:16:13.3010386Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1157 kB]
+2026-11-06T15:16:13.3071365Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [234 kB]
+2026-11-06T15:16:13.3504344Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1225 kB]
+2026-11-06T15:16:13.3609124Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [247 kB]
+2026-11-06T15:16:13.3623729Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1721 kB]
+2026-11-06T15:16:13.3961043Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [394 kB]
+2026-11-06T15:16:13.3980901Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [45.4 kB]
+2026-11-06T15:16:13.3990715Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]
+2026-11-06T15:16:16.7716238Z Fetched 12.9 MB in 1s (9992 kB/s)
+2026-11-06T15:16:17.9535621Z Reading package lists...
+2026-11-06T15:16:17.9855108Z Reading package lists...
+2026-11-06T15:16:18.2341458Z Building dependency tree...
+2026-11-06T15:16:18.2349489Z Reading state information...
+2026-11-06T15:16:18.2543001Z libasound2t64 is already the newest version (1.2.11-1ubuntu0.3).
+2026-11-06T15:16:18.2543998Z libasound2t64 set to manually installed.
+2026-11-06T15:16:18.2544815Z libatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).
+2026-11-06T15:16:18.2545380Z libatk-bridge2.0-0t64 set to manually installed.
+2026-11-06T15:16:18.2545923Z libatk1.0-0t64 is already the newest version (2.52.0-1build1).
+2026-11-06T15:16:18.2546410Z libatk1.0-0t64 set to manually installed.
+2026-11-06T15:16:18.2546924Z libatspi2.0-0t64 is already the newest version (2.52.0-1build1).
+2026-11-06T15:16:18.2547429Z libatspi2.0-0t64 set to manually installed.
+2026-11-06T15:16:18.2547916Z libcairo2 is already the newest version (1.18.0-3build1).
+2026-11-06T15:16:18.2548382Z libcairo2 set to manually installed.
+2026-11-06T15:16:18.2548948Z libcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).
+2026-11-06T15:16:18.2549447Z libcups2t64 set to manually installed.
+2026-11-06T15:16:18.2550476Z libdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).
+2026-11-06T15:16:18.2551040Z libdbus-1-3 set to manually installed.
+2026-11-06T15:16:18.2551576Z libdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).
+2026-11-06T15:16:18.2552078Z libdrm2 set to manually installed.
+2026-11-06T15:16:18.2552566Z libgbm1 is already the newest version (25.2.8-0ubuntu0.24.04.4).
+2026-11-06T15:16:18.2553038Z libgbm1 set to manually installed.
+2026-11-06T15:16:18.2553544Z libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.10).
+2026-11-06T15:16:18.2554065Z libglib2.0-0t64 set to manually installed.
+2026-11-06T15:16:18.2554574Z libnspr4 is already the newest version (2:4.35-1.1build1).
+2026-11-06T15:16:18.2555042Z libnspr4 set to manually installed.
+2026-11-06T15:16:18.2555506Z libnss3 is already the newest version (2:3.98-1ubuntu0.3).
+2026-11-06T15:16:18.2556369Z libnss3 set to manually installed.
+2026-11-06T15:16:18.2556864Z libpango-1.0-0 is already the newest version (1.52.1+ds-1build1).
+2026-11-06T15:16:18.2557377Z libpango-1.0-0 set to manually installed.
+2026-11-06T15:16:18.2557868Z libx11-6 is already the newest version (2:1.8.7-1ubuntu0.1).
+2026-11-06T15:16:18.2558326Z libx11-6 set to manually installed.
+2026-11-06T15:16:18.2558764Z libxcb1 is already the newest version (1.15-1ubuntu2).
+2026-11-06T15:16:18.2559194Z libxcb1 set to manually installed.
+2026-11-06T15:16:18.2559692Z libxcomposite1 is already the newest version (1:0.4.5-1build3).
+2026-11-06T15:16:18.2560493Z libxcomposite1 set to manually installed.
+2026-11-06T15:16:18.2560990Z libxdamage1 is already the newest version (1:1.1.6-1build1).
+2026-11-06T15:16:18.2561459Z libxdamage1 set to manually installed.
+2026-11-06T15:16:18.2561931Z libxext6 is already the newest version (2:1.3.4-1build2).
+2026-11-06T15:16:18.2562375Z libxext6 set to manually installed.
+2026-11-06T15:16:18.2562851Z libxfixes3 is already the newest version (1:6.0.0-2build1).
+2026-11-06T15:16:18.2563314Z libxfixes3 set to manually installed.
+2026-11-06T15:16:18.2563802Z libxkbcommon0 is already the newest version (1.6.0-1build1).
+2026-11-06T15:16:18.2564282Z libxkbcommon0 set to manually installed.
+2026-11-06T15:16:18.2564778Z libxrandr2 is already the newest version (2:1.5.2-2build1).
+2026-11-06T15:16:18.2565179Z libxrandr2 set to manually installed.
+2026-11-06T15:16:18.2565577Z xvfb is already the newest version (2:21.1.12-1ubuntu1.9).
+2026-11-06T15:16:18.2566113Z fonts-noto-color-emoji is already the newest version (2.047-0ubuntu0.24.04.1).
+2026-11-06T15:16:18.2566687Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+2026-11-06T15:16:18.2567105Z libfontconfig1 set to manually installed.
+2026-11-06T15:16:18.2567547Z libfreetype6 is already the newest version (2.13.2+dfsg-1ubuntu0.2).
+2026-11-06T15:16:18.2567997Z libfreetype6 set to manually installed.
+2026-11-06T15:16:18.2568412Z fonts-liberation is already the newest version (1:2.1.5-3).
+2026-11-06T15:16:18.2568822Z fonts-liberation set to manually installed.
+2026-11-06T15:16:18.2569500Z libicu74 is already the newest version (74.2-1ubuntu3.1).
+2026-11-06T15:16:18.2570333Z libatomic1 is already the newest version (14.2.0-4ubuntu2~24.04.1).
+2026-11-06T15:16:18.2570768Z libatomic1 set to manually installed.
+2026-11-06T15:16:18.2571213Z libcairo-gobject2 is already the newest version (1.18.0-3build1).
+2026-11-06T15:16:18.2571646Z libcairo-gobject2 set to manually installed.
+2026-11-06T15:16:18.2572078Z libenchant-2-2 is already the newest version (2.3.3-2build2).
+2026-11-06T15:16:18.2572477Z libenchant-2-2 set to manually installed.
+2026-11-06T15:16:18.2572876Z libepoxy0 is already the newest version (1.5.10-1build1).
+2026-11-06T15:16:18.2573255Z libepoxy0 set to manually installed.
+2026-11-06T15:16:18.2573718Z libgdk-pixbuf-2.0-0 is already the newest version (2.42.10+dfsg-3ubuntu3.3).
+2026-11-06T15:16:18.2574213Z libgdk-pixbuf-2.0-0 set to manually installed.
+2026-11-06T15:16:18.2574680Z libgstreamer1.0-0 is already the newest version (1.24.2-1ubuntu0.1).
+2026-11-06T15:16:18.2575121Z libgstreamer1.0-0 set to manually installed.
+2026-11-06T15:16:18.2575612Z libharfbuzz0b is already the newest version (8.3.0-2build2).
+2026-11-06T15:16:18.2576032Z libharfbuzz0b set to manually installed.
+2026-11-06T15:16:18.2576456Z libjpeg-turbo8 is already the newest version (2.1.5-2ubuntu2).
+2026-11-06T15:16:18.2576863Z libjpeg-turbo8 set to manually installed.
+2026-11-06T15:16:18.2577268Z liblcms2-2 is already the newest version (2.14-2ubuntu0.1).
+2026-11-06T15:16:18.2577651Z liblcms2-2 set to manually installed.
+2026-11-06T15:16:18.2578082Z libpangocairo-1.0-0 is already the newest version (1.52.1+ds-1build1).
+2026-11-06T15:16:18.2578529Z libpangocairo-1.0-0 set to manually installed.
+2026-11-06T15:16:18.2578972Z libpng16-16t64 is already the newest version (1.6.43-5ubuntu0.7).
+2026-11-06T15:16:18.2579376Z libpng16-16t64 set to manually installed.
+2026-11-06T15:16:18.2580568Z libwayland-client0 is already the newest version (1.22.0-2.1build1).
+2026-11-06T15:16:18.2581031Z libwayland-client0 set to manually installed.
+2026-11-06T15:16:18.2581480Z libwayland-egl1 is already the newest version (1.22.0-2.1build1).
+2026-11-06T15:16:18.2581892Z libwayland-egl1 set to manually installed.
+2026-11-06T15:16:18.4035081Z libwebp7 is already the newest version (1.3.2-0.4build3).
+2026-11-06T15:16:18.4036311Z libwebp7 set to manually installed.
+2026-11-06T15:16:18.4036943Z libwebpdemux2 is already the newest version (1.3.2-0.4build3).
+2026-11-06T15:16:18.4037586Z libwebpdemux2 set to manually installed.
+2026-11-06T15:16:18.4038273Z libxml2 is already the newest version (2.9.14+dfsg-1.3ubuntu3.10).
+2026-11-06T15:16:18.4039086Z libxml2 set to manually installed.
+2026-11-06T15:16:18.4039623Z libxslt1.1 is already the newest version (1.1.39-0exp1ubuntu0.24.04.3).
+2026-11-06T15:16:18.4040555Z libxslt1.1 set to manually installed.
+2026-11-06T15:16:18.4041190Z The following additional packages will be installed:
+2026-11-06T15:16:18.4041979Z   glib-networking glib-networking-common glib-networking-services
+2026-11-06T15:16:18.4042919Z   gsettings-desktop-schemas libaa1 libabsl20220623t64 libass9 libasyncns0
+2026-11-06T15:16:18.4043890Z   libavc1394-0 libavcodec60 libavfilter9 libavformat60 libavtp0 libavutil58
+2026-11-06T15:16:18.4044718Z   libblas3 libbluray2 libbs2b0 libcaca0 libcairo-script-interpreter2
+2026-11-06T15:16:18.4045335Z   libcdparanoia0 libchromaprint1 libcjson1 libcodec2-1.2 libdav1d7
+2026-11-06T15:16:18.4045979Z   libdc1394-25 libdca0 libde265-0 libdecor-0-0 libdirectfb-1.7-7t64 libdv4t64
+2026-11-06T15:16:18.4046632Z   libdvdnav4 libdvdread8t64 libegl-mesa0 libegl1 libfaad2 libflac12t64
+2026-11-06T15:16:18.4047280Z   libfluidsynth3 libfreeaptx0 libgav1-1 libgme0 libgraphene-1.0-0 libgsm1
+2026-11-06T15:16:18.4047974Z   libgssdp-1.6-0 libgstreamer-plugins-good1.0-0 libgtk-4-common libgupnp-1.6-0
+2026-11-06T15:16:18.4048501Z   libgupnp-igd-1.6-0 libhwy1t64 libiec61883-0 libimath-3-1-29t64
+2026-11-06T15:16:18.4048985Z   libinstpatch-1.0-2 libjack-jackd2-0 libjxl0.7 liblapack3 liblc3-1
+2026-11-06T15:16:18.4050171Z   libldacbt-enc2 liblilv-0-0 liblrdf0 libltc11 libmbedcrypto7t64 libmfx1
+2026-11-06T15:16:18.4050955Z   libmjpegutils-2.1-0t64 libmodplug1 libmp3lame0 libmpcdec6
+2026-11-06T15:16:18.4051807Z   libmpeg2encpp-2.1-0t64 libmpg123-0t64 libmplex2-2.1-0t64 libmysofa1
+2026-11-06T15:16:18.4052343Z   libneon27t64 libnice10 libopenal-data libopenal1 libopenexr-3-1-30
+2026-11-06T15:16:18.4052814Z   libopenh264-7 libopenmpt0t64 libopenni2-0 liborc-0.4-0t64
+2026-11-06T15:16:18.4053281Z   libpipewire-0.3-0t64 libplacebo338 libpocketsphinx3 libpostproc57
+2026-11-06T15:16:18.4054043Z   libproxy1v5 libpulse0 libqrencode4 libraptor2-0 librav1e0 libraw1394-11
+2026-11-06T15:16:18.4054565Z   librist4 librsvg2-2 librubberband2 libsamplerate0 libsbc1 libsdl2-2.0-0
+2026-11-06T15:16:18.4055127Z   libsecret-common libserd-0-0 libshine3 libshout3 libsndfile1 libsndio7.0
+2026-11-06T15:16:18.4055669Z   libsord-0-0 libsoundtouch1 libsoup-3.0-0 libsoup-3.0-common libsoxr0
+2026-11-06T15:16:18.4056334Z   libspa-0.2-modules libspandsp2t64 libspeex1 libsphinxbase3t64 libsratom-0-0
+2026-11-06T15:16:18.4056919Z   libsrt1.5-gnutls libsrtp2-1 libssh-gcrypt-4 libsvtav1enc1d1 libswresample4
+2026-11-06T15:16:18.4057472Z   libswscale7 libtag1v5 libtag1v5-vanilla libtheora0 libtwolame0 libudfread0
+2026-11-06T15:16:18.4058002Z   libunibreak5 libv4l-0t64 libv4lconvert0t64 libva-drm2 libva-x11-2 libva2
+2026-11-06T15:16:18.4058523Z   libvdpau1 libvidstab1.1 libvisual-0.4-0 libvo-aacenc0 libvo-amrwbenc0
+2026-11-06T15:16:18.4059149Z   libvorbisenc2 libvpl2 libwavpack1 libwebrtc-audio-processing1 libwildmidi2
+2026-11-06T15:16:18.4059703Z   libx265-199 libxcb-xkb1 libxkbcommon-x11-0 libxvidcore4 libyuv0 libzbar0t64
+2026-11-06T15:16:18.4060573Z   libzimg2 libzix-0-0 libzvbi-common libzvbi0t64 libzxing3 ocl-icd-libopencl1
+2026-11-06T15:16:18.4061110Z   session-migration timgm6mb-soundfont xfonts-encodings xfonts-utils
+2026-11-06T15:16:18.4061724Z Suggested packages:
+2026-11-06T15:16:18.4062111Z   frei0r-plugins gvfs libcuda1 libnvcuvid1 libnvidia-encode1 libbluray-bdj
+2026-11-06T15:16:18.4062663Z   libdirectfb-extra libdv-bin oss-compat libdvdcss2 libvisual-0.4-plugins
+2026-11-06T15:16:18.4063179Z   jackd2 liblrdf0-dev libportaudio2 opus-tools pipewire pulseaudio
+2026-11-06T15:16:18.4063670Z   raptor2-utils libraw1394-doc librsvg2-bin serdi sndiod sordi speex
+2026-11-06T15:16:18.4064208Z   libwildmidi-config opencl-icd fluid-soundfont-gm
+2026-11-06T15:16:18.4064557Z Recommended packages:
+2026-11-06T15:16:18.4064893Z   fonts-ipafont-mincho fonts-tlwg-loma gstreamer1.0-x libaacs0
+2026-11-06T15:16:18.4065378Z   default-libdecor-0-plugin-1 | libdecor-0-plugin-1 gstreamer1.0-gl
+2026-11-06T15:16:18.4065924Z   libgtk-4-bin librsvg2-common libgtk-4-media-gstreamer libpipewire-0.3-common
+2026-11-06T15:16:18.4066497Z   pocketsphinx-en-us va-driver-all | va-driver vdpau-driver-all | vdpau-driver
+2026-11-06T15:16:18.4066929Z   libmagickcore-6.q16-7-extra
+2026-11-06T15:16:18.4680102Z The following NEW packages will be installed:
+2026-11-06T15:16:18.4681043Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+2026-11-06T15:16:18.4681957Z   fonts-wqy-zenhei glib-networking glib-networking-common
+2026-11-06T15:16:18.4682838Z   glib-networking-services gsettings-desktop-schemas gstreamer1.0-libav
+2026-11-06T15:16:18.4683890Z   gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good
+2026-11-06T15:16:18.4684756Z   libaa1 libabsl20220623t64 libass9 libasyncns0 libavc1394-0 libavcodec60
+2026-11-06T15:16:18.4685585Z   libavfilter9 libavformat60 libavif16 libavtp0 libavutil58 libblas3
+2026-11-06T15:16:18.4686540Z   libbluray2 libbs2b0 libcaca0 libcairo-script-interpreter2 libcdparanoia0
+2026-11-06T15:16:18.4687511Z   libchromaprint1 libcjson1 libcodec2-1.2 libdav1d7 libdc1394-25 libdca0
+2026-11-06T15:16:18.4688504Z   libde265-0 libdecor-0-0 libdirectfb-1.7-7t64 libdv4t64 libdvdnav4
+2026-11-06T15:16:18.4689445Z   libdvdread8t64 libegl-mesa0 libegl1 libevent-2.1-7t64 libfaad2 libflac12t64
+2026-11-06T15:16:18.4690583Z   libflite1 libfluidsynth3 libfreeaptx0 libgav1-1 libgles2 libgme0
+2026-11-06T15:16:18.4691608Z   libgraphene-1.0-0 libgsm1 libgssdp-1.6-0 libgstreamer-gl1.0-0
+2026-11-06T15:16:18.4692141Z   libgstreamer-plugins-bad1.0-0 libgstreamer-plugins-base1.0-0
+2026-11-06T15:16:18.4692685Z   libgstreamer-plugins-good1.0-0 libgtk-4-1 libgtk-4-common libgupnp-1.6-0
+2026-11-06T15:16:18.4693236Z   libgupnp-igd-1.6-0 libharfbuzz-icu0 libhwy1t64 libhyphen0 libiec61883-0
+2026-11-06T15:16:18.4693784Z   libimath-3-1-29t64 libinstpatch-1.0-2 libjack-jackd2-0 libjxl0.7 liblapack3
+2026-11-06T15:16:18.4694322Z   liblc3-1 libldacbt-enc2 liblilv-0-0 liblrdf0 libltc11 libmanette-0.2-0
+2026-11-06T15:16:18.4694855Z   libmbedcrypto7t64 libmfx1 libmjpegutils-2.1-0t64 libmodplug1 libmp3lame0
+2026-11-06T15:16:18.4695381Z   libmpcdec6 libmpeg2encpp-2.1-0t64 libmpg123-0t64 libmplex2-2.1-0t64
+2026-11-06T15:16:18.4696130Z   libmysofa1 libneon27t64 libnice10 libopenal-data libopenal1
+2026-11-06T15:16:18.4696825Z   libopenexr-3-1-30 libopenh264-7 libopenmpt0t64 libopenni2-0 libopus0
+2026-11-06T15:16:18.4697339Z   liborc-0.4-0t64 libpipewire-0.3-0t64 libplacebo338 libpocketsphinx3
+2026-11-06T15:16:18.4697850Z   libpostproc57 libproxy1v5 libpulse0 libqrencode4 libraptor2-0 librav1e0
+2026-11-06T15:16:18.4698384Z   libraw1394-11 librist4 librsvg2-2 librubberband2 libsamplerate0 libsbc1
+2026-11-06T15:16:18.4698917Z   libsdl2-2.0-0 libsecret-1-0 libsecret-common libserd-0-0 libshine3 libshout3
+2026-11-06T15:16:18.4699423Z   libsndfile1 libsndio7.0 libsord-0-0 libsoundtouch1 libsoup-3.0-0
+2026-11-06T15:16:18.4700393Z   libsoup-3.0-common libsoxr0 libspa-0.2-modules libspandsp2t64 libspeex1
+2026-11-06T15:16:18.4701434Z   libsphinxbase3t64 libsratom-0-0 libsrt1.5-gnutls libsrtp2-1 libssh-gcrypt-4
+2026-11-06T15:16:18.4702012Z   libsvtav1enc1d1 libswresample4 libswscale7 libtag1v5 libtag1v5-vanilla
+2026-11-06T15:16:18.4702509Z   libtheora0 libtwolame0 libudfread0 libunibreak5 libv4l-0t64
+2026-11-06T15:16:18.4703301Z   libv4lconvert0t64 libva-drm2 libva-x11-2 libva2 libvdpau1 libvidstab1.1
+2026-11-06T15:16:18.4703872Z   libvisual-0.4-0 libvo-aacenc0 libvo-amrwbenc0 libvorbisenc2 libvpl2 libvpx9
+2026-11-06T15:16:18.4704423Z   libwavpack1 libwayland-server0 libwebrtc-audio-processing1 libwildmidi2
+2026-11-06T15:16:18.4704976Z   libwoff1 libx264-164 libx265-199 libxcb-xkb1 libxkbcommon-x11-0 libxvidcore4
+2026-11-06T15:16:18.4705522Z   libyuv0 libzbar0t64 libzimg2 libzix-0-0 libzvbi-common libzvbi0t64 libzxing3
+2026-11-06T15:16:18.4706095Z   ocl-icd-libopencl1 session-migration timgm6mb-soundfont xfonts-cyrillic
+2026-11-06T15:16:18.4706573Z   xfonts-encodings xfonts-scalable xfonts-utils
+2026-11-06T15:16:18.5027645Z 0 upgraded, 181 newly installed, 0 to remove and 27 not upgraded.
+2026-11-06T15:16:18.5028400Z Need to get 114 MB of archives.
+2026-11-06T15:16:18.5037428Z After this operation, 364 MB of additional disk space will be used.
+2026-11-06T15:16:18.5038216Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-06T15:16:19.0816370Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-ipafont-gothic all 00303-21ubuntu1 [3513 kB]
+2026-11-06T15:17:49.3414763Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-freefont-ttf all 20211204+svn4273-2 [5641 kB]
+2026-11-06T15:20:14.4247509Z Ign:3 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-freefont-ttf all 20211204+svn4273-2
+2026-11-06T15:20:15.4012767Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-tlwg-loma-otf all 1:0.7.3-1 [107 kB]
+2026-11-06T15:20:18.7500868Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-unifont all 1:15.1.01-1build1 [2993 kB]
+2026-11-06T15:21:36.7336127Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-wqy-zenhei all 0.9.45-8 [7472 kB]
+2026-11-06T15:24:46.7024892Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libproxy1v5 amd64 0.5.4-4build1 [26.5 kB]
+2026-11-06T15:24:47.9965548Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 glib-networking-common all 2.80.0-1build1 [6702 B]
+2026-11-06T15:24:48.7878112Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 glib-networking-services amd64 2.80.0-1build1 [12.8 kB]
+2026-11-06T15:24:49.7872309Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 session-migration amd64 0.3.9build1 [9034 B]
+2026-11-06T15:24:50.9768865Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 gsettings-desktop-schemas all 46.1-0ubuntu1 [35.6 kB]
+2026-11-06T15:24:52.4741799Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 glib-networking amd64 2.80.0-1build1 [64.1 kB]
+2026-11-06T15:24:54.3921193Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 libva2 amd64 2.20.0-2ubuntu0.2 [66.4 kB]
+2026-11-06T15:24:57.2095745Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 libva-drm2 amd64 2.20.0-2ubuntu0.2 [7124 B]
+2026-11-06T15:24:58.2301724Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 libva-x11-2 amd64 2.20.0-2ubuntu0.2 [12.0 kB]
+2026-11-06T15:24:59.1172517Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libvdpau1 amd64 1.5-2build1 [27.8 kB]
+2026-11-06T15:25:00.2500184Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libvpl2 amd64 2023.3.0-1build1 [99.8 kB]
+2026-11-06T15:25:03.4376248Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 ocl-icd-libopencl1 amd64 2.3.2-1build1 [38.5 kB]
+2026-11-06T15:25:04.7346940Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libavutil58 amd64 7:6.1.1-3ubuntu5 [401 kB]
+2026-11-06T15:25:15.1392296Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libcodec2-1.2 amd64 1.2.0-2build1 [8998 kB]
+2026-11-06T15:28:58.5057866Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libdav1d7 amd64 1.4.1-1build1 [604 kB]
+2026-11-06T15:29:11.8535667Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libgsm1 amd64 1.0.22-1build1 [27.8 kB]
+2026-11-06T15:29:13.0244416Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libhwy1t64 amd64 1.0.7-8.1build1 [584 kB]
+2026-11-06T15:29:25.7538512Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 libjxl0.7 amd64 0.7.0-10.2ubuntu6.1 [1001 kB]
+2026-11-06T15:29:46.6304044Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libmp3lame0 amd64 3.100-6build1 [142 kB]
+2026-11-06T15:29:50.0027534Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libopus0 amd64 1.4-1build1 [208 kB]
+2026-11-06T15:29:54.8293256Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 librav1e0 amd64 0.7.1-2 [1022 kB]
+2026-11-06T15:30:14.0774475Z Get:28 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 librsvg2-2 amd64 2.58.0+dfsg-1ubuntu0.1 [2141 kB]
+2026-11-06T15:30:49.0763022Z Get:29 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libshine3 amd64 3.1.1-2build1 [23.2 kB]
+2026-11-06T15:30:50.0125068Z Get:30 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libspeex1 amd64 1.2.1-2ubuntu2.24.04.1 [59.6 kB]
+2026-11-06T15:30:51.3560918Z Get:31 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libsvtav1enc1d1 amd64 1.7.0+dfsg-2build1 [2425 kB]
+2026-11-06T15:31:12.0508993Z ##[error]The operation was canceled.
+2026-11-06T15:31:12.0601084Z ##[group]Run actions/upload-artifact@v4
+2026-11-06T15:31:12.0601396Z with:
+2026-11-06T15:31:12.0601711Z   name: stage-a-browser-clip-2c10c4c67a9cfbfb08c45360e386d0bce2d2381b
+2026-11-06T15:31:12.0602109Z   path: .work/v10/evidence/ra-acceptance/
+2026-11-06T15:31:12.0602394Z   if-no-files-found: error
+2026-11-06T15:31:12.0602626Z   compression-level: 6
+2026-11-06T15:31:12.0602841Z   overwrite: false
+2026-11-06T15:31:12.0603054Z   include-hidden-files: false
+2026-11-06T15:31:12.0603284Z env:
+2026-11-06T15:31:12.0603530Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:31:12.0603976Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-06T15:31:12.0604393Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:31:12.0604770Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:31:12.0605159Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-06T15:31:12.0605559Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-06T15:31:12.0605883Z ##[endgroup]
+2026-11-06T15:31:12.2380452Z (node:3276) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-06T15:31:12.2382003Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-06T15:31:12.2414382Z ##[error]No files were found with the provided path: .work/v10/evidence/ra-acceptance/. No artifacts will be uploaded.
+2026-11-06T15:31:12.2708981Z Post job cleanup.
+2026-11-06T15:31:12.3759236Z [command]/usr/bin/git version
+2026-11-06T15:31:12.3775315Z git version 2.56.0
+2026-11-06T15:31:12.3825744Z Temporarily overriding HOME='/home/runner/work/_temp/329de74c-9291-47c4-b09c-14050ffa9c4b' before making global git config changes
+2026-11-06T15:31:12.3827077Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-06T15:31:12.3830897Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/intelligence-ui-museum/intelligence-ui-museum
+2026-11-06T15:31:12.3876222Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T15:31:12.3928538Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-06T15:31:12.4197021Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T15:31:12.4229080Z http.https://github.com/.extraheader
+2026-11-06T15:31:12.4258128Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-06T15:31:12.4300628Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-06T15:31:12.4694838Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T15:31:12.4696604Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-06T15:31:12.5064193Z Cleaning up orphan processes
+2026-11-06T15:31:12.5307016Z Terminate orphan process: pid (2714) (npm exec playwright install --with-deps chromium webkit)
+2026-11-06T15:31:12.5338127Z Terminate orphan process: pid (2726) (sh)
+2026-11-06T15:31:12.5378891Z Terminate orphan process: pid (2727) (node)
+2026-11-06T15:31:12.5605250Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
