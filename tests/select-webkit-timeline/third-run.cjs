@@ -25,10 +25,11 @@ if(lane==='exact'||lane==='minimal'){
   if(!code.includes(from))throw Error('Event source anchor missing');code=code.replace(from,'window.s3events=[];');interventions.push('original Select event listeners omitted; opener assignment and all action awaits retained');
  }
 }
+const dirtyAtStart=execFileSync('git',['status','--porcelain'],{cwd:repo,encoding:'utf8'}).trim();
 const generated=path.join(__dirname,'.third-generated-'+process.pid+'.cjs');fs.writeFileSync(generated,code);
 const runs=[];
 const app=path.resolve(process.env.APP_ROOT||path.join(repo,'.work/v10'));
-const productSource=Object.fromEntries(['src/main.tsx','src/main.css','src/select-focus-return.ts','package.json','package-lock.json'].map(f=>[f,sha(fs.readFileSync(path.join(app,f)))]));
+const productSource=Object.fromEntries(['src/main.tsx','src/main.css','src/select-focus-return.ts','package.json','package-lock.json'].map(f=>{const expected=sha(execFileSync('git',['show',`HEAD:apps/v10/${f}`],{cwd:repo}));if(sha(fs.readFileSync(path.join(app,f)))!==expected)throw Error('Isolated source does not match HEAD: '+f);return [f,expected];}));
 try{for(let i=0;i<n;i++){
  const dest=path.join(out,'run-'+String(i+1).padStart(2,'0'));const script=['original','events'].includes(lane)?path.join(__dirname,'original-browser.cjs'):generated;
  const env={...process.env,CODEX_PRIMARY_RUNTIME_NODE_MODULES:path.join(repo,'tools/stage-a-browser/node_modules'),S3_ENGINES:engine,EVIDENCE_DIR:dest,THIRD_PROBE:lane==='events'?'events':lane==='exact'?'full':'none'};
@@ -48,7 +49,7 @@ try{for(let i=0;i<n;i++){
  runs.push({traceReasons,auditReasons,unexpectedSelect:unexpectedSelect.map(r=>({id:r.id,error:r.select?.error})),run:i+1,exit:p.status,signal:p.signal,error:p.error?String(p.error):null,complete,traceValid,originalSuiteStatus:result?.status||'NOT_TESTED',select});
  console.log(JSON.stringify({lane,engine,focus,run:i+1,exit:p.status,complete,traceValid}));
 }}finally{fs.unlinkSync(generated);}
-const result={schema:1,head,tree,sourceRunnerCommit:'ea6f19acfd60b37e9b147daa92e79838fd2f3070',sourceRunnerHash:SOURCE_HASH,executedHash:sha(code),lane,engine,focus,repeats:n,platform:os.platform(),release:os.release(),node:process.version,diagnosticHashes:Object.fromEntries(['third-run.cjs','third-preload.cjs','third-probe.cjs','third-audit.cjs'].map(f=>[f,sha(fs.readFileSync(path.join(__dirname,f)))])),interventions,limits:['Original later disabled force-click rejected as NOT_TESTED, not silently executed','Original suite FAIL is not diagnostic proof of Select failure; inspect per-check errors','No product/SDK changes; old evidence not overwritten'],runs};
+const result={schema:1,head,tree,dirtyAtStart,sourceRunnerCommit:'ea6f19acfd60b37e9b147daa92e79838fd2f3070',sourceRunnerHash:SOURCE_HASH,executedHash:sha(code),lane,engine,focus,repeats:n,platform:os.platform(),release:os.release(),node:process.version,diagnosticHashes:Object.fromEntries(['third-run.cjs','third-preload.cjs','third-probe.cjs','third-audit.cjs'].map(f=>[f,sha(fs.readFileSync(path.join(__dirname,f)))])),interventions,limits:['Original later disabled force-click rejected as NOT_TESTED, not silently executed','Original suite FAIL is not diagnostic proof of Select failure; inspect per-check errors','No product/SDK changes; old evidence not overwritten'],runs};
 result.status=runs.length===n&&runs.every(r=>r.complete&&r.traceValid)?'COMPLETE':'INCOMPLETE';
 fs.writeFileSync(path.join(out,'third-results.json'),JSON.stringify(result,null,2));
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);

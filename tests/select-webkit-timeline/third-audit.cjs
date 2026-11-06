@@ -13,6 +13,7 @@ function audit(result,expected,processResult){
  }
  return [...new Set(reasons)];
 }
+const geometry=g=>g&&g.rect&&['x','y','width','height','top','left','right','bottom'].every(k=>Number.isFinite(g.rect[k]))&&g.rect.width>0&&g.rect.height>0;
 function traceAudit(t,level){
  const reasons=[];
  if(!t||t.collectionError||!t.final)reasons.push('TRACE_FINAL_MISSING');
@@ -21,8 +22,8 @@ function traceAudit(t,level){
   if(!Array.isArray(t?.events)||!t.events.some(e=>e.type==='focusin')||!t.events.some(e=>e.type==='keydown'&&e.key===' '))reasons.push('TRACE_EVENTS_INCOMPLETE');
   if(t?.overflow)reasons.push('TRACE_OVERFLOW');
   if(level==='full'){
-   if(!Array.isArray(t?.frames)||!t.frames.some(f=>f.trigger&&Number.isFinite(f.ms)&&Number.isFinite(f.scrollY)))reasons.push('TRACE_RAF_MISSING');
-   if(!t?.events?.some(e=>e.option&&e.popup&&e.trigger&&e.expanded==='true'))reasons.push('TRACE_POPUP_GEOMETRY_MISSING');
+   if(!Array.isArray(t?.frames)||!t.frames.some(f=>geometry(f.trigger)&&Number.isFinite(f.ms)&&Number.isFinite(f.scrollY)))reasons.push('TRACE_RAF_MISSING');
+   if(!t?.events?.some(e=>geometry(e.option)&&geometry(e.popup)&&geometry(e.trigger)&&Number.isFinite(e.ms)&&Number.isFinite(e.scrollY)&&e.viewport?.width>0&&e.viewport?.height>0&&e.expanded==='true'))reasons.push('TRACE_POPUP_GEOMETRY_MISSING');
    if(!t?.final?.triggerId||typeof t.final.hasFocus!=='boolean')reasons.push('TRACE_FINAL_IDENTITY_MISSING');
   }
  }
