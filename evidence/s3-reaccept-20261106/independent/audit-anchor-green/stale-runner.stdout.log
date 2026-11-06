@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "failures": [
+    "runner differs from trusted Git HEAD"
+  ]
+}

@@ -1,0 +1,87 @@
+name: S3-1 research reacceptance
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts && npx playwright install --with-deps chromium webkit
+        working-directory: tools/stage-a-browser
+      - name: Frozen source, two builds, 32 conditions, focus and live faults
+        run: node scripts/s3-reaccept/run.cjs
+      - name: Read-only evidence audit and incomplete evidence controls
+        run: |
+          node scripts/s3-reaccept/audit.cjs .work/s3-evidence "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})" > .work/s3-audit.json
+          node scripts/s3-reaccept/audit-controls.cjs .work/s3-evidence "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})" .work/s3-audit-controls
+      - name: Separately authored browser review
+        if: always()
+        env:
+          REVIEW_OUT: .work/s3-independent
+        run: node tests/s3-reaccept-independent/run.cjs
+      - name: Independent unique clipping and evidence counterexamples
+        if: always()
+        run: |
+          REVIEW_OUT=.work/s3-independent-clip node tests/s3-reaccept-independent/clip-probe.cjs
+          REVIEW_OUT=.work/s3-independent-ring node tests/s3-reaccept-independent/focus-clip-probe.cjs
+          REVIEW_OUT=.work/s3-independent-audit node tests/s3-reaccept-independent/audit-probe.cjs
+      - name: Independent product counterexamples, preserve both exits
+        if: always()
+        run: |
+          set +e
+          REVIEW_OUT=.work/s3-independent-tooltip node tests/s3-reaccept-independent/tooltip-return.cjs
+          tooltip_exit=$?
+          REVIEW_OUT=.work/s3-independent-button node tests/s3-reaccept-independent/button-ring.cjs
+          button_exit=$?
+          printf '{"tooltip":%s,"button":%s}\n' "$tooltip_exit" "$button_exit" > .work/s3-product-exits.json
+          test "$tooltip_exit" -eq 0 -a "$button_exit" -eq 0
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: s3-reaccept-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            .work/s3-evidence/
+            .work/s3-audit.json
+            .work/s3-audit-controls/
+            .work/s3-independent/
+            .work/s3-independent-clip/
+            .work/s3-independent-ring/
+            .work/s3-independent-audit/
+            .work/s3-independent-tooltip/
+            .work/s3-independent-button/
+            .work/s3-product-exits.json
+          if-no-files-found: error
+  inspect-artifact:
+    needs: research
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently read ZIP bytes, CRC, internal hashes and original results
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/s3-reaccept/inspect-artifact.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: s3-artifact-inspection-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            .work/s3-artifact-inspection/inspection.json
+            .work/s3-artifact-inspection/inventory.json
+          if-no-files-found: error

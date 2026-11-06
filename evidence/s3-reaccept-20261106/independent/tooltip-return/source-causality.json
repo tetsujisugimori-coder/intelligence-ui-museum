@@ -1,0 +1,9 @@
+{
+  "recordedAt": "2026-11-06T10:49:10.967436+00:00",
+  "file": ".work/v10/node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tooltip/dist/index.mjs",
+  "sha256": "2012ba836dddc510a16b1b2fccab20609a54c42b2cae21ce03346a18072bf876",
+  "packageVersion": "1.4.1",
+  "excerpt": "const handleScroll = /* @__PURE__ */ __name((event) => {\n          if (event.target instanceof Node && event.target.contains(context.trigger)) {\n            onClose();\n          }\n        }, \"handleScroll\");\n        window.addEventListener(\"scroll\", handleScroll, { capture: true });\n        return () => window.removeEventListener(\"scroll\", handleScroll, { capture: true });\n      }\n    }, [context.trigger, onClose]);\n    ",
+  "classification": "Read-only fixed dependency source; causal inference from code plus independent event sequence. Not an intervention proof.",
+  "inference": "Ancestor/window scroll dispatch after keyboard focus return invokes onClose even while trigger retains focus; observed mutation removes tooltip shortly after scroll."
+}

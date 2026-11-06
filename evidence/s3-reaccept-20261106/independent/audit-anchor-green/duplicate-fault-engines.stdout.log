@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "failures": [
+    "fault not rejected for expected reason: alert-reopen",
+    "fault not rejected for expected reason: pageerror",
+    "fault not rejected for expected reason: focus-missing",
+    "fault not rejected for expected reason: focus-clipped",
+    "fault not rejected for expected reason: body-focus",
+    "fault not rejected for expected reason: wrong-trigger"
+  ]
+}

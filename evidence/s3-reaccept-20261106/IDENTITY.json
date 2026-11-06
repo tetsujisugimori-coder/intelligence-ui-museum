@@ -1,0 +1,36 @@
+{
+  "recordedAt": "2026-11-06T10:54:05.546313+00:00",
+  "baseHead": "77d30ac54e35b8a6408fb5f56db4697adff8a452",
+  "baseTree": "bae0835e1832cf569b71fd33816bb77acabf52c3",
+  "source": {
+    "src/main.tsx": "56252779287a5b304d0e75345c89045ddd7f59c692bd41f859d0a1d4215d6910",
+    "src/main.css": "ad0791ec49dbe792972c6638253aa37cd825b72831003ab7769be26d68da03fa",
+    "src/select-focus-return.ts": "0138534d5d40e1f8c033f9ea08a55c3d93255f26897121b2375a1a25bea12c61",
+    "package.json": "465450a25a4fba6112b0173aeab0b3bbce10d98a583d5b68e37636ebdea50c75",
+    "package-lock.json": "d62b5a4f1ffeb6d5463ea64304f561dbef919a30c96050defd115c8b81ae1b46"
+  },
+  "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "node": "v24.19.0",
+  "npm": "11.9.0",
+  "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+  "browserLibrary": "Playwright 1.56.1",
+  "scope": "Local executions use system Chromium154; official CI uses fixed Playwright Chromium141/WebKit26; synthetic root200 is not OS native zoom",
+  "history": {
+    "github": "PR19 and PR21 merged at acquisition 2026-11-06; old body draft/unmerged text retained as history",
+    "setupErrors": [
+      "Initial npm ci issued at repository root with no lockfile: EUSAGE; no files changed",
+      "Initial npm browser cache under /home/agent/.npm not writable: ENOENT; fixed to task cache /tmp",
+      "Browser download 403 Domain forbidden; no bypass; system Chromium used",
+      "First SDK comparison included nested node_modules; isolated reader fixed to SDK own tar members"
+    ]
+  },
+  "rawHashes": {
+    "evidence/s3-reaccept-20261106/raw/local-matrix-v3.json.gz": "069d2c05cfb819c87017fa18190f3dae38bce92c3816477a682691594dffc2f6",
+    "evidence/s3-reaccept-20261106/raw/local-matrix-v4.json.gz": "521e2f50e13ead83038f4029468567ecff9de0fec9f9a0bc4451af4d13e93e05",
+    "evidence/s3-reaccept-20261106/raw/local-focus.json.gz": "dd4799ebb45d7911d25224f1518c31b8176fe868a864b6834f8a6fac61678abf",
+    "evidence/s3-reaccept-20261106/raw/independent-local.tar.gz": "fd02ea8c7e670d9e192d699ff39654a6a53cefa656347731d12910dd57521c1d",
+    "evidence/s3-reaccept-20261106/raw/local-matrix-v2.json.gz": "e99bad3f0235d60d75a1f7fb6d5297b5d054328aab4b304eaa75ef2cf8050e96",
+    "evidence/s3-reaccept-20261106/raw/local-matrix-v1.json.gz": "1160a40455a500579e75896dd749c696c4952e655eb28c2944f77158fe1007e2",
+    "evidence/s3-reaccept-20261106/raw/local-matrix-v5.json.gz": "0cd334848393812b9cd74c262566f8946c33a916bf34127fd26a236e610fb436"
+  }
+}
