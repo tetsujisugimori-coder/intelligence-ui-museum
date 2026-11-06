@@ -1,0 +1,115 @@
+{
+  "status": "FAIL",
+  "testedAt": "2026-11-06T10:54:39.193Z",
+  "evidenceKind": "SYNTHETIC validator fixtures; not real browser runs",
+  "gateHash": "adbb698c4a5f29a2eff038a789b6cccc40e6ba287f6090b71a14c856dad42f5d",
+  "records": [
+    {
+      "name": "normal-synthetic-contract",
+      "expectedExit": 0,
+      "expectedReason": "",
+      "actualExit": 0,
+      "matched": true,
+      "report": {
+        "status": "PASS",
+        "failures": []
+      }
+    },
+    {
+      "name": "unhashed-result",
+      "expectedExit": 1,
+      "expectedReason": "required manifest entry missing: matrix/results.json",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "required manifest entry missing: matrix/results.json"
+        ]
+      }
+    },
+    {
+      "name": "missing-stage-log",
+      "expectedExit": 1,
+      "expectedReason": "required manifest entry missing: sdk.stdout.log",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "required manifest entry missing: sdk.stdout.log"
+        ]
+      }
+    },
+    {
+      "name": "duplicate-replacement-image",
+      "expectedExit": 1,
+      "expectedReason": "missing required image",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "missing required image"
+        ]
+      }
+    },
+    {
+      "name": "contradictory-focus-row",
+      "expectedExit": 1,
+      "expectedReason": "contradictory focus row",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "contradictory focus row"
+        ]
+      }
+    },
+    {
+      "name": "sdk-failed",
+      "expectedExit": 1,
+      "expectedReason": "SDK result invalid",
+      "actualExit": 1,
+      "matched": false,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "SDK evidence contradicts fixed package"
+        ]
+      }
+    },
+    {
+      "name": "duplicate-fault-engines",
+      "expectedExit": 1,
+      "expectedReason": "fault not rejected for expected reason",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "fault not rejected for expected reason: alert-reopen",
+          "fault not rejected for expected reason: pageerror",
+          "fault not rejected for expected reason: focus-missing",
+          "fault not rejected for expected reason: focus-clipped",
+          "fault not rejected for expected reason: body-focus",
+          "fault not rejected for expected reason: wrong-trigger"
+        ]
+      }
+    },
+    {
+      "name": "duplicate-focus-fault",
+      "expectedExit": 1,
+      "expectedReason": "missing focus fault",
+      "actualExit": 1,
+      "matched": false,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "missing/duplicate focus fault coverage"
+        ]
+      }
+    }
+  ]
+}

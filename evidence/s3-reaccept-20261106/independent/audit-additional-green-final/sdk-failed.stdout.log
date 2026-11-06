@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "failures": [
+    "SDK evidence contradicts fixed package"
+  ]
+}

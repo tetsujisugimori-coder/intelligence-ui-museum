@@ -1,0 +1,47 @@
+
+> intelligence-ui-official-lab@0.1.0 test
+> node scripts/verify.mjs
+
+{
+  "status": "PASS",
+  "scope": "imports, exports, built sourcemap, baseline byte hash, dataset identity, sandbox, notice existence",
+  "checks": [
+    {
+      "component": "Button",
+      "entry": "node_modules/@openai/apps-sdk-ui/dist/es/components/Button/index.js",
+      "sha256": "d0be9fb07680aeb308e677afd4f887d93a1104e4e771945ead42ef59424c23f3",
+      "import": true
+    },
+    {
+      "component": "Badge",
+      "entry": "node_modules/@openai/apps-sdk-ui/dist/es/components/Badge/index.js",
+      "sha256": "2a585e87a429980c459be858f89f0c8c2fa7c66ceaaf4725bfddf4f3767d7750",
+      "import": true
+    },
+    {
+      "component": "Select",
+      "entry": "node_modules/@openai/apps-sdk-ui/dist/es/components/Select/index.js",
+      "sha256": "6cf2d6b9d814e26dfad6ca57de94a4781e580065ca2b989084d5ad8788969a8b",
+      "import": true
+    },
+    {
+      "component": "Switch",
+      "entry": "node_modules/@openai/apps-sdk-ui/dist/es/components/Switch/index.js",
+      "sha256": "6bf5077896cdf3eb6d54bfc91b5ca5f96318a6658da904b822eef844a5845199",
+      "import": true
+    },
+    {
+      "component": "Tooltip",
+      "entry": "node_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/index.js",
+      "sha256": "38fa2db5a32d42d167041422b5f7c26d489a26974464b6e03c3071fea81ab95d",
+      "import": true
+    },
+    {
+      "component": "Alert",
+      "entry": "node_modules/@openai/apps-sdk-ui/dist/es/components/Alert/index.js",
+      "sha256": "b7658e8e5b8793535b034015ab5897bfd75d672dfd70730587a48c4a8b85ac5d",
+      "import": true
+    }
+  ],
+  "baseline": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97"
+}

@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "testedAt": "2026-11-06T10:59:22.419Z",
+  "evidenceKind": "SYNTHETIC validator fixtures; not real browser runs",
+  "gateHash": "b7dce80c4d0be65314faa27bbc43ed3e0da4ea82de45e870846ee88f3194dffc",
+  "records": [
+    {
+      "name": "normal-synthetic-contract",
+      "expectedExit": 0,
+      "expectedReason": "",
+      "actualExit": 0,
+      "matched": true,
+      "report": {
+        "status": "PASS",
+        "failures": []
+      }
+    },
+    {
+      "name": "unhashed-result",
+      "expectedExit": 1,
+      "expectedReason": "required manifest entry missing: matrix/results.json",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "required manifest entry missing: matrix/results.json"
+        ]
+      }
+    },
+    {
+      "name": "missing-stage-log",
+      "expectedExit": 1,
+      "expectedReason": "required manifest entry missing: sdk.stdout.log",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "required manifest entry missing: sdk.stdout.log"
+        ]
+      }
+    },
+    {
+      "name": "duplicate-replacement-image",
+      "expectedExit": 1,
+      "expectedReason": "missing required image",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "missing required image"
+        ]
+      }
+    },
+    {
+      "name": "contradictory-focus-row",
+      "expectedExit": 1,
+      "expectedReason": "contradictory focus row",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "contradictory focus row"
+        ]
+      }
+    },
+    {
+      "name": "sdk-failed",
+      "expectedExit": 1,
+      "expectedReason": "SDK evidence contradicts fixed package",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "SDK evidence contradicts fixed package"
+        ]
+      }
+    },
+    {
+      "name": "duplicate-fault-engines",
+      "expectedExit": 1,
+      "expectedReason": "fault not rejected for expected reason",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "fault not rejected for expected reason: alert-reopen",
+          "fault not rejected for expected reason: pageerror",
+          "fault not rejected for expected reason: focus-missing",
+          "fault not rejected for expected reason: focus-clipped",
+          "fault not rejected for expected reason: body-focus",
+          "fault not rejected for expected reason: wrong-trigger"
+        ]
+      }
+    },
+    {
+      "name": "duplicate-focus-fault",
+      "expectedExit": 1,
+      "expectedReason": "missing/duplicate focus fault coverage",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "missing/duplicate focus fault coverage"
+        ]
+      }
+    },
+    {
+      "name": "shared-stale-source",
+      "expectedExit": 1,
+      "expectedReason": "source differs from trusted Git HEAD",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "source differs from trusted Git HEAD"
+        ]
+      }
+    },
+    {
+      "name": "stale-runner",
+      "expectedExit": 1,
+      "expectedReason": "runner differs from trusted Git HEAD",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "runner differs from trusted Git HEAD"
+        ]
+      }
+    }
+  ]
+}
