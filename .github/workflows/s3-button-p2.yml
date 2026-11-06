@@ -1,0 +1,42 @@
+name: S3-1 button P2 regression
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-regression:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/prepare-work.py
+      - run: npm ci --ignore-scripts
+        working-directory: .work/v10
+      - run: npm run build
+        working-directory: .work/v10
+      - run: npm test
+        working-directory: .work/v10
+      - run: npm ci --ignore-scripts
+        working-directory: tools/stage-a-browser
+      - run: npx playwright install --with-deps chromium webkit
+        working-directory: tools/stage-a-browser
+      - name: Fresh Chromium and WebKit button regression
+        env:
+          S3_ENGINES: chromium,webkit
+          REVIEW_OUT: .work/s3-button-fixed
+        run: node tests/s3-reaccept-independent/button-ring.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: s3-button-regression-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/s3-button-fixed/
+          if-no-files-found: warn
