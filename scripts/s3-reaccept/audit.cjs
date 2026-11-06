@@ -9,6 +9,9 @@ function audit(root,head,tree){
   for(const [f,h]of Object.entries(manifest.files||{})){try{const target=fs.realpathSync(path.join(root,f));need(target.startsWith(fs.realpathSync(root)+path.sep),'unsafe evidence path');need(hash(fs.readFileSync(target))===h,'hash mismatch: '+f);}catch{bad.push('missing artifact: '+f);}}
  }
  const steps=read('steps.json');const required=['preservation','unit','install1','install2','build1','build2','authenticity','baseline','reproduce','sdk','matrix','focus','faults'];
+ const bound=f=>need(typeof manifest?.files?.[f]==='string','required manifest entry missing: '+f);
+ for(const f of ['identity.json','steps.json','sdk.json','matrix/results.json','focus/results.json','faults/results.json'])bound(f);
+ for(const name of required)for(const stream of ['stdout','stderr'])bound(name+'.'+stream+'.log');
  need(Array.isArray(steps)&&steps.length===required.length,'incomplete stages');
  for(const name of required){const matches=steps?.filter?.(s=>s.name===name)||[];need(matches.length===1&&matches[0].exit===0&&!matches[0].signal&&!!matches[0].started&&!!matches[0].finished&&!!matches[0].command,'stage failed/missing: '+name);}
  const m=read('matrix/results.json'),f=read('focus/results.json'),faults=read('faults/results.json'),identity=read('identity.json');
@@ -16,12 +19,17 @@ function audit(root,head,tree){
  if(m){need(m.head===head&&m.tree===tree,'matrix identity mismatch');need(JSON.stringify(m.source)===JSON.stringify(identity?.source),'source mismatch');need(JSON.stringify(m.build)===JSON.stringify(identity?.build),'build mismatch');need(m.status==='PASS'&&m.failures?.length===0&&!m.fault,'matrix failure');need(m.rows?.length===32,'expected 32 conditions');
   const seen=new Set();for(const r of m.rows||[]){const k=[r.engine,r.width,r.theme,r.text].join('-');need(!seen.has(k),'duplicate matrix condition');seen.add(k);need(r.height===1000,'wrong height');need(r.status==='PASS'&&!r.error,'failed matrix condition');
    const names=['environment','layout','Button','Badge','Alert','Switch','Select','Tooltip','errors'];need(r.checks?.length===names.length&&names.every(n=>r.checks.filter(c=>c.name===n&&c.pass===true).length===1),'missing/failed assertion');
-   need(r.images?.length===11&&r.images.every(p=>manifest?.files?.['matrix/'+p]&&p.endsWith('.png')),'missing required image');
+   const expectedImages=[...['Button','Select'].flatMap(c=>['on','off','off2','on2'].map(x=>`${k}-${c}-${x}.png`)),...['Badge','Alert','Tooltip'].map(c=>`${k}-${c}.png`)];
+   need(r.images?.length===11&&new Set(r.images).size===11&&expectedImages.every(p=>r.images.includes(p)&&manifest?.files?.['matrix/'+p]),'missing required image');
    need(r.errors?.length===0&&r.console?.every(e=>e.classification==='known-font-CSP'),'unexpected browser error');
   }
   for(const engine of ['chromium','webkit'])for(const width of [320,375,390,1280])for(const theme of ['light','dark'])for(const text of [100,200])need(seen.has([engine,width,theme,text].join('-')),'missing condition');
  }
- if(f){need(f.status==='PASS'&&f.failures?.length===0&&f.rows?.length===44&&f.faults?.length===14&&f.regressions?.length===4,'focus incomplete/failure');need(JSON.stringify(f.identity)===JSON.stringify(identity?.source),'focus source mismatch');for(const engine of ['chromium','webkit'])for(const id of ['A','B'])for(const way of ['mouse','keyboard','escape']){const cases=f.rows?.filter(r=>r.engine===engine&&r.condition.id===id&&r.way===way)||[];need(cases.length===1&&cases[0].verdict?.pass&&cases[0].after?.sameOpener&&cases[0].after?.hasFocus&&cases[0].after?.visibility==='visible','focus case failed/missing');need(!!manifest?.files?.[`focus/${engine}-${id}-${way}.png`],'focus image missing');} }
+ if(f){need(f.status==='PASS'&&f.failures?.length===0&&f.rows?.length===44&&f.faults?.length===14&&f.regressions?.length===4,'focus incomplete/failure');need(JSON.stringify(f.identity)===JSON.stringify(identity?.source),'focus source mismatch');
+  for(const r of f.rows||[])need(r.verdict?.pass===true&&!r.error&&r.expectationMatched===true&&r.errors?.length===0&&r.after?.sameOpener===true&&r.after?.body===false,'contradictory focus row');
+  for(const r of f.faults||[])need(r.expectationMatched===true&&!r.error,'contradictory focus fault');
+  for(const r of f.regressions||[])need(!r.error&&r.errors?.length===0&&r.checks&&Object.keys(r.checks).length===13&&Object.values(r.checks).every(x=>x===true),'contradictory focus regression');
+  for(const engine of ['chromium','webkit'])for(const id of ['A','B'])for(const way of ['mouse','keyboard','escape']){const cases=f.rows?.filter(r=>r.engine===engine&&r.condition.id===id&&r.way===way)||[];need(cases.length===1&&cases[0].verdict?.pass&&cases[0].after?.sameOpener&&cases[0].after?.hasFocus&&cases[0].after?.visibility==='visible','focus case failed/missing');need(!!manifest?.files?.[`focus/${engine}-${id}-${way}.png`],'focus image missing');} }
  if(faults){need(faults.status==='PASS'&&faults.rows?.length===6,'fault suite incomplete');for(const name of ['alert-reopen','pageerror','focus-missing','focus-clipped','body-focus','wrong-trigger']){const r=faults.rows?.find(x=>x.fault===name);need(r?.exit===1&&r?.reasonMatched===true&&r?.engines?.length===2,'fault not rejected for expected reason: '+name);}}
  return [...new Set(bad)];
 }

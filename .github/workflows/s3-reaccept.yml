@@ -25,9 +25,16 @@ jobs:
           node scripts/s3-reaccept/audit.cjs .work/s3-evidence "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})" > .work/s3-audit.json
           node scripts/s3-reaccept/audit-controls.cjs .work/s3-evidence "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})" .work/s3-audit-controls
       - name: Separately authored browser review
+        if: always()
         env:
           REVIEW_OUT: .work/s3-independent
         run: node tests/s3-reaccept-independent/run.cjs
+      - name: Independent unique clipping and evidence counterexamples
+        if: always()
+        run: |
+          REVIEW_OUT=.work/s3-independent-clip node tests/s3-reaccept-independent/clip-probe.cjs
+          REVIEW_OUT=.work/s3-independent-ring node tests/s3-reaccept-independent/focus-clip-probe.cjs
+          REVIEW_OUT=.work/s3-independent-audit node tests/s3-reaccept-independent/audit-probe.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -37,4 +44,7 @@ jobs:
             .work/s3-audit.json
             .work/s3-audit-controls/
             .work/s3-independent/
+            .work/s3-independent-clip/
+            .work/s3-independent-ring/
+            .work/s3-independent-audit/
           if-no-files-found: error
