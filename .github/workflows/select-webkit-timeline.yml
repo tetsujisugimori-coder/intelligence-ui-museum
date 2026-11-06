@@ -1,4 +1,4 @@
-name: S3-1 Select WebKit timeline diagnostic (#28)
+name: S3-1 Select WebKit timeline S3 replay (#28)
 on:
   pull_request:
     paths:
@@ -24,8 +24,8 @@ jobs:
           - { os: windows-2025, source: current, mode: direct }
           - { os: windows-2025, source: current, mode: legacy }
           - { os: windows-2025, source: old, mode: tab }
+          - { os: windows-2025, source: old, mode: direct }
           - { os: windows-2025, source: old, mode: legacy }
-          - { os: ubuntu-24.04, source: current, mode: tab }
           - { os: ubuntu-24.04, source: current, mode: legacy }
     steps:
       - uses: actions/checkout@v4
@@ -70,12 +70,13 @@ jobs:
       - name: Verify diagnostic rejects known faults
         shell: bash
         run: node tests/select-webkit-timeline/run.cjs --selftest
-      - name: Run 20 fresh pages per view/pace (real Tab versus direct focus)
+      - name: Replay prior S3 operations and capture Select focus/scroll/popup timeline
         shell: bash
         env:
           DIAG_MODE: ${{ matrix.mode }}
           DIAG_ENGINE: webkit
           DIAG_REPEATS: '20'
+          DIAG_PRELUDE: s3
           DIAG_SOURCE_REF: ${{ matrix.source }}
         run: |
           if [ "$DIAG_SOURCE_REF" = "old" ]; then
