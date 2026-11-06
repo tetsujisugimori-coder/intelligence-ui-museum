@@ -1,4 +1,4 @@
-name: S3-1 Select WebKit timeline S3 replay (#28)
+name: S3-1 Select third exact-runner diagnosis (#28)
 on:
   pull_request:
     paths:
@@ -8,25 +8,27 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: s3-select-timeline-${{ github.ref }}
-  cancel-in-progress: true
+  group: s3-select-third-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   trace:
-    name: ${{ matrix.os }} / ${{ matrix.source }} / ${{ matrix.mode }}
+    name: ${{ matrix.os }} / ${{ matrix.lane }} / ${{ matrix.focus }}
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 35
+    timeout-minutes: 40
     strategy:
       fail-fast: false
       max-parallel: 3
       matrix:
         include:
-          - { os: windows-2025, source: current, mode: tab }
-          - { os: windows-2025, source: current, mode: direct }
-          - { os: windows-2025, source: current, mode: legacy }
-          - { os: windows-2025, source: old, mode: tab }
-          - { os: windows-2025, source: old, mode: direct }
-          - { os: windows-2025, source: old, mode: legacy }
-          - { os: ubuntu-24.04, source: current, mode: legacy }
+          - { os: windows-2025, lane: original, focus: legacy, repeats: 1 }
+          - { os: windows-2025, lane: events, focus: legacy, repeats: 1 }
+          - { os: windows-2025, lane: historical, focus: legacy, repeats: 1 }
+          - { os: windows-2025, lane: exact, focus: legacy, repeats: 20 }
+          - { os: windows-2025, lane: exact, focus: direct, repeats: 20 }
+          - { os: windows-2025, lane: exact, focus: tab, repeats: 20 }
+          - { os: windows-2025, lane: minimal, focus: legacy, repeats: 20 }
+          - { os: ubuntu-24.04, lane: original, focus: legacy, repeats: 1 }
+          - { os: ubuntu-24.04, lane: exact, focus: legacy, repeats: 20 }
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,29 +37,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Record fixed source and keep old main separate
+      - name: Build fixed source in disposable copy
         shell: bash
         run: |
-          mkdir -p .work
-          git rev-parse HEAD HEAD^{tree}
-          if [ "${{ matrix.source }}" = "old" ]; then
-            git worktree add --detach .work/old-src 77d30ac54e35b8a6408fb5f56db4697adff8a452
-            git -C .work/old-src rev-parse HEAD HEAD^{tree}
-          else
-            python scripts/prepare-work.py
-          fi
-      - name: Build only isolated product copy
-        shell: bash
-        run: |
-          if [ "${{ matrix.source }}" = "old" ]; then
-            cd .work/old-src/apps/v10
-          else
-            cd .work/v10
-          fi
+          python scripts/prepare-work.py
+          cd .work/v10
           npm ci --ignore-scripts
           npm run build
           npm test
-      - name: Install fixed diagnostic browser
+      - name: Install pinned browser
         shell: bash
         working-directory: tools/stage-a-browser
         run: |
@@ -67,29 +55,24 @@ jobs:
           else
             npx playwright install webkit
           fi
-      - name: Verify diagnostic rejects known faults
+      - name: Oracle negative controls
         shell: bash
-        run: node tests/select-webkit-timeline/run.cjs --selftest
-      - name: Replay prior S3 operations and capture Select focus/scroll/popup timeline
+        run: |
+          node tests/select-webkit-timeline/run.cjs --selftest
+          node --test tests/select-webkit-timeline/third-audit.test.cjs
+      - name: Original runner and exact operation contrasts
         shell: bash
         env:
-          DIAG_MODE: ${{ matrix.mode }}
-          DIAG_ENGINE: webkit
-          DIAG_REPEATS: '20'
-          DIAG_PRELUDE: s3
-          DIAG_SOURCE_REF: ${{ matrix.source }}
-        run: |
-          if [ "$DIAG_SOURCE_REF" = "old" ]; then
-            export APP_ROOT="$GITHUB_WORKSPACE/.work/old-src/apps/v10"
-          else
-            export APP_ROOT="$GITHUB_WORKSPACE/.work/v10"
-          fi
-          export DIAG_OUT="$GITHUB_WORKSPACE/.work/select-webkit-timeline"
-          node tests/select-webkit-timeline/run.cjs
+          THIRD_LANE: ${{ matrix.lane }}
+          THIRD_FOCUS: ${{ matrix.focus }}
+          THIRD_REPEATS: ${{ matrix.repeats }}
+          THIRD_ENGINE: webkit
+          THIRD_OUT: .work/third-evidence
+        run: node tests/select-webkit-timeline/third-run.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: s3-select-timeline-${{ matrix.os }}-${{ matrix.source }}-${{ matrix.mode }}-${{ github.event.pull_request.head.sha || github.sha }}
-          path: .work/select-webkit-timeline/
-          if-no-files-found: warn
+          name: s3-select-third-${{ matrix.os }}-${{ matrix.lane }}-${{ matrix.focus }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/third-evidence/
+          if-no-files-found: error
           retention-days: 14

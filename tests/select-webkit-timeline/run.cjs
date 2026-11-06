@@ -25,6 +25,8 @@ const paces = ['rapid', 'settled'];
 
 function verdict(row) {
   const reasons = [];
+  if (row.collectError) reasons.push('MEASUREMENT_FAILED');
+  if (!Array.isArray(row.pageerrors) || !Array.isArray(row.unexpectedConsole)) reasons.push('ERROR_LOG_MISSING');
   if (!row.states || !row.states.focus || !row.states.focus.focusOnTrigger) reasons.push('FOCUS_NOT_ON_TRIGGER');
   if (!row.states || !row.states.beforeClick || !row.states.beforeClick.option?.exists) reasons.push('OPTION_NOT_MOUNTED');
   else {
@@ -58,13 +60,15 @@ if (process.argv.includes('--selftest')) {
     ['empty', x => { x.timeline.events = []; }, 'TIMELINE_INCOMPLETE'],
     ['no-click', x => { x.error = 'Timeout'; }, 'ACTION_FAILED'],
     ['pageerror', x => { x.pageerrors.push('uncaught'); }, 'PAGE_ERROR'],
+    ['collection-failed', x => { x.collectError = 'final snapshot failed'; }, 'MEASUREMENT_FAILED'],
+    ['error-log-missing', x => { delete x.pageerrors; }, 'ERROR_LOG_MISSING'],
     ['missing-popup', x => { x.states.beforeClick.popup.exists = false; }, 'POPUP_GEOMETRY_MISSING']
   ]) {
     const copy = structuredClone(example);
     mutate(copy);
     assert(verdict(copy).includes(expected), name + ' must be rejected');
   }
-  console.log('Issue #28 diagnostic oracle: normal + 6 negative controls PASS');
+  console.log('Issue #28 diagnostic oracle: normal + 9 negative controls PASS');
   process.exit(0);
 }
 assert(focusModes.includes(mode), 'DIAG_MODE must be tab/direct/legacy');
