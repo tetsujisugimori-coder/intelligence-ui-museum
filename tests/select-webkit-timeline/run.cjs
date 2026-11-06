@@ -215,9 +215,10 @@ async function trial(browser, id, view, pace, baseUrl) {
     await take('mounted');
     if (pace === 'settled') { await raf2(page); await take('popup-settled'); }
     const before = await take('beforeClick');
-    // Capture the suspect frame before Playwright auto-scrolling during a normal click.
-    if (id.endsWith('-01') || !before.option?.inViewport || !before.option?.hitTest) {
-      await page.screenshot({ path: filename('pre-click'), animations: 'disabled' });
+    // A screenshot can delay or settle a race. Keep rapid trials unmodified;
+    // capture a representative frame only in the separately marked settled lane.
+    if (pace === 'settled' && id.endsWith('-01')) {
+      await page.screenshot({ path: filename('pre-click') });
       row.images.push(path.basename(filename('pre-click')));
     }
     try { await option.click({ timeout }); }
@@ -235,7 +236,7 @@ async function trial(browser, id, view, pace, baseUrl) {
     row.status = row.reasons.length ? 'FAIL' : 'PASS';
     if (row.status !== 'PASS') {
       try {
-        await page.screenshot({ path: filename('failure'), animations: 'disabled' });
+        await page.screenshot({ path: filename('failure') });
         row.images.push(path.basename(filename('failure')));
       } catch (e) { row.screenshotError = String(e); }
     }
