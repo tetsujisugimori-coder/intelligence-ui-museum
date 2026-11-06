@@ -53,7 +53,7 @@ function audit(root,head,tree){
   }
   for(const r of f.regressions||[])need(!r.error&&r.errors?.length===0&&r.checks&&Object.keys(r.checks).length===13&&regressionChecks.every(n=>r.checks[n]===true),'contradictory focus regression');
   for(const engine of ['chromium','webkit'])for(const id of ['A','B'])for(const way of ['mouse','keyboard','escape']){const cases=f.rows?.filter(r=>r.engine===engine&&r.condition.id===id&&r.way===way)||[];need(cases.length===1&&cases[0].verdict?.pass&&cases[0].after?.sameOpener&&cases[0].after?.hasFocus&&cases[0].after?.visibility==='visible','focus case failed/missing');need(!!manifest?.files?.[`focus/${engine}-${id}-${way}.png`],'focus image missing');} }
- if(faults){need(faults.status==='PASS'&&faults.rows?.length===6,'fault suite incomplete');for(const name of ['alert-reopen','pageerror','focus-missing','focus-clipped','body-focus','wrong-trigger']){const matches=faults.rows?.filter(x=>x.fault===name)||[],r=matches[0];need(matches.length===1&&r?.exit===1&&r?.reasonMatched===true&&r?.engines?.length===2&&new Set(r.engines).size===2&&r.engines.includes('chromium')&&r.engines.includes('webkit'),'fault not rejected for expected reason: '+name);}}
+ if(faults){need(faults.status==='PASS'&&faults.rows?.length===6,'fault suite incomplete');for(const name of ['alert-reopen','pageerror','focus-missing','focus-clipped','body-focus','wrong-trigger']){const matches=faults.rows?.filter(x=>x.fault===name)||[],r=matches[0];need(matches.length===1&&r?.exit===1&&!r?.signal&&!r?.error&&r?.reasonMatched===true&&r?.engines?.length===2&&new Set(r.engines).size===2&&r.engines.includes('chromium')&&r.engines.includes('webkit'),'fault not rejected for expected reason: '+name);}}
  return [...new Set(bad)];
 }
 module.exports={audit};
