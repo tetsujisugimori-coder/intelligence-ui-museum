@@ -14,7 +14,7 @@ function audit(root,head,tree){
  for(const f of ['identity.json','steps.json','sdk.json','matrix/results.json','focus/results.json','faults/results.json'])bound(f);
  for(const name of required)for(const stream of ['stdout','stderr'])bound(name+'.'+stream+'.log');
  need(Array.isArray(steps)&&steps.length===required.length,'incomplete stages');
- for(const name of required){const matches=steps?.filter?.(s=>s.name===name)||[];need(matches.length===1&&matches[0].exit===0&&!matches[0].signal&&!!matches[0].started&&!!matches[0].finished&&!!matches[0].command,'stage failed/missing: '+name);}
+ for(const name of required){const matches=steps?.filter?.(s=>s.name===name)||[];need(matches.length===1&&matches[0].exit===0&&!matches[0].signal&&!matches[0].error&&!!matches[0].started&&!!matches[0].finished&&!!matches[0].command,'stage failed/missing: '+name);}
  const m=read('matrix/results.json'),f=read('focus/results.json'),faults=read('faults/results.json'),identity=read('identity.json');
  const sdk=read('sdk.json');
  const lock=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../apps/v10/package-lock.json')));
