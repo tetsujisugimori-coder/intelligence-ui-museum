@@ -6,5 +6,6 @@
 .controls input[type=checkbox]{appearance:auto;width:1.25rem;height:1.25rem;flex:none;accent-color:#167563}
 /* Preserve the official control styles; give narrow lab panes more usable room. */
 @media(max-width:400px){.pane{padding:8px}}
-/* At 320px/root200 with a classic scrollbar, retain the full 7px focus halo. */
-@media(max-width:400px){#Button .pane{padding-inline:6px}}
+/* Keep the SDK Button's 3px outline + 4px offset inside the exhibit's clip edge.
+   With the pane border, 6px leaves the left halo 1px outside on narrow screens. */
+@media(max-width:400px){#Button .pane{padding-inline:7px}}
