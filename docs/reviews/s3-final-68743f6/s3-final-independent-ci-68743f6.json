@@ -1,0 +1,464 @@
+{
+  "evidenceKind": "CI-only raw job-log readback by independent reviewer; artifact bytes not downloaded in this workspace",
+  "report": {
+    "evidenceKind": "CI-only ZIP inspection in separate job; not a local download",
+    "head": "68743f6ff857e55f107ec6c1dc7b8e94b8d71511",
+    "tree": "bb7b9b2e5346ea748eea9d45997b61d4d2f1228d",
+    "runId": "42207105868",
+    "attempt": "1",
+    "artifact": {
+      "id": 13497426548,
+      "node_id": "MDg6QXJ0aWZhY3QxMzQ5NzQyNjU0OA==",
+      "name": "s3-reaccept-68743f6ff857e55f107ec6c1dc7b8e94b8d71511",
+      "size_in_bytes": 25946090,
+      "url": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13497426548",
+      "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13497426548/zip",
+      "expired": false,
+      "digest": "sha256:5ac207cdabe90375349d2ed2165d5bd2e29b240211046b282d328280337a8037",
+      "created_at": "2026-11-06T11:08:10Z",
+      "updated_at": "2026-11-06T11:08:10Z",
+      "expires_at": "2027-02-04T11:01:39Z",
+      "workflow_run": {
+        "id": 42207105868,
+        "repository_id": 1439730700,
+        "head_repository_id": 1439730700,
+        "head_branch": "test/s3-1-reaccept-20261106",
+        "head_sha": "68743f6ff857e55f107ec6c1dc7b8e94b8d71511"
+      }
+    },
+    "zipSha256": "5ac207cdabe90375349d2ed2165d5bd2e29b240211046b282d328280337a8037",
+    "fileCount": 715,
+    "internalManifestHashesVerified": 569,
+    "sourceComplete": false,
+    "auditExit": 1,
+    "audit": {
+      "status": "FAIL",
+      "failures": [
+        "incomplete manifest",
+        "stage failed/missing: matrix",
+        "matrix failure",
+        "failed matrix condition",
+        "missing/failed assertion"
+      ]
+    },
+    "summaries": {
+      "matrix": {
+        "status": "FAIL",
+        "rows": 32,
+        "failures": [],
+        "failedRows": [
+          {
+            "id": "chromium-320-light-100",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:03:38.924Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:03:39.324Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-320-light-200",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:03:41.271Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:03:41.553Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-320-dark-100",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:03:43.439Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:03:43.811Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-320-dark-200",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:03:45.654Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:03:45.949Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-375-light-100",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:03:47.805Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:03:48.193Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-375-light-200",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:03:50.020Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:03:50.398Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-375-dark-100",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:03:52.238Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:03:52.610Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-375-dark-200",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:03:54.420Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:03:54.814Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-390-light-100",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:03:56.621Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:03:56.994Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-390-light-200",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:03:58.820Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:03:59.215Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-390-dark-100",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:01.071Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:01.495Z"
+              }
+            ]
+          },
+          {
+            "id": "chromium-390-dark-200",
+            "engine": "chromium",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:03.337Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:03.714Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-320-light-100",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:20.983Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:21.442Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-320-light-200",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:24.568Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:25.093Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-320-dark-100",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:27.725Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:28.125Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-320-dark-200",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:31.363Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:31.872Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-375-light-100",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:34.341Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:34.756Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-375-light-200",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:37.258Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:37.704Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-375-dark-100",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:40.123Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:40.538Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-375-dark-200",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:43.026Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:43.451Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-390-light-100",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:45.915Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:46.330Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-390-light-200",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:48.850Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:49.282Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-390-dark-100",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:51.772Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:52.167Z"
+              }
+            ]
+          },
+          {
+            "id": "webkit-390-dark-200",
+            "engine": "webkit",
+            "error": null,
+            "checks": [
+              {
+                "name": "Button",
+                "pass": false,
+                "started": "2026-11-06T11:04:54.671Z",
+                "error": "Error: Button ring missing/clipped",
+                "finished": "2026-11-06T11:04:55.100Z"
+              }
+            ]
+          }
+        ],
+        "consoles": [
+          [
+            {
+              "time": "2026-11-06T11:03:38.233Z",
+              "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+              "classification": "known-font-CSP"
+            },
+            {
+              "time": "2026-11-06T11:03:38.234Z",
+              "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+              "classification": "known-font-CSP"
+            }
+          ],
+          [
+            {
+              "time": "2026-11-06T11:04:18.893Z",
+              "message": "Refused to load https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2 because it does not appear in the font-src directive of the Content Security Policy.",
+              "classification": "known-font-CSP"
+            },
+            {
+              "time": "2026-11-06T11:04:18.893Z",
+              "message": "Refused to load https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2 because it does not appear in the font-src directive of the Content Security Policy.",
+              "classification": "known-font-CSP"
+            }
+          ]
+        ]
+      },
+      "focus": {
+        "status": "PASS",
+        "rows": 44,
+        "failures": [],
+        "failedRows": []
+      },
+      "faults": {
+        "status": "PASS",
+        "rows": 6,
+        "failures": [],
+        "failedRows": []
+      }
+    }
+  },
+  "independentLocal": {
+    "archive": "/tmp/s3-final-independent-68743f6.tar.gz",
+    "sha256": "66d4a0134115f652e0a796893bfa0f5826d62474069650a33ff3249c232a873d",
+    "browser": {
+      "rows": 12,
+      "pass": 11,
+      "fail": 1,
+      "focus": 6,
+      "faultAndSafety": 4,
+      "failure": "A 320 dark root200 Tooltip keyboard wait timeout after hover shown"
+    },
+    "audit": {
+      "normalExit": 0,
+      "negativeControls": 9,
+      "allNegativeExit": 1
+    },
+    "clipping": {
+      "normal": true,
+      "injected": false
+    },
+    "partialOutline": {
+      "normal": true,
+      "injected": false
+    }
+  },
+  "ordinaryCI": {
+    "run": 42207105652,
+    "completedSuccessJobs": 5,
+    "pendingJob": 127856394311
+  },
+  "selectCI": {
+    "run": 42207106111,
+    "conclusion": "success",
+    "artifact": 13497656127,
+    "zipSha256": "629fc3c9cbbbcb08ac35ab5ae2a7dda258ed2ef49c19422d6af4535a968203c5"
+  }
+}
