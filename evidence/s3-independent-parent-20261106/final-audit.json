@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-11-06T11:23:35.571032+00:00",
+  "review_kind": "independent source ZIP actual download and byte inspection; not browser reexecution",
+  "head": "68743f6ff857e55f107ec6c1dc7b8e94b8d71511",
+  "tree": "bb7b9b2e5346ea748eea9d45997b61d4d2f1228d",
+  "run": 42207105868,
+  "attempt": 1,
+  "artifact": 13497426548,
+  "zip_sha256": "5ac207cdabe90375349d2ed2165d5bd2e29b240211046b282d328280337a8037",
+  "zip_entries": 715,
+  "crc_bad_entry": null,
+  "manifest_count": 569,
+  "missing_or_hash_mismatch": [],
+  "source_complete": false,
+  "matrix": {
+    "executed": 32,
+    "pass": 8,
+    "fail": 24,
+    "not_executed": 0,
+    "failure": "Button focus ring clipped in all narrow cases; each engine 12"
+  },
+  "focus": {
+    "rows": 44,
+    "pass": 44,
+    "required_cases": 12,
+    "required_pass": 12,
+    "additional_cases": 32,
+    "faults": 14,
+    "regression_sets": 4
+  },
+  "live_faults": {
+    "types": 6,
+    "engines": 2,
+    "all_expected_rejections": true
+  },
+  "independent_runner": {
+    "rows": 24,
+    "pass": 23,
+    "fail": 1,
+    "failure": "WebKit A 320/dark/root200 Tooltip keyboard wait timeout after other component checks passed"
+  },
+  "independent_product_probes": {
+    "tooltip": {
+      "rows": 20,
+      "pass": 0
+    },
+    "button": {
+      "rows": 16,
+      "pass": 4
+    }
+  },
+  "normal_ci": {
+    "run": 42207105652,
+    "final_status": "success",
+    "jobs": 6,
+    "initial_clip_status": "cancelled before check; retained",
+    "final_attempt": 2
+  },
+  "select_ci": {
+    "run": 42207106111,
+    "status": "success"
+  },
+  "image_visual_inspection": [
+    "s3-evidence/focus/webkit-A-keyboard.png: blue outline visible, selected b; no ring clipping observed"
+  ],
+  "limitations": [
+    "Existing sourceComplete=false and auditExit=1 are retained.",
+    "Failed component assertion stops later subassertions in that component; matrix execution count is not all-operation success.",
+    "Local reviewer WebKit launch is NOT_TESTED due missing OS libraries; final WebKit evidence is CI execution and artifact inspection.",
+    "Synthetic valid audit fixture is not a full successful product run."
+  ]
+}
