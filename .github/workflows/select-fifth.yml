@@ -68,6 +68,20 @@ jobs:
         run: |
           node tests/select-webkit-timeline/run.cjs --selftest
           node --test tests/select-webkit-timeline/third-audit.test.cjs tests/select-webkit-timeline/third-wrapper.test.cjs tests/select-webkit-timeline/fourth.test.cjs tests/select-webkit-timeline/fifth.test.cjs
+      - name: Separate native focus timing fixture
+        if: matrix.focus == 'direct'
+        shell: bash
+        env:
+          FIFTH_FIXTURE_ENGINES: ${{ matrix.engine }}
+          FIFTH_FIXTURE_OUT: .work/fifth-evidence-fixture
+        run: node tests/select-webkit-timeline/fifth-focus-fixture.cjs
+      - uses: actions/upload-artifact@v4
+        if: always() && matrix.focus == 'direct'
+        with:
+          name: fifth-native-fixture-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/fifth-evidence-fixture/
+          if-no-files-found: error
+          retention-days: 90
       - name: Twenty matched fresh-page trials
         shell: bash
         env:

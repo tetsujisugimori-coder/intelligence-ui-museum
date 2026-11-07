@@ -10,12 +10,13 @@ function setup(timing){
  for(const type of ['focusin','focusout','keydown','keyup','pointerdown','pointerup'])document.addEventListener(type,e=>take(type,e),true);
  t.addEventListener('keydown',e=>{if(e.key!==' ')return;e.preventDefault();const p=document.createElement('div');p.id='popup';p.tabIndex=0;p.textContent='Press Escape';document.body.append(p);p.focus({preventScroll:true});take('popup-open');
  const restore=()=>{p.remove();take('restore-before');t.focus({preventScroll:true});take('restore-after');window.restored=true;};
- p.addEventListener('keydown',e=>{if(e.key!=='Escape')return;e.preventDefault();if(timing==='keydown-sync')restore();else if(timing==='keydown-next-task')setTimeout(restore,0);});
+ const observer=new MutationObserver(()=>{if(!p.isConnected&&timing==='mutation-observer'){observer.disconnect();restore();}});if(timing==='mutation-observer')observer.observe(document.body,{childList:true});
+ p.addEventListener('keydown',e=>{if(e.key!=='Escape')return;e.preventDefault();if(timing==='keydown-sync')restore();else if(timing==='keydown-next-task')setTimeout(restore,0);else if(timing==='mutation-observer')p.remove();});
  p.addEventListener('keyup',e=>{if(e.key==='Escape'&&timing==='keyup-sync')restore();});
  });
  window.take=take;
 }
-(async()=>{const rows=[];for(const engine of (process.env.FIFTH_FIXTURE_ENGINES||'webkit,chromium').split(',')){const b=await pw[engine].launch();for(const route of ['direct','tab','legacy'])for(const timing of ['keydown-sync','keydown-next-task','keyup-sync'])for(let i=1;i<=5;i++){
+(async()=>{const rows=[];for(const engine of (process.env.FIFTH_FIXTURE_ENGINES||'webkit,chromium').split(',')){const b=await pw[engine].launch();for(const route of ['direct','tab','legacy'])for(const timing of ['keydown-sync','keydown-next-task','keyup-sync','mutation-observer'])for(let i=1;i<=5;i++){
  const p=await b.newPage({viewport:{width:375,height:1000}});const row={engine,browser:b.version(),route,timing,i,errors:[]};rows.push(row);p.on('pageerror',e=>row.errors.push(String(e)));
  try{await p.setContent(html);await p.evaluate(setup,timing);await p.locator('#anchor').click();const t=p.locator('#trigger');if(route==='tab')await p.keyboard.press('Tab');else{await t.focus();if(route==='legacy'){await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');}}
  await p.keyboard.press('Space');await p.waitForFunction(()=>document.activeElement?.id==='popup');await p.keyboard.down('Escape');row.beforeKeyup=await p.evaluate(()=>({active:document.activeElement?.id,visible:document.querySelector('#trigger').matches(':focus-visible'),events:window.events.slice()}));await p.keyboard.up('Escape');await p.waitForFunction(()=>window.restored===true);await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));row.final=await t.evaluate(e=>({active:document.activeElement===e,visible:e.matches(':focus-visible'),outline:getComputedStyle(e).outline,events:window.events}));

@@ -24,3 +24,7 @@ Windows hosted CIは独立物理端末実行ではない。実Safari/物理入�
 一致: 元前段runner、375x1000/light/root100%、製品source hash、Playwright1.56.1、WebKit26という公開version、reuse系列のbrowser lifetime。
 未証明/不一致: 旧実行のOS patch/ホスト負荷/ブラウザ内部buildの完全一致、旧の全イベント順（旧原票に記録なし）、追加full hookの介入、現在Node/runtime、純Tabとdirect経路（明示的対照）。
 旧integrated2/20とbaseline1/20は新規試行分母に合算しない。旧失敗はhistorical derivativeであり元runnerそのものではない。旧JSONが記録していない時刻は復元できない。
+
+## 初期観測を受けた限定追加
+
+第五のWebKit direct試行で、3回のtrigger復帰stackは配布bundleのmuseum fallback MutationObserverのfocus({preventScroll:true})呼出し位置と一致。SDKのsetTimeoutによる復帰をそのまま原因とする仮説を採用しない。SDKファイルは変更しない。native fixtureにMutationObserver復帰を追加し、keydown同期/next task/keyup同期と比較する。これは因果候補の絞込みであり、最小fixtureと実製品の同等性は未証明。
