@@ -1,0 +1,12 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs');
+const {build,SOURCE_HASH}=require('./fourth-source.cjs'),{traceAudit}=require('./fourth-trace-audit.cjs');
+const original=fs.readFileSync(__dirname+'/original-browser.cjs','utf8');
+for(const focus of ['legacy','direct','tab'])test('fixed original prefix retained '+focus,()=>{const s=build({focus});const prefix=s.code.slice(s.code.indexOf("await check('environment'"),s.code.indexOf("await check('Select'"));assert.equal(prefix,original.slice(original.indexOf("await check('environment'"),original.indexOf("await check('Select'")));assert.equal(s.sourceHash,SOURCE_HASH);assert.match(s.code,/attempt<=20/);assert.match(s.code,/fresh\$\{attempt\}/);});
+test('Tab path has no direct focus and verifies explicit Switch anchor',()=>{const s=build({focus:'tab'}).code.split("await check('Select'")[1].split("await p.keyboard.press('Space')")[0];assert.ok(!s.includes('await t.focus()'));assert.match(s,/pure Tab starting anchor/);assert.match(s,/p.keyboard.press\('Tab'\)/);});
+test('source generation rejects invalid trial count/route',()=>{for(const args of [{repeats:0},{repeats:21},{focus:'fake'},{engine:'safari'}])assert.throws(()=>build(args));});
+const geometry={rect:{x:1,y:1,width:10,height:10,left:1,right:11,top:1,bottom:11},inViewport:true,clickable:true};
+const snapshot={ms:1,scrollY:0,hasFocus:true,trigger:geometry,popup:geometry,option:geometry,triggerId:{identity:1},viewport:{width:375,height:1000},expanded:'true'};
+const normal=()=>({level:'full',overflow:false,frames:[snapshot],final:snapshot,events:[{...snapshot,type:'focusin'},{...snapshot,type:'keydown',key:' '},{...snapshot,type:'pointerup',trusted:true,clientX:5,clientY:5,optionTarget:{identity:2,role:'option'},hitOptionAtInput:{identity:2,role:'option'}}]});
+test('valid delivered click accepted',()=>assert.deepEqual(traceAudit(normal(),'full'),[]));
+for(const [name,mutate]of Object.entries({missing:t=>t.events.pop(),untrusted:t=>t.events[2].trusted=false,wrongHit:t=>t.events[2].hitOptionAtInput.identity=99,noCoordinate:t=>delete t.events[2].clientX,offscreen:t=>t.events[2].option={...geometry,inViewport:false},truncated:t=>t.frames=[],collectionError:t=>t.collectionError='lost'}))test('negative delivered evidence '+name,()=>{const t=normal();mutate(t);assert.ok(traceAudit(t,'full').length);});

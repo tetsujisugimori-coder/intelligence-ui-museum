@@ -1,0 +1,82 @@
+name: S3-1 Select fourth matched diagnosis (#28)
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/select-fourth.yml'
+      - 'tests/select-webkit-timeline/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: s3-select-fourth-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  diagnosis:
+    name: ${{ matrix.os }} / ${{ matrix.engine }} / ${{ matrix.level }} / ${{ matrix.focus }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        os: [windows-2025, ubuntu-24.04]
+        engine: [webkit]
+        level: [none, events, full]
+        focus: [legacy]
+        include:
+          - { os: windows-2025, engine: webkit, level: full, focus: direct }
+          - { os: windows-2025, engine: webkit, level: full, focus: tab }
+          - { os: ubuntu-24.04, engine: webkit, level: full, focus: direct }
+          - { os: ubuntu-24.04, engine: webkit, level: full, focus: tab }
+          - { os: ubuntu-24.04, engine: chromium, level: none, focus: legacy }
+          - { os: ubuntu-24.04, engine: chromium, level: events, focus: legacy }
+          - { os: ubuntu-24.04, engine: chromium, level: full, focus: legacy }
+          - { os: ubuntu-24.04, engine: chromium, level: full, focus: direct }
+          - { os: ubuntu-24.04, engine: chromium, level: full, focus: tab }
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build pinned product copy
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          cd .work/v10
+          npm ci --ignore-scripts
+          npm run build
+          npm test
+      - name: Install pinned browser
+        shell: bash
+        working-directory: tools/stage-a-browser
+        run: |
+          npm ci --ignore-scripts
+          if [ "${{ runner.os }}" = "Linux" ]; then
+            npx playwright install --with-deps ${{ matrix.engine }}
+          else
+            npx playwright install ${{ matrix.engine }}
+          fi
+      - name: Preserve old and new oracles
+        shell: bash
+        run: |
+          node tests/select-webkit-timeline/run.cjs --selftest
+          node --test tests/select-webkit-timeline/third-audit.test.cjs tests/select-webkit-timeline/third-wrapper.test.cjs tests/select-webkit-timeline/fourth.test.cjs
+      - name: Twenty matched fresh-page trials
+        shell: bash
+        env:
+          FOURTH_LEVEL: ${{ matrix.level }}
+          FOURTH_FOCUS: ${{ matrix.focus }}
+          FOURTH_ENGINE: ${{ matrix.engine }}
+          FOURTH_REPEATS: '20'
+          FOURTH_OUT: .work/fourth-evidence
+        run: node tests/select-webkit-timeline/fourth-run.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: s3-select-fourth-${{ matrix.os }}-${{ matrix.engine }}-${{ matrix.level }}-${{ matrix.focus }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/fourth-evidence/
+          if-no-files-found: error
+          retention-days: 14
