@@ -27,3 +27,5 @@ Linux新規pilotはdirect各A/B5試行を完走。WebKitは双方5輪郭FAIL、C
 計測用capture listenerでqueueMicrotaskした記録は、WebKit/Chromiumで後段listenerより先に走った。このため`keydown-microtask`をdispatch完了と解釈せず、Playwright keydown配送後の`keydown-settled`を別記録する。微小なタスク境界への影響は残り、未計測版と同等とは保証しない。
 
 独立レビューで6つのtrace/証拠誤受理反例が見つかった。focus-return、MutationObserver、settled取消状態、PNG実在・再計算、条件ID、境界一意性を強化し、同じ反例を拒否する。PNG/hash不整合の成果物を製品PASS件数に数えない。製品修正は行わない。
+
+追加独立反例としてrunner/build manifest空、試行削除と分母縮小の3件も拒否する。外部期待planから全試行ID格子を構成し、HEAD内の必須runner集合、固定5製品source、実build全ファイルとの集合・hash一致を求める。Windowsのbuildパス区切りは記録時に `/` へ正規化する。各原票にもHEAD/tree/OS/Node/SDK/Playwright/画面条件を保存する。
