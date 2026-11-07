@@ -23,9 +23,11 @@ after original checks and does not precede the failing click.
 Primary WindowsWebKit: none/legacy20, events/legacy20, full/legacy20,
 full/direct20, full/pureTab20. LinuxWebKit and LinuxChromium: the same5series.
 Original legacy focus→Tab→ShiftTab unchanged. Direct only locator.focus.
-PureTab verifies the currently focused preceding Switch checkbox left by
-original prefix, then keyboard Shift+Tab backward to Select and its preceding checkbox,
-then a final actual Tab to the trigger. It never calls focus on this route. This is not Tab navigation from document start.
+PureTab records the actual activeElement left by the original prefix, then uses
+only keyboard Shift+Tab (bounded to60) until the explicit Select checkbox anchor
+is reached, followed by an actual Tab to the trigger. It never calls focus on
+this route. It does not assume pointer activation focuses checkboxes equally
+on Windows and Linux, and is not Tab navigation from document start.
 Full probe includes trusted input coordinates and hit tests, activeElement,
 focus-visible, geometry, scroll, viewport, DOM changes and rAF. Minimal events
 omit geometry/rAF. Compare series independently without claiming timing
@@ -63,3 +65,15 @@ at this final stage, without loosening exact font URL/directive validation.
 These are fourth-round diagnostic preflight defects, not explanations of the old
 Windows offscreen failure. Failed runs are retained under fourth-smoke and never
 included as final-head successes.
+
+
+## First committed Windows pureTab RED
+
+At 648cea8, Windows pureTab20/20 stopped before any Select operation because
+its starting-anchor assertion assumed Switch checkbox focus, unlike the observed
+Windows state. This is a fourth-run diagnostic setup defect, not the historical
+offscreen phenomenon. The corrected route records actual start, reaches the
+explicit Select checkbox only by real keyboard navigation, asserts that anchor,
+then Tabs into Select. No direct focus, pointer setup, fixed sleep or product
+change is introduced. The old failure ZIP and missing downstream checks remain
+INCOMPLETE/NOT_TESTED. Final-head CI must be rerun rather than reusing old results.
