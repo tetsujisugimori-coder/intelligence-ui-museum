@@ -59,7 +59,7 @@ jobs:
         shell: bash
         run: |
           node tests/select-webkit-timeline/run.cjs --selftest
-          node --test tests/select-webkit-timeline/third-audit.test.cjs
+          node --test tests/select-webkit-timeline/third-audit.test.cjs tests/select-webkit-timeline/third-wrapper.test.cjs
       - name: Original runner and exact operation contrasts
         shell: bash
         env:

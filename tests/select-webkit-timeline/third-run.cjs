@@ -32,28 +32,33 @@ const app=path.resolve(process.env.APP_ROOT||path.join(repo,'.work/v10'));
 const productSource=Object.fromEntries(['src/main.tsx','src/main.css','src/select-focus-return.ts','package.json','package-lock.json'].map(f=>{const expected=sha(execFileSync('git',['show',`HEAD:apps/v10/${f}`],{cwd:repo}));if(sha(fs.readFileSync(path.join(app,f)))!==expected)throw Error('Isolated source does not match HEAD: '+f);return [f,expected];}));
 try{for(let i=0;i<n;i++){
  const dest=path.join(out,'run-'+String(i+1).padStart(2,'0'));const script=['original','events'].includes(lane)?path.join(__dirname,'original-browser.cjs'):generated;
- const env={...process.env,CODEX_PRIMARY_RUNTIME_NODE_MODULES:path.join(repo,'tools/stage-a-browser/node_modules'),S3_ENGINES:engine,EVIDENCE_DIR:dest,THIRD_PROBE:lane==='events'?'events':lane==='exact'?'full':'none'};
+ const runToken=crypto.randomUUID();
+ const env={...process.env,CODEX_PRIMARY_RUNTIME_NODE_MODULES:path.join(repo,'tools/stage-a-browser/node_modules'),S3_ENGINES:engine,EVIDENCE_DIR:dest,THIRD_RUN_TOKEN:runToken,THIRD_RUNNER_PATH:script,THIRD_PROBE:lane==='events'?'events':lane==='exact'?'full':'none'};
  const p=spawnSync(process.execPath,['--require',path.join(__dirname,'third-preload.cjs'),script],{cwd:repo,env,encoding:'utf8',timeout:420000,maxBuffer:8*1024*1024});
  fs.writeFileSync(path.join(out,`run-${i+1}.stdout.txt`),p.stdout||'');fs.writeFileSync(path.join(out,`run-${i+1}.stderr.txt`),p.stderr||'');
  let result=null;try{result=JSON.parse(fs.readFileSync(path.join(dest,'results.json')));}catch{}
  const expected=lane==='historical'?20:['original','events'].includes(lane)?16:1;
- const select=result?.rows.map(row=>({id:row.id,status:row.status,select:row.checks.find(c=>c.name==='Select'),prefix:row.checks.filter(c=>['environment','layout','Button','Badge','Alert','Switch'].includes(c.name)),errors:row.errors,final:row.final}))||[];
+ const select=Array.isArray(result?.rows)?result.rows.filter(Boolean).map(row=>({id:row.id,status:row.status,select:(Array.isArray(row.checks)?row.checks:[]).find(c=>c?.name==='Select'),prefix:(Array.isArray(row.checks)?row.checks:[]).filter(c=>['environment','layout','Button','Badge','Alert','Switch'].includes(c?.name)),errors:row.errors,final:row.final})):[];
  const ids=lane==='historical'?Array.from({length:20},(_,i)=>`webkit-375-light-100-fresh${i+1}`):['original','events'].includes(lane)?[320,375,390,1280].flatMap(w=>['light','dark'].flatMap(t=>[100,200].map(z=>`${engine}-${w}-${t}-${z}`))):[`${engine}-375-light-100`];
- const auditReasons=require('./third-audit.cjs').audit(result,{head,tree,runner:sha(code),source:productSource,ids},p);
+ const {audit,evidenceAudit,policyCallsite}=require('./third-audit.cjs');
+ const expectedPolicy={runner:sha(code),runToken,policyCallsite:policyCallsite(code)};
+ const receipts=Array.from({length:expected},(_,j)=>{try{return JSON.parse(fs.readFileSync(path.join(dest,`third-policy-${j+1}.json`)));}catch{return null;}});
+ const extraPolicy=fs.existsSync(dest)&&fs.readdirSync(dest).some(f=>f.startsWith('third-policy-')&&!receipts.some((_,j)=>f===`third-policy-${j+1}.json`));
+ const auditReasons=[...audit(result,{head,tree,...expectedPolicy,source:productSource,ids},p,receipts),...evidenceAudit(dest,result),...(extraPolicy?['POLICY_RECEIPT_UNEXPECTED']:[])];
  const complete=auditReasons.length===0;
  const traceFiles=fs.existsSync(dest)?fs.readdirSync(dest).filter(f=>/^third-trace-/.test(f)):[];
  const traceReasons=traceFiles.length===expected?[]:['TRACE_COUNT_MISMATCH'];
  for(let j=1;j<=expected;j++){const name=`third-trace-${j}.json`;try{const t=JSON.parse(fs.readFileSync(path.join(dest,name)));traceReasons.push(...require('./third-audit.cjs').traceAudit(t,env.THIRD_PROBE));}catch{traceReasons.push('TRACE_FILE_MISSING_OR_INVALID');}}
  const traceValid=traceReasons.length===0;
- const unexpectedSelect=select.filter(r=>!r.select?.pass&&!String(r.select?.error).includes('THIRD_POLICY_FORCED_CLICK_NOT_TESTED'));
- runs.push({traceReasons,auditReasons,unexpectedSelect:unexpectedSelect.map(r=>({id:r.id,error:r.select?.error})),run:i+1,exit:p.status,signal:p.signal,error:p.error?String(p.error):null,complete,traceValid,originalSuiteStatus:result?.status||'NOT_TESTED',select});
+ const unexpectedSelect=select.filter((r,j)=>r.select?.pass!==true&&!require('./third-audit.cjs').policyStopValid(result.rows[j],receipts[j],expectedPolicy,j));
+ runs.push({traceReasons,auditReasons,unexpectedSelect:unexpectedSelect.map(r=>({id:r.id,error:r.select?.error})),run:i+1,exit:p.status,signal:p.signal,error:p.error?String(p.error):null,complete,traceValid,originalSuiteStatus:result?.status||'NOT_TESTED',productSuiteStatus:result?.status||'NOT_TESTED',notTested:receipts.map((receipt,j)=>receipt?{id:ids[j],operation:'disabled Select force-click and subsequent Select assertions',status:'NOT_TESTED'}:null).filter(Boolean),select});
  console.log(JSON.stringify({lane,engine,focus,run:i+1,exit:p.status,complete,traceValid}));
 }}finally{fs.unlinkSync(generated);}
 const result={schema:1,head,tree,dirtyAtStart,sourceRunnerCommit:'ea6f19acfd60b37e9b147daa92e79838fd2f3070',sourceRunnerHash:SOURCE_HASH,executedHash:sha(code),lane,engine,focus,repeats:n,platform:os.platform(),release:os.release(),node:process.version,diagnosticHashes:Object.fromEntries(['third-run.cjs','third-preload.cjs','third-probe.cjs','third-audit.cjs'].map(f=>[f,sha(fs.readFileSync(path.join(__dirname,f)))])),interventions,limits:['Original later disabled force-click rejected as NOT_TESTED, not silently executed','Original suite FAIL is not diagnostic proof of Select failure; inspect per-check errors','No product/SDK changes; old evidence not overwritten'],runs};
 result.status=runs.length===n&&runs.every(r=>r.complete&&r.traceValid)?'COMPLETE':'INCOMPLETE';
 fs.writeFileSync(path.join(out,'third-results.json'),JSON.stringify(result,null,2));
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
-result.diagnosticFailures=runs.flatMap(r=>r.unexpectedSelect);
+result.diagnosticFailures=runs.flatMap(r=>[...r.auditReasons,...r.traceReasons,...r.unexpectedSelect]);
 fs.writeFileSync(path.join(out,'third-results.json'),JSON.stringify(result,null,2));
 fs.writeFileSync(path.join(out,'THIRD-SHA256SUMS.json'),JSON.stringify(Object.fromEntries(walk(out).map(f=>[path.relative(out,f).split(path.sep).join('/'),sha(fs.readFileSync(f))])),null,2));
 process.exitCode=result.status==='COMPLETE'&&!result.diagnosticFailures.length?0:1;
