@@ -8,6 +8,12 @@ fs.cpSync(path.join(__dirname,'../fixtures/audit-policy-stop'),dest,{recursive:t
 const file=path.join(dest,'results.json'),r=JSON.parse(fs.readFileSync(file)),row=r.rows[0],find=n=>row.checks.find(c=>c.name===n);
 const receiptFile=path.join(dest,'third-policy-1.json'),receipt=JSON.parse(fs.readFileSync(receiptFile));
 receipt.runToken=process.env.THIRD_RUN_TOKEN;
+if(process.env.THIRD_LANE==='minimal'){
+ r.runner=crypto.createHash('sha256').update(fs.readFileSync(process.env.THIRD_RUNNER_PATH)).digest('hex');receipt.runnerHash=r.runner;
+ const site=require('../third-audit.cjs').policyCallsite(fs.readFileSync(process.env.THIRD_RUNNER_PATH,'utf8'));receipt.callsite={line:site.line,column:site.firstColumn+6,matched:true};
+ const file=path.join(dest,'third-trace-1.json'),t=JSON.parse(fs.readFileSync(file));
+ fs.writeFileSync(file,JSON.stringify({level:'none',final:{scrollY:t.final.scrollY,hasFocus:t.final.hasFocus,active:t.final.active.id}}));
+}
 fs.writeFileSync(receiptFile,JSON.stringify(receipt,null,2));
 for(const k of ['head','tree'])r[k]=execFileSync('git',['rev-parse',k==='head'?'HEAD':'HEAD^{tree}'],{cwd:repo,encoding:'utf8'}).trim();
 switch(process.env.THIRD_REPLAY_CASE){
@@ -30,6 +36,7 @@ switch(process.env.THIRD_REPLAY_CASE){
  case 'null-row':r.rows=[null];break;
  case 'null-check':row.checks[0]=null;break;
  case 'trace-incomplete':{const f=path.join(dest,'third-trace-1.json'),t=JSON.parse(fs.readFileSync(f));t.events=[];fs.writeFileSync(f,JSON.stringify(t));break;}
+ case 'trace-final-type':{const f=path.join(dest,'third-trace-1.json'),t=JSON.parse(fs.readFileSync(f));t.final=true;fs.writeFileSync(f,JSON.stringify(t));break;}
  case 'receipt-missing':fs.unlinkSync(path.join(dest,'third-policy-1.json'));break;
 }
 fs.writeFileSync(file,JSON.stringify(r,null,2));

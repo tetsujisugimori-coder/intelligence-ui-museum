@@ -14,3 +14,8 @@ hash. Deliberate corruption cases change evidence after manifest creation.
 The child is a real subprocess but replays data: these tests are **not** new
 browser trials. `normal` preserves original suite FAIL / child exit 1 and
 diagnostic COMPLETE / wrapper exit 0. Forbidden force-click is never delivered.
+
+The two minimal-lane regression cases also adapt the pinned executed runner hash,
+source callsite and no-hook final-trace shape, so that the only semantic difference
+between their normal/invalid pair is `final: true`. This is fixture preparation,
+not a claim that the historical exact-lane raw was a minimal live execution.

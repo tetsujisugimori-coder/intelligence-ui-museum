@@ -44,7 +44,7 @@ try{for(let i=0;i<n;i++){
  const expectedPolicy={runner:sha(code),runToken,policyCallsite:policyCallsite(code)};
  const receipts=Array.from({length:expected},(_,j)=>{try{return JSON.parse(fs.readFileSync(path.join(dest,`third-policy-${j+1}.json`)));}catch{return null;}});
  const extraPolicy=fs.existsSync(dest)&&fs.readdirSync(dest).some(f=>f.startsWith('third-policy-')&&!receipts.some((_,j)=>f===`third-policy-${j+1}.json`));
- const auditReasons=[...audit(result,{head,tree,...expectedPolicy,source:productSource,ids},p,receipts),...evidenceAudit(dest,result),...(extraPolicy?['POLICY_RECEIPT_UNEXPECTED']:[])];
+ const auditReasons=[...audit(result,{head,tree,...expectedPolicy,source:productSource,ids,resultSchema:lane==='historical'?'historical-v1':'canonical-v1'},p,receipts),...evidenceAudit(dest,result),...(extraPolicy?['POLICY_RECEIPT_UNEXPECTED']:[])];
  const complete=auditReasons.length===0;
  const traceFiles=fs.existsSync(dest)?fs.readdirSync(dest).filter(f=>/^third-trace-/.test(f)):[];
  const traceReasons=traceFiles.length===expected?[]:['TRACE_COUNT_MISMATCH'];

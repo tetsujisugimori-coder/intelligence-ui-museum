@@ -32,7 +32,10 @@ function audit(result,expected,processResult,receipts=[]){
  for(const key of ['head','tree','runner'])if(result[key]!==expected[key])reasons.push(key.toUpperCase()+'_MISMATCH');
  if(!equal(result.source,expected.source))reasons.push('SOURCE_MISMATCH');
  if(result.failures.length)reasons.push('RUN_FAILURE');
- if(result.expected!==expected.ids.length||!equal(result.CHECKS,CHECKS))reasons.push('EXPECTED_CHECKS_MISMATCH');
+ // The byte-pinned historical runner never emitted top-level CHECKS. This
+ // explicit legacy schema exception does not weaken any per-row check.
+ const historical=expected.resultSchema==='historical-v1'&&expected.runner==='94d6111fb59f4c7b192dc20759d1dbad63913efc084f4f8678236f229adb1ee1'&&result.diagnosticNotFormal===true&&result.sourceRunner==='scripts/s3-reaccept/browser.cjs'&&result.sourceRunnerHash==='a2dab597ff18fb5708a5b12d0b1628b59a50d29774aa18c7dd59b114edb30bf1';
+ if(result.expected!==expected.ids.length||(!equal(result.CHECKS,CHECKS)&&!(historical&&result.CHECKS===undefined)))reasons.push('EXPECTED_CHECKS_MISMATCH');
  if(result.rows.length!==expected.ids.length||new Set(result.rows.map(r=>r?.id)).size!==expected.ids.length||result.rows.some((r,i)=>r?.id!==expected.ids[i]))reasons.push('CONDITION_IDS_MISMATCH');
  for(const [i,row] of result.rows.entries()){
   if(!row||typeof row!=='object'){reasons.push('ROW_INVALID');continue;}
@@ -103,6 +106,7 @@ const geometry=g=>g&&g.rect&&['x','y','width','height','top','left','right','bot
 function traceAudit(t,level){
  const reasons=[];
  if(!t||t.collectionError||!t.final)reasons.push('TRACE_FINAL_MISSING');
+ if(!t?.final||typeof t.final!=='object'||Array.isArray(t.final)||!Number.isFinite(t.final.scrollY)||typeof t.final.hasFocus!=='boolean'||(level==='none'&&typeof t.final.active!=='string'))reasons.push('TRACE_FINAL_INVALID');
  if(!t||t.level!==level)reasons.push('TRACE_LEVEL_MISMATCH');
  if(level!=='none'){
   if(!Array.isArray(t?.events)||!t.events.some(e=>e.type==='focusin')||!t.events.some(e=>e.type==='keydown'&&e.key===' '))reasons.push('TRACE_EVENTS_INCOMPLETE');
