@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "kind": "disabled-select-force-click",
+  "blockedBeforeDispatch": true,
+  "page": 1,
+  "runnerHash": "be0d3177e576f26f8a0a55a0392ab13ad9a5d3fb778d4cbf57c538ba8deee650",
+  "selector": "#Select .stage [role=button]",
+  "options": {
+    "force": true
+  },
+  "callsite": {
+    "line": 84,
+    "column": 2074,
+    "matched": true
+  },
+  "recordedAt": "2026-11-07T09:08:21.451Z"
+}

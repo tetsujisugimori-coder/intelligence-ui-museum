@@ -1,0 +1,72 @@
+[
+  {
+    "name": "normal",
+    "exit": 0,
+    "expectedExit": 0,
+    "stdout": "{\"case\":\"normal\",\"reasons\":[]}\n",
+    "stderr": ""
+  },
+  {
+    "name": "signal",
+    "exit": 1,
+    "expectedExit": 1,
+    "stdout": "{\"case\":\"signal\",\"reasons\":[\"PROCESS_ABNORMAL\"]}\n",
+    "stderr": ""
+  },
+  {
+    "name": "crash",
+    "exit": 1,
+    "expectedExit": 1,
+    "stdout": "{\"case\":\"crash\",\"reasons\":[\"PROCESS_ABNORMAL\"]}\n",
+    "stderr": ""
+  },
+  {
+    "name": "missing",
+    "exit": 1,
+    "expectedExit": 1,
+    "stdout": "{\"case\":\"missing\",\"reasons\":[\"CONDITION_IDS_MISMATCH\"]}\n",
+    "stderr": ""
+  },
+  {
+    "name": "duplicate",
+    "exit": 1,
+    "expectedExit": 1,
+    "stdout": "{\"case\":\"duplicate\",\"reasons\":[\"CONDITION_IDS_MISMATCH\"]}\n",
+    "stderr": ""
+  },
+  {
+    "name": "stale",
+    "exit": 1,
+    "expectedExit": 1,
+    "stdout": "{\"case\":\"stale\",\"reasons\":[\"HEAD_MISMATCH\"]}\n",
+    "stderr": ""
+  },
+  {
+    "name": "source",
+    "exit": 1,
+    "expectedExit": 1,
+    "stdout": "{\"case\":\"source\",\"reasons\":[\"SOURCE_MISMATCH\"]}\n",
+    "stderr": ""
+  },
+  {
+    "name": "pageerror",
+    "exit": 1,
+    "expectedExit": 1,
+    "stdout": "{\"case\":\"pageerror\",\"reasons\":[\"PAGEERROR_OR_MISSING\"]}\n",
+    "stderr": ""
+  },
+  {
+    "name": "missingCheck",
+    "exit": 1,
+    "expectedExit": 1,
+    "stdout": "{\"case\":\"missingCheck\",\"reasons\":[\"CHECKS_INCOMPLETE\"]}\n",
+    "stderr": ""
+  },
+  {
+    "name": "spawn",
+    "exit": 1,
+    "expectedExit": 1,
+    "stdout": "{\"case\":\"spawn\",\"reasons\":[\"PROCESS_ABNORMAL\"]}\n",
+    "stderr": ""
+  }
+]

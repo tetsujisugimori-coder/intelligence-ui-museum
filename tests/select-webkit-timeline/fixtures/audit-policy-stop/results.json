@@ -1,0 +1,1128 @@
+{
+  "schema": 1,
+  "head": "8e52ebe049a74abf9f6a9f91f855a12488980f32",
+  "tree": "9a1a8c856f3f4985c5fd965945c59221876301d9",
+  "source": {
+    "src/main.tsx": "132a06181bd2465738277c9efc486cfd5e29c3b6db7e4efae4d0fede951f437f",
+    "src/main.css": "c5cef3463a7e9daa1150a254eec8acfeeb5bded34dcdc0798aec1f1a41687aae",
+    "src/select-focus-return.ts": "0138534d5d40e1f8c033f9ea08a55c3d93255f26897121b2375a1a25bea12c61",
+    "package.json": "465450a25a4fba6112b0173aeab0b3bbce10d98a583d5b68e37636ebdea50c75",
+    "package-lock.json": "d62b5a4f1ffeb6d5463ea64304f561dbef919a30c96050defd115c8b81ae1b46"
+  },
+  "build": {
+    "THIRD_PARTY_NOTICES.txt": "e1335c421d3b5da01c742b4c3013836b1f77bf7449bc6f02a9893a477508eeab",
+    "assets/index-DZhtnZSN.css": "1d53329b828134eb3cdf414ba4800360808bbe823d35561ba2c534ea7dc1e769",
+    "assets/index-RTo4pgDn.js": "943e5f083b6332ab1d4a9d1623c374ef990452c961bfe288efe8aa6756681a16",
+    "assets/index-RTo4pgDn.js.map": "ba7a2f996b25a85a9f2e95874005447014e0f883dc42129573bc294aa1789707",
+    "index.html": "e79710dfdba0b06ad7ec4dd6d061948723cf992ab2443d55fa7fb44ec2469e3c",
+    "qa.html": "4d89460b370442cea96619e8f8781c090ed77acb125bca0282839f5293db4587",
+    "v09-original.html": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97",
+    "v09-viewer.html": "535a9f26834c6c6ef6a178636832fa990793949a61dc19db7e48d689ad82d3b3"
+  },
+  "runner": "be0d3177e576f26f8a0a55a0392ab13ad9a5d3fb778d4cbf57c538ba8deee650",
+  "fault": "",
+  "expected": 1,
+  "CHECKS": [
+    "environment",
+    "layout",
+    "Button",
+    "Badge",
+    "Alert",
+    "Switch",
+    "Select",
+    "Tooltip",
+    "errors"
+  ],
+  "rows": [
+    {
+      "id": "chromium-375-light-100",
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 375,
+      "height": 1000,
+      "theme": "light",
+      "text": 100,
+      "checks": [
+        {
+          "name": "environment",
+          "pass": true,
+          "started": "2026-11-07T09:08:19.781Z",
+          "detail": {
+            "focus": true,
+            "visibility": "visible",
+            "theme": "light",
+            "font": "16px"
+          },
+          "finished": "2026-11-07T09:08:19.782Z"
+        },
+        {
+          "name": "layout",
+          "pass": true,
+          "started": "2026-11-07T09:08:19.783Z",
+          "detail": {
+            "document": {
+              "client": 375,
+              "scroll": 375
+            },
+            "parts": {
+              "Button": {
+                "rect": {
+                  "x": 22,
+                  "y": 402,
+                  "width": 331,
+                  "height": 196,
+                  "top": 402,
+                  "right": 353,
+                  "bottom": 598,
+                  "left": 22
+                },
+                "text": "disabledloading公式ボタンを実行実行回数：0 / disabled：false / loading：false",
+                "clips": [],
+                "texts": [],
+                "pass": true
+              },
+              "Badge": {
+                "rect": {
+                  "x": 23,
+                  "y": 409.6875,
+                  "width": 329,
+                  "height": 180,
+                  "top": 409.6875,
+                  "right": 352,
+                  "bottom": 589.6875,
+                  "left": 23
+                },
+                "text": "Badgeの色 successwarningdanger状態：successoutlinesolid / pill選択色：success",
+                "clips": [],
+                "texts": [],
+                "pass": true
+              },
+              "Alert": {
+                "rect": {
+                  "x": 23,
+                  "y": 353.0625,
+                  "width": 329,
+                  "height": 294,
+                  "top": 353.0625,
+                  "right": 352,
+                  "bottom": 647.0625,
+                  "left": 23
+                },
+                "text": "Alertの色 successwarningdanger通知を閉じる通知：success教材用の状態通知。外部への送信は行いません。通知表示：表示中",
+                "clips": [],
+                "texts": [],
+                "pass": true
+              },
+              "Switch": {
+                "rect": {
+                  "x": 23,
+                  "y": 409.6875,
+                  "width": 329,
+                  "height": 180,
+                  "top": 409.6875,
+                  "right": 352,
+                  "bottom": 589.6875,
+                  "left": 23
+                },
+                "text": "Switch disabled公式通知スイッチ通知：OFF",
+                "clips": [],
+                "texts": [],
+                "pass": true
+              },
+              "Select": {
+                "rect": {
+                  "x": 23,
+                  "y": 402,
+                  "width": 329,
+                  "height": 196,
+                  "top": 402,
+                  "right": 352,
+                  "bottom": 598,
+                  "left": 23
+                },
+                "text": "Select disabled表示モード表示モード：一覧選択値：a（教材の状態表示）",
+                "clips": [],
+                "texts": [],
+                "pass": true
+              },
+              "Tooltip": {
+                "rect": {
+                  "x": 23,
+                  "y": 410.1875,
+                  "width": 329,
+                  "height": 180,
+                  "top": 410.1875,
+                  "right": 352,
+                  "bottom": 590.1875,
+                  "left": 23
+                },
+                "text": "説明を見るトリガー観察：未操作（開閉判定ではない）",
+                "clips": [],
+                "texts": [],
+                "pass": true
+              }
+            }
+          },
+          "finished": "2026-11-07T09:08:19.999Z"
+        },
+        {
+          "name": "Button",
+          "pass": true,
+          "started": "2026-11-07T09:08:19.999Z",
+          "detail": {
+            "count": 3,
+            "disabledStable": true,
+            "loadingStable": true,
+            "paint": {
+              "clipping": [],
+              "rect": {
+                "x": 22,
+                "y": 484,
+                "width": 133.25,
+                "height": 32,
+                "top": 484,
+                "right": 155.25,
+                "bottom": 516,
+                "left": 22
+              },
+              "active": true,
+              "visible": true,
+              "outline": "rgb(209, 118, 36) solid 3px",
+              "afterOutline": "rgb(1, 105, 204) solid 2px",
+              "shadow": "none",
+              "afterShadow": "none",
+              "viewport": {
+                "width": 375,
+                "height": 1000
+              },
+              "pass": true,
+              "unstable": 0,
+              "changed": 1750,
+              "indicators": [
+                {
+                  "x": 22,
+                  "y": 484,
+                  "width": 133.25,
+                  "height": 32,
+                  "pixels": 1750,
+                  "minimum": 83,
+                  "spanX": 147,
+                  "spanY": 46,
+                  "pass": true
+                }
+              ],
+              "threshold": {
+                "channelDelta": 24,
+                "stabilityDelta": 8
+              },
+              "reason": "visible indicator extent evaluated",
+              "images": [
+                "chromium-375-light-100-Button-on.png",
+                "chromium-375-light-100-Button-off.png",
+                "chromium-375-light-100-Button-off2.png",
+                "chromium-375-light-100-Button-on2.png"
+              ]
+            }
+          },
+          "finished": "2026-11-07T09:08:20.616Z"
+        },
+        {
+          "name": "Badge",
+          "pass": true,
+          "started": "2026-11-07T09:08:20.616Z",
+          "detail": {
+            "rect": {
+              "x": 23,
+              "y": 1660.6875,
+              "width": 329,
+              "height": 20,
+              "top": 1660.6875,
+              "right": 352,
+              "bottom": 1680.6875,
+              "left": 23
+            },
+            "text": "状態：warningoutlinesolid / pill",
+            "clips": [],
+            "texts": [],
+            "pass": true
+          },
+          "finished": "2026-11-07T09:08:20.701Z"
+        },
+        {
+          "name": "Alert",
+          "pass": true,
+          "started": "2026-11-07T09:08:20.701Z",
+          "detail": {
+            "reopened": true,
+            "rect": {
+              "x": 23,
+              "y": 535.0625,
+              "width": 329,
+              "height": 94,
+              "top": 535.0625,
+              "right": 352,
+              "bottom": 629.0625,
+              "left": 23
+            },
+            "text": "通知：danger教材用の状態通知。外部への送信は行いません。",
+            "clips": [],
+            "texts": [],
+            "pass": true
+          },
+          "finished": "2026-11-07T09:08:20.813Z"
+        },
+        {
+          "name": "Switch",
+          "pass": true,
+          "started": "2026-11-07T09:08:20.813Z",
+          "detail": {
+            "mouseON": true,
+            "spaceOFF": true,
+            "disabledStable": true
+          },
+          "finished": "2026-11-07T09:08:20.950Z"
+        },
+        {
+          "name": "Select",
+          "pass": false,
+          "started": "2026-11-07T09:08:20.950Z",
+          "error": "Error: THIRD_POLICY_FORCED_CLICK_NOT_TESTED",
+          "finished": "2026-11-07T09:08:21.451Z"
+        },
+        {
+          "name": "Tooltip",
+          "pass": true,
+          "started": "2026-11-07T09:08:21.451Z",
+          "detail": {
+            "hover": {
+              "rect": {
+                "x": 15,
+                "y": 430,
+                "width": 146.640625,
+                "height": 44.296875,
+                "top": 430,
+                "right": 161.640625,
+                "bottom": 474.296875,
+                "left": 15
+              },
+              "text": "公式Tooltipの説明",
+              "clips": [],
+              "texts": [],
+              "pass": true
+            },
+            "keyboard": {
+              "rect": {
+                "x": 15,
+                "y": 430,
+                "width": 146.640625,
+                "height": 44.296875,
+                "top": 430,
+                "right": 161.640625,
+                "bottom": 474.296875,
+                "left": 15
+              },
+              "text": "公式Tooltipの説明",
+              "clips": [],
+              "texts": [],
+              "pass": true
+            },
+            "box": {
+              "x": 15,
+              "y": 430,
+              "width": 146.640625,
+              "height": 44.296875
+            },
+            "closedOnBlur": true
+          },
+          "finished": "2026-11-07T09:08:21.817Z"
+        },
+        {
+          "name": "errors",
+          "pass": true,
+          "started": "2026-11-07T09:08:22.008Z",
+          "detail": {
+            "pageerror": [],
+            "console": [
+              {
+                "time": "2026-11-07T09:08:19.117Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.117Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.118Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.118Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.118Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.118Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.118Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.118Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.118Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              },
+              {
+                "time": "2026-11-07T09:08:19.119Z",
+                "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+                "classification": "known-font-CSP"
+              }
+            ]
+          },
+          "finished": "2026-11-07T09:08:22.008Z"
+        }
+      ],
+      "errors": [],
+      "console": [
+        {
+          "time": "2026-11-07T09:08:19.117Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.117Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.118Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.118Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.118Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.118Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.118Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.118Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.118Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        },
+        {
+          "time": "2026-11-07T09:08:19.119Z",
+          "message": "Refused to load the font 'https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2' because it violates the following Content Security Policy directive: \"font-src 'self'\".\n",
+          "classification": "known-font-CSP"
+        }
+      ],
+      "events": [
+        {
+          "time": 1860.2000000029802,
+          "type": "focusout",
+          "target": {
+            "tag": "INPUT",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 1860.7000000029802,
+          "type": "focusin",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 1863.1000000014901,
+          "type": "keydown",
+          "key": "Tab",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 1863.7000000029802,
+          "type": "focusout",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 1863.8999999985099,
+          "type": "focusin",
+          "target": {
+            "tag": "SUMMARY",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 1865.2000000029802,
+          "type": "keydown",
+          "key": "Shift",
+          "target": {
+            "tag": "SUMMARY",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 1865.3999999985099,
+          "type": "keydown",
+          "key": "Tab",
+          "target": {
+            "tag": "SUMMARY",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 1865.7000000029802,
+          "type": "focusout",
+          "target": {
+            "tag": "SUMMARY",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 1865.8999999985099,
+          "type": "focusin",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 1871.6000000014901,
+          "type": "keydown",
+          "key": " ",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 1877.3999999985099,
+          "type": "focusout",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 1877.6000000014901,
+          "type": "focusin",
+          "target": {
+            "tag": "DIV",
+            "id": "select-list-:r8:",
+            "role": null
+          }
+        },
+        {
+          "time": 1931.8999999985099,
+          "type": "pointerdown",
+          "target": {
+            "tag": "DIV",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 1934.6000000014901,
+          "type": "focusout",
+          "target": {
+            "tag": "DIV",
+            "id": "select-list-:r8:",
+            "role": null
+          }
+        },
+        {
+          "time": 1936,
+          "type": "focusin",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 1979,
+          "type": "keydown",
+          "key": " ",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 1982.1000000014901,
+          "type": "focusout",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 1982.2000000029802,
+          "type": "focusin",
+          "target": {
+            "tag": "DIV",
+            "id": "select-list-:r9:",
+            "role": null
+          }
+        },
+        {
+          "time": 1993.2999999970198,
+          "type": "keydown",
+          "key": "ArrowUp",
+          "target": {
+            "tag": "DIV",
+            "id": "select-list-:r9:",
+            "role": null
+          }
+        },
+        {
+          "time": 2000.1000000014901,
+          "type": "keydown",
+          "key": "Enter",
+          "target": {
+            "tag": "DIV",
+            "id": "select-list-:r9:",
+            "role": null
+          }
+        },
+        {
+          "time": 2002.2999999970198,
+          "type": "focusout",
+          "target": {
+            "tag": "DIV",
+            "id": "select-list-:r9:",
+            "role": null
+          }
+        },
+        {
+          "time": 2003.2999999970198,
+          "type": "focusin",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 2029.2000000029802,
+          "type": "keydown",
+          "key": " ",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 2032.3999999985099,
+          "type": "focusout",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 2032.6000000014901,
+          "type": "focusin",
+          "target": {
+            "tag": "DIV",
+            "id": "select-list-:ra:",
+            "role": null
+          }
+        },
+        {
+          "time": 2040.2999999970198,
+          "type": "keydown",
+          "key": "Escape",
+          "target": {
+            "tag": "DIV",
+            "id": "select-list-:ra:",
+            "role": null
+          }
+        },
+        {
+          "time": 2041.3999999985099,
+          "type": "focusout",
+          "target": {
+            "tag": "DIV",
+            "id": "select-list-:ra:",
+            "role": null
+          }
+        },
+        {
+          "time": 2042.2999999970198,
+          "type": "focusin",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 2348,
+          "type": "pointerdown",
+          "target": {
+            "tag": "INPUT",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 2348.5,
+          "type": "focusout",
+          "target": {
+            "tag": "SPAN",
+            "id": "select-trigger-:r0:",
+            "role": "button"
+          }
+        },
+        {
+          "time": 2348.7000000029802,
+          "type": "focusin",
+          "target": {
+            "tag": "INPUT",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 2585.60000000149,
+          "type": "keydown",
+          "key": "Escape",
+          "target": {
+            "tag": "INPUT",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 2631.39999999851,
+          "type": "focusout",
+          "target": {
+            "tag": "INPUT",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 2631.60000000149,
+          "type": "focusin",
+          "target": {
+            "tag": "BUTTON",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 2714.60000000149,
+          "type": "keydown",
+          "key": "Tab",
+          "target": {
+            "tag": "BUTTON",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 2715,
+          "type": "focusout",
+          "target": {
+            "tag": "BUTTON",
+            "id": "",
+            "role": null
+          }
+        },
+        {
+          "time": 2717,
+          "type": "focusin",
+          "target": {
+            "tag": "SUMMARY",
+            "id": "",
+            "role": null
+          }
+        }
+      ],
+      "images": [
+        "chromium-375-light-100-Button-on.png",
+        "chromium-375-light-100-Button-off.png",
+        "chromium-375-light-100-Button-off2.png",
+        "chromium-375-light-100-Button-on2.png",
+        "chromium-375-light-100-Badge.png",
+        "chromium-375-light-100-Alert.png",
+        "chromium-375-light-100-Select-on.png",
+        "chromium-375-light-100-Select-off.png",
+        "chromium-375-light-100-Select-off2.png",
+        "chromium-375-light-100-Select-on2.png",
+        "chromium-375-light-100-Tooltip.png"
+      ],
+      "buttonPaint": {
+        "clipping": [],
+        "rect": {
+          "x": 22,
+          "y": 484,
+          "width": 133.25,
+          "height": 32,
+          "top": 484,
+          "right": 155.25,
+          "bottom": 516,
+          "left": 22
+        },
+        "active": true,
+        "visible": true,
+        "outline": "rgb(209, 118, 36) solid 3px",
+        "afterOutline": "rgb(1, 105, 204) solid 2px",
+        "shadow": "none",
+        "afterShadow": "none",
+        "viewport": {
+          "width": 375,
+          "height": 1000
+        },
+        "pass": true,
+        "unstable": 0,
+        "changed": 1750,
+        "indicators": [
+          {
+            "x": 22,
+            "y": 484,
+            "width": 133.25,
+            "height": 32,
+            "pixels": 1750,
+            "minimum": 83,
+            "spanX": 147,
+            "spanY": 46,
+            "pass": true
+          }
+        ],
+        "threshold": {
+          "channelDelta": 24,
+          "stabilityDelta": 8
+        },
+        "reason": "visible indicator extent evaluated",
+        "images": [
+          "chromium-375-light-100-Button-on.png",
+          "chromium-375-light-100-Button-off.png",
+          "chromium-375-light-100-Button-off2.png",
+          "chromium-375-light-100-Button-on2.png"
+        ]
+      },
+      "selectPaint": {
+        "clipping": [],
+        "rect": {
+          "x": 23,
+          "y": 484,
+          "width": 329,
+          "height": 32,
+          "top": 484,
+          "right": 352,
+          "bottom": 516,
+          "left": 23
+        },
+        "active": true,
+        "visible": true,
+        "outline": "rgb(24, 37, 37) none 0px",
+        "afterOutline": "rgb(1, 105, 204) solid 2px",
+        "shadow": "none",
+        "afterShadow": "none",
+        "viewport": {
+          "width": 375,
+          "height": 1000
+        },
+        "pass": true,
+        "unstable": 0,
+        "changed": 1466,
+        "indicators": [
+          {
+            "x": 23,
+            "y": 484,
+            "width": 329,
+            "height": 32,
+            "pixels": 1466,
+            "minimum": 181,
+            "spanX": 331,
+            "spanY": 34,
+            "pass": true
+          }
+        ],
+        "threshold": {
+          "channelDelta": 24,
+          "stabilityDelta": 8
+        },
+        "reason": "visible indicator extent evaluated",
+        "images": [
+          "chromium-375-light-100-Select-on.png",
+          "chromium-375-light-100-Select-off.png",
+          "chromium-375-light-100-Select-off2.png",
+          "chromium-375-light-100-Select-on2.png"
+        ]
+      },
+      "csp": [
+        {
+          "time": 40.399999998509884,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_AMS-Regular.woff2"
+        },
+        {
+          "time": 40.399999998509884,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Bold.woff2"
+        },
+        {
+          "time": 40.399999998509884,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Caligraphic-Regular.woff2"
+        },
+        {
+          "time": 40.399999998509884,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Bold.woff2"
+        },
+        {
+          "time": 40.399999998509884,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Fraktur-Regular.woff2"
+        },
+        {
+          "time": 40.399999998509884,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Bold.woff2"
+        },
+        {
+          "time": 40.399999998509884,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-BoldItalic.woff2"
+        },
+        {
+          "time": 40.399999998509884,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Italic.woff2"
+        },
+        {
+          "time": 40.399999998509884,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Main-Regular.woff2"
+        },
+        {
+          "time": 40.399999998509884,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-BoldItalic.woff2"
+        },
+        {
+          "time": 40.5,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Math-Italic.woff2"
+        },
+        {
+          "time": 40.5,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Bold.woff2"
+        },
+        {
+          "time": 40.5,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Italic.woff2"
+        },
+        {
+          "time": 40.5,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_SansSerif-Regular.woff2"
+        },
+        {
+          "time": 40.5,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Script-Regular.woff2"
+        },
+        {
+          "time": 40.5,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size1-Regular.woff2"
+        },
+        {
+          "time": 40.5,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size2-Regular.woff2"
+        },
+        {
+          "time": 40.5,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size3-Regular.woff2"
+        },
+        {
+          "time": 40.5,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Size4-Regular.woff2"
+        },
+        {
+          "time": 40.5,
+          "directive": "font-src",
+          "blocked": "https://cdn.openai.com/common/fonts/katex/KaTeX_Typewriter-Regular.woff2"
+        }
+      ],
+      "final": {
+        "active": {
+          "tag": "SUMMARY",
+          "id": ""
+        },
+        "options": []
+      },
+      "status": "FAIL"
+    }
+  ],
+  "failures": [],
+  "status": "FAIL",
+  "finished": "2026-11-07T09:08:22.038Z"
+}

@@ -1,0 +1,78 @@
+name: S3-1 Select third exact-runner diagnosis (#28)
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/select-webkit-timeline.yml'
+      - 'tests/select-webkit-timeline/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: s3-select-third-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  trace:
+    name: ${{ matrix.os }} / ${{ matrix.lane }} / ${{ matrix.focus }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - { os: windows-2025, lane: original, focus: legacy, repeats: 1 }
+          - { os: windows-2025, lane: events, focus: legacy, repeats: 1 }
+          - { os: windows-2025, lane: historical, focus: legacy, repeats: 1 }
+          - { os: windows-2025, lane: exact, focus: legacy, repeats: 20 }
+          - { os: windows-2025, lane: exact, focus: direct, repeats: 20 }
+          - { os: windows-2025, lane: exact, focus: tab, repeats: 20 }
+          - { os: windows-2025, lane: minimal, focus: legacy, repeats: 20 }
+          - { os: ubuntu-24.04, lane: original, focus: legacy, repeats: 1 }
+          - { os: ubuntu-24.04, lane: exact, focus: legacy, repeats: 20 }
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build fixed source in disposable copy
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          cd .work/v10
+          npm ci --ignore-scripts
+          npm run build
+          npm test
+      - name: Install pinned browser
+        shell: bash
+        working-directory: tools/stage-a-browser
+        run: |
+          npm ci --ignore-scripts
+          if [ "${{ runner.os }}" = "Linux" ]; then
+            npx playwright install --with-deps webkit
+          else
+            npx playwright install webkit
+          fi
+      - name: Oracle negative controls
+        shell: bash
+        run: |
+          node tests/select-webkit-timeline/run.cjs --selftest
+          node --test tests/select-webkit-timeline/third-audit.test.cjs tests/select-webkit-timeline/third-wrapper.test.cjs
+      - name: Original runner and exact operation contrasts
+        shell: bash
+        env:
+          THIRD_LANE: ${{ matrix.lane }}
+          THIRD_FOCUS: ${{ matrix.focus }}
+          THIRD_REPEATS: ${{ matrix.repeats }}
+          THIRD_ENGINE: webkit
+          THIRD_OUT: .work/third-evidence
+        run: node tests/select-webkit-timeline/third-run.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: s3-select-third-${{ matrix.os }}-${{ matrix.lane }}-${{ matrix.focus }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/third-evidence/
+          if-no-files-found: error
+          retention-days: 14

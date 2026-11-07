@@ -1,0 +1,95 @@
+{
+  "packageSHA256": "7f35d90d0be607c6d8d6a32be03c2372dda406ade94be7f0d81e43361cc77c97",
+  "packageEntries": 497,
+  "packageCRCFailure": null,
+  "nested": [
+    {
+      "name": "delegates/integrated-windows.zip",
+      "sha256": "06306fb0030f79dd5e89ce94f0e13ce64121353bf80bfe30106b0df89b56a978",
+      "crcFailure": null,
+      "entries": 830,
+      "manifests": [
+        {
+          "path": "diagnostic-select20/SHA256SUMS.json",
+          "checked": 215,
+          "mismatch": [],
+          "missing": []
+        },
+        {
+          "path": "full-run/faults/alert-reopen/SHA256SUMS.json",
+          "checked": 21,
+          "mismatch": [],
+          "missing": []
+        },
+        {
+          "path": "full-run/faults/body-focus/SHA256SUMS.json",
+          "checked": 15,
+          "mismatch": [],
+          "missing": []
+        },
+        {
+          "path": "full-run/faults/focus-clipped/SHA256SUMS.json",
+          "checked": 23,
+          "mismatch": [],
+          "missing": []
+        },
+        {
+          "path": "full-run/faults/focus-missing/SHA256SUMS.json",
+          "checked": 23,
+          "mismatch": [],
+          "missing": []
+        },
+        {
+          "path": "full-run/faults/pageerror/SHA256SUMS.json",
+          "checked": 19,
+          "mismatch": [],
+          "missing": []
+        },
+        {
+          "path": "full-run/faults/wrong-trigger/SHA256SUMS.json",
+          "checked": 15,
+          "mismatch": [],
+          "missing": []
+        },
+        {
+          "path": "full-run/focus/SHA256SUMS.json",
+          "checked": 45,
+          "mismatch": [],
+          "missing": []
+        },
+        {
+          "path": "full-run/matrix/SHA256SUMS.json",
+          "checked": 349,
+          "mismatch": [],
+          "missing": []
+        },
+        {
+          "path": "SHA256SUMS.json",
+          "checked": 829,
+          "mismatch": [],
+          "missing": []
+        }
+      ]
+    },
+    {
+      "name": "delegates/select-baseline.zip",
+      "sha256": "00d3578895e53a2f3f87b8539533d3f96eef8eb7be9dc006ae181b9efe9b2725",
+      "crcFailure": null,
+      "entries": 232,
+      "manifests": [
+        {
+          "path": "baseline-diagnostic20/SHA256SUMS.json",
+          "checked": 218,
+          "mismatch": [],
+          "missing": []
+        },
+        {
+          "path": "SHA256SUMS.json",
+          "checked": 231,
+          "mismatch": [],
+          "missing": []
+        }
+      ]
+    }
+  ]
+}
