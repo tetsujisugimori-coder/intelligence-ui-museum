@@ -1,0 +1,4 @@
+"use strict";
+const test=require('node:test'),assert=require('node:assert/strict'),{build}=require('./fifth-source.cjs');
+for(const engine of ['chromium','webkit'])for(const lifecycle of ['reuse','fresh'])for(const settling of ['original','raf2'])test(`${engine}/${lifecycle}/${settling}`,()=>{const r=build({engine,lifecycle,settling});assert.equal(r.code.split('await t.click({force:true})').length,2);assert(r.code.includes("await check('Button'"));assert(r.code.includes("await check('Switch'"));assert(r.code.includes("process.exitCode=status==='PASS'?0:1"));assert.equal(r.code.includes(".waitFor();await frames(p);await p.getByRole('option'"),settling==='raf2');if(lifecycle==='fresh')assert(r.code.includes('attempt++){const b=await pw[engine].launch'));});
+for(const options of [{lifecycle:'bogus'},{settling:'sleep'},{repeats:0},{repeats:21}])test(`reject ${JSON.stringify(options)}`,()=>assert.throws(()=>build(options)));

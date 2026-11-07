@@ -1,0 +1,302 @@
+{
+  "kind": "prior original ZIP preserved and digest+CRC rechecked, not new browser execution",
+  "artifacts": [
+    {
+      "id": 13577660909,
+      "name": "select-return-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "8f9ee3b911f1708ea02a383fd0cfc0a8a192316c01f19d4893e6d54421fd4b2d",
+      "bytes": 12055068,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577660909/zip",
+      "expires_at": "2027-02-05T14:01:37Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577602241,
+      "name": "s3-select-third-ubuntu-24.04-original-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "63c600504e6113c410896c1fc490dc2c75dc4b9edf96814951940a10ccab745e",
+      "bytes": 7151862,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577602241/zip",
+      "expires_at": "2026-11-21T14:15:11Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577597673,
+      "name": "s3-select-third-ubuntu-24.04-exact-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "4c0326fdce86d11fdbc130ef6e162052bee617b630cb1f1c038b27f1ed7db34b",
+      "bytes": 7913065,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577597673/zip",
+      "expires_at": "2026-11-21T14:18:25Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577375560,
+      "name": "s3-select-third-windows-2025-original-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "e2dd594e1fd41d17887738b4a850bf0e75de459937a311e135d44200ea511a15",
+      "bytes": 4103298,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577375560/zip",
+      "expires_at": "2026-11-21T14:04:52Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577351397,
+      "name": "s3-select-third-windows-2025-exact-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "6e77dbdfbd1dd5cf85b554fd1d3f5982ff3dc15b8d8cdd7c555a00433d4de295",
+      "bytes": 4581251,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577351397/zip",
+      "expires_at": "2026-11-21T14:12:22Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577146787,
+      "name": "s3-select-third-windows-2025-historical-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "d26bc59e787c1212bd8203806fe41fed890e62df02d2ee110c61014abef55ea9",
+      "bytes": 5844686,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577146787/zip",
+      "expires_at": "2026-11-21T14:10:58Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577058561,
+      "name": "s3-select-third-windows-2025-events-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "92e5d46576c2e69ae9bf5559d3549429ecd7fa942712f98b135b67fdf567aa19",
+      "bytes": 4138846,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577058561/zip",
+      "expires_at": "2026-11-21T14:08:49Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577008327,
+      "name": "s3-select-third-windows-2025-minimal-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "632ab37574817afede9509645ec07d021af1c7e52e7527d6b6bbcd3fb9a1928c",
+      "bytes": 4341841,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577008327/zip",
+      "expires_at": "2026-11-21T14:15:55Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13576684325,
+      "name": "s3-select-third-windows-2025-exact-tab-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "1f035506ad0ce15c964d366e9dc6dfe8ee1773aa895b61975f7329fc5d0e8ec9",
+      "bytes": 4567912,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13576684325/zip",
+      "expires_at": "2026-11-21T14:15:13Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13576619210,
+      "name": "s3-select-third-windows-2025-exact-direct-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "8cd4c450271aab9f263f0d19a5cf5d5e0202948e297479514f6e534e8249d73d",
+      "bytes": 4519288,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13576619210/zip",
+      "expires_at": "2026-11-21T14:12:48Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13576703250,
+      "name": "s3-button-regression-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "ad21a1c6dacbc92ef4a03a9418a2e4bb202dec994aa1afc2196a40df7363f4cd",
+      "bytes": 1446389,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13576703250/zip",
+      "expires_at": "2027-02-05T14:01:37Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577875839,
+      "name": "kanban-audit-cli-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "30d688bd5040d81e6681c5fe43991761a6a44cd9bac6e3978c0d8710099448c3",
+      "bytes": 36674712,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577875839/zip",
+      "expires_at": "2027-02-05T14:01:37Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577851123,
+      "name": "kanban-visual-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "aa4f721785cd4680c2ce86bdfdf31cb736413ac4b8b91f98470ace421e1cc303",
+      "bytes": 56132692,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577851123/zip",
+      "expires_at": "2027-02-05T14:01:37Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577458141,
+      "name": "stage-a-browser-regression-6cb44d41c361d7957697aeffa5b03e8ae98c7066",
+      "sha256": "9fdc672b252c761821b3f62a6f3cf670599a256cabd52a46bb4074622cd72b9d",
+      "bytes": 8471828,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577458141/zip",
+      "expires_at": "2027-02-05T14:01:37Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577457195,
+      "name": "stage-a-browser-clip-6cb44d41c361d7957697aeffa5b03e8ae98c7066",
+      "sha256": "82503e0889b1d5e1c3cc430ddfd8dbca741ea0a23655a14fafb8eee1d8d25570",
+      "bytes": 2825691,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577457195/zip",
+      "expires_at": "2027-02-05T14:01:37Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577356444,
+      "name": "v11-browser-verification-6cb44d41c361d7957697aeffa5b03e8ae98c7066",
+      "sha256": "04707b1879b28b9832b0d94ae2708da5a5bedbdd34232c55cf81fff234985c05",
+      "bytes": 15138480,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577356444/zip",
+      "expires_at": "2027-02-05T14:01:37Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13576779255,
+      "name": "build-verification-6cb44d41c361d7957697aeffa5b03e8ae98c7066",
+      "sha256": "2d4ef0ec353e7c6fd4a2ee7d2326d6433bc98a656e60bd418e3636563852eaf4",
+      "bytes": 606728,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13576779255/zip",
+      "expires_at": "2027-02-05T14:01:37Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13578056730,
+      "name": "s3-select-fourth-ubuntu-24.04-chromium-full-direct-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "39c2eabe7cf52798fa2567b0bbe71a063658ef25f17a72525306f3cd16b25976",
+      "bytes": 8375988,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13578056730/zip",
+      "expires_at": "2026-11-21T14:30:16Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577997227,
+      "name": "s3-select-fourth-ubuntu-24.04-chromium-full-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "089719da25536aef8d99ffd4720b43439aff5d042df56ebfcae73bd4c2ea3525",
+      "bytes": 8383087,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577997227/zip",
+      "expires_at": "2026-11-21T14:29:02Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577847950,
+      "name": "s3-select-fourth-ubuntu-24.04-chromium-events-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "2ace32bce4de7a571d935808320036766c66d09294c02d240d1b8e444ac8f71c",
+      "bytes": 8270419,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577847950/zip",
+      "expires_at": "2026-11-21T14:25:38Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577845602,
+      "name": "s3-select-fourth-ubuntu-24.04-webkit-none-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "2526823b3dc9bd15ea3b58c3e8cabfd25d0920655279c1ec60dd9341e78d7280",
+      "bytes": 9842625,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577845602/zip",
+      "expires_at": "2026-11-21T14:09:22Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577805942,
+      "name": "s3-select-fourth-ubuntu-24.04-webkit-events-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "24767cee240a2e3056ad675c1d6b755934ba294bd8de46bdc1fdc2e2ae9c7ee8",
+      "bytes": 9888288,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577805942/zip",
+      "expires_at": "2026-11-21T14:10:19Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577804017,
+      "name": "s3-select-fourth-ubuntu-24.04-chromium-full-tab-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "42129a45c21fb6d697600293941a9b796c29cb108ec016dc95d62f41f0d9977b",
+      "bytes": 8392521,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577804017/zip",
+      "expires_at": "2026-11-21T14:31:06Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577776738,
+      "name": "s3-select-fourth-ubuntu-24.04-webkit-full-direct-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "a6fa4118c0725e130e0aaae1da46f712c2ac22b80bb06daa5a3d3f5b6f338bb6",
+      "bytes": 9970452,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577776738/zip",
+      "expires_at": "2026-11-21T14:15:49Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577620347,
+      "name": "s3-select-fourth-windows-2025-webkit-events-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "7f741abd090a73d1a8737e61003d8341a3d304f1f8baeaa5832190be401f8c59",
+      "bytes": 5434885,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577620347/zip",
+      "expires_at": "2026-11-21T14:06:17Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577551086,
+      "name": "s3-select-fourth-windows-2025-webkit-full-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "5949e45aeba10a1c08726a35c72ae0cc6886e1d95a09a7750459acb7f0d13a44",
+      "bytes": 5637721,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577551086/zip",
+      "expires_at": "2026-11-21T14:06:44Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577451973,
+      "name": "s3-select-fourth-ubuntu-24.04-webkit-full-tab-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "d489ed7b56cbcf2cfec178ac30caa45ff2de16f98dee27579a987ee6a7a0ac0b",
+      "bytes": 10021029,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577451973/zip",
+      "expires_at": "2026-11-21T14:21:16Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13577296593,
+      "name": "s3-select-fourth-windows-2025-webkit-full-tab-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "44c3e72a00979d6aa576fd716f56327fc32698307f0fac9b106980b733b85dd5",
+      "bytes": 5636649,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13577296593/zip",
+      "expires_at": "2026-11-21T14:13:55Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13576948193,
+      "name": "s3-select-fourth-ubuntu-24.04-webkit-full-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "fa2be9ad244d85f5616f43e55090a5a396a3385d576c8753bb671dc3420ebed9",
+      "bytes": 10011285,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13576948193/zip",
+      "expires_at": "2026-11-21T14:11:43Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13576884815,
+      "name": "s3-select-fourth-ubuntu-24.04-chromium-none-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "85555aaa55c4c3c096cc872fc3b7a62ddf0a9fdb646632364fe8d420b9af7a3e",
+      "bytes": 8217830,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13576884815/zip",
+      "expires_at": "2026-11-21T14:25:28Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13576798851,
+      "name": "s3-select-fourth-windows-2025-webkit-full-direct-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "4a9561d0db1867ad5115552221507b7b6d57b74d68f4f46368f04104e80ff1a4",
+      "bytes": 5587605,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13576798851/zip",
+      "expires_at": "2026-11-21T14:13:50Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13576798052,
+      "name": "s3-select-fourth-windows-2025-webkit-none-legacy-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "3b1ccb5062e31b32ded56eeaa2540686cfdb976e82dd37e801fb1622fc7b9802",
+      "bytes": 5386300,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13576798052/zip",
+      "expires_at": "2026-11-21T14:05:58Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    },
+    {
+      "id": 13576918858,
+      "name": "s3-tooltip-regression-64da60e9b4b1c3934b2000f73b19236cf77ef05c",
+      "sha256": "2570aa0bfa4fd4e9d2656e7871e7be17ace3af7f204df36982e4ed698283187d",
+      "bytes": 611019,
+      "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/13576918858/zip",
+      "expires_at": "2027-02-05T14:01:37Z",
+      "head": "64da60e9b4b1c3934b2000f73b19236cf77ef05c"
+    }
+  ]
+}
