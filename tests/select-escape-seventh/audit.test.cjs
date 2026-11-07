@@ -28,3 +28,11 @@ const cases={
  'trial status false':r=>{r.status='FAIL';},
 };
 for(const [name,mutate]of Object.entries(cases))test('reject '+name,()=>{const r=copy();mutate(r);assert.equal(auditRow(r).diagnosticOK,false);});
+
+test('directory rejects row measurement downgrade against external full plan',()=>{
+ const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),crypto=require('node:crypto'),{auditDirectory}=require('./audit.cjs');
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'seventh-mode-')),r=copy();r.mode='none';r.trace.events=[];
+ const plan={engines:['webkit'],routes:['direct'],repeats:1,conditions:['A','B','C','D'],mode:'full'},result={plan,head:r.head,tree:r.tree,node:r.node,os:r.os,expected:4,rows:[r],failures:[],expectedExitCode:0,source:Object.fromEntries(['src/main.tsx','src/main.css','src/select-focus-return.ts','package.json','package-lock.json'].map(f=>[f,'a'.repeat(64)])),runnerSource:{'tests/select-escape-seventh/run.cjs':'b'.repeat(64)}};
+ fs.writeFileSync(path.join(dir,r.id+'.json'),JSON.stringify(r));fs.writeFileSync(path.join(dir,'results.json'),JSON.stringify(result));const manifest=Object.fromEntries(fs.readdirSync(dir).map(f=>[f,crypto.createHash('sha256').update(fs.readFileSync(path.join(dir,f))).digest('hex')]));fs.writeFileSync(path.join(dir,'SHA256SUMS.json'),JSON.stringify(manifest));
+ const a=auditDirectory(dir,{plan,execution:{exitCode:0,signal:null,error:null,command:'tests/select-escape-seventh/run.cjs',commandSha256:'b'.repeat(64)}});assert(a.reasons.some(x=>x.startsWith('trial-measurement-mode-mismatch')));
+});
