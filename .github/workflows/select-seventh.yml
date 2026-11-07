@@ -98,5 +98,6 @@ jobs:
             .work/seventh-pilot*
             .work/seventh-neutral-*
             .work/sixth-negative/
+          include-hidden-files: true
           if-no-files-found: error
           retention-days: 90
