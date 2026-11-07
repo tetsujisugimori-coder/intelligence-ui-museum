@@ -1,0 +1,102 @@
+name: S3-1 Select seventh cancellation paths (#28)
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/select-seventh.yml'
+      - 'tests/select-escape-seventh/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: s3-select-seventh-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  comparison:
+    name: ${{ matrix.os }} / ${{ matrix.engine }} / cancellation paths
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: windows-2025, engine: webkit }
+          - { os: ubuntu-24.04, engine: webkit }
+          - { os: ubuntu-24.04, engine: chromium }
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare immutable product and isolated builds
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          cd .work/v10
+          npm ci --ignore-scripts
+          npm run build
+          npm test
+          for root in seventh-build seventh-build-reference; do
+            for mode in plain tapped; do
+              for condition in A B C D; do
+                SEVENTH_BUILD_ROOT=../../.work/$root SEVENTH_INSTRUMENTATION=$mode SEVENTH_CONDITION=$condition node node_modules/vite/bin/vite.js build --config ../../tests/select-escape-seventh/vite.config.mjs
+              done
+            done
+          done
+          SIXTH_CONDITION=A node node_modules/vite/bin/vite.js build --config ../../tests/select-escape-sixth/vite.config.mjs
+          SIXTH_CONDITION=B node node_modules/vite/bin/vite.js build --config ../../tests/select-escape-sixth/vite.config.mjs
+          cd ../..
+          node tests/select-escape-seventh/build-audit.cjs .work/seventh-build .work/seventh-build-reference
+      - name: Install pinned browser
+        shell: bash
+        working-directory: tools/stage-a-browser
+        run: |
+          npm ci --ignore-scripts
+          if [ "${{ runner.os }}" = "Linux" ]; then npx playwright install --with-deps ${{ matrix.engine }}; else npx playwright install ${{ matrix.engine }}; fi
+      - name: Preserve old tests and run new units
+        shell: bash
+        run: |
+          node tests/select-webkit-timeline/run.cjs --selftest
+          node --test tests/select-webkit-timeline/third-audit.test.cjs tests/select-webkit-timeline/third-wrapper.test.cjs tests/select-webkit-timeline/fourth.test.cjs tests/select-webkit-timeline/fifth.test.cjs tests/select-escape-sixth/audit.test.cjs tests/select-escape-seventh/audit.test.cjs
+      - name: Four-condition full pilot separate routes
+        shell: bash
+        env:
+          SEVENTH_ENGINES: ${{ matrix.engine }}
+          SEVENTH_ROUTES: direct,tab,legacy
+          SEVENTH_REPEATS: '2'
+          SEVENTH_MODE: full
+          SEVENTH_OUT: .work/seventh-pilot
+        run: |
+          node tests/select-escape-seventh/execute.cjs
+          node tests/select-escape-seventh/audit.cjs .work/seventh-pilot
+      - name: Measurement neutrality separate direct cohort
+        shell: bash
+        env:
+          SEVENTH_ENGINES: ${{ matrix.engine }}
+          SEVENTH_ROUTES: direct
+          SEVENTH_REPEATS: '2'
+        run: |
+          for mode in none minimal full; do
+            export SEVENTH_MODE=$mode SEVENTH_OUT=.work/seventh-neutral-$mode
+            node tests/select-escape-seventh/execute.cjs
+            node tests/select-escape-seventh/audit.cjs "$SEVENTH_OUT"
+          done
+      - name: Preserve sixth delivered fault controls
+        shell: bash
+        env:
+          SIXTH_ENGINES: ${{ matrix.engine }}
+        run: node tests/select-escape-sixth/negative.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seventh-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            .work/seventh-build/
+            .work/seventh-build-reference/
+            .work/seventh-pilot*
+            .work/seventh-neutral-*
+            .work/sixth-negative/
+          if-no-files-found: error
+          retention-days: 90
