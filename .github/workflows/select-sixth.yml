@@ -63,6 +63,11 @@ jobs:
         run: |
           node tests/select-escape-sixth/run.cjs
           node tests/select-escape-sixth/audit.cjs .work/sixth-primary
+      - name: Separate independent native fixture
+        shell: bash
+        env:
+          SIXTH_ENGINES: ${{ matrix.engine }}
+        run: node tests/select-escape-sixth/native-independent.cjs
       - name: Separate real Tab and legacy routes
         shell: bash
         env:
@@ -87,5 +92,6 @@ jobs:
             .work/sixth-primary/
             .work/sixth-routes/
             .work/sixth-negative/
+            .work/sixth-native/
           if-no-files-found: error
           retention-days: 90

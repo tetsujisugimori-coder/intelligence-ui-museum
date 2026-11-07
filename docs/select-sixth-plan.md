@@ -17,3 +17,13 @@ preventDefault/focus/MutationObserverの計測は両条件共通。performance.n
 ## 限界と安全境界
 
 既存第1〜5回、製品・SDK・lock・公開版は不変。旧persistent offscreenをこの限定実験で解消したとはしない。実機Safari、物理入力、VoiceOverはNOT_TESTED。Windows hosted CIを実機独立操作と呼ばない。PR #23/#29マージNO、Stage 3 HOLD。
+
+## 初期観測と比較の限界
+
+Linux新規pilotはdirect各A/B5試行を完走。WebKitは双方5輪郭FAIL、Chromiumは双方5輪郭PASS。Aの取消2回のうち、helpers.js:97 ← Radix dismissable-layer:95 が先にfalse→trueへ変更し、useEscCloseStack.js:10は既にtrueのイベントを再度取消した。Bは後者だけを除去し、前者とMuseum select-focus-return.ts:40のMutationObserverによるfocus復帰を保持する。
+
+この冗長取消が存在する限り試行を20へ増やしても「全取消の有無」という未成立の介入を成立させられない。今回主系列は各5とし、独立native対照と別入力系列で範囲を確認する。原因分類C/UNKNOWNを維持する。
+
+計測用capture listenerでqueueMicrotaskした記録は、WebKit/Chromiumで後段listenerより先に走った。このため`keydown-microtask`をdispatch完了と解釈せず、Playwright keydown配送後の`keydown-settled`を別記録する。微小なタスク境界への影響は残り、未計測版と同等とは保証しない。
+
+独立レビューで6つのtrace/証拠誤受理反例が見つかった。focus-return、MutationObserver、settled取消状態、PNG実在・再計算、条件ID、境界一意性を強化し、同じ反例を拒否する。PNG/hash不整合の成果物を製品PASS件数に数えない。製品修正は行わない。

@@ -24,6 +24,10 @@ function auditRow(r){
  if(!selected.some(e=>e.kind==='mutation-callback'&&e.stack))fail('mutation-callback-missing');
  if(selected.find(e=>e.kind==='keydown-settled')?.defaultPrevented!==true)fail('settled-cancellation-contradiction');
  if(before.length!==(r.condition==='A'?2:1))fail('unexpected-cancel-count');
+ const cancellation=selected.filter(e=>e.kind.startsWith('preventDefault-'));
+ if(cancellation.some((e,i)=>e.kind!==(i%2?'preventDefault-after':'preventDefault-before')||e.key!=='Escape'||e.trusted!==true||e.defaultPrevented!==(i>0)))fail('cancel-order-state');
+ const lastCancel=selected.map(e=>e.kind).lastIndexOf('preventDefault-after'),settled=selected.findIndex(e=>e.kind==='keydown-settled'),returned=selected.findIndex((e,i)=>i>focus&&e.kind==='focus-return');
+ if(!(down<selected.findIndex(e=>e.kind==='preventDefault-before')&&lastCancel<settled&&settled<up&&focus>down&&returned>focus))fail('event-causal-order');
  }
  if(!r.paint||!Array.isArray(r.paint.images)||r.paint.images.length!==4||new Set(r.paint.images).size!==4||!Number.isFinite(r.paint.changed)||!Array.isArray(r.paint.clipping)||typeof r.paint.active!=='boolean'||typeof r.paint.visible!=='boolean'||typeof r.paint.pass!=='boolean')fail('paint-evidence');
  if(!Array.isArray(r.images)||r.paint?.images?.some(f=>!r.images.includes(f)))fail('paint-manifest-membership');
@@ -35,11 +39,13 @@ function auditDirectory(dir, expected={}){
  const reasons=[],manifest=JSON.parse(fs.readFileSync(path.join(dir,'SHA256SUMS.json'))),r=JSON.parse(fs.readFileSync(path.join(dir,'results.json')));
  const actual=fs.readdirSync(dir).filter(f=>f!=='SHA256SUMS.json').sort();if(JSON.stringify(actual)!==JSON.stringify(Object.keys(manifest).sort()))reasons.push('manifest-coverage');
  for(const [f,h]of Object.entries(manifest)){if(f!==path.basename(f)||!fs.existsSync(path.join(dir,f))||sha(fs.readFileSync(path.join(dir,f)))!==h)reasons.push('hash-'+f);}
+ if(expected.repo){const {execFileSync}=require('node:child_process');for(const [f,h]of Object.entries({...Object.fromEntries(Object.entries(r.source||{}).map(([f,h])=>['apps/v10/'+f,h])),...(r.runnerSource||{})})){try{if(sha(execFileSync('git',['show',`${r.head}:${f}`],{cwd:expected.repo}))!==h)reasons.push('source-hash-'+f);}catch{reasons.push('source-unavailable-'+f);}}if(!r.runnerSource||Object.keys(r.source||{}).length!==5)reasons.push('source-manifest-missing');}
+ if(expected.buildRoot){for(const [f,h]of Object.entries(r.build||{})){const actual=path.resolve(expected.buildRoot,f);if(!actual.startsWith(path.resolve(expected.buildRoot)+path.sep)||!fs.existsSync(actual)||sha(fs.readFileSync(actual))!==h)reasons.push('build-hash-'+f);}}
  if(expected.head&&r.head!==expected.head)reasons.push('head-mismatch');if(expected.tree&&r.tree!==expected.tree)reasons.push('tree-mismatch');
  if(!/^[a-f0-9]{40}$/.test(r.head)||!/^[a-f0-9]{40}$/.test(r.tree)||r.failures.length||r.rows.length!==r.expected)reasons.push('run-metadata');
  const ids=new Set();for(const row of r.rows){if(ids.has(row.id))reasons.push('duplicate-trial');ids.add(row.id);const a=auditRow(row);reasons.push(...a.reasons.map(x=>row.id+':'+x));if(!manifest[row.id+'.json']||JSON.stringify(JSON.parse(fs.readFileSync(path.join(dir,row.id+'.json'))))!==JSON.stringify(row))reasons.push('raw-row-'+row.id);for(const f of [...(row.images||[]),...(row.paint?.images||[])])if(!manifest[f])reasons.push('missing-image-'+f);
  if(row.paint?.images?.length===4&&row.paint.images.every(f=>f===path.basename(f)&&fs.existsSync(path.join(dir,f)))){try{const {PNG}=require('../../tools/stage-a-browser/node_modules/playwright-core/lib/utilsBundle.js'),{measure}=require('../../apps/v10/scripts/stage2r-focus-pixels.cjs');const g=row.paint.rect,decoded=row.paint.images.map(f=>PNG.sync.read(fs.readFileSync(path.join(dir,f))));const m=measure(decoded,{x:Math.max(0,Math.floor(g.x-24)),y:Math.max(0,Math.floor(g.y-24))},[{x:g.x,y:g.y,width:g.width,height:g.height}]);if(m.changed!==row.paint.changed||m.unstable!==row.paint.unstable||JSON.stringify(m.indicators)!==JSON.stringify(row.paint.indicators))reasons.push('pixel-recalculation-'+row.id);}catch{reasons.push('invalid-PNG-'+row.id);}}}
- return {diagnosticOK:!reasons.length,productPass:r.rows.filter(x=>auditRow(x).productOK).length,productFail:r.rows.filter(x=>!auditRow(x).productOK).length,reasons};
+ return {diagnosticOK:!reasons.length,productPass:reasons.length?0:r.rows.filter(x=>auditRow(x).productOK).length,productFail:r.rows.filter(x=>!auditRow(x).productOK).length,unverified:reasons.length?r.rows.length:0,reasons};
 }
 module.exports={auditRow,auditDirectory};
-if(require.main===module){const r=auditDirectory(process.argv[2]);console.log(JSON.stringify(r,null,2));process.exitCode=r.diagnosticOK?0:1;}
+if(require.main===module){const {execFileSync}=require('node:child_process'),git=x=>execFileSync('git',x,{encoding:'utf8'}).trim();const r=auditDirectory(process.argv[2],{repo:process.cwd(),buildRoot:path.resolve('.work/sixth-build'),head:process.env.SIXTH_EXPECTED_HEAD||git(['rev-parse','HEAD']),tree:process.env.SIXTH_EXPECTED_TREE||git(['rev-parse','HEAD^{tree}'])});console.log(JSON.stringify(r,null,2));process.exitCode=r.diagnosticOK?0:1;}
