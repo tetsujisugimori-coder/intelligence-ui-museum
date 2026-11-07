@@ -28,3 +28,7 @@ plain buildは2取消箇所以外不変。tapped buildは4条件共通のcallsit
 ## 禁止と未検証
 
 force-click、assert緩和、任意sleep増量、製品修正、公開、merge、HOLD解除は禁止。実機Safari・物理入力・VoiceOverはNOT_TESTED。独立レビューと原ZIP照合後に限定結果を提出する。
+
+## pilotで確認した収集境界の修正
+
+最初のcandidate24件はSDK操作COMPLETEだが、Chromium4件でSDK復帰timerが即時target-complete記録より後に発火し監査不完全。旧rawを保持。keydown/up・待機・assertは変えず、区間終了マーカーだけを既存の輪郭PNG測定完了後へ移し、描画収束までの非同期timerを収集する。旧区間が完全だったとは再分類しない。
