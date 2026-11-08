@@ -5,9 +5,11 @@ function validate(row){const e=[];const r=row?.result;
  if(row?.status!=='COMPLETE'||!Array.isArray(row.errors)||row.errors.length||row.error||(row.exitCode!=null&&row.exitCode!==0))e.push('execution');
  if(!['chromium','webkit'].includes(row?.engine)||!['direct','tab'].includes(row?.route)||!['none','minimal','detail'].includes(row?.measurement)||!['pilot','formal'].includes(row?.phase)||!Number.isInteger(row?.iteration)||row.iteration<1)e.push('identity');
  for(const k of ['buildHash','sourceHash'])if(!/^[a-f0-9]{64}$/.test(row?.[k]||''))e.push('hash:'+k);
+ if(!/^[a-f0-9]{64}$/.test(row?.pngSha256||''))e.push('PNG-evidence');
  if(!['native','paired-cancel','paired-plain'].includes(row?.condition))e.push('condition');
  if(r?.runtimeCondition!==row.condition||r?.runtimeMeasurement!==row.measurement)e.push('runtime-config');
  if(!r||r.expanded!=='false'||r.popupPresent!==false||r.focused!==true||r.value!=='a'||r.pageErrors!==0)e.push('closed-value-focus');
+ if(!r||!Object.hasOwn(r,'focusVisible')||typeof r.focusVisible!=='boolean')e.push('focus-visible-observation');
  if(typeof row?.before?.triggerOuterHTML!=='string'||!row.before.triggerOuterHTML.length||!/^[a-f0-9]{64}$/.test(row?.before?.cssHash||''))e.push('DOM-CSS-evidence');
  if(!Array.isArray(r?.events))e.push('event-evidence');
  if(!row?.before?.popupPresent||row.before.expanded!=='true')e.push('popup-not-opened');
@@ -20,13 +22,28 @@ function validate(row){const e=[];const r=row?.result;
  const close=get('react-close-request').filter(x=>x.nextState===false);
  if(close.length!==1)e.push('close-count');
  const ci=es.findIndex(e=>e.kind==='react-close-request'&&e.nextState===false),mo=es.findIndex((e,i)=>i>ci&&e.kind==='museum-observer'),dom=es.findIndex((e,i)=>i>ci&&e.kind==='observer-dom'&&e.popup===false);
+ // These source-tagged marker kinds are stable callsite IDs from the pinned
+ // transform. The close owner is Select's useEscCloseStack callback; its
+ // marker must immediately precede the shared handleOpenChange(false) call.
+ // Raw Error.stack is diagnostic only (URLs, offsets and names vary by build).
+ if(ci!==ix('esc-stack-close')+1||get('radix-on-open-change').some(x=>x.nextState===false))e.push('close-owner-route');
  if(!(ix('esc-stack-close')<ci&&ci<mo&&mo<ix('museum-focus-return')&&ci<dom&&dom<ix('keyup')))e.push('close-observer-order');
  if(get('select-escape-before')[0]?.cancelled!==false||get('radix-escape')[0]?.cancelled!==false||get('stack-before')[0]?.cancelled!==(row.condition!=='paired-plain'))e.push('cancel-before-contradiction');
  if(!(ix('keydown')<ix('radix-escape')&&ix('radix-escape')<ix('select-escape-before')&&ix('select-escape-before')<ix('stack-before')&&ix('stack-before')<ix('esc-stack-close')&&ix('esc-stack-close')<ix('museum-focus-return')&&ix('museum-focus-return')<ix('keyup')&&ix('keydown-final')<ix('keyup')))e.push('event-order');
  const chain=['keydown','radix-escape','select-escape-before','select-escape-after','radix-fallback-gate','stack-before','stack-after','esc-stack-close'];
  if(chain.some((k,i)=>i>0&&ix(chain[i-1])>=ix(k)))e.push('callsite-order');
  const li=es.findIndex((x,i)=>i>ci&&x.kind==='react-layout-after-commit'&&x.open===false);
+ if(es.filter((x,i)=>i>ci&&x.kind==='react-layout-after-commit'&&x.open===false).length!==1)e.push('close-commit-count');
  if(!(ci<li&&li<mo&&li<dom))e.push('react-layout-order');
+ const triggerId=row?.before?.triggerOuterHTML?.match(/\bid="([^"]+)"/)?.[1];
+ const fi=es.findIndex((x,i)=>i>ix('museum-focus-return')&&x.kind==='focusin'&&x.target===triggerId);
+ if(!triggerId||r.active!==triggerId||!(ix('museum-focus-return')<fi&&fi<ix('keyup')))e.push('focus-return-target-order');
+ // Reopening or losing focus later cannot be hidden by a contradictory final snapshot.
+ if(es.some((x,i)=>i>ci&&((x.kind==='react-close-request'&&x.nextState!==false)||(x.kind==='react-layout-after-commit'&&x.open!==false))))e.push('reopen-after-close');
+ const domAfter=es.filter((x,i)=>i>ci&&x.kind==='observer-dom'),lastDOM=domAfter.at(-1);
+ if(lastDOM?.popup!==false||lastDOM?.expanded!=='false')e.push('final-DOM-observation');
+ const focusAfter=es.filter((x,i)=>i>ix('museum-focus-return')&&x.kind==='focusin');
+ if(focusAfter.at(-1)?.target!==triggerId||get('keyup')[0]?.active!==triggerId)e.push('final-focus-observation');
  for(const call of get('cancel-call')){const i=es.indexOf(call),before=call.owner==='select'?'select-escape-before':'stack-before',after=call.owner==='select'?'select-escape-after':'stack-after';if(!(ix(before)<i&&i<ix(after)))e.push('cancel-call-order');}
  const selectSource='@openai/apps-sdk-ui/dist/es/components/Select/Select.js',stackSource='@openai/apps-sdk-ui/dist/es/hooks/useEscCloseStack.js',radixSource='@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs';
  const sourceFor=k=>['select-escape-before','select-escape-after','react-close-request','react-layout-after-commit','esc-stack-close','radix-on-open-change'].includes(k)?selectSource:['stack-before','stack-after'].includes(k)?stackSource:['radix-escape','radix-fallback-gate','radix-fallback'].includes(k)?radixSource:['museum-observer','museum-focus-return'].includes(k)?'select-focus-return.ts':null;

@@ -36,6 +36,7 @@ function neutral(){const errors=[];for(const route of plan.routes)for(const cond
  for(const m of plan.measurements)for(const f of buildFiles[m])fs.copyFileSync(path.join(root,'dist-'+m,'assets',f),path.join(out,m+'-asset-'+f));
  fs.writeFileSync(path.join(out,'preserved-originals.json'),JSON.stringify(preserved,null,2));
  const manifest=Object.fromEntries(fs.readdirSync(out).map(f=>[f,sha(fs.readFileSync(path.join(out,f)))]));fs.writeFileSync(path.join(out,'SHA256SUMS.json'),JSON.stringify(manifest,null,2));
- process.exitCode=fatal||rows.length!==(formal?116:36)||rows.some(r=>r.status!=='COMPLETE')?1:0;
+ // A stopped pilot is preserved diagnostic evidence, never a successful run.
+ process.exitCode=fatal||!formal||rows.length!==116||rows.some(r=>r.status!=='COMPLETE')||result.formalPairs.some(p=>p.classification!=='COMPARABLE_WITH_COMMON_INTERVENTIONS')?1:0;
  console.log(JSON.stringify({engine,rows:rows.length,formal,pilotPairs,neutrality,fatal,exit:process.exitCode},null,2));
 })();
