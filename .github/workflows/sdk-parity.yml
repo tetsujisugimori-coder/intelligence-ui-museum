@@ -1,0 +1,82 @@
+name: Round 8 SDK common-intervention parity
+on:
+  pull_request:
+    paths:
+      - 'tests/sdk-parity/**'
+      - '.github/workflows/sdk-parity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: sdk-parity-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  parity:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: ubuntu-24.04, engine: chromium}
+          - {os: ubuntu-24.04, engine: webkit}
+          - {os: windows-2025, engine: webkit}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare isolated copy without changing product or lock
+        shell: bash
+        run: |
+          node tests/sdk-parity/prepare.cjs
+          npm --prefix .work/sdk-parity ci --ignore-scripts --no-audit --no-fund
+          npm --prefix tools/stage-a-browser ci --ignore-scripts
+          cd tools/stage-a-browser
+          if [ '${{ runner.os }}' = 'Linux' ]; then
+            npx playwright install --with-deps ${{ matrix.engine }}
+          else
+            npx playwright install ${{ matrix.engine }}
+          fi
+      - name: Build three measurement conditions
+        shell: bash
+        run: |
+          cd .work/sdk-parity
+          for measure in none minimal detail; do
+            VITE_MEASURE=$measure node node_modules/vite/bin/vite.js build --config vite.config.mjs
+          done
+      - name: Validator fault controls
+        shell: bash
+        run: node --test tests/sdk-parity/compare.test.cjs
+      - name: Pilot gate then predeclared formal trial plan
+        shell: bash
+        env:
+          SDK_ENGINE: ${{ matrix.engine }}
+          SDK_OUT: .work/sdk-evidence/raw
+        run: |
+          mkdir -p .work/sdk-evidence
+          set +e
+          node tests/sdk-parity/run.cjs > .work/sdk-evidence/runner.log 2>&1
+          result=$?
+          printf '%s\n' "$result" > .work/sdk-evidence/runner-exit.txt
+          if [ "$result" != 0 ]; then cat .work/sdk-evidence/runner.log; exit "$result"; fi
+          node tests/sdk-parity/audit.cjs .work/sdk-evidence/raw > .work/sdk-evidence/audit.log 2>&1
+          result=$?
+          printf '%s\n' "$result" > .work/sdk-evidence/audit-exit.txt
+          cat .work/sdk-evidence/audit.log
+          exit "$result"
+      - name: Verify original sources remain byte-identical
+        if: always()
+        shell: bash
+        run: |
+          node -e 'const fs=require("fs"),crypto=require("crypto"),a=require("assert");for(const [p,h]of Object.entries(JSON.parse(fs.readFileSync(".work/sdk-parity/preserved-originals.json"))))a.equal(crypto.createHash("sha256").update(fs.readFileSync(p)).digest("hex"),h);'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sdk-parity-${{ matrix.os }}-${{ matrix.engine }}-${{ github.sha }}
+          path: |
+            .work/sdk-evidence/
+            .work/sdk-parity/preserved-originals.json
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: warn

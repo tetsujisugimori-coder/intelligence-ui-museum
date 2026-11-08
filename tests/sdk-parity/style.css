@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@import "@openai/apps-sdk-ui/css";
+@source "../node_modules/@openai/apps-sdk-ui";
+:root{font-family:system-ui;color-scheme:light;font-size:100%;background:#f2f4f4}body{margin:0}main{padding:30px}section{margin-block:30px}[data-parity-trigger]:focus-visible{outline:3px solid #d17624;outline-offset:4px}#before,#after{padding:8px}

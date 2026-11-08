@@ -1,0 +1,504 @@
+[
+  {
+    "id": "pilot-detail-direct-1-paired-cancel",
+    "engine": "chromium",
+    "measurement": "detail",
+    "phase": "pilot",
+    "route": "direct",
+    "iteration": 1,
+    "condition": "paired-cancel",
+    "sourceHash": "6818f7b5355f2bffd9b3634949e0fac5beb7d2c68d528b4a3d39aad4c9cc0152",
+    "buildHash": "412bf32c3ef2c11abc6e846643866143f0f9c180d32f0d1cedcefdb0df09e0e9",
+    "status": "COMPLETE",
+    "errors": [],
+    "browserVersion": "141.0.7390.37",
+    "freshPage": true,
+    "before": {
+      "triggerOuterHTML": "<span class=\"_SelectControl_1tyi7_1\" role=\"button\" tabindex=\"0\" data-variant=\"outline\" data-block=\"\" data-pill=\"\" data-size=\"md\" data-selected=\"true\" aria-disabled=\"false\" id=\"select-trigger-:r0:\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"true\" data-state=\"open\" data-parity-trigger=\"true\" aria-controls=\"radix-:r2:\" data-radix-popper-side=\"bottom\" data-radix-popper-align=\"center\"><span class=\"_TriggerText_1tyi7_468\"><span>\u4e00\u89a7</span><input id=\"sdk-input\" tabindex=\"-1\" class=\"sr-only w-full h-0 left-0 bottom-0 pointer-events-none\" aria-hidden=\"true\" value=\"a\"></span><div class=\"_IndicatorWrapper_1tyi7_476\"><svg width=\"1em\" height=\"1em\" viewBox=\"0 0 10 16\" fill=\"currentColor\" class=\"_DropdownIcon_1tyi7_437\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.34151 0.747423C4.71854 0.417526 5.28149 0.417526 5.65852 0.747423L9.65852 4.24742C10.0742 4.61111 10.1163 5.24287 9.75259 5.6585C9.38891 6.07414 8.75715 6.11626 8.34151 5.75258L5.00001 2.82877L1.65852 5.75258C1.24288 6.11626 0.61112 6.07414 0.247438 5.6585C-0.116244 5.24287 -0.0741267 4.61111 0.34151 4.24742L4.34151 0.747423ZM0.246065 10.3578C0.608879 9.94139 1.24055 9.89795 1.65695 10.2608L5.00001 13.1737L8.34308 10.2608C8.75948 9.89795 9.39115 9.94139 9.75396 10.3578C10.1168 10.7742 10.0733 11.4058 9.65695 11.7687L5.65695 15.2539C5.28043 15.582 4.7196 15.582 4.34308 15.2539L0.343082 11.7687C-0.0733128 11.4058 -0.116749 10.7742 0.246065 10.3578Z\"></path></svg></div></span>",
+      "expanded": "true",
+      "popupId": "radix-:r2:",
+      "popupPresent": true,
+      "cssHash": "c184034c21710f18f201a37b0c5390cc743ca2f776b4457eaa0fc217c512062b"
+    },
+    "result": {
+      "runtimeCondition": "paired-cancel",
+      "runtimeMeasurement": "detail",
+      "active": "select-trigger-:r0:",
+      "focused": true,
+      "focusVisible": true,
+      "expanded": "false",
+      "popupPresent": false,
+      "value": "a",
+      "rect": {
+        "x": 30,
+        "y": 100,
+        "width": 315,
+        "height": 32
+      },
+      "outline": "rgb(209, 118, 36) solid 3px",
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "events": [
+        {
+          "seq": 1,
+          "time": 44.30000000074506,
+          "kind": "react-layout-after-commit",
+          "active": "BODY",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "open": false
+        },
+        {
+          "seq": 2,
+          "time": 48,
+          "kind": "observer-dom",
+          "active": "BODY",
+          "popup": false,
+          "expanded": "false"
+        },
+        {
+          "seq": 3,
+          "time": 66.20000000018626,
+          "kind": "focusin",
+          "active": "select-trigger-:r0:",
+          "target": "select-trigger-:r0:"
+        },
+        {
+          "seq": 4,
+          "time": 68.90000000037253,
+          "kind": "react-close-request",
+          "active": "select-trigger-:r0:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "nextState": true
+        },
+        {
+          "seq": 5,
+          "time": 73.40000000037253,
+          "kind": "react-layout-after-commit",
+          "active": "select-trigger-:r0:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "open": true
+        },
+        {
+          "seq": 6,
+          "time": 76.80000000074506,
+          "kind": "focusin",
+          "active": "select-list-:r5:",
+          "target": "select-list-:r5:"
+        },
+        {
+          "seq": 7,
+          "time": 79.90000000037253,
+          "kind": "observer-dom",
+          "active": "select-list-:r5:",
+          "popup": true,
+          "expanded": "true"
+        },
+        {
+          "seq": 8,
+          "time": 80,
+          "kind": "museum-observer",
+          "active": "select-list-:r5:",
+          "source": "select-focus-return.ts"
+        },
+        {
+          "seq": 9,
+          "time": 113.1000000005588,
+          "kind": "keydown",
+          "active": "select-list-:r5:",
+          "cancelled": false,
+          "trusted": true
+        },
+        {
+          "seq": 10,
+          "time": 113.20000000018626,
+          "kind": "radix-escape",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs",
+          "cancelled": false
+        },
+        {
+          "seq": 11,
+          "time": 113.30000000074506,
+          "kind": "select-escape-before",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "cancelled": false
+        },
+        {
+          "seq": 12,
+          "time": 113.30000000074506,
+          "kind": "cancel-call",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "owner": "select"
+        },
+        {
+          "seq": 13,
+          "time": 113.30000000074506,
+          "kind": "select-escape-after",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "cancelled": true
+        },
+        {
+          "seq": 14,
+          "time": 113.30000000074506,
+          "kind": "radix-fallback-gate",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs",
+          "cancelled": true,
+          "hasDismiss": true,
+          "suppressed": true
+        },
+        {
+          "seq": 15,
+          "time": 113.6000000005588,
+          "kind": "stack-before",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/hooks/useEscCloseStack.js",
+          "cancelled": true
+        },
+        {
+          "seq": 16,
+          "time": 113.6000000005588,
+          "kind": "stack-after",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/hooks/useEscCloseStack.js",
+          "cancelled": true
+        },
+        {
+          "seq": 17,
+          "time": 113.6000000005588,
+          "kind": "esc-stack-close",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js"
+        },
+        {
+          "seq": 18,
+          "time": 113.6000000005588,
+          "kind": "react-close-request",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "nextState": false
+        },
+        {
+          "seq": 19,
+          "time": 115.1000000005588,
+          "kind": "react-layout-after-commit",
+          "active": "BODY",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "open": false
+        },
+        {
+          "seq": 20,
+          "time": 116,
+          "kind": "observer-dom",
+          "active": "BODY",
+          "popup": false,
+          "expanded": "false"
+        },
+        {
+          "seq": 21,
+          "time": 116,
+          "kind": "museum-observer",
+          "active": "BODY",
+          "source": "select-focus-return.ts"
+        },
+        {
+          "seq": 22,
+          "time": 116.1000000005588,
+          "kind": "museum-focus-return",
+          "active": "BODY",
+          "source": "select-focus-return.ts"
+        },
+        {
+          "seq": 23,
+          "time": 116.30000000074506,
+          "kind": "focusin",
+          "active": "select-trigger-:r0:",
+          "target": "select-trigger-:r0:"
+        },
+        {
+          "seq": 24,
+          "time": 116.40000000037253,
+          "kind": "keydown-final",
+          "active": "select-trigger-:r0:",
+          "cancelled": true
+        },
+        {
+          "seq": 25,
+          "time": 116.90000000037253,
+          "kind": "keyup",
+          "active": "select-trigger-:r0:",
+          "cancelled": false,
+          "trusted": true
+        }
+      ],
+      "pageErrors": 0
+    },
+    "pngClip": {
+      "x": 14,
+      "y": 84,
+      "width": 347,
+      "height": 64
+    },
+    "pngFile": "pilot-detail-direct-1-paired-cancel.png",
+    "pngSha256": "c65e41ca6e8af29813a76e0e48622d01face969a6c501308efa1e67ab3aa26d7",
+    "pixels": {
+      "width": 347,
+      "height": 64,
+      "orangeOuterPixels": 2009,
+      "outlineEstimate": true
+    },
+    "validation": []
+  },
+  {
+    "id": "pilot-detail-direct-1-paired-plain",
+    "engine": "chromium",
+    "measurement": "detail",
+    "phase": "pilot",
+    "route": "direct",
+    "iteration": 1,
+    "condition": "paired-plain",
+    "sourceHash": "6818f7b5355f2bffd9b3634949e0fac5beb7d2c68d528b4a3d39aad4c9cc0152",
+    "buildHash": "412bf32c3ef2c11abc6e846643866143f0f9c180d32f0d1cedcefdb0df09e0e9",
+    "status": "COMPLETE",
+    "errors": [],
+    "browserVersion": "141.0.7390.37",
+    "freshPage": true,
+    "before": {
+      "triggerOuterHTML": "<span class=\"_SelectControl_1tyi7_1\" role=\"button\" tabindex=\"0\" data-variant=\"outline\" data-block=\"\" data-pill=\"\" data-size=\"md\" data-selected=\"true\" aria-disabled=\"false\" id=\"select-trigger-:r0:\" type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"true\" data-state=\"open\" data-parity-trigger=\"true\" aria-controls=\"radix-:r2:\" data-radix-popper-side=\"bottom\" data-radix-popper-align=\"center\"><span class=\"_TriggerText_1tyi7_468\"><span>\u4e00\u89a7</span><input id=\"sdk-input\" tabindex=\"-1\" class=\"sr-only w-full h-0 left-0 bottom-0 pointer-events-none\" aria-hidden=\"true\" value=\"a\"></span><div class=\"_IndicatorWrapper_1tyi7_476\"><svg width=\"1em\" height=\"1em\" viewBox=\"0 0 10 16\" fill=\"currentColor\" class=\"_DropdownIcon_1tyi7_437\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.34151 0.747423C4.71854 0.417526 5.28149 0.417526 5.65852 0.747423L9.65852 4.24742C10.0742 4.61111 10.1163 5.24287 9.75259 5.6585C9.38891 6.07414 8.75715 6.11626 8.34151 5.75258L5.00001 2.82877L1.65852 5.75258C1.24288 6.11626 0.61112 6.07414 0.247438 5.6585C-0.116244 5.24287 -0.0741267 4.61111 0.34151 4.24742L4.34151 0.747423ZM0.246065 10.3578C0.608879 9.94139 1.24055 9.89795 1.65695 10.2608L5.00001 13.1737L8.34308 10.2608C8.75948 9.89795 9.39115 9.94139 9.75396 10.3578C10.1168 10.7742 10.0733 11.4058 9.65695 11.7687L5.65695 15.2539C5.28043 15.582 4.7196 15.582 4.34308 15.2539L0.343082 11.7687C-0.0733128 11.4058 -0.116749 10.7742 0.246065 10.3578Z\"></path></svg></div></span>",
+      "expanded": "true",
+      "popupId": "radix-:r2:",
+      "popupPresent": true,
+      "cssHash": "c184034c21710f18f201a37b0c5390cc743ca2f776b4457eaa0fc217c512062b"
+    },
+    "result": {
+      "runtimeCondition": "paired-plain",
+      "runtimeMeasurement": "detail",
+      "active": "select-trigger-:r0:",
+      "focused": true,
+      "focusVisible": true,
+      "expanded": "false",
+      "popupPresent": false,
+      "value": "a",
+      "rect": {
+        "x": 30,
+        "y": 100,
+        "width": 315,
+        "height": 32
+      },
+      "outline": "rgb(209, 118, 36) solid 3px",
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "events": [
+        {
+          "seq": 1,
+          "time": 43.39999999944121,
+          "kind": "react-layout-after-commit",
+          "active": "BODY",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "open": false
+        },
+        {
+          "seq": 2,
+          "time": 46.89999999944121,
+          "kind": "observer-dom",
+          "active": "BODY",
+          "popup": false,
+          "expanded": "false"
+        },
+        {
+          "seq": 3,
+          "time": 65,
+          "kind": "focusin",
+          "active": "select-trigger-:r0:",
+          "target": "select-trigger-:r0:"
+        },
+        {
+          "seq": 4,
+          "time": 67.70000000018626,
+          "kind": "react-close-request",
+          "active": "select-trigger-:r0:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "nextState": true
+        },
+        {
+          "seq": 5,
+          "time": 72.09999999962747,
+          "kind": "react-layout-after-commit",
+          "active": "select-trigger-:r0:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "open": true
+        },
+        {
+          "seq": 6,
+          "time": 74.70000000018626,
+          "kind": "focusin",
+          "active": "select-list-:r5:",
+          "target": "select-list-:r5:"
+        },
+        {
+          "seq": 7,
+          "time": 77.79999999981374,
+          "kind": "observer-dom",
+          "active": "select-list-:r5:",
+          "popup": true,
+          "expanded": "true"
+        },
+        {
+          "seq": 8,
+          "time": 77.79999999981374,
+          "kind": "museum-observer",
+          "active": "select-list-:r5:",
+          "source": "select-focus-return.ts"
+        },
+        {
+          "seq": 9,
+          "time": 116.3999999994412,
+          "kind": "keydown",
+          "active": "select-list-:r5:",
+          "cancelled": false,
+          "trusted": true
+        },
+        {
+          "seq": 10,
+          "time": 116.5,
+          "kind": "radix-escape",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs",
+          "cancelled": false
+        },
+        {
+          "seq": 11,
+          "time": 116.5,
+          "kind": "select-escape-before",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "cancelled": false
+        },
+        {
+          "seq": 12,
+          "time": 116.5,
+          "kind": "select-escape-after",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "cancelled": false
+        },
+        {
+          "seq": 13,
+          "time": 116.5,
+          "kind": "radix-fallback-gate",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs",
+          "cancelled": false,
+          "hasDismiss": true,
+          "suppressed": true
+        },
+        {
+          "seq": 14,
+          "time": 116.8999999994412,
+          "kind": "stack-before",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/hooks/useEscCloseStack.js",
+          "cancelled": false
+        },
+        {
+          "seq": 15,
+          "time": 116.8999999994412,
+          "kind": "stack-after",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/hooks/useEscCloseStack.js",
+          "cancelled": false
+        },
+        {
+          "seq": 16,
+          "time": 116.8999999994412,
+          "kind": "esc-stack-close",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js"
+        },
+        {
+          "seq": 17,
+          "time": 116.8999999994412,
+          "kind": "react-close-request",
+          "active": "select-list-:r5:",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "nextState": false
+        },
+        {
+          "seq": 18,
+          "time": 118.3999999994412,
+          "kind": "react-layout-after-commit",
+          "active": "BODY",
+          "source": "@openai/apps-sdk-ui/dist/es/components/Select/Select.js",
+          "open": false
+        },
+        {
+          "seq": 19,
+          "time": 119.3999999994412,
+          "kind": "observer-dom",
+          "active": "BODY",
+          "popup": false,
+          "expanded": "false"
+        },
+        {
+          "seq": 20,
+          "time": 119.3999999994412,
+          "kind": "museum-observer",
+          "active": "BODY",
+          "source": "select-focus-return.ts"
+        },
+        {
+          "seq": 21,
+          "time": 119.3999999994412,
+          "kind": "museum-focus-return",
+          "active": "BODY",
+          "source": "select-focus-return.ts"
+        },
+        {
+          "seq": 22,
+          "time": 119.79999999981374,
+          "kind": "focusin",
+          "active": "select-trigger-:r0:",
+          "target": "select-trigger-:r0:"
+        },
+        {
+          "seq": 23,
+          "time": 120,
+          "kind": "keydown-final",
+          "active": "select-trigger-:r0:",
+          "cancelled": false
+        },
+        {
+          "seq": 24,
+          "time": 120.5,
+          "kind": "keyup",
+          "active": "select-trigger-:r0:",
+          "cancelled": false,
+          "trusted": true
+        }
+      ],
+      "pageErrors": 0
+    },
+    "pngClip": {
+      "x": 14,
+      "y": 84,
+      "width": 347,
+      "height": 64
+    },
+    "pngFile": "pilot-detail-direct-1-paired-plain.png",
+    "pngSha256": "c65e41ca6e8af29813a76e0e48622d01face969a6c501308efa1e67ab3aa26d7",
+    "pixels": {
+      "width": 347,
+      "height": 64,
+      "orangeOuterPixels": 2009,
+      "outlineEstimate": true
+    },
+    "validation": []
+  }
+]
