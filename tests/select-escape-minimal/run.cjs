@@ -43,7 +43,13 @@ async function main(){
        if(name==='delegated-open')await page.waitForFunction(()=>window.minimalFixture?.snapshot().keydownCancelled===false);
        else await page.waitForFunction(()=>window.minimalFixture?.snapshot().triggerFocused===true&&window.minimalFixture?.snapshot().open===false);
        row.snapshot=await page.evaluate(()=>window.minimalFixture.snapshot());
-       const png=await page.locator('#trigger').screenshot({animations:'disabled',scale:'css'});
+       // Include the outside outline, not only the element's border box.
+       const bbox=await page.locator('#trigger').boundingBox();
+       if(!bbox)throw Error('No trigger geometry');
+       const x=Math.max(0,Math.floor(bbox.x-16)),y=Math.max(0,Math.floor(bbox.y-16));
+       const clip={x,y,width:Math.ceil(bbox.x+bbox.width+16)-x,height:Math.ceil(bbox.y+bbox.height+16)-y};
+       row.pngClip=clip;
+       const png=await page.screenshot({clip,animations:'disabled',scale:'css'});
        row.pngFile=id+'.png';fs.writeFileSync(path.join(output,row.pngFile),png);
        row.pngSha256=sha(png);
        row.status='COMPLETE';

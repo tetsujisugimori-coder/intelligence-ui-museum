@@ -27,10 +27,19 @@ function validateRow(r){
 function comparePair(a,b){
   const errors=[...validateRow(a).map(x=>'A:'+x),...validateRow(b).map(x=>'B:'+x)];
   if(a?.case!=='controlled-cancel'||b?.case!=='controlled-plain')errors.push('wrong-pair');
+  if(a?.snapshot?.config&&b?.snapshot?.config){
+    const expectedA={select:true,selectCancel:true,hook:false,fallback:false};
+    const expectedB={select:true,selectCancel:false,hook:false,fallback:false};
+    if(JSON.stringify(a.snapshot.config)!==JSON.stringify(expectedA)||JSON.stringify(b.snapshot.config)!==JSON.stringify(expectedB))errors.push('config-drift');
+  }else errors.push('config-unverified');
   for(const k of ['engine','route','iteration','sourceSha256'])if(a?.[k]!==b?.[k])errors.push('provenance-'+k);
-  if(a?.snapshot?.focusVisible!==b?.snapshot?.focusVisible)errors.push('focus-visible-diff');
-  if(a?.pngSha256!==b?.pngSha256)errors.push('render-diff');
   if(JSON.stringify(skeletal(a?.snapshot?.events))!==JSON.stringify(skeletal(b?.snapshot?.events)))errors.push('event-route-diff');
-  return {classification:errors.length?'NOT_COMPARABLE':'MODEL_COMPARABLE',scope:'MODEL_ONLY_NOT_SDK_CAUSAL',errors};
+  const outcomes={
+    focusVisibleCancel:a?.snapshot?.focusVisible??null,
+    focusVisiblePlain:b?.snapshot?.focusVisible??null,
+    focusVisibleDiff:a?.snapshot?.focusVisible!==b?.snapshot?.focusVisible,
+    renderedPngDiff:a?.pngSha256!==b?.pngSha256
+  };
+  return {classification:errors.length?'NOT_COMPARABLE':'MODEL_COMPARABLE',scope:'MODEL_ONLY_NOT_SDK_CAUSAL',outcomes,errors};
 }
 module.exports={CASES,ROUTES,validateRow,comparePair};

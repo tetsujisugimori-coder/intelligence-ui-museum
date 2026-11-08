@@ -12,7 +12,7 @@
 
 ## Evidence and boundaries
 
-Raw per-trial JSON, focused button PNG, SHA256 manifest, runner plan, source digests, and comparison decisions are saved in a *fresh* \`.work/escape-minimal\` directory. Rows that have no genuine Escape event, complete transition, correct close owner, or independent rendered-state match are rejected. Unit tests exercise false classification scenarios. The CI artifact contains raw evidence; the audit rederives its planned grid and hashes.
+Raw per-trial JSON, focused button PNG, SHA256 manifest, runner plan, source digests, and comparison decisions are saved in a *fresh* \`.work/escape-minimal\` directory. Rows that have no genuine Escape event, complete transition, or correct close owner are rejected. Focus-visible and the cropped focus-ring PNG (16px margin outside the trigger) are **measured outcomes** and MAY differ between cancel/plain; rejecting such a difference as a confound would erase the effect being tested. Invariants are input method, event skeleton, close owner/request, value, focus-return mechanism, and source/config. Unit tests exercise false classification scenarios. The CI artifact contains raw evidence; the audit rederives its planned grid and hashes.
 
 To execute in a prepared checkout:
 

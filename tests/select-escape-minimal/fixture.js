@@ -68,7 +68,7 @@
   window.minimalFixture={
     ready:true,
     snapshot:()=>({
-      case:name,
+      case:name,config:{...cfg},
       open,expanded:trigger.getAttribute('aria-expanded'),value:'a',
       closeOwner,active:document.activeElement?.id||document.activeElement?.tagName,
       triggerFocused:document.activeElement===trigger,
