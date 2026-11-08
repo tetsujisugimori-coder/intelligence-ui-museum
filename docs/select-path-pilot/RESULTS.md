@@ -11,7 +11,7 @@
 - 基準main: 49256d1e6f5ebe1f18a7187e8684eac58ba6e0c2。
 - producer: b7b1e8e6b6cdf5518a2b061766cbd098502c41b3、tree4796f065590481e605517213fc7cf15b60812e73。
 - 固定計画: tests/select-path-pilot/plan.json。1環境36試行、12セル×3反復。結果に基づく追加・除外なし。
-- 原取得run42531791744/attempt1。原runnerは後述の過剰なclick条件によりexit1、旧auditも失敗。原JSON・trace・PNG・exitはそのまま保全し、修正した分類器で同じ入力を再解析。最終CIはこの固定原artifactの再解析であり、新しい試行ではない。
+- 原取得run42531791744/attempt1。原runnerは後述の過剰なclick条件によりexit1、旧auditも失敗。70a8のWindows再解析もcp1252既定decodeで開始失敗し、原stderrとZIPを保持した。明示UTF-8に修正して同一原票を再解析し、ブラウザ試行は追加しない。原JSON・trace・PNG・exitはそのまま保全し、修正した分類器で同じ入力を再解析。最終CIはこの固定原artifactの再解析であり、新しい試行ではない。
 - Ubuntu原artifact13637439295: 104790080 bytes、API digestと実ZIP SHA256とも6c9a23f66ee28cba2af3c0f5477582bc154c218896103f7e145d29c4b7638376。
 - Windows原artifact13638290463: 61890403 bytes、API digestと実ZIP SHA256ともb5f6ede889ff775086d21f52e23c757168187d2d7b4d505ee4e005c1e1a11b6e。
 - 原ZIP: https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/42531791744 。Actions原artifactの期限は2027-02-06 UTC。長期保全用コピーとmanifestを別途保持する。

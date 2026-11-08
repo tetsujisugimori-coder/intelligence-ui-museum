@@ -1,16 +1,18 @@
 """Re-read raw file bindings and trace actions, never infer physical interaction."""
 import sys,json,hashlib,zipfile,pathlib,subprocess,os
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 root=pathlib.Path(sys.argv[1]).resolve(); errors=[]
 expected_head=os.environ.get('PATH_EXPECT_HEAD'); expected_platform=os.environ.get('PATH_EXPECT_PLATFORM')
 reclassify=os.environ.get('PATH_RECLASSIFY')=='1'
 def check(c,m):
  if not c: errors.append(m)
-data=json.loads((root/'results.json').read_text()); manifest=json.loads((root/'SHA256SUMS.json').read_text())
+data=json.loads((root/'results.json').read_text(encoding='utf-8')); manifest=json.loads((root/'SHA256SUMS.json').read_text(encoding='utf-8'))
 check(bool(expected_head) and data.get('head')==expected_head,'expected source head required/mismatch')
 check(expected_platform in ['linux','win32'] and data.get('platform')==expected_platform,'expected platform required/mismatch')
 if expected_head:
- tree=subprocess.check_output(['git','rev-parse',expected_head+'^{tree}'],text=True).strip();check(data.get('tree')==tree,'tree identity')
- names=subprocess.check_output(['git','ls-tree','-r','--name-only',expected_head,'tests/select-path-pilot'],text=True).splitlines()
+ tree=subprocess.check_output(['git','rev-parse',expected_head+'^{tree}'],text=True,encoding='utf-8').strip();check(data.get('tree')==tree,'tree identity')
+ names=subprocess.check_output(['git','ls-tree','-r','--name-only',expected_head,'tests/select-path-pilot'],text=True,encoding='utf-8').splitlines()
  names=[n for n in names if n.endswith(('.cjs','.json'))]
  check(set(names)==set(data.get('sources',{})),'source set')
  check(set(data.get('product',{}))=={'src/main.tsx','src/main.css','src/select-focus-return.ts','package.json','package-lock.json'},'product set')
@@ -22,7 +24,7 @@ if expected_head:
  for kind,base in [('museum','.work/v10/dist'),('sdk','.work/sdk-parity/dist-detail')]:
   local={str(p.relative_to(base)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in pathlib.Path(base).rglob('*') if p.is_file()}
   check(local==data.get('builds',{}).get(kind),'build content '+kind)
- check(json.loads(pathlib.Path('.work/sdk-parity/provenance/detail.json').read_text())==data.get('sdkProvenance'),'SDK transformation provenance')
+ check(json.loads(pathlib.Path('.work/sdk-parity/provenance/detail.json').read_text(encoding='utf-8'))==data.get('sdkProvenance'),'SDK transformation provenance')
 for f,h in manifest.items():
  p=(root/f).resolve();check(p.is_relative_to(root) and p.is_file(),f+' absent/path')
  if p.is_file(): check(hashlib.sha256(p.read_bytes()).hexdigest()==h,f+' sha')
@@ -30,7 +32,7 @@ check(set(manifest)=={str(p.relative_to(root)).replace('\\','/') for p in root.r
 trace_summary=[]
 for row in data['rows']:
  path=root/(row['id']+'.json');check(path.is_file(),row['id']+' missing')
- if path.is_file():check(json.loads(path.read_text())==row,row['id']+' row binding')
+ if path.is_file():check(json.loads(path.read_text(encoding='utf-8'))==row,row['id']+' row binding')
  for key in ['preImage','finalImage','traceFile']:
   f=row.get(key);check(bool(f) and f in manifest,row['id']+' '+key)
  for f in row.get('images',[]):check(f in manifest,row['id']+' image '+f)
@@ -74,9 +76,9 @@ for row in data['rows']:
    trace_summary.append({'id':row['id'],'keys':presses,'actions':action_summary,'screencastFrames':len(frames),'frameTiming':'sampled; exact pre/post-open frame is not guaranteed'})
 # Independent subprocess invokes strict classification against original plan, not saved PASS labels.
 js="const fs=require('fs'),c=require('./tests/select-path-pilot/contract.cjs');const d=JSON.parse(fs.readFileSync(process.argv[1]));const e=c.validateRun(d);for(const r of d.rows){if(process.env.PATH_RECLASSIFY!=='1'&&JSON.stringify(c.classify(r))!==JSON.stringify(r.classification))e.push(r.id+':saved-classification');const p=r.paint;if(p){try{const path=require('path'),{PNG}=require('./tools/stage-a-browser/node_modules/playwright-core/lib/utilsBundle.js'),m=require('./apps/v10/scripts/stage2r-focus-pixels.cjs').measure;const z=m(p.images.map(f=>PNG.sync.read(fs.readFileSync(path.join(path.dirname(process.argv[1]),f)))),p.clip,[{x:p.rect.x,y:p.rect.y,width:p.rect.width,height:p.rect.height}]);for(const k of ['changed','unstable','indicators','threshold','reason'])if(JSON.stringify(z[k])!==JSON.stringify(p[k]))e.push(r.id+':paint-recompute-'+k);if((p.active&&p.visible&&!p.clipping.length&&z.pass)!==p.pass)e.push(r.id+':paint-pass');}catch(x){e.push(r.id+':paint-decode:'+x)}}}console.log(JSON.stringify({errors:e,classifications:d.rows.map(r=>({id:r.id,previous:r.classification,current:c.classify(r)}))}));process.exitCode=e.length?1:0"
-p=subprocess.run(['node','-e',js,str(root/'results.json')],text=True,capture_output=True)
+p=subprocess.run(['node','-e',js,str(root/'results.json')],text=True,encoding='utf-8',capture_output=True)
 contract=json.loads(p.stdout) if p.stdout.strip() else {'errors':['subprocess no result'],'classifications':[]}
 check(p.returncode==0,'contract:'+str(contract['errors'])+p.stderr)
-analysis={'head':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'tree':subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip(),'dirty':subprocess.check_output(['git','status','--porcelain','--untracked-files=no'],text=True).strip(),'sha256':{n:hashlib.sha256(pathlib.Path(n).read_bytes()).hexdigest() for n in ['tests/select-path-pilot/audit.py','tests/select-path-pilot/contract.cjs']}}
+analysis={'head':subprocess.check_output(['git','rev-parse','HEAD'],text=True,encoding='utf-8').strip(),'tree':subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True,encoding='utf-8').strip(),'dirty':subprocess.check_output(['git','status','--porcelain','--untracked-files=no'],text=True,encoding='utf-8').strip(),'sha256':{n:hashlib.sha256(pathlib.Path(n).read_bytes()).hexdigest() for n in ['tests/select-path-pilot/audit.py','tests/select-path-pilot/contract.cjs']}}
 print(json.dumps({'analysis':analysis,'status':'PASS' if not errors else 'FAIL','rows':len(data['rows']),'sourceHead':expected_head,'reanalysis':reclassify,'savedClassificationsPreserved':True,'errors':errors,'classifications':contract['classifications'],'traces':trace_summary},ensure_ascii=False,indent=2))
 sys.exit(1 if errors else 0)
