@@ -40,3 +40,11 @@ AとBは画面構成・介入が違うため操作経路の単一要因比較で
 新checkoutで `python scripts/prepare-work.py`、`.work/v10`の固定lockをnpm ci、build。`node tests/sdk-parity/prepare.cjs`、同copyのnpm ci、VITE_MEASURE=detailで既存vite.config.mjs build。tools/stage-a-browserの固定lockからPlaywrightとWebKitを準備。`node --test tests/select-path-pilot/contract.test.cjs`。PATH_ENGINE=webkit PATH_OUT=新規ディレクトリで `node tests/select-path-pilot/run.cjs`、`python tests/select-path-pilot/audit.py 出力先`。CIが各exitを外側へ保存。再実行は新たな原票で保持し、結果の都合で反復追加しない。
 
 実機Safari、物理入力、VoiceOver、ネイティブOS popupの画面取得はNOT_TESTED。対象SDK popupはDOMであり、ネイティブSelect全般へ外挿しない。
+
+## Pre-pilot review repair (f07 candidate preserved)
+
+Independent review rejected f07 contract false accepts (8 immutable mutations in evidence). Missing paint/geometry/acquisition, missing trusted option pointer events, wrong prelude names and capture errors now reject. Trace audit also checks focus/acquisition, ordinary option click, mouse move, order, successful returns, and independently decodes four PNGs. The former synthetic positive was itself incomplete; rejecting it is not evidence of a real positive. Real raw records must pass independently.
+
+f07 Windows CI did not run the pilot: the old bundle's git archive inherited CRLF conversion and failed `.gitignore` SHA preservation. Set process-level core.autocrlf=false for the isolated workflow, retaining the failed job log. No original file/hash or acceptance threshold changed. Probe initialization was corrected to observe Document because documentElement can be absent in addInitScript. The f07 Linux attempt remains a separate failed candidate, never pooled into the repaired pilot.
+
+Timing limits: performance.now(), runner Date.now() and trace times are separate clocks. defaultPrevented is capture-phase only; mutation samples do not identify React commits. Added tracing/screenshots/geometry reads affect timing. Input order is reconstructed, timing equivalence remains UNKNOWN.

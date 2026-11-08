@@ -12,7 +12,7 @@ const helpers=original.slice(original.indexOf('function visible(e)'),original.in
 const prefix=original.slice(original.indexOf("    await check('environment'"),original.indexOf("    await check('Select'"));
 const {measure}=require('../../apps/v10/scripts/stage2r-focus-pixels.cjs');
 const env={fs,path,modules,out,measure,assert,frames,require};
-const {ring,prelude}=new Function(...Object.keys(env),`${helpers}\nreturn {ring,prelude:async function(p,id,row,check){const theme='light',text=100,width=375;${prefix}}};`)(...Object.values(env));
+const {ring,prelude}=new Function(...Object.keys(env),`${helpers.replace('return {...g,...measured,', 'return {...g,clip,...measured,')}\nreturn {ring,prelude:async function(p,id,row,check){const theme='light',text=100,width=375;${prefix}}};`)(...Object.values(env));
 const sources=Object.fromEntries(files(__dirname).filter(f=>/\.(cjs|json)$/.test(f)).map(f=>[path.relative(repo,f).split(path.sep).join('/'),sha(fs.readFileSync(f))]));
 const productFiles=['src/main.tsx','src/main.css','src/select-focus-return.ts','package.json','package-lock.json'];
 const product=Object.fromEntries(productFiles.map(f=>{const b=fs.readFileSync(path.join(repo,'.work/v10',f));assert(sha(b)===sha(fs.readFileSync(path.join(repo,'apps/v10',f))),'Product preservation '+f);return [f,sha(b)];}));
@@ -32,17 +32,18 @@ async function trial(browser,slot){
   const t=p.locator(museum?'#Select .stage [role=button]':'[data-parity-trigger]');
   if(museum){await p.bringToFront();await p.locator('#Button .stage button').waitFor();await p.evaluate(()=>document.fonts.ready);const check=async(name,fn)=>{const c={name,pass:false};row.checks.push(c);c.detail=await fn();c.pass=true;};await prelude(p,row.id,row,check);}else await t.waitFor();
   row.initial=await snapshot(p);row.preImage=row.id+'-before-acquisition.png';await p.screenshot({path:path.join(out,row.preImage)});await t.evaluate(e=>window.s3Opener=e);
+  row.acquireEventStart=await p.evaluate(()=>window.__path.seq);
   await op('acquire',slot.route,async()=>{
    if(slot.route==='tab'){if(museum){let found=false;for(let n=0;n<60;n++){if(await p.locator('#Select input[type=checkbox]').evaluate(e=>document.activeElement===e)){found=true;break;}await p.keyboard.press('Shift+Tab');}assert(found,'Tab anchor not reached');await p.keyboard.press('Tab');}else{await p.locator('#before').focus();await p.keyboard.press('Tab');}}
    else {await t.focus();if(slot.route==='legacy'){await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');}}
   });
-  assert(await t.evaluate(e=>e===document.activeElement),'Acquisition target');
+  row.acquisition=await t.evaluate(e=>({focused:e===document.activeElement,active:document.activeElement?.id||document.activeElement?.tagName,seq:window.__path.seq,time:performance.now(),rect:e.getBoundingClientRect().toJSON()}));assert(row.acquisition.focused,'Acquisition target');
   // No snapshot or screenshot RPC is inserted between acquisition and opening.
   selectRecording=true;
   if(slot.cohort==='A-museum-old'){
    const v=p.locator('#official-select');await p.keyboard.press('Space');
    try{await op('ordinary-option-click','カード',()=>p.getByRole('option',{name:'カード',exact:true}).click());row.normalClick={success:true};}catch(e){row.normalClick={success:false,error:String(e)};row.clickFailureSnapshot=await snapshot(p);throw e;}
-   await p.waitForFunction(()=>document.activeElement===window.s3Opener,null,{timeout:2000});assert(await v.inputValue()==='b','mouse selection');await frames(p);await p.mouse.move(0,0);
+   await p.waitForFunction(()=>document.activeElement===window.s3Opener,null,{timeout:2000});assert(await v.inputValue()==='b','mouse selection');await frames(p);await op('mouse-move',[0,0],()=>p.mouse.move(0,0));
    await p.keyboard.press('Space');await p.getByRole('option',{name:'カード',exact:true}).waitFor();await p.locator('[data-option-id="b"][data-highlight]').waitFor();await p.waitForFunction(()=>document.activeElement?.id.startsWith('select-list-'),null,{timeout:2000});await p.keyboard.press('ArrowUp');await p.locator('[data-option-id="a"][data-highlight]').waitFor();await p.keyboard.press('Enter');await p.waitForFunction(()=>document.activeElement===window.s3Opener&&window.s3Opener.getAttribute('aria-expanded')==='false',null,{timeout:2000});assert(await v.inputValue()==='a','keyboard selection');await frames(p);
    await p.keyboard.press('Space');await p.getByRole('option',{name:'カード',exact:true}).waitFor();await p.keyboard.press('Escape');await p.waitForFunction(()=>document.activeElement===window.s3Opener&&window.s3Opener.getAttribute('aria-expanded')==='false',null,{timeout:2000});assert(await v.inputValue()==='a','Escape value');
   }else{
