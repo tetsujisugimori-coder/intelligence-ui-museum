@@ -1,0 +1,2 @@
+# Stage2 initial evidence
+2026-11-08 JST. Original isolated comparator source and identical independent counterexamples are preserved in independent-p2-before-after.tar.gz. SHA256 220cb91ee86224b4dbed4cd61ac0366b8f291fb1b7a0446ed0b892566d245dcf. Includes independent fresh Chromium reverse-order UI checks and code/hash evidence. Prior P2s were repaired and rechecked; final committed HEAD/CI audit remains pending. Runtime files, DOM focus, image outcomes and unofficial causal inference are separate. See tests/sdk-parity/README.md. No official SDK causality is established.
