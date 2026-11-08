@@ -1,0 +1,59 @@
+name: S3-1 Escape isolated model (#30)
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/select-escape-minimal.yml"
+      - "tests/select-escape-minimal/**"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: select-escape-minimal-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  isolated:
+    name: ${{ matrix.os }} / ${{ matrix.engine }} / model-only
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-24.04, engine: chromium }
+          - { os: ubuntu-24.04, engine: webkit }
+          - { os: windows-2025, engine: webkit }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install browser dependencies
+        shell: bash
+        run: |
+          cd tools/stage-a-browser
+          npm ci --ignore-scripts
+          if [ "${{ runner.os }}" = "Linux" ]; then
+            npx playwright install --with-deps ${{ matrix.engine }}
+          else
+            npx playwright install ${{ matrix.engine }}
+          fi
+      - name: Check negative classification fixtures
+        shell: bash
+        run: node --test tests/select-escape-minimal/classify.test.cjs
+      - name: Run isolated real browser model
+        shell: bash
+        env:
+          MINIMAL_ENGINE: ${{ matrix.engine }}
+          MINIMAL_REPEATS: "2"
+          MINIMAL_OUT: .work/escape-minimal
+        run: |
+          node tests/select-escape-minimal/run.cjs
+          node tests/select-escape-minimal/audit.cjs .work/escape-minimal
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: select-escape-model-${{ matrix.os }}-${{ matrix.engine }}-${{ github.sha }}
+          path: .work/escape-minimal/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 90
