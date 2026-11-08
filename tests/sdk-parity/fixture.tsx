@@ -1,5 +1,5 @@
 import './style.css';
-import {useEffect,useRef,useState} from 'react';
+import React,{useEffect,useRef,useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import {Select} from '@openai/apps-sdk-ui/components/Select';
 import {attachSelectFocusReturn} from './select-focus-return';

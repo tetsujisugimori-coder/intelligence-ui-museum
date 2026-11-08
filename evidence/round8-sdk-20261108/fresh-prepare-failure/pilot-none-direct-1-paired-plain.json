@@ -1,0 +1,18 @@
+{
+  "id": "pilot-none-direct-1-paired-plain",
+  "engine": "chromium",
+  "measurement": "none",
+  "phase": "pilot",
+  "route": "direct",
+  "iteration": 1,
+  "condition": "paired-plain",
+  "sourceHash": "6a111b4042b1426019e99e53ce3445431d7356a16960810704556c20c7b2afaf",
+  "buildHash": "3ac72153ada086a881297de915b06c94a680d965f6f4c12d1bd9082172f98773",
+  "status": "INCOMPLETE",
+  "errors": [
+    "ReferenceError: React is not defined"
+  ],
+  "browserVersion": "141.0.7390.37",
+  "freshPage": true,
+  "error": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-parity-trigger]') to be visible\u001b[22m\n"
+}

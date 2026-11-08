@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: sdk-parity-${{ github.ref }}
+  group: sdk-parity-${{ github.ref }}-${{ github.sha }}
   cancel-in-progress: false
 jobs:
   parity:

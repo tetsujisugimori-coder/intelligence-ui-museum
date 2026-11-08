@@ -5,7 +5,7 @@ const mode=process.env.VITE_MEASURE||'detail', records=[];let currentFile='';
 const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
 const log=(kind,extra='{}')=>mode==='detail'?`window.__pLog?.(${JSON.stringify(kind)},Object.assign({source:${JSON.stringify(currentFile)}},${extra}));`:'';
 function change(code,from,to){if(code.split(from).length!==2)throw Error('Expected one intervention anchor: '+from);return code.replace(from,to);}
-export default defineConfig({base:'./',plugins:[tailwindcss(),{name:'isolated-sdk-observation',enforce:'pre',transform(code,id){
+export default defineConfig({base:'./',esbuild:{jsx:'automatic'},plugins:[tailwindcss(),{name:'isolated-sdk-observation',enforce:'pre',transform(code,id){
  const file=id.replaceAll('\\','/').split('?')[0];let out=code;currentFile=file.includes('/node_modules/')?file.split('/node_modules/').slice(1).join('/node_modules/'):path.basename(file);
  if(file.endsWith('/components/Select/Select.js')){
   out=change(out,'onEscapeKeyDown: preventDefaultHandler',`onEscapeKeyDown: (event)=>{${log('select-escape-before','{cancelled:event.defaultPrevented,stack:new Error().stack}')}if(window.__parity.condition!=='paired-plain'){${log('cancel-call','{owner:"select"}')}event.preventDefault();}${log('select-escape-after','{cancelled:event.defaultPrevented}')}}`);
