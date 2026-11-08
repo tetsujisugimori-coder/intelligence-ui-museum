@@ -25,7 +25,7 @@ async function main(){
    browser=await playwright[engine].launch();
    for(const route of ROUTES)for(let iteration=1;iteration<=repeats;iteration++)for(const name of CASES){
      const id=engine+'-'+route+'-'+iteration+'-'+name;
-     const row={id,case:name,engine,route,iteration,sourceSha256:source['fixture.js'],status:'INCOMPLETE',errors:[]};
+     const row={id,case:name,engine,route,iteration,sourceSha256:source['fixture.js'],status:'INCOMPLETE',errors:[],instrumentation:'fixture-events-v1'};
      rows.push(row);
      let page;
      try{

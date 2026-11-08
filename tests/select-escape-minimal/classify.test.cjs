@@ -14,7 +14,7 @@ const events=(cancel)=>[
 ];
 function row(yes){
   const c=yes?'controlled-cancel':'controlled-plain';
-  return {case:c,engine:'chromium',route:'tab',iteration:1,status:'COMPLETE',errors:[],sourceSha256:'a'.repeat(64),pngSha256:'b'.repeat(64),snapshot:{case:c,config:{select:true,selectCancel:yes,hook:false,fallback:false},keydownTrusted:true,keydownCancelled:yes,preventCount:yes?1:0,open:false,expanded:'false',value:'a',closeOwner:'select-controlled',triggerFocused:true,focusReturns:1,closeRequests:1,focusVisible:true,events:events(yes)}};
+  return {case:c,engine:'chromium',route:'tab',iteration:1,status:'COMPLETE',errors:[],sourceSha256:'a'.repeat(64),pngSha256:'b'.repeat(64),snapshot:{case:c,config:{select:true,selectCancel:yes,hook:false,fallback:false},keydownTrusted:true,keydownCancelled:yes,preventCount:yes?1:0,open:false,expanded:'false',value:'a',closeOwner:'select-controlled',triggerFocused:true,focusReturns:1,closeRequests:1,focusVisible:true,events:events(yes).map((e,i)=>({...e,seq:i+1,...(e.kind==='keydown-bubble'?{cancelled:yes}:{})}))}};
 }
 const clone=x=>JSON.parse(JSON.stringify(x));
 test('positive is strictly model-scoped',()=>{
@@ -48,3 +48,23 @@ test('changed fixture control config invalidates causal comparison',()=>{
  assert.equal(comparePair(a,b).classification,'NOT_COMPARABLE');
 });
 test('row outside planned cases is invalid',()=>{const r=row(true);r.case='unknown';assert.notEqual(validateRow(r).length,0);});
+for(const [name,mutate,code] of [
+ ['contradictory cancellation trace',(a,b)=>{a.snapshot.events.find(e=>e.kind==='keydown-bubble').cancelled=false;},'cancellation-trace-contradiction'],
+ ['both close origins changed',(a,b)=>{for(const r of [a,b])r.snapshot.events.find(e=>e.kind==='close-request').owner='alternate';},'closure-trace'],
+ ['both focus traces missing',(a,b)=>{for(const r of [a,b])r.snapshot.events=r.snapshot.events.filter(e=>e.kind!=='focus-return');},'trace-counter-contradiction'],
+ ['both key sequences reversed',(a,b)=>{for(const r of [a,b])r.snapshot.events.reverse();},'event-order-or-trust'],
+ ['failed COMPLETE row',(a,b)=>{b.error='execution failed';b.exitCode=1;},'incomplete-or-pageerror'],
+ ['instrumentation changed',(a,b)=>{b.instrumentation='different';},'instrumentation-drift']
+])test('independent counterexample: '+name,()=>{
+ const a=row(true),b=row(false);mutate(a,b);
+ const r=comparePair(a,b);assert.equal(r.classification,'NOT_COMPARABLE');
+ assert.ok(r.errors.some(e=>e.endsWith(code)),code);
+});
+test('focus-return cannot precede its MutationObserver transition',()=>{
+ const a=row(true),b=row(false);
+ for(const r of [a,b]){
+  const es=r.snapshot.events,i=es.findIndex(e=>e.kind==='mutation'),j=es.findIndex(e=>e.kind==='focus-return');
+  [es[i],es[j]]=[es[j],es[i]];es.forEach((e,n)=>e.seq=n+1);
+ }
+ const x=comparePair(a,b);assert.equal(x.classification,'NOT_COMPARABLE');assert.ok(x.errors.some(e=>e.endsWith('mutation-focus-order')));
+});

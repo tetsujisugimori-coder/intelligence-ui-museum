@@ -5,9 +5,43 @@ const skeletal=events=>(events||[]).filter(e=>e.kind!=='prevent-default').map(e=
 function validateRow(r){
   const errors=[];
   if(!r||!CASES.includes(r.case)||!ROUTES.includes(r.route)||!['chromium','webkit'].includes(r.engine)||!Number.isInteger(r.iteration)||r.iteration<1)errors.push('identity');
-  if(r?.status!=='COMPLETE'||r?.errors?.length)errors.push('incomplete-or-pageerror');
+  if(r?.status!=='COMPLETE'||!Array.isArray(r?.errors)||r.errors.length||r.error!=null||(r.exitCode!=null&&r.exitCode!==0))errors.push('incomplete-or-pageerror');
   if(!r?.sourceSha256||!/^[a-f0-9]{64}$/.test(r.sourceSha256)||!r?.pngSha256||!/^[a-f0-9]{64}$/.test(r.pngSha256))errors.push('missing-hash');
+  if(r?.instrumentation!=null&&r.instrumentation!=='fixture-events-v1')errors.push('instrumentation-drift');
   const s=r?.snapshot;
+  const ev=Array.isArray(s?.events)?s.events:[];
+  const all=k=>ev.filter(e=>e.kind===k),idx=k=>ev.findIndex(e=>e.kind===k);
+  const keydown=all('keydown-capture'),keyup=all('keyup'),bubble=all('keydown-bubble');
+  if(keydown.length!==1||keyup.length!==1||bubble.length!==1||
+    keydown[0]?.trusted!==true||keyup[0]?.trusted!==true||
+    !(idx('keydown-capture')<idx('keydown-bubble')&&idx('keydown-bubble')<idx('keyup')))
+    errors.push('event-order-or-trust');
+  if(ev.some((e,i)=>!Number.isInteger(e.seq)||(i>0&&e.seq<=ev[i-1].seq)))errors.push('sequence-order');
+  if(bubble[0]?.cancelled!==s?.keydownCancelled||
+    all('prevent-default').length!==s?.preventCount||
+    (s?.preventCount>0)!==s?.keydownCancelled)errors.push('cancellation-trace-contradiction');
+  if(all('close-request').length!==s?.closeRequests||all('focus-return').length!==s?.focusReturns)
+    errors.push('trace-counter-contradiction');
+  if(r?.case!=='delegated-open'){
+    const owners={'controlled-cancel':'select-controlled','controlled-plain':'select-controlled','delegated-fallback':'fallback-model','hook-cancel':'hook'};
+    if(all('close-request').length!==1||all('close-commit').length!==1||
+      all('close-request')[0]?.owner!==owners[r?.case]||all('close-commit')[0]?.owner!==owners[r?.case]||
+      all('focus-return').length!==1||all('focus-return')[0]?.owner!=='model-mutation'||
+      !(idx('keydown-capture')<idx('close-request')&&idx('close-request')<idx('close-commit')&&idx('close-commit')<idx('focus-return')&&idx('focus-return')<idx('keyup'))||
+      !ev.some(e=>e.kind==='mutation'&&e.from===true&&e.to===false)||
+      !ev.some(e=>e.kind==='focusin'&&e.target==='trigger'))errors.push('closure-trace');
+    const mi=ev.findIndex(e=>e.kind==='mutation'&&e.from===true&&e.to===false);
+    const fi=ev.findIndex(e=>e.kind==='focusin'&&e.target==='trigger');
+    if(!(idx('close-commit')<mi&&mi<fi&&fi<idx('focus-return')))errors.push('mutation-focus-order');
+    const handler=r.case==='delegated-fallback'?'fallback-handler':r.case==='hook-cancel'?'hook-handler':'select-handler';
+    if(all(handler).length!==1||!(idx('keydown-capture')<idx(handler)&&idx(handler)<idx('close-request')))errors.push('handler-order');
+    if(s?.keydownCancelled){
+      const owner=r.case==='delegated-fallback'?'fallback-model':r.case==='hook-cancel'?'hook':'select';
+      if(all('prevent-default').length!==1||all('prevent-default')[0]?.owner!==owner||
+        !(idx(handler)<idx('prevent-default')&&idx('prevent-default')<idx('close-request')))errors.push('prevent-owner-order');
+    }
+  }else if(all('close-request').length||all('close-commit').length||all('focus-return').length)errors.push('unexpected-open-control-close');
+
   if(s?.case!==r?.case||s?.keydownTrusted!==true)errors.push('untrusted-or-mismatched');
   if(!Array.isArray(s?.events)||s.events.filter(e=>e.kind==='keydown-capture').length!==1||s.events.filter(e=>e.kind==='keyup').length!==1)errors.push('event-pair');
   if(s?.value!=='a')errors.push('value');

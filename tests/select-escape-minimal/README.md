@@ -28,3 +28,11 @@ Linux, Windows, browser installation and isolated work environments follow norma
 This model does not reproduce real Radix fallback, SDK callback routing, or the Museum's \`select-focus-return.ts\` implementation. It does not establish the cause of WebKit direct focus outline failures or historical persistent offscreen clicks; those remain **UNKNOWN** in Issue #28. The next step, under a separate reviewed change, is to run a parity experiment against **unaltered** official SDK and its actual Radix callsites and prove that the close/focus path is unchanged when cancellation differs. If parity cannot be shown, classification remains UNKNOWN.
 
 PR #23/#29 stay Draft/merge NO. Stage 3 HOLD and the ban on product/official SDK edits are unchanged.
+
+## Round 8 evidence-contract repair
+
+The original fixed commit c65eea3 and its Actions ZIPs remain historical evidence. Before decoding an original ZIP, verify its SHA256 against the authenticated GitHub artifact API digest with `node tests/select-escape-minimal/verify-archive.cjs ZIP sha256:DIGEST`. An internal manifest is not an authenticity signature: replacing both an image and every local digest can evade internal consistency checks. This external check is required, not replaced by `audit.cjs`.
+
+The repaired validator independently checks each trace's cancellation, closure source, counters, trusted key order, sequence, and focus return. Matching corruption on both sides cannot establish equivalence. PNG filenames bind to trial IDs, dimensions and inflated scanlines are checked; focus-visible and PNG differences remain outcomes, never equality prerequisites. PNG equality does not prove equal physical rendering.
+
+`MINIMAL_SOURCE_DIR` permits re-auditing historical unchanged artifacts against a separately obtained, commit-pinned source snapshot. It is not permission to silently rewrite recorded source hashes. Explicit instrumentation is `fixture-events-v1`; absent instrumentation in the original artifact means the fixed original fixture, not verified instrumentation neutrality. Changes to instrumentation are rejected. Historical CI has shell-step success but no separate numeric exit-code sidecar, so that limitation remains.
