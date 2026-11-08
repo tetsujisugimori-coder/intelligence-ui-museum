@@ -36,3 +36,7 @@ The original fixed commit c65eea3 and its Actions ZIPs remain historical evidenc
 The repaired validator independently checks each trace's cancellation, closure source, counters, trusted key order, sequence, and focus return. Matching corruption on both sides cannot establish equivalence. PNG filenames bind to trial IDs, dimensions and inflated scanlines are checked; focus-visible and PNG differences remain outcomes, never equality prerequisites. PNG equality does not prove equal physical rendering.
 
 `MINIMAL_SOURCE_DIR` permits re-auditing historical unchanged artifacts against a separately obtained, commit-pinned source snapshot. It is not permission to silently rewrite recorded source hashes. Explicit instrumentation is `fixture-events-v1`; absent instrumentation in the original artifact means the fixed original fixture, not verified instrumentation neutrality. Changes to instrumentation are rejected. Historical CI has shell-step success but no separate numeric exit-code sidecar, so that limitation remains.
+
+## Focus observation presence (additional review 5817800901)
+
+Both boolean values are valid, but `snapshot.focusVisible` must be an own boolean property on every complete row. Missing/null/invalid values are rejected; A/B boolean and PNG differences remain outcomes. Missing trials return NOT_COMPARABLE so interrupted runs can preserve their failure report. See `evidence/round8-comparator-repair-20261108/README.md` for the new, separate same-input RED/GREEN evidence and unchanged historical boundaries.

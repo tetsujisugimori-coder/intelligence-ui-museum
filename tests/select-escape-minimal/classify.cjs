@@ -4,11 +4,14 @@ const ROUTES=Object.freeze(['direct','tab']);
 const skeletal=events=>(events||[]).filter(e=>e.kind!=='prevent-default').map(e=>[e.kind,e.owner,e.from,e.to,e.trusted,e.target].join('|'));
 function validateRow(r){
   const errors=[];
+  if(!r||typeof r!=='object')return ['identity','incomplete-or-pageerror'];
   if(!r||!CASES.includes(r.case)||!ROUTES.includes(r.route)||!['chromium','webkit'].includes(r.engine)||!Number.isInteger(r.iteration)||r.iteration<1)errors.push('identity');
   if(r?.status!=='COMPLETE'||!Array.isArray(r?.errors)||r.errors.length||r.error!=null||(r.exitCode!=null&&r.exitCode!==0))errors.push('incomplete-or-pageerror');
   if(!r?.sourceSha256||!/^[a-f0-9]{64}$/.test(r.sourceSha256)||!r?.pngSha256||!/^[a-f0-9]{64}$/.test(r.pngSha256))errors.push('missing-hash');
   if(r?.instrumentation!=null&&r.instrumentation!=='fixture-events-v1')errors.push('instrumentation-drift');
   const s=r?.snapshot;
+  // The observation must exist, but its boolean value is an outcome, not an invariant.
+  if(!s||!Object.hasOwn(s,'focusVisible')||typeof s.focusVisible!=='boolean')errors.push('focus-visible-observation');
   const ev=Array.isArray(s?.events)?s.events:[];
   const all=k=>ev.filter(e=>e.kind===k),idx=k=>ev.findIndex(e=>e.kind===k);
   const keydown=all('keydown-capture'),keyup=all('keyup'),bubble=all('keydown-bubble');

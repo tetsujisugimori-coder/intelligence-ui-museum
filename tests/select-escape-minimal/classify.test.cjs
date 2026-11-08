@@ -17,6 +17,24 @@ function row(yes){
   return {case:c,engine:'chromium',route:'tab',iteration:1,status:'COMPLETE',errors:[],sourceSha256:'a'.repeat(64),pngSha256:'b'.repeat(64),snapshot:{case:c,config:{select:true,selectCancel:yes,hook:false,fallback:false},keydownTrusted:true,keydownCancelled:yes,preventCount:yes?1:0,open:false,expanded:'false',value:'a',closeOwner:'select-controlled',triggerFocused:true,focusReturns:1,closeRequests:1,focusVisible:true,events:events(yes).map((e,i)=>({...e,seq:i+1,...(e.kind==='keydown-bubble'?{cancelled:yes}:{})}))}};
 }
 const clone=x=>JSON.parse(JSON.stringify(x));
+test('missing trial cannot crash classification or pass',()=>{
+ for(const p of [[undefined,undefined],[row(true),undefined],[undefined,row(false)],[null,null]])assert.equal(comparePair(...p).classification,'NOT_COMPARABLE');
+});
+for(const [name,value] of [['undefined',undefined],['null',null],['string','true'],['number',1],['object',{}],['array',[]]]){
+ test('reject focus-visible '+name+' on either or both rows',()=>{
+  for(const sides of [[0],[1],[0,1]]){const p=[row(true),row(false)];for(const i of sides)p[i].snapshot.focusVisible=value;
+   assert.equal(comparePair(...p).classification,'NOT_COMPARABLE');
+   for(const i of sides)assert.ok(validateRow(p[i]).includes('focus-visible-observation'));
+  }
+ });
+}
+test('reject missing or inherited focus-visible',()=>{
+ for(const inherited of [false,true]){const p=[row(true),row(false)];for(const r of p){delete r.snapshot.focusVisible;if(inherited)Object.setPrototypeOf(r.snapshot,{focusVisible:true});}
+ assert.equal(comparePair(...p).classification,'NOT_COMPARABLE');}
+});
+test('all four boolean outcome pairs remain comparable',()=>{
+ for(const aValue of [true,false])for(const bValue of [true,false]){const p=[row(true),row(false)];p[0].snapshot.focusVisible=aValue;p[1].snapshot.focusVisible=bValue;p[1].pngSha256='c'.repeat(64);assert.equal(comparePair(...p).classification,'MODEL_COMPARABLE');}
+});
 test('positive is strictly model-scoped',()=>{
  const x=comparePair(row(true),row(false));
  assert.equal(x.classification,'MODEL_COMPARABLE');
