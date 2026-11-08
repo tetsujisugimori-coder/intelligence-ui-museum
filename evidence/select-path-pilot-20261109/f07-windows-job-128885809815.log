@@ -1,0 +1,954 @@
+﻿2026-11-08T22:39:04.6227969Z Current runner version: '2.338.2'
+2026-11-08T22:39:04.6249977Z ##[group]Runner Image Provisioner
+2026-11-08T22:39:04.6250663Z Hosted Compute Agent
+2026-11-08T22:39:04.6251094Z Version: 20261103.629
+2026-11-08T22:39:04.6251561Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-08T22:39:04.6252123Z Build Date: 2026-11-03T17:26:59Z
+2026-11-08T22:39:04.6252638Z Worker ID: {1d6cea4b-f478-42ca-8f05-c8ade2283c0e}
+2026-11-08T22:39:04.6253178Z Region: westus2
+2026-11-08T22:39:04.6253574Z Cloud: Azure
+2026-11-08T22:39:04.6253959Z ##[endgroup]
+2026-11-08T22:39:04.6254990Z ##[group]Operating System
+2026-11-08T22:39:04.6255461Z Microsoft Windows Server 2025
+2026-11-08T22:39:04.6255925Z 10.0.26100
+2026-11-08T22:39:04.6256307Z Datacenter
+2026-11-08T22:39:04.6256680Z ##[endgroup]
+2026-11-08T22:39:04.6257102Z ##[group]Runner Image
+2026-11-08T22:39:04.6257543Z Image: windows-2025-vs2026
+2026-11-08T22:39:04.6257986Z Version: 20261103.298.1
+2026-11-08T22:39:04.6259150Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261103.298/images/windows/Windows2025-VS2026-Readme.md
+2026-11-08T22:39:04.6260411Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261103.298
+2026-11-08T22:39:04.6261155Z ##[endgroup]
+2026-11-08T22:39:04.6262008Z ##[group]GITHUB_TOKEN Permissions
+2026-11-08T22:39:04.6263458Z Contents: read
+2026-11-08T22:39:04.6263897Z Metadata: read
+2026-11-08T22:39:04.6264342Z ##[endgroup]
+2026-11-08T22:39:04.6266487Z Secret source: Actions
+2026-11-08T22:39:04.6267200Z Cache mode: write
+2026-11-08T22:39:04.6267801Z Prepare workflow directory
+2026-11-08T22:39:04.6539183Z Prepare all required actions
+2026-11-08T22:39:04.6579798Z Getting action download info
+2026-11-08T22:39:05.0016985Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-08T22:39:05.1045160Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-08T22:39:05.2418825Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-08T22:39:05.5133861Z Complete job name: pilot (windows-2025)
+2026-11-08T22:39:05.6477351Z ##[group]Run actions/checkout@v4
+2026-11-08T22:39:05.6478317Z with:
+2026-11-08T22:39:05.6478663Z   ref: f07ef66ef7fb00f5c58c3c2812d9fcaf2f208183
+2026-11-08T22:39:05.6479200Z   repository: tetsujisugimori-coder/intelligence-ui-museum
+2026-11-08T22:39:05.6482562Z   token: ***
+2026-11-08T22:39:05.6482878Z   ssh-strict: true
+2026-11-08T22:39:05.6483185Z   ssh-user: git
+2026-11-08T22:39:05.6483517Z   persist-credentials: true
+2026-11-08T22:39:05.6483860Z   clean: true
+2026-11-08T22:39:05.6484167Z   sparse-checkout-cone-mode: true
+2026-11-08T22:39:05.6484533Z   fetch-depth: 1
+2026-11-08T22:39:05.6484828Z   fetch-tags: false
+2026-11-08T22:39:05.6485126Z   show-progress: true
+2026-11-08T22:39:05.6485428Z   lfs: false
+2026-11-08T22:39:05.6485709Z   submodules: false
+2026-11-08T22:39:05.6486016Z   set-safe-directory: true
+2026-11-08T22:39:05.6486402Z   allow-unsafe-pr-checkout: false
+2026-11-08T22:39:05.6486926Z ##[endgroup]
+2026-11-08T22:39:05.7735331Z Syncing repository: tetsujisugimori-coder/intelligence-ui-museum
+2026-11-08T22:39:05.7736748Z ##[group]Getting Git version info
+2026-11-08T22:39:05.7737313Z Working directory is 'D:\a\intelligence-ui-museum\intelligence-ui-museum'
+2026-11-08T22:39:05.8349446Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-08T22:39:06.2112309Z git version 2.56.0.windows.4
+2026-11-08T22:39:06.2159546Z ##[endgroup]
+2026-11-08T22:39:06.2176648Z Temporarily overriding HOME='D:\a\_temp\f7e4c719-5f04-4522-9717-13598dc02c16' before making global git config changes
+2026-11-08T22:39:06.2177673Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-08T22:39:06.2185149Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\intelligence-ui-museum\intelligence-ui-museum
+2026-11-08T22:39:06.2747147Z Deleting the contents of 'D:\a\intelligence-ui-museum\intelligence-ui-museum'
+2026-11-08T22:39:06.2752404Z ##[group]Initializing the repository
+2026-11-08T22:39:06.2760101Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\intelligence-ui-museum\intelligence-ui-museum
+2026-11-08T22:39:06.4559925Z Initialized empty Git repository in D:/a/intelligence-ui-museum/intelligence-ui-museum/.git/
+2026-11-08T22:39:06.4601007Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/tetsujisugimori-coder/intelligence-ui-museum
+2026-11-08T22:39:06.5224800Z ##[endgroup]
+2026-11-08T22:39:06.5225817Z ##[group]Disabling automatic garbage collection
+2026-11-08T22:39:06.5232573Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-11-08T22:39:06.5536464Z ##[endgroup]
+2026-11-08T22:39:06.5537441Z ##[group]Setting up auth
+2026-11-08T22:39:06.5546287Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-08T22:39:06.5853623Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-08T22:39:08.4670910Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-08T22:39:08.4983334Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-08T22:39:08.9664817Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-08T22:39:08.9987727Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-08T22:39:09.4525011Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-08T22:39:09.4868397Z ##[endgroup]
+2026-11-08T22:39:09.4871881Z ##[group]Fetching the repository
+2026-11-08T22:39:09.4882619Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin f07ef66ef7fb00f5c58c3c2812d9fcaf2f208183
+2026-11-08T22:39:11.8218057Z From https://github.com/tetsujisugimori-coder/intelligence-ui-museum
+2026-11-08T22:39:11.8218810Z  * branch            f07ef66ef7fb00f5c58c3c2812d9fcaf2f208183 -> FETCH_HEAD
+2026-11-08T22:39:11.8253843Z ##[endgroup]
+2026-11-08T22:39:11.8254316Z ##[group]Determining the checkout info
+2026-11-08T22:39:11.8256048Z ##[endgroup]
+2026-11-08T22:39:11.8264857Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-11-08T22:39:11.8816852Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-08T22:39:11.9125844Z ##[group]Checking out the ref
+2026-11-08T22:39:11.9133821Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force f07ef66ef7fb00f5c58c3c2812d9fcaf2f208183
+2026-11-08T22:39:12.9120285Z Note: switching to 'f07ef66ef7fb00f5c58c3c2812d9fcaf2f208183'.
+2026-11-08T22:39:12.9120900Z 
+2026-11-08T22:39:12.9187327Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-08T22:39:12.9188138Z changes and commit them, and you can discard any commits you make in this
+2026-11-08T22:39:12.9188768Z state without impacting any branches by switching back to a branch.
+2026-11-08T22:39:12.9189125Z 
+2026-11-08T22:39:12.9189359Z If you want to create a new branch to retain commits you create, you may
+2026-11-08T22:39:12.9189944Z do so (now or later) by using -c with the switch command. Example:
+2026-11-08T22:39:12.9190263Z 
+2026-11-08T22:39:12.9190443Z   git switch -c <new-branch-name>
+2026-11-08T22:39:12.9190667Z 
+2026-11-08T22:39:12.9190796Z Or undo this operation with:
+2026-11-08T22:39:12.9192071Z 
+2026-11-08T22:39:12.9192167Z   git switch -
+2026-11-08T22:39:12.9192350Z 
+2026-11-08T22:39:12.9192614Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-08T22:39:12.9193025Z 
+2026-11-08T22:39:12.9193363Z HEAD is now at f07ef66 test: freeze old and new Select operation path pilot (#28)
+2026-11-08T22:39:12.9237787Z ##[endgroup]
+2026-11-08T22:39:12.9557906Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-11-08T22:39:12.9832186Z f07ef66ef7fb00f5c58c3c2812d9fcaf2f208183
+2026-11-08T22:39:13.0205740Z ##[group]Run actions/setup-node@v4
+2026-11-08T22:39:13.0206014Z with:
+2026-11-08T22:39:13.0206167Z   node-version: 22
+2026-11-08T22:39:13.0206338Z   always-auth: false
+2026-11-08T22:39:13.0206498Z   check-latest: false
+2026-11-08T22:39:13.0208531Z   token: ***
+2026-11-08T22:39:13.0208689Z ##[endgroup]
+2026-11-08T22:39:13.1650864Z Found in cache @ C:\hostedtoolcache\windows\node\22.23.4\x64
+2026-11-08T22:39:13.1660994Z (node:8640) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-08T22:39:13.1662063Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-08T22:39:13.1664777Z ##[group]Environment details
+2026-11-08T22:39:18.0383574Z node: v22.23.4
+2026-11-08T22:39:18.0383800Z npm: 10.9.9
+2026-11-08T22:39:18.0384128Z yarn: 1.22.22
+2026-11-08T22:39:18.0385413Z ##[endgroup]
+2026-11-08T22:39:18.0661583Z ##[group]Run python scripts/prepare-work.py
+2026-11-08T22:39:18.0661936Z [36;1mpython scripts/prepare-work.py[0m
+2026-11-08T22:39:18.0662256Z [36;1mnpm --prefix .work/v10 ci --ignore-scripts --no-audit --no-fund[0m
+2026-11-08T22:39:18.0662573Z [36;1mnpm --prefix .work/v10 run build[0m
+2026-11-08T22:39:18.0662805Z [36;1mnode tests/sdk-parity/prepare.cjs[0m
+2026-11-08T22:39:18.0663108Z [36;1mnpm --prefix .work/sdk-parity ci --ignore-scripts --no-audit --no-fund[0m
+2026-11-08T22:39:18.0663585Z [36;1m(cd .work/sdk-parity && VITE_MEASURE=detail node node_modules/vite/bin/vite.js build --config vite.config.mjs)[0m
+2026-11-08T22:39:18.0664089Z [36;1mnpm --prefix tools/stage-a-browser ci --ignore-scripts --no-audit --no-fund[0m
+2026-11-08T22:39:18.0664394Z [36;1mcd tools/stage-a-browser[0m
+2026-11-08T22:39:18.0664856Z [36;1mif [ 'Windows' = 'Linux' ]; then npx playwright install --with-deps webkit; else npx playwright install webkit; fi[0m
+2026-11-08T22:39:18.0681018Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-11-08T22:39:18.0681343Z ##[endgroup]
+2026-11-08T22:39:19.1703211Z Prepared .work/v10; imported source/evidence unchanged
+2026-11-08T22:39:29.9399343Z 
+2026-11-08T22:39:29.9400453Z added 248 packages in 10s
+2026-11-08T22:39:32.0083196Z 
+2026-11-08T22:39:32.0083941Z > intelligence-ui-official-lab@0.1.0 build
+2026-11-08T22:39:32.0084403Z > tsc --noEmit && vite build
+2026-11-08T22:39:32.0084551Z 
+2026-11-08T22:39:33.9245779Z [36mvite v6.4.5 [32mbuilding for production...[36m[39m
+2026-11-08T22:39:34.0050408Z transforming...
+2026-11-08T22:39:34.0964647Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Button/Button.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Button/Button.js" was ignored.[39m
+2026-11-08T22:39:34.1246096Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Button/CopyButton.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Button/CopyButton.js" was ignored.[39m
+2026-11-08T22:39:34.2053652Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Select/Select.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Select/Select.js" was ignored.[39m
+2026-11-08T22:39:34.2179459Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Switch/Switch.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Switch/Switch.js" was ignored.[39m
+2026-11-08T22:39:34.2194942Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/CopyTooltip.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/CopyTooltip.js" was ignored.[39m
+2026-11-08T22:39:34.2209215Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/Tooltip.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/Tooltip.js" was ignored.[39m
+2026-11-08T22:39:34.2233346Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Alert/Alert.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Alert/Alert.js" was ignored.[39m
+2026-11-08T22:39:34.6886587Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/internal.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/internal.js" was ignored.[39m
+2026-11-08T22:39:34.6897300Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/TransitionGroup.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/TransitionGroup.js" was ignored.[39m
+2026-11-08T22:39:35.2564237Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/AppsSDKUIContext.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/AppsSDKUIContext.js" was ignored.[39m
+2026-11-08T22:39:35.2570813Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Indicator/CircularProgress.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Indicator/CircularProgress.js" was ignored.[39m
+2026-11-08T22:39:35.2672040Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/Animate.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/Animate.js" was ignored.[39m
+2026-11-08T22:39:35.2691469Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayoutGroup.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayoutGroup.js" was ignored.[39m
+2026-11-08T22:39:35.2709439Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayout.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayout.js" was ignored.[39m
+2026-11-08T22:39:35.2741552Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/SlotTransitionGroup.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/SlotTransitionGroup.js" was ignored.[39m
+2026-11-08T22:39:35.4165144Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/SelectControl/SelectControl.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/SelectControl/SelectControl.js" was ignored.[39m
+2026-11-08T22:39:35.4222822Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Input/Input.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Input/Input.js" was ignored.[39m
+2026-11-08T22:39:35.4237248Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accessible-icon/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accessible-icon/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4247135Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-aspect-ratio/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-aspect-ratio/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4260074Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-alert-dialog/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-alert-dialog/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4289504Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accordion/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accordion/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4327564Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collapsible/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collapsible/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4355142Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-checkbox/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-checkbox/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4377891Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-avatar/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-avatar/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4400246Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-context-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-context-menu/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4426003Z [33mnode_modules/@radix-ui/react-direction/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@radix-ui/react-direction/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4433146Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dialog/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dialog/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4492906Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dropdown-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dropdown-menu/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4511256Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-label/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-label/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4518793Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-form/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-form/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4546948Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-hover-card/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-hover-card/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4616108Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-portal/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-portal/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4629268Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popover/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popover/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4659842Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-progress/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-progress/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4673047Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-one-time-password-field/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-one-time-password-field/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4721609Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-navigation-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-navigation-menu/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4769227Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-radio-group/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-radio-group/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4791118Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-password-toggle-field/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-password-toggle-field/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4839294Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menubar/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menubar/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4862002Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-separator/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-separator/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.4869705Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-scroll-area/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-scroll-area/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.5001034Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-switch/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-switch/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.5016532Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tabs/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tabs/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.5031768Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-slider/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-slider/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.5081022Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.5090697Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-select/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-select/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.5147322Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle-group/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle-group/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.5161754Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toolbar/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toolbar/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.5175801Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-visually-hidden/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-visually-hidden/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.5182881Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tooltip/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tooltip/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.5214077Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toast/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toast/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.7720733Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-primitive/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-primitive/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.7784167Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-presence/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-presence/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.7796580Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collection/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collection/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.7852452Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.7879313Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menu/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.7923389Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popper/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popper/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.7955276Z [33mnode_modules/@radix-ui/react-focus-guards/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@radix-ui/react-focus-guards/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.7965441Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-focus-scope/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-focus-scope/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.8045312Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-roving-focus/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-roving-focus/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:35.8115499Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-arrow/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-arrow/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:36.5123238Z [32m✓[39m 938 modules transformed.
+2026-11-08T22:39:36.6904296Z rendering chunks...
+2026-11-08T22:39:36.7188491Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:36.7190941Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:36.7192599Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:36.7194160Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:36.7195648Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:36.7249560Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:36.7251556Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:36.7253078Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:36.7254614Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:36.7256109Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:36.7949110Z computing gzip size...
+2026-11-08T22:39:36.8118437Z [2mdist/[22m[32mindex.html                 [39m[1m[2m  1.16 kB[22m[1m[22m[2m │ gzip:   0.85 kB[22m
+2026-11-08T22:39:36.8119484Z [2mdist/[22m[35massets/index-DZhtnZSN.css  [39m[1m[2m146.04 kB[22m[1m[22m[2m │ gzip:  21.09 kB[22m
+2026-11-08T22:39:36.8120663Z [2mdist/[22m[36massets/index-RTo4pgDn.js   [39m[1m[2m315.76 kB[22m[1m[22m[2m │ gzip: 104.30 kB[22m[2m │ map: 1,499.63 kB[22m
+2026-11-08T22:39:36.8121405Z [32m✓ built in 2.85s[39m
+2026-11-08T22:39:37.4697286Z D:\a\intelligence-ui-museum\intelligence-ui-museum\.work\sdk-parity
+2026-11-08T22:39:44.3190887Z 
+2026-11-08T22:39:44.3191528Z added 248 packages in 7s
+2026-11-08T22:39:44.7869710Z [36mvite v6.4.5 [32mbuilding for production...[36m[39m
+2026-11-08T22:39:44.8616109Z transforming...
+2026-11-08T22:39:44.9253282Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Select/Select.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Select/Select.js" was ignored.[39m
+2026-11-08T22:39:45.8336513Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/SelectControl/SelectControl.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/SelectControl/SelectControl.js" was ignored.[39m
+2026-11-08T22:39:45.8372851Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Input/Input.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Input/Input.js" was ignored.[39m
+2026-11-08T22:39:45.8388409Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/Animate.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/Animate.js" was ignored.[39m
+2026-11-08T22:39:45.8408288Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayoutGroup.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayoutGroup.js" was ignored.[39m
+2026-11-08T22:39:45.8425253Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayout.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/AnimateLayout.js" was ignored.[39m
+2026-11-08T22:39:45.8444465Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/TransitionGroup.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/TransitionGroup.js" was ignored.[39m
+2026-11-08T22:39:45.8473341Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Transition/SlotTransitionGroup.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Transition/SlotTransitionGroup.js" was ignored.[39m
+2026-11-08T22:39:45.9773179Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/CopyTooltip.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/CopyTooltip.js" was ignored.[39m
+2026-11-08T22:39:45.9792608Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/Tooltip.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Tooltip/Tooltip.js" was ignored.[39m
+2026-11-08T22:39:45.9810050Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accessible-icon/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accessible-icon/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:45.9823698Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-alert-dialog/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-alert-dialog/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:45.9862765Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-aspect-ratio/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-aspect-ratio/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:45.9876001Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accordion/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-accordion/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:45.9915335Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-avatar/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-avatar/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:45.9954285Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-checkbox/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-checkbox/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0032941Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collapsible/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collapsible/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0052552Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-context-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-context-menu/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0078810Z [33mnode_modules/@radix-ui/react-direction/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@radix-ui/react-direction/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0087060Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dialog/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dialog/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0148898Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dropdown-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dropdown-menu/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0167382Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-hover-card/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-hover-card/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0193253Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-form/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-form/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0221820Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-label/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-label/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0228599Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menubar/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menubar/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0259783Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-password-toggle-field/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-password-toggle-field/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0296849Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-one-time-password-field/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-one-time-password-field/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0333183Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-portal/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-portal/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0667858Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-progress/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-progress/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0700291Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popover/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popover/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0703499Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-navigation-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-navigation-menu/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0706639Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-radio-group/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-radio-group/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0708527Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-separator/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-separator/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0710452Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-scroll-area/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-scroll-area/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0826180Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-slider/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-slider/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0841754Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-switch/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-switch/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0858224Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tabs/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tabs/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0880971Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0893084Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle-group/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toggle-group/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0914923Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toolbar/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toolbar/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0935186Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-select/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-select/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.0987912Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-visually-hidden/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-visually-hidden/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.1090435Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toast/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-toast/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.1139291Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tooltip/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-tooltip/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.3904242Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-primitive/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-primitive/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.3955510Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collection/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-collection/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.4024642Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-presence/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-presence/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.4049948Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menu/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-menu/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.4191553Z [33mnode_modules/@radix-ui/react-focus-guards/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@radix-ui/react-focus-guards/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.4199553Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.4217414Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-focus-scope/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-focus-scope/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.4234618Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popper/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-popper/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.4270514Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-roving-focus/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-roving-focus/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.4370817Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Indicator/CircularProgress.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Indicator/CircularProgress.js" was ignored.[39m
+2026-11-08T22:39:46.4395065Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Button/CopyButton.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Button/CopyButton.js" was ignored.[39m
+2026-11-08T22:39:46.4409578Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/Button/Button.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/Button/Button.js" was ignored.[39m
+2026-11-08T22:39:46.4461985Z [33mnode_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-arrow/dist/index.mjs (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/node_modules/radix-ui/node_modules/@radix-ui/react-arrow/dist/index.mjs" was ignored.[39m
+2026-11-08T22:39:46.5358630Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/internal.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/internal.js" was ignored.[39m
+2026-11-08T22:39:46.5538842Z [33mnode_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/AppsSDKUIContext.js (1:0): Module level directives cause errors when bundled, "use client" in "node_modules/@openai/apps-sdk-ui/dist/es/components/AppsSDKUIProvider/AppsSDKUIContext.js" was ignored.[39m
+2026-11-08T22:39:47.2082945Z [32m✓[39m 930 modules transformed.
+2026-11-08T22:39:47.3731782Z rendering chunks...
+2026-11-08T22:39:47.4183679Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:47.4186025Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:47.4187682Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:47.4189235Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:47.4190742Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:47.4192212Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:47.4193680Z [33m[plugin @tailwindcss/vite:generate:build] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help[39m
+2026-11-08T22:39:47.5157279Z computing gzip size...
+2026-11-08T22:39:47.5332546Z [2mdist-detail/[22m[32mindex.html                 [39m[1m[2m  0.28 kB[22m[1m[22m[2m │ gzip:  0.21 kB[22m
+2026-11-08T22:39:47.5333733Z [2mdist-detail/[22m[35massets/index-BdOprNEE.css  [39m[1m[2m129.45 kB[22m[1m[22m[2m │ gzip: 18.74 kB[22m
+2026-11-08T22:39:47.5335041Z [2mdist-detail/[22m[36massets/index-BDnU9sVt.js   [39m[1m[2m301.93 kB[22m[1m[22m[2m │ gzip: 98.44 kB[22m[2m │ map: 1,458.85 kB[22m
+2026-11-08T22:39:47.5335871Z [32m✓ built in 2.71s[39m
+2026-11-08T22:39:49.1924133Z 
+2026-11-08T22:39:49.1924551Z added 2 packages in 887ms
+2026-11-08T22:39:50.6467591Z Downloading Webkit 26.0 (playwright build v2215)[2m from https://cdn.playwright.dev/dbazure/download/playwright/builds/webkit/2215/webkit-win64.zip[22m
+2026-11-08T22:39:50.8082018Z |                                                                                |   0% of 57.6 MiB
+2026-11-08T22:39:50.8770026Z |■■■■■■■■                                                                        |  10% of 57.6 MiB
+2026-11-08T22:39:51.0601815Z |■■■■■■■■■■■■■■■■                                                                |  20% of 57.6 MiB
+2026-11-08T22:39:51.1191586Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 57.6 MiB
+2026-11-08T22:39:51.1693078Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 57.6 MiB
+2026-11-08T22:39:51.2399480Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 57.6 MiB
+2026-11-08T22:39:51.3006178Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 57.6 MiB
+2026-11-08T22:39:51.3612242Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 57.6 MiB
+2026-11-08T22:39:51.4215592Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 57.6 MiB
+2026-11-08T22:39:51.4779422Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 57.6 MiB
+2026-11-08T22:39:51.5449789Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 57.6 MiB
+2026-11-08T22:39:54.4032957Z Webkit 26.0 (playwright build v2215) downloaded to C:\Users\runneradmin\AppData\Local\ms-playwright\webkit-2215
+2026-11-08T22:39:54.4051198Z Downloading Winldd playwright build v1007[2m from https://cdn.playwright.dev/dbazure/download/playwright/builds/winldd/1007/winldd-win64.zip[22m
+2026-11-08T22:39:54.5736426Z |■■■■■■■■                                                                        |  12% of 0.1 MiB
+2026-11-08T22:39:54.5745208Z |■■■■■■■■■■■■■■■■                                                                |  25% of 0.1 MiB
+2026-11-08T22:39:54.5773322Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  38% of 0.1 MiB
+2026-11-08T22:39:54.5781413Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 0.1 MiB
+2026-11-08T22:39:54.5783862Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  63% of 0.1 MiB
+2026-11-08T22:39:54.5796820Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  76% of 0.1 MiB
+2026-11-08T22:39:54.5823719Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  89% of 0.1 MiB
+2026-11-08T22:39:54.5827979Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 0.1 MiB
+2026-11-08T22:39:54.6023523Z Winldd playwright build v1007 downloaded to C:\Users\runneradmin\AppData\Local\ms-playwright\winldd-1007
+2026-11-08T22:39:55.1033137Z ##[group]Run node --test tests/select-path-pilot/contract.test.cjs tests/sdk-parity/compare.test.cjs tests/select-escape-minimal/classify.test.cjs
+2026-11-08T22:39:55.1034019Z [36;1mnode --test tests/select-path-pilot/contract.test.cjs tests/sdk-parity/compare.test.cjs tests/select-escape-minimal/classify.test.cjs[0m
+2026-11-08T22:39:55.1034518Z [36;1mpython scripts/verify-migration.py[0m
+2026-11-08T22:39:55.1046155Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-11-08T22:39:55.1046459Z ##[endgroup]
+2026-11-08T22:39:55.2108064Z TAP version 13
+2026-11-08T22:39:55.3160792Z # Subtest: reject focus-visible undefined on either or both rows
+2026-11-08T22:39:55.3251380Z ok 1 - reject focus-visible undefined on either or both rows
+2026-11-08T22:39:55.3265362Z   ---
+2026-11-08T22:39:55.3265689Z   duration_ms: 5.9287
+2026-11-08T22:39:55.3277238Z   type: 'test'
+2026-11-08T22:39:55.3296006Z   ...
+2026-11-08T22:39:55.3313400Z # Subtest: reject focus-visible null on either or both rows
+2026-11-08T22:39:55.3347881Z ok 2 - reject focus-visible null on either or both rows
+2026-11-08T22:39:55.3363182Z   ---
+2026-11-08T22:39:55.3364135Z   duration_ms: 1.4392
+2026-11-08T22:39:55.3376948Z   type: 'test'
+2026-11-08T22:39:55.3377314Z   ...
+2026-11-08T22:39:55.3377805Z # Subtest: reject focus-visible string on either or both rows
+2026-11-08T22:39:55.3378430Z ok 3 - reject focus-visible string on either or both rows
+2026-11-08T22:39:55.3378876Z   ---
+2026-11-08T22:39:55.3379174Z   duration_ms: 1.4376
+2026-11-08T22:39:55.3379517Z   type: 'test'
+2026-11-08T22:39:55.3379817Z   ...
+2026-11-08T22:39:55.3380271Z # Subtest: reject focus-visible number on either or both rows
+2026-11-08T22:39:55.3380889Z ok 4 - reject focus-visible number on either or both rows
+2026-11-08T22:39:55.3381342Z   ---
+2026-11-08T22:39:55.3381655Z   duration_ms: 1.8618
+2026-11-08T22:39:55.3381985Z   type: 'test'
+2026-11-08T22:39:55.3382290Z   ...
+2026-11-08T22:39:55.3382758Z # Subtest: reject focus-visible object on either or both rows
+2026-11-08T22:39:55.3383385Z ok 5 - reject focus-visible object on either or both rows
+2026-11-08T22:39:55.3384222Z   ---
+2026-11-08T22:39:55.3384529Z   duration_ms: 1.4211
+2026-11-08T22:39:55.3384879Z   type: 'test'
+2026-11-08T22:39:55.3385652Z   ...
+2026-11-08T22:39:55.3388079Z # Subtest: reject focus-visible array on either or both rows
+2026-11-08T22:39:55.3388848Z ok 6 - reject focus-visible array on either or both rows
+2026-11-08T22:39:55.3389356Z   ---
+2026-11-08T22:39:55.3389702Z   duration_ms: 1.2031
+2026-11-08T22:39:55.3390077Z   type: 'test'
+2026-11-08T22:39:55.3390464Z   ...
+2026-11-08T22:39:55.3390789Z # Subtest: reject missing or inherited focus-visible
+2026-11-08T22:39:55.3395271Z ok 7 - reject missing or inherited focus-visible
+2026-11-08T22:39:55.3395660Z   ---
+2026-11-08T22:39:55.3396062Z   duration_ms: 1.3061
+2026-11-08T22:39:55.3396323Z   type: 'test'
+2026-11-08T22:39:55.3396697Z   ...
+2026-11-08T22:39:55.3397278Z # Subtest: all boolean pairs and PNG/pixel differences remain outcomes
+2026-11-08T22:39:55.3398061Z ok 8 - all boolean pairs and PNG/pixel differences remain outcomes
+2026-11-08T22:39:55.3398607Z   ---
+2026-11-08T22:39:55.3398954Z   duration_ms: 1.8302
+2026-11-08T22:39:55.3401967Z   type: 'test'
+2026-11-08T22:39:55.3402408Z   ...
+2026-11-08T22:39:55.3402953Z # Subtest: unrelated stack formatting does not change the route
+2026-11-08T22:39:55.3403665Z ok 9 - unrelated stack formatting does not change the route
+2026-11-08T22:39:55.3404177Z   ---
+2026-11-08T22:39:55.3404524Z   duration_ms: 1.0115
+2026-11-08T22:39:55.3404896Z   type: 'test'
+2026-11-08T22:39:55.3405241Z   ...
+2026-11-08T22:39:55.3405735Z # Subtest: even matching alternate close-owner routes reject
+2026-11-08T22:39:55.3406398Z ok 10 - even matching alternate close-owner routes reject
+2026-11-08T22:39:55.3406904Z   ---
+2026-11-08T22:39:55.3407475Z   duration_ms: 1.0759
+2026-11-08T22:39:55.3407868Z   type: 'test'
+2026-11-08T22:39:55.3413391Z   ...
+2026-11-08T22:39:55.3416228Z # Subtest: duplicate commit observation is not the same close path
+2026-11-08T22:39:55.3417015Z ok 11 - duplicate commit observation is not the same close path
+2026-11-08T22:39:55.3417529Z   ---
+2026-11-08T22:39:55.3418258Z   duration_ms: 0.714
+2026-11-08T22:39:55.3418671Z   type: 'test'
+2026-11-08T22:39:55.3419794Z   ...
+2026-11-08T22:39:55.3436845Z # Subtest: positive restricted to common interventions
+2026-11-08T22:39:55.3443487Z ok 12 - positive restricted to common interventions
+2026-11-08T22:39:55.3444056Z   ---
+2026-11-08T22:39:55.3444856Z   duration_ms: 0.4581
+2026-11-08T22:39:55.3445294Z   type: 'test'
+2026-11-08T22:39:55.3445646Z   ...
+2026-11-08T22:39:55.3446001Z # Subtest: cancel forged
+2026-11-08T22:39:55.3446452Z ok 13 - cancel forged
+2026-11-08T22:39:55.3446820Z   ---
+2026-11-08T22:39:55.3447247Z   duration_ms: 0.6293
+2026-11-08T22:39:55.3447577Z   type: 'test'
+2026-11-08T22:39:55.3447809Z   ...
+2026-11-08T22:39:55.3448057Z # Subtest: fallback
+2026-11-08T22:39:55.3448311Z ok 14 - fallback
+2026-11-08T22:39:55.3448528Z   ---
+2026-11-08T22:39:55.3448737Z   duration_ms: 0.5009
+2026-11-08T22:39:55.3448980Z   type: 'test'
+2026-11-08T22:39:55.3449199Z   ...
+2026-11-08T22:39:55.3449460Z # Subtest: missing return both
+2026-11-08T22:39:55.3449778Z ok 15 - missing return both
+2026-11-08T22:39:55.3450044Z   ---
+2026-11-08T22:39:55.3450259Z   duration_ms: 0.5184
+2026-11-08T22:39:55.3450501Z   type: 'test'
+2026-11-08T22:39:55.3450710Z   ...
+2026-11-08T22:39:55.3450929Z # Subtest: keys reverse
+2026-11-08T22:39:55.3451191Z ok 16 - keys reverse
+2026-11-08T22:39:55.3451421Z   ---
+2026-11-08T22:39:55.3451627Z   duration_ms: 0.499
+2026-11-08T22:39:55.3451860Z   type: 'test'
+2026-11-08T22:39:55.3452062Z   ...
+2026-11-08T22:39:55.3452292Z # Subtest: source mismatch
+2026-11-08T22:39:55.3452572Z ok 17 - source mismatch
+2026-11-08T22:39:55.3452806Z   ---
+2026-11-08T22:39:55.3453010Z   duration_ms: 0.4842
+2026-11-08T22:39:55.3453257Z   type: 'test'
+2026-11-08T22:39:55.3453487Z   ...
+2026-11-08T22:39:55.3453711Z # Subtest: build mismatch
+2026-11-08T22:39:55.3453977Z ok 18 - build mismatch
+2026-11-08T22:39:55.3454198Z   ---
+2026-11-08T22:39:55.3454381Z   duration_ms: 0.4671
+2026-11-08T22:39:55.3454586Z   type: 'test'
+2026-11-08T22:39:55.3454794Z   ...
+2026-11-08T22:39:55.3455017Z # Subtest: incomplete forged
+2026-11-08T22:39:55.3455311Z ok 19 - incomplete forged
+2026-11-08T22:39:55.3455557Z   ---
+2026-11-08T22:39:55.3455760Z   duration_ms: 0.4998
+2026-11-08T22:39:55.3455984Z   type: 'test'
+2026-11-08T22:39:55.3456188Z   ...
+2026-11-08T22:39:55.3456420Z # Subtest: measurement
+2026-11-08T22:39:55.3456676Z ok 20 - measurement
+2026-11-08T22:39:55.3456900Z   ---
+2026-11-08T22:39:55.3457106Z   duration_ms: 0.5097
+2026-11-08T22:39:55.3457340Z   type: 'test'
+2026-11-08T22:39:55.3457548Z   ...
+2026-11-08T22:39:55.3457768Z # Subtest: popup remains
+2026-11-08T22:39:55.3458039Z ok 21 - popup remains
+2026-11-08T22:39:55.3458262Z   ---
+2026-11-08T22:39:55.3458459Z   duration_ms: 0.4845
+2026-11-08T22:39:55.3458683Z   type: 'test'
+2026-11-08T22:39:55.3458891Z   ...
+2026-11-08T22:39:55.3459102Z # Subtest: value changed
+2026-11-08T22:39:55.3459368Z ok 22 - value changed
+2026-11-08T22:39:55.3459587Z   ---
+2026-11-08T22:39:55.3459787Z   duration_ms: 0.5469
+2026-11-08T22:39:55.3460019Z   type: 'test'
+2026-11-08T22:39:55.3460230Z   ...
+2026-11-08T22:39:55.3460452Z # Subtest: CSS changed
+2026-11-08T22:39:55.3460708Z ok 23 - CSS changed
+2026-11-08T22:39:55.3460934Z   ---
+2026-11-08T22:39:55.3461138Z   duration_ms: 0.496
+2026-11-08T22:39:55.3461377Z   type: 'test'
+2026-11-08T22:39:55.3461580Z   ...
+2026-11-08T22:39:55.3461812Z # Subtest: condition changed
+2026-11-08T22:39:55.3462116Z ok 24 - condition changed
+2026-11-08T22:39:55.3462373Z   ---
+2026-11-08T22:39:55.3462577Z   duration_ms: 2.8708
+2026-11-08T22:39:55.3462809Z   type: 'test'
+2026-11-08T22:39:55.3463017Z   ...
+2026-11-08T22:39:55.3463234Z # Subtest: foreign owner
+2026-11-08T22:39:55.3465686Z ok 25 - foreign owner
+2026-11-08T22:39:55.3466029Z   ---
+2026-11-08T22:39:55.3466267Z   duration_ms: 0.6452
+2026-11-08T22:39:55.3466526Z   type: 'test'
+2026-11-08T22:39:55.3466752Z   ...
+2026-11-08T22:39:55.3467056Z # Subtest: paint/focus-visible are outcomes
+2026-11-08T22:39:55.3467482Z ok 26 - paint/focus-visible are outcomes
+2026-11-08T22:39:55.3467786Z   ---
+2026-11-08T22:39:55.3468060Z   duration_ms: 0.5484
+2026-11-08T22:39:55.3468340Z   type: 'test'
+2026-11-08T22:39:55.3468559Z   ...
+2026-11-08T22:39:55.3468903Z # Subtest: audit regression: both DOM evidence omitted
+2026-11-08T22:39:55.3469377Z ok 27 - audit regression: both DOM evidence omitted
+2026-11-08T22:39:55.3469705Z   ---
+2026-11-08T22:39:55.3469911Z   duration_ms: 0.9776
+2026-11-08T22:39:55.3470151Z   type: 'test'
+2026-11-08T22:39:55.3470353Z   ...
+2026-11-08T22:39:55.3470694Z # Subtest: audit regression: both close requests shifted
+2026-11-08T22:39:55.3471189Z ok 28 - audit regression: both close requests shifted
+2026-11-08T22:39:55.3471527Z   ---
+2026-11-08T22:39:55.3471719Z   duration_ms: 0.5849
+2026-11-08T22:39:55.3471955Z   type: 'test'
+2026-11-08T22:39:55.3472153Z   ...
+2026-11-08T22:39:55.3472508Z # Subtest: audit regression: both commit observations missing
+2026-11-08T22:39:55.3473019Z ok 29 - audit regression: both commit observations missing
+2026-11-08T22:39:55.3473375Z   ---
+2026-11-08T22:39:55.3473575Z   duration_ms: 0.5429
+2026-11-08T22:39:55.3473819Z   type: 'test'
+2026-11-08T22:39:55.3474023Z   ...
+2026-11-08T22:39:55.3474325Z # Subtest: audit regression: source tags replaced
+2026-11-08T22:39:55.3474769Z ok 30 - audit regression: source tags replaced
+2026-11-08T22:39:55.3475101Z   ---
+2026-11-08T22:39:55.3475307Z   duration_ms: 0.6344
+2026-11-08T22:39:55.3475537Z   type: 'test'
+2026-11-08T22:39:55.3475740Z   ...
+2026-11-08T22:39:55.3476045Z # Subtest: audit regression: cancel moved after keyup
+2026-11-08T22:39:55.3476465Z ok 31 - audit regression: cancel moved after keyup
+2026-11-08T22:39:55.3476841Z   ---
+2026-11-08T22:39:55.3477057Z   duration_ms: 0.531
+2026-11-08T22:39:55.3477295Z   type: 'test'
+2026-11-08T22:39:55.3477505Z   ...
+2026-11-08T22:39:55.3477852Z # Subtest: audit regression: before cancel contradicted
+2026-11-08T22:39:55.3478332Z ok 32 - audit regression: before cancel contradicted
+2026-11-08T22:39:55.3478671Z   ---
+2026-11-08T22:39:55.3478883Z   duration_ms: 0.516
+2026-11-08T22:39:55.3479110Z   type: 'test'
+2026-11-08T22:39:55.3479318Z   ...
+2026-11-08T22:39:55.3479654Z # Subtest: audit regression: runtime condition false
+2026-11-08T22:39:55.3480126Z ok 33 - audit regression: runtime condition false
+2026-11-08T22:39:55.3480471Z   ---
+2026-11-08T22:39:55.3480685Z   duration_ms: 0.4758
+2026-11-08T22:39:55.3480952Z   type: 'test'
+2026-11-08T22:39:55.3481164Z   ...
+2026-11-08T22:39:55.3481476Z # Subtest: evidence boundary: missing image hash
+2026-11-08T22:39:55.3481931Z ok 34 - evidence boundary: missing image hash
+2026-11-08T22:39:55.3482577Z   ---
+2026-11-08T22:39:55.3482824Z   duration_ms: 0.5656
+2026-11-08T22:39:55.3483061Z   type: 'test'
+2026-11-08T22:39:55.3483273Z   ...
+2026-11-08T22:39:55.3483592Z # Subtest: evidence boundary: missing actual focusin
+2026-11-08T22:39:55.3484057Z ok 35 - evidence boundary: missing actual focusin
+2026-11-08T22:39:55.3484390Z   ---
+2026-11-08T22:39:55.3484593Z   duration_ms: 0.5589
+2026-11-08T22:39:55.3484829Z   type: 'test'
+2026-11-08T22:39:55.3485032Z   ...
+2026-11-08T22:39:55.3485360Z # Subtest: evidence boundary: wrong actual focus target
+2026-11-08T22:39:55.3485860Z ok 36 - evidence boundary: wrong actual focus target
+2026-11-08T22:39:55.3486202Z   ---
+2026-11-08T22:39:55.3486401Z   duration_ms: 0.5207
+2026-11-08T22:39:55.3486642Z   type: 'test'
+2026-11-08T22:39:55.3486854Z   ...
+2026-11-08T22:39:55.3487222Z # Subtest: independent review boundary: reopen after focus
+2026-11-08T22:39:55.3487762Z ok 37 - independent review boundary: reopen after focus
+2026-11-08T22:39:55.3488131Z   ---
+2026-11-08T22:39:55.3488694Z   duration_ms: 0.6436
+2026-11-08T22:39:55.3488934Z   type: 'test'
+2026-11-08T22:39:55.3489143Z   ...
+2026-11-08T22:39:55.3489544Z # Subtest: independent review boundary: keyup wrong active element
+2026-11-08T22:39:55.3490156Z ok 38 - independent review boundary: keyup wrong active element
+2026-11-08T22:39:55.3490564Z   ---
+2026-11-08T22:39:55.3490798Z   duration_ms: 0.4895
+2026-11-08T22:39:55.3491056Z   type: 'test'
+2026-11-08T22:39:55.3491267Z   ...
+2026-11-08T22:39:55.3491649Z # Subtest: independent review boundary: last DOM contradictory
+2026-11-08T22:39:55.3492207Z ok 39 - independent review boundary: last DOM contradictory
+2026-11-08T22:39:55.3492596Z   ---
+2026-11-08T22:39:55.3492804Z   duration_ms: 0.57
+2026-11-08T22:39:55.3493040Z   type: 'test'
+2026-11-08T22:39:55.3493252Z   ...
+2026-11-08T22:39:55.3493722Z # Subtest: independent review boundary: focus moved away again
+2026-11-08T22:39:55.3494262Z ok 40 - independent review boundary: focus moved away again
+2026-11-08T22:39:55.3494652Z   ---
+2026-11-08T22:39:55.3494857Z   duration_ms: 0.5504
+2026-11-08T22:39:55.3495095Z   type: 'test'
+2026-11-08T22:39:55.3495297Z   ...
+2026-11-08T22:39:55.3495729Z # Subtest: duplicate unchanged MutationObserver notification is harmless
+2026-11-08T22:39:55.3496379Z ok 41 - duplicate unchanged MutationObserver notification is harmless
+2026-11-08T22:39:55.3496837Z   ---
+2026-11-08T22:39:55.3497031Z   duration_ms: 0.5541
+2026-11-08T22:39:55.3497281Z   type: 'test'
+2026-11-08T22:39:55.3497480Z   ...
+2026-11-08T22:39:55.3497824Z # Subtest: missing trial cannot crash classification or pass
+2026-11-08T22:39:55.3498331Z ok 42 - missing trial cannot crash classification or pass
+2026-11-08T22:39:55.3498675Z   ---
+2026-11-08T22:39:55.3498879Z   duration_ms: 2.7344
+2026-11-08T22:39:55.3499105Z   type: 'test'
+2026-11-08T22:39:55.3499306Z   ...
+2026-11-08T22:39:55.3499686Z # Subtest: reject focus-visible undefined on either or both rows
+2026-11-08T22:39:55.3500258Z ok 43 - reject focus-visible undefined on either or both rows
+2026-11-08T22:39:55.3500637Z   ---
+2026-11-08T22:39:55.3500850Z   duration_ms: 0.7549
+2026-11-08T22:39:55.3501079Z   type: 'test'
+2026-11-08T22:39:55.3501283Z   ...
+2026-11-08T22:39:55.3501634Z # Subtest: reject focus-visible null on either or both rows
+2026-11-08T22:39:55.3502145Z ok 44 - reject focus-visible null on either or both rows
+2026-11-08T22:39:55.3502803Z   ---
+2026-11-08T22:39:55.3503010Z   duration_ms: 0.4124
+2026-11-08T22:39:55.3503232Z   type: 'test'
+2026-11-08T22:39:55.3503427Z   ...
+2026-11-08T22:39:55.3503774Z # Subtest: reject focus-visible string on either or both rows
+2026-11-08T22:39:55.3504288Z ok 45 - reject focus-visible string on either or both rows
+2026-11-08T22:39:55.3504646Z   ---
+2026-11-08T22:39:55.3504853Z   duration_ms: 0.5779
+2026-11-08T22:39:55.3505082Z   type: 'test'
+2026-11-08T22:39:55.3505283Z   ...
+2026-11-08T22:39:55.3505640Z # Subtest: reject focus-visible number on either or both rows
+2026-11-08T22:39:55.3506169Z ok 46 - reject focus-visible number on either or both rows
+2026-11-08T22:39:55.3506531Z   ---
+2026-11-08T22:39:55.3506733Z   duration_ms: 1.4284
+2026-11-08T22:39:55.3506980Z   type: 'test'
+2026-11-08T22:39:55.3507188Z   ...
+2026-11-08T22:39:55.3507546Z # Subtest: reject focus-visible object on either or both rows
+2026-11-08T22:39:55.3508069Z ok 47 - reject focus-visible object on either or both rows
+2026-11-08T22:39:55.3508429Z   ---
+2026-11-08T22:39:55.3508637Z   duration_ms: 0.3411
+2026-11-08T22:39:55.3508876Z   type: 'test'
+2026-11-08T22:39:55.3509083Z   ...
+2026-11-08T22:39:55.3509436Z # Subtest: reject focus-visible array on either or both rows
+2026-11-08T22:39:55.3509939Z ok 48 - reject focus-visible array on either or both rows
+2026-11-08T22:39:55.3510308Z   ---
+2026-11-08T22:39:55.3510497Z   duration_ms: 0.3239
+2026-11-08T22:39:55.3510719Z   type: 'test'
+2026-11-08T22:39:55.3510926Z   ...
+2026-11-08T22:39:55.3511222Z # Subtest: reject missing or inherited focus-visible
+2026-11-08T22:39:55.3511976Z ok 49 - reject missing or inherited focus-visible
+2026-11-08T22:39:55.3512190Z   ---
+2026-11-08T22:39:55.3512332Z   duration_ms: 0.3841
+2026-11-08T22:39:55.3512508Z   type: 'test'
+2026-11-08T22:39:55.3512657Z   ...
+2026-11-08T22:39:55.3512928Z # Subtest: all four boolean outcome pairs remain comparable
+2026-11-08T22:39:55.3513269Z ok 50 - all four boolean outcome pairs remain comparable
+2026-11-08T22:39:55.3513498Z   ---
+2026-11-08T22:39:55.3513651Z   duration_ms: 0.8324
+2026-11-08T22:39:55.3513814Z   type: 'test'
+2026-11-08T22:39:55.3513958Z   ...
+2026-11-08T22:39:55.3514159Z # Subtest: positive is strictly model-scoped
+2026-11-08T22:39:55.3514434Z ok 51 - positive is strictly model-scoped
+2026-11-08T22:39:55.3514638Z   ---
+2026-11-08T22:39:55.3514784Z   duration_ms: 0.554
+2026-11-08T22:39:55.3515014Z   type: 'test'
+2026-11-08T22:39:55.3515212Z   ...
+2026-11-08T22:39:55.3515399Z # Subtest: negative: no cancellation contrast
+2026-11-08T22:39:55.3515688Z ok 52 - negative: no cancellation contrast
+2026-11-08T22:39:55.3515940Z   ---
+2026-11-08T22:39:55.3516111Z   duration_ms: 0.5155
+2026-11-08T22:39:55.3516315Z   type: 'test'
+2026-11-08T22:39:55.3516446Z   ...
+2026-11-08T22:39:55.3516620Z # Subtest: negative: fallback closure owner
+2026-11-08T22:39:55.3516943Z ok 53 - negative: fallback closure owner
+2026-11-08T22:39:55.3517132Z   ---
+2026-11-08T22:39:55.3517268Z   duration_ms: 0.2394
+2026-11-08T22:39:55.3517422Z   type: 'test'
+2026-11-08T22:39:55.3517604Z   ...
+2026-11-08T22:39:55.3517802Z # Subtest: negative: missing focus return
+2026-11-08T22:39:55.3518114Z ok 54 - negative: missing focus return
+2026-11-08T22:39:55.3518291Z   ---
+2026-11-08T22:39:55.3518418Z   duration_ms: 0.2111
+2026-11-08T22:39:55.3518568Z   type: 'test'
+2026-11-08T22:39:55.3518718Z   ...
+2026-11-08T22:39:55.3518957Z # Subtest: negative: changed event ordering
+2026-11-08T22:39:55.3519186Z ok 55 - negative: changed event ordering
+2026-11-08T22:39:55.3519367Z   ---
+2026-11-08T22:39:55.3519555Z   duration_ms: 0.2367
+2026-11-08T22:39:55.3519732Z   type: 'test'
+2026-11-08T22:39:55.3519865Z   ...
+2026-11-08T22:39:55.3520077Z # Subtest: negative: false trusted input
+2026-11-08T22:39:55.3520340Z ok 56 - negative: false trusted input
+2026-11-08T22:39:55.3520517Z   ---
+2026-11-08T22:39:55.3520643Z   duration_ms: 0.2061
+2026-11-08T22:39:55.3520783Z   type: 'test'
+2026-11-08T22:39:55.3520982Z   ...
+2026-11-08T22:39:55.3521178Z # Subtest: negative: unverified trace
+2026-11-08T22:39:55.3521392Z ok 57 - negative: unverified trace
+2026-11-08T22:39:55.3521579Z   ---
+2026-11-08T22:39:55.3521781Z   duration_ms: 0.5622
+2026-11-08T22:39:55.3521942Z   type: 'test'
+2026-11-08T22:39:55.3522073Z   ...
+2026-11-08T22:39:55.3522346Z # Subtest: negative: reduced provenance
+2026-11-08T22:39:55.3522571Z ok 58 - negative: reduced provenance
+2026-11-08T22:39:55.3522994Z   ---
+2026-11-08T22:39:55.3523121Z   duration_ms: 0.2094
+2026-11-08T22:39:55.3523354Z   type: 'test'
+2026-11-08T22:39:55.3523487Z   ...
+2026-11-08T22:39:55.3523807Z # Subtest: render and focus-visible are measured outcomes, not comparability invariants
+2026-11-08T22:39:55.3524359Z ok 59 - render and focus-visible are measured outcomes, not comparability invariants
+2026-11-08T22:39:55.3524740Z   ---
+2026-11-08T22:39:55.3524872Z   duration_ms: 0.1994
+2026-11-08T22:39:55.3525027Z   type: 'test'
+2026-11-08T22:39:55.3525157Z   ...
+2026-11-08T22:39:55.3525504Z # Subtest: changed fixture control config invalidates causal comparison
+2026-11-08T22:39:55.3525891Z ok 60 - changed fixture control config invalidates causal comparison
+2026-11-08T22:39:55.3526180Z   ---
+2026-11-08T22:39:55.3526353Z   duration_ms: 0.1803
+2026-11-08T22:39:55.3526496Z   type: 'test'
+2026-11-08T22:39:55.3526668Z   ...
+2026-11-08T22:39:55.3526908Z # Subtest: row outside planned cases is invalid
+2026-11-08T22:39:55.3527167Z ok 61 - row outside planned cases is invalid
+2026-11-08T22:39:55.3527362Z   ---
+2026-11-08T22:39:55.3527538Z   duration_ms: 0.1814
+2026-11-08T22:39:55.3528458Z   type: 'test'
+2026-11-08T22:39:55.3528621Z   ...
+2026-11-08T22:39:55.3529000Z # Subtest: independent counterexample: contradictory cancellation trace
+2026-11-08T22:39:55.3529410Z ok 62 - independent counterexample: contradictory cancellation trace
+2026-11-08T22:39:55.3529659Z   ---
+2026-11-08T22:39:55.3529880Z   duration_ms: 0.2826
+2026-11-08T22:39:55.3530038Z   type: 'test'
+2026-11-08T22:39:55.3530170Z   ...
+2026-11-08T22:39:55.3530406Z # Subtest: independent counterexample: both close origins changed
+2026-11-08T22:39:55.3530849Z ok 63 - independent counterexample: both close origins changed
+2026-11-08T22:39:55.3531124Z   ---
+2026-11-08T22:39:55.3531297Z   duration_ms: 0.2188
+2026-11-08T22:39:55.3531443Z   type: 'test'
+2026-11-08T22:39:55.3531573Z   ...
+2026-11-08T22:39:55.3531802Z # Subtest: independent counterexample: both focus traces missing
+2026-11-08T22:39:55.3532239Z ok 64 - independent counterexample: both focus traces missing
+2026-11-08T22:39:55.3532468Z   ---
+2026-11-08T22:39:55.3532641Z   duration_ms: 0.248
+2026-11-08T22:39:55.3532833Z   type: 'test'
+2026-11-08T22:39:55.3532960Z   ...
+2026-11-08T22:39:55.3533283Z # Subtest: independent counterexample: both key sequences reversed
+2026-11-08T22:39:55.3533637Z ok 65 - independent counterexample: both key sequences reversed
+2026-11-08T22:39:55.3533964Z   ---
+2026-11-08T22:39:55.3534092Z   duration_ms: 0.1978
+2026-11-08T22:39:55.3534237Z   type: 'test'
+2026-11-08T22:39:55.3534408Z   ...
+2026-11-08T22:39:55.3534658Z # Subtest: independent counterexample: failed COMPLETE row
+2026-11-08T22:39:55.3535058Z ok 66 - independent counterexample: failed COMPLETE row
+2026-11-08T22:39:55.3535276Z   ---
+2026-11-08T22:39:55.3535414Z   duration_ms: 0.212
+2026-11-08T22:39:55.3535612Z   type: 'test'
+2026-11-08T22:39:55.3535780Z   ...
+2026-11-08T22:39:55.3536010Z # Subtest: independent counterexample: instrumentation changed
+2026-11-08T22:39:55.3536427Z ok 67 - independent counterexample: instrumentation changed
+2026-11-08T22:39:55.3536760Z   ---
+2026-11-08T22:39:55.3536891Z   duration_ms: 0.1943
+2026-11-08T22:39:55.3537043Z   type: 'test'
+2026-11-08T22:39:55.3537170Z   ...
+2026-11-08T22:39:55.3537514Z # Subtest: focus-return cannot precede its MutationObserver transition
+2026-11-08T22:39:55.3537906Z ok 68 - focus-return cannot precede its MutationObserver transition
+2026-11-08T22:39:55.3538244Z   ---
+2026-11-08T22:39:55.3538426Z   duration_ms: 0.3161
+2026-11-08T22:39:55.3538644Z   type: 'test'
+2026-11-08T22:39:55.3538865Z   ...
+2026-11-08T22:39:55.3539134Z # Subtest: predeclared 36 slots unique
+2026-11-08T22:39:55.3539488Z ok 69 - predeclared 36 slots unique
+2026-11-08T22:39:55.3539671Z   ---
+2026-11-08T22:39:55.3539806Z   duration_ms: 2.1488
+2026-11-08T22:39:55.3540035Z   type: 'test'
+2026-11-08T22:39:55.3540186Z   ...
+2026-11-08T22:39:55.3540350Z # Subtest: complete raw grid accepted
+2026-11-08T22:39:55.3540665Z ok 70 - complete raw grid accepted
+2026-11-08T22:39:55.3540841Z   ---
+2026-11-08T22:39:55.3540984Z   duration_ms: 2.9818
+2026-11-08T22:39:55.3541133Z   type: 'test'
+2026-11-08T22:39:55.3541339Z   ...
+2026-11-08T22:39:55.3541491Z # Subtest: reject empty
+2026-11-08T22:39:55.3541669Z ok 71 - reject empty
+2026-11-08T22:39:55.3541851Z   ---
+2026-11-08T22:39:55.3542019Z   duration_ms: 0.3984
+2026-11-08T22:39:55.3542196Z   type: 'test'
+2026-11-08T22:39:55.3542381Z   ...
+2026-11-08T22:39:55.3542521Z # Subtest: reject missing
+2026-11-08T22:39:55.3542691Z ok 72 - reject missing
+2026-11-08T22:39:55.3543110Z   ---
+2026-11-08T22:39:55.3543317Z   duration_ms: 1.2119
+2026-11-08T22:39:55.3543464Z   type: 'test'
+2026-11-08T22:39:55.3543596Z   ...
+2026-11-08T22:39:55.3543738Z # Subtest: reject duplicate
+2026-11-08T22:39:55.3544006Z ok 73 - reject duplicate
+2026-11-08T22:39:55.3544162Z   ---
+2026-11-08T22:39:55.3544381Z   duration_ms: 1.5336
+2026-11-08T22:39:55.3544524Z   type: 'test'
+2026-11-08T22:39:55.3544652Z   ...
+2026-11-08T22:39:55.3544789Z # Subtest: reject unknown
+2026-11-08T22:39:55.3545157Z ok 74 - reject unknown
+2026-11-08T22:39:55.3545382Z   ---
+2026-11-08T22:39:55.3545517Z   duration_ms: 1.5883
+2026-11-08T22:39:55.3545742Z   type: 'test'
+2026-11-08T22:39:55.3545883Z   ...
+2026-11-08T22:39:55.3546062Z # Subtest: reject wrongPlan
+2026-11-08T22:39:55.3546285Z ok 75 - reject wrongPlan
+2026-11-08T22:39:55.3546436Z   ---
+2026-11-08T22:39:55.3546566Z   duration_ms: 1.3741
+2026-11-08T22:39:55.3546726Z   type: 'test'
+2026-11-08T22:39:55.3546938Z   ...
+2026-11-08T22:39:55.3547082Z # Subtest: reject pageerror
+2026-11-08T22:39:55.3547258Z ok 76 - reject pageerror
+2026-11-08T22:39:55.3547405Z   ---
+2026-11-08T22:39:55.3547629Z   duration_ms: 1.7049
+2026-11-08T22:39:55.3547792Z   type: 'test'
+2026-11-08T22:39:55.3547929Z   ...
+2026-11-08T22:39:55.3548152Z # Subtest: reject noKeys
+2026-11-08T22:39:55.3548344Z ok 77 - reject noKeys
+2026-11-08T22:39:55.3548491Z   ---
+2026-11-08T22:39:55.3548629Z   duration_ms: 1.421
+2026-11-08T22:39:55.3548779Z   type: 'test'
+2026-11-08T22:39:55.3548947Z   ...
+2026-11-08T22:39:55.3549161Z # Subtest: reject noEvents
+2026-11-08T22:39:55.3549339Z ok 78 - reject noEvents
+2026-11-08T22:39:55.3549491Z   ---
+2026-11-08T22:39:55.3549623Z   duration_ms: 1.7973
+2026-11-08T22:39:55.3549821Z   type: 'test'
+2026-11-08T22:39:55.3549999Z   ...
+2026-11-08T22:39:55.3550148Z # Subtest: reject noActualKey
+2026-11-08T22:39:55.3550388Z ok 79 - reject noActualKey
+2026-11-08T22:39:55.3550588Z   ---
+2026-11-08T22:39:55.3550722Z   duration_ms: 1.0463
+2026-11-08T22:39:55.3550867Z   type: 'test'
+2026-11-08T22:39:55.3550999Z   ...
+2026-11-08T22:39:55.3551154Z # Subtest: reject order
+2026-11-08T22:39:55.3551319Z ok 80 - reject order
+2026-11-08T22:39:55.3551569Z   ---
+2026-11-08T22:39:55.3551704Z   duration_ms: 1.3481
+2026-11-08T22:39:55.3551863Z   type: 'test'
+2026-11-08T22:39:55.3552007Z   ...
+2026-11-08T22:39:55.3552215Z # Subtest: reject overflow
+2026-11-08T22:39:55.3552503Z ok 81 - reject overflow
+2026-11-08T22:39:55.3552735Z   ---
+2026-11-08T22:39:55.3552952Z   duration_ms: 1.0748
+2026-11-08T22:39:55.3553188Z   type: 'test'
+2026-11-08T22:39:55.3553400Z   ...
+2026-11-08T22:39:55.3553635Z # Subtest: reject noFocus
+2026-11-08T22:39:55.3553911Z ok 82 - reject noFocus
+2026-11-08T22:39:55.3554149Z   ---
+2026-11-08T22:39:55.3554350Z   duration_ms: 1.5759
+2026-11-08T22:39:55.3554590Z   type: 'test'
+2026-11-08T22:39:55.3554790Z   ...
+2026-11-08T22:39:55.3555010Z # Subtest: reject noGeometry
+2026-11-08T22:39:55.3555311Z ok 83 - reject noGeometry
+2026-11-08T22:39:55.3555561Z   ---
+2026-11-08T22:39:55.3555765Z   duration_ms: 1.2777
+2026-11-08T22:39:55.3556006Z   type: 'test'
+2026-11-08T22:39:55.3556220Z   ...
+2026-11-08T22:39:55.3556435Z # Subtest: reject badFocus
+2026-11-08T22:39:55.3572075Z ok 84 - reject badFocus
+2026-11-08T22:39:55.3572405Z   ---
+2026-11-08T22:39:55.3572640Z   duration_ms: 1.2572
+2026-11-08T22:39:55.3573745Z   type: 'test'
+2026-11-08T22:39:55.3574179Z   ...
+2026-11-08T22:39:55.3574427Z # Subtest: reject notClosed
+2026-11-08T22:39:55.3574902Z ok 85 - reject notClosed
+2026-11-08T22:39:55.3575328Z   ---
+2026-11-08T22:39:55.3575544Z   duration_ms: 1.1084
+2026-11-08T22:39:55.3580361Z   type: 'test'
+2026-11-08T22:39:55.3580655Z   ...
+2026-11-08T22:39:55.3580888Z # Subtest: reject noTrace
+2026-11-08T22:39:55.3584953Z ok 86 - reject noTrace
+2026-11-08T22:39:55.3585233Z   ---
+2026-11-08T22:39:55.3585445Z   duration_ms: 0.6058
+2026-11-08T22:39:55.3585679Z   type: 'test'
+2026-11-08T22:39:55.3585885Z   ...
+2026-11-08T22:39:55.3586113Z # Subtest: reject cleanup
+2026-11-08T22:39:55.3586418Z ok 87 - reject cleanup
+2026-11-08T22:39:55.3586673Z   ---
+2026-11-08T22:39:55.3586884Z   duration_ms: 0.9156
+2026-11-08T22:39:55.3587117Z   type: 'test'
+2026-11-08T22:39:55.3587331Z   ...
+2026-11-08T22:39:55.3587557Z # Subtest: reject partial
+2026-11-08T22:39:55.3587843Z ok 88 - reject partial
+2026-11-08T22:39:55.3588096Z   ---
+2026-11-08T22:39:55.3588309Z   duration_ms: 0.6315
+2026-11-08T22:39:55.3588550Z   type: 'test'
+2026-11-08T22:39:55.3588996Z   ...
+2026-11-08T22:39:55.3589338Z # Subtest: reject prelude
+2026-11-08T22:39:55.3589624Z ok 89 - reject prelude
+2026-11-08T22:39:55.3589873Z   ---
+2026-11-08T22:39:55.3590094Z   duration_ms: 0.5853
+2026-11-08T22:39:55.3590339Z   type: 'test'
+2026-11-08T22:39:55.3590563Z   ...
+2026-11-08T22:39:55.3590807Z # Subtest: reject environment
+2026-11-08T22:39:55.3591110Z ok 90 - reject environment
+2026-11-08T22:39:55.3591364Z   ---
+2026-11-08T22:39:55.3591578Z   duration_ms: 0.9807
+2026-11-08T22:39:55.3591827Z   type: 'test'
+2026-11-08T22:39:55.3592039Z   ...
+2026-11-08T22:39:55.3592474Z # Subtest: outline FAIL preserved, diagnostic not product acceptance
+2026-11-08T22:39:55.3593123Z ok 91 - outline FAIL preserved, diagnostic not product acceptance
+2026-11-08T22:39:55.3593542Z   ---
+2026-11-08T22:39:55.3593832Z   duration_ms: 0.2126
+2026-11-08T22:39:55.3594094Z   type: 'test'
+2026-11-08T22:39:55.3594304Z   ...
+2026-11-08T22:39:55.3594718Z # Subtest: transient negative rect alone is not persistent click failure
+2026-11-08T22:39:55.3595396Z ok 92 - transient negative rect alone is not persistent click failure
+2026-11-08T22:39:55.3595834Z   ---
+2026-11-08T22:39:55.3596050Z   duration_ms: 0.2587
+2026-11-08T22:39:55.3596304Z   type: 'test'
+2026-11-08T22:39:55.3596517Z   ...
+2026-11-08T22:39:55.3596972Z # Subtest: ordinary click timeout with fully outside rect preserved as failure
+2026-11-08T22:39:55.3597683Z ok 93 - ordinary click timeout with fully outside rect preserved as failure
+2026-11-08T22:39:55.3598133Z   ---
+2026-11-08T22:39:55.3598344Z   duration_ms: 0.2628
+2026-11-08T22:39:55.3598595Z   type: 'test'
+2026-11-08T22:39:55.3598808Z   ...
+2026-11-08T22:39:55.3599145Z # Subtest: short route never claims normal click tested
+2026-11-08T22:39:55.3599634Z ok 94 - short route never claims normal click tested
+2026-11-08T22:39:55.3599983Z   ---
+2026-11-08T22:39:55.3600194Z   duration_ms: 0.1386
+2026-11-08T22:39:55.3600450Z   type: 'test'
+2026-11-08T22:39:55.3600912Z   ...
+2026-11-08T22:39:55.3601122Z 1..94
+2026-11-08T22:39:55.3601315Z # tests 94
+2026-11-08T22:39:55.3601518Z # suites 0
+2026-11-08T22:39:55.3601718Z # pass 94
+2026-11-08T22:39:55.3601923Z # fail 0
+2026-11-08T22:39:55.3602148Z # cancelled 0
+2026-11-08T22:39:55.3602366Z # skipped 0
+2026-11-08T22:39:55.3602574Z # todo 0
+2026-11-08T22:39:55.3602803Z # duration_ms 161.6156
+2026-11-08T22:39:56.6600441Z Traceback (most recent call last):
+2026-11-08T22:39:56.6601013Z   File "D:\a\intelligence-ui-museum\intelligence-ui-museum\scripts\verify-migration.py", line 27, in <module>
+2026-11-08T22:39:56.6602249Z     assert hashlib.sha256(archive.extractfile(members[name]).read()).hexdigest() == entry["sha256"], name
+2026-11-08T22:39:56.8590744Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-08T22:39:56.8591248Z AssertionError: .gitignore
+2026-11-08T22:39:56.8727797Z ##[error]Process completed with exit code 1.
+2026-11-08T22:39:56.8923634Z ##[group]Run git diff --exit-code -- apps/v10 tests/sdk-parity tests/select-escape-minimal archive reviews
+2026-11-08T22:39:56.8924284Z [36;1mgit diff --exit-code -- apps/v10 tests/sdk-parity tests/select-escape-minimal archive reviews[0m
+2026-11-08T22:39:56.8924652Z [36;1mpython scripts/verify-migration.py[0m
+2026-11-08T22:39:56.8934987Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-11-08T22:39:56.8935284Z ##[endgroup]
+2026-11-08T22:39:57.5789979Z Traceback (most recent call last):
+2026-11-08T22:39:57.5790514Z   File "D:\a\intelligence-ui-museum\intelligence-ui-museum\scripts\verify-migration.py", line 27, in <module>
+2026-11-08T22:39:57.5791497Z     assert hashlib.sha256(archive.extractfile(members[name]).read()).hexdigest() == entry["sha256"], name
+2026-11-08T22:39:57.5792657Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-08T22:39:57.5793085Z AssertionError: .gitignore
+2026-11-08T22:39:57.5921796Z ##[error]Process completed with exit code 1.
+2026-11-08T22:39:57.6069825Z ##[group]Run actions/upload-artifact@v4
+2026-11-08T22:39:57.6070092Z with:
+2026-11-08T22:39:57.6070373Z   name: select-path-pilot-windows-2025-f07ef66ef7fb00f5c58c3c2812d9fcaf2f208183
+2026-11-08T22:39:57.6070700Z   path: .work/path-evidence/
+2026-11-08T22:39:57.6070899Z   include-hidden-files: true
+2026-11-08T22:39:57.6071081Z   retention-days: 90
+2026-11-08T22:39:57.6071241Z   if-no-files-found: warn
+2026-11-08T22:39:57.6071407Z   compression-level: 6
+2026-11-08T22:39:57.6071563Z   overwrite: false
+2026-11-08T22:39:57.6071710Z ##[endgroup]
+2026-11-08T22:39:57.7912501Z (node:2816) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-08T22:39:57.7913529Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-08T22:39:57.7942865Z ##[warning]No files were found with the provided path: .work/path-evidence/. No artifacts will be uploaded.
+2026-11-08T22:39:57.8223083Z Post job cleanup.
+2026-11-08T22:39:57.9687968Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-08T22:39:57.9972569Z git version 2.56.0.windows.4
+2026-11-08T22:39:58.0034547Z Temporarily overriding HOME='D:\a\_temp\969ad26e-c0f1-454b-a31a-d999bf94fead' before making global git config changes
+2026-11-08T22:39:58.0035525Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-08T22:39:58.0044510Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\intelligence-ui-museum\intelligence-ui-museum
+2026-11-08T22:39:58.0413045Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-08T22:39:58.0752647Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-08T22:39:58.5637041Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-08T22:39:58.5909494Z http.https://github.com/.extraheader
+2026-11-08T22:39:58.5947074Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-08T22:39:58.6253279Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-08T22:39:59.1180883Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-08T22:39:59.1493879Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-08T22:39:59.6409623Z Cleaning up orphan processes
+2026-11-08T22:39:59.6493680Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

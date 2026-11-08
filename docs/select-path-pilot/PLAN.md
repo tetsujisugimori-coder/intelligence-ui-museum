@@ -37,7 +37,7 @@ AとBは画面構成・介入が違うため操作経路の単一要因比較で
 
 ## 再現
 
-新checkoutで `python scripts/prepare-work.py`、`.work/v10`の固定lockをnpm ci、build。`node tests/sdk-parity/prepare.cjs`、同copyのnpm ci、VITE_MEASURE=detailで既存vite.config.mjs build。tools/stage-a-browserの固定lockからPlaywrightとWebKitを準備。`node --test tests/select-path-pilot/contract.test.cjs`。PATH_ENGINE=webkit PATH_OUT=新規ディレクトリで `node tests/select-path-pilot/run.cjs`、`python tests/select-path-pilot/audit.py 出力先`。CIが各exitを外側へ保存。再実行は新たな原票で保持し、結果の都合で反復追加しない。
+新checkoutで `python scripts/prepare-work.py`、`.work/v10`の固定lockをnpm ci、build。`node tests/sdk-parity/prepare.cjs`、同copyのnpm ci、VITE_MEASURE=detailで既存vite.config.mjs build。tools/stage-a-browserの固定lockからPlaywrightとWebKitを準備。`node --test tests/select-path-pilot/contract.test.cjs`。PATH_ENGINE=webkit PATH_OUT=新規ディレクトリで `node tests/select-path-pilot/run.cjs`、PATH_EXPECT_HEAD=取得commit PATH_EXPECT_PLATFORM=win32またはlinuxを指定して `python tests/select-path-pilot/audit.py 出力先`。CIが各exitを外側へ保存。再実行は新たな原票で保持し、結果の都合で反復追加しない。
 
 実機Safari、物理入力、VoiceOver、ネイティブOS popupの画面取得はNOT_TESTED。対象SDK popupはDOMであり、ネイティブSelect全般へ外挿しない。
 
@@ -48,3 +48,11 @@ Independent review rejected f07 contract false accepts (8 immutable mutations in
 f07 Windows CI did not run the pilot: the old bundle's git archive inherited CRLF conversion and failed `.gitignore` SHA preservation. Set process-level core.autocrlf=false for the isolated workflow, retaining the failed job log. No original file/hash or acceptance threshold changed. Probe initialization was corrected to observe Document because documentElement can be absent in addInitScript. The f07 Linux attempt remains a separate failed candidate, never pooled into the repaired pilot.
 
 Timing limits: performance.now(), runner Date.now() and trace times are separate clocks. defaultPrevented is capture-phase only; mutation samples do not identify React commits. Added tracing/screenshots/geometry reads affect timing. Input order is reconstructed, timing equivalence remains UNKNOWN.
+
+## 分類器の再解析（原票を変更しない）
+
+b7 producerで取得した36試行/環境は一度のみ実行。SDKがpointerupでoptionをunmountするため、後続clickがoptionに届くと仮定した分類条件は過剰だった。成功したPlaywright locator.clickのtraceとtrusted option pointerdown/upで確認し、存在しないclickイベントを補完しない。旧分類・旧exitを保持して、修正分類器で同じ原票を再解析する。旧監査もtrace API名を誤っていた。実traceのPage.keyboardPress/MouseMove（実method名mouseMove）とFrame.focus/clickを照合する。
+
+traceのlocator.evaluate自体は公開traceに残らず、画像取得のpathも省略されるため、Select開始キー前の最後の全面screenshotを取得区間の構造的アンカーとする。原票のイベント・キー順・通常clickの完了と合わせて評価し、存在しないexact snapshotを主張しない。焦点獲得の既存assert RPCにはseq/time/rect計測を追加した。撮影待機の追加はないが、タイミング同一性はUNKNOWN。
+
+再解析はPATH_RECLASSIFY=1を明示し、producer HEADとanalysis HEAD/tree・監査コードhash・旧新分類を別々に出力する。原results.json、行JSON、SHA256SUMSと原ZIPは上書きしない。最終CIは固定原artifactの再解析と既存回帰とし、結果に合わせた試行追加を行わない。

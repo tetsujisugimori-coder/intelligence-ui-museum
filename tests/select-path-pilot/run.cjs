@@ -38,7 +38,7 @@ async function trial(browser,slot){
    else {await t.focus();if(slot.route==='legacy'){await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');}}
   });
   row.acquisition=await t.evaluate(e=>({focused:e===document.activeElement,active:document.activeElement?.id||document.activeElement?.tagName,seq:window.__path.seq,time:performance.now(),rect:e.getBoundingClientRect().toJSON()}));assert(row.acquisition.focused,'Acquisition target');
-  // No snapshot or screenshot RPC is inserted between acquisition and opening.
+  // Acquisition assertion RPC includes geometry; no additional screenshot wait. Timing equivalence UNKNOWN.
   selectRecording=true;
   if(slot.cohort==='A-museum-old'){
    const v=p.locator('#official-select');await p.keyboard.press('Space');
