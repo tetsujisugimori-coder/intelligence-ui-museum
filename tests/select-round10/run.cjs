@@ -130,6 +130,19 @@ async function trial(browser,s){
   row.samples.beforePhoto=await snapshot(t);
   if(s.preScreenshot)await step('pre-screenshot',async()=>{row.preImage=s.id+'-pre.png';await p.screenshot({path:path.join(output,row.preImage)})});
   row.samples.afterPhoto=await snapshot(t);
+  if(s.clearEmptyStyle)await step('normalize-empty-style',async()=>{
+   row.samples.beforeStyleNormalization=await snapshot(t);
+   await p.evaluate(()=>{
+    const boxes=[...document.querySelectorAll('#Select input:disabled')];
+    const hidden=document.getElementById('official-select');
+    if(boxes.length!==1||!hidden||boxes[0]===hidden)throw Error('normalization nodes ambiguous');
+    for(const el of [boxes[0],hidden]){
+     if(el.hasAttribute('style')&&el.getAttribute('style')!=='')throw Error('nonempty style; no silent cleanup');
+     if(el.hasAttribute('style'))el.removeAttribute('style');
+    }
+   });
+   row.samples.afterStyleNormalization=await snapshot(t);
+  });
   if(s.emptyStyle)await step('empty-style-diagnostic',async()=>{
    await p.evaluate(()=>{
     const nodes=[...document.querySelectorAll('#Select input:disabled')];
