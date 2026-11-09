@@ -84,7 +84,7 @@ const comparisons=()=> {
     for(const k of ['rect','computed'])if(!equal(x.trigger?.[k],y.trigger?.[k]))errors.push(`trigger-${k}-different`);
    }
   }
-  out.push({factor,iteration,armA:a?.id,armB:b?.id,equivalence:errors.length?'UNCONFIRMED':'CONFIRMED_TARGET',errors,observed:a&&b?{outline:[a.classification.outline,b.classification.outline],focusVisible:[a.acquisition?.focusVisible,b.acquisition?.focusVisible],domStyle:[a.samples?.beforeFocus?.disabled?.[0]?.attrs?.style??null,b.samples?.beforeFocus?.disabled?.[0]?.attrs?.style??null]}:null,rootCause:'UNKNOWN'});
+  out.push({factor,iteration:i,armA:a?.id,armB:b?.id,equivalence:errors.length?'UNCONFIRMED':'CONFIRMED_TARGET',errors,observed:a&&b?{outline:[a.classification.outline,b.classification.outline],focusVisible:[a.acquisition?.focusVisible,b.acquisition?.focusVisible],domStyle:[a.samples?.beforeFocus?.disabled?.[0]?.attrs?.style??null,b.samples?.beforeFocus?.disabled?.[0]?.attrs?.style??null]}:null,rootCause:'UNKNOWN'});
  }
  return out;
 };
@@ -133,7 +133,7 @@ async function trial(browser,s){
   if(s.clearEmptyStyle)await step('normalize-empty-style',async()=>{
    row.samples.beforeStyleNormalization=await snapshot(t);
    await p.evaluate(()=>{
-    const boxes=[...document.querySelectorAll('#Select input:disabled')];
+    const boxes=[...document.querySelectorAll('#Select .controls input[type="checkbox"]')];
     const hidden=document.getElementById('official-select');
     if(boxes.length!==1||!hidden||boxes[0]===hidden)throw Error('normalization nodes ambiguous');
     for(const el of [boxes[0],hidden]){
@@ -145,7 +145,7 @@ async function trial(browser,s){
   });
   if(s.emptyStyle)await step('empty-style-diagnostic',async()=>{
    await p.evaluate(()=>{
-    const nodes=[...document.querySelectorAll('#Select input:disabled')];
+    const nodes=[...document.querySelectorAll('#Select .controls input[type="checkbox"]')];
     const hidden=document.getElementById('official-select');
     if(nodes.length!==1||!hidden||nodes[0]===hidden)throw Error('marker nodes ambiguous');
     for(const el of [nodes[0],hidden]){
