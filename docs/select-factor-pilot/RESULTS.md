@@ -54,7 +54,7 @@ preludeは全3pairで厳密Select HTML同一性が不成立。具体的にはSel
 
 ## 検証・失敗履歴
 
-新比較器は欠測・不正型・矛盾・イベント欠落・paint矛盾を拒否する。独立担当の初期4誤受理反例は修正前後コードと同一変異結果を保存。さらに環境同定を厳格化し、期待platformとOS/Node/browser metadataを照合。採取runner/plan/probeは初回producerから変更せず、解析器の修正で原JSON/PNG/trace/exitを上書きしない。
+新比較器は欠測・不正型・矛盾・イベント欠落・paint矛盾を拒否する。独立担当の初期4誤受理反例は修正前後コードと同一変異結果を保存。実原票を改変してrow/manifestを再生成した独立16負対照では、producerの6誤受理を確認・修正し、同一16入力すべて拒否。期待platformとOS/Node/browser、trustedのboolean型、activeElement、trace resource参照を厳格照合。171単体と302原本保全に成功。採取runner/plan/probeは初回producerから変更せず、解析器の修正で原JSON/PNG/trace/exitを上書きしない。
 
 原取得CI run42616269440のWindows/Linux両jobでrunner0/audit0。後続CIは同じ固定原artifactの再解析専用で、新規samplingではない。最終HEADのchecksおよび独立レビューはPR36に紐付ける。成功した診断CIを製品PASSとは呼ばない。
 
@@ -64,6 +64,6 @@ preludeは全3pairで厳密Select HTML同一性が不成立。具体的にはSel
 
 - Windows CI artifact13672547843 / 20,631,524bytes / SHA256 `7ff130e4602bdfc2b8560502fe48507beebc11bebc0acda989da5e7c10e7dd24`
 - Linux CI artifact13672617535 / 30,640,441bytes / SHA256 `d510d095569b472bf58b4d11d7b1682e8588c9a857c55ea7beb969fea00a9424`
-- 原取得 [run42616269440](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/42616269440)。API digest一致、各ZIP170 entries。CI原artifact期限2027-02-07 UTC。Windows実PC原ZIPは19,400,747bytes、SHA256 `f73b3ce2df3a3537a60c076b2e1d5a7606d1450ef20ce236c5a66ae405afe248`、CRC正常170 files。Space転送は権限確認で保留中、独立再監査の範囲をCI2環境と区別する。
+- 原取得 [run42616269440](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/42616269440)。API digest一致、各ZIP170 entries。CI原artifact期限2027-02-07 UTC。Windows実PC原ZIPは19,400,747bytes、SHA256 `f73b3ce2df3a3537a60c076b2e1d5a7606d1450ef20ce236c5a66ae405afe248`、CRC正常170 files。Space保存はユーザー承認済みだが保存機能が利用できず未完了。実PC上での独立再監査を別途行い、CI2環境と区別する。
 
 マージ・Draft解除・公開・Stage3 HOLD解除は行っていない。

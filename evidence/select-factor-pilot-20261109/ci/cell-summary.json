@@ -1,0 +1,880 @@
+{
+  "windows": {
+    "platform": "win32",
+    "os": "10.0.26100",
+    "node": "v22.23.4",
+    "playwright": "1.56.1",
+    "head": "fc8228fcc0104c66e89318158980ec24d945de8e",
+    "tree": "3128d26550399b0053402f8c551c5fb236d85665",
+    "sdkVersion": "0.2.2",
+    "planHash": "b7703c38efd630d4c069e655ec4a8d665376c3eafabcba0bad40f5f0ca3e755a",
+    "product": {
+      "src/main.tsx": "132a06181bd2465738277c9efc486cfd5e29c3b6db7e4efae4d0fede951f437f",
+      "src/main.css": "c5cef3463a7e9daa1150a254eec8acfeeb5bded34dcdc0798aec1f1a41687aae",
+      "src/select-focus-return.ts": "0138534d5d40e1f8c033f9ea08a55c3d93255f26897121b2375a1a25bea12c61",
+      "package.json": "465450a25a4fba6112b0173aeab0b3bbce10d98a583d5b68e37636ebdea50c75",
+      "package-lock.json": "d62b5a4f1ffeb6d5463ea64304f561dbef919a30c96050defd115c8b81ae1b46"
+    },
+    "build": {
+      "assets/index-DZhtnZSN.css": "1d53329b828134eb3cdf414ba4800360808bbe823d35561ba2c534ea7dc1e769",
+      "assets/index-RTo4pgDn.js": "943e5f083b6332ab1d4a9d1623c374ef990452c961bfe288efe8aa6756681a16",
+      "assets/index-RTo4pgDn.js.map": "ba7a2f996b25a85a9f2e95874005447014e0f883dc42129573bc294aa1789707",
+      "index.html": "e79710dfdba0b06ad7ec4dd6d061948723cf992ab2443d55fa7fb44ec2469e3c",
+      "qa.html": "4d89460b370442cea96619e8f8781c090ed77acb125bca0282839f5293db4587",
+      "THIRD_PARTY_NOTICES.txt": "e1335c421d3b5da01c742b4c3013836b1f77bf7449bc6f02a9893a477508eeab",
+      "v09-original.html": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97",
+      "v09-viewer.html": "535a9f26834c6c6ef6a178636832fa990793949a61dc19db7e48d689ad82d3b3"
+    },
+    "pairs": [
+      {
+        "factor": "history",
+        "iteration": 1,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "history",
+        "iteration": 2,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "history",
+        "iteration": 3,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "prelude",
+        "iteration": 1,
+        "equivalence": "UNCONFIRMED",
+        "errors": [
+          "invariant:selectHTML"
+        ],
+        "fullDocumentDOM": "DIFFERENT_BY_DESIGN"
+      },
+      {
+        "factor": "prelude",
+        "iteration": 2,
+        "equivalence": "UNCONFIRMED",
+        "errors": [
+          "invariant:selectHTML"
+        ],
+        "fullDocumentDOM": "DIFFERENT_BY_DESIGN"
+      },
+      {
+        "factor": "prelude",
+        "iteration": 3,
+        "equivalence": "UNCONFIRMED",
+        "errors": [
+          "invariant:selectHTML"
+        ],
+        "fullDocumentDOM": "DIFFERENT_BY_DESIGN"
+      },
+      {
+        "factor": "opening-key",
+        "iteration": 1,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "opening-key",
+        "iteration": 2,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "opening-key",
+        "iteration": 3,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "sdk-isolation",
+        "iteration": 1,
+        "equivalence": "NOT_TESTED",
+        "errors": [],
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "factor": "sdk-isolation",
+        "iteration": 2,
+        "equivalence": "NOT_TESTED",
+        "errors": [],
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "factor": "sdk-isolation",
+        "iteration": 3,
+        "equivalence": "NOT_TESTED",
+        "errors": [],
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      }
+    ],
+    "cells": [
+      {
+        "id": "history-0-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "history-1-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-0-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-1-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": false,
+        "finalFocusVisible": false,
+        "focused": true,
+        "changedPixels": 0,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "ABSENT",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-0-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-1-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "sdk-isolation-0-1",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "id": "sdk-isolation-1-1",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "id": "history-1-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "history-0-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-1-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": false,
+        "finalFocusVisible": false,
+        "focused": true,
+        "changedPixels": 0,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "ABSENT",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-0-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-1-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-0-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "sdk-isolation-1-2",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "id": "sdk-isolation-0-2",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "id": "history-0-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "history-1-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-0-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-1-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": false,
+        "finalFocusVisible": false,
+        "focused": true,
+        "changedPixels": 0,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "ABSENT",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-0-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-1-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "sdk-isolation-0-3",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "id": "sdk-isolation-1-3",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      }
+    ]
+  },
+  "linux": {
+    "platform": "linux",
+    "os": "7.0.0-1017-azure",
+    "node": "v22.23.4",
+    "playwright": "1.56.1",
+    "head": "fc8228fcc0104c66e89318158980ec24d945de8e",
+    "tree": "3128d26550399b0053402f8c551c5fb236d85665",
+    "sdkVersion": "0.2.2",
+    "planHash": "b7703c38efd630d4c069e655ec4a8d665376c3eafabcba0bad40f5f0ca3e755a",
+    "product": {
+      "src/main.tsx": "132a06181bd2465738277c9efc486cfd5e29c3b6db7e4efae4d0fede951f437f",
+      "src/main.css": "c5cef3463a7e9daa1150a254eec8acfeeb5bded34dcdc0798aec1f1a41687aae",
+      "src/select-focus-return.ts": "0138534d5d40e1f8c033f9ea08a55c3d93255f26897121b2375a1a25bea12c61",
+      "package.json": "465450a25a4fba6112b0173aeab0b3bbce10d98a583d5b68e37636ebdea50c75",
+      "package-lock.json": "d62b5a4f1ffeb6d5463ea64304f561dbef919a30c96050defd115c8b81ae1b46"
+    },
+    "build": {
+      "THIRD_PARTY_NOTICES.txt": "e1335c421d3b5da01c742b4c3013836b1f77bf7449bc6f02a9893a477508eeab",
+      "assets/index-DZhtnZSN.css": "1d53329b828134eb3cdf414ba4800360808bbe823d35561ba2c534ea7dc1e769",
+      "assets/index-RTo4pgDn.js": "943e5f083b6332ab1d4a9d1623c374ef990452c961bfe288efe8aa6756681a16",
+      "assets/index-RTo4pgDn.js.map": "ba7a2f996b25a85a9f2e95874005447014e0f883dc42129573bc294aa1789707",
+      "index.html": "e79710dfdba0b06ad7ec4dd6d061948723cf992ab2443d55fa7fb44ec2469e3c",
+      "qa.html": "4d89460b370442cea96619e8f8781c090ed77acb125bca0282839f5293db4587",
+      "v09-original.html": "327aec2c8e68479fd8c8dae51e0e5fc958c1db311dd12e9fafd06e3379cd7c97",
+      "v09-viewer.html": "535a9f26834c6c6ef6a178636832fa990793949a61dc19db7e48d689ad82d3b3"
+    },
+    "pairs": [
+      {
+        "factor": "history",
+        "iteration": 1,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "history",
+        "iteration": 2,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "history",
+        "iteration": 3,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "prelude",
+        "iteration": 1,
+        "equivalence": "UNCONFIRMED",
+        "errors": [
+          "invariant:selectHTML"
+        ],
+        "fullDocumentDOM": "DIFFERENT_BY_DESIGN"
+      },
+      {
+        "factor": "prelude",
+        "iteration": 2,
+        "equivalence": "UNCONFIRMED",
+        "errors": [
+          "invariant:selectHTML"
+        ],
+        "fullDocumentDOM": "DIFFERENT_BY_DESIGN"
+      },
+      {
+        "factor": "prelude",
+        "iteration": 3,
+        "equivalence": "UNCONFIRMED",
+        "errors": [
+          "invariant:selectHTML"
+        ],
+        "fullDocumentDOM": "DIFFERENT_BY_DESIGN"
+      },
+      {
+        "factor": "opening-key",
+        "iteration": 1,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "opening-key",
+        "iteration": 2,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "opening-key",
+        "iteration": 3,
+        "equivalence": "CONFIRMED_TARGET",
+        "errors": [],
+        "fullDocumentDOM": "NOT_ASSERTED"
+      },
+      {
+        "factor": "sdk-isolation",
+        "iteration": 1,
+        "equivalence": "NOT_TESTED",
+        "errors": [],
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "factor": "sdk-isolation",
+        "iteration": 2,
+        "equivalence": "NOT_TESTED",
+        "errors": [],
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "factor": "sdk-isolation",
+        "iteration": 3,
+        "equivalence": "NOT_TESTED",
+        "errors": [],
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      }
+    ],
+    "cells": [
+      {
+        "id": "history-0-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "history-1-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-0-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-1-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": false,
+        "finalFocusVisible": false,
+        "focused": true,
+        "changedPixels": 0,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "ABSENT",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-0-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-1-1",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "sdk-isolation-0-1",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "id": "sdk-isolation-1-1",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "id": "history-1-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "history-0-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-1-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": false,
+        "finalFocusVisible": false,
+        "focused": true,
+        "changedPixels": 0,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "ABSENT",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-0-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-1-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-0-2",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "sdk-isolation-1-2",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "id": "sdk-isolation-0-2",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "id": "history-0-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "history-1-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-0-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "prelude-1-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": false,
+        "finalFocusVisible": false,
+        "focused": true,
+        "changedPixels": 0,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "ABSENT",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-0-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "opening-key-1-3",
+        "status": "COMPLETE",
+        "acquisitionFocusVisible": true,
+        "finalFocusVisible": true,
+        "focused": true,
+        "changedPixels": 1465,
+        "classification": {
+          "diagnostic": "COMPLETE",
+          "outline": "VISIBLE",
+          "errors": [],
+          "productVerdict": "UNKNOWN",
+          "rootCause": "UNKNOWN",
+          "stage3": "HOLD"
+        }
+      },
+      {
+        "id": "sdk-isolation-0-3",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      },
+      {
+        "id": "sdk-isolation-1-3",
+        "status": "NOT_TESTED",
+        "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+      }
+    ]
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "allMatched": true,
+  "rows": [
+    {
+      "id": "history-0-1",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "history-1-1",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "prelude-0-1",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "prelude-1-1",
+      "same": true,
+      "observed": {
+        "changed": 0,
+        "unstable": 0,
+        "pixels": 0,
+        "spanX": 0,
+        "spanY": 0
+      },
+      "expected": {
+        "changed": 0,
+        "unstable": 0,
+        "pixels": 0,
+        "spanX": 0,
+        "spanY": 0
+      }
+    },
+    {
+      "id": "opening-key-0-1",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "opening-key-1-1",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "history-1-2",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "history-0-2",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "prelude-1-2",
+      "same": true,
+      "observed": {
+        "changed": 0,
+        "unstable": 0,
+        "pixels": 0,
+        "spanX": 0,
+        "spanY": 0
+      },
+      "expected": {
+        "changed": 0,
+        "unstable": 0,
+        "pixels": 0,
+        "spanX": 0,
+        "spanY": 0
+      }
+    },
+    {
+      "id": "prelude-0-2",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "opening-key-1-2",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "opening-key-0-2",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "history-0-3",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "history-1-3",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "prelude-0-3",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "prelude-1-3",
+      "same": true,
+      "observed": {
+        "changed": 0,
+        "unstable": 0,
+        "pixels": 0,
+        "spanX": 0,
+        "spanY": 0
+      },
+      "expected": {
+        "changed": 0,
+        "unstable": 0,
+        "pixels": 0,
+        "spanX": 0,
+        "spanY": 0
+      }
+    },
+    {
+      "id": "opening-key-0-3",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    },
+    {
+      "id": "opening-key-1-3",
+      "same": true,
+      "observed": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      },
+      "expected": {
+        "changed": 1465,
+        "unstable": 0,
+        "pixels": 1465,
+        "spanX": 331,
+        "spanY": 34
+      }
+    }
+  ]
+}

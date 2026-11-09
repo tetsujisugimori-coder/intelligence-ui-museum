@@ -1,0 +1,2247 @@
+{
+  "analysis": {
+    "head": "5edb9c7bf5c24add6a238eec7ba2cd968384e357",
+    "tree": "9d3dd62568a9b1ca40737d05651c576f264721c6",
+    "dirty": "",
+    "sha256": {
+      "tests/select-path-pilot/audit.py": "df4b1347259a3d34f3d87225dc3733fd5017e76d7b0f9718658cb96393e55a52",
+      "tests/select-path-pilot/contract.cjs": "fd531cec94877fb1f47b00be8cd9fb10265871ed2823b0f313495fe87d6d7a5c"
+    }
+  },
+  "status": "PASS",
+  "rows": 36,
+  "sourceHead": "b7b1e8e6b6cdf5518a2b061766cbd098502c41b3",
+  "reanalysis": true,
+  "savedClassificationsPreserved": true,
+  "errors": [],
+  "classifications": [
+    {
+      "id": "A-museum-old-legacy-1",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-legacy-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-direct-1",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-direct-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-tab-1",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-tab-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-direct-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-tab-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-legacy-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-legacy-2",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-direct-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-direct-2",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-tab-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-tab-2",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-direct-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-tab-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-legacy-3",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-legacy-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-direct-3",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-direct-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-tab-3",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-tab-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-direct-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-tab-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    }
+  ],
+  "traces": [
+    {
+      "id": "A-museum-old-legacy-1",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Space",
+        "Space",
+        "ArrowUp",
+        "Enter",
+        "Space",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "click",
+          "internal:role=option[name=\"カード\"s]"
+        ],
+        [
+          "move",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "ArrowUp"
+        ],
+        [
+          "press",
+          "Enter"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 105,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "C-museum-short-legacy-1",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 83,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "A-museum-old-direct-1",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Space",
+        "Space",
+        "ArrowUp",
+        "Enter",
+        "Space",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "click",
+          "internal:role=option[name=\"カード\"s]"
+        ],
+        [
+          "move",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "ArrowUp"
+        ],
+        [
+          "press",
+          "Enter"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 99,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "C-museum-short-direct-1",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 84,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "A-museum-old-tab-1",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Tab",
+        "Space",
+        "Space",
+        "ArrowUp",
+        "Enter",
+        "Space",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "click",
+          "internal:role=option[name=\"カード\"s]"
+        ],
+        [
+          "move",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "ArrowUp"
+        ],
+        [
+          "press",
+          "Enter"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 102,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "C-museum-short-tab-1",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 86,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-native-direct-1",
+      "keys": [
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "[data-parity-trigger]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 10,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-native-tab-1",
+      "keys": [
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#before"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 9,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-1",
+      "keys": [
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "[data-parity-trigger]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 10,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-1",
+      "keys": [
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#before"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 11,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-1",
+      "keys": [
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "[data-parity-trigger]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 8,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-1",
+      "keys": [
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#before"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 10,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "C-museum-short-legacy-2",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 89,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "A-museum-old-legacy-2",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Space",
+        "Space",
+        "ArrowUp",
+        "Enter",
+        "Space",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "click",
+          "internal:role=option[name=\"カード\"s]"
+        ],
+        [
+          "move",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "ArrowUp"
+        ],
+        [
+          "press",
+          "Enter"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 108,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "C-museum-short-direct-2",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 83,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "A-museum-old-direct-2",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Space",
+        "Space",
+        "ArrowUp",
+        "Enter",
+        "Space",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "click",
+          "internal:role=option[name=\"カード\"s]"
+        ],
+        [
+          "move",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "ArrowUp"
+        ],
+        [
+          "press",
+          "Enter"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 99,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "C-museum-short-tab-2",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 87,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "A-museum-old-tab-2",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Tab",
+        "Space",
+        "Space",
+        "ArrowUp",
+        "Enter",
+        "Space",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "click",
+          "internal:role=option[name=\"カード\"s]"
+        ],
+        [
+          "move",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "ArrowUp"
+        ],
+        [
+          "press",
+          "Enter"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 105,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-native-direct-2",
+      "keys": [
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "[data-parity-trigger]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 10,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-native-tab-2",
+      "keys": [
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#before"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 10,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-2",
+      "keys": [
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "[data-parity-trigger]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 9,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-2",
+      "keys": [
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#before"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 9,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-2",
+      "keys": [
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "[data-parity-trigger]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 9,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-2",
+      "keys": [
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#before"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 10,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "A-museum-old-legacy-3",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Space",
+        "Space",
+        "ArrowUp",
+        "Enter",
+        "Space",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "click",
+          "internal:role=option[name=\"カード\"s]"
+        ],
+        [
+          "move",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "ArrowUp"
+        ],
+        [
+          "press",
+          "Enter"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 98,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "C-museum-short-legacy-3",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 88,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "A-museum-old-direct-3",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Space",
+        "Space",
+        "ArrowUp",
+        "Enter",
+        "Space",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "click",
+          "internal:role=option[name=\"カード\"s]"
+        ],
+        [
+          "move",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "ArrowUp"
+        ],
+        [
+          "press",
+          "Enter"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 100,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "C-museum-short-direct-3",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#Select .stage [role=button]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 85,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "A-museum-old-tab-3",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Tab",
+        "Space",
+        "Space",
+        "ArrowUp",
+        "Enter",
+        "Space",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "click",
+          "internal:role=option[name=\"カード\"s]"
+        ],
+        [
+          "move",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "ArrowUp"
+        ],
+        [
+          "press",
+          "Enter"
+        ],
+        [
+          "press",
+          "Space"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 108,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "C-museum-short-tab-3",
+      "keys": [
+        "Enter",
+        "Space",
+        "Tab",
+        "Shift+Tab",
+        "Enter",
+        "Enter",
+        "Space",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Shift+Tab",
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Shift+Tab"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 88,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-native-direct-3",
+      "keys": [
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "[data-parity-trigger]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 10,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-native-tab-3",
+      "keys": [
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#before"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 10,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-3",
+      "keys": [
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "[data-parity-trigger]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 10,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-3",
+      "keys": [
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#before"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 9,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-3",
+      "keys": [
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "[data-parity-trigger]"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 10,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-3",
+      "keys": [
+        "Tab",
+        "ArrowDown",
+        "Escape"
+      ],
+      "actions": [
+        [
+          "focus",
+          "#before"
+        ],
+        [
+          "press",
+          "Tab"
+        ],
+        [
+          "press",
+          "ArrowDown"
+        ],
+        [
+          "press",
+          "Escape"
+        ]
+      ],
+      "screencastFrames": 9,
+      "frameTiming": "sampled; exact pre/post-open frame is not guaranteed"
+    }
+  ]
+}

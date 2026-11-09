@@ -1,0 +1,14 @@
+{
+  "windows": {
+    "sha256": "b5f6ede889ff775086d21f52e23c757168187d2d7b4d505ee4e005c1e1a11b6e",
+    "bytes": 61890403,
+    "crcBad": null,
+    "entries": 403
+  },
+  "linux": {
+    "sha256": "6c9a23f66ee28cba2af3c0f5477582bc154c218896103f7e145d29c4b7638376",
+    "bytes": 104790080,
+    "crcBad": null,
+    "entries": 403
+  }
+}

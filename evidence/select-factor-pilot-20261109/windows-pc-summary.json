@@ -1,13 +1,42 @@
 {
   "source": "Windows execution worker report; local raw exists; independent transfer audit pending",
   "head": "fc8228fcc0104c66e89318158980ec24d945de8e",
-  "platform": "win32", "os": "10.0.26300", "node": "v24.20.0", "playwright": "1.56.1", "browser": "26.0", "sdk": "0.2.2",
-  "runnerExit": 0, "originalAuditorExit": 0,
-  "complete": 18, "notTested": 6,
-  "outline": {"preludePresent": {"absent": 3, "n": 3}, "otherCells": {"visible": 15, "n": 15}},
-  "pairEquivalence": {"history": "CONFIRMED_TARGET", "opening-key": "CONFIRMED_TARGET", "prelude": "UNCONFIRMED", "sdk-isolation": "NOT_TESTED"},
-  "zip": {"bytes": 19400747, "sha256": "f73b3ce2df3a3537a60c076b2e1d5a7606d1450ef20ce236c5a66ae405afe248", "crc": "PASS", "files": 170},
+  "platform": "win32",
+  "os": "10.0.26300",
+  "node": "v24.20.0",
+  "playwright": "1.56.1",
+  "browser": "26.0",
+  "sdk": "0.2.2",
+  "runnerExit": 0,
+  "originalAuditorExit": 0,
+  "complete": 18,
+  "notTested": 6,
+  "outline": {
+    "preludePresent": {
+      "absent": 3,
+      "n": 3
+    },
+    "otherCells": {
+      "visible": 15,
+      "n": 15
+    }
+  },
+  "pairEquivalence": {
+    "history": "CONFIRMED_TARGET",
+    "opening-key": "CONFIRMED_TARGET",
+    "prelude": "UNCONFIRMED",
+    "sdk-isolation": "NOT_TESTED"
+  },
+  "zip": {
+    "bytes": 19400747,
+    "sha256": "f73b3ce2df3a3537a60c076b2e1d5a7606d1450ef20ce236c5a66ae405afe248",
+    "crc": "PASS",
+    "files": 170
+  },
   "preservation": "all tracked bytes matched; first verify-migration inherited global CRLF and failed; process-level core.autocrlf=false rerun passed 302 hashes; browser not rerun",
-  "transfer": "NOT_EXECUTED: permission approval pending for Space upload; no alternate transfer attempted",
-  "oldPr34Zip": {"bytes": 49689007, "sha256": "873c54b6a7da2a171fc620741760774d50a1c83fa253e36c4c4ad6690b4b5c95"}
+  "transfer": "NOT_SAVED: user approved private Space upload; approved helper attempt failed before upload because prepare_uploads unavailable; original ZIP unchanged",
+  "oldPr34Zip": {
+    "bytes": 49689007,
+    "sha256": "873c54b6a7da2a171fc620741760774d50a1c83fa253e36c4c4ad6690b4b5c95"
+  }
 }

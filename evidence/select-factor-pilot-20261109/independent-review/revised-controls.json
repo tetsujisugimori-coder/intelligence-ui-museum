@@ -1,0 +1,82 @@
+[
+  {
+    "mutation": "missing_events",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "wrong_focus_type",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "contradictory_paint",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "missing_source",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "wrong_platform",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "missing_os",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "wrong_browser_type",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "missing_trace_focus",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "missing_trace_frame",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "missing_pointer_event",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "changed_png",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "missing_slot",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "wrong_paint_geometry",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "wrong_trusted_type",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "missing_active_element",
+    "rejected": true,
+    "exit": 1
+  },
+  {
+    "mutation": "wrong_head",
+    "rejected": true,
+    "exit": 1
+  }
+]
