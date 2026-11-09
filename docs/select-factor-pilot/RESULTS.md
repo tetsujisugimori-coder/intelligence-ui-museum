@@ -67,3 +67,9 @@ preludeは全3pairで厳密Select HTML同一性が不成立。具体的にはSel
 - 原取得 [run42616269440](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/42616269440)。API digest一致、各ZIP170 entries。CI原artifact期限2027-02-07 UTC。Windows実PC原ZIPは19,400,747bytes、SHA256 `f73b3ce2df3a3537a60c076b2e1d5a7606d1450ef20ce236c5a66ae405afe248`、CRC正常170 files。Space保存はユーザー承認済みだが保存機能が利用できず未完了。実PC上での独立再監査を別途行い、CI2環境と区別する。
 
 マージ・Draft解除・公開・Stage3 HOLD解除は行っていない。
+
+## 追補：PR #34統合後の依存関係（2026-11-09 JST）
+
+診断基盤の依存元 [PR #34](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/34) は、5 workflows成功と独立レビューを確認してmainへ限定統合した（merge commit `a2ae700851594fb9a409be80e88560f929a963e5`）。本PR #36のbaseをmainへ変更した。従前の「未マージ・Draft」は上記最終報告時点の履歴であり、今回の追補はその原記録を改変しない。
+
+今回の追補は統合経緯の文書更新のみ。事前計画、producer HEAD、原JSON・PNG・trace、検証器、製品・SDK・依存lockは変更しない。PR #36は新baseに対するCIと差分を再確認してから、診断・証拠基盤の範囲に限り統合する。前段同等性UNCONFIRMED、原因UNKNOWN、通常option clickとSDK隔離NOT_TESTED、Stage 3 HOLDを維持する。Windows実PCのSpace保存未完了も引き継ぐ。
