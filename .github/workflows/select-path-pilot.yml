@@ -1,0 +1,89 @@
+name: Select operation path pilot
+on:
+  pull_request:
+    paths:
+      - 'tests/select-path-pilot/**'
+      - 'docs/select-path-pilot/**'
+      - 'evidence/select-path-pilot-20261109/**'
+      - '.github/workflows/select-path-pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: select-path-pilot-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  pilot:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2025, ubuntu-24.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    env:
+      # git archive of the old bundle must not inherit Windows CRLF conversion.
+      PYTHONUTF8: '1'
+      GIT_CONFIG_COUNT: '1'
+      GIT_CONFIG_KEY_0: core.autocrlf
+      GIT_CONFIG_VALUE_0: 'false'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare isolated sources and locked dependencies
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          npm --prefix .work/v10 ci --ignore-scripts --no-audit --no-fund
+          npm --prefix .work/v10 run build
+          node tests/sdk-parity/prepare.cjs
+          npm --prefix .work/sdk-parity ci --ignore-scripts --no-audit --no-fund
+          (cd .work/sdk-parity && VITE_MEASURE=detail node node_modules/vite/bin/vite.js build --config vite.config.mjs)
+          npm --prefix tools/stage-a-browser ci --ignore-scripts --no-audit --no-fund
+      - name: Existing and new comparator negative controls
+        shell: bash
+        run: |
+          node --test tests/select-path-pilot/contract.test.cjs tests/sdk-parity/compare.test.cjs tests/select-escape-minimal/classify.test.cjs
+          python scripts/verify-migration.py
+      - name: Download immutable b7 producer evidence (no new sampling)
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 42531791744
+          name: select-path-pilot-${{ matrix.os }}-b7b1e8e6b6cdf5518a2b061766cbd098502c41b3
+          path: .work/path-evidence
+      - name: Reanalyse unchanged raw evidence with current strict contract
+        shell: bash
+        env:
+          PATH_EXPECT_HEAD: b7b1e8e6b6cdf5518a2b061766cbd098502c41b3
+          PATH_RECLASSIFY: '1'
+        run: |
+          mkdir -p .work/path-analysis
+          export PATH_EXPECT_PLATFORM=$(node -p process.platform)
+          set +e
+          python tests/select-path-pilot/audit.py .work/path-evidence/raw > .work/path-analysis/audit.json 2> .work/path-analysis/audit-stderr.txt
+          audit=$?
+          echo "$audit" > .work/path-analysis/audit-exit.txt
+          cp .work/path-evidence/runner-exit.txt .work/path-analysis/original-runner-exit.txt
+          cp .work/path-evidence/audit-exit.txt .work/path-analysis/original-auditor-exit.txt
+          cat .work/path-analysis/audit.json
+          exit "$audit"
+      - name: Preserve original product and prior evidence
+        if: always()
+        shell: bash
+        run: |
+          git diff --exit-code -- apps/v10 tests/sdk-parity tests/select-escape-minimal archive reviews
+          python scripts/verify-migration.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: select-path-reanalysis-${{ matrix.os }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/path-analysis/
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error

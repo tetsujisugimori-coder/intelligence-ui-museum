@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "select-path-pilot-20261109-v1",
+  "repeats": 3,
+  "engines": ["webkit"],
+  "viewport": {"width":375,"height":1000},
+  "theme":"light", "rootPercent":100, "deviceScaleFactor":1,
+  "routes":["legacy","direct","tab"],
+  "cohorts":["A-museum-old","C-museum-short","B-sdk-native","B-sdk-paired-cancel","B-sdk-paired-plain"],
+  "expectedPerEngine":36,
+  "order":"iteration outer; alternate A/C ordering; routes legacy/direct/tab; SDK conditions native/cancel/plain; direct/tab; fresh page context for every trial, one reused browser per engine",
+  "lifecycle":"headless Playwright, no physical input; fixed 3 repetitions, no outcome-dependent expansion/exclusion",
+  "oldReference":"ea6f19acfd60b37e9b147daa92e79838fd2f3070:scripts/s3-reaccept/browser.cjs",
+  "oldReferenceSha256":"a2dab597ff18fb5708a5b12d0b1628b59a50d29774aa18c7dd59b114edb30bf1",
+  "priorDiagnosis":"02e48225a56528611836092e52472d82bb3f051c",
+  "baseline":"49256d1e6f5ebe1f18a7187e8684eac58ba6e0c2",
+  "scope":"Operation-order reproduction with added passive event collection and Playwright tracing; timing equivalence UNKNOWN. A versus B is confounded; A versus C holds Museum/native SDK/prelude/acquisition fixed but changes a composite sequence, not one atomic factor.",
+  "failureHandling":"All scheduled rows retained. Setup/crash/timeout recorded INCOMPLETE; failed ordinary click is a result, never forced or retried. No original downstream disabled force-click.",
+  "notTested":["physical Safari","physical input","VoiceOver","native OS select-popup capture","unmodified historical OS/browser build parity"]
+}

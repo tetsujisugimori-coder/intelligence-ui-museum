@@ -1,0 +1,2009 @@
+{
+  "baseline": {
+    "diagnostic": "COMPLETE",
+    "offscreen": "PASS",
+    "outline": "PASS",
+    "errors": [],
+    "rootCause": "UNKNOWN",
+    "stage3": "HOLD"
+  },
+  "cases": [
+    {
+      "name": "missingPaint",
+      "row": {
+        "id": "A-museum-old-legacy-1",
+        "cohort": "A-museum-old",
+        "route": "legacy",
+        "iteration": 1,
+        "status": "COMPLETE",
+        "errors": [],
+        "operations": [
+          {
+            "name": "key"
+          }
+        ],
+        "selectKeys": [
+          "Space",
+          "Space",
+          "ArrowUp",
+          "Enter",
+          "Space",
+          "Escape"
+        ],
+        "events": [
+          {
+            "kind": "focusin",
+            "seq": 1,
+            "time": 0
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 2,
+            "time": 1
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 3,
+            "time": 2
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 4,
+            "time": 3
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 5,
+            "time": 4
+          },
+          {
+            "kind": "keydown",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 6,
+            "time": 5
+          },
+          {
+            "kind": "keyup",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 7,
+            "time": 6
+          },
+          {
+            "kind": "keydown",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 8,
+            "time": 7
+          },
+          {
+            "kind": "keyup",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 9,
+            "time": 8
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 10,
+            "time": 9
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 11,
+            "time": 10
+          },
+          {
+            "kind": "keydown",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 12,
+            "time": 11
+          },
+          {
+            "kind": "keyup",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 13,
+            "time": 12
+          }
+        ],
+        "traceFile": "t",
+        "preImage": "b",
+        "finalImage": "a",
+        "cleanup": true,
+        "checks": [
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "layout",
+            "pass": true
+          },
+          {
+            "name": "Button",
+            "pass": true
+          },
+          {
+            "name": "Badge",
+            "pass": true
+          },
+          {
+            "name": "Alert",
+            "pass": true
+          },
+          {
+            "name": "Switch",
+            "pass": true
+          }
+        ],
+        "normalClick": {
+          "success": true
+        },
+        "final": {
+          "focusVisible": true,
+          "focused": true,
+          "expanded": false,
+          "value": "a",
+          "rect": {
+            "x": 1,
+            "y": 1,
+            "width": 50,
+            "height": 30
+          },
+          "viewport": {
+            "width": 375,
+            "height": 1000,
+            "dpr": 1,
+            "scale": 1
+          }
+        }
+      },
+      "result": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "UNKNOWN",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "missingPaintImages",
+      "row": {
+        "id": "A-museum-old-legacy-1",
+        "cohort": "A-museum-old",
+        "route": "legacy",
+        "iteration": 1,
+        "status": "COMPLETE",
+        "errors": [],
+        "operations": [
+          {
+            "name": "key"
+          }
+        ],
+        "selectKeys": [
+          "Space",
+          "Space",
+          "ArrowUp",
+          "Enter",
+          "Space",
+          "Escape"
+        ],
+        "events": [
+          {
+            "kind": "focusin",
+            "seq": 1,
+            "time": 0
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 2,
+            "time": 1
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 3,
+            "time": 2
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 4,
+            "time": 3
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 5,
+            "time": 4
+          },
+          {
+            "kind": "keydown",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 6,
+            "time": 5
+          },
+          {
+            "kind": "keyup",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 7,
+            "time": 6
+          },
+          {
+            "kind": "keydown",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 8,
+            "time": 7
+          },
+          {
+            "kind": "keyup",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 9,
+            "time": 8
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 10,
+            "time": 9
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 11,
+            "time": 10
+          },
+          {
+            "kind": "keydown",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 12,
+            "time": 11
+          },
+          {
+            "kind": "keyup",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 13,
+            "time": 12
+          }
+        ],
+        "traceFile": "t",
+        "preImage": "b",
+        "finalImage": "a",
+        "cleanup": true,
+        "checks": [
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "layout",
+            "pass": true
+          },
+          {
+            "name": "Button",
+            "pass": true
+          },
+          {
+            "name": "Badge",
+            "pass": true
+          },
+          {
+            "name": "Alert",
+            "pass": true
+          },
+          {
+            "name": "Switch",
+            "pass": true
+          }
+        ],
+        "normalClick": {
+          "success": true
+        },
+        "final": {
+          "focusVisible": true,
+          "focused": true,
+          "expanded": false,
+          "value": "a",
+          "rect": {
+            "x": 1,
+            "y": 1,
+            "width": 50,
+            "height": 30
+          },
+          "viewport": {
+            "width": 375,
+            "height": 1000,
+            "dpr": 1,
+            "scale": 1
+          }
+        },
+        "paint": {
+          "pass": true
+        },
+        "images": []
+      },
+      "result": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "noOpenGeometry",
+      "row": {
+        "id": "A-museum-old-legacy-1",
+        "cohort": "A-museum-old",
+        "route": "legacy",
+        "iteration": 1,
+        "status": "COMPLETE",
+        "errors": [],
+        "operations": [
+          {
+            "name": "key"
+          }
+        ],
+        "selectKeys": [
+          "Space",
+          "Space",
+          "ArrowUp",
+          "Enter",
+          "Space",
+          "Escape"
+        ],
+        "events": [
+          {
+            "kind": "focusin",
+            "seq": 1,
+            "time": 0
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 2,
+            "time": 1
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 3,
+            "time": 2
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 4,
+            "time": 3
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 5,
+            "time": 4
+          },
+          {
+            "kind": "keydown",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 6,
+            "time": 5
+          },
+          {
+            "kind": "keyup",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 7,
+            "time": 6
+          },
+          {
+            "kind": "keydown",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 8,
+            "time": 7
+          },
+          {
+            "kind": "keyup",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 9,
+            "time": 8
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 10,
+            "time": 9
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 11,
+            "time": 10
+          },
+          {
+            "kind": "keydown",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 12,
+            "time": 11
+          },
+          {
+            "kind": "keyup",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 13,
+            "time": 12
+          }
+        ],
+        "traceFile": "t",
+        "preImage": "b",
+        "finalImage": "a",
+        "cleanup": true,
+        "checks": [
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "layout",
+            "pass": true
+          },
+          {
+            "name": "Button",
+            "pass": true
+          },
+          {
+            "name": "Badge",
+            "pass": true
+          },
+          {
+            "name": "Alert",
+            "pass": true
+          },
+          {
+            "name": "Switch",
+            "pass": true
+          }
+        ],
+        "normalClick": {
+          "success": true
+        },
+        "final": {
+          "focusVisible": true,
+          "focused": true,
+          "expanded": false,
+          "value": "a",
+          "rect": {
+            "x": 1,
+            "y": 1,
+            "width": 50,
+            "height": 30
+          },
+          "viewport": {
+            "width": 375,
+            "height": 1000,
+            "dpr": 1,
+            "scale": 1
+          }
+        },
+        "paint": {
+          "pass": true
+        }
+      },
+      "result": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "wrongPreludeNames",
+      "row": {
+        "id": "A-museum-old-legacy-1",
+        "cohort": "A-museum-old",
+        "route": "legacy",
+        "iteration": 1,
+        "status": "COMPLETE",
+        "errors": [],
+        "operations": [
+          {
+            "name": "key"
+          }
+        ],
+        "selectKeys": [
+          "Space",
+          "Space",
+          "ArrowUp",
+          "Enter",
+          "Space",
+          "Escape"
+        ],
+        "events": [
+          {
+            "kind": "focusin",
+            "seq": 1,
+            "time": 0
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 2,
+            "time": 1
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 3,
+            "time": 2
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 4,
+            "time": 3
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 5,
+            "time": 4
+          },
+          {
+            "kind": "keydown",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 6,
+            "time": 5
+          },
+          {
+            "kind": "keyup",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 7,
+            "time": 6
+          },
+          {
+            "kind": "keydown",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 8,
+            "time": 7
+          },
+          {
+            "kind": "keyup",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 9,
+            "time": 8
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 10,
+            "time": 9
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 11,
+            "time": 10
+          },
+          {
+            "kind": "keydown",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 12,
+            "time": 11
+          },
+          {
+            "kind": "keyup",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 13,
+            "time": 12
+          }
+        ],
+        "traceFile": "t",
+        "preImage": "b",
+        "finalImage": "a",
+        "cleanup": true,
+        "checks": [
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "environment",
+            "pass": true
+          }
+        ],
+        "normalClick": {
+          "success": true
+        },
+        "final": {
+          "focusVisible": true,
+          "focused": true,
+          "expanded": false,
+          "value": "a",
+          "rect": {
+            "x": 1,
+            "y": 1,
+            "width": 50,
+            "height": 30
+          },
+          "viewport": {
+            "width": 375,
+            "height": 1000,
+            "dpr": 1,
+            "scale": 1
+          }
+        },
+        "paint": {
+          "pass": true
+        }
+      },
+      "result": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "noAcquisition",
+      "row": {
+        "id": "A-museum-old-legacy-1",
+        "cohort": "A-museum-old",
+        "route": "legacy",
+        "iteration": 1,
+        "status": "COMPLETE",
+        "errors": [],
+        "operations": [
+          {
+            "name": "key",
+            "argument": "Space"
+          }
+        ],
+        "selectKeys": [
+          "Space",
+          "Space",
+          "ArrowUp",
+          "Enter",
+          "Space",
+          "Escape"
+        ],
+        "events": [
+          {
+            "kind": "focusin",
+            "seq": 1,
+            "time": 0
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 2,
+            "time": 1
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 3,
+            "time": 2
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 4,
+            "time": 3
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 5,
+            "time": 4
+          },
+          {
+            "kind": "keydown",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 6,
+            "time": 5
+          },
+          {
+            "kind": "keyup",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 7,
+            "time": 6
+          },
+          {
+            "kind": "keydown",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 8,
+            "time": 7
+          },
+          {
+            "kind": "keyup",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 9,
+            "time": 8
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 10,
+            "time": 9
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 11,
+            "time": 10
+          },
+          {
+            "kind": "keydown",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 12,
+            "time": 11
+          },
+          {
+            "kind": "keyup",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 13,
+            "time": 12
+          }
+        ],
+        "traceFile": "t",
+        "preImage": "b",
+        "finalImage": "a",
+        "cleanup": true,
+        "checks": [
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "layout",
+            "pass": true
+          },
+          {
+            "name": "Button",
+            "pass": true
+          },
+          {
+            "name": "Badge",
+            "pass": true
+          },
+          {
+            "name": "Alert",
+            "pass": true
+          },
+          {
+            "name": "Switch",
+            "pass": true
+          }
+        ],
+        "normalClick": {
+          "success": true
+        },
+        "final": {
+          "focusVisible": true,
+          "focused": true,
+          "expanded": false,
+          "value": "a",
+          "rect": {
+            "x": 1,
+            "y": 1,
+            "width": 50,
+            "height": 30
+          },
+          "viewport": {
+            "width": 375,
+            "height": 1000,
+            "dpr": 1,
+            "scale": 1
+          }
+        },
+        "paint": {
+          "pass": true
+        }
+      },
+      "result": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "noTrustedPointer",
+      "row": {
+        "id": "A-museum-old-legacy-1",
+        "cohort": "A-museum-old",
+        "route": "legacy",
+        "iteration": 1,
+        "status": "COMPLETE",
+        "errors": [],
+        "operations": [
+          {
+            "name": "key"
+          }
+        ],
+        "selectKeys": [
+          "Space",
+          "Space",
+          "ArrowUp",
+          "Enter",
+          "Space",
+          "Escape"
+        ],
+        "events": [
+          {
+            "kind": "focusin",
+            "seq": 1,
+            "time": 0
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 2,
+            "time": 1
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 3,
+            "time": 2
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 4,
+            "time": 3
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 5,
+            "time": 4
+          },
+          {
+            "kind": "keydown",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 6,
+            "time": 5
+          },
+          {
+            "kind": "keyup",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 7,
+            "time": 6
+          },
+          {
+            "kind": "keydown",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 8,
+            "time": 7
+          },
+          {
+            "kind": "keyup",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 9,
+            "time": 8
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 10,
+            "time": 9
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 11,
+            "time": 10
+          },
+          {
+            "kind": "keydown",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 12,
+            "time": 11
+          },
+          {
+            "kind": "keyup",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 13,
+            "time": 12
+          }
+        ],
+        "traceFile": "t",
+        "preImage": "b",
+        "finalImage": "a",
+        "cleanup": true,
+        "checks": [
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "layout",
+            "pass": true
+          },
+          {
+            "name": "Button",
+            "pass": true
+          },
+          {
+            "name": "Badge",
+            "pass": true
+          },
+          {
+            "name": "Alert",
+            "pass": true
+          },
+          {
+            "name": "Switch",
+            "pass": true
+          }
+        ],
+        "normalClick": {
+          "success": true
+        },
+        "final": {
+          "focusVisible": true,
+          "focused": true,
+          "expanded": false,
+          "value": "a",
+          "rect": {
+            "x": 1,
+            "y": 1,
+            "width": 50,
+            "height": 30
+          },
+          "viewport": {
+            "width": 375,
+            "height": 1000,
+            "dpr": 1,
+            "scale": 1
+          }
+        },
+        "paint": {
+          "pass": true
+        }
+      },
+      "result": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "emptyAcquisition",
+      "row": {
+        "id": "A-museum-old-legacy-1",
+        "cohort": "A-museum-old",
+        "route": "legacy",
+        "iteration": 1,
+        "status": "COMPLETE",
+        "errors": [],
+        "operations": [
+          {
+            "name": "key"
+          },
+          {
+            "name": "acquire",
+            "argument": "legacy",
+            "success": true
+          }
+        ],
+        "selectKeys": [
+          "Space",
+          "Space",
+          "ArrowUp",
+          "Enter",
+          "Space",
+          "Escape"
+        ],
+        "events": [
+          {
+            "kind": "focusin",
+            "seq": 1,
+            "time": 0
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 2,
+            "time": 1
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 3,
+            "time": 2
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 4,
+            "time": 3
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 5,
+            "time": 4
+          },
+          {
+            "kind": "keydown",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 6,
+            "time": 5
+          },
+          {
+            "kind": "keyup",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 7,
+            "time": 6
+          },
+          {
+            "kind": "keydown",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 8,
+            "time": 7
+          },
+          {
+            "kind": "keyup",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 9,
+            "time": 8
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 10,
+            "time": 9
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 11,
+            "time": 10
+          },
+          {
+            "kind": "keydown",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 12,
+            "time": 11
+          },
+          {
+            "kind": "keyup",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 13,
+            "time": 12
+          }
+        ],
+        "traceFile": "t",
+        "preImage": "b",
+        "finalImage": "a",
+        "cleanup": true,
+        "checks": [
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "layout",
+            "pass": true
+          },
+          {
+            "name": "Button",
+            "pass": true
+          },
+          {
+            "name": "Badge",
+            "pass": true
+          },
+          {
+            "name": "Alert",
+            "pass": true
+          },
+          {
+            "name": "Switch",
+            "pass": true
+          }
+        ],
+        "normalClick": {
+          "success": true
+        },
+        "final": {
+          "focusVisible": true,
+          "focused": true,
+          "expanded": false,
+          "value": "a",
+          "rect": {
+            "x": 1,
+            "y": 1,
+            "width": 50,
+            "height": 30
+          },
+          "viewport": {
+            "width": 375,
+            "height": 1000,
+            "dpr": 1,
+            "scale": 1
+          }
+        },
+        "paint": {
+          "pass": true
+        }
+      },
+      "result": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "captureError",
+      "row": {
+        "id": "A-museum-old-legacy-1",
+        "cohort": "A-museum-old",
+        "route": "legacy",
+        "iteration": 1,
+        "status": "COMPLETE",
+        "errors": [],
+        "operations": [
+          {
+            "name": "key"
+          }
+        ],
+        "selectKeys": [
+          "Space",
+          "Space",
+          "ArrowUp",
+          "Enter",
+          "Space",
+          "Escape"
+        ],
+        "events": [
+          {
+            "kind": "focusin",
+            "seq": 1,
+            "time": 0
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 2,
+            "time": 1
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 3,
+            "time": 2
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 4,
+            "time": 3
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 5,
+            "time": 4
+          },
+          {
+            "kind": "keydown",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 6,
+            "time": 5
+          },
+          {
+            "kind": "keyup",
+            "key": "ArrowUp",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 7,
+            "time": 6
+          },
+          {
+            "kind": "keydown",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 8,
+            "time": 7
+          },
+          {
+            "kind": "keyup",
+            "key": "Enter",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 9,
+            "time": 8
+          },
+          {
+            "kind": "keydown",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 10,
+            "time": 9
+          },
+          {
+            "kind": "keyup",
+            "key": " ",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 11,
+            "time": 10
+          },
+          {
+            "kind": "keydown",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 12,
+            "time": 11
+          },
+          {
+            "kind": "keyup",
+            "key": "Escape",
+            "expanded": "true",
+            "trigger": {
+              "x": 1,
+              "y": 1,
+              "width": 50,
+              "height": 30
+            },
+            "seq": 13,
+            "time": 12
+          }
+        ],
+        "traceFile": "t",
+        "preImage": "b",
+        "finalImage": "a",
+        "cleanup": true,
+        "checks": [
+          {
+            "name": "environment",
+            "pass": true
+          },
+          {
+            "name": "layout",
+            "pass": true
+          },
+          {
+            "name": "Button",
+            "pass": true
+          },
+          {
+            "name": "Badge",
+            "pass": true
+          },
+          {
+            "name": "Alert",
+            "pass": true
+          },
+          {
+            "name": "Switch",
+            "pass": true
+          }
+        ],
+        "normalClick": {
+          "success": true
+        },
+        "final": {
+          "focusVisible": true,
+          "focused": true,
+          "expanded": false,
+          "value": "a",
+          "rect": {
+            "x": 1,
+            "y": 1,
+            "width": 50,
+            "height": 30
+          },
+          "viewport": {
+            "width": 375,
+            "height": 1000,
+            "dpr": 1,
+            "scale": 1
+          }
+        },
+        "paint": {
+          "pass": true
+        },
+        "captureError": "Injected missing terminal capture"
+      },
+      "result": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    }
+  ]
+}

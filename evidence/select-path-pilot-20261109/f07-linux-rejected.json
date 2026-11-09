@@ -1,0 +1,646 @@
+{
+  "head": "f07ef66ef7fb00f5c58c3c2812d9fcaf2f208183",
+  "tree": "7e5293104c96fb36605aa0f6268690dfcbbeffd8",
+  "run": 42531280550,
+  "attempt": 1,
+  "artifact": 13637114728,
+  "apiDigest": "sha256:beb7936112a9e6d293e711e9e7197e6d289fa5c87867671bf1dd26a14869d572",
+  "localSHA256": "beb7936112a9e6d293e711e9e7197e6d289fa5c87867671bf1dd26a14869d572",
+  "size": 103294895,
+  "rows": 36,
+  "runnerExit": 1,
+  "acceptedPilot": false,
+  "reason": "Probe initialization pageerror. Preserve original runner and audit failure. Do not pool outcomes.",
+  "statuses": [
+    {
+      "id": "A-museum-old-legacy-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-legacy-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-direct-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "PASS",
+        "outline": "FAIL",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-direct-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-tab-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-tab-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-direct-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-tab-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-1",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-legacy-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-legacy-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-direct-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-direct-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "PASS",
+        "outline": "FAIL",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-tab-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-tab-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-direct-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-tab-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-2",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-legacy-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-legacy-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-direct-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "PASS",
+        "outline": "FAIL",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-direct-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-tab-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-tab-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node",
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-direct-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-tab-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-3",
+      "status": "COMPLETE",
+      "errors": [
+        "TypeError: Argument 1 ('target') to MutationObserver.observe must be an instance of Node"
+      ],
+      "classification": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [
+          "pageerror"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    }
+  ]
+}

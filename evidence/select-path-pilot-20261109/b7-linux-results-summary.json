@@ -1,0 +1,722 @@
+{
+  "producer": {
+    "head": "b7b1e8e6b6cdf5518a2b061766cbd098502c41b3",
+    "tree": "4796f065590481e605517213fc7cf15b60812e73",
+    "platform": "linux",
+    "os": "7.0.0-1017-azure",
+    "node": "v22.23.4",
+    "playwright": "1.56.1",
+    "browser": "26.0",
+    "originalExit": 1
+  },
+  "preliminaryAnalysis": true,
+  "analysisCodeHashes": {
+    "tests/select-path-pilot/audit.py": "1903de1799d0edadf01374c7790b76d0cf7db5491fb183bc32f0b8c427f7e5da",
+    "tests/select-path-pilot/contract.cjs": "fd531cec94877fb1f47b00be8cd9fb10265871ed2823b0f313495fe87d6d7a5c"
+  },
+  "note": "Final frozen analysis is attached to PR34. Original classifications retained.",
+  "classifications": [
+    {
+      "id": "A-museum-old-legacy-1",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-legacy-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-direct-1",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-direct-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-tab-1",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-tab-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-direct-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-tab-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-1",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-legacy-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-legacy-2",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-direct-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-direct-2",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-tab-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-tab-2",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-direct-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-tab-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-2",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-legacy-3",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-legacy-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-direct-3",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-direct-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "A-museum-old-tab-3",
+      "previous": {
+        "diagnostic": "INCOMPLETE",
+        "offscreen": "UNKNOWN",
+        "outline": "UNKNOWN",
+        "errors": [
+          "ordinary-click-click"
+        ],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "PASS",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "C-museum-short-tab-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-direct-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-native-tab-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-direct-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-cancel-tab-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-direct-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "id": "B-sdk-paired-plain-tab-3",
+      "previous": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      },
+      "current": {
+        "diagnostic": "COMPLETE",
+        "offscreen": "NOT_TESTED",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    }
+  ]
+}

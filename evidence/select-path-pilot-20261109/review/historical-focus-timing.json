@@ -1,0 +1,553 @@
+[
+  {
+    "file": "integrated-results.json",
+    "id": "webkit-375-light-100-fresh9",
+    "events": [
+      {
+        "relativeMs": -24,
+        "type": "pointerdown",
+        "key": null,
+        "target": {
+          "tag": "INPUT",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -23,
+        "type": "pointerup",
+        "key": null,
+        "target": {
+          "tag": "INPUT",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -23,
+        "type": "click",
+        "key": null,
+        "target": {
+          "tag": "INPUT",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -10.0,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": -9,
+        "type": "keydown",
+        "key": "Tab",
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": -8,
+        "type": "focusout",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -8,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -7,
+        "type": "keydown",
+        "key": "Shift",
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -6.0,
+        "type": "keydown",
+        "key": "Tab",
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -6.0,
+        "type": "focusout",
+        "key": null,
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -6.0,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": 0,
+        "type": "keydown",
+        "key": " ",
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": 4,
+        "type": "focusout",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": 5,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "DIV",
+          "id": "select-list-:r8:",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-list-:r8:"
+      }
+    ]
+  },
+  {
+    "file": "integrated-results.json",
+    "id": "webkit-375-light-100-fresh14",
+    "events": [
+      {
+        "relativeMs": -35,
+        "type": "pointerup",
+        "key": null,
+        "target": {
+          "tag": "INPUT",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -35,
+        "type": "click",
+        "key": null,
+        "target": {
+          "tag": "INPUT",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -12,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": -10,
+        "type": "keydown",
+        "key": "Tab",
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": -10,
+        "type": "focusout",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -9,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -8,
+        "type": "keydown",
+        "key": "Shift",
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -7,
+        "type": "keydown",
+        "key": "Tab",
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -7,
+        "type": "focusout",
+        "key": null,
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -7,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": 0,
+        "type": "keydown",
+        "key": " ",
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": 5,
+        "type": "focusout",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": 5,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "DIV",
+          "id": "select-list-:r8:",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-list-:r8:"
+      }
+    ]
+  },
+  {
+    "file": "baseline-results.json",
+    "id": "webkit-375-light-100-fresh2",
+    "events": [
+      {
+        "relativeMs": -24,
+        "type": "pointerdown",
+        "key": null,
+        "target": {
+          "tag": "INPUT",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -23,
+        "type": "pointerup",
+        "key": null,
+        "target": {
+          "tag": "INPUT",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -23,
+        "type": "click",
+        "key": null,
+        "target": {
+          "tag": "INPUT",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -11,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": -10,
+        "type": "keydown",
+        "key": "Tab",
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": -9,
+        "type": "focusout",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -9,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -7,
+        "type": "keydown",
+        "key": "Shift",
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -7,
+        "type": "keydown",
+        "key": "Tab",
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -7,
+        "type": "focusout",
+        "key": null,
+        "target": {
+          "tag": "SUMMARY",
+          "id": "",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": -6,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": 0,
+        "type": "keydown",
+        "key": " ",
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-trigger-:r0:"
+      },
+      {
+        "relativeMs": 4.0,
+        "type": "focusout",
+        "key": null,
+        "target": {
+          "tag": "SPAN",
+          "id": "select-trigger-:r0:",
+          "role": "button"
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": ""
+      },
+      {
+        "relativeMs": 5,
+        "type": "focusin",
+        "key": null,
+        "target": {
+          "tag": "DIV",
+          "id": "select-list-:r8:",
+          "role": null
+        },
+        "scrollY": 3555,
+        "triggerTop": -658,
+        "active": "select-list-:r8:"
+      }
+    ]
+  }
+]
