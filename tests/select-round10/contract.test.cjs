@@ -47,4 +47,31 @@ test('auditor rejects counterfeit PASS with absent rows and forged producer exit
   assert.ok(report.errors.some(e=>e.includes('row-count')));
  }finally{fs.rmSync(temp,{recursive:true,force:true});}
 });
-
+test('round10 comparison identifiers bind the loop iteration; regression for CI ReferenceError',()=>{
+ const runner=fs.readFileSync(path.join(__dirname,'run.cjs'),'utf8');
+ const m=runner.match(/const comparisons=\(\)=> \{([\s\S]*?)\n\};\nconst serve=/);
+ assert.ok(m,'comparisons must be extractable for isolated regression check');
+ const sample=(marker=false)=>({
+   html:'<div id="Select"></div>',htmlNoEmptyStyle:'<div id="Select"></div>',styleNodeCount:1,
+   disabled:[{attrs:marker?{style:''}:{}}],hidden:{attrs:marker?{style:''}:{}},
+   scroll:{x:0,y:0},viewport:{width:375,height:1000,dpr:1},font:'16px',theme:'light',
+   trigger:{rect:{x:0,y:0,width:10,height:10},computed:{display:'block'}}
+ });
+ const rows=[];
+ for(let iteration=1;iteration<=plan.repeats;iteration++)for(const factor of plan.factors)for(const arm of [0,1]){
+   const s=sample(factor==='empty-style'&&arm===1);
+   rows.push({id:factor+'-'+arm+'-'+iteration,factor,iteration,arm,classification:{diagnostic:'COMPLETE',outline:'VISIBLE'},
+    acquisition:{focusVisible:true},samples:{beforeFocus:s,beforePhoto:{html:'<div id="Select"></div>'}}});
+ }
+ const sandbox={plan,data:{rows},equal:(a,b)=>JSON.stringify(a)===JSON.stringify(b)};
+ const compare=vm.runInNewContext('(function(){const comparisons=()=> {'+m[1]+'\n};return comparisons;})()',sandbox);
+ const result=compare();
+ assert.equal(result.length,15);
+ for(let i=1;i<=3;i++)assert.equal(result.filter(p=>p.iteration===i).length,plan.factors.length);
+ assert.equal(result.every(p=>p.equivalence==='CONFIRMED_TARGET'),true);
+});
+test('DOM marker matches checkbox labeled Select disabled, not disabled state',()=>{
+ const runner=fs.readFileSync(path.join(__dirname,'run.cjs'),'utf8');
+ assert.ok(runner.includes('#Select .controls input[type="checkbox"]'));
+ assert.equal(runner.includes('#Select input:disabled'),false);
+});
