@@ -14,7 +14,9 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference='Stop'
 
 function Require-Exit([string]$Name) {
-  if ($LASTEXITCODE -ne 0) { throw ("{0} failed (exit {1})" -f $Name,$LASTEXITCODE) }
+  $code=$LASTEXITCODE
+  if($report){[ordered]@{stage=$Name;exitCode=$code;timeUTC=[DateTime]::UtcNow.ToString('o')}|ConvertTo-Json -Compress|Add-Content -LiteralPath (Join-Path $report 'bootstrap-exits.jsonl')}
+  if ($code -ne 0) { throw ("{0} failed (exit {1})" -f $Name,$code) }
 }
 function Require-Command([string]$Name) {
   if (-not (Get-Command $Name -ErrorAction SilentlyContinue)) { throw "Missing command: $Name" }
@@ -33,7 +35,7 @@ $env:ROUND10_EXPECT_PLATFORM='win32'
 $env:ROUND10_OUT=Join-Path $EvidenceDirectory 'raw'
 
 try {
-  & git clone --quiet --no-checkout 'https://github.com/tetsujisugimori-coder/intelligence-ui-museum.git' $Workspace
+  & git -c core.autocrlf=false clone --config core.autocrlf=false --quiet --no-checkout 'https://github.com/tetsujisugimori-coder/intelligence-ui-museum.git' $Workspace
   Require-Exit 'git clone'
   Push-Location $Workspace
   try {
@@ -64,6 +66,7 @@ try {
     if($contractExit -ne 0){throw "Contract check failed; see local report"}
     & node tests/select-round10/run.cjs 1> (Join-Path $report 'runner.log') 2> (Join-Path $report 'runner-stderr.log')
     $runnerExit=$LASTEXITCODE
+    $env:ROUND10_RUNNER_EXIT=[string]$runnerExit
     Set-Content -LiteralPath (Join-Path $report 'runner-exit.txt') -Value "$runnerExit"
     if(Test-Path -LiteralPath (Join-Path $env:ROUND10_OUT 'results.json')) {
       & node tests/select-round10/audit.cjs $env:ROUND10_OUT 1> (Join-Path $report 'audit.json') 2> (Join-Path $report 'audit-stderr.log')

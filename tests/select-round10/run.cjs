@@ -6,6 +6,7 @@ const http=require('node:http');
 const os=require('node:os');
 const {execFileSync}=require('node:child_process');
 const plan=require('./plan.json');
+const {selectors,capture,requireSnapshot,styleState}=require('./targets.cjs');
 const {probe}=require('../select-factor-pilot/probe.cjs');
 const repo=path.resolve(__dirname,'../..');
 const pwRoot=path.join(repo,'tools/stage-a-browser/node_modules');
@@ -36,21 +37,8 @@ function slots(){
  }
  return rows;
 }
-function summarizeElement(e){
- if(!e)return null;
- const s=getComputedStyle(e),r=e.getBoundingClientRect();
- return {html:e.outerHTML,attrs:Object.fromEntries([...e.attributes].map(a=>[a.name,a.value])),rect:r.toJSON(),computed:{display:s.display,position:s.position,outline:s.outline,transform:s.transform,visibility:s.visibility,opacity:s.opacity},matchesFocusVisible:e.matches(':focus-visible')};
-}
 async function snapshot(t){
- return t.evaluate(trigger=>{
-  const root=document.querySelector('#Select');
-  const boxes=[...root.querySelectorAll('input:disabled')];
-  const hidden=document.querySelector('#official-select');
-  const active=document.activeElement;
-  const desc=e=>e?{html:e.outerHTML,attrs:Object.fromEntries([...e.attributes].map(a=>[a.name,a.value])),rect:e.getBoundingClientRect().toJSON(),computed:{display:getComputedStyle(e).display,outline:getComputedStyle(e).outline,visibility:getComputedStyle(e).visibility}}:null;
-  const html=root.outerHTML.replaceAll(/(?:«|&laquo;|:)?r[a-z0-9]+(?:»|&raquo;|:)/g,'GENERATED_ID');
-  return {time:performance.now(),html,htmlNoEmptyStyle:html.replace(/\sstyle=""/g,''),styleNodeCount:boxes.length,disabled:boxes.map(desc),hidden:desc(hidden),trigger:desc(trigger),active:{tag:active?.tagName,id:active?.id},focused:trigger===active,focusVisible:trigger.matches(':focus-visible'),expanded:trigger.getAttribute('aria-expanded'),value:hidden?.value,scroll:{x:scrollX,y:scrollY},viewport:{width:innerWidth,height:innerHeight,dpr:devicePixelRatio,scale:visualViewport?.scale??null},font:getComputedStyle(document.documentElement).fontSize,theme:document.documentElement.dataset.theme};
- });
+ return requireSnapshot(await t.evaluate(capture,selectors));
 }
 function resultClass(row){
  if(row.status!=='COMPLETE')return {diagnostic:'INCOMPLETE',outline:'UNKNOWN',reason:row.error||row.captureError||'not complete'};
@@ -76,12 +64,14 @@ const comparisons=()=> {
      if(x.htmlNoEmptyStyle!==y.htmlNoEmptyStyle)errors.push('unexpected-DOM-difference');
      if(x.styleNodeCount!==1||y.styleNodeCount!==1)errors.push('ambiguous-disabled-node');
      const xa=x.disabled?.[0]?.attrs,xb=y.disabled?.[0]?.attrs;
-     if(xa?.style||xb?.style!==''||x.hidden?.attrs?.style||y.hidden?.attrs?.style!=='')errors.push('marker-intervention-not-isolated');
+     if(Object.hasOwn(xa||{},'style')||xb?.style!==''||Object.hasOwn(x.hidden?.attrs||{},'style')||y.hidden?.attrs?.style!=='')errors.push('marker-intervention-not-isolated');
     }else if(factor==='pre-screenshot'){
-     if(a.samples?.beforePhoto?.html!==b.samples?.beforePhoto?.html)errors.push('pre-photo-DOM-different');
+     const px=a.samples?.beforePhoto,py=b.samples?.beforePhoto;
+     for(const k of ['html','scroll','viewport','font','theme'])if(!equal(px?.[k],py?.[k]))errors.push('pre-photo-different:'+k);
+     for(const [label,ex,ey] of [['trigger',px?.trigger,py?.trigger],['checkbox',px?.disabled?.[0],py?.disabled?.[0]],['value',px?.hidden,py?.hidden]])for(const k of ['rect','computed'])if(!equal(ex?.[k],ey?.[k]))errors.push('pre-photo-'+label+'-different:'+k);
      // The post-photo DOM may differ; that is the observation being tested.
     }else if(x.html!==y.html)errors.push('target-DOM-different');
-    for(const k of ['rect','computed'])if(!equal(x.trigger?.[k],y.trigger?.[k]))errors.push(`trigger-${k}-different`);
+    for(const [label,ex,ey] of [['trigger',x.trigger,y.trigger],['checkbox',x.disabled?.[0],y.disabled?.[0]],['value',x.hidden,y.hidden]])for(const k of ['rect','computed'])if(!equal(ex?.[k],ey?.[k]))errors.push(`${label}-${k}-different`);
    }
   }
   out.push({factor,iteration:i,armA:a?.id,armB:b?.id,equivalence:errors.length?'UNCONFIRMED':'CONFIRMED_TARGET',errors,observed:a&&b?{outline:[a.classification.outline,b.classification.outline],focusVisible:[a.acquisition?.focusVisible,b.acquisition?.focusVisible],domStyle:[a.samples?.beforeFocus?.disabled?.[0]?.attrs?.style??null,b.samples?.beforeFocus?.disabled?.[0]?.attrs?.style??null]}:null,rootCause:'UNKNOWN'});
@@ -116,7 +106,15 @@ async function trial(browser,s){
  };
  try{
   context=await browser.newContext({viewport:plan.viewport,colorScheme:'light',deviceScaleFactor:1});
-  await context.tracing.start({screenshots:true,snapshots:true,sources:true});
+  row.privacy={freshContext:true,physicalInput:false,initialStorage:await context.storageState(),allowedOrigin:`http://127.0.0.1:${serve.address().port}`,blockedRequests:[],externalRequests:0};
+  await context.route('**/*',async route=>{
+   const url=route.request().url();
+   if(new URL(url).origin===row.privacy.allowedOrigin)return route.continue();
+   row.privacy.blockedRequests.push({urlSha256:hash(url),method:route.request().method()});
+   return route.abort('blockedbyclient');
+  });
+  context.on('response',r=>{if(new URL(r.url()).origin!==row.privacy.allowedOrigin)row.privacy.externalRequests++});
+  await context.tracing.start({title:plan.id+':'+s.id,screenshots:true,snapshots:true,sources:true});
   p=await context.newPage();p.setDefaultTimeout(5000);
   if(s.fullProbe)await p.addInitScript(probe);
   p.on('pageerror',e=>row.pageErrors.push(String(e)));
@@ -124,7 +122,7 @@ async function trial(browser,s){
   await step('goto',()=>p.goto(`http://127.0.0.1:${serve.address().port}/?theme=light&text=100`));
   await p.locator('#Button .stage button').waitFor();
   await p.evaluate(()=>document.fonts.ready);
-  const h=p.locator('#Select h2'),t=p.locator('#Select .stage [role=button]');
+  const h=p.locator('#Select h2'),t=p.locator(selectors.trigger);
   if(s.prelude)await step('prelude',()=>prelude(p,s.id,row,async(name,fn)=>{const c={name,pass:false};row.checks.push(c);c.detail=await fn();c.pass=true}));
   await step('normalize',async()=>{await h.evaluate(e=>{e.scrollIntoView({block:'center'});document.activeElement?.blur()});await frame(p)});
   row.samples.beforePhoto=await snapshot(t);
@@ -132,27 +130,30 @@ async function trial(browser,s){
   row.samples.afterPhoto=await snapshot(t);
   if(s.clearEmptyStyle)await step('normalize-empty-style',async()=>{
    row.samples.beforeStyleNormalization=await snapshot(t);
-   await p.evaluate(()=>{
-    const boxes=[...document.querySelectorAll('#Select .controls input[type="checkbox"]')];
-    const hidden=document.getElementById('official-select');
+   await p.evaluate(sel=>{
+    const boxes=[...document.querySelectorAll(sel.checkbox)];
+    const values=[...document.querySelectorAll(sel.valueInput)],hidden=values[0];
+    if(values.length!==1)throw Error('value input ambiguous');
     if(boxes.length!==1||!hidden||boxes[0]===hidden)throw Error('normalization nodes ambiguous');
     for(const el of [boxes[0],hidden]){
      if(el.hasAttribute('style')&&el.getAttribute('style')!=='')throw Error('nonempty style; no silent cleanup');
      if(el.hasAttribute('style'))el.removeAttribute('style');
     }
-   });
+   },selectors);
    row.samples.afterStyleNormalization=await snapshot(t);
   });
   if(s.emptyStyle)await step('empty-style-diagnostic',async()=>{
-   await p.evaluate(()=>{
-    const nodes=[...document.querySelectorAll('#Select .controls input[type="checkbox"]')];
-    const hidden=document.getElementById('official-select');
+   await snapshot(t);
+   await p.evaluate(sel=>{
+    const nodes=[...document.querySelectorAll(sel.checkbox)];
+    const values=[...document.querySelectorAll(sel.valueInput)],hidden=values[0];
+    if(values.length!==1)throw Error('value input ambiguous');
     if(nodes.length!==1||!hidden||nodes[0]===hidden)throw Error('marker nodes ambiguous');
     for(const el of [nodes[0],hidden]){
      if(el.hasAttribute('style'))throw Error('marker preexists; cannot isolate');
      el.setAttribute('style','');
     }
-   });
+   },selectors);
   });
   row.samples.beforeHistory=await snapshot(t);
   await step('pointer-history',()=>h.click());

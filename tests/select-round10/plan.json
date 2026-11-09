@@ -110,7 +110,7 @@
   "order": "fresh context and page per trial; iterations 1..3, factors in listed order; arms 0->1 on odd iterations, arms 1->0 on even iterations; reuse browser only",
   "target": "Museum #Select [role=button] with pointer-history Select h2 then programmatic locator.focus, Space, Escape",
   "domMarkerSelectors": [
-    "#Select input:disabled",
+    "#Select .controls input[type=\"checkbox\"]",
     "#official-select"
   ],
   "sequence": [
@@ -156,5 +156,12 @@
     "VoiceOver",
     "SDK isolation",
     "full production acceptance"
-  ]
+  ],
+  "domTargets": {
+    "root": "#Select",
+    "checkbox": "#Select .controls input[type=\"checkbox\"]",
+    "valueInput": "#official-select",
+    "trigger": "#Select .stage [role=button]"
+  },
+  "domIdentityNote": "Value input has no type attribute and DOM type=text; hidden means aria-hidden=true, tabindex=-1 and SDK sr-only class. Checkbox is enabled and unchecked."
 }
