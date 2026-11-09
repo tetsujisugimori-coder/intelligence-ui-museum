@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "pairs": [
+    {
+      "factor": "history",
+      "iteration": 1,
+      "equivalence": "CONFIRMED_TARGET",
+      "errors": [],
+      "fullDocumentDOM": "NOT_ASSERTED"
+    },
+    {
+      "factor": "history",
+      "iteration": 2,
+      "equivalence": "CONFIRMED_TARGET",
+      "errors": [],
+      "fullDocumentDOM": "NOT_ASSERTED"
+    },
+    {
+      "factor": "history",
+      "iteration": 3,
+      "equivalence": "CONFIRMED_TARGET",
+      "errors": [],
+      "fullDocumentDOM": "NOT_ASSERTED"
+    },
+    {
+      "factor": "prelude",
+      "iteration": 1,
+      "equivalence": "UNCONFIRMED",
+      "errors": [
+        "invariant:selectHTML"
+      ],
+      "fullDocumentDOM": "DIFFERENT_BY_DESIGN"
+    },
+    {
+      "factor": "prelude",
+      "iteration": 2,
+      "equivalence": "UNCONFIRMED",
+      "errors": [
+        "invariant:selectHTML"
+      ],
+      "fullDocumentDOM": "DIFFERENT_BY_DESIGN"
+    },
+    {
+      "factor": "prelude",
+      "iteration": 3,
+      "equivalence": "UNCONFIRMED",
+      "errors": [
+        "invariant:selectHTML"
+      ],
+      "fullDocumentDOM": "DIFFERENT_BY_DESIGN"
+    },
+    {
+      "factor": "opening-key",
+      "iteration": 1,
+      "equivalence": "CONFIRMED_TARGET",
+      "errors": [],
+      "fullDocumentDOM": "NOT_ASSERTED"
+    },
+    {
+      "factor": "opening-key",
+      "iteration": 2,
+      "equivalence": "CONFIRMED_TARGET",
+      "errors": [],
+      "fullDocumentDOM": "NOT_ASSERTED"
+    },
+    {
+      "factor": "opening-key",
+      "iteration": 3,
+      "equivalence": "CONFIRMED_TARGET",
+      "errors": [],
+      "fullDocumentDOM": "NOT_ASSERTED"
+    },
+    {
+      "factor": "sdk-isolation",
+      "iteration": 1,
+      "equivalence": "NOT_TESTED",
+      "errors": [],
+      "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+    },
+    {
+      "factor": "sdk-isolation",
+      "iteration": 2,
+      "equivalence": "NOT_TESTED",
+      "errors": [],
+      "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+    },
+    {
+      "factor": "sdk-isolation",
+      "iteration": 3,
+      "equivalence": "NOT_TESTED",
+      "errors": [],
+      "reason": "NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison."
+    }
+  ],
+  "rows": 24,
+  "scope": "diagnostic evidence only; Stage 3 HOLD; rootCause UNKNOWN; SDK isolation NOT_TESTED",
+  "head": "fc8228fcc0104c66e89318158980ec24d945de8e",
+  "environment": {
+    "platform": "linux",
+    "os": "7.0.0-1017-azure",
+    "node": "v22.23.4",
+    "playwright": "1.56.1"
+  }
+}

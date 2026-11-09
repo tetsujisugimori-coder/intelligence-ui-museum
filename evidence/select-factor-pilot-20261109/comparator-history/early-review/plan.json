@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "id": "select-single-factor-round9-v1",
+  "baseline": "5edb9c7bf5c24add6a238eec7ba2cd968384e357",
+  "repeats": 3,
+  "viewport": {"width":375,"height":1000},
+  "theme": "light", "rootPercent": 100, "deviceScaleFactor": 1,
+  "engine": "webkit", "sdkVersion":"0.2.2", "playwright":"1.56.1",
+  "factors": ["history","prelude","opening-key","sdk-isolation"],
+  "arms": {
+    "history": [{"history":"pointer","prelude":false,"openingKey":"Space"},{"history":"keyboard","prelude":false,"openingKey":"Space"}],
+    "prelude": [{"history":"pointer","prelude":false,"openingKey":"Space"},{"history":"pointer","prelude":true,"openingKey":"Space"}],
+    "opening-key": [{"history":"pointer","prelude":false,"openingKey":"Space"},{"history":"pointer","prelude":false,"openingKey":"ArrowDown"}],
+    "sdk-isolation": [{"history":"pointer","prelude":false,"openingKey":"Space","isolation":"native"},{"history":"pointer","prelude":false,"openingKey":"Space","isolation":"paired"}]
+  },
+  "expectedSlots":24, "runnableSlots":18,
+  "order":"iteration outer, factors in listed order, AB on odd iterations and BA on even iterations; fresh context and page per slot, browser reused",
+  "historyDefinition":"After common centered Select heading and active-element blur: ordinary pointer click on the noninteractive Select h2 versus Playwright Shift key down/up, then common locator.focus on trigger. This is an operational input-history contrast, not physical input or an assertion that Shift changes modality on every engine.",
+  "preludeDefinition":"Frozen PR34 environment/layout/Button/Badge/Alert/Switch operations versus absent. This necessarily changes other exhibit state. Same product/build/CSS and Select subtree are checked; full-document post-prelude DOM identity is NOT claimed.",
+  "sequence":"common centered target heading; blur; assigned history; trigger.focus; assigned opening key; wait for expanded and option visible; Escape; wait closed; final snapshot; four-PNG ring measurement",
+  "sdkIsolation":"NOT_TESTED: prior isolated fixture changes DOM/CSS and uses multiple SDK/Radix interventions. No validated same-Museum single-factor intervention exists; neither arm is sampled as an SDK effect comparison.",
+  "additionalSampling":"No automatic expansion. Require pair invariants and independent review before any separately preregistered additional run.",
+  "notTested":["ordinary option click persistent-offscreen failure","physical input","real Safari","VoiceOver","native OS popup capture","strict historical timing equivalence"]
+}

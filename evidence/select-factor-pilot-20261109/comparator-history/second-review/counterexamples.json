@@ -1,0 +1,64 @@
+{
+  "baseline": {
+    "diagnostic": "COMPLETE",
+    "outline": "ABSENT",
+    "errors": [],
+    "productVerdict": "UNKNOWN",
+    "rootCause": "UNKNOWN",
+    "stage3": "HOLD"
+  },
+  "mutations": [
+    {
+      "name": "missingInvariantGeometry",
+      "result": {
+        "diagnostic": "INCOMPLETE",
+        "outline": "UNKNOWN",
+        "errors": [
+          "invariants"
+        ],
+        "productVerdict": "UNKNOWN",
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "contradictoryPaint",
+      "result": {
+        "diagnostic": "INCOMPLETE",
+        "outline": "UNKNOWN",
+        "errors": [
+          "paint-consistency"
+        ],
+        "productVerdict": "UNKNOWN",
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "invalidHistoryBoundary",
+      "result": {
+        "diagnostic": "INCOMPLETE",
+        "outline": "UNKNOWN",
+        "errors": [
+          "phase-boundaries"
+        ],
+        "productVerdict": "UNKNOWN",
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "acquisitionWrongType",
+      "result": {
+        "diagnostic": "INCOMPLETE",
+        "outline": "UNKNOWN",
+        "errors": [
+          "acquisition"
+        ],
+        "productVerdict": "UNKNOWN",
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    }
+  ]
+}

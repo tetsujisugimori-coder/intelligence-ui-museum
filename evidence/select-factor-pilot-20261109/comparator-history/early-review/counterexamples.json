@@ -1,0 +1,51 @@
+{
+  "baseline": {
+    "diagnostic": "COMPLETE",
+    "outline": "FAIL",
+    "errors": [],
+    "rootCause": "UNKNOWN",
+    "stage3": "HOLD"
+  },
+  "mutations": [
+    {
+      "name": "missingInvariantGeometry",
+      "result": {
+        "diagnostic": "COMPLETE",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "contradictoryPaint",
+      "result": {
+        "diagnostic": "COMPLETE",
+        "outline": "PASS",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "invalidHistoryBoundary",
+      "result": {
+        "diagnostic": "COMPLETE",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    },
+    {
+      "name": "acquisitionWrongType",
+      "result": {
+        "diagnostic": "COMPLETE",
+        "outline": "FAIL",
+        "errors": [],
+        "rootCause": "UNKNOWN",
+        "stage3": "HOLD"
+      }
+    }
+  ]
+}
