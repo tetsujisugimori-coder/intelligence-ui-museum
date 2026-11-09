@@ -1,0 +1,76 @@
+name: Select single-factor pilot
+on:
+  pull_request:
+    paths:
+      - 'tests/select-factor-pilot/**'
+      - 'docs/select-factor-pilot/**'
+      - 'evidence/select-factor-pilot-20261109/**'
+      - '.github/workflows/select-factor-pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: select-factor-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  pilot:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2025, ubuntu-24.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    env:
+      PYTHONUTF8: '1'
+      GIT_CONFIG_COUNT: '1'
+      GIT_CONFIG_KEY_0: core.autocrlf
+      GIT_CONFIG_VALUE_0: 'false'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build preserved Museum from locked dependencies
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          npm --prefix .work/v10 ci --ignore-scripts --no-audit --no-fund
+          npm --prefix .work/v10 run build
+          npm --prefix tools/stage-a-browser ci --ignore-scripts --no-audit --no-fund
+          node tools/stage-a-browser/node_modules/playwright/cli.js install --with-deps webkit
+      - name: Comparator controls and original evidence preservation
+        shell: bash
+        run: |
+          node --test tests/select-factor-pilot/contract.test.cjs tests/select-path-pilot/contract.test.cjs tests/sdk-parity/compare.test.cjs tests/select-escape-minimal/classify.test.cjs
+          python scripts/verify-migration.py
+      - name: Fixed small pilot and independent raw audit
+        shell: bash
+        run: |
+          mkdir -p .work/factor-evidence
+          set +e
+          FACTOR_OUT=.work/factor-evidence/raw node tests/select-factor-pilot/run.cjs > .work/factor-evidence/runner-stdout.txt 2> .work/factor-evidence/runner-stderr.txt
+          runner=$?
+          echo "$runner" > .work/factor-evidence/runner-exit.txt
+          FACTOR_EXPECT_HEAD=$(git rev-parse HEAD) node tests/select-factor-pilot/audit.cjs .work/factor-evidence/raw > .work/factor-evidence/audit.json 2> .work/factor-evidence/audit-stderr.txt
+          audit=$?
+          echo "$audit" > .work/factor-evidence/audit-exit.txt
+          cat .work/factor-evidence/runner-stdout.txt
+          cat .work/factor-evidence/audit.json
+          test "$runner" -eq 0 && test "$audit" -eq 0
+      - name: Verify protected paths remain unchanged
+        if: always()
+        shell: bash
+        run: |
+          git diff --exit-code 5edb9c7bf5c24add6a238eec7ba2cd968384e357 -- apps archive reviews legacy evidence/select-path-pilot-20261109 tests/select-path-pilot tests/sdk-parity tests/select-escape-minimal
+          python scripts/verify-migration.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: select-factor-${{ matrix.os }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/factor-evidence/
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error
