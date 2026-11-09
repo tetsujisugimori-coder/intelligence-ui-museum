@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
 concurrency:
   group: select-factor-${{ github.ref }}-${{ github.sha }}
   cancel-in-progress: false
@@ -40,26 +41,30 @@ jobs:
           npm --prefix .work/v10 ci --ignore-scripts --no-audit --no-fund
           npm --prefix .work/v10 run build
           npm --prefix tools/stage-a-browser ci --ignore-scripts --no-audit --no-fund
-          node tools/stage-a-browser/node_modules/playwright/cli.js install --with-deps webkit
       - name: Comparator controls and original evidence preservation
         shell: bash
         run: |
           node --test tests/select-factor-pilot/contract.test.cjs tests/select-path-pilot/contract.test.cjs tests/sdk-parity/compare.test.cjs tests/select-escape-minimal/classify.test.cjs
           python scripts/verify-migration.py
-      - name: Fixed small pilot and independent raw audit
+      - name: Download fixed producer evidence (no new sampling)
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 42616269440
+          name: select-factor-${{ matrix.os }}-fc8228fcc0104c66e89318158980ec24d945de8e
+          path: .work/factor-evidence
+      - name: Reanalyse immutable original JSON PNG and trace
         shell: bash
         run: |
-          mkdir -p .work/factor-evidence
+          mkdir -p .work/factor-analysis
           set +e
-          FACTOR_OUT=.work/factor-evidence/raw node tests/select-factor-pilot/run.cjs > .work/factor-evidence/runner-stdout.txt 2> .work/factor-evidence/runner-stderr.txt
-          runner=$?
-          echo "$runner" > .work/factor-evidence/runner-exit.txt
-          FACTOR_EXPECT_HEAD=$(git rev-parse HEAD) node tests/select-factor-pilot/audit.cjs .work/factor-evidence/raw > .work/factor-evidence/audit.json 2> .work/factor-evidence/audit-stderr.txt
+          FACTOR_EXPECT_PLATFORM=$(node -p process.platform) FACTOR_EXPECT_HEAD=fc8228fcc0104c66e89318158980ec24d945de8e node tests/select-factor-pilot/audit.cjs .work/factor-evidence/raw > .work/factor-analysis/audit.json 2> .work/factor-analysis/audit-stderr.txt
           audit=$?
-          echo "$audit" > .work/factor-evidence/audit-exit.txt
-          cat .work/factor-evidence/runner-stdout.txt
-          cat .work/factor-evidence/audit.json
-          test "$runner" -eq 0 && test "$audit" -eq 0
+          echo "$audit" > .work/factor-analysis/audit-exit.txt
+          cp .work/factor-evidence/runner-exit.txt .work/factor-analysis/original-runner-exit.txt
+          cp .work/factor-evidence/audit-exit.txt .work/factor-analysis/original-auditor-exit.txt
+          cat .work/factor-analysis/audit.json
+          exit "$audit"
       - name: Verify protected paths remain unchanged
         if: always()
         shell: bash
@@ -69,8 +74,8 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: select-factor-${{ matrix.os }}-${{ github.event.pull_request.head.sha || github.sha }}
-          path: .work/factor-evidence/
+          name: select-factor-reanalysis-${{ matrix.os }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/factor-analysis/
           include-hidden-files: true
           retention-days: 90
           if-no-files-found: error

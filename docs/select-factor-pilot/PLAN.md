@@ -35,9 +35,11 @@ pairごとにSelect subtree（React生成IDを正規化）、CSS hash、trigger 
 ```
 node --test tests/select-factor-pilot/contract.test.cjs
 FACTOR_OUT=.work/factor-raw node tests/select-factor-pilot/run.cjs
-FACTOR_EXPECT_HEAD=<producer SHA> node tests/select-factor-pilot/audit.cjs .work/factor-raw
+FACTOR_EXPECT_PLATFORM=<win32|linux> FACTOR_EXPECT_HEAD=<producer SHA> node tests/select-factor-pilot/audit.cjs .work/factor-raw
 ```
 
 Windowsでは環境変数をPowerShell構文で設定する。auditorは`python`（またはPYTHON環境変数）でZIP CRCとtraceを検証する。raw JSON/PNG/traceとSHA256SUMSを保全。auditはmanifest、row binding、Gitのproducer source/plan/product bytes、PNG再計算、trace操作列、比較器再計算を確認。build hashはauditor実行環境の.work/v10/distと照合する。同じ取得buildを再利用した場合は独立再build同一性の証明ではない。期待producer HEADはFACTOR_EXPECT_HEADで必須指定する。dirty採取はsource commit照合でFAILとなり、原票は消去・上書きせず別出力でやり直す。
 
 n=3非再現は低頻度故障の解消を意味しない。仮説は支持/反証/UNKNOWNに分け、3要因の結果からSDK隔離、物理入力、実Safari、VoiceOver、歴史的故障の根本原因へ一般化しない。
+
+監査器は FACTOR_EXPECT_PLATFORM=win32 または linux を必須とし、CIと実PCを別母数として扱う。
