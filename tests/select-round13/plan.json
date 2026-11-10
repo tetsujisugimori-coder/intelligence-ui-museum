@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "id": "select-round13-observer-transition-v1",
+  "dateJST": "2026-11-11",
+  "parentIssue": 28,
+  "issue": 43,
+  "baselineMain": "56faa22556f9ec03350245763c2d173f8cc0ad6e",
+  "repeats": 3,
+  "viewport": {
+    "width": 375,
+    "height": 1000
+  },
+  "theme": "light",
+  "rootPercent": 100,
+  "deviceScaleFactor": 1,
+  "sdkVersion": "0.2.2",
+  "playwright": "1.56.1",
+  "engines": [
+    "webkit",
+    "chromium"
+  ],
+  "osPopulations": [
+    "win32",
+    "linux"
+  ],
+  "conditions": [
+    "A",
+    "B",
+    "D"
+  ],
+  "observerArms": [
+    "off",
+    "on"
+  ],
+  "expectedSlotsPerEnvironment": 18,
+  "trialOrder": "iteration 1..3, condition A/B/D, arm off/on on odd, on/off on even; fresh context/page per trial",
+  "observationPolicy": "Observer ON installs round12 event+MutationObserver probe before navigation. OFF never installs it. Both arms receive identical Playwright tracing, snapshot calls, user input, and screenshots. OFF is not a measurement-free or browser-events-free condition.",
+  "histories": {
+    "A": [],
+    "B": [
+      "on"
+    ],
+    "D": [
+      "on",
+      "off"
+    ]
+  },
+  "stageBoundaries": [
+    "beforePrelude",
+    "afterSwitch",
+    "beforeFocus",
+    "acquisition",
+    "afterSpace",
+    "afterEscape"
+  ],
+  "focusSequence": [
+    "direct focus",
+    "Space opens Select",
+    "Escape closes Select"
+  ],
+  "recording": [
+    "focus",
+    "focusVisible",
+    "expanded",
+    "pseudoAfter outline and shadow",
+    "computed trigger style",
+    "scroll",
+    "geometry",
+    "DOM identity",
+    "performance.now",
+    "observerInstalled",
+    "pageErrors",
+    "PNG after transition",
+    "trace ZIP"
+  ],
+  "decisions": {
+    "observerEffect": "Pair comparisons within the same condition/iteration and engine/OS; mismatched target DOM/geometry/scroll -> UNCONFIRMED; do not infer no events from OFF logs.",
+    "transition": "Compare acquisition -> afterSpace -> afterEscape without snapshots/screenshots/rAF inserted between input and states except common completion wait; each stage observed identically in ON/OFF.",
+    "rootCause": "UNKNOWN until independent review; no SDK/browser-internal causal claim."
+  },
+  "exclusions": [
+    "No automatic extra trials",
+    "No physical keyboard/Safari/VoiceOver",
+    "No offscreen option click",
+    "No other widths or reduced motion",
+    "No product/SDK/lock/legacy evidence changes",
+    "No raw evidence upload before privacy review",
+    "No merge or Stage 3 HOLD release"
+  ]
+}
