@@ -57,6 +57,18 @@ function inspect(d,expected){
   c(tr?.[0]?.focusVisible===r.acquisition?.focusVisible&&tr?.[0]?.focused===r.acquisition?.focused
     &&tr?.[0]?.expanded==='false','acquisition transition binding');
   c(tr?.[0]?.time>=r.acquisition?.time&&tr?.[2]?.time<=r.final?.time,'transition timing binding');
+  // Independent adjacent snapshots are consistency evidence, not proof that no
+  // unobserved transition occurred between samples. Fail closed on disagreement.
+  const bindings=[r.acquisition,r.samples?.open,r.final];
+  for(let i=0;i<3;i++){
+   const t=tr?.[i],s=bindings[i];
+   c(t&&s&&['focused','focusVisible','hasFocus','expanded'].every(k=>eq(t[k],s[k])),'transition snapshot state:'+phases[i]);
+   c(t&&s&&eq(t.rect,s.trigger?.rect)&&eq(t.scroll,s.scroll)
+    &&t.style?.outline===s.trigger?.computed?.outline&&t.style?.shadow===s.trigger?.computed?.boxShadow,'transition snapshot geometry/style:'+phases[i]);
+  }
+  c(tr?.[0]?.time>=r.acquisition?.time&&tr?.[0]?.time<=tr?.[1]?.time
+   &&tr?.[1]?.time<=r.samples?.open?.time&&r.samples?.open?.time<=tr?.[2]?.time
+   &&tr?.[2]?.time<=r.final?.time,'phase snapshot chronology');
   c(typeof r.paint?.pass==='boolean'&&Number.isInteger(r.paint?.changed)&&r.paint.changed>=0,'pixels');
   c(r.paint?.active===r.paint?.captureSnapshot?.focused&&r.paint?.visible===r.paint?.captureSnapshot?.focusVisible,'paint state');
  }
