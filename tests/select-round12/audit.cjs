@@ -76,7 +76,7 @@ function audit(root,expected){
    const m=measure(imgs,p.clip,[p.rect]);for(const k of ['changed','unstable','indicators','threshold','reason'])check(eq(p[k],m[k]),'pixel recomputation');
    const pass=p.active&&p.visible&&p.clipping?.length===0&&m.pass;check(p.pass===pass,'pixel PASS');
    check(r.classification?.outline===(!r.final.focused||!r.final.hasFocus?'FOCUS_LOST':pass?'VISIBLE':m.changed===0?'ABSENT':'INSUFFICIENT'),'classification');
-   check(execFileSync('python',[path.join(__dirname,'trace-check.py'),path.join(root,r.traceFile),plan.id+':'+r.id,r.condition,String(r.tabRoute.length)],{encoding:'utf8'}).trim()==='VALID','trace');
+   check(execFileSync('python',[path.join(__dirname,'trace-check.py'),path.join(root,r.traceFile),plan.id+':'+r.id,r.condition,String(r.tabRoute.length),JSON.stringify(r.paint.clip)],{encoding:'utf8'}).trim()==='VALID','trace');
   }catch(e){errors.push(r.id+':asset '+String(e).split('\n')[0]);}
  }
  return {diagnostic:errors.length?'FAIL':'PASS',errors,rootCause:'UNKNOWN',stage3:'HOLD'};

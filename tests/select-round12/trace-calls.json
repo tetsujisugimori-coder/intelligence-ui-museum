@@ -1,0 +1,4600 @@
+{
+  "A": [
+    {
+      "method": "newPage",
+      "params": {},
+      "title": null
+    },
+    {
+      "method": "addInitScript",
+      "params": {
+        "source": "SHA256:7926a1d83e7310588f7b1258a1a0fd87eefbd59bc0175ca40e9a9ece9ed740d8"
+      },
+      "title": null
+    },
+    {
+      "method": "goto",
+      "params": {
+        "url": "http://127.0.0.1:PORT/?theme=light&text=100",
+        "timeout": 5000,
+        "waitUntil": "load"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Button .stage button",
+        "strict": true,
+        "timeout": 5000,
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:2de1e92d67ad56e65764e04fdec3b46653adc192fd4b0dafb648863d3d6fa93c",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:4ae14240a4a3474695898c1087badde02ef0707ae06dde51acd18f5489f9c896",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:fa1c33ab2b98fe75c0fddfb5599efe5d536a3f6563c8bbc90ee61d97dac42ef2",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "o": [
+              {
+                "k": "root",
+                "v": {
+                  "s": "#Select"
+                }
+              },
+              {
+                "k": "checkbox",
+                "v": {
+                  "s": "#Select .controls input[type=\"checkbox\"]"
+                }
+              },
+              {
+                "k": "valueInput",
+                "v": {
+                  "s": "#official-select"
+                }
+              },
+              {
+                "k": "trigger",
+                "v": {
+                  "s": "#Select .stage [role=button]"
+                }
+              }
+            ],
+            "id": 1
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "click",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "focus",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Space"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:40b3ab6ffe508580c717555e03c208fa4c1e4a681ebbd1d701eccafe6a1c32f4",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "internal:role=option[name=\"\u30ab\u30fc\u30c9\"s]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "visible",
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Escape"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:18e476df83b24a027038e3ebab868102fd01f6e4ad16b626de4a3127ead43bd8",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Scroll into view"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:7a282535f0240b35079390c6895b78e31750ebc5cf3e6fe3236b4c742e1d4b54",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "null"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:28ca8bf63ad37c31dd26747f22f72dd29d885e183c146fd08075b08fc52919d5",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:19212a050983e196df989b47a1ccc82912696460ae90edaded7f202b760a28d9",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "s": "s3-focus-suppression"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "type": "png"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:657a512ac93635aba44971071f5bee871570f147d9e766ac4ca09ea911ca2189",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    }
+  ],
+  "B": [
+    {
+      "method": "newPage",
+      "params": {},
+      "title": null
+    },
+    {
+      "method": "addInitScript",
+      "params": {
+        "source": "SHA256:7926a1d83e7310588f7b1258a1a0fd87eefbd59bc0175ca40e9a9ece9ed740d8"
+      },
+      "title": null
+    },
+    {
+      "method": "goto",
+      "params": {
+        "url": "http://127.0.0.1:PORT/?theme=light&text=100",
+        "timeout": 5000,
+        "waitUntil": "load"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Button .stage button",
+        "strict": true,
+        "timeout": 5000,
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:2de1e92d67ad56e65764e04fdec3b46653adc192fd4b0dafb648863d3d6fa93c",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "check",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:4ae14240a4a3474695898c1087badde02ef0707ae06dde51acd18f5489f9c896",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:fa1c33ab2b98fe75c0fddfb5599efe5d536a3f6563c8bbc90ee61d97dac42ef2",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "o": [
+              {
+                "k": "root",
+                "v": {
+                  "s": "#Select"
+                }
+              },
+              {
+                "k": "checkbox",
+                "v": {
+                  "s": "#Select .controls input[type=\"checkbox\"]"
+                }
+              },
+              {
+                "k": "valueInput",
+                "v": {
+                  "s": "#official-select"
+                }
+              },
+              {
+                "k": "trigger",
+                "v": {
+                  "s": "#Select .stage [role=button]"
+                }
+              }
+            ],
+            "id": 1
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "click",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "focus",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Space"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:40b3ab6ffe508580c717555e03c208fa4c1e4a681ebbd1d701eccafe6a1c32f4",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "internal:role=option[name=\"\u30ab\u30fc\u30c9\"s]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "visible",
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Escape"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:18e476df83b24a027038e3ebab868102fd01f6e4ad16b626de4a3127ead43bd8",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Scroll into view"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:7a282535f0240b35079390c6895b78e31750ebc5cf3e6fe3236b4c742e1d4b54",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "null"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:28ca8bf63ad37c31dd26747f22f72dd29d885e183c146fd08075b08fc52919d5",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:19212a050983e196df989b47a1ccc82912696460ae90edaded7f202b760a28d9",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "s": "s3-focus-suppression"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "type": "png"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:657a512ac93635aba44971071f5bee871570f147d9e766ac4ca09ea911ca2189",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    }
+  ],
+  "C": [
+    {
+      "method": "newPage",
+      "params": {},
+      "title": null
+    },
+    {
+      "method": "addInitScript",
+      "params": {
+        "source": "SHA256:7926a1d83e7310588f7b1258a1a0fd87eefbd59bc0175ca40e9a9ece9ed740d8"
+      },
+      "title": null
+    },
+    {
+      "method": "goto",
+      "params": {
+        "url": "http://127.0.0.1:PORT/?theme=light&text=100",
+        "timeout": 5000,
+        "waitUntil": "load"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Button .stage button",
+        "strict": true,
+        "timeout": 5000,
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:2de1e92d67ad56e65764e04fdec3b46653adc192fd4b0dafb648863d3d6fa93c",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "check",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "uncheck",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:4ae14240a4a3474695898c1087badde02ef0707ae06dde51acd18f5489f9c896",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:fa1c33ab2b98fe75c0fddfb5599efe5d536a3f6563c8bbc90ee61d97dac42ef2",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "o": [
+              {
+                "k": "root",
+                "v": {
+                  "s": "#Select"
+                }
+              },
+              {
+                "k": "checkbox",
+                "v": {
+                  "s": "#Select .controls input[type=\"checkbox\"]"
+                }
+              },
+              {
+                "k": "valueInput",
+                "v": {
+                  "s": "#official-select"
+                }
+              },
+              {
+                "k": "trigger",
+                "v": {
+                  "s": "#Select .stage [role=button]"
+                }
+              }
+            ],
+            "id": 1
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "click",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "focus",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Space"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:40b3ab6ffe508580c717555e03c208fa4c1e4a681ebbd1d701eccafe6a1c32f4",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "internal:role=option[name=\"\u30ab\u30fc\u30c9\"s]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "visible",
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Escape"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:18e476df83b24a027038e3ebab868102fd01f6e4ad16b626de4a3127ead43bd8",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Scroll into view"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:7a282535f0240b35079390c6895b78e31750ebc5cf3e6fe3236b4c742e1d4b54",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "null"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:28ca8bf63ad37c31dd26747f22f72dd29d885e183c146fd08075b08fc52919d5",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:19212a050983e196df989b47a1ccc82912696460ae90edaded7f202b760a28d9",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "s": "s3-focus-suppression"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "type": "png"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:657a512ac93635aba44971071f5bee871570f147d9e766ac4ca09ea911ca2189",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    }
+  ],
+  "D": [
+    {
+      "method": "newPage",
+      "params": {},
+      "title": null
+    },
+    {
+      "method": "addInitScript",
+      "params": {
+        "source": "SHA256:7926a1d83e7310588f7b1258a1a0fd87eefbd59bc0175ca40e9a9ece9ed740d8"
+      },
+      "title": null
+    },
+    {
+      "method": "goto",
+      "params": {
+        "url": "http://127.0.0.1:PORT/?theme=light&text=100",
+        "timeout": 5000,
+        "waitUntil": "load"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Button .stage button",
+        "strict": true,
+        "timeout": 5000,
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:2de1e92d67ad56e65764e04fdec3b46653adc192fd4b0dafb648863d3d6fa93c",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "check",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "uncheck",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:4ae14240a4a3474695898c1087badde02ef0707ae06dde51acd18f5489f9c896",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:fa1c33ab2b98fe75c0fddfb5599efe5d536a3f6563c8bbc90ee61d97dac42ef2",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "o": [
+              {
+                "k": "root",
+                "v": {
+                  "s": "#Select"
+                }
+              },
+              {
+                "k": "checkbox",
+                "v": {
+                  "s": "#Select .controls input[type=\"checkbox\"]"
+                }
+              },
+              {
+                "k": "valueInput",
+                "v": {
+                  "s": "#official-select"
+                }
+              },
+              {
+                "k": "trigger",
+                "v": {
+                  "s": "#Select .stage [role=button]"
+                }
+              }
+            ],
+            "id": 1
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "click",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "focus",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Space"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:40b3ab6ffe508580c717555e03c208fa4c1e4a681ebbd1d701eccafe6a1c32f4",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "internal:role=option[name=\"\u30ab\u30fc\u30c9\"s]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "visible",
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Escape"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:18e476df83b24a027038e3ebab868102fd01f6e4ad16b626de4a3127ead43bd8",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Scroll into view"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:7a282535f0240b35079390c6895b78e31750ebc5cf3e6fe3236b4c742e1d4b54",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "null"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:28ca8bf63ad37c31dd26747f22f72dd29d885e183c146fd08075b08fc52919d5",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:19212a050983e196df989b47a1ccc82912696460ae90edaded7f202b760a28d9",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "s": "s3-focus-suppression"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "type": "png"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:657a512ac93635aba44971071f5bee871570f147d9e766ac4ca09ea911ca2189",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    }
+  ],
+  "E": [
+    {
+      "method": "newPage",
+      "params": {},
+      "title": null
+    },
+    {
+      "method": "addInitScript",
+      "params": {
+        "source": "SHA256:7926a1d83e7310588f7b1258a1a0fd87eefbd59bc0175ca40e9a9ece9ed740d8"
+      },
+      "title": null
+    },
+    {
+      "method": "goto",
+      "params": {
+        "url": "http://127.0.0.1:PORT/?theme=light&text=100",
+        "timeout": 5000,
+        "waitUntil": "load"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Button .stage button",
+        "strict": true,
+        "timeout": 5000,
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:2de1e92d67ad56e65764e04fdec3b46653adc192fd4b0dafb648863d3d6fa93c",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "check",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "uncheck",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "check",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:4ae14240a4a3474695898c1087badde02ef0707ae06dde51acd18f5489f9c896",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:fa1c33ab2b98fe75c0fddfb5599efe5d536a3f6563c8bbc90ee61d97dac42ef2",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "o": [
+              {
+                "k": "root",
+                "v": {
+                  "s": "#Select"
+                }
+              },
+              {
+                "k": "checkbox",
+                "v": {
+                  "s": "#Select .controls input[type=\"checkbox\"]"
+                }
+              },
+              {
+                "k": "valueInput",
+                "v": {
+                  "s": "#official-select"
+                }
+              },
+              {
+                "k": "trigger",
+                "v": {
+                  "s": "#Select .stage [role=button]"
+                }
+              }
+            ],
+            "id": 1
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "click",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "focus",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Space"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:40b3ab6ffe508580c717555e03c208fa4c1e4a681ebbd1d701eccafe6a1c32f4",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "internal:role=option[name=\"\u30ab\u30fc\u30c9\"s]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "visible",
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Escape"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:18e476df83b24a027038e3ebab868102fd01f6e4ad16b626de4a3127ead43bd8",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Scroll into view"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:7a282535f0240b35079390c6895b78e31750ebc5cf3e6fe3236b4c742e1d4b54",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "null"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:28ca8bf63ad37c31dd26747f22f72dd29d885e183c146fd08075b08fc52919d5",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:19212a050983e196df989b47a1ccc82912696460ae90edaded7f202b760a28d9",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "s": "s3-focus-suppression"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "type": "png"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:657a512ac93635aba44971071f5bee871570f147d9e766ac4ca09ea911ca2189",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    }
+  ],
+  "F": [
+    {
+      "method": "newPage",
+      "params": {},
+      "title": null
+    },
+    {
+      "method": "addInitScript",
+      "params": {
+        "source": "SHA256:7926a1d83e7310588f7b1258a1a0fd87eefbd59bc0175ca40e9a9ece9ed740d8"
+      },
+      "title": null
+    },
+    {
+      "method": "goto",
+      "params": {
+        "url": "http://127.0.0.1:PORT/?theme=light&text=100",
+        "timeout": 5000,
+        "waitUntil": "load"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Button .stage button",
+        "strict": true,
+        "timeout": 5000,
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:2de1e92d67ad56e65764e04fdec3b46653adc192fd4b0dafb648863d3d6fa93c",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "check",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "uncheck",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:4ae14240a4a3474695898c1087badde02ef0707ae06dde51acd18f5489f9c896",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:fa1c33ab2b98fe75c0fddfb5599efe5d536a3f6563c8bbc90ee61d97dac42ef2",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "o": [
+              {
+                "k": "root",
+                "v": {
+                  "s": "#Select"
+                }
+              },
+              {
+                "k": "checkbox",
+                "v": {
+                  "s": "#Select .controls input[type=\"checkbox\"]"
+                }
+              },
+              {
+                "k": "valueInput",
+                "v": {
+                  "s": "#official-select"
+                }
+              },
+              {
+                "k": "trigger",
+                "v": {
+                  "s": "#Select .stage [role=button]"
+                }
+              }
+            ],
+            "id": 1
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "click",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Tab"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Tab"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Space"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:40b3ab6ffe508580c717555e03c208fa4c1e4a681ebbd1d701eccafe6a1c32f4",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "internal:role=option[name=\"\u30ab\u30fc\u30c9\"s]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "visible",
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Escape"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:18e476df83b24a027038e3ebab868102fd01f6e4ad16b626de4a3127ead43bd8",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Scroll into view"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:7a282535f0240b35079390c6895b78e31750ebc5cf3e6fe3236b4c742e1d4b54",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "null"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:28ca8bf63ad37c31dd26747f22f72dd29d885e183c146fd08075b08fc52919d5",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:19212a050983e196df989b47a1ccc82912696460ae90edaded7f202b760a28d9",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "s": "s3-focus-suppression"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "type": "png"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:657a512ac93635aba44971071f5bee871570f147d9e766ac4ca09ea911ca2189",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    }
+  ],
+  "G": [
+    {
+      "method": "newPage",
+      "params": {},
+      "title": null
+    },
+    {
+      "method": "addInitScript",
+      "params": {
+        "source": "SHA256:7926a1d83e7310588f7b1258a1a0fd87eefbd59bc0175ca40e9a9ece9ed740d8"
+      },
+      "title": null
+    },
+    {
+      "method": "goto",
+      "params": {
+        "url": "http://127.0.0.1:PORT/?theme=light&text=100",
+        "timeout": 5000,
+        "waitUntil": "load"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Button .stage button",
+        "strict": true,
+        "timeout": 5000,
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:2de1e92d67ad56e65764e04fdec3b46653adc192fd4b0dafb648863d3d6fa93c",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "check",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "uncheck",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isChecked",
+      "params": {
+        "selector": "#Switch input[type=checkbox] >> nth=0",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "isDisabled",
+      "params": {
+        "selector": "#Switch [role=switch]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:1836a90dc488b57aac032138682e338ca5fdacdd0a4484c27dbc8b8654a37423",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:4ae14240a4a3474695898c1087badde02ef0707ae06dde51acd18f5489f9c896",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:fa1c33ab2b98fe75c0fddfb5599efe5d536a3f6563c8bbc90ee61d97dac42ef2",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "o": [
+              {
+                "k": "root",
+                "v": {
+                  "s": "#Select"
+                }
+              },
+              {
+                "k": "checkbox",
+                "v": {
+                  "s": "#Select .controls input[type=\"checkbox\"]"
+                }
+              },
+              {
+                "k": "valueInput",
+                "v": {
+                  "s": "#official-select"
+                }
+              },
+              {
+                "k": "trigger",
+                "v": {
+                  "s": "#Select .stage [role=button]"
+                }
+              }
+            ],
+            "id": 1
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "click",
+      "params": {
+        "selector": "#Select h2",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "focus",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Space"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:40b3ab6ffe508580c717555e03c208fa4c1e4a681ebbd1d701eccafe6a1c32f4",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "internal:role=option[name=\"\u30ab\u30fc\u30c9\"s]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "visible",
+        "omitReturnValue": true
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "keyboardPress",
+      "params": {
+        "key": "Escape"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:18e476df83b24a027038e3ebab868102fd01f6e4ad16b626de4a3127ead43bd8",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Scroll into view"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForFunction",
+      "params": {
+        "expression": "SHA256:7a282535f0240b35079390c6895b78e31750ebc5cf3e6fe3236b4c742e1d4b54",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "null"
+          },
+          "handles": []
+        },
+        "timeout": 5000
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:28ca8bf63ad37c31dd26747f22f72dd29d885e183c146fd08075b08fc52919d5",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:19212a050983e196df989b47a1ccc82912696460ae90edaded7f202b760a28d9",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "s": "s3-focus-suppression"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "clip": "BOUND_BY_PIXEL_AUDITOR",
+        "animations": "disabled",
+        "scale": "css"
+      },
+      "title": null
+    },
+    {
+      "method": "waitForSelector",
+      "params": {
+        "selector": "#Select .stage [role=button]",
+        "strict": true,
+        "timeout": 5000,
+        "state": "attached"
+      },
+      "title": "Evaluate"
+    },
+    {
+      "method": "screenshot",
+      "params": {
+        "timeout": 5000,
+        "type": "png"
+      },
+      "title": null
+    },
+    {
+      "method": "evaluateExpression",
+      "params": {
+        "expression": "SHA256:657a512ac93635aba44971071f5bee871570f147d9e766ac4ca09ea911ca2189",
+        "isFunction": true,
+        "arg": {
+          "value": {
+            "v": "undefined"
+          },
+          "handles": []
+        }
+      },
+      "title": null
+    }
+  ]
+}
