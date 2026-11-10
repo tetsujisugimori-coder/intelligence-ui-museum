@@ -1,0 +1,79 @@
+{
+  "dateJST": "2026-11-10",
+  "kind": "SYNTHETIC_COUNTEREXAMPLES_NOT_BROWSER_TRIALS",
+  "originalHead": "f4914a5ee45bcf886600e627509ddfcc6c917228",
+  "scope": "Same synthetic counterexamples against original and repaired auditor; not browser or product acceptance",
+  "positive": {
+    "original": 0,
+    "repaired": 0
+  },
+  "results": [
+    {
+      "counterexample": "swapped checkbox/value input",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "duplicate value input at acquisition",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "nonempty marker style",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "focus-visible without focus",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "marker computed style mismatch",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "pre-photo geometry mismatch",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "duplicate pair identities",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "forged pixel count",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "missing source inventory item",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "actual runner nonzero but JSON zero",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "malformed PNG with renewed manifest",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "valid trace exchanged between slots",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    },
+    {
+      "counterexample": "manifest omits referenced image",
+      "before": "RED_ACCEPTED_FAULT",
+      "after": "GREEN_REJECTED_FAULT"
+    }
+  ],
+  "rootCause": "UNKNOWN",
+  "stage3": "HOLD"
+}

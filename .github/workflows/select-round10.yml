@@ -1,0 +1,98 @@
+name: Select round 10 DOM and observation isolation
+on:
+  pull_request:
+    paths:
+      - 'tests/select-round10/**'
+      - 'docs/select-round10/**'
+      - '.github/workflows/select-round10.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: select-round10-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  pilot:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2025, ubuntu-24.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 50
+    env:
+      PYTHONUTF8: '1'
+      GIT_CONFIG_COUNT: '1'
+      GIT_CONFIG_KEY_0: core.autocrlf
+      GIT_CONFIG_VALUE_0: 'false'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build preserved Museum and install fixed WebKit
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          npm --prefix .work/v10 ci --ignore-scripts --no-audit --no-fund
+          npm --prefix .work/v10 run build
+          npm --prefix tools/stage-a-browser ci --ignore-scripts --no-audit --no-fund
+          if [ '${{ runner.os }}' = 'Linux' ]; then
+            (cd tools/stage-a-browser && npx playwright install --with-deps webkit)
+          else
+            (cd tools/stage-a-browser && npx playwright install webkit)
+          fi
+      - name: Preregistration contract and prior evidence protection
+        shell: bash
+        run: |
+          node --test tests/select-round10/contract.test.cjs tests/select-round10/privacy.test.cjs tests/select-factor-pilot/contract.test.cjs
+          python scripts/verify-migration.py
+          git diff --exit-code 61b670c89eccc0b23565344385c8ae13d6c893ae -- apps archive reviews legacy tests/select-factor-pilot docs/select-factor-pilot evidence
+      - name: New standalone observation pilot and local raw audit
+        id: evidence
+        shell: bash
+        run: |
+          mkdir -p .work/round10-report
+          set +e
+          ROUND10_OUT=.work/select-round10 node tests/select-round10/run.cjs > .work/round10-report/runner.log 2> .work/round10-report/runner-stderr.log
+          runner=$?
+          echo "$runner" > .work/round10-report/runner-exit.txt
+          ROUND10_RUNNER_EXIT=$runner ROUND10_EXPECT_HEAD=$(git rev-parse HEAD) ROUND10_EXPECT_PLATFORM=$(node -p process.platform) node tests/select-round10/audit.cjs .work/select-round10 > .work/round10-report/audit-local.json 2> .work/round10-report/audit-stderr.txt
+          auditor=$?
+          echo "$auditor" > .work/round10-report/auditor-exit.txt
+          # Fixed-code gate reports only; never print candidate raw bytes or exception text.
+          ROUND10_RUNNER_EXIT=$runner ROUND10_AUDITOR_EXIT=$auditor ROUND10_EXPECT_HEAD=$(git rev-parse HEAD) node tests/select-round10/privacy-check.cjs .work/select-round10 > .work/round10-report/privacy.json
+          privacy=$?
+          echo "privacy=$privacy" >> "$GITHUB_OUTPUT"
+          cat .work/round10-report/privacy.json
+          # Candidate logs can contain private error text; keep them local only.
+          rm -f .work/round10-report/runner.log .work/round10-report/runner-stderr.log .work/round10-report/audit-stderr.txt
+          if [ "$privacy" -eq 0 ]; then cp .work/select-round10/SHA256SUMS.json .work/round10-report/original-hashes.json; fi
+          ROUND10_AUDITOR_EXIT=$auditor node -e 'const fs=require("node:fs");let n=null;try{const x=JSON.parse(fs.readFileSync(".work/round10-report/audit-local.json"));n=Array.isArray(x.errors)?x.errors.length:null}catch{}fs.writeFileSync(".work/round10-report/audit.json",JSON.stringify({diagnostic:process.env.ROUND10_AUDITOR_EXIT==="0"?"PASS":"FAIL",errorCount:n,rootCause:"UNKNOWN",stage3:"HOLD",details:"Raw auditor messages retained locally only"}))'
+          cat .work/round10-report/audit.json
+          if [ "$runner" -ne 0 ] || [ "$auditor" -ne 0 ] || [ "$privacy" -ne 0 ]; then exit 1; fi
+      - name: Upload checked synthetic localhost raw evidence
+        if: success() && steps.evidence.outputs.privacy == '0'
+        uses: actions/upload-artifact@v4
+        with:
+          name: select-round10-raw-${{ matrix.os }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/select-round10/
+          include-hidden-files: false
+          retention-days: 90
+          if-no-files-found: error
+      - name: Upload redacted diagnostics only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: select-round10-summary-${{ matrix.os }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            .work/round10-report/audit.json
+            .work/round10-report/privacy.json
+            .work/round10-report/runner-exit.txt
+            .work/round10-report/auditor-exit.txt
+            .work/round10-report/original-hashes.json
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: warn

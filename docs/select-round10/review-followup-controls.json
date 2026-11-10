@@ -1,0 +1,84 @@
+{
+  "kind": "fixed synthetic counterexamples, not browser trials",
+  "reviewedHead": "05e7be2a58e53766e3c2d2f0fd46dec1e745230f",
+  "results": [
+    {
+      "case": "positive",
+      "before": {
+        "exit": 0,
+        "errors": []
+      },
+      "after": {
+        "exit": 0,
+        "errors": []
+      }
+    },
+    {
+      "case": "unrelated-paint-rect",
+      "before": {
+        "exit": 0,
+        "errors": []
+      },
+      "after": {
+        "exit": 1,
+        "errors": [
+          "paint-capture-geometry:prelude-0-1",
+          "paint-viewport-bounds:prelude-0-1",
+          "paint-clip-binding:prelude-0-1"
+        ]
+      }
+    },
+    {
+      "case": "negative-paint-clip",
+      "before": {
+        "exit": 0,
+        "errors": []
+      },
+      "after": {
+        "exit": 1,
+        "errors": [
+          "paint-clip-binding:prelude-0-1"
+        ]
+      }
+    },
+    {
+      "case": "step-time-reversed",
+      "before": {
+        "exit": 0,
+        "errors": []
+      },
+      "after": {
+        "exit": 1,
+        "errors": [
+          "step-time:prelude-0-1:goto"
+        ]
+      }
+    },
+    {
+      "case": "producer-captureError",
+      "before": {
+        "diagnostic": "COMPLETE",
+        "outline": "ABSENT",
+        "cause": "UNKNOWN"
+      },
+      "after": {
+        "diagnostic": "INCOMPLETE",
+        "outline": "UNKNOWN",
+        "reason": "simulated capture failure"
+      }
+    },
+    {
+      "case": "producer-cleanup",
+      "before": {
+        "diagnostic": "COMPLETE",
+        "outline": "ABSENT",
+        "cause": "UNKNOWN"
+      },
+      "after": {
+        "diagnostic": "INCOMPLETE",
+        "outline": "UNKNOWN",
+        "reason": "context not cleanly closed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "id": "select-round10-prelude-dom-observation-v1",
+  "dateJST": "2026-11-10",
+  "parentIssue": 28,
+  "issue": 37,
+  "baselineMain": "61b670c89eccc0b23565344385c8ae13d6c893ae",
+  "priorRound9Producer": "fc8228fcc0104c66e89318158980ec24d945de8e",
+  "repeats": 3,
+  "viewport": {
+    "width": 375,
+    "height": 1000
+  },
+  "theme": "light",
+  "rootPercent": 100,
+  "deviceScaleFactor": 1,
+  "engine": "webkit",
+  "sdkVersion": "0.2.2",
+  "playwright": "1.56.1",
+  "factors": [
+    "prelude",
+    "prelude-normalized",
+    "empty-style",
+    "pre-screenshot",
+    "full-probe"
+  ],
+  "arms": {
+    "prelude": [
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": false
+      },
+      {
+        "prelude": true,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": false
+      }
+    ],
+    "empty-style": [
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": false
+      },
+      {
+        "prelude": false,
+        "emptyStyle": true,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": false
+      }
+    ],
+    "pre-screenshot": [
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": false
+      },
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": true,
+        "fullProbe": true,
+        "clearEmptyStyle": false
+      }
+    ],
+    "full-probe": [
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": false,
+        "clearEmptyStyle": false
+      },
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": false
+      }
+    ],
+    "prelude-normalized": [
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      },
+      {
+        "prelude": true,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      }
+    ]
+  },
+  "expectedSlotsPerEnvironment": 30,
+  "order": "fresh context and page per trial; iterations 1..3, factors in listed order; arms 0->1 on odd iterations, arms 1->0 on even iterations; reuse browser only",
+  "target": "Museum #Select [role=button] with pointer-history Select h2 then programmatic locator.focus, Space, Escape",
+  "domMarkerSelectors": [
+    "#Select .controls input[type=\"checkbox\"]",
+    "#official-select"
+  ],
+  "sequence": [
+    "goto",
+    "optional prelude",
+    "normalize h2 center + blur",
+    "snapshot before pre-screenshot",
+    "optional screenshot",
+    "snapshot after pre-screenshot",
+    "optional common clearing of empty style markers in both normalized-prelude arms",
+    "optional empty-style marker diagnostic intervention",
+    "snapshot immediately before pointer history",
+    "ordinary h2 click",
+    "snapshot immediately before focus",
+    "trigger.focus",
+    "acquisition",
+    "Space/open",
+    "Escape/close",
+    "final snapshot",
+    "paint capture snapshot after ring scroll and before suppression (common observer)",
+    "four-PNG ring",
+    "trace and original artifacts"
+  ],
+  "invariantPolicy": {
+    "prelude": "Strict target Select subtree/attributes and layout at immediately-before-focus, not full-document DOM; if unlike, UNCONFIRMED and no factor causal claim",
+    "empty-style": "Two exact target markers may differ only by empty style attr; reject unexpected DOM nodes/attributes; it is a diagnostic intervention, never product fix",
+    "pre-screenshot": "Before-photo target DOM matches, record DOM mutations after screenshot, not assumed neutral",
+    "full-probe": "Common static DOM/layout equality; timeline event requirements apply only in full-probe arm",
+    "prelude-normalized": "Run same targeted empty-style removal operation in both arms after common normalize, while keeping original DOM/attribute before and after normalization; compare exact Select subtree immediately before focus. Neutralization is a diagnostic intervention, not proof of no effect."
+  },
+  "guards": [
+    "No auto expansion if equivalence is UNCONFIRMED",
+    "Do not treat focus-visible=false alone as product defect",
+    "Old persistent option-click offscreen NOT_TESTED",
+    "No force click, arbitrary sleeps, app/SDK/lock changes",
+    "All OS are separate populations",
+    "Independent evidence review required before causal conclusion",
+    "Stage 3 HOLD / root cause UNKNOWN / #23 not accepted",
+    "For the normalized prelude comparison, preserve both pre/post normalization snapshots and do not claim removing empty attrs is behaviorally neutral."
+  ],
+  "nonGoals": [
+    "Real iPhone Safari",
+    "physical keyboard/touch",
+    "VoiceOver",
+    "SDK isolation",
+    "full production acceptance"
+  ],
+  "domTargets": {
+    "root": "#Select",
+    "checkbox": "#Select .controls input[type=\"checkbox\"]",
+    "valueInput": "#official-select",
+    "trigger": "#Select .stage [role=button]"
+  },
+  "domIdentityNote": "Value input has no type attribute and DOM type=text; hidden means aria-hidden=true, tabindex=-1 and SDK sr-only class. Checkbox is enabled and unchecked."
+}
