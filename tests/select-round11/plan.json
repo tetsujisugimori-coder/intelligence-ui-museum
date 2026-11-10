@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "id": "select-round11-operation-groups-v1",
+  "dateJST": "2026-11-10",
+  "parentIssue": 28,
+  "issue": 39,
+  "baselineMain": "a373160f9d7e1b726b51d3a3f6de3e65024699c7",
+  "repeats": 3,
+  "viewport": {
+    "width": 375,
+    "height": 1000
+  },
+  "theme": "light",
+  "rootPercent": 100,
+  "deviceScaleFactor": 1,
+  "engine": "webkit",
+  "sdkVersion": "0.2.2",
+  "playwright": "1.56.1",
+  "factors": [
+    "layout",
+    "Button",
+    "Badge",
+    "Alert",
+    "Switch",
+    "full"
+  ],
+  "arms": {
+    "layout": [
+      {
+        "prelude": false,
+        "groups": [
+          "environment"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      },
+      {
+        "prelude": true,
+        "groups": [
+          "environment",
+          "layout"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      }
+    ],
+    "Button": [
+      {
+        "prelude": false,
+        "groups": [
+          "environment"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      },
+      {
+        "prelude": true,
+        "groups": [
+          "environment",
+          "Button"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      }
+    ],
+    "Badge": [
+      {
+        "prelude": false,
+        "groups": [
+          "environment"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      },
+      {
+        "prelude": true,
+        "groups": [
+          "environment",
+          "Badge"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      }
+    ],
+    "Alert": [
+      {
+        "prelude": false,
+        "groups": [
+          "environment"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      },
+      {
+        "prelude": true,
+        "groups": [
+          "environment",
+          "Alert"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      }
+    ],
+    "Switch": [
+      {
+        "prelude": false,
+        "groups": [
+          "environment"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      },
+      {
+        "prelude": true,
+        "groups": [
+          "environment",
+          "Switch"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      }
+    ],
+    "full": [
+      {
+        "prelude": false,
+        "groups": [
+          "environment"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      },
+      {
+        "prelude": true,
+        "groups": [
+          "environment",
+          "layout",
+          "Button",
+          "Badge",
+          "Alert",
+          "Switch"
+        ],
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true
+      }
+    ]
+  },
+  "expectedSlotsPerEnvironment": 36,
+  "order": "fresh context and page per trial; iterations 1..3, factors in listed order; arms 0->1 on odd iterations, arms 1->0 on even iterations; reuse browser only",
+  "target": "Museum #Select [role=button] with pointer-history Select h2 then programmatic locator.focus, Space, Escape",
+  "domMarkerSelectors": [
+    "#Select .controls input[type=\"checkbox\"]",
+    "#official-select"
+  ],
+  "sequence": [
+    "goto",
+    "execute preregistered groups in order; before/after snapshots for every group",
+    "normalize h2 center + blur",
+    "snapshot before pre-screenshot",
+    "optional screenshot",
+    "snapshot after pre-screenshot",
+    "optional common clearing of empty style markers in both normalized-prelude arms",
+    "optional empty-style marker diagnostic intervention",
+    "snapshot immediately before pointer history",
+    "ordinary h2 click",
+    "snapshot immediately before focus",
+    "trigger.focus",
+    "acquisition",
+    "Space/open",
+    "Escape/close",
+    "final snapshot",
+    "paint capture snapshot after ring scroll and before suppression (common observer)",
+    "four-PNG ring",
+    "trace and original artifacts"
+  ],
+  "invariantPolicy": {
+    "all": "Common environment check and target empty-style normalization in both arms. Compare target DOM/geometry/computed/scroll and focus conditions. Document-wide differences and browser internal states are NOT proven equal. A group is a bundle, never a single operation."
+  },
+  "guards": [
+    "No auto expansion if equivalence is UNCONFIRMED",
+    "Do not treat focus-visible=false alone as product defect",
+    "Old persistent option-click offscreen NOT_TESTED",
+    "No force click, arbitrary sleeps, app/SDK/lock changes",
+    "All OS are separate populations",
+    "Independent evidence review required before causal conclusion",
+    "Stage 3 HOLD / root cause UNKNOWN / #23 not accepted",
+    "For the normalized prelude comparison, preserve both pre/post normalization snapshots and do not claim removing empty attrs is behaviorally neutral."
+  ],
+  "nonGoals": [
+    "Real iPhone Safari",
+    "physical keyboard/touch",
+    "VoiceOver",
+    "SDK isolation",
+    "full production acceptance"
+  ],
+  "domTargets": {
+    "root": "#Select",
+    "checkbox": "#Select .controls input[type=\"checkbox\"]",
+    "valueInput": "#official-select",
+    "trigger": "#Select .stage [role=button]"
+  },
+  "domIdentityNote": "Value input has no type attribute and DOM type=text; hidden means aria-hidden=true, tabindex=-1 and SDK sr-only class. Checkbox is enabled and unchecked.",
+  "partB": "NOT_STARTED. Select only groups with reproducible differential and confirmed target equivalence; preregister a separate plan before B. Otherwise independent review selects next minimal comparison.",
+  "frozenDisabledDOMClicks": "Original Button/Switch disabled no-op assertions retained as historical operations, not substitutes for successful interaction. Select uses normal pointer/keyboard/locator focus only."
+}
