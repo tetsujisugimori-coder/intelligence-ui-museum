@@ -29,10 +29,40 @@ function inspectJPEG(b){
  if(t===0xe0)requireSafe(n===16&&b.toString('ascii',i+2,i+7)==='JFIF\0','image-metadata');i+=n;
  }requireSafe(false,'invalid-image');
 }
+function pngCRC(b){
+ let c=0xffffffff;for(const v of b){c^=v;for(let j=0;j<8;j++)c=(c>>>1)^((c&1)?0xedb88320:0)}return (c^0xffffffff)>>>0;
+}
 function inspectPNG(b){
  requireSafe(b.subarray(0,8).equals(Buffer.from('89504e470d0a1a0a','hex')),'invalid-png');
- let i=8,end=false;const allowed=new Set(['IHDR','IDAT','IEND','sRGB','sBIT','gAMA','cHRM','pHYs']);
- while(i<b.length){requireSafe(i+12<=b.length&&!end,'invalid-png');const n=b.readUInt32BE(i),t=b.toString('ascii',i+4,i+8);requireSafe(allowed.has(t)&&i+n+12<=b.length,'image-metadata');i+=n+12;if(t==='IEND'){requireSafe(n===0,'invalid-png');end=true}}
+ let i=8,end=false,channels=0,dataSeen=false;const seen=new Set();
+ const allowed=new Set(['IHDR','IDAT','IEND','sRGB','sBIT','gAMA','cHRM','pHYs','iCCP']);
+ while(i<b.length){
+  requireSafe(i+12<=b.length&&!end,'invalid-png');const n=b.readUInt32BE(i),t=b.toString('ascii',i+4,i+8);
+  requireSafe(allowed.has(t)&&i+n+12<=b.length,'image-metadata');const p=b.subarray(i+8,i+8+n);
+  requireSafe(pngCRC(b.subarray(i+4,i+8+n))===b.readUInt32BE(i+8+n),'invalid-png-crc');
+  requireSafe((i===8)===(t==='IHDR')&&(t==='IDAT'||!seen.has(t)),'image-chunk-order');
+  if(t==='IHDR'){
+   requireSafe(n===13&&p.readUInt32BE(0)>0&&p.readUInt32BE(0)<=32768&&p.readUInt32BE(4)>0&&p.readUInt32BE(4)<=32768&&p[8]===8&&[2,6].includes(p[9])&&p[10]===0&&p[11]===0&&p[12]===0,'invalid-png-header');channels=p[9]===6?4:3;
+  }else if(t==='IDAT'){requireSafe(channels>0&&n>0,'invalid-png');dataSeen=true}
+  else if(t==='IEND'){requireSafe(n===0&&dataSeen,'invalid-png');end=true}
+  else{
+   requireSafe(!dataSeen,'image-chunk-order');
+   if(t==='sBIT')requireSafe(n===channels&&[...p].every(v=>v>=1&&v<=8),'image-metadata');
+   if(t==='sRGB')requireSafe(n===1&&p[0]<=3&&!seen.has('iCCP'),'image-metadata');
+   if(t==='gAMA')requireSafe(n===4&&p.readUInt32BE(0)>0&&p.readUInt32BE(0)<=1000000,'image-metadata');
+   if(t==='cHRM'){requireSafe(n===32,'image-metadata');for(let j=0;j<32;j+=8)requireSafe(p.readUInt32BE(j)<=100000&&p.readUInt32BE(j+4)<=100000&&p.readUInt32BE(j)+p.readUInt32BE(j+4)<=100000,'image-metadata')}
+   if(t==='pHYs')requireSafe(n===9&&p[8]<=1&&p.readUInt32BE(0)>0&&p.readUInt32BE(4)>0&&p.readUInt32BE(0)<=10000000&&p.readUInt32BE(4)<=10000000,'image-metadata');
+   if(t==='iCCP'){
+    // Observed Windows encoder metadata was identified by digest, not assumed safe.
+    // Independently synthesized from public Skia sRGB constants in privacy.test.cjs.
+    // Only this exact public profile is admitted, never arbitrary ICC text/tags.
+    requireSafe(!seen.has('sRGB')&&n>6&&n<=1024&&p.subarray(0,6).equals(Buffer.from('Skia\0\0')),'image-metadata');
+    const z=require('node:zlib').inflateSync(p.subarray(6),{maxOutputLength:456,info:true});
+    requireSafe(z.engine.bytesWritten===n-6&&z.buffer.length===456&&hash(z.buffer)==='12afb4d9953adee0607d347daee5b78b18d6b3cab2d572b88970703f5edb37bc','image-metadata');
+   }
+  }
+  seen.add(t);i+=n+12;
+ }
  requireSafe(end,'invalid-png');
 }
 function inspectObject(o){

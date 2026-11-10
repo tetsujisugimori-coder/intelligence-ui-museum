@@ -117,6 +117,12 @@ test('full audit positive fixture and hostile evidence controls fail closed',()=
    nonemptyInsteadOfEmpty:d=>{d.rows.find(r=>r.factor==='empty-style'&&r.arm===1).samples.beforeFocus.hidden.attrs.style=' '},
    missingSnapshot:d=>{delete d.rows[0].samples.beforeFocus},missingAcquisition:d=>{delete d.rows[0].acquisition},missingFinal:d=>{delete d.rows[0].final},
    focusContradiction:d=>{d.rows[0].samples.afterPhoto.focusVisible=true},openContradiction:d=>{d.rows[0].samples.open.expanded='false'},
+   invertedStepTime:d=>{d.rows[0].steps[0].started=999999;d.rows[0].steps[0].finished=0},
+   overlappingSteps:d=>{d.rows[0].steps[1].started=-1},
+   outsideRowTime:d=>{d.rows[0].steps[0].finished=1000},
+   missingPaintCapture:d=>{delete d.rows[0].paint.captureSnapshot},
+   forgedPaintGeometry:d=>{const p=d.rows[0].paint;p.rect.x=1;p.rect.left=1;p.rect.right=11;p.indicators[0].x=1},
+   forgedClip:d=>{d.rows[0].paint.clip.x=1},
    stalePixelCount:d=>{d.rows[0].paint.changed=999},forgedPaintPass:d=>{d.rows[0].paint.pass=true},
    unsafeTracePath:d=>{d.rows[0].traceFile='../outside.zip'},
    unsafeImagePath:d=>{d.rows[0].images[0]='../outside.png'},
@@ -146,4 +152,29 @@ test('full audit positive fixture and hostile evidence controls fail closed',()=
   save(temp,valid);fs.appendFileSync(image,'tamper');assert.notEqual(run().status,0,'byte tamper');fs.writeFileSync(image,original);save(temp,valid);
   const restored=run();assert.equal(restored.status,0,'positive fixture still valid after every fixed fault: '+JSON.stringify(restored.errors));
  }finally{fs.rmSync(temp,{recursive:true,force:true})}
+});
+
+
+test('capture and cleanup failures cannot produce runner COMPLETE or exit zero',()=>{
+ const runner=fs.readFileSync(path.join(__dirname,'run.cjs'),'utf8');
+ const classify=vm.runInNewContext(runner.slice(runner.indexOf('function resultClass'),runner.indexOf('const comparisons'))+';resultClass');
+ const valid={status:'COMPLETE',cleanup:true,pageErrors:[],fullProbe:false,paint:{pass:false,changed:0,captureSnapshot:{}},final:{focused:true},acquisition:{}};
+ assert.equal(classify(valid).diagnostic,'COMPLETE');
+ for(const patch of [{captureError:'trace export failed'},{cleanup:false},{cleanup:undefined}]){
+  const result=classify({...valid,...patch});assert.equal(result.diagnostic,'INCOMPLETE');assert.equal(result.outline,'UNKNOWN');
+ }
+});
+
+test('actual ring capture hook follows scrolling and animation completion',()=>{
+ const runner=fs.readFileSync(path.join(__dirname,'run.cjs'),'utf8');
+ const old=fs.readFileSync(path.join(root,'tests/select-path-pilot/reference/original-browser.cjs'),'utf8');
+ const helpers=old.slice(old.indexOf('function visible(e)'),old.indexOf('const server=http'));
+ const constructor=runner.split('\n').find(l=>l.startsWith('const {ring,prelude}=new Function'));
+ assert.ok(constructor);
+ const code=vm.runInNewContext(constructor+';ring.toString()',{helpers,preludePrefix:'',env:{snapshot:()=>{}}});
+ assert.ok(code.indexOf('scrollIntoViewIfNeeded')<code.indexOf('waitForFunction'));
+ assert.ok(code.indexOf('waitForFunction')<code.indexOf('const captureSnapshot'));
+ assert.ok(code.indexOf('const captureSnapshot')<code.indexOf('const g=await l.evaluate'));
+ assert.ok(code.includes("prefix.endsWith('-Select')?await snapshot(l):null"));
+ assert.ok(code.includes('return {...g,clip,captureSnapshot,'));
 });

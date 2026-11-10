@@ -48,3 +48,47 @@ test('ZIP loader rejects duplicate and symlink members',()=>{
   assert.throws(()=>zipEntries(file));
  }}finally{fs.rmSync(tmp,{recursive:true,force:true})}
 });
+// Synthetic one-pixel PNGs, not extracts from Windows-PC evidence.
+// ICC construction follows public Skia ICC layout and fixed sRGB constants:
+// https://github.com/google/skia/blob/main/src/encode/SkICC.cpp
+// https://github.com/google/skia/blob/main/include/core/SkColorSpace.h
+function syntheticSRGBProfile(){
+ const u=(...ns)=>{const b=Buffer.alloc(ns.length*4);ns.forEach((n,i)=>b.writeUInt32BE(n,i*4));return b};
+ const txt=s=>{const text=Buffer.from(s,'utf16le');text.swap16();return Buffer.concat([Buffer.from('mluc'),u(0,1,12),Buffer.from('enUS'),u(text.length,28),text,Buffer.alloc((-text.length)&3)])};
+ const xyz=(...v)=>Buffer.concat([Buffer.from('XYZ '),u(0,...v)]);
+ const trc=Buffer.concat([Buffer.from('para'),u(0,0x40000,...[2.4,1/1.055,.055/1.055,1/12.92,.04045,0,0].map(x=>Math.round(x*65536)))]);
+ const tags=[['desc',txt('sRGB')],['rXYZ',xyz(0x6fa2,0x38f5,0x390)],['gXYZ',xyz(0x6299,0xb785,0x18da)],['bXYZ',xyz(0x24a0,0xf84,0xb6cf)],['wtpt',xyz(0xf6d6,0x10000,0xd32d)],['rTRC',trc],['gTRC',trc],['bTRC',trc],['cprt',txt('Google Inc. 2016')]];
+ const h=Buffer.alloc(128);h.writeUInt32BE(456);h.writeUInt32BE(0x04300000,8);h.write('mntrRGB XYZ ',12);h.writeUInt16BE(2016,24);h.writeUInt16BE(1,26);h.writeUInt16BE(1,28);h.write('acsp',36);u(1,0xf6d6,0x10000,0xd32d).copy(h,64);
+ let offset=240;const seen=new Map(),table=[],data=[];for(const [name,b]of tags){const k=b.toString('hex');if(!seen.has(k)){seen.set(k,offset);data.push(b);offset+=b.length}table.push(Buffer.from(name),u(seen.get(k),b.length))}
+ return Buffer.concat([h,u(9),...table,...data]);
+}
+function pngChunk(name,payload){
+ const b=Buffer.alloc(payload.length+12);b.writeUInt32BE(payload.length);b.write(name,4);payload.copy(b,8);
+ let c=0xffffffff;for(const v of b.subarray(4,-4)){c^=v;for(let j=0;j<8;j++)c=(c>>>1)^((c&1)?0xedb88320:0)}b.writeUInt32BE((c^0xffffffff)>>>0,b.length-4);return b;
+}
+function syntheticPNG(extra=[]){
+ const h=Buffer.alloc(13);h.writeUInt32BE(1,0);h.writeUInt32BE(1,4);h[8]=8;h[9]=6;
+ return Buffer.concat([Buffer.from('89504e470d0a1a0a','hex'),pngChunk('IHDR',h),...extra,pngChunk('IDAT',require('node:zlib').deflateSync(Buffer.from([0,255,255,255,255]))),pngChunk('IEND',Buffer.alloc(0))]);
+}
+test('same-byte public sRGB ICC synthesized independently; known encoder PNG accepted',()=>{
+ const {inspectPNG}=require('./privacy-check.cjs'),z=require('node:zlib'),icc=syntheticSRGBProfile();
+ assert.equal(icc.length,456);assert.equal(hash(icc),'12afb4d9953adee0607d347daee5b78b18d6b3cab2d572b88970703f5edb37bc');
+ const payload=Buffer.concat([Buffer.from('Skia\0\0'),z.deflateSync(icc)]);
+ const png=syntheticPNG([pngChunk('sBIT',Buffer.from([8,8,8,8])),pngChunk('iCCP',payload)]),before=hash(png);
+ assert.doesNotThrow(()=>inspectPNG(png));assert.equal(hash(png),before,'inspection must not rewrite original bytes');
+ const linux=syntheticPNG([pngChunk('sBIT',Buffer.from([8,8,8,8])),pngChunk('sRGB',Buffer.from([0]))]);assert.doesNotThrow(()=>inspectPNG(linux));
+ for(const bad of [Buffer.concat([payload,Buffer.from('synthetic-private')]),Buffer.concat([Buffer.from('User\0\0'),z.deflateSync(icc)]),Buffer.concat([Buffer.from('Skia\0\0'),z.deflateSync(Buffer.concat([icc,Buffer.from('synthetic-private')]))])])assert.throws(()=>inspectPNG(syntheticPNG([pngChunk('iCCP',bad)])));
+ const changed=Buffer.from(icc);changed[changed.length-1]^=1;assert.throws(()=>inspectPNG(syntheticPNG([pngChunk('iCCP',Buffer.concat([Buffer.from('Skia\0\0'),z.deflateSync(changed)]))])));
+ assert.throws(()=>inspectPNG(syntheticPNG([pngChunk('iCCP',payload),pngChunk('iCCP',payload)])));
+ assert.throws(()=>inspectPNG(syntheticPNG([pngChunk('iCCP',payload),pngChunk('sRGB',Buffer.from([0]))])));
+});
+test('allowed PNG ancillary names cannot carry oversized or malformed private metadata',()=>{
+ const {inspectPNG}=require('./privacy-check.cjs');
+ for(const name of ['sBIT','gAMA','cHRM','pHYs','sRGB'])assert.throws(()=>inspectPNG(syntheticPNG([pngChunk(name,Buffer.from('synthetic-private-data'))])),undefined,name);
+ for(const [name,p]of [['sBIT',Buffer.from([8,8,8,9])],['sRGB',Buffer.from([4])],['gAMA',Buffer.alloc(4)],['cHRM',Buffer.alloc(32,255)],['pHYs',Buffer.alloc(9,255)]])assert.throws(()=>inspectPNG(syntheticPNG([pngChunk(name,p)])));
+ for(const name of ['tEXt','zTXt','iTXt','eXIf'])assert.throws(()=>inspectPNG(syntheticPNG([pngChunk(name,Buffer.from('synthetic-private-data'))])));
+ const p=syntheticPNG();assert.throws(()=>inspectPNG(Buffer.concat([p,pngChunk('sBIT',Buffer.from([8,8,8,8]))])));
+ const duplicate=Buffer.concat([p.subarray(0,33),p.subarray(8)]);assert.throws(()=>inspectPNG(duplicate));
+ const crc=Buffer.from(p);crc[crc.length-1]^=1;assert.throws(()=>inspectPNG(crc));
+ assert.throws(()=>inspectPNG(Buffer.concat([p.subarray(0,-12),pngChunk('sBIT',Buffer.from([8,8,8,8])),p.subarray(-12)])));
+});

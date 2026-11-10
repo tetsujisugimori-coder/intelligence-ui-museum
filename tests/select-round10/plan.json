@@ -130,6 +130,7 @@
     "Space/open",
     "Escape/close",
     "final snapshot",
+    "paint capture snapshot after ring scroll and before suppression (common observer)",
     "four-PNG ring",
     "trace and original artifacts"
   ],

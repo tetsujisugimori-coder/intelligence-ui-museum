@@ -55,6 +55,10 @@ function inspect(d){
   fail(row.classification?.diagnostic==='COMPLETE'&&row.classification?.cause!=='CERTAIN','classification:'+row.id);
   fail(Array.isArray(row.pageErrors)&&row.pageErrors.length===0,'pageerror:'+row.id);
   fail(Array.isArray(row.steps)&&row.steps.length>0&&row.steps.every(s=>s.success===true&&Number.isFinite(s.started)&&Number.isFinite(s.finished)),'steps:'+row.id);
+  const rowStart=Date.parse(row.started),rowEnd=Date.parse(row.finished);
+  fail(Number.isFinite(rowStart)&&Number.isFinite(rowEnd)&&rowEnd>=rowStart,'row-time:'+row.id);
+  let previousEnd=rowStart;
+  for(const step of row.steps||[]){fail(step.started>=previousEnd&&step.finished>=step.started&&step.finished<=rowEnd,'step-time:'+row.id+':'+step.name);previousEnd=step.finished}
   const stepNames=['goto',...(expectedSlot.prelude?['prelude']:[]),'normalize',...(expectedSlot.preScreenshot?['pre-screenshot']:[]),...(expectedSlot.clearEmptyStyle?['normalize-empty-style']:[]),...(expectedSlot.emptyStyle?['empty-style-diagnostic']:[]),'pointer-history','acquire','open','escape'];
   fail(eq(row.steps?.map(s=>s.name),stepNames),'step-order:'+row.id);
   const sn=row.samples||{},a=row.acquisition,f=row.final;
@@ -98,6 +102,17 @@ function inspect(d){
    for(const img of assets.filter(x=>x?.endsWith('.png'))){const png=PNG.sync.read(fs.readFileSync(path.join(root,img)));fail(png.width>0&&png.height>0,'png:'+img)}
    const imgs=expectedImages.map(x=>PNG.sync.read(fs.readFileSync(path.join(root,x))));
    fail(rect(p?.clip)&&rect(p?.rect)&&imgs.every(i=>i.width===p.clip.width&&i.height===p.clip.height),'paint-geometry:'+row.id);
+   const capture=p.captureSnapshot;
+   for(const problem of snapshotErrors(capture))errors.push('snapshot:'+row.id+':paint-capture:'+problem);
+   fail(capture?.time>=f?.time,'paint-capture-time:'+row.id);
+   fail(eq(p.rect,capture?.trigger?.rect),'paint-capture-geometry:'+row.id);
+   fail(p.active===capture?.focused&&p.visible===capture?.focusVisible,'paint-capture-focus:'+row.id);
+   fail(p.viewport?.width===capture?.viewport?.width&&p.viewport?.height===capture?.viewport?.height,'paint-capture-viewport:'+row.id);
+   const rx=p.rect.x,ry=p.rect.y,right=rx+p.rect.width,bottom=ry+p.rect.height;
+   fail(rx>=0&&ry>=0&&right<=p.viewport?.width&&bottom<=p.viewport?.height,'paint-viewport-bounds:'+row.id);
+   const cx=Math.max(0,Math.floor(rx-24)),cy=Math.max(0,Math.floor(ry-24));
+   const expectedClip={x:cx,y:cy,width:Math.min(p.viewport?.width,Math.ceil(right+24))-cx,height:Math.min(p.viewport?.height,Math.ceil(bottom+24))-cy};
+   fail(eq(p.clip,expectedClip),'paint-clip-binding:'+row.id);
    const measured=measure(imgs,p.clip,[{x:p.rect.x,y:p.rect.y,width:p.rect.width,height:p.rect.height}]);
    for(const k of ['changed','unstable','indicators','threshold','reason'])fail(eq(p[k],measured[k]),'pixel-recompute:'+row.id+':'+k);
    const pass=p.active&&p.visible&&Array.isArray(p.clipping)&&p.clipping.length===0&&measured.pass;

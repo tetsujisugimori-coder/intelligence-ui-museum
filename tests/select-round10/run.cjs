@@ -24,8 +24,8 @@ assert(hash(old)==='a2dab597ff18fb5708a5b12d0b1628b59a50d29774aa18c7dd59b114edb3
 const helpers=old.slice(old.indexOf('function visible(e)'),old.indexOf('const server=http'));
 const preludePrefix=old.slice(old.indexOf("    await check('environment'"),old.indexOf("    await check('Select'"));
 const {measure}=require('../../apps/v10/scripts/stage2r-focus-pixels.cjs');
-const env={fs,path,modules:pwRoot,out:output,measure,assert,frames:frame,require};
-const {ring,prelude}=new Function(...Object.keys(env),`${helpers.replace('return {...g,...measured,','return {...g,clip,...measured,')}\nreturn {ring,prelude:async function(p,id,row,check){const theme='light',text=100,width=375;${preludePrefix}}};`)(...Object.values(env));
+const env={fs,path,modules:pwRoot,out:output,measure,assert,frames:frame,require,snapshot};
+const {ring,prelude}=new Function(...Object.keys(env),`${helpers.replace('const g=await l.evaluate',"const captureSnapshot=prefix.endsWith('-Select')?await snapshot(l):null; const g=await l.evaluate").replace('return {...g,...measured,','return {...g,clip,captureSnapshot,...measured,')}\nreturn {ring,prelude:async function(p,id,row,check){const theme='light',text=100,width=375;${preludePrefix}}};`)(...Object.values(env));
 function slots(){
  const rows=[];
  for(let iteration=1;iteration<=plan.repeats;iteration++){
@@ -41,10 +41,11 @@ async function snapshot(t){
  return requireSnapshot(await t.evaluate(capture,selectors));
 }
 function resultClass(row){
+ if(row.captureError||row.cleanup!==true)return {diagnostic:'INCOMPLETE',outline:'UNKNOWN',reason:row.captureError||'context not cleanly closed'};
  if(row.status!=='COMPLETE')return {diagnostic:'INCOMPLETE',outline:'UNKNOWN',reason:row.error||row.captureError||'not complete'};
  if(row.pageErrors?.length)return {diagnostic:'INCOMPLETE',outline:'UNKNOWN',reason:'pageerror'};
  if(row.fullProbe&&(!row.events?.length||row.overflow))return {diagnostic:'INCOMPLETE',outline:'UNKNOWN',reason:'missing/overflow events'};
- if(!row.paint||typeof row.paint.pass!=='boolean'||!row.final||!row.acquisition)return {diagnostic:'INCOMPLETE',outline:'UNKNOWN',reason:'missing paint/snapshots'};
+ if(!row.paint||typeof row.paint.pass!=='boolean'||!row.paint.captureSnapshot||!row.final||!row.acquisition)return {diagnostic:'INCOMPLETE',outline:'UNKNOWN',reason:'missing paint/snapshots'};
  if(!row.final.focused)return {diagnostic:'COMPLETE',outline:'FOCUS_LOST',cause:'UNKNOWN'};
  return {diagnostic:'COMPLETE',outline:row.paint.pass?'VISIBLE':row.paint.changed===0?'ABSENT':'INSUFFICIENT',cause:'UNKNOWN'};
 }
@@ -186,11 +187,15 @@ async function trial(browser,s){
     else{row.events=null;row.overflow=null;}
    }catch(err){row.captureError=String(err);}
   }
-  if(context)try{
-   row.traceFile=s.id+'-trace.zip';
-   await context.tracing.stop({path:path.join(output,row.traceFile)});
-   await context.close();row.cleanup=true;
-  }catch(err){row.captureError=String(err);}
+  if(context){
+   try{
+    row.traceFile=s.id+'-trace.zip';
+    await context.tracing.stop({path:path.join(output,row.traceFile)});
+   }catch(err){row.captureError=String(err);}
+   // A failed trace export must not skip context teardown or contaminate later slots.
+   try{await context.close();row.cleanup=true;}
+   catch(err){row.captureError=[row.captureError,String(err)].filter(Boolean).join('; ');row.cleanup=false;}
+  }
   row.finished=new Date().toISOString();row.classification=resultClass(row);
   fs.writeFileSync(path.join(output,s.id+'.json'),JSON.stringify(row,null,2));
   console.log(s.id,row.classification.diagnostic,row.classification.outline,row.error||'');
