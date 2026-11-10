@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "id": "select-round12-minimal-formal-v1",
+  "dateJST": "2026-11-10",
+  "parentIssue": 28,
+  "issue": 41,
+  "baselineMain": "80be039775be087d4fe74d79e4d5fda16276c15c",
+  "repeats": 3,
+  "viewport": {
+    "width": 375,
+    "height": 1000
+  },
+  "theme": "light",
+  "rootPercent": 100,
+  "deviceScaleFactor": 1,
+  "engine": "webkit",
+  "sdkVersion": "0.2.2",
+  "playwright": "1.56.1",
+  "expectedSlotsPerEnvironment": 21,
+  "order": "iterations 1..3; A..G forward on odd, G..A reverse on even; fresh context/page",
+  "target": "Select trigger; F real Tab route, others direct focus; D/G duplicate control",
+  "domMarkerSelectors": [
+    "#Select .controls input[type=\"checkbox\"]",
+    "#official-select"
+  ],
+  "sequence": [
+    "goto",
+    "balanced setup/first/second operation boundaries",
+    "h2 center and blur",
+    "common empty-style normalization",
+    "h2 pointer click",
+    "F Tab traversal or direct focus",
+    "Space open",
+    "Escape close",
+    "ring PNG",
+    "trace and manifest"
+  ],
+  "invariantPolicy": {
+    "all": "Common environment check and target empty-style normalization in both arms. Compare target DOM/geometry/computed/scroll and focus conditions. Document-wide differences and browser internal states are NOT proven equal. A group is a bundle, never a single operation."
+  },
+  "guards": [
+    "No auto expansion if equivalence is UNCONFIRMED",
+    "Do not treat focus-visible=false alone as product defect",
+    "Old persistent option-click offscreen NOT_TESTED",
+    "No force click, arbitrary sleeps, app/SDK/lock changes",
+    "All OS are separate populations",
+    "Independent evidence review required before causal conclusion",
+    "Stage 3 HOLD / root cause UNKNOWN / #23 not accepted",
+    "For the normalized prelude comparison, preserve both pre/post normalization snapshots and do not claim removing empty attrs is behaviorally neutral."
+  ],
+  "nonGoals": [
+    "Real iPhone Safari",
+    "physical keyboard/touch",
+    "VoiceOver",
+    "SDK isolation",
+    "full production acceptance"
+  ],
+  "domTargets": {
+    "root": "#Select",
+    "checkbox": "#Select .controls input[type=\"checkbox\"]",
+    "valueInput": "#official-select",
+    "trigger": "#Select .stage [role=button]"
+  },
+  "domIdentityNote": "Value input has no type attribute and DOM type=text; hidden means aria-hidden=true, tabindex=-1 and SDK sr-only class. Checkbox is enabled and unchecked.",
+  "frozenDisabledDOMClicks": "Original Button/Switch disabled no-op assertions retained as historical operations, not substitutes for successful interaction. Select uses normal pointer/keyboard/locator focus only.",
+  "conditions": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+  ],
+  "phase": "formal",
+  "tabRoute": "exactly2: Select checkbox then Select trigger",
+  "unperformed": [
+    "390/765/1280 widths",
+    "reduced motion",
+    "Windows actual PC",
+    "physical input",
+    "iPhone Safari",
+    "observer-off"
+  ]
+}
