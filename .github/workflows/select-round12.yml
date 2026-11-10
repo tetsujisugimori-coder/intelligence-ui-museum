@@ -1,0 +1,81 @@
+name: Select round 12 minimal focus diagnosis
+on:
+  pull_request:
+    paths:
+      - 'tests/select-round12/**'
+      - 'tests/select-round12-review/**'
+      - 'docs/select-round12/**'
+      - '.github/workflows/select-round12.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: select-round12-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  diagnosis:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2025, ubuntu-24.04]
+        engine: [webkit, chromium]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 75
+    env:
+      PYTHONUTF8: '1'
+      GIT_CONFIG_COUNT: '1'
+      GIT_CONFIG_KEY_0: core.autocrlf
+      GIT_CONFIG_VALUE_0: 'false'
+      ROUND12_ENGINE: ${{ matrix.engine }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fixed product and browsers
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          npm --prefix .work/v10 ci --ignore-scripts --no-audit --no-fund
+          npm --prefix .work/v10 run build
+          npm --prefix tools/stage-a-browser ci --ignore-scripts --no-audit --no-fund
+          if [ '${{ runner.os }}' = 'Linux' ]; then
+            (cd tools/stage-a-browser && npx playwright install --with-deps $ROUND12_ENGINE)
+          else
+            (cd tools/stage-a-browser && npx playwright install $ROUND12_ENGINE)
+          fi
+      - name: Preserve source and prior tests
+        shell: bash
+        run: |
+          git diff --exit-code 80be039775be087d4fe74d79e4d5fda16276c15c -- apps archive reviews legacy evidence tests/select-round11 tests/select-round10 tests/select-factor-pilot tools/stage-a-browser/package-lock.json
+          python scripts/verify-migration.py
+          node --test tests/select-round11/contract.test.cjs tests/select-round11/privacy.test.cjs tests/select-round11/negative-review.test.cjs tests/select-factor-pilot/contract.test.cjs
+      - name: Registered trials and raw audit
+        shell: bash
+        run: |
+          mkdir -p .work/round12-summary
+          set +e
+          ROUND12_OUT=.work/select-round12 node tests/select-round12/run.cjs > .work/round12-runner.log 2>&1
+          runner=$?
+          echo "$runner" > .work/round12-summary/runner-exit.txt
+          ROUND12_RUNNER_EXIT=$runner ROUND12_EXPECT_HEAD=$(git rev-parse HEAD) ROUND12_EXPECT_PLATFORM=$(node -p process.platform) node tests/select-round12/audit.cjs .work/select-round12 > .work/round12-summary/audit.json
+          auditor=$?
+          echo "$auditor" > .work/round12-summary/auditor-exit.txt
+          if [ "$runner" -ne 0 ] || [ "$auditor" -ne 0 ]; then exit 1; fi
+          python tests/select-round12/privacy-check.py .work/select-round12
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: select-round12-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/select-round12/
+          retention-days: 90
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: select-round12-status-${{ matrix.os }}-${{ matrix.engine }}
+          path: .work/round12-summary/*-exit.txt
+          if-no-files-found: warn
