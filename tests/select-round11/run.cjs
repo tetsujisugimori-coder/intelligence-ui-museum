@@ -5,7 +5,8 @@ const crypto=require('node:crypto');
 const http=require('node:http');
 const os=require('node:os');
 const {execFileSync}=require('node:child_process');
-const plan=require('./plan.json');
+const planFile=process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
+const plan=require('./'+planFile);
 const {selectors,capture,requireSnapshot,styleState}=require('./targets.cjs');
 const {probe}=require('../select-factor-pilot/probe.cjs');
 const repo=path.resolve(__dirname,'../..');
@@ -26,6 +27,21 @@ const preludePrefix=old.slice(old.indexOf("    await check('environment'"),old.i
 const {measure}=require('../../apps/v10/scripts/stage2r-focus-pixels.cjs');
 const env={fs,path,modules:pwRoot,out:output,measure,assert,frames:frame,require,snapshot};
 const {ring,prelude}=new Function(...Object.keys(env),`${helpers.replace('const g=await l.evaluate',"const captureSnapshot=prefix.endsWith('-Select')?await snapshot(l):null; const g=await l.evaluate").replace('return {...g,...measured,','return {...g,clip,captureSnapshot,...measured,')}\nreturn {ring,prelude:async function(p,id,row,check){const theme='light',text=100,width=375;${preludePrefix}}};`)(...Object.values(env));
+// Same frozen Switch actions/assertions, split only at the registered observer boundary.
+async function splitSwitch(p,id,row,check){
+ await check('environment',async()=>{const d=await p.evaluate(()=>({focus:document.hasFocus(),visibility:document.visibilityState,theme:document.documentElement.dataset.theme,font:getComputedStyle(document.documentElement).fontSize}));assert(d.focus&&d.visibility==='visible'&&d.theme==='light'&&d.font==='16px','environment mismatch');return d});
+ const control=p.locator('#Switch [role=switch]'),out=p.locator('#Switch output');
+ await check('SwitchPrefix',async()=>{
+  await control.click();assert(await control.getAttribute('aria-checked')==='true'&&(await out.innerText()).includes('ON'),'Switch ON');
+  await control.focus();await p.keyboard.press('Space');assert(await control.getAttribute('aria-checked')==='false'&&(await out.innerText()).includes('OFF'),'Switch OFF');
+  return {mouseON:true,spaceOFF:true};
+ });
+ await check('SwitchDisabled',async()=>{
+  const box=p.locator('#Switch input[type=checkbox]').first();await box.check();assert(await control.isDisabled(),'Switch disabled');
+  await control.evaluate(e=>e.click());assert(await control.getAttribute('aria-checked')==='false','disabled Switch changed');
+  await box.uncheck();return {disabledStable:true};
+ });
+}
 function slots(){
  const rows=[];
  for(let iteration=1;iteration<=plan.repeats;iteration++){
@@ -92,7 +108,7 @@ const serve=http.createServer((req,res)=>{
  }catch{res.writeHead(404).end();}
 });
 const data={
- schema:1,plan,planHash:hash(fs.readFileSync(path.join(__dirname,'plan.json'))),
+ schema:1,plan,planHash:hash(fs.readFileSync(path.join(__dirname,planFile))),
  head:git(['rev-parse','HEAD']),tree:git(['rev-parse','HEAD^{tree}']),dirty:git(['status','--porcelain']),
  system:{platform:process.platform,os:os.release(),node:process.version},
  product:{},build:{},sources:{},rows:[],started:new Date().toISOString(),
@@ -125,7 +141,7 @@ async function trial(browser,s){
   await p.evaluate(()=>document.fonts.ready);
   const h=p.locator('#Select h2'),t=p.locator(selectors.trigger);
   row.samples.beforePrelude=await snapshot(t);
-  await step('groups',()=>prelude(p,s.id,row,async(name,fn)=>{
+  await step('groups',()=> (plan.phase==='B'?splitSwitch:prelude)(p,s.id,row,async(name,fn)=>{
    if(!s.observedGroups.includes(name))return;
    const c={name,executed:s.groups.includes(name),pass:false,before:await snapshot(t)};row.checks.push(c);
    await p.evaluate(value=>value,'ROUND11_BEGIN:'+name);

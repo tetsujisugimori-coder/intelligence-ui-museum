@@ -1,7 +1,8 @@
 'use strict';
 // Synthetic, localhost-only contract evidence. Never a browser trial or product PASS.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),cp=require('node:child_process');
-const plan=require('./plan.json');
+const planFile=process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
+const plan=require('./'+planFile);
 const {PNG}=require('../../tools/stage-a-browser/node_modules/playwright-core/lib/utilsBundle.js');
 const {measure}=require('../../apps/v10/scripts/stage2r-focus-pixels.cjs');
 const repo=path.resolve(__dirname,'../..');
@@ -19,7 +20,7 @@ function fixture(root){
  };
  const png=new PNG({width:34,height:34});png.data.fill(255);const pngBytes=PNG.sync.write(png);
  const trace=(id,groups,executed)=>cp.execFileSync('python',[path.join(__dirname,'synthetic-trace.py'),plan.id+':'+id,JSON.stringify(groups),path.join(__dirname,'trace-check.py'),JSON.stringify(executed)]);
- const d={schema:1,plan,planHash:hash(fs.readFileSync(path.join(__dirname,'plan.json'))),head,tree,dirty:'',playwright:plan.playwright,sdkVersion:plan.sdkVersion,rootCause:'UNKNOWN',stage3:'HOLD',oldOffscreenClick:'NOT_TESTED',browserClosed:true,exitCode:0,validation:[],system:{platform:process.platform},sources:{},product:{},build:{},rows:[],pairs:[]};
+ const d={schema:1,plan,planHash:hash(fs.readFileSync(path.join(__dirname,planFile))),head,tree,dirty:'',playwright:plan.playwright,sdkVersion:plan.sdkVersion,rootCause:'UNKNOWN',stage3:'HOLD',oldOffscreenClick:'NOT_TESTED',browserClosed:true,exitCode:0,validation:[],system:{platform:process.platform},sources:{},product:{},build:{},rows:[],pairs:[]};
  d.sources=Object.fromEntries(walk(__dirname).map(f=>[path.relative(repo,f).split(path.sep).join('/'),hash(fs.readFileSync(f))]));
  d.product=Object.fromEntries(['src/main.tsx','src/main.css','src/select-focus-return.ts','package.json','package-lock.json'].map(f=>[f,hash(fs.readFileSync(path.join(repo,'apps/v10',f)))]));
  const dist=path.join(repo,'.work/v10/dist');d.build=Object.fromEntries(walk(dist).map(f=>[path.relative(dist,f).split(path.sep).join('/'),hash(fs.readFileSync(f))]));

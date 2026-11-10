@@ -92,3 +92,11 @@ test('allowed PNG ancillary names cannot carry oversized or malformed private me
  const crc=Buffer.from(p);crc[crc.length-1]^=1;assert.throws(()=>inspectPNG(crc));
  assert.throws(()=>inspectPNG(Buffer.concat([p.subarray(0,-12),pngChunk('sBIT',Buffer.from([8,8,8,8])),p.subarray(-12)])));
 });
+
+test('round11 release inventory exactly follows selected group assets, not legacy 30-slot count',()=>{
+ const {expectedArtifacts}=require('./privacy-check.cjs');const files=expectedArtifacts();
+ assert.equal([...files].filter(f=>f.endsWith('-trace.zip')).length,36);
+ assert.ok(files.has('Button-1-1-Button-on.png'));assert.ok(!files.has('Button-1-1-Badge.png'));
+ assert.ok(files.has('Badge-1-1-Badge.png'));assert.ok(!files.has('Badge-1-1-Button-on.png'));
+ assert.ok(!files.has('full-0-1-Button-on.png'));assert.ok(files.has('full-1-1-Alert.png'));
+});

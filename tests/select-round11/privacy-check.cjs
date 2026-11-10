@@ -117,6 +117,13 @@ function inspectTrace(entries,build,source,allowedOrigin){
   else scanText(b.toString('utf8'));
  }
 }
+const planFile=process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
+const plan=require('./'+planFile);
+function expectedArtifacts(){
+ const expected=new Set(['results.json']);
+ for(const factor of plan.factors)for(let arm=0;arm<2;arm++)for(let iteration=1;iteration<=3;iteration++){const id=`${factor}-${arm}-${iteration}`;for(const f of [id+'.json',id+'-trace.zip',id+'-after.png',...['on','off','off2','on2'].map(n=>id+'-Select-'+n+'.png'),...(plan.arms[factor][arm].preScreenshot?[id+'-pre.png']:[]),...([...(plan.arms[factor][arm].groups.includes('Button')?['on','off','off2','on2'].map(n=>id+'-Button-'+n+'.png'):[]),...(plan.arms[factor][arm].groups.includes('Badge')?[id+'-Badge.png']:[]),...(plan.arms[factor][arm].groups.includes('Alert')?[id+'-Alert.png']:[])])])expected.add(f)}
+ return expected;
+}
 function gate(root,env=process.env){
  requireSafe(env.GITHUB_ACTIONS==='true'&&/^\d+$/.test(env.GITHUB_RUN_ID||'')&&/^\d+$/.test(env.GITHUB_RUN_ATTEMPT||'')&&env.RUNNER_ENVIRONMENT==='github-hosted','ci-only-not-physical');
  requireSafe(env.ROUND11_RUNNER_EXIT==='0'&&env.ROUND11_AUDITOR_EXIT==='0','audit-or-runner-failed');
@@ -124,10 +131,9 @@ function gate(root,env=process.env){
  const read=n=>{requireSafe(safeName(n)&&!n.includes('/'),'unsafe-file-name');const f=path.join(root,n),s=fs.lstatSync(f);requireSafe(s.isFile()&&!s.isSymbolicLink()&&s.size<64*1024*1024,'unsafe-file');return fs.readFileSync(f)};
  const manifest=JSON.parse(read('SHA256SUMS.json')),d=JSON.parse(read('results.json'));
  requireSafe(d.github?.run===env.GITHUB_RUN_ID&&d.github?.attempt===env.GITHUB_RUN_ATTEMPT&&d.head===env.ROUND11_EXPECT_HEAD&&!d.dirty,'ci-provenance');
- requireSafe(d.rows?.length===30&&d.rows.every(r=>r.input==='Playwright automated, NOT physical'&&r.cleanup===true),'synthetic-provenance');
+ requireSafe(d.rows?.length===plan.expectedSlotsPerEnvironment&&d.rows.every(r=>r.input==='Playwright automated, NOT physical'&&r.cleanup===true),'synthetic-provenance');
  for(const r of d.rows){const p=r.privacy;requireSafe(p?.freshContext===true&&p.physicalInput===false&&JSON.stringify(p.initialStorage)===JSON.stringify({cookies:[],origins:[]})&&p.externalRequests===0&&Array.isArray(p.blockedRequests)&&p.blockedRequests.length===0,'fresh-empty-context');localURL(p.allowedOrigin)}
- const expected=new Set(['results.json']);const plan=require('./plan.json');
- for(const factor of plan.factors)for(let arm=0;arm<2;arm++)for(let iteration=1;iteration<=3;iteration++){const id=`${factor}-${arm}-${iteration}`;for(const f of [id+'.json',id+'-trace.zip',id+'-after.png',...['on','off','off2','on2'].map(n=>id+'-Select-'+n+'.png'),...(plan.arms[factor][arm].preScreenshot?[id+'-pre.png']:[]),...(plan.arms[factor][arm].prelude?[...['on','off','off2','on2'].map(n=>id+'-Button-'+n+'.png'),id+'-Badge.png',id+'-Alert.png']:[])])expected.add(f)}
+ const expected=expectedArtifacts();
  requireSafe(JSON.stringify(Object.keys(manifest).sort())===JSON.stringify([...expected].sort()),'manifest-allowlist');
  requireSafe(JSON.stringify(fs.readdirSync(root).sort())===JSON.stringify([...expected,'SHA256SUMS.json'].sort()),'unmanifested-file');
  const git=args=>execFileSync('git',args,{cwd:repo,encoding:null});
@@ -138,5 +144,5 @@ function gate(root,env=process.env){
  for(const n of expected){const b=read(n);requireSafe(hash(b)===manifest[n],'artifact-hash');if(n.endsWith('.json'))inspectObject(JSON.parse(b));else if(n.endsWith('.zip'))inspectTrace(zipEntries(path.join(root,n)),build,source,d.rows.find(r=>r.traceFile===n)?.privacy.allowedOrigin);else if(n.endsWith('.png'))inspectPNG(b);else requireSafe(false,'unknown-file-type')}
  return {status:'PASS',scope:'fresh synthetic GitHub-hosted localhost Museum only',files:expected.size+1,pixelAssurance:'Provenance based; regex does not prove pixel privacy. Physical PC excluded.'};
 }
-module.exports={inspectJPEG,inspectPNG,gate,localURL,scanText,inspectObject,inspectTrace,zipEntries,safeName};
+module.exports={expectedArtifacts,inspectJPEG,inspectPNG,gate,localURL,scanText,inspectObject,inspectTrace,zipEntries,safeName};
 if(require.main===module){try{console.log(JSON.stringify(gate(process.argv[2]||'.work/select-round11')))}catch(e){console.log(JSON.stringify({status:'BLOCKED',reason:/^[a-z-]+$/.test(e.message)?e.message:'unreadable-or-unrecognized-evidence'}));process.exitCode=1}}

@@ -1,6 +1,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
-const plan=require('./plan.json');
+const planFile=process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
+const plan=require('./'+planFile);
 const {snapshotErrors,styleState}=require('./targets.cjs');
 const {PNG}=require('../../tools/stage-a-browser/node_modules/playwright-core/lib/utilsBundle.js');
 const {measure}=require('../../apps/v10/scripts/stage2r-focus-pixels.cjs');
@@ -21,7 +22,7 @@ function rect(x){return x&&['x','y','width','height'].every(k=>Number.isFinite(x
 function inspect(d){
  const expected=slots();
  fail(eq(d.plan,plan),'plan-object');
- fail(d.planHash===hash(fs.readFileSync(path.join(__dirname,'plan.json'))),'plan-hash');
+ fail(d.planHash===hash(fs.readFileSync(path.join(__dirname,planFile))),'plan-hash');
  fail(/^[a-f0-9]{40}$/.test(d.head||''),'head-sha');
  fail(d.head===process.env.ROUND11_EXPECT_HEAD,'unexpected-producer-head');
  fail(/^[a-f0-9]{40}$/.test(d.tree||''),'tree-sha');

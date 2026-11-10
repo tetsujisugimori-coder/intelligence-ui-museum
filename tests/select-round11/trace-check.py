@@ -9,6 +9,8 @@ def expected(name):
     if name=='Button': return [('click',b),('focus',b),('key','Enter'),('key','Space'),('focus',b),('key','Tab'),('key','Shift+Tab'),('scroll',b)]+[('photo','')]*4+[('check','#Button input >> nth=0'),('disabled-noop',''),('uncheck','#Button input >> nth=0'),('check','#Button input >> nth=1'),('disabled-noop',''),('uncheck','#Button input >> nth=1')]
     if name=='Badge': return [('select','#Badge select:warning'),('scroll','#Badge .samples'),('photo','')]
     if name=='Alert': return [('select','#Alert select:danger'),('focus','#Alert .controls button'),('key','Enter'),('key','Enter'),('scroll','#Alert .alert-demo'),('photo','')]
+    if name=='SwitchPrefix':return [('click',s),('focus',s),('key','Space')]
+    if name=='SwitchDisabled':return [('check','#Switch input[type=checkbox] >> nth=0'),('disabled-noop',''),('uncheck','#Switch input[type=checkbox] >> nth=0')]
     if name=='Switch': return [('click',s),('focus',s),('key','Space'),('check','#Switch input[type=checkbox] >> nth=0'),('disabled-noop',''),('uncheck','#Switch input[type=checkbox] >> nth=0')]
     raise AssertionError('unknown group')
 

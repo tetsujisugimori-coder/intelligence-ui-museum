@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'tests/select-round11/**'
+      - 'tests/select-round11-review/**'
       - 'docs/select-round11/**'
       - '.github/workflows/select-round11.yml'
   workflow_dispatch:
@@ -17,6 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-2025, ubuntu-24.04]
+        phase: [A, B]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 75
     env:
@@ -48,10 +50,13 @@ jobs:
         shell: bash
         run: |
           node --test tests/select-round11/contract.test.cjs tests/select-round11/privacy.test.cjs tests/select-round11/negative-review.test.cjs tests/select-factor-pilot/contract.test.cjs
+          python tests/select-round11-review/trace-counterexamples.py
           python scripts/verify-migration.py
           git diff --exit-code a373160f9d7e1b726b51d3a3f6de3e65024699c7 -- apps archive reviews legacy tests/select-factor-pilot docs/select-factor-pilot tests/select-round10 docs/select-round10 evidence
       - name: New standalone observation pilot and local raw audit
         id: evidence
+        env:
+          ROUND11_PHASE: ${{ matrix.phase }}
         shell: bash
         run: |
           mkdir -p .work/round11-report
@@ -77,7 +82,7 @@ jobs:
         if: success() && steps.evidence.outputs.privacy == '0'
         uses: actions/upload-artifact@v4
         with:
-          name: select-round11-raw-${{ matrix.os }}-${{ github.event.pull_request.head.sha || github.sha }}
+          name: select-round11-raw-${{ matrix.phase }}-${{ matrix.os }}-${{ github.event.pull_request.head.sha || github.sha }}
           path: .work/select-round11/
           include-hidden-files: false
           retention-days: 90
@@ -86,7 +91,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: select-round11-summary-${{ matrix.os }}-${{ github.event.pull_request.head.sha || github.sha }}
+          name: select-round11-summary-${{ matrix.phase }}-${{ matrix.os }}-${{ github.event.pull_request.head.sha || github.sha }}
           path: |
             .work/round11-report/audit.json
             .work/round11-report/privacy.json
