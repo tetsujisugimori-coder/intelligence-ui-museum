@@ -54,6 +54,7 @@ jobs:
           python scripts/verify-migration.py
           node --test tests/select-round11/contract.test.cjs tests/select-round11/privacy.test.cjs tests/select-round11/negative-review.test.cjs tests/select-factor-pilot/contract.test.cjs
       - name: Registered trials and raw audit
+        id: evidence
         shell: bash
         run: |
           mkdir -p .work/round12-summary
@@ -64,15 +65,18 @@ jobs:
           ROUND12_RUNNER_EXIT=$runner ROUND12_EXPECT_HEAD=$(git rev-parse HEAD) ROUND12_EXPECT_PLATFORM=$(node -p process.platform) node tests/select-round12/audit.cjs .work/select-round12 > .work/round12-summary/audit.json
           auditor=$?
           echo "$auditor" > .work/round12-summary/auditor-exit.txt
-          node -e 'const fs=require("fs");const a=JSON.parse(fs.readFileSync(".work/round12-summary/audit.json")),d=JSON.parse(fs.readFileSync(".work/select-round12/results.json")); console.log(JSON.stringify({diagnostic:a.diagnostic,errorCodes:a.errors.map(e=>/^(?:[A-G]-[1-3]:)?[a-zA-Z \/-]+$/.test(e)?e:"asset-or-provenance-detail"),dirty:!!d.dirty,fatal:!!d.fatal,browserClosed:d.browserClosed,completed:d.rows.filter(r=>r.status==="COMPLETE").length,rows:d.rows.length}));' 
-          if [ "$runner" -ne 0 ] || [ "$auditor" -ne 0 ]; then exit 1; fi
+          node -e 'const fs=require("fs");const a=JSON.parse(fs.readFileSync(".work/round12-summary/audit.json")),d=JSON.parse(fs.readFileSync(".work/select-round12/results.json")); console.log(JSON.stringify({diagnostic:a.diagnostic,errorCodes:a.errors.map(e=>/^(?:[A-G]-[1-3]:)?[a-zA-Z \/-]+$/.test(e)?e:"asset-or-provenance-detail"),dirty:!!d.dirty,fatal:!!d.fatal,browserClosed:d.browserClosed,completed:d.rows.filter(r=>r.status==="COMPLETE").length,rows:d.rows.length}));'
+          python tests/select-round12/privacy-check.py .work/select-round12 > .work/privacy-result.txt 2>&1
+          privacy=$?
+          echo "privacy=$privacy" >> "$GITHUB_OUTPUT"
+          if [ "$runner" -ne 0 ] || [ "$auditor" -ne 0 ] || [ "$privacy" -ne 0 ]; then exit 1; fi
           ROUND12_EVIDENCE=.work/select-round12 node --test tests/select-round12/evidence.test.cjs
           python tests/select-round12-review/trace-counterexamples.py
           python tests/select-round12-review/temporal-counterexamples.py .work/select-round12
           node tests/select-round12-review/semantic-counterexamples.cjs .work/select-round12/results.json
           python tests/select-round12/privacy-check.py .work/select-round12
       - uses: actions/upload-artifact@v4
-        if: success()
+        if: always() && steps.evidence.outputs.privacy == '0'
         with:
           name: select-round12-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
           path: .work/select-round12/
