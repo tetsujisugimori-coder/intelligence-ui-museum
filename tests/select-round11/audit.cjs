@@ -1,6 +1,6 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
-const planFile=process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
+const planFile=process.env.ROUND11_PHASE==='B2'?'plan-b2.json':process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
 const plan=require('./'+planFile);
 const {snapshotErrors,styleState}=require('./targets.cjs');
 const {PNG}=require('../../tools/stage-a-browser/node_modules/playwright-core/lib/utilsBundle.js');
@@ -70,6 +70,7 @@ function inspect(d){
    fail(c.pass===true,'group-incomplete:'+row.id+':'+c.name);
    for(const key of ['before','after']){for(const problem of snapshotErrors(c[key]))errors.push('group-snapshot:'+row.id+':'+c.name+':'+key+':'+problem);fail(c[key]?.time>=groupTime,'group-time:'+row.id);groupTime=c[key]?.time}
   }
+  fail(eq(row.switchFinal,{checked:'false',disabled:false,checkboxChecked:false}),'switch-final-state:'+row.id);
   const sn=row.samples||{},a=row.acquisition,f=row.final;
   fail(sn.beforePhoto?.time>=groupTime,'group-snapshot-order:'+row.id);
   const phases=['beforePrelude','beforePhoto','afterPhoto',...(expectedSlot.clearEmptyStyle?['beforeStyleNormalization','afterStyleNormalization']:[]),'beforeHistory','beforeFocus','acquisition','open','final'];
@@ -129,7 +130,7 @@ function inspect(d){
    fail(p.pass===pass,'pixel-pass:'+row.id);
    const outline=(!f?.focused||!f?.hasFocus)?'FOCUS_LOST':pass?'VISIBLE':measured.changed===0?'ABSENT':'INSUFFICIENT';
    fail(row.classification?.outline===outline,'outline-classification:'+row.id);
-   const trace=execFileSync('python',[path.join(__dirname,'trace-check.py'),path.join(root,row.traceFile),plan.id+':'+row.id,JSON.stringify(expectedSlot.observedGroups),JSON.stringify(expectedSlot.groups)],{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();
+   const trace=execFileSync('python',[path.join(__dirname,'trace-check.py'),path.join(root,row.traceFile),plan.id+':'+row.id,JSON.stringify(expectedSlot.observedGroups),JSON.stringify(expectedSlot.groups),JSON.stringify({omitDisabledNoop:!!expectedSlot.omitDisabledNoop})],{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();
    fail(trace==='VALID','trace:'+row.id);
   }catch(e){errors.push('asset-decode:'+row.id+':'+String(e).split('\n')[0])}
   const rowFile=row.id+'.json';

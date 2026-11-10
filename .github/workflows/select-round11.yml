@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-2025, ubuntu-24.04]
-        phase: [A, B]
+        phase: [A, B, B2]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 75
     env:
@@ -51,6 +51,7 @@ jobs:
         run: |
           node --test tests/select-round11/contract.test.cjs tests/select-round11/privacy.test.cjs tests/select-round11/negative-review.test.cjs tests/select-factor-pilot/contract.test.cjs
           python tests/select-round11-review/trace-counterexamples.py
+          node tests/select-round11-review/B-contract.cjs
           python scripts/verify-migration.py
           git diff --exit-code a373160f9d7e1b726b51d3a3f6de3e65024699c7 -- apps archive reviews legacy tests/select-factor-pilot docs/select-factor-pilot tests/select-round10 docs/select-round10 evidence
       - name: New standalone observation pilot and local raw audit

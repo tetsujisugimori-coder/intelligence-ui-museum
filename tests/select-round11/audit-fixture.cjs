@@ -1,7 +1,7 @@
 'use strict';
 // Synthetic, localhost-only contract evidence. Never a browser trial or product PASS.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),cp=require('node:child_process');
-const planFile=process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
+const planFile=process.env.ROUND11_PHASE==='B2'?'plan-b2.json':process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
 const plan=require('./'+planFile);
 const {PNG}=require('../../tools/stage-a-browser/node_modules/playwright-core/lib/utilsBundle.js');
 const {measure}=require('../../apps/v10/scripts/stage2r-focus-pixels.cjs');
@@ -19,7 +19,7 @@ function fixture(root){
   return {hasFocus:true,visibility:'visible',time,html:'<section></section>',htmlNoEmptyStyle:'<section></section>',rootCount:1,styleNodeCount:1,hiddenCount:1,triggerCount:1,distinct:true,contained:true,disabled:[c],hidden:h,trigger:t,active:focused?structuredClone(t):el('BODY',{}),focused,focusVisible:false,expanded,value:'a',scroll:{x:0,y:0},viewport:{width:375,height:1000,dpr:1},font:'16px',theme:'light'};
  };
  const png=new PNG({width:34,height:34});png.data.fill(255);const pngBytes=PNG.sync.write(png);
- const trace=(id,groups,executed)=>cp.execFileSync('python',[path.join(__dirname,'synthetic-trace.py'),plan.id+':'+id,JSON.stringify(groups),path.join(__dirname,'trace-check.py'),JSON.stringify(executed)]);
+ const trace=(id,groups,executed,omitDisabledNoop)=>cp.execFileSync('python',[path.join(__dirname,'synthetic-trace.py'),plan.id+':'+id,JSON.stringify(groups),path.join(__dirname,'trace-check.py'),JSON.stringify(executed),JSON.stringify({omitDisabledNoop:!!omitDisabledNoop})]);
  const d={schema:1,plan,planHash:hash(fs.readFileSync(path.join(__dirname,planFile))),head,tree,dirty:'',playwright:plan.playwright,sdkVersion:plan.sdkVersion,rootCause:'UNKNOWN',stage3:'HOLD',oldOffscreenClick:'NOT_TESTED',browserClosed:true,exitCode:0,validation:[],system:{platform:process.platform},sources:{},product:{},build:{},rows:[],pairs:[]};
  d.sources=Object.fromEntries(walk(__dirname).map(f=>[path.relative(repo,f).split(path.sep).join('/'),hash(fs.readFileSync(f))]));
  d.product=Object.fromEntries(['src/main.tsx','src/main.css','src/select-focus-return.ts','package.json','package-lock.json'].map(f=>[f,hash(fs.readFileSync(path.join(repo,'apps/v10',f)))]));
@@ -27,6 +27,7 @@ function fixture(root){
  for(let iteration=1;iteration<=3;iteration++)for(const factor of plan.factors)for(const arm of iteration%2?[0,1]:[1,0]){
   const r={id:`${factor}-${arm}-${iteration}`,factor,arm,iteration,...plan.arms[factor][arm],status:'COMPLETE',started:new Date(0).toISOString(),finished:new Date(100).toISOString(),cleanup:true,browser:'26.0',classification:{diagnostic:'COMPLETE',outline:'ABSENT',cause:'UNKNOWN'},pageErrors:[],samples:{},events:null,overflow:null};
   const names=['goto','groups','normalize',...(r.preScreenshot?['pre-screenshot']:[]),...(r.clearEmptyStyle?['normalize-empty-style']:[]),...(r.emptyStyle?['empty-style-diagnostic']:[]),'pointer-history','acquire','open','escape'];
+  r.switchFinal={checked:'false',disabled:false,checkboxChecked:false};
   r.checks=r.observedGroups.map(name=>({name,executed:r.groups.includes(name),pass:true,before:sample(false,false,'false',0),after:sample(false,false,'false',0)}));
   r.steps=names.map((name,i)=>({name,success:true,started:i,finished:i}));
   r.samples.beforePrelude=sample(false,false,'false',0);r.samples.beforePhoto=sample();r.samples.afterPhoto=sample(false,false,'false',2);
@@ -38,7 +39,7 @@ function fixture(root){
   r.images=[...([...(r.groups.includes('Button')?['on','off','off2','on2'].map(n=>r.id+'-Button-'+n+'.png'):[]),...(r.groups.includes('Badge')?[r.id+'-Badge.png']:[]),...(r.groups.includes('Alert')?[r.id+'-Alert.png']:[])]),...ringImages];r.afterImage=r.id+'-after.png';r.traceFile=r.id+'-trace.zip';if(r.preScreenshot)r.preImage=r.id+'-pre.png';
   r.paint={...measure([png,png,png,png],{x:0,y:0,width:34,height:34},[{x:0,y:0,width:10,height:10}]),clip:{x:0,y:0,width:34,height:34},rect:{x:0,y:0,width:10,height:10,top:0,right:10,bottom:10,left:0},captureSnapshot:sample(r.emptyStyle,true,'false',10),viewport:{width:375,height:1000},images:ringImages,active:true,visible:false,clipping:[]};
   for(const f of [...r.images,r.afterImage,...(r.preImage?[r.preImage]:[])])fs.writeFileSync(path.join(root,f),pngBytes);
-  fs.writeFileSync(path.join(root,r.traceFile),trace(r.id,r.observedGroups,r.groups));d.rows.push(r);
+  fs.writeFileSync(path.join(root,r.traceFile),trace(r.id,r.observedGroups,r.groups,r.omitDisabledNoop));d.rows.push(r);
  }
  for(const factor of plan.factors)for(let i=1;i<=3;i++)d.pairs.push({factor,iteration:i,armA:`${factor}-0-${i}`,armB:`${factor}-1-${i}`,equivalence:'CONFIRMED_TARGET',rootCause:'UNKNOWN'});
  save(root,d);return d;

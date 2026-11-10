@@ -5,7 +5,7 @@ const crypto=require('node:crypto');
 const http=require('node:http');
 const os=require('node:os');
 const {execFileSync}=require('node:child_process');
-const planFile=process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
+const planFile=process.env.ROUND11_PHASE==='B2'?'plan-b2.json':process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
 const plan=require('./'+planFile);
 const {selectors,capture,requireSnapshot,styleState}=require('./targets.cjs');
 const {probe}=require('../select-factor-pilot/probe.cjs');
@@ -38,7 +38,7 @@ async function splitSwitch(p,id,row,check){
  });
  await check('SwitchDisabled',async()=>{
   const box=p.locator('#Switch input[type=checkbox]').first();await box.check();assert(await control.isDisabled(),'Switch disabled');
-  await control.evaluate(e=>e.click());assert(await control.getAttribute('aria-checked')==='false','disabled Switch changed');
+  if(!row.omitDisabledNoop)await control.evaluate(e=>e.click());assert(await control.getAttribute('aria-checked')==='false','disabled Switch changed');
   await box.uncheck();return {disabledStable:true};
  });
 }
@@ -141,13 +141,15 @@ async function trial(browser,s){
   await p.evaluate(()=>document.fonts.ready);
   const h=p.locator('#Select h2'),t=p.locator(selectors.trigger);
   row.samples.beforePrelude=await snapshot(t);
-  await step('groups',()=> (plan.phase==='B'?splitSwitch:prelude)(p,s.id,row,async(name,fn)=>{
+  await step('groups',()=> (plan.phase?splitSwitch:prelude)(p,s.id,row,async(name,fn)=>{
    if(!s.observedGroups.includes(name))return;
    const c={name,executed:s.groups.includes(name),pass:false,before:await snapshot(t)};row.checks.push(c);
    await p.evaluate(value=>value,'ROUND11_BEGIN:'+name);
    c.detail=c.executed?await fn():{sham:true};await p.evaluate(value=>value,'ROUND11_END:'+name);c.after=await snapshot(t);c.pass=true;
   }));
   assert(equal(row.checks.map(c=>c.name),s.observedGroups),'group execution order');
+  row.switchFinal=await p.evaluate(()=>{const s=document.querySelector('#Switch [role=switch]'),b=document.querySelector('#Switch input[type=checkbox]');return {checked:s?.getAttribute('aria-checked'),disabled:s?.disabled,checkboxChecked:b?.checked}});
+  assert(row.switchFinal.checked==='false'&&row.switchFinal.disabled===false&&row.switchFinal.checkboxChecked===false,'Switch final OFF/enabled');
   await step('normalize',async()=>{await h.evaluate(e=>{e.scrollIntoView({block:'center'});document.activeElement?.blur()});await frame(p)});
   row.samples.beforePhoto=await snapshot(t);
   if(s.preScreenshot)await step('pre-screenshot',async()=>{row.preImage=s.id+'-pre.png';await p.screenshot({path:path.join(output,row.preImage)})});

@@ -117,7 +117,7 @@ function inspectTrace(entries,build,source,allowedOrigin){
   else scanText(b.toString('utf8'));
  }
 }
-const planFile=process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
+const planFile=process.env.ROUND11_PHASE==='B2'?'plan-b2.json':process.env.ROUND11_PHASE==='B'?'plan-b.json':'plan.json';
 const plan=require('./'+planFile);
 function expectedArtifacts(){
  const expected=new Set(['results.json']);

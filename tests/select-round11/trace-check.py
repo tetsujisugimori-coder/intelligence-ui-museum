@@ -25,7 +25,7 @@ def token(e):
     if m=='evaluateExpression' and 'focus:document.hasFocus()' in ex:return ('environment','')
     return None
 
-def inspect(events,title,groups,executed):
+def inspect(events,title,groups,executed,options=None):
     assert any(e.get('type')=='context-options' and e.get('title')==title for e in events),'trace title'
     assert any(e.get('type')=='frame-snapshot' for e in events),'no frame snapshots'
     begun=[];active=None;tokens=[];checked=False;calls={e.get('callId'):e for e in events if e.get('type')=='after'}
@@ -37,6 +37,7 @@ def inspect(events,title,groups,executed):
         if e.get('method')=='evaluateExpression' and marker.startswith('ROUND11_END:'):
             assert active==marker.split(':',1)[1],'group close mismatch'
             want=expected(active) if active in executed else []
+            if (options or {}).get('omitDisabledNoop') and active=='SwitchDisabled':want=[t for t in want if t[0]!='disabled-noop']
             assert tokens==want,(active,tokens,want)
             active=None;continue
         if active:
@@ -55,4 +56,4 @@ if __name__=='__main__':
         assert z.testzip() is None
         names=z.namelist();assert len(names)==len(set(names)) and any(n.endswith('.network') for n in names)
         events=[json.loads(l) for n in names if n.endswith('.trace') for l in z.read(n).splitlines() if l]
-    inspect(events,sys.argv[2],json.loads(sys.argv[3]),json.loads(sys.argv[4]));print('VALID')
+    inspect(events,sys.argv[2],json.loads(sys.argv[3]),json.loads(sys.argv[4]),json.loads(sys.argv[5]) if len(sys.argv)>5 else {});print('VALID')

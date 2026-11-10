@@ -9,7 +9,7 @@ Use a clean dedicated checkout at the evidence HEAD (GitHub checkout uses exact 
 Run the contracts: `node --test tests/select-round11/contract.test.cjs tests/select-round11/privacy.test.cjs tests/select-round11/negative-review.test.cjs tests/select-factor-pilot/contract.test.cjs`. Run `python tests/select-round11-review/trace-counterexamples.py` for independent, manually enumerated operation-sequence expectations.
 
 A: `ROUND11_OUT=<fresh-directory> node tests/select-round11/run.cjs`.
-B: same command with `ROUND11_PHASE=B`. Never reuse an output directory. Capture the actual exit code, then run `ROUND11_RUNNER_EXIT=<actual> ROUND11_EXPECT_HEAD=<producer-head> ROUND11_EXPECT_PLATFORM=<linux|win32> node tests/select-round11/audit.cjs <directory>` (also `ROUND11_PHASE=B` for B). Source checkout/build must match producer. Missing or incomplete trials cannot PASS.
+B: same command with `ROUND11_PHASE=B`; B2 uses `ROUND11_PHASE=B2`. Never reuse an output directory. Capture the actual exit code, then run `ROUND11_RUNNER_EXIT=<actual> ROUND11_EXPECT_HEAD=<producer-head> ROUND11_EXPECT_PLATFORM=<linux|win32> node tests/select-round11/audit.cjs <directory>` (also the same phase variable for B/B2). Source checkout/build must match producer. Missing or incomplete trials cannot PASS.
 
 GitHub-hosted raw release additionally uses `privacy-check.cjs` after successful runner/auditor. It checks fresh empty contexts, only fixed public localhost assets and queries, no external network, exact asset inventory, hashes and known image metadata. This does not prove arbitrary pixels harmless. Actual Windows PC is excluded from automated release. `run-windows-pc.ps1` preserves local evidence without upload. B can be run separately with explicit environment variable and fresh directory; do not pool environments.
 
@@ -20,7 +20,7 @@ Independent image recalculation: `python tests/select-round11-review/pixel-recom
 - A v1 preregistration f4a001b; implementation d2c7ced. Local dependency checks initially prevented launch. An exploratory local run reached 15 complete rows and one page crash, then exit137 without final manifest. It is incomplete and not pooled.
 - Balanced-observer amendment 3d9117 and implementation 7af62ba: local A completed36/36, auditor PASS. Independent review checked all 289 manifest files, 36 traces and separate pixel calculation. All18 target pairs equivalent. Button/Switch/full each3/3 displayed absent outline; layout/Badge/Alert each3/3 retained visible outline. This supports bundled candidates only.
 - A hosted runner/auditor passed at7af62ba, but the release gate inherited a 30-row/all-prelude-assets inventory and blocked raw upload. The gate is corrected to require the preregistered count and exact selected-group assets, with regression tests. No privacy approval is bypassed.
-- B preregistration is separate, after A completion and independent verification. See part-b-preregistration.md. B results and final CI are recorded in the PR, not retroactively invented here.
+- B preregistration is separate, after A completion and independent verification. See part-b-preregistration.md. B local18/18 and independent raw review passed; both prefix and disabled subgroup reproduced3/3, with all9 target pairs equivalent. B2 removes only the disabled no-op in a separately preregistered12-trial comparison. Final results and final CI are recorded in the PR, not retroactively invented here.
 
 ## Limits
 
