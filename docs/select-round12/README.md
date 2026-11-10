@@ -29,6 +29,12 @@ H1（ON必要）はUNKNOWN。ONを含まない独立したOFF条件がない。H
 - 幅390/765/1280、reduced motion、Windows実PC、実機iPhone Safari、物理入力、VoiceOverはNOT_TESTED。2026-11-10 20:29 JSTの実PCカタログはギャラリアoffline。
 - 375px限定で原因候補を絞ることを優先。全16条件完了とは主張しない。観測off対照、DOMだけの介入、Museum処理隔離は後続候補。
 
+## CI途中履歴（成功と分離）
+
+最初のhosted run42807493178はrunner exit0・auditor exit1。DOMRectの余分な4項目による画像再計算の誤FAILを原画像不変で修正した。d91b6907のrun42809189833ではWindows Chromium/WebKitが各21試行と監査・故障対照を完了したが、公開前検査が既存のKaTeX公開フォントに対するCSP拒否consoleを拒否してjob失敗。外部応答・route拒否の計数は0で、原票artifactはアップロードされなかった。ChromiumのHARには通信前にCSP拒否された公開フォント要求が残るため、実応答と区別する。既知のCSPログを無制限に許可せず、公開source・固定font名・ログ形式・trace資源を検査するgateへ改訂した。既知20フォント・2文面と、Chromiumの通信前CSP失敗形状だけを許可し、本文/未知ヘッダー/実応答/任意consoleを拒否する。privacy PASSは公開前検査の判定であり、診断PASSではない。製品CSPの変更やフォント通信の許可は行わない。途中headの成功を最終headへ読み替えない。
+
+plan.jsonのengine=webkitはローカルdefaultで、ROUND12_ENGINEと原票engineが実環境を識別する。事前登録とCIはWebKit/Chromium双方を対象とする。
+
 ## 提出境界
 
 新しい診断コード・計画・CI・報告だけを提出。Draft維持、マージ・公開なし。CI、原artifact、独立レビューの確認前はマージ推奨NO。最終報告で判定を更新する。
