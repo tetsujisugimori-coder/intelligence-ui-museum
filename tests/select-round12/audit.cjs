@@ -73,7 +73,7 @@ function audit(root,expected){
    for(const f of [...images,r.afterImage]){const p=PNG.sync.read(fs.readFileSync(path.join(root,f)));check(p.width>0&&p.height>0,'PNG');}
    const p=r.paint,imgs=images.map(f=>PNG.sync.read(fs.readFileSync(path.join(root,f))));
    check(imgs.every(i=>i.width===p.clip.width&&i.height===p.clip.height),'clip size');check(eq(p.rect,p.captureSnapshot.trigger.rect),'rect binding');
-   const m=measure(imgs,p.clip,[p.rect]);for(const k of ['changed','unstable','indicators','threshold','reason'])check(eq(p[k],m[k]),'pixel recomputation');
+   const m=measure(imgs,p.clip,[{x:p.rect.x,y:p.rect.y,width:p.rect.width,height:p.rect.height}]);for(const k of ['changed','unstable','indicators','threshold','reason'])check(eq(p[k],m[k]),'pixel recomputation');
    const pass=p.active&&p.visible&&p.clipping?.length===0&&m.pass;check(p.pass===pass,'pixel PASS');
    check(r.classification?.outline===(!r.final.focused||!r.final.hasFocus?'FOCUS_LOST':pass?'VISIBLE':m.changed===0?'ABSENT':'INSUFFICIENT'),'classification');
    check(execFileSync('python',[path.join(__dirname,'trace-check.py'),path.join(root,r.traceFile),plan.id+':'+r.id,r.condition,String(r.tabRoute.length),JSON.stringify(r.paint.clip)],{encoding:'utf8'}).trim()==='VALID','trace');
