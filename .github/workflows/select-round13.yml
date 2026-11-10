@@ -1,0 +1,93 @@
+name: Select round 13 observer transition diagnosis
+on:
+  pull_request:
+    paths:
+      - 'tests/select-round13/**'
+      - 'docs/select-round13/**'
+      - '.github/workflows/select-round13.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: select-round13-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  diagnosis:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2025, ubuntu-24.04]
+        engine: [webkit, chromium]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 75
+    env:
+      PYTHONUTF8: '1'
+      GIT_CONFIG_COUNT: '1'
+      GIT_CONFIG_KEY_0: core.autocrlf
+      GIT_CONFIG_VALUE_0: 'false'
+      ROUND13_ENGINE: ${{ matrix.engine }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fixed product and browsers
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          npm --prefix .work/v10 ci --ignore-scripts --no-audit --no-fund
+          npm --prefix .work/v10 run build
+          npm --prefix tools/stage-a-browser ci --ignore-scripts --no-audit --no-fund
+          if [ '${{ runner.os }}' = 'Linux' ]; then
+            (cd tools/stage-a-browser && npx playwright install --with-deps $ROUND13_ENGINE)
+          else
+            (cd tools/stage-a-browser && npx playwright install $ROUND13_ENGINE)
+          fi
+      - name: Freeze older evidence and test release gate
+        shell: bash
+        run: |
+          git diff --exit-code 56faa22556f9ec03350245763c2d173f8cc0ad6e -- apps archive reviews legacy evidence tests/select-round12 tests/select-round11 tests/select-round10 tools/stage-a-browser/package-lock.json
+          python scripts/verify-migration.py
+          node --test tests/select-round13/privacy.test.cjs
+          node --test tests/select-round12/privacy.test.cjs
+          node --check tests/select-round13/run.cjs
+          node --check tests/select-round13/audit.cjs
+          python -m py_compile tests/select-round13/trace-check.py
+      - name: Run paired diagnosis and original audit
+        id: evidence
+        shell: bash
+        run: |
+          mkdir -p .work/round13-status
+          set +e
+          ROUND13_OUT=.work/select-round13 node tests/select-round13/run.cjs > .work/round13-runner.log 2>&1
+          runner=$?
+          echo "$runner" > .work/round13-status/runner-exit.txt
+          ROUND13_RUNNER_EXIT=$runner ROUND13_EXPECT_HEAD=$(git rev-parse HEAD) ROUND13_EXPECT_PLATFORM=$(node -p process.platform) node tests/select-round13/audit.cjs .work/select-round13 > .work/round13-audit.json
+          auditor=$?
+          echo "$auditor" > .work/round13-status/auditor-exit.txt
+          ROUND13_EXPECT_HEAD=$(git rev-parse HEAD) node tests/select-round13/privacy-check.cjs .work/select-round13 > .work/round13-privacy.json
+          privacy=$?
+          echo "$privacy" > .work/round13-status/privacy-exit.txt
+          echo "privacy=$privacy" >> "$GITHUB_OUTPUT"
+          node -e 'const fs=require("fs"); for(const name of ["round13-audit","round13-privacy"]){try{const a=JSON.parse(fs.readFileSync(".work/"+name+".json"));console.log(JSON.stringify({name,status:a.diagnostic||a.status,errors:a.errors?.length||0,reason:a.reason||null}));}catch{console.log(name+": unreadable");}}'
+          if [ "$runner" -ne 0 ] || [ "$auditor" -ne 0 ] || [ "$privacy" -ne 0 ]; then exit 1; fi
+          ROUND13_EVIDENCE=.work/select-round13 node --test tests/select-round13/evidence.test.cjs
+          ROUND13_EXPECT_HEAD=$(git rev-parse HEAD) node tests/select-round13/privacy-check.cjs .work/select-round13
+      - name: Upload privacy-approved raw evidence
+        if: always() && steps.evidence.outputs.privacy == '0'
+        uses: actions/upload-artifact@v4
+        with:
+          name: select-round13-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/select-round13/
+          retention-days: 90
+          if-no-files-found: error
+      - name: Upload status only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: select-round13-status-${{ matrix.os }}-${{ matrix.engine }}
+          path: .work/round13-status/*-exit.txt
+          if-no-files-found: warn
