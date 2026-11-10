@@ -126,12 +126,12 @@ async function trial(browser,s){
   const h=p.locator('#Select h2'),t=p.locator(selectors.trigger);
   row.samples.beforePrelude=await snapshot(t);
   await step('groups',()=>prelude(p,s.id,row,async(name,fn)=>{
-   if(!s.groups.includes(name))return;
-   const c={name,pass:false,before:await snapshot(t)};row.checks.push(c);
+   if(!s.observedGroups.includes(name))return;
+   const c={name,executed:s.groups.includes(name),pass:false,before:await snapshot(t)};row.checks.push(c);
    await p.evaluate(value=>value,'ROUND11_BEGIN:'+name);
-   c.detail=await fn();await p.evaluate(value=>value,'ROUND11_END:'+name);c.after=await snapshot(t);c.pass=true;
+   c.detail=c.executed?await fn():{sham:true};await p.evaluate(value=>value,'ROUND11_END:'+name);c.after=await snapshot(t);c.pass=true;
   }));
-  assert(equal(row.checks.map(c=>c.name),s.groups),'group execution order');
+  assert(equal(row.checks.map(c=>c.name),s.observedGroups),'group execution order');
   await step('normalize',async()=>{await h.evaluate(e=>{e.scrollIntoView({block:'center'});document.activeElement?.blur()});await frame(p)});
   row.samples.beforePhoto=await snapshot(t);
   if(s.preScreenshot)await step('pre-screenshot',async()=>{row.preImage=s.id+'-pre.png';await p.screenshot({path:path.join(output,row.preImage)})});

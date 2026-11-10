@@ -32,6 +32,7 @@ function inspect(d){
  fail(d.dirty==='','dirty-producer');
  try{fail(d.tree===execFileSync('git',['rev-parse',d.head+'^{tree}'],{cwd:repo,encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim(),'producer-tree')}catch{errors.push('producer-tree-unresolved')}
  fail(d.rows?.length===plan.expectedSlotsPerEnvironment,'row-count');
+ fail(eq(d.rows?.map(r=>r.id),expected.map(r=>r.id)),'trial-order');
  fail(new Set(d.rows?.map(x=>x.id)).size===plan.expectedSlotsPerEnvironment,'row-ids');
  fail(d.system?.platform===process.env.ROUND11_EXPECT_PLATFORM,'platform');
  const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
@@ -61,9 +62,10 @@ function inspect(d){
   for(const step of row.steps||[]){fail(step.started>=previousEnd&&step.finished>=step.started&&step.finished<=rowEnd,'step-time:'+row.id+':'+step.name);previousEnd=step.finished}
   const stepNames=['goto','groups','normalize',...(expectedSlot.preScreenshot?['pre-screenshot']:[]),...(expectedSlot.clearEmptyStyle?['normalize-empty-style']:[]),...(expectedSlot.emptyStyle?['empty-style-diagnostic']:[]),'pointer-history','acquire','open','escape'];
   fail(eq(row.steps?.map(s=>s.name),stepNames),'step-order:'+row.id);
-  fail(eq(row.checks?.map(c=>c.name),expectedSlot.groups),'group-order:'+row.id);
+  fail(eq(row.checks?.map(c=>c.name),expectedSlot.observedGroups),'group-order:'+row.id);
   let groupTime=-Infinity;
   for(const c of row.checks||[]){
+   fail(c.executed===expectedSlot.groups.includes(c.name),'group-executed:'+row.id+':'+c.name);
    fail(c.pass===true,'group-incomplete:'+row.id+':'+c.name);
    for(const key of ['before','after']){for(const problem of snapshotErrors(c[key]))errors.push('group-snapshot:'+row.id+':'+c.name+':'+key+':'+problem);fail(c[key]?.time>=groupTime,'group-time:'+row.id);groupTime=c[key]?.time}
   }
@@ -126,7 +128,7 @@ function inspect(d){
    fail(p.pass===pass,'pixel-pass:'+row.id);
    const outline=(!f?.focused||!f?.hasFocus)?'FOCUS_LOST':pass?'VISIBLE':measured.changed===0?'ABSENT':'INSUFFICIENT';
    fail(row.classification?.outline===outline,'outline-classification:'+row.id);
-   const trace=execFileSync('python',[path.join(__dirname,'trace-check.py'),path.join(root,row.traceFile),plan.id+':'+row.id,JSON.stringify(expectedSlot.groups)],{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();
+   const trace=execFileSync('python',[path.join(__dirname,'trace-check.py'),path.join(root,row.traceFile),plan.id+':'+row.id,JSON.stringify(expectedSlot.observedGroups),JSON.stringify(expectedSlot.groups)],{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();
    fail(trace==='VALID','trace:'+row.id);
   }catch(e){errors.push('asset-decode:'+row.id+':'+String(e).split('\n')[0])}
   const rowFile=row.id+'.json';

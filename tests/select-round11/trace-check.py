@@ -23,10 +23,10 @@ def token(e):
     if m=='evaluateExpression' and 'focus:document.hasFocus()' in ex:return ('environment','')
     return None
 
-def inspect(events,title,groups):
+def inspect(events,title,groups,executed):
     assert any(e.get('type')=='context-options' and e.get('title')==title for e in events),'trace title'
     assert any(e.get('type')=='frame-snapshot' for e in events),'no frame snapshots'
-    begun=[];active=None;tokens=[];calls={e.get('callId'):e for e in events if e.get('type')=='after'}
+    begun=[];active=None;tokens=[];checked=False;calls={e.get('callId'):e for e in events if e.get('type')=='after'}
     for e in events:
         if e.get('type')!='before':continue
         p=e.get('params',{});marker=p.get('arg',{}).get('value',{}).get('s','')
@@ -34,10 +34,15 @@ def inspect(events,title,groups):
             assert active is None,'overlapping group';active=marker.split(':',1)[1];begun.append(active);tokens=[];continue
         if e.get('method')=='evaluateExpression' and marker.startswith('ROUND11_END:'):
             assert active==marker.split(':',1)[1],'group close mismatch'
-            assert tokens==expected(active),(active,tokens,expected(active))
+            want=expected(active) if active in executed else []
+            assert tokens==want,(active,tokens,want)
             active=None;continue
         if active:
             t=token(e)
+            if e.get('method')=='check':checked=True
+            if e.get('method')=='uncheck':checked=False
+            if checked and e.get('method')=='waitForSelector' and e.get('title')=='Evaluate' and p.get('selector') in ['#Button .stage button','#Switch [role=switch]']:
+                t=('disabled-noop','')
             if t:
                 assert e.get('callId') in calls and not calls[e['callId']].get('error'),'operation missing completion'
                 tokens.append(t)
@@ -48,4 +53,4 @@ if __name__=='__main__':
         assert z.testzip() is None
         names=z.namelist();assert len(names)==len(set(names)) and any(n.endswith('.network') for n in names)
         events=[json.loads(l) for n in names if n.endswith('.trace') for l in z.read(n).splitlines() if l]
-    inspect(events,sys.argv[2],json.loads(sys.argv[3]));print('VALID')
+    inspect(events,sys.argv[2],json.loads(sys.argv[3]),json.loads(sys.argv[4]));print('VALID')

@@ -10,7 +10,7 @@ def add(method,params,title=None):
     events.extend([ev,{'type':'after','callId':str(seq)}])
 for group in json.loads(sys.argv[2]):
     add('evaluateExpression',{'arg':{'value':{'s':'ROUND11_BEGIN:'+group}}})
-    for kind,value in expected(group):
+    for kind,value in (expected(group) if group in json.loads(sys.argv[4]) else []):
         if kind=='environment':add('evaluateExpression',{'expression':'()=>({focus:document.hasFocus()})'})
         elif kind=='key':add('keyboardPress',{'key':value})
         elif kind=='scroll':add('waitForSelector',{'selector':value},'Scroll into view')
