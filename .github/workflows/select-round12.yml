@@ -65,6 +65,9 @@ jobs:
           auditor=$?
           echo "$auditor" > .work/round12-summary/auditor-exit.txt
           if [ "$runner" -ne 0 ] || [ "$auditor" -ne 0 ]; then exit 1; fi
+          ROUND12_EVIDENCE=.work/select-round12 node --test tests/select-round12/evidence.test.cjs
+          python tests/select-round12-review/trace-counterexamples.py
+          node tests/select-round12-review/semantic-counterexamples.cjs .work/select-round12/results.json
           python tests/select-round12/privacy-check.py .work/select-round12
       - uses: actions/upload-artifact@v4
         if: success()

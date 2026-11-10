@@ -136,7 +136,7 @@ async function trial(browser,s){
   row.samples.beforeHistory=await snapshot(t);
   await step('pointer-history',()=>h.click());
   row.samples.beforeFocus=await snapshot(t);
-  await step('acquire',async()=>{row.tabRoute=[];if(s.condition==='F'){for(let i=0;i<40;i++){await p.keyboard.press('Tab');row.tabRoute.push(await snapshot(t));if(row.tabRoute.at(-1).focused)break;}assert(row.tabRoute.at(-1)?.focused,'Tab did not reach Select');}else await t.focus();});
+  await step('acquire',async()=>{row.tabRoute=[];if(s.condition==='F'){for(let i=0;i<2;i++){await p.keyboard.press('Tab');row.tabRoute.push(await snapshot(t));}assert(row.tabRoute.length===2&&row.tabRoute[0].active?.tag==='INPUT'&&row.tabRoute[0].active?.type==='checkbox'&&row.tabRoute[1].focused,'registered two-Tab route mismatch');}else await t.focus();});
   row.acquisition=await snapshot(t);
   await step('open',async()=>{
    await p.keyboard.press('Space');

@@ -33,12 +33,17 @@ function inspect(d,expected){
   c(eq(Object.keys(r.samples||{}).sort(),['beforePrelude','beforePhoto','afterPhoto','beforeStyleNormalization','afterStyleNormalization','beforeHistory','beforeFocus','open'].sort()),'snapshot inventory');
   const snaps=[...Object.values(r.samples||{}),r.acquisition,r.final,r.paint?.captureSnapshot,...(r.tabRoute||[])];
   for(const s of snaps){c(snapshotErrors(s).length===0,'snapshot');c(typeof s?.trigger?.computed?.boxShadow==='string','box shadow');}
+  const ordered=[r.samples?.beforePrelude,...(r.operations||[]).flatMap(o=>[o.before?.select,o.after?.select]),r.samples?.beforePhoto,r.samples?.afterPhoto,r.samples?.beforeStyleNormalization,r.samples?.afterStyleNormalization,r.samples?.beforeHistory,r.samples?.beforeFocus,...(r.tabRoute||[]),r.acquisition,r.samples?.open,r.final,r.paint?.captureSnapshot];
+  c(ordered.every((x,i)=>Number.isFinite(x?.time)&&(i===0||x.time>=ordered[i-1]?.time)),'snapshot chronology');
+  c(r.samples?.beforeFocus?.focused===false,'beforeFocus unfocused');
+  c(r.steps?.every((x,i)=>Number.isFinite(x.started)&&Number.isFinite(x.finished)&&x.finished>=x.started&&(i===0||x.started>=r.steps[i-1].finished)),'step chronology');
   c(r.acquisition?.focused===true&&r.acquisition?.expanded==='false','focus target');c(r.samples?.open?.expanded==='true'&&r.final?.expanded==='false','menu lifecycle');
-  c(r.condition==='F'?r.tabRoute?.length>0&&r.tabRoute.length<=40&&r.tabRoute.at(-1)?.focused:r.tabRoute?.length===0,'Tab route');
+  c(r.condition==='F'?r.tabRoute?.length===2&&r.tabRoute[0]?.active?.tag==='INPUT'&&r.tabRoute[0]?.active?.type==='checkbox'&&r.tabRoute[1]?.focused:r.tabRoute?.length===0,'Tab route');
   c(Array.isArray(r.events)&&r.events.length>0&&r.overflow===false,'events');
   c(r.events?.every((e,i)=>e.seq===i+1&&Number.isFinite(e.time)&&(i===0||e.time>=r.events[i-1].time)),'event order');
   const ev=r.events?.filter(e=>['input','change'].includes(e.kind)&&e.target?.section==='Switch');
   c(ev?.length===ops.length*2,'input/change count');
+  c(ev?.every(e=>e.trusted===true&&e.target?.tag==='INPUT'&&typeof e.target?.checked==='boolean'&&e.target?.disabled===false),'trusted checkbox events');
   for(let i=0;i<ops.length;i++)c(ev?.[2*i]?.kind==='input'&&ev?.[2*i+1]?.kind==='change'&&ev?.[2*i]?.target?.checked===ops[i].endsWith('on')&&ev?.[2*i+1]?.target?.checked===ops[i].endsWith('on'),'input/change state');
   c(typeof r.paint?.pass==='boolean'&&Number.isInteger(r.paint?.changed)&&r.paint.changed>=0,'pixels');
   c(r.paint?.active===r.paint?.captureSnapshot?.focused&&r.paint?.visible===r.paint?.captureSnapshot?.focusVisible,'paint state');
@@ -46,7 +51,7 @@ function inspect(d,expected){
  for(let i=1;i<=plan.repeats;i++){
   const a=d.rows?.find(r=>r.id===`A-${i}`)?.samples?.beforeFocus;
   for(const cond of plan.conditions){const b=d.rows?.find(r=>r.id===`${cond}-${i}`)?.samples?.beforeFocus;
-   check(a&&b&&['html','scroll','viewport','font','theme','hasFocus','visibility'].every(k=>eq(a[k],b[k]))&&['trigger','hidden'].every(e=>['rect','computed'].every(k=>eq(a[e]?.[k],b[e]?.[k]))),'target equivalence:'+cond+':'+i);
+   check(a&&b&&['html','scroll','viewport','font','theme','hasFocus','visibility'].every(k=>eq(a[k],b[k]))&&['trigger','hidden'].every(e=>['rect','computed'].every(k=>eq(a[e]?.[k],b[e]?.[k])))&&['rect','computed'].every(k=>eq(a.disabled?.[0]?.[k],b.disabled?.[0]?.[k])),'target equivalence:'+cond+':'+i);
   }
  }
  return errors;

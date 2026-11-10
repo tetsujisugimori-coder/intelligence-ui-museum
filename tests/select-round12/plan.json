@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "select-round12-minimal-pilot-v1",
+  "id": "select-round12-minimal-formal-v1",
   "dateJST": "2026-11-10",
   "parentIssue": 28,
   "issue": 41,
@@ -71,5 +71,15 @@
     "E",
     "F",
     "G"
+  ],
+  "phase": "formal",
+  "tabRoute": "exactly2: Select checkbox then Select trigger",
+  "unperformed": [
+    "390/765/1280 widths",
+    "reduced motion",
+    "Windows actual PC",
+    "physical input",
+    "iPhone Safari",
+    "observer-off"
   ]
 }
