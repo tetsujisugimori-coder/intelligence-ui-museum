@@ -55,7 +55,7 @@ jobs:
           node --test tests/select-round12/privacy.test.cjs
           node --check tests/select-round13/run.cjs
           node --check tests/select-round13/audit.cjs
-          python -m py_compile tests/select-round13/trace-check.py
+          python -c 'import ast,pathlib; ast.parse(pathlib.Path("tests/select-round13/trace-check.py").read_text())'
       - name: Run paired diagnosis and original audit
         id: evidence
         shell: bash
