@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "id": "select-round11-b2-disabled-noop-ablation-v1",
+  "dateJST": "2026-11-10",
+  "parentIssue": 28,
+  "issue": 39,
+  "baselineMain": "a373160f9d7e1b726b51d3a3f6de3e65024699c7",
+  "repeats": 3,
+  "viewport": {
+    "width": 375,
+    "height": 1000
+  },
+  "theme": "light",
+  "rootPercent": 100,
+  "deviceScaleFactor": 1,
+  "engine": "webkit",
+  "sdkVersion": "0.2.2",
+  "playwright": "1.56.1",
+  "factors": [
+    "reduced-only",
+    "noop-addition"
+  ],
+  "arms": {
+    "reduced-only": [
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "SwitchPrefix",
+          "SwitchDisabled"
+        ],
+        "groups": [
+          "environment"
+        ],
+        "omitDisabledNoop": true
+      },
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "SwitchPrefix",
+          "SwitchDisabled"
+        ],
+        "groups": [
+          "environment",
+          "SwitchDisabled"
+        ],
+        "omitDisabledNoop": true
+      }
+    ],
+    "noop-addition": [
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "SwitchPrefix",
+          "SwitchDisabled"
+        ],
+        "groups": [
+          "environment",
+          "SwitchDisabled"
+        ],
+        "omitDisabledNoop": true
+      },
+      {
+        "prelude": false,
+        "emptyStyle": false,
+        "preScreenshot": false,
+        "fullProbe": true,
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "SwitchPrefix",
+          "SwitchDisabled"
+        ],
+        "groups": [
+          "environment",
+          "SwitchDisabled"
+        ],
+        "omitDisabledNoop": false
+      }
+    ]
+  },
+  "expectedSlotsPerEnvironment": 12,
+  "order": "fresh context and page per trial; iterations 1..3, factors in listed order; arms 0->1 on odd iterations, arms 1->0 on even iterations; reuse browser only",
+  "target": "Museum #Select [role=button] with pointer-history Select h2 then programmatic locator.focus, Space, Escape",
+  "domMarkerSelectors": [
+    "#Select .controls input[type=\"checkbox\"]",
+    "#official-select"
+  ],
+  "sequence": [
+    "goto",
+    "execute preregistered groups in order; before/after snapshots for every group",
+    "normalize h2 center + blur",
+    "snapshot before pre-screenshot",
+    "optional screenshot",
+    "snapshot after pre-screenshot",
+    "optional common clearing of empty style markers in both normalized-prelude arms",
+    "optional empty-style marker diagnostic intervention",
+    "snapshot immediately before pointer history",
+    "ordinary h2 click",
+    "snapshot immediately before focus",
+    "trigger.focus",
+    "acquisition",
+    "Space/open",
+    "Escape/close",
+    "final snapshot",
+    "paint capture snapshot after ring scroll and before suppression (common observer)",
+    "four-PNG ring",
+    "trace and original artifacts"
+  ],
+  "invariantPolicy": {
+    "all": "Common environment check and target empty-style normalization in both arms. Compare target DOM/geometry/computed/scroll and focus conditions. Document-wide differences and browser internal states are NOT proven equal. A group is a bundle, never a single operation."
+  },
+  "guards": [
+    "No auto expansion if equivalence is UNCONFIRMED",
+    "Do not treat focus-visible=false alone as product defect",
+    "Old persistent option-click offscreen NOT_TESTED",
+    "No force click, arbitrary sleeps, app/SDK/lock changes",
+    "All OS are separate populations",
+    "Independent evidence review required before causal conclusion",
+    "Stage 3 HOLD / root cause UNKNOWN / #23 not accepted",
+    "For the normalized prelude comparison, preserve both pre/post normalization snapshots and do not claim removing empty attrs is behaviorally neutral."
+  ],
+  "nonGoals": [
+    "Real iPhone Safari",
+    "physical keyboard/touch",
+    "VoiceOver",
+    "SDK isolation",
+    "full production acceptance"
+  ],
+  "domTargets": {
+    "root": "#Select",
+    "checkbox": "#Select .controls input[type=\"checkbox\"]",
+    "valueInput": "#official-select",
+    "trigger": "#Select .stage [role=button]"
+  },
+  "domIdentityNote": "Value input has no type attribute and DOM type=text; hidden means aria-hidden=true, tabindex=-1 and SDK sr-only class. Checkbox is enabled and unchecked.",
+  "partB": "Single-operation ablation: disabled DOM no-op omitted versus preserved. Both arms end OFF/enabled. Include none-versus-check/uncheck concurrent control. Two comparisons x 3 pairs =12. Does not isolate each checkbox input event or browser internal modality.",
+  "frozenDisabledDOMClicks": "Original Button/Switch disabled no-op assertions retained as historical operations, not substitutes for successful interaction. Select uses normal pointer/keyboard/locator focus only.",
+  "observerAmendment": "v1 adds group snapshots only to intervention. v2 observes identical named groups and before/after snapshots in both arms; control skips only historical callback. v1 pilot retained and not pooled. Additional observer calls remain an intervention in both arms.",
+  "phase": "B2",
+  "selectionEvidence": {
+    "head": "9f0e2e9e937605a865116177d386d93be6ee9b66",
+    "population": "local Linux supplemental",
+    "B": "18 complete, audit PASS, all9 pairs target equivalent; prefix-only/disabled-only each3/3 visible-to-absent; add-disabled both arms absent3/3."
+  },
+  "individualFollowup": "Stop after this registered B2; report remaining two-operation transition as candidate, no root-cause assertion. Further individual event/state inference requires round12."
+}
