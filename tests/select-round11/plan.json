@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "select-round11-operation-groups-v1",
+  "id": "select-round11-operation-groups-v2-balanced-observer",
   "dateJST": "2026-11-10",
   "parentIssue": 28,
   "issue": 39,
@@ -34,7 +34,11 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "layout"
+        ]
       },
       {
         "prelude": true,
@@ -45,7 +49,11 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "layout"
+        ]
       }
     ],
     "Button": [
@@ -57,7 +65,11 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "Button"
+        ]
       },
       {
         "prelude": true,
@@ -68,7 +80,11 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "Button"
+        ]
       }
     ],
     "Badge": [
@@ -80,7 +96,11 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "Badge"
+        ]
       },
       {
         "prelude": true,
@@ -91,7 +111,11 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "Badge"
+        ]
       }
     ],
     "Alert": [
@@ -103,7 +127,11 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "Alert"
+        ]
       },
       {
         "prelude": true,
@@ -114,7 +142,11 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "Alert"
+        ]
       }
     ],
     "Switch": [
@@ -126,7 +158,11 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "Switch"
+        ]
       },
       {
         "prelude": true,
@@ -137,7 +173,11 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "Switch"
+        ]
       }
     ],
     "full": [
@@ -149,7 +189,15 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "layout",
+          "Button",
+          "Badge",
+          "Alert",
+          "Switch"
+        ]
       },
       {
         "prelude": true,
@@ -164,7 +212,15 @@
         "emptyStyle": false,
         "preScreenshot": false,
         "fullProbe": true,
-        "clearEmptyStyle": true
+        "clearEmptyStyle": true,
+        "observedGroups": [
+          "environment",
+          "layout",
+          "Button",
+          "Badge",
+          "Alert",
+          "Switch"
+        ]
       }
     ]
   },
@@ -224,5 +280,6 @@
   },
   "domIdentityNote": "Value input has no type attribute and DOM type=text; hidden means aria-hidden=true, tabindex=-1 and SDK sr-only class. Checkbox is enabled and unchecked.",
   "partB": "NOT_STARTED. Select only groups with reproducible differential and confirmed target equivalence; preregister a separate plan before B. Otherwise independent review selects next minimal comparison.",
-  "frozenDisabledDOMClicks": "Original Button/Switch disabled no-op assertions retained as historical operations, not substitutes for successful interaction. Select uses normal pointer/keyboard/locator focus only."
+  "frozenDisabledDOMClicks": "Original Button/Switch disabled no-op assertions retained as historical operations, not substitutes for successful interaction. Select uses normal pointer/keyboard/locator focus only.",
+  "observerAmendment": "v1 adds group snapshots only to intervention. v2 observes identical named groups and before/after snapshots in both arms; control skips only historical callback. v1 pilot retained and not pooled. Additional observer calls remain an intervention in both arms."
 }
