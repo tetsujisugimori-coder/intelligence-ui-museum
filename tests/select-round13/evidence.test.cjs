@@ -8,6 +8,16 @@ const original=JSON.parse(fs.readFileSync(path.join(root,'results.json')));
 const expected={head:original.head,platform:original.system.platform,engine:original.engine,exit:0};
 test('complete actual evidence has no semantic errors',()=>assert.deepEqual(inspect(original,expected),[]));
 const faults={
+ 'pseudo outline tampered':d=>{d.rows[0].transitions[1].style.afterOutline='rgb(1, 2, 3) solid 99px'},
+ 'pseudo shadow tampered':d=>{d.rows[0].transitions[1].style.afterShadow='rgb(1, 2, 3) 0px 0px 99px 20px'},
+ 'pair focus-visible tampered':d=>{d.pairs[0].arms[0].transition[1].focusVisible=!d.pairs[0].arms[0].transition[1].focusVisible},
+ 'pair condition tampered':d=>{d.pairs[0].condition='D'},
+ 'pair iteration tampered':d=>{d.pairs[0].iteration=2},
+ 'pair arm tampered':d=>{d.pairs[0].arms[0].observer='on'},
+ 'pair identity tampered':d=>{d.pairs[0].arms[0].id='B-off-1'},
+ 'pair phase tampered':d=>{d.pairs[0].arms[0].transition[1].phase='afterEscape'},
+ 'pair aggregate missing':d=>{delete d.pairs},
+ 'old schema cannot claim independent pseudo coverage':d=>{d.schema=1},
  'Space focus tampered':d=>{d.rows[0].transitions[1].focused=!d.rows[0].transitions[1].focused},
  'Space focus-visible tampered':d=>{d.rows[0].transitions[1].focusVisible=!d.rows[0].transitions[1].focusVisible},
  'Escape focus-visible tampered':d=>{d.rows[0].transitions[2].focusVisible=!d.rows[0].transitions[2].focusVisible},
@@ -46,3 +56,5 @@ for(const suffix of ['-Select-on.png','-trace.zip'])test('reject missing origina
  const temp=fs.mkdtempSync(path.join(path.dirname(root),'negative-'));
  try{for(const f of fs.readdirSync(root))if(f!==original.rows[0].id+suffix)fs.linkSync(path.join(root,f),path.join(temp,f));let rejected=false;try{rejected=audit(temp,expected).diagnostic==='FAIL'}catch{rejected=true}assert.ok(rejected)}finally{fs.rmSync(temp,{recursive:true,force:true})}
 });
+
+for(const i of [0,1,2])for(const field of ['afterOutline','afterShadow'])test('reject independent pseudo snapshot '+i+' '+field,()=>{const d=structuredClone(original);const s=[d.rows[0].acquisition,d.rows[0].samples.open,d.rows[0].final][i];s.trigger.computed[field]+=' tampered';assert.ok(inspect(d,expected).includes(d.rows[0].id+':transition snapshot pseudo CSS:'+d.rows[0].transitions[i].phase));});

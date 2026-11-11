@@ -7,6 +7,7 @@ const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),eq=(a,b)=>JSON
 const expectedOps=plan.histories;
 function inspect(d,expected){
  const errors=[],check=(v,k)=>{if(!v)errors.push(k)};
+ check(d.schema===2,'schema 2 independent pseudo CSS required');
  check(eq(d.plan,plan),'plan');check(d.planHash===hash(fs.readFileSync(path.join(__dirname,'plan.json'))),'plan hash');
  check(d.head===expected.head&&/^[a-f0-9]{40}$/.test(d.head||''),'head');check(d.system?.platform===expected.platform,'platform');check(d.engine===expected.engine,'engine');
  check(d.dirty===''&&!d.fatal&&d.browserClosed===true&&d.exitCode===0&&expected.exit===0&&d.validation?.length===0,'completion');
@@ -65,6 +66,8 @@ function inspect(d,expected){
    c(t&&s&&['focused','focusVisible','hasFocus','expanded'].every(k=>eq(t[k],s[k])),'transition snapshot state:'+phases[i]);
    c(t&&s&&eq(t.rect,s.trigger?.rect)&&eq(t.scroll,s.scroll)
     &&t.style?.outline===s.trigger?.computed?.outline&&t.style?.shadow===s.trigger?.computed?.boxShadow,'transition snapshot geometry/style:'+phases[i]);
+   c(t&&s&&typeof s.trigger?.computed?.afterOutline==='string'&&typeof s.trigger?.computed?.afterShadow==='string'
+    &&t.style?.afterOutline===s.trigger.computed.afterOutline&&t.style?.afterShadow===s.trigger.computed.afterShadow,'transition snapshot pseudo CSS:'+phases[i]);
   }
   c(tr?.[0]?.time>=r.acquisition?.time&&tr?.[0]?.time<=tr?.[1]?.time
    &&tr?.[1]?.time<=r.samples?.open?.time&&r.samples?.open?.time<=tr?.[2]?.time
@@ -80,6 +83,16 @@ function inspect(d,expected){
    &&['trigger','hidden'].every(e=>['rect','computed'].every(k=>eq(a[e]?.[k],b[e]?.[k])))
    &&['rect','computed'].every(k=>eq(a.disabled?.[0]?.[k],b.disabled?.[0]?.[k])),'observer pair equivalence:'+condition+':'+iteration);
  }
+ // Recalculate the aggregate from trial identities and transition values. Do not
+ // accept producer summaries, reordered/missing arms, extra fields, or new claims.
+ const pairs=plan.conditions.flatMap(condition=>Array.from({length:plan.repeats},(_,i)=>({
+  condition,iteration:i+1,arms:plan.observerArms.map(observer=>{
+   const r=d.rows?.find(x=>x.id===`${condition}-${observer}-${i+1}`);
+   return {observer,id:r?.id,diagnostic:r?.classification?.diagnostic,
+    transition:r?.transitions?.map(t=>({phase:t.phase,focused:t.focused,focusVisible:t.focusVisible,expanded:t.expanded}))};
+  }),causalStatus:'UNKNOWN'
+ })));
+ check(eq(d.pairs,pairs),'pairs recomputation');
  return errors;
 }
 function audit(root,expected){

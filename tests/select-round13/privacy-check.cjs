@@ -77,7 +77,7 @@ function inspectEvidence(root){
  root=path.resolve(root);requireSafe(!fs.lstatSync(root).isSymbolicLink(),'symlink-root');
  const read=n=>{requireSafe(safeName(n)&&!n.includes('/'),'unsafe-file-name');const f=path.join(root,n),s=fs.lstatSync(f);requireSafe(s.isFile()&&!s.isSymbolicLink()&&s.size<64*1024*1024,'unsafe-file');return fs.readFileSync(f)};
  const manifest=JSON.parse(read('SHA256SUMS.json')),d=JSON.parse(read('results.json'));
- requireSafe(d.exitCode===0&&!d.fatal&&!d.dirty&&d.browserClosed===true&&['webkit','chromium'].includes(d.engine)&&['linux','win32'].includes(d.system?.platform),'incomplete-producer');
+ requireSafe(d.schema===2&&d.exitCode===0&&!d.fatal&&!d.dirty&&d.browserClosed===true&&['webkit','chromium'].includes(d.engine)&&['linux','win32'].includes(d.system?.platform),'incomplete-producer');
  requireSafe(d.rows?.length===18&&d.rows.every(r=>r.input==='Playwright automated, NOT physical'&&r.cleanup===true&&r.status==='COMPLETE'&&!r.error&&!r.captureError&&Array.isArray(r.pageErrors)&&r.pageErrors.length===0),'synthetic-provenance');
  const expected=expectedArtifacts();
  requireSafe(JSON.stringify(Object.keys(manifest).sort())===JSON.stringify([...expected].sort()),'manifest-allowlist');
@@ -99,7 +99,7 @@ function inspectEvidence(root){
   requireSafe(hash(git(['show',d.head+':'+f]))===h,'source-provenance');
  }
  // Capture code must be the currently reviewed source even when auditing an older run.
- for(const f of ['run.cjs','audit.cjs','trace-check.py','plan.json'])requireSafe(d.sources?.['tests/select-round13/'+f]===hash(fs.readFileSync(path.join(__dirname,f))),'capture-source-changed');
+ for(const f of ['run.cjs','audit.cjs','trace-check.py','plan.json','snapshot.cjs'])requireSafe(d.sources?.['tests/select-round13/'+f]===hash(fs.readFileSync(path.join(__dirname,f))),'capture-source-changed');
  const build=new Map();for(const [n,h]of Object.entries(d.build||{})){requireSafe(safeName(n),'unsafe-build-path');const b=fs.readFileSync(path.join(repo,'.work/v10/dist',n));requireSafe(hash(b)===h,'build-provenance');build.set(n,h)}requireSafe(build.has('index.html'),'missing-build');
  const source=fs.readFileSync(path.join(__dirname,'run.cjs'));
  for(const n of expected){const b=read(n);requireSafe(hash(b)===manifest[n],'artifact-hash');if(n.endsWith('.json'))inspectObject(JSON.parse(b));else if(n.endsWith('.zip'))inspectTrace(zipEntries(path.join(root,n)),build,source,d.rows.find(r=>r.traceFile===n)?.privacy.allowedOrigin,d.engine);else if(n.endsWith('.png'))inspectPNG(b);else requireSafe(false,'unknown-file-type')}

@@ -9,8 +9,9 @@ const planFile='plan.json';
 const engine=process.env.ROUND13_ENGINE||'webkit';
 if(!['webkit','chromium'].includes(engine))throw Error('engine');
 const plan=require('./'+planFile);
-const {selectors,capture,requireSnapshot,styleState}=require('../select-round12/targets.cjs');
+const {selectors,requireSnapshot,styleState}=require('../select-round12/targets.cjs');
 const {probe}=require('../select-round12/probe.cjs');
+const {capture}=require('./snapshot.cjs');
 const repo=path.resolve(__dirname,'../..');
 const pwRoot=path.join(repo,'tools/stage-a-browser/node_modules');
 const output=path.resolve(process.env.ROUND13_OUT||'.work/select-round13');
@@ -80,7 +81,7 @@ const serve=http.createServer((req,res)=>{
  }catch{res.writeHead(404).end();}
 });
 const data={
- schema:1,engine,plan,planHash:hash(fs.readFileSync(path.join(__dirname,planFile))),
+ schema:2,engine,plan,planHash:hash(fs.readFileSync(path.join(__dirname,planFile))),
  head:git(['rev-parse','HEAD']),tree:git(['rev-parse','HEAD^{tree}']),dirty:git(['status','--porcelain']),
  system:{platform:process.platform,os:os.release(),node:process.version},
  product:{},build:{},sources:{},rows:[],started:new Date().toISOString(),

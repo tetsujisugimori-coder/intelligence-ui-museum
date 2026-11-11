@@ -35,6 +35,7 @@ jobs:
         with:
           node-version: '22'
       - name: Fixed product and browsers
+        id: prepare
         shell: bash
         run: |
           python scripts/prepare-work.py
@@ -47,11 +48,13 @@ jobs:
             (cd tools/stage-a-browser && npx playwright install $ROUND13_ENGINE)
           fi
       - name: Freeze older evidence and test release gate
+        id: freeze
         shell: bash
         run: |
           git diff --exit-code 56faa22556f9ec03350245763c2d173f8cc0ad6e -- apps archive reviews legacy evidence tests/select-round12 tests/select-round11 tests/select-round10 tools/stage-a-browser/package-lock.json
           python scripts/verify-migration.py
           node --test tests/select-round13/privacy.test.cjs
+          node --test tests/select-round13/ci-gate.test.cjs
           node --test tests/select-round12/privacy.test.cjs
           node --check tests/select-round13/run.cjs
           node --check tests/select-round13/audit.cjs
@@ -61,6 +64,8 @@ jobs:
         shell: bash
         run: |
           mkdir -p .work/round13-status
+          echo "raw_upload=false" >> "$GITHUB_OUTPUT"
+          for phase in runner auditor privacy contracts final-privacy; do echo NOT_RUN > ".work/round13-status/$phase-exit.txt"; done
           set +e
           ROUND13_OUT=.work/select-round13 node tests/select-round13/run.cjs > .work/round13-runner.log 2>&1
           runner=$?
@@ -71,23 +76,42 @@ jobs:
           ROUND13_EXPECT_HEAD=$(git rev-parse HEAD) node tests/select-round13/privacy-check.cjs .work/select-round13 > .work/round13-privacy.json
           privacy=$?
           echo "$privacy" > .work/round13-status/privacy-exit.txt
-          echo "privacy=$privacy" >> "$GITHUB_OUTPUT"
           node -e 'const fs=require("fs"); for(const name of ["round13-audit","round13-privacy"]){try{const a=JSON.parse(fs.readFileSync(".work/"+name+".json"));console.log(JSON.stringify({name,status:a.diagnostic||a.status,errors:a.errors?.length||0,reason:a.reason||null}));}catch{console.log(name+": unreadable");}}'
-          if [ "$runner" -ne 0 ] || [ "$auditor" -ne 0 ] || [ "$privacy" -ne 0 ]; then exit 1; fi
-          ROUND13_EVIDENCE=.work/select-round13 node --test tests/select-round13/evidence.test.cjs
-          ROUND13_EXPECT_HEAD=$(git rev-parse HEAD) node tests/select-round13/privacy-check.cjs .work/select-round13
+          ROUND13_EVIDENCE=.work/select-round13 node --test tests/select-round13/evidence.test.cjs > .work/round13-contracts.log 2>&1
+          contracts=$?
+          echo "$contracts" > .work/round13-status/contracts-exit.txt
+          ROUND13_EXPECT_HEAD=$(git rev-parse HEAD) node tests/select-round13/privacy-check.cjs .work/select-round13 > .work/round13-final-privacy.json
+          final_privacy=$?
+          echo "$final_privacy" > .work/round13-status/final-privacy-exit.txt
+          if [ "$runner" -ne 0 ] || [ "$auditor" -ne 0 ] || [ "$privacy" -ne 0 ] || [ "$contracts" -ne 0 ] || [ "$final_privacy" -ne 0 ]; then exit 1; fi
+          echo "raw_upload=true" >> "$GITHUB_OUTPUT"
       - name: Upload privacy-approved raw evidence
-        if: always() && steps.evidence.outputs.privacy == '0'
+        if: always() && steps.evidence.outcome == 'success' && steps.evidence.outputs.raw_upload == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: select-round13-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
           path: .work/select-round13/
           retention-days: 90
           if-no-files-found: error
+      - name: Preserve mandatory step outcomes
+        if: always()
+        shell: bash
+        env:
+          PREPARE_OUTCOME: ${{ steps.prepare.outcome }}
+          FREEZE_OUTCOME: ${{ steps.freeze.outcome }}
+          EVIDENCE_OUTCOME: ${{ steps.evidence.outcome }}
+        run: |
+          mkdir -p .work/round13-status
+          printf '%s\n' "$PREPARE_OUTCOME" > .work/round13-status/prepare-outcome.txt
+          printf '%s\n' "$FREEZE_OUTCOME" > .work/round13-status/freeze-outcome.txt
+          printf '%s\n' "$EVIDENCE_OUTCOME" > .work/round13-status/evidence-outcome.txt
+          for phase in runner auditor privacy contracts final-privacy; do
+            test -f ".work/round13-status/$phase-exit.txt" || echo NOT_RUN > ".work/round13-status/$phase-exit.txt"
+          done
       - name: Upload status only
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: select-round13-status-${{ matrix.os }}-${{ matrix.engine }}
-          path: .work/round13-status/*-exit.txt
+          path: .work/round13-status/*.txt
           if-no-files-found: warn
