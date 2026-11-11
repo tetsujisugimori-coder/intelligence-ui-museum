@@ -80,7 +80,7 @@ function inspectEvidence(root){
  root=path.resolve(root);requireSafe(!fs.lstatSync(root).isSymbolicLink(),'symlink-root');
  const read=n=>{requireSafe(safeName(n)&&!n.includes('/'),'unsafe-file-name');const f=path.join(root,n),s=fs.lstatSync(f);requireSafe(s.isFile()&&!s.isSymbolicLink()&&s.size<64*1024*1024,'unsafe-file');return fs.readFileSync(f)};
  const manifest=JSON.parse(read('SHA256SUMS.json')),d=JSON.parse(read('results.json'));
- requireSafe(d.schema===1&&d.exitCode===0&&!d.fatal&&!d.dirty&&d.browserClosed===true&&['webkit','chromium'].includes(d.engine)&&['linux','win32'].includes(d.system?.platform),'incomplete-producer');
+ requireSafe(d.schema===2&&d.exitCode===0&&!d.fatal&&!d.dirty&&d.browserClosed===true&&['webkit','chromium'].includes(d.engine)&&['linux','win32'].includes(d.system?.platform),'incomplete-producer');
  requireSafe(d.rows?.length===plan[d.phase]?.slotsPerEnvironment&&d.rows.every(r=>r.input==='Playwright automated, NOT physical'&&r.cleanup===true&&r.status==='COMPLETE'&&!r.error&&!r.captureError&&Array.isArray(r.pageErrors)&&r.pageErrors.length===0),'synthetic-provenance');
  const expected=expectedArtifacts(d.phase);
  requireSafe(JSON.stringify(Object.keys(manifest).sort())===JSON.stringify([...expected].sort()),'manifest-allowlist');

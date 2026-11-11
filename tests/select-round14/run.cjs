@@ -48,7 +48,7 @@ const serve=http.createServer((req,res)=>{
  }catch{res.writeHead(404).end();}
 });
 const data={
- schema:1,engine,phase,plan,planHash:hash(fs.readFileSync(path.join(__dirname,planFile))),
+ schema:2,engine,phase,plan,planHash:hash(fs.readFileSync(path.join(__dirname,planFile))),
  head:git(['rev-parse','HEAD']),tree:git(['rev-parse','HEAD^{tree}']),dirty:git(['status','--porcelain']),
  system:{platform:process.platform,os:os.release(),node:process.version},
  product:{},build:{},sources:{},rows:[],started:new Date().toISOString(),
@@ -91,9 +91,9 @@ async function trial(browser,s){
    if(s.arm==='A3'){iv.image=s.id+'-intermediate.png';await p.screenshot({path:path.join(output,iv.image)});row.images.push(iv.image)}
    iv.apiEnd=mono();
   }
-  iv.apiDuration=iv.apiEnd===null?0:iv.apiEnd-iv.apiStart;iv.overrun=iv.budgetMs>0&&mono()-iv.start>iv.budgetMs;
-  if(iv.budgetMs>0){const left=iv.budgetMs-(mono()-iv.start);if(left>0)await new Promise(resolve=>setTimeout(resolve,left))}
-  iv.end=mono();row.finalStart=mono();row.final=await snapshot(t);row.finalEnd=mono();
+  iv.apiDuration=iv.apiEnd===null?0:iv.apiEnd-iv.apiStart;
+  if(iv.budgetMs>0){const left=iv.budgetMs-(mono()-row.steps.at(-1).end);if(left>0)await new Promise(resolve=>setTimeout(resolve,left))}
+  iv.end=mono();row.finalStart=mono();iv.elapsedMs=row.finalStart-row.steps.at(-1).end;iv.overrun=iv.budgetMs>0&&iv.elapsedMs>iv.budgetMs;row.final=await snapshot(t);row.finalEnd=mono();
   assert(row.final.expanded==='false','Select did not close');
   row.paint=await ring(p,t,row.id+'-Select');row.images.push(...row.paint.images);
   row.status='COMPLETE';

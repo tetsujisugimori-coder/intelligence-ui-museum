@@ -26,6 +26,7 @@ const faults={
  'focus-visible correlated alteration':x=>{const r=x.rows[0];r.final.focusVisible=r.final.trigger.focusVisible=!r.final.focusVisible;x.pairs=comparisons(x.rows,x.phase)},
  'CSS after alteration':x=>{x.rows[0].paint.afterShadow='fake'},
  'step insertion':x=>{x.rows[0].steps.push({...x.rows[0].steps[0],name:'extra-api'})},
+ 'post-wait delay disguise':x=>{const r=x.rows.find(r=>r.arm==='A1');r.intervention.end+=1000;r.finalStart+=1000;r.finalEnd+=1000;x.pairs=comparisons(x.rows,x.phase)},
  'no-op fake':x=>{x.rows.find(r=>r.arm==='A1').intervention.result='fake'},
 };
 for(const [name,mutate]of Object.entries(faults))test(name+' rejected',()=>{const x=structuredClone(d);mutate(x);assert.ok(inspect(x,expected).length,name)});

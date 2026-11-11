@@ -5,7 +5,7 @@ const {PNG}=require('../../tools/stage-a-browser/node_modules/playwright-core/li
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),eq=(a,b)=>JSON.stringify(a)===JSON.stringify(b),repo=path.resolve(__dirname,'../..');
 function inspect(d,expected){
  const errors=[],check=(v,k)=>{if(!v)errors.push(k)};
- check(d.schema===1&&eq(d.plan,plan)&&d.planHash===hash(fs.readFileSync(path.join(__dirname,'plan.json'))),'plan');
+ check(d.schema===2&&eq(d.plan,plan)&&d.planHash===hash(fs.readFileSync(path.join(__dirname,'plan.json'))),'plan');
  check(d.head===expected.head&&/^[a-f0-9]{40}$/.test(d.head||'')&&d.system?.platform===expected.platform&&d.engine===expected.engine,'provenance');
  check(d.dirty===''&&!d.fatal&&d.browserClosed===true&&d.exitCode===0&&expected.exit===0&&d.validation?.length===0,'completion');
  check(d.playwright===plan.playwright&&d.sdkVersion===plan.sdkVersion,'dependencies');check(d.stage3==='HOLD'&&d.rootCause==='UNKNOWN'&&d.productAcceptance==='NO','claims');
@@ -24,7 +24,8 @@ function inspect(d,expected){
   c(iv?.kind===(r.experiment==='caller'?'NONE':r.arm)&&iv.budgetMs===budget,'measurement group');
   c(Number.isFinite(iv?.start)&&iv.start>=r.steps.at(-1).end&&iv.end>=iv.start&&r.finalStart>=iv.end&&r.finalEnd>=r.finalStart,'intervention chronology');
   c(hasAPI?Number.isFinite(iv.apiStart)&&iv.apiStart>=iv.start&&iv.apiEnd>=iv.apiStart&&iv.end>=iv.apiEnd:iv.apiStart===null&&iv.apiEnd===null,'API presence/timing');
-  c(typeof iv.overrun==='boolean'&&iv.apiDuration===(hasAPI?iv.apiEnd-iv.apiStart:0),'API duration');
+  c(iv.elapsedMs===r.finalStart-r.steps.at(-1).end&&iv.overrun===(budget>0&&iv.elapsedMs>budget),'observed delay/overrun');
+  c(iv.apiDuration===(hasAPI?iv.apiEnd-iv.apiStart:0),'API duration');
   if(r.arm==='A1')c(iv.result===null,'no-op return');if(r.arm==='A2')c(snapshotErrors(iv.result).length===0&&iv.result.time<=r.final.time,'DOM intervention');
   if(r.arm==='A3')c(iv.image===r.id+'-intermediate.png','image intervention');
   c(r.paint.active===r.paint.captureSnapshot.focused&&r.paint.visible===r.paint.captureSnapshot.focusVisible,'paint state');
