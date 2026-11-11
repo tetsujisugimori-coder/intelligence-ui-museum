@@ -1,0 +1,1496 @@
+{
+  "originalHead": "6f29b3d4b0a1679e8f25264d0a18999305b825b0",
+  "environments": [
+    {
+      "artifact": "13793444907",
+      "platform": "win32",
+      "engine": "webkit",
+      "head": "6f29b3d4b0a1679e8f25264d0a18999305b825b0",
+      "tree": "f2b21b35a4db3e881ad7080a08f51354617ee9fe",
+      "trials": 18,
+      "manifestCount": 127,
+      "manifestAllMatch": true,
+      "groups": {
+        "A:off": [
+          {
+            "id": "A-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "A:on": [
+          {
+            "id": "A-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "B:off": [
+          {
+            "id": "B-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "B-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "B-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          }
+        ],
+        "B:on": [
+          {
+            "id": "B-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "B-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "B-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          }
+        ],
+        "D:off": [
+          {
+            "id": "D-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "D-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "D-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          }
+        ],
+        "D:on": [
+          {
+            "id": "D-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "D-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "D-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          }
+        ]
+      },
+      "semanticErrors": []
+    },
+    {
+      "artifact": "13794068428",
+      "platform": "win32",
+      "engine": "chromium",
+      "head": "6f29b3d4b0a1679e8f25264d0a18999305b825b0",
+      "tree": "f2b21b35a4db3e881ad7080a08f51354617ee9fe",
+      "trials": 18,
+      "manifestCount": 127,
+      "manifestAllMatch": true,
+      "groups": {
+        "A:off": [
+          {
+            "id": "A-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "A:on": [
+          {
+            "id": "A-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "B:off": [
+          {
+            "id": "B-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "B-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "B-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "B:on": [
+          {
+            "id": "B-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "B-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "B-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "D:off": [
+          {
+            "id": "D-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "D-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "D-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "D:on": [
+          {
+            "id": "D-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "D-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "D-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ]
+      },
+      "semanticErrors": []
+    },
+    {
+      "artifact": "13795252047",
+      "platform": "linux",
+      "engine": "webkit",
+      "head": "6f29b3d4b0a1679e8f25264d0a18999305b825b0",
+      "tree": "f2b21b35a4db3e881ad7080a08f51354617ee9fe",
+      "trials": 18,
+      "manifestCount": 127,
+      "manifestAllMatch": true,
+      "groups": {
+        "A:off": [
+          {
+            "id": "A-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "A:on": [
+          {
+            "id": "A-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "B:off": [
+          {
+            "id": "B-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "B-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "B-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          }
+        ],
+        "B:on": [
+          {
+            "id": "B-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "B-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "B-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          }
+        ],
+        "D:off": [
+          {
+            "id": "D-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "D-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "D-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          }
+        ],
+        "D:on": [
+          {
+            "id": "D-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "D-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          },
+          {
+            "id": "D-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              false
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "ABSENT"
+          }
+        ]
+      },
+      "semanticErrors": []
+    },
+    {
+      "artifact": "13795077451",
+      "platform": "linux",
+      "engine": "chromium",
+      "head": "6f29b3d4b0a1679e8f25264d0a18999305b825b0",
+      "tree": "f2b21b35a4db3e881ad7080a08f51354617ee9fe",
+      "trials": 18,
+      "manifestCount": 127,
+      "manifestAllMatch": true,
+      "groups": {
+        "A:off": [
+          {
+            "id": "A-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "A:on": [
+          {
+            "id": "A-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "A-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              true,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "B:off": [
+          {
+            "id": "B-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "B-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "B-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "B:on": [
+          {
+            "id": "B-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "B-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "B-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "D:off": [
+          {
+            "id": "D-off-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "D-off-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "D-off-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ],
+        "D:on": [
+          {
+            "id": "D-on-1",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "D-on-2",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          },
+          {
+            "id": "D-on-3",
+            "focus": [
+              true,
+              false,
+              true
+            ],
+            "focusVisible": [
+              false,
+              false,
+              true
+            ],
+            "documentFocus": [
+              true,
+              true,
+              true
+            ],
+            "outline": "VISIBLE"
+          }
+        ]
+      },
+      "semanticErrors": []
+    }
+  ],
+  "counterexamples": [
+    {
+      "name": "spaceFocus",
+      "oldErrors": [],
+      "newErrors": [
+        "A-off-1:transition snapshot state:afterSpace"
+      ]
+    },
+    {
+      "name": "spaceFocusVisible",
+      "oldErrors": [],
+      "newErrors": [
+        "A-off-1:transition snapshot state:afterSpace"
+      ]
+    },
+    {
+      "name": "escapeFocusVisible",
+      "oldErrors": [],
+      "newErrors": [
+        "A-off-1:transition snapshot state:afterEscape"
+      ]
+    }
+  ]
+}
