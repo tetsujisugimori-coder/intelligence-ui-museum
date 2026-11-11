@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "failures": [
+    "missing required image"
+  ]
+}

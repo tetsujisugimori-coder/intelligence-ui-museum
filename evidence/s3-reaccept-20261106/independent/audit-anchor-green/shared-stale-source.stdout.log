@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "failures": [
+    "source differs from trusted Git HEAD"
+  ]
+}

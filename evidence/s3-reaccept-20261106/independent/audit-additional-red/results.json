@@ -1,0 +1,104 @@
+{
+  "status": "FAIL",
+  "testedAt": "2026-11-06T10:53:34.666Z",
+  "evidenceKind": "SYNTHETIC validator fixtures; not real browser runs",
+  "gateHash": "a415f583c0de59f263cd6abb1741e4ce0ee9d0c370812a27bf93072f67c4b7b2",
+  "records": [
+    {
+      "name": "normal-synthetic-contract",
+      "expectedExit": 0,
+      "expectedReason": "",
+      "actualExit": 0,
+      "matched": true,
+      "report": {
+        "status": "PASS",
+        "failures": []
+      }
+    },
+    {
+      "name": "unhashed-result",
+      "expectedExit": 1,
+      "expectedReason": "required manifest entry missing: matrix/results.json",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "required manifest entry missing: matrix/results.json"
+        ]
+      }
+    },
+    {
+      "name": "missing-stage-log",
+      "expectedExit": 1,
+      "expectedReason": "required manifest entry missing: sdk.stdout.log",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "required manifest entry missing: sdk.stdout.log"
+        ]
+      }
+    },
+    {
+      "name": "duplicate-replacement-image",
+      "expectedExit": 1,
+      "expectedReason": "missing required image",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "missing required image"
+        ]
+      }
+    },
+    {
+      "name": "contradictory-focus-row",
+      "expectedExit": 1,
+      "expectedReason": "contradictory focus row",
+      "actualExit": 1,
+      "matched": true,
+      "report": {
+        "status": "FAIL",
+        "failures": [
+          "contradictory focus row"
+        ]
+      }
+    },
+    {
+      "name": "sdk-failed",
+      "expectedExit": 1,
+      "expectedReason": "SDK result invalid",
+      "actualExit": 0,
+      "matched": false,
+      "report": {
+        "status": "PASS",
+        "failures": []
+      }
+    },
+    {
+      "name": "duplicate-fault-engines",
+      "expectedExit": 1,
+      "expectedReason": "fault not rejected for expected reason",
+      "actualExit": 0,
+      "matched": false,
+      "report": {
+        "status": "PASS",
+        "failures": []
+      }
+    },
+    {
+      "name": "duplicate-focus-fault",
+      "expectedExit": 1,
+      "expectedReason": "missing focus fault",
+      "actualExit": 0,
+      "matched": false,
+      "report": {
+        "status": "PASS",
+        "failures": []
+      }
+    }
+  ]
+}

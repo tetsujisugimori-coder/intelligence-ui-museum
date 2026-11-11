@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "failures": [
+    "required manifest entry missing: matrix/results.json"
+  ]
+}
