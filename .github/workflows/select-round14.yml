@@ -55,6 +55,7 @@ jobs:
           node --test tests/select-round13/privacy.test.cjs tests/select-round13/ci-gate.test.cjs tests/select-round14/privacy.test.cjs tests/select-round14/ci-gate.test.cjs
           node --check tests/select-round14/run.cjs
           node --check tests/select-round14/audit.cjs
+          python tests/select-round14/archive-privacy.test.py
       - name: Pilot then preregistered formal trials
         id: evidence
         shell: bash

@@ -3,9 +3,15 @@ No archive is rewritten. Only aggregate status is printed/uploaded.
 """
 import hashlib,json,os,sys,urllib.request,zipfile,io,pathlib
 repo=os.environ['GITHUB_REPOSITORY']; run=os.environ['GITHUB_RUN_ID']; head=os.environ['EXPECTED_HEAD']; expected=os.environ['ARTIFACT_NAME']
+class NoCredentialRedirect(urllib.request.HTTPRedirectHandler):
+ def redirect_request(self,req,fp,code,msg,headers,newurl):
+  redirected=super().redirect_request(req,fp,code,msg,headers,newurl)
+  if redirected: redirected.remove_header('Authorization')
+  return redirected
+opener=urllib.request.build_opener(NoCredentialRedirect())
 def get(url):
  req=urllib.request.Request(url,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'})
- with urllib.request.urlopen(req) as response:return response.read()
+ with opener.open(req) as response:return response.read()
 artifacts=json.loads(get(f'https://api.github.com/repos/{repo}/actions/runs/{run}/artifacts?per_page=100'))['artifacts']
 matching=[a for a in artifacts if a['name']==expected]
 assert len(matching)==1,'artifact inventory'; a=matching[0]
