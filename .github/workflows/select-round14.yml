@@ -1,0 +1,116 @@
+name: Select round 14 measurement and focus caller diagnosis
+on:
+  push:
+    branches: [test/select-round14-measurement-caller]
+  pull_request:
+    paths: ['tests/select-round14/**', 'docs/select-round14/**', '.github/workflows/select-round14.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: select-round14-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  diagnosis:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2025, ubuntu-24.04]
+        engine: [webkit, chromium]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 75
+    env:
+      PYTHONUTF8: '1'
+      GIT_CONFIG_COUNT: '1'
+      GIT_CONFIG_KEY_0: core.autocrlf
+      GIT_CONFIG_VALUE_0: 'false'
+      ROUND14_ENGINE: ${{ matrix.engine }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Fixed product and browsers
+        id: prepare
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          npm --prefix .work/v10 ci --ignore-scripts --no-audit --no-fund
+          npm --prefix .work/v10 run build
+          npm --prefix tools/stage-a-browser ci --ignore-scripts --no-audit --no-fund
+          if [ '${{ runner.os }}' = 'Linux' ]; then
+            (cd tools/stage-a-browser && npx playwright install --with-deps $ROUND14_ENGINE)
+          else
+            (cd tools/stage-a-browser && npx playwright install $ROUND14_ENGINE)
+          fi
+      - name: Freeze earlier evidence and gate contracts
+        id: freeze
+        shell: bash
+        run: |
+          git diff --exit-code 78e6e99fa46274cae9435dae4483c5266ad6b021 -- apps archive reviews legacy evidence tools scripts package.json tests ':!tests/select-round14'
+          python scripts/verify-migration.py
+          node --test tests/select-round13/privacy.test.cjs tests/select-round13/ci-gate.test.cjs tests/select-round14/privacy.test.cjs tests/select-round14/ci-gate.test.cjs
+          node --check tests/select-round14/run.cjs
+          node --check tests/select-round14/audit.cjs
+      - name: Pilot then preregistered formal trials
+        id: evidence
+        shell: bash
+        run: node tests/select-round14/ci-run.cjs
+      - name: Upload only fully approved synthetic raw
+        if: always() && steps.prepare.outcome == 'success' && steps.freeze.outcome == 'success' && steps.evidence.outcome == 'success' && steps.evidence.outputs.raw_upload == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: select-round14-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            .work/round14-pilot/
+            .work/round14-formal/
+          retention-days: 90
+          if-no-files-found: error
+      - name: Preserve all mandatory outcomes
+        if: always()
+        shell: bash
+        env:
+          PREPARE: ${{ steps.prepare.outcome }}
+          FREEZE: ${{ steps.freeze.outcome }}
+          EVIDENCE: ${{ steps.evidence.outcome }}
+        run: |
+          mkdir -p .work/round14-status
+          printf '%s\n' "$PREPARE" > .work/round14-status/prepare-outcome.txt
+          printf '%s\n' "$FREEZE" > .work/round14-status/freeze-outcome.txt
+          printf '%s\n' "$EVIDENCE" > .work/round14-status/evidence-outcome.txt
+          for stage in pilot formal; do for phase in runner auditor privacy contracts final-privacy; do
+            test -f ".work/round14-status/$stage-$phase-exit.txt" || echo NOT_RUN > ".work/round14-status/$stage-$phase-exit.txt"
+          done; done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: select-round14-status-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/round14-status/*.txt
+          retention-days: 90
+          if-no-files-found: error
+  archive-readback:
+    needs: diagnosis
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2025, ubuntu-24.04]
+        engine: [webkit, chromium]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Independent original ZIP readback
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+          ARTIFACT_NAME: select-round14-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
+        run: python tests/select-round14/archive-readback.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: select-round14-archive-audit-${{ matrix.os }}-${{ matrix.engine }}
+          path: .work/archive-report.json
+          retention-days: 90

@@ -4,7 +4,7 @@
 
 実験の正本は `tests/select-round14/plan.json`。実行前commitとSHA-256で固定する。4 hosted環境それぞれpilot 8試行→正式72試行（各群3回）、別母数。時間制御W0を含むA0〜A4と、別実験caller OFF/ON。追加介入はEscape後、共通最終read前だけ。A4はtrace全体を介入する。共通最終read/画像も介入であり、A0を無観測とは呼ばない。
 
-200msの残余host待機で時間を揃える。実時間超過・DOM/幾何/scroll不一致は同等性未確認。3反復でゼロ効果を証明しない。最終輪郭の4枚画像は主snapshot後の共通画像測定で、blur/refocusを含む。最初の画像と後続測定を区別する。
+200msの残余host待機で時間を揃える。実時間超過・DOM/幾何/scroll不一致は同等性未確認。3反復でゼロ効果を証明しない。最終輪郭の4枚画像は主snapshot後の共通画像測定で、一時的な輪郭CSS抑制を含む。最初の画像と後続測定を区別する。
 
 probe ONだけがJS focus呼出し、stack、keyboard/focus/DOMイベント、Escape後のmicrotask/task/frame標識を採る。React commitはDOM変化からのproxy。SDK/Museum/browserの帰属をstackなしで断定しない。caller無効化、React直接hook、browser内部はNOT_TESTED。
 
