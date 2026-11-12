@@ -36,3 +36,10 @@ Node24自己単体6/6、既存契約17/17、実CLI保全正常exit0＋故障4件
 - 次回checkoutは仮merge `04f9391f6a0c47c5c26a1ad06a23c308ddfab75c`、tree `f26b613a67dacd25fe254dfd49a6c71a512ba430`（提出と一致）。実mergeではない。
 
 Reset原因UNKNOWN。グローバルreset衝突の根拠はなく製品処理は同期。クリック再試行で隠さず、次回は一回のclickイベント/座標/active/状態/描画frameを記録し最大2秒で初期状態を待つ。失敗時画像も保全する。文字拡大時の金額改行を目視確認し、表内横scrollで数値を保持する局所CSS修正を追加。初回失敗と未検証を後の成功で消さない。
+
+## 第3・4回の追加診断
+第3run43286507837の単一クリックtraceで、Resetへのmousedown時矩形459–539pxがmouseup時416–496pxへ43px上移動。scrollYは不変、mouseupは隣接summary、clickはsectionへ配送されてReset handlerに届かなかった。単純な完了待ち不足ではなく2秒後も旧状態。根本のnative blur/change因果は未確定。
+
+Queryは同値changeでも変更前snapshotを置換していたため、同値イベントを冪等にする局所修正を追加。同値synthetic changeの説明文・高さ不変を検査するが、native再現証明とは別。v11 CSSの表幅修正も継続確認。
+
+通常CIの構文不備はcheckout.withがrun stepへ移動した編集ミスと特定して修正。第4run43286772798では保全/build成功、Kanban旧runnerは参照資源の固定3ファイルだけをcopy/serveし新wave1.js/cssを欠落させcapture失敗。対象版HTMLに参照がある場合だけ2資源のcopy/serve/実HEAD hash監査を追加。旧版の3資源契約は維持し、画像基準・旧展示製品は変更しない。過去失敗は保持。

@@ -50,12 +50,13 @@ async function queryScenario(p,diagnostic){
  await c.locator('[data-q-add-group]').focus();await p.keyboard.press('Enter');assert.match(await state.innerText(),/一致 1件/);
  await c.locator('[data-q-root]').selectOption('OR');assert.match(await state.innerText(),/一致 3件/);
  await c.locator('[data-q-delete-group="1"]').click();assert.match(await state.innerText(),/一致 2件/);
+ const beforeNoop=await c.locator('[data-w1-before]').innerText(),beforeNoopHeight=await c.locator('[data-w1-before]').evaluate(e=>e.getBoundingClientRect().height);await c.locator('[data-q-root]').dispatchEvent('change');assert.equal(await c.locator('[data-w1-before]').innerText(),beforeNoop,'same-value synthetic change must preserve before snapshot');assert.equal(await c.locator('[data-w1-before]').evaluate(e=>e.getBoundingClientRect().height),beforeNoopHeight,'same-value synthetic change must preserve before height');if(diagnostic)diagnostic.sameValueSyntheticChange='PASS';
  if(diagnostic)await p.evaluate(()=>{
  const host=document.querySelector('[data-wave1="124"]'),reset=host.querySelector('[data-w1-reset]');
  const describe=e=>e&&e.nodeType===1?{tag:e.tagName,attrs:[...e.attributes].filter(a=>a.name.startsWith('data-')||a.name==='id').map(a=>[a.name,a.value])}:null;
- const snapshot=()=>({time:performance.now(),state:host.querySelector('[data-w1-state]').textContent,rect:reset.getBoundingClientRect().toJSON(),scroll:{x:scrollX,y:scrollY},active:describe(document.activeElement)});
+ const snapshot=()=>({time:performance.now(),state:host.querySelector('[data-w1-state]').textContent,beforeText:host.querySelector('[data-w1-before]').textContent,rect:reset.getBoundingClientRect().toJSON(),scroll:{x:scrollX,y:scrollY},active:describe(document.activeElement)});
  window.wave1ResetTrace={before:snapshot(),events:[]};
- for(const name of ['mousedown','mouseup','click'])document.addEventListener(name,e=>{const item={type:name,trusted:e.isTrusted,x:e.clientX,y:e.clientY,target:describe(e.target),path:e.composedPath().map(describe).filter(Boolean),capture:snapshot()};window.wave1ResetTrace.events.push(item);queueMicrotask(()=>item.microtask=snapshot());requestAnimationFrame(()=>item.nextAnimationFrame=snapshot());},true);
+ for(const name of ['mousedown','mouseup','click','change','blur'])document.addEventListener(name,e=>{const item={type:name,trusted:e.isTrusted,x:e.clientX,y:e.clientY,target:describe(e.target),path:e.composedPath().map(describe).filter(Boolean),capture:snapshot()};window.wave1ResetTrace.events.push(item);queueMicrotask(()=>item.microtask=snapshot());requestAnimationFrame(()=>item.nextAnimationFrame=snapshot());},true);
  });
  await c.locator('[data-w1-reset]').click();
  if(diagnostic){diagnostic.resetAfterClick=await state.innerText();await p.waitForFunction(()=>{const h=document.querySelector('[data-wave1="124"]');return h.querySelector('[data-q-root]').value==='AND'&&h.querySelector('[data-q-value="0,0"]').value==='東'&&h.querySelector('[data-w1-state]').textContent.includes('一致 3件')},null,{timeout:2000});diagnostic.resetTrace=await p.evaluate(()=>window.wave1ResetTrace);}

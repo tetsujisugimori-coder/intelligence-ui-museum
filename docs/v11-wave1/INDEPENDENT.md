@@ -33,3 +33,18 @@
 - wave1-test.cjs: `7dcc844b086c8baefb694428f60857dab089eb691c1766cc6d2e04cc75e5883a`
 
 後続変更時は本記録の検証対象と区別し、必要差分を再レビューする。
+
+## 追記：第2実行の原artifact独立読戻し（2026-11-13 JST）
+
+対象は提出 `5fac6af8ea4117d07a6fd5be25ee36fa9aeeec7f` の実行。後続修正への成功転用はしない。
+
+- 原artifact `13975745040`：1,605,813 bytes、SHA-256 `3b1a3dc47aa8227b63fd6eee6c3e110d0c6d8f47bf190362ea0facafc0d23df2`。独立プロセスで原ZIPを読み、14 entries、ZIP CRC不一致0。
+- 内訳は結果JSON1・PNG13。全13 PNGのSHA-256が結果JSONと一致。独自Python解析で各PNG chunk CRC、IHDR寸法、IEND、展開データ長を確認。欠けている14枚目を成功扱いしない。
+- 作業用JSONは原ZIP内JSONと構造的に完全一致（整形差があるためbyte一致ではない）。14条件中13 PASS、WebKit 375/dark/文字2倍の1条件FAIL。出口値1を保持。
+- 不合格条件はQuery Reset後に期待3件へ戻らず、OR/西の条件と2件のまま。後続Permission/Pivot等はこの条件では未完走。原因UNKNOWN、後続診断待ち。
+- 故障注入10件（2 engine × Reset/Undo/権限表示/集計表示/Query表示）はそれぞれ意図したassertionでREDを検出し、clean contextでGREENという原票を確認。これはCI原票の独立照合であり、同担当の新規ブラウザ実行ではない。
+- 正式auditを同JSONへ再実行し`execution did not succeed`、終了1。未完了結果をPASSにしないことを確認。
+- GitHub Git commit APIで仮merge `04f9391f6a0c47c5c26a1ad06a23c308ddfab75c` のparentsを基準main `78e6e99…` と提出 `5fac6af…` と確認。仮mergeと提出のtreeは共に `f26b613a67dacd25fe254dfd49a6c71a512ba430`、原票treeと一致。mainへの実マージではない。
+- 原票source hashのindex.html / wave1.jsは検査時の現作業コピーと一致。wave1.cssは後続修正が進行しており不一致。したがって本結果を後続CSS版の受入証拠にはしない。
+
+現時点も総合PARTIAL、限定マージNO。最終HEAD、後続診断・修正後の14条件、文字拡大で数値が分断される表示の改善、最終原artifactを別途確認する。
