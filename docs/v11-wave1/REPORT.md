@@ -27,3 +27,12 @@ Node24自己単体6/6、既存契約17/17、実CLI保全正常exit0＋故障4件
 
 ## K–L 判断
 限定マージNO。Draft解除・マージ・公開なし。127–129は本便の未完了ゲートを先に閉じ、候補として複数段階入力/データ検証/差分承認を重複調査後に検討。承認済み次工程とはしない。
+
+## CI実測更新（2026-11-13 04:05 JST）
+初回1258e8f / run43285267570、次回5fac6af / run43285728602はともに専用browser **13/14 PASS・1 FAIL**。WebKit26.0 / 375 dark / 実測文字2倍のQuery Reset後がOR・西・2件のまま。追加keyboard-mainは成功cell13件で完了、失敗cellはquery段階停止。Chromium141の7条件とWebKit標準文字6条件は成功。各engineのReset/Undo/permission/pivot/queryの実故障5種類（計10）はassertion検出＋clean counterpart復帰成功。2回の原ZIPを取得しSHA/CRC一致。
+
+- 初回ZIP13974876828：1,584,651bytes、SHA256 `7e0232559d27db61fe92f313c71e553ea2339ee7d08b9c9c4b92adf1b56380a8`。
+- 次回ZIP13975745040：1,605,813bytes、SHA256 `3b1a3dc47aa8227b63fd6eee6c3e110d0c6d8f47bf190362ea0facafc0d23df2`。
+- 次回checkoutは仮merge `04f9391f6a0c47c5c26a1ad06a23c308ddfab75c`、tree `f26b613a67dacd25fe254dfd49a6c71a512ba430`（提出と一致）。実mergeではない。
+
+Reset原因UNKNOWN。グローバルreset衝突の根拠はなく製品処理は同期。クリック再試行で隠さず、次回は一回のclickイベント/座標/active/状態/描画frameを記録し最大2秒で初期状態を待つ。失敗時画像も保全する。文字拡大時の金額改行を目視確認し、表内横scrollで数値を保持する局所CSS修正を追加。初回失敗と未検証を後の成功で消さない。

@@ -9,7 +9,10 @@
 .wave1 .w1-condition { display:flex; flex-direction:column; gap:.35rem; margin:.5rem 0; padding:.5rem; border:1px dashed currentColor; }
 .wave1 output { display:block; margin:.75rem 0; white-space:normal; }
 .wave1 .w1-scroll { max-width:100%; overflow-x:auto; margin:.75rem 0; }
-.wave1 table { border-collapse:collapse; width:100%; font:inherit; }
+.wave1 table { border-collapse:collapse; width:100%; min-width:24em; font:inherit; }
+/* Preserve numeric tokens and short labels; the named keyboard-focusable
+   region scrolls locally at narrow widths and enlarged text sizes. */
+.wave1 td { white-space:nowrap; }
 .wave1 th,.wave1 td { padding:.4rem; border:1px solid currentColor; text-align:start; }
 .wave1 :focus-visible { outline:3px solid #d68900; outline-offset:2px; }
 .wave1 [aria-invalid="true"] { border:2px solid #d68900; }
