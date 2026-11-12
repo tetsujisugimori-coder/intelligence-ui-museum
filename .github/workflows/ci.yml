@@ -141,10 +141,10 @@ jobs:
       npm_config_cache: ${{ github.workspace }}/.work/museum-wave1-tmp/npm-cache
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare per-job temporary area
-        run: mkdir -p "$TMPDIR" "$npm_config_cache"
         with:
           fetch-depth: 0
+      - name: Prepare per-job temporary area
+        run: mkdir -p "$TMPDIR" "$npm_config_cache"
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -184,11 +184,11 @@ jobs:
       npm_config_cache: ${{ github.workspace }}/.work/museum-wave1-tmp/npm-cache
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare per-job temporary area
-        run: mkdir -p "$TMPDIR" "$npm_config_cache"
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Prepare per-job temporary area
+        run: mkdir -p "$TMPDIR" "$npm_config_cache"
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
