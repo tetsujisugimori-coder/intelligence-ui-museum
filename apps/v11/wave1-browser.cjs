@@ -1,12 +1,13 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),os=require('node:os'),assert=require('node:assert/strict'),crypto=require('node:crypto'),cp=require('node:child_process');
 const {matrix,key,audit}=require('./wave1-audit.cjs');
+const {sourceFiles,selectors,measureContract}=require('./wave1-contract.cjs');
 const playwright=require(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES?path.join(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES,'playwright'):'playwright');
 const root=path.resolve(process.env.APP_ROOT||'.work/wave1-app'),out=path.resolve(process.env.EVIDENCE_DIR||'.work/wave1-evidence');
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function exercise(p,r){
  // Scenarios defined below. Each checkpoint is appended only after assertions succeed.
- await queryScenario(p,r);r.checks.push('query');await verifyZoom(p,r);await permissionScenario(p);r.checks.push('permission');await verifyZoom(p,r);await pivotScenario(p);r.checks.push('pivot');await verifyZoom(p,r);await keyboardScenarios(p);r.checks.push('keyboard-main');await verifyZoom(p,r);
+ await queryScenario(p,r);r.checks.push('query');await verifyZoom(p,r,'query');await permissionScenario(p);r.checks.push('permission');await verifyZoom(p,r,'permission');await pivotScenario(p);r.checks.push('pivot');await verifyZoom(p,r,'pivot');await keyboardScenarios(p);r.checks.push('keyboard-main');await verifyZoom(p,r,'keyboard');
  const button=p.locator('[data-id="126"] button').first();await button.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');
  assert.equal(await button.evaluate(e=>e===document.activeElement),true);
  assert.equal(await button.evaluate(e=>{const s=getComputedStyle(e);return (s.outlineStyle!=='none'&&parseFloat(s.outlineWidth)>0)||s.boxShadow!=='none'}),true,'visible keyboard focus');r.checks.push('keyboard-focus');
@@ -39,7 +40,16 @@ async function keyboardScenarios(p){
  await tabTo(t.locator('[data-pivot-data]'));await p.keyboard.press('Home');await p.keyboard.press('ArrowDown');await p.keyboard.press('Enter');assert.match(await t.locator('[data-w1-state]').innerText(),/空データ/);
  await tabTo(t.locator('[data-w1-reset]'));await p.keyboard.press('Enter');assert.equal(await t.locator('[data-pivot-total]').innerText(),'700');
 }
-async function verifyZoom(p,r){if(r.zoom!==2)return;const measurements=await p.evaluate(()=>Object.entries(window.wave1ZoomRules).flatMap(([selector,before])=>[...document.querySelectorAll(selector)].map(e=>({selector,before,after:parseFloat(getComputedStyle(e).fontSize)}))));assert.ok(measurements.length>0&&measurements.every(x=>Math.abs(x.after-x.before*2)<.1),'200% text must survive regenerated controls');r.zoomMeasurements=measurements;}
+async function verifyZoom(p,r,stage){
+ if(r.zoom!==2)return;
+ const measurement=await p.evaluate(({selectors,baseline})=>({
+  reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches,
+  elements:selectors.flatMap(selector=>{const nodes=[...document.querySelectorAll(selector)];if(!nodes.length)throw Error('Missing required text element '+selector);return nodes.map((e,index)=>{const s=getComputedStyle(e);return {selector,index,before:baseline[selector],after:parseFloat(s.fontSize),animationName:s.animationName,transitionDuration:s.transitionDuration}})})
+ }),{selectors,baseline:r.zoomBaseline});
+ r.zoomMeasurements=r.zoomMeasurements||{};assert.ok(!r.zoomMeasurements[stage],'duplicate measurement stage');r.zoomMeasurements[stage]=measurement;
+ // Validate the current stage immediately, preserving all earlier measurements.
+ const complete={...r,zoomMeasurements:Object.fromEntries(['initial','query','permission','pivot','keyboard'].map(k=>[k,r.zoomMeasurements[k]||measurement]))};measureContract(complete);
+}
 async function queryScenario(p,diagnostic){
  const c=p.locator('[data-id="124"]'), state=c.locator('[data-w1-state]');assert.match(await state.innerText(),/一致 3件/);
  await c.locator('[data-q-add="0"]').click();assert.match(await state.innerText(),/一致 2件/);
@@ -51,13 +61,14 @@ async function queryScenario(p,diagnostic){
  await c.locator('[data-q-root]').selectOption('OR');assert.match(await state.innerText(),/一致 3件/);
  await c.locator('[data-q-delete-group="1"]').click();assert.match(await state.innerText(),/一致 2件/);
  const beforeNoop=await c.locator('[data-w1-before]').innerText(),beforeNoopHeight=await c.locator('[data-w1-before]').evaluate(e=>e.getBoundingClientRect().height);await c.locator('[data-q-root]').dispatchEvent('change');assert.equal(await c.locator('[data-w1-before]').innerText(),beforeNoop,'same-value synthetic change must preserve before snapshot');assert.equal(await c.locator('[data-w1-before]').evaluate(e=>e.getBoundingClientRect().height),beforeNoopHeight,'same-value synthetic change must preserve before height');if(diagnostic)diagnostic.sameValueSyntheticChange='PASS';
- if(diagnostic)await p.evaluate(()=>{
+ if(diagnostic&&process.env.WAVE1_RESET_OBSERVER!=='none')await p.evaluate(mode=>{
  const host=document.querySelector('[data-wave1="124"]'),reset=host.querySelector('[data-w1-reset]');
  const describe=e=>e&&e.nodeType===1?{tag:e.tagName,attrs:[...e.attributes].filter(a=>a.name.startsWith('data-')||a.name==='id').map(a=>[a.name,a.value])}:null;
- const snapshot=()=>({time:performance.now(),state:host.querySelector('[data-w1-state]').textContent,beforeText:host.querySelector('[data-w1-before]').textContent,rect:reset.getBoundingClientRect().toJSON(),scroll:{x:scrollX,y:scrollY},active:describe(document.activeElement)});
+ const geometry=()=>mode==='expanded'?[host,...host.children,...host.querySelectorAll('[data-w1-controls] > *,fieldset,.w1-condition,input,select,button'),host.parentElement].map(e=>{const s=getComputedStyle(e);return {element:describe(e),rect:e.getBoundingClientRect().toJSON(),style:Object.fromEntries(['display','position','height','minHeight','maxHeight','fontSize','lineHeight','paddingTop','paddingBottom','marginTop','marginBottom','borderTopWidth','borderBottomWidth','boxSizing','overflow','transition','animation'].map(k=>[k,s[k]]))}}):undefined;
+ const snapshot=()=>({geometry:geometry(),time:performance.now(),state:host.querySelector('[data-w1-state]').textContent,beforeText:host.querySelector('[data-w1-before]').textContent,rect:reset.getBoundingClientRect().toJSON(),scroll:{x:scrollX,y:scrollY},active:describe(document.activeElement)});
  window.wave1ResetTrace={before:snapshot(),events:[]};
  for(const name of ['mousedown','mouseup','click','change','blur'])document.addEventListener(name,e=>{const item={type:name,trusted:e.isTrusted,x:e.clientX,y:e.clientY,target:describe(e.target),path:e.composedPath().map(describe).filter(Boolean),capture:snapshot()};window.wave1ResetTrace.events.push(item);queueMicrotask(()=>item.microtask=snapshot());requestAnimationFrame(()=>item.nextAnimationFrame=snapshot());},true);
- });
+ },process.env.WAVE1_RESET_OBSERVER||'original');
  await c.locator('[data-w1-reset]').click();
  if(diagnostic){diagnostic.resetAfterClick=await state.innerText();await p.waitForFunction(()=>{const h=document.querySelector('[data-wave1="124"]');return h.querySelector('[data-q-root]').value==='AND'&&h.querySelector('[data-q-value="0,0"]').value==='東'&&h.querySelector('[data-w1-state]').textContent.includes('一致 3件')},null,{timeout:2000});diagnostic.resetTrace=await p.evaluate(()=>window.wave1ResetTrace);}
  assert.match(await state.innerText(),/一致 3件/);assert.equal(await c.locator('[data-q-group]').count(),1);assert.equal(await c.locator('[data-q-root]').inputValue(),'AND');
@@ -90,7 +101,7 @@ async function faults(browser,url,report,save,engine){
  else if(fault==='permission-display')host.querySelector('[data-w1-state]').textContent='有効権限：編集 無効';
  else host.querySelector('[data-w1-state]').textContent='一致 999件';
  },{fault,id});await scenario(p);}catch(e){caught=e.code==='ERR_ASSERTION';error=e.message}finally{await ctx.close()}
- assert.ok(caught,`fault escaped validator: ${fault}`);const control={engine,fault,detected:true,green:false,error};report.controls.push(control);save();
+ assert.ok(caught,`fault escaped validator: ${fault}; observed: ${error}`);const control={engine,fault,detected:true,green:false,error};report.controls.push(control);save();
  // Remove each fault by creating a clean context; the same scenario must pass.
  const clean=await browser.newContext(),page=await clean.newPage();try{await page.goto(url);await scenario(page);control.green=true;save();}finally{await clean.close()}
  }
@@ -98,24 +109,27 @@ async function faults(browser,url,report,save,engine){
 async function main(){
  assert.ok(process.env.TMPDIR&&!os.tmpdir().startsWith('/tmp'),'dedicated TMPDIR required');assert.equal(os.tmpdir(),process.env.TMPDIR);
  fs.mkdirSync(out,{recursive:true});assert.ok(fs.existsSync(path.join(root,'index.html')),'isolated APP_ROOT missing');
- const report={schema:1,head:cp.execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),tree:cp.execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim(),sourceHashes:Object.fromEntries(['index.html','wave1.js','wave1.css'].map(f=>[f,hash(fs.readFileSync(path.join(root,f)))])),started:new Date().toISOString(),temp:os.tmpdir(),results:[],exitCode:1};
+ const report={schema:1,head:cp.execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),tree:cp.execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim(),submittedHead:process.env.WAVE1_SUBMITTED_HEAD||cp.execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceHashes:Object.fromEntries(sourceFiles.map(f=>[f,hash(fs.readFileSync(path.join(root,f)))])),started:new Date().toISOString(),temp:os.tmpdir(),results:[],exitCode:1};
  const save=()=>fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(report,null,2));save();
  const server=http.createServer((req,res)=>{const name=decodeURIComponent(req.url.split('?')[0]);if(name==='/favicon.ico'){res.writeHead(204);return res.end()};const dest=path.resolve(root,'.'+(name==='/'?'/index.html':name));if(!dest.startsWith(root+path.sep)){res.writeHead(403);return res.end()};try{res.setHeader('content-type',dest.endsWith('.js')?'text/javascript':dest.endsWith('.css')?'text/css':'text/html');res.end(fs.readFileSync(dest))}catch{res.writeHead(404);res.end()}});
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const url=`http://127.0.0.1:${server.address().port}/`;
  try{for(const engine of ['chromium','webkit']){let browser;try{browser=await playwright[engine].launch({headless:true,...(engine==='chromium'&&process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{})});
  await faults(browser,url,report,save,engine);
  for(const cell of matrix().filter(x=>x.engine===engine)){const r={...cell,version:browser.version(),status:'FAIL',checks:[],errors:[]};report.results.push(r);let ctx,p;try{ctx=await browser.newContext({viewport:{width:cell.width,height:1000},reducedMotion:cell.zoom===2?'reduce':'no-preference'});p=await ctx.newPage();p.on('pageerror',e=>r.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')r.errors.push(m.text())});await p.goto(url);assert.equal(await p.locator('#gallery article').count(),126);if(cell.theme==='light')await p.locator('#theme').click();
- if(cell.zoom===2){r.zoomBaseline=await p.evaluate(()=>{
+ if(cell.zoom===2){r.zoomBaseline=await p.evaluate(selectors=>{
+ const baseline={};for(const selector of selectors){const nodes=[...document.querySelectorAll(selector)];if(!nodes.length)throw Error('Missing baseline '+selector);const sizes=nodes.map(e=>parseFloat(getComputedStyle(e).fontSize));if(sizes.some(s=>!Number.isFinite(s)||s<=0||s!==sizes[0]))throw Error('Invalid/nonuniform baseline '+selector);baseline[selector]=sizes[0];}
+ // Preserve the original all-tag enlargement procedure, including nodes that
+ // are regenerated by each exhibit. The fixed subset above is audited.
  const rules={},nodes=[...document.querySelectorAll('[data-wave1]')].flatMap(c=>[c,...c.querySelectorAll('*')]);
  for(const e of nodes){const id=e.closest('[data-wave1]').dataset.wave1,tag=e.tagName.toLowerCase(),selector=`[data-wave1="${id}"]${e.hasAttribute('data-wave1')?'':' '+tag}`,size=parseFloat(getComputedStyle(e).fontSize);if(rules[selector]&&rules[selector]!==size)throw Error('Nonuniform font baseline '+selector);rules[selector]=size;}
- const style=document.createElement('style');style.textContent=Object.entries(rules).map(([selector,size])=>`${selector}{font-size:${size*2}px!important}`).join('\n');document.head.append(style);window.wave1ZoomRules=rules;return rules;
- });await verifyZoom(p,r);}
+ const style=document.createElement('style');style.textContent=Object.entries(rules).map(([selector,size])=>`${selector}{font-size:${size*2}px!important}`).join('\n');document.head.append(style);return baseline;
+ },selectors);await verifyZoom(p,r,'initial');}
 
  await exercise(p,r);r.screenshot=key(cell)+'.png';await p.screenshot({path:path.join(out,r.screenshot),fullPage:false});r.sha256=hash(fs.readFileSync(path.join(out,r.screenshot)));r.checks.push('screenshot');assert.deepEqual(r.errors,[]);r.status='PASS';
  }catch(e){r.error=e.stack;if(p){try{r.resetTrace=await p.evaluate(()=>window.wave1ResetTrace||null);r.failureScreenshot=key(cell)+'-failure.png';await p.screenshot({path:path.join(out,r.failureScreenshot)});r.failureSha256=hash(fs.readFileSync(path.join(out,r.failureScreenshot)));}catch(captureError){r.captureError=captureError.message}}}finally{if(ctx)await ctx.close();if(r.errors.length)r.status='FAIL';save()}}
  }catch(e){report.results.push({engine,status:browser?'FAIL':'BLOCKED',error:e.stack})}finally{if(browser)await browser.close()}}
- report.exitCode=report.results.length===14&&report.results.every(r=>r.status==='PASS')?0:1;report.finished=new Date().toISOString();save();if(!report.exitCode)audit(report,out);process.exitCode=report.exitCode;
+ report.exitCode=report.results.length===14&&report.results.every(r=>r.status==='PASS')?0:1;report.finished=new Date().toISOString();save();report.audit={executed:true,status:'FAIL'};try{audit(report,out,{head:cp.execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),tree:cp.execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim(),submittedHead:process.env.WAVE1_SUBMITTED_HEAD||cp.execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim()});report.audit.status='PASS'}catch(e){report.audit.error=e.message;report.exitCode=1}save();process.exitCode=report.exitCode;
  }finally{await new Promise(resolve=>server.close(resolve))}
 }
 if(require.main===module)main().catch(e=>{console.error(e);process.exitCode=1});
-module.exports={exercise};
+module.exports={exercise,queryScenario,verifyZoom};

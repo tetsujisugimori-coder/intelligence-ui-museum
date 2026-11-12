@@ -1,6 +1,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
 const zlib=require('node:zlib');
+const {sourceContract,measureContract}=require('./wave1-contract.cjs');
 const fail=m=>{throw Error(m)};
 const required=['query','permission','pivot','keyboard-focus','keyboard-main','overflow','runtime','screenshot'];
 const matrix=()=>['chromium','webkit'].flatMap(engine=>[...[375,390,1280].flatMap(width=>['light','dark'].map(theme=>({engine,width,theme,zoom:1}))),{engine,width:375,theme:'dark',zoom:2}]);
@@ -21,13 +22,14 @@ function validatePng(file,width,height){
 }
 
 function audit(report,dir,expected={}){
+ sourceContract(report,expected);
  if(expected.head)assert.equal(report.head,expected.head,'HEAD mismatch');if(expected.tree)assert.equal(report.tree,expected.tree,'tree mismatch');
  assert.equal(report.schema,1);assert.match(report.head,/^[a-f0-9]{40}$/);assert.match(report.tree,/^[a-f0-9]{40}$/);
  assert.equal(report.exitCode,0,'execution did not succeed');assert.equal(report.controls.length,10,'fault controls incomplete');for(const engine of ['chromium','webkit'])for(const fault of ['reset','undo','permission-display','pivot-display','query-display']){const c=report.controls.filter(x=>x.engine===engine&&x.fault===fault);assert.equal(c.length,1);assert.equal(c[0].detected,true);assert.equal(c[0].green,true);}assert.equal(report.results.length,14,'matrix incomplete');
  assert.deepEqual(report.results.map(key).sort(),matrix().map(key).sort(),'matrix mismatch');
- for(const r of report.results){assert.equal(r.status,'PASS',key(r));assert.ok(r.version);assert.deepEqual(r.errors,[]);for(const c of required)assert.ok(r.checks.includes(c),`missing ${c}`);
+ for(const r of report.results){assert.equal(r.status,'PASS',key(r));measureContract(r);assert.ok(r.version);assert.deepEqual(r.errors,[]);for(const c of required)assert.ok(r.checks.includes(c),`missing ${c}`);
  assert.ok(/^[a-z0-9-]+\.png$/.test(r.screenshot),'unsafe screenshot name');validatePng(path.join(dir,r.screenshot),r.width,1000);const b=fs.readFileSync(path.join(dir,r.screenshot));assert.ok(b.length>100);assert.equal(b.subarray(0,8).toString('hex'),'89504e470d0a1a0a');assert.equal(crypto.createHash('sha256').update(b).digest('hex'),r.sha256,'screenshot changed');}
  return {status:'PASS',conditions:14};
 }
 module.exports={audit,matrix,key,required};
-if(require.main===module){try{const file=process.argv[2];assert.ok(file,'report path required');console.log(JSON.stringify(audit(JSON.parse(fs.readFileSync(file)),path.dirname(file),{head:process.argv[3],tree:process.argv[4]})));}catch(e){console.error(e.message);process.exitCode=1;}}
+if(require.main===module){try{const file=process.argv[2];assert.ok(file,'report path required');console.log(JSON.stringify(audit(JSON.parse(fs.readFileSync(file)),path.dirname(file),{head:process.argv[3],tree:process.argv[4],submittedHead:process.argv[5]})));}catch(e){console.error(e.message);process.exitCode=1;}}

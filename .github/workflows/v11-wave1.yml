@@ -19,6 +19,8 @@ jobs:
       PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/wave1-browsers
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -38,11 +40,16 @@ jobs:
       - run: node --test apps/v11/wave1-test.cjs
       - name: Browser matrix and real negative controls
         env:
+          WAVE1_SUBMITTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
           APP_ROOT: ${{ github.workspace }}/.work/wave1-app
           EVIDENCE_DIR: ${{ github.workspace }}/.work/wave1-evidence
           CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/.work/wave1-app/node_modules
         run: node apps/v11/wave1-browser.cjs
-      - run: node apps/v11/wave1-audit.cjs .work/wave1-evidence/results.json "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})"
+      - name: Independent evidence audit (including failed browser runs)
+        if: always()
+        env:
+          WAVE1_SUBMITTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: node apps/v11/wave1-audit.cjs .work/wave1-evidence/results.json "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})" "$WAVE1_SUBMITTED_HEAD"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -50,3 +57,4 @@ jobs:
           path: .work/wave1-evidence/
           if-no-files-found: error
           retention-days: 90
+
