@@ -1,0 +1,97 @@
+name: S3-1 Select sixth single Escape call (#28)
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/select-sixth.yml'
+      - 'tests/select-escape-sixth/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: s3-select-sixth-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  comparison:
+    name: ${{ matrix.os }} / ${{ matrix.engine }} / one-call A-B
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: windows-2025, engine: webkit }
+          - { os: ubuntu-24.04, engine: webkit }
+          - { os: ubuntu-24.04, engine: chromium }
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare unchanged product and isolated A/B builds
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          cd .work/v10
+          npm ci --ignore-scripts
+          npm run build
+          npm test
+          SIXTH_CONDITION=A node node_modules/vite/bin/vite.js build --config ../../tests/select-escape-sixth/vite.config.mjs
+          SIXTH_CONDITION=B node node_modules/vite/bin/vite.js build --config ../../tests/select-escape-sixth/vite.config.mjs
+          cd ../..
+          node tests/select-escape-sixth/build-audit.cjs .work/sixth-build
+      - name: Install pinned browser
+        shell: bash
+        working-directory: tools/stage-a-browser
+        run: |
+          npm ci --ignore-scripts
+          if [ "${{ runner.os }}" = "Linux" ]; then npx playwright install --with-deps ${{ matrix.engine }}; else npx playwright install ${{ matrix.engine }}; fi
+      - name: Preserve old oracles and test new audit
+        shell: bash
+        run: |
+          node tests/select-webkit-timeline/run.cjs --selftest
+          node --test tests/select-webkit-timeline/third-audit.test.cjs tests/select-webkit-timeline/third-wrapper.test.cjs tests/select-webkit-timeline/fourth.test.cjs tests/select-webkit-timeline/fifth.test.cjs tests/select-escape-sixth/audit.test.cjs
+      - name: Primary direct route five A/B pairs
+        shell: bash
+        env:
+          SIXTH_ENGINES: ${{ matrix.engine }}
+          SIXTH_ROUTES: direct
+          SIXTH_REPEATS: '5'
+          SIXTH_OUT: .work/sixth-primary
+        run: |
+          node tests/select-escape-sixth/run.cjs
+          node tests/select-escape-sixth/audit.cjs .work/sixth-primary
+      - name: Separate independent native fixture
+        shell: bash
+        env:
+          SIXTH_ENGINES: ${{ matrix.engine }}
+        run: node tests/select-escape-sixth/native-independent.cjs
+      - name: Separate real Tab and legacy routes
+        shell: bash
+        env:
+          SIXTH_ENGINES: ${{ matrix.engine }}
+          SIXTH_ROUTES: tab,legacy
+          SIXTH_REPEATS: '5'
+          SIXTH_OUT: .work/sixth-routes
+        run: |
+          node tests/select-escape-sixth/run.cjs
+          node tests/select-escape-sixth/audit.cjs .work/sixth-routes
+      - name: Delivered browser negative controls
+        shell: bash
+        env:
+          SIXTH_ENGINES: ${{ matrix.engine }}
+        run: node tests/select-escape-sixth/negative.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sixth-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: |
+            .work/sixth-build/
+            .work/sixth-primary/
+            .work/sixth-routes/
+            .work/sixth-negative/
+            .work/sixth-native/
+          if-no-files-found: error
+          retention-days: 90

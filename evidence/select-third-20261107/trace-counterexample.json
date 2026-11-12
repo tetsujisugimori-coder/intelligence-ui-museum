@@ -1,0 +1,18 @@
+{
+  "head": "9fbeb8f12797f7a0bdaf13f26a013e329bfbd317",
+  "kind": "isolated exact traceValid predicate",
+  "trace": {
+    "level": "full",
+    "events": [
+      {
+        "type": "focusin",
+        "ms": 1
+      }
+    ],
+    "frames": [],
+    "overflow": false
+  },
+  "accepted": true,
+  "expectedAccepted": false,
+  "reason": "full rAF measurement absent; final collection absent; no Select/open/click record"
+}

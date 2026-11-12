@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {defineConfig} from '../../.work/v10/node_modules/vite/dist/node/index.js';
+import tailwindcss from '../../.work/v10/node_modules/@tailwindcss/vite/dist/index.mjs';
+const condition=process.env.SIXTH_CONDITION;
+if(!['A','B'].includes(condition))throw Error('SIXTH_CONDITION must be A/B');
+const out=path.resolve('../../.work/sixth-build',condition);
+const original='            evt.preventDefault();';
+const replacement='            /* round6: only this Escape cancellation omitted */';
+let seen=0;
+export default defineConfig({base:'./',plugins:[tailwindcss(),{name:'round6-isolated-single-call',enforce:'pre',transform(code,id){
+ if(!id.replaceAll('\\','/').endsWith('/@openai/apps-sdk-ui/dist/es/hooks/useEscCloseStack.js'))return;
+ if(code.split(original).length!==2||!code.includes('if (evt.key === "Escape")'))throw Error('Target module changed');
+ seen++;
+ const changed=condition==='B'?code.replace(original,replacement):code;
+ fs.mkdirSync(out,{recursive:true});
+ fs.writeFileSync(path.join(out,'sdk-module.js.txt'),changed);
+ fs.writeFileSync(path.join(out,'intervention.json'),JSON.stringify({condition,module:'@openai/apps-sdk-ui/dist/es/hooks/useEscCloseStack.js',sourceSha256:crypto.createHash('sha256').update(code).digest('hex'),transformedSha256:crypto.createHash('sha256').update(changed).digest('hex'),changes:condition==='B'?1:0,original,replacement},null,2));
+ return {code:changed,map:null};
+},closeBundle(){if(seen!==1)throw Error(`Expected exactly one transformed module, got ${seen}`);}}],build:{outDir:path.join(out,'dist'),emptyOutDir:false,sourcemap:true}});

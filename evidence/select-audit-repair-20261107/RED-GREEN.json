@@ -1,0 +1,246 @@
+[
+  {
+    "case": "normal",
+    "RED": {
+      "wrapperExit": 0,
+      "childExit": 1,
+      "status": "COMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [],
+      "wrapperReasons": [],
+      "raw": ".work/audit-repair/red-green-final/RED/normal/run-01/results.json"
+    },
+    "GREEN": {
+      "wrapperExit": 0,
+      "childExit": 1,
+      "status": "COMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [],
+      "wrapperReasons": [],
+      "raw": ".work/audit-repair/red-green-final/GREEN/normal/run-01/results.json"
+    }
+  },
+  {
+    "case": "Button-false",
+    "RED": {
+      "wrapperExit": 0,
+      "childExit": 1,
+      "status": "COMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [],
+      "wrapperReasons": [],
+      "raw": ".work/audit-repair/red-green-final/RED/Button-false/run-01/results.json"
+    },
+    "GREEN": {
+      "wrapperExit": 1,
+      "childExit": 1,
+      "status": "INCOMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [
+        "REQUIRED_CHECK_FAILED:Button"
+      ],
+      "wrapperReasons": [
+        "REQUIRED_CHECK_FAILED:Button"
+      ],
+      "raw": ".work/audit-repair/red-green-final/GREEN/Button-false/run-01/results.json"
+    }
+  },
+  {
+    "case": "environment-false",
+    "RED": {
+      "wrapperExit": 0,
+      "childExit": 1,
+      "status": "COMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [],
+      "wrapperReasons": [],
+      "raw": ".work/audit-repair/red-green-final/RED/environment-false/run-01/results.json"
+    },
+    "GREEN": {
+      "wrapperExit": 1,
+      "childExit": 1,
+      "status": "INCOMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [
+        "REQUIRED_CHECK_FAILED:environment"
+      ],
+      "wrapperReasons": [
+        "REQUIRED_CHECK_FAILED:environment"
+      ],
+      "raw": ".work/audit-repair/red-green-final/GREEN/environment-false/run-01/results.json"
+    }
+  },
+  {
+    "case": "missing",
+    "RED": {
+      "wrapperExit": 1,
+      "childExit": 1,
+      "status": "INCOMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [
+        "CHECKS_INCOMPLETE"
+      ],
+      "wrapperReasons": [],
+      "raw": ".work/audit-repair/red-green-final/RED/missing/run-01/results.json"
+    },
+    "GREEN": {
+      "wrapperExit": 1,
+      "childExit": 1,
+      "status": "INCOMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [
+        "CHECKS_INCOMPLETE",
+        "CHECK_ORDER_MISMATCH"
+      ],
+      "wrapperReasons": [
+        "CHECKS_INCOMPLETE",
+        "CHECK_ORDER_MISMATCH"
+      ],
+      "raw": ".work/audit-repair/red-green-final/GREEN/missing/run-01/results.json"
+    }
+  },
+  {
+    "case": "duplicate",
+    "RED": {
+      "wrapperExit": 0,
+      "childExit": 1,
+      "status": "COMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [],
+      "wrapperReasons": [],
+      "raw": ".work/audit-repair/red-green-final/RED/duplicate/run-01/results.json"
+    },
+    "GREEN": {
+      "wrapperExit": 1,
+      "childExit": 1,
+      "status": "INCOMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [
+        "CHECKS_DUPLICATE",
+        "CHECK_ORDER_MISMATCH"
+      ],
+      "wrapperReasons": [
+        "CHECKS_DUPLICATE",
+        "CHECK_ORDER_MISMATCH"
+      ],
+      "raw": ".work/audit-repair/red-green-final/GREEN/duplicate/run-01/results.json"
+    }
+  },
+  {
+    "case": "status-contradiction",
+    "RED": {
+      "wrapperExit": 0,
+      "childExit": 1,
+      "status": "COMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [],
+      "wrapperReasons": [],
+      "raw": ".work/audit-repair/red-green-final/RED/status-contradiction/run-01/results.json"
+    },
+    "GREEN": {
+      "wrapperExit": 1,
+      "childExit": 1,
+      "status": "INCOMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [
+        "ROW_STATUS_MISMATCH",
+        "SUITE_STATUS_MISMATCH",
+        "PROCESS_STATUS_MISMATCH"
+      ],
+      "wrapperReasons": [
+        "ROW_STATUS_MISMATCH",
+        "SUITE_STATUS_MISMATCH",
+        "PROCESS_STATUS_MISMATCH"
+      ],
+      "raw": ".work/audit-repair/red-green-final/GREEN/status-contradiction/run-01/results.json"
+    }
+  },
+  {
+    "case": "unexpected-select",
+    "RED": {
+      "wrapperExit": 1,
+      "childExit": 1,
+      "status": "COMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [],
+      "wrapperReasons": [
+        {
+          "id": "chromium-375-light-100",
+          "error": "Error: unexpected select failure"
+        }
+      ],
+      "raw": ".work/audit-repair/red-green-final/RED/unexpected-select/run-01/results.json"
+    },
+    "GREEN": {
+      "wrapperExit": 1,
+      "childExit": 1,
+      "status": "INCOMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [
+        "SELECT_UNEXPECTED_FAILURE"
+      ],
+      "wrapperReasons": [
+        "SELECT_UNEXPECTED_FAILURE",
+        {
+          "id": "chromium-375-light-100",
+          "error": "Error: unexpected select failure"
+        }
+      ],
+      "raw": ".work/audit-repair/red-green-final/GREEN/unexpected-select/run-01/results.json"
+    }
+  },
+  {
+    "case": "substring",
+    "RED": {
+      "wrapperExit": 0,
+      "childExit": 1,
+      "status": "COMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [],
+      "wrapperReasons": [],
+      "raw": ".work/audit-repair/red-green-final/RED/substring/run-01/results.json"
+    },
+    "GREEN": {
+      "wrapperExit": 1,
+      "childExit": 1,
+      "status": "INCOMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [
+        "SELECT_UNEXPECTED_FAILURE"
+      ],
+      "wrapperReasons": [
+        "SELECT_UNEXPECTED_FAILURE",
+        {
+          "id": "chromium-375-light-100",
+          "error": "Error: unrelated failure includes THIRD_POLICY_FORCED_CLICK_NOT_TESTED suffix"
+        }
+      ],
+      "raw": ".work/audit-repair/red-green-final/GREEN/substring/run-01/results.json"
+    }
+  },
+  {
+    "case": "exit-contradiction",
+    "RED": {
+      "wrapperExit": 0,
+      "childExit": 0,
+      "status": "COMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [],
+      "wrapperReasons": [],
+      "raw": ".work/audit-repair/red-green-final/RED/exit-contradiction/run-01/results.json"
+    },
+    "GREEN": {
+      "wrapperExit": 1,
+      "childExit": 0,
+      "status": "INCOMPLETE",
+      "rawStatus": "FAIL",
+      "auditReasons": [
+        "PROCESS_STATUS_MISMATCH"
+      ],
+      "wrapperReasons": [
+        "PROCESS_STATUS_MISMATCH"
+      ],
+      "raw": ".work/audit-repair/red-green-final/GREEN/exit-contradiction/run-01/results.json"
+    }
+  }
+]

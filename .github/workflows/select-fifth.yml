@@ -1,0 +1,102 @@
+name: S3-1 Select fifth causal comparisons (#28)
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/select-fifth.yml'
+      - 'tests/select-webkit-timeline/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: s3-select-fifth-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  diagnosis:
+    name: ${{ matrix.os }} / ${{ matrix.engine }} / ${{ matrix.level }} / ${{ matrix.focus }} / ${{ matrix.lifecycle }} / ${{ matrix.settling }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - { os: windows-2025, engine: webkit, level: full, focus: legacy, lifecycle: reuse, settling: original }
+          - { os: windows-2025, engine: webkit, level: full, focus: legacy, lifecycle: fresh, settling: original }
+          - { os: windows-2025, engine: webkit, level: full, focus: legacy, lifecycle: reuse, settling: raf2 }
+          - { os: windows-2025, engine: webkit, level: full, focus: direct, lifecycle: reuse, settling: original }
+          - { os: windows-2025, engine: webkit, level: full, focus: tab, lifecycle: reuse, settling: original }
+          - { os: windows-2025, engine: webkit, level: none, focus: legacy, lifecycle: reuse, settling: original }
+          - { os: windows-2025, engine: webkit, level: events, focus: legacy, lifecycle: reuse, settling: original }
+          - { os: ubuntu-24.04, engine: webkit, level: full, focus: legacy, lifecycle: reuse, settling: original }
+          - { os: ubuntu-24.04, engine: webkit, level: full, focus: legacy, lifecycle: fresh, settling: original }
+          - { os: ubuntu-24.04, engine: webkit, level: full, focus: legacy, lifecycle: reuse, settling: raf2 }
+          - { os: ubuntu-24.04, engine: webkit, level: full, focus: direct, lifecycle: reuse, settling: original }
+          - { os: ubuntu-24.04, engine: webkit, level: full, focus: tab, lifecycle: reuse, settling: original }
+          - { os: ubuntu-24.04, engine: chromium, level: full, focus: legacy, lifecycle: reuse, settling: original }
+          - { os: ubuntu-24.04, engine: chromium, level: full, focus: legacy, lifecycle: fresh, settling: original }
+          - { os: ubuntu-24.04, engine: chromium, level: full, focus: legacy, lifecycle: reuse, settling: raf2 }
+          - { os: ubuntu-24.04, engine: chromium, level: full, focus: direct, lifecycle: reuse, settling: original }
+          - { os: ubuntu-24.04, engine: chromium, level: full, focus: tab, lifecycle: reuse, settling: original }
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build pinned product copy
+        shell: bash
+        run: |
+          python scripts/prepare-work.py
+          cd .work/v10
+          npm ci --ignore-scripts
+          npm run build
+          npm test
+      - name: Install pinned browser
+        shell: bash
+        working-directory: tools/stage-a-browser
+        run: |
+          npm ci --ignore-scripts
+          if [ "${{ runner.os }}" = "Linux" ]; then
+            npx playwright install --with-deps ${{ matrix.engine }}
+          else
+            npx playwright install ${{ matrix.engine }}
+          fi
+      - name: Preserve old and new oracles
+        shell: bash
+        run: |
+          node tests/select-webkit-timeline/run.cjs --selftest
+          node --test tests/select-webkit-timeline/third-audit.test.cjs tests/select-webkit-timeline/third-wrapper.test.cjs tests/select-webkit-timeline/fourth.test.cjs tests/select-webkit-timeline/fifth.test.cjs
+      - name: Separate native focus timing fixture
+        if: matrix.focus == 'direct'
+        shell: bash
+        env:
+          FIFTH_FIXTURE_ENGINES: ${{ matrix.engine }}
+          FIFTH_FIXTURE_OUT: .work/fifth-evidence-fixture
+        run: node tests/select-webkit-timeline/fifth-focus-fixture.cjs
+      - uses: actions/upload-artifact@v4
+        if: always() && matrix.focus == 'direct'
+        with:
+          name: fifth-native-fixture-${{ matrix.os }}-${{ matrix.engine }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/fifth-evidence-fixture/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Twenty matched fresh-page trials
+        shell: bash
+        env:
+          FIFTH_LEVEL: ${{ matrix.level }}
+          FIFTH_FOCUS: ${{ matrix.focus }}
+          FIFTH_ENGINE: ${{ matrix.engine }}
+          FIFTH_REPEATS: '20'
+          FIFTH_LIFECYCLE: ${{ matrix.lifecycle }}
+          FIFTH_SETTLING: ${{ matrix.settling }}
+          FIFTH_OUT: .work/fifth-evidence
+        run: node tests/select-webkit-timeline/fifth-run.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: s3-select-fifth-${{ matrix.os }}-${{ matrix.engine }}-${{ matrix.level }}-${{ matrix.focus }}-${{ matrix.lifecycle }}-${{ matrix.settling }}-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .work/fifth-evidence/
+          if-no-files-found: error
+          retention-days: 90
