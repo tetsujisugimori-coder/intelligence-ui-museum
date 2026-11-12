@@ -3,6 +3,9 @@ const {test}=require('node:test'),assert=require('node:assert/strict'),fs=requir
 const {validateRecords,validatePngs}=require('./result-contract.cjs');
 const dir=path.resolve('evidence/review-fixes-20261101');const read=name=>JSON.parse(fs.readFileSync(path.join(dir,name),'utf8'));
 const fixtures={browser:read('green-browser.json'),additional:read('green-accessibility.json'),nojs:read('green-nojs.json'),regression:read('green-regression.json')};
+// Historical fixtures remain byte-identical; adapt gallery count labels in memory for v11 126.
+for(const r of fixtures.browser)r.checks=r.checks.map(c=>c==='123 cards'?'126 cards':c);
+for(const r of fixtures.nojs)r.count=r.count.replace('117 / 123','117 / 126');
 // Earlier saved fixture predates the new focus-transfer check; adapt in memory only.
 for(const r of fixtures.regression)r.checks.push({name:'focus transfer, native select, editable search, repeated key and modifier release'});
 for(const [kind,fixture] of Object.entries(fixtures))test(`${kind}: accept complete recorded results and reject omissions, duplicates, skip`,()=>{assert.doesNotThrow(()=>validateRecords(fixture,kind));for(const change of [r=>r.pop(),r=>r[1]=structuredClone(r[0]),r=>r[0].status='SKIP',r=>r[0].skipped=true]){const r=structuredClone(fixture);change(r);assert.throws(()=>validateRecords(r,kind))}});

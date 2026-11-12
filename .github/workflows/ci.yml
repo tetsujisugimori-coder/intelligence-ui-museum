@@ -18,11 +18,18 @@ permissions:
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
+env:
+  TMPDIR: ${{ runner.temp }}/museum-wave1
+  TMP: ${{ runner.temp }}/museum-wave1
+  TEMP: ${{ runner.temp }}/museum-wave1
+  npm_config_cache: ${{ runner.temp }}/museum-wave1/npm-cache
 jobs:
   preservation:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Prepare per-job temporary area
+        run: mkdir -p "$TMPDIR" "$npm_config_cache"
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -39,6 +46,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Prepare per-job temporary area
+        run: mkdir -p "$TMPDIR" "$npm_config_cache"
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -77,6 +86,8 @@ jobs:
           - suite: clip
             cases: focus-clipped
     steps:
+      - name: Prepare per-job temporary area
+        run: mkdir -p "$TMPDIR" "$npm_config_cache"
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -114,6 +125,8 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
+      - name: Prepare per-job temporary area
+        run: mkdir -p "$TMPDIR" "$npm_config_cache"
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -150,6 +163,8 @@ jobs:
     container:
       image: mcr.microsoft.com/playwright:v1.56.1-noble@sha256:42f02d323c310069b4d54c94bd91a608966a486c3492c48ae0b1cea747ec5ca2
     steps:
+      - name: Prepare per-job temporary area
+        run: mkdir -p "$TMPDIR" "$npm_config_cache"
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
