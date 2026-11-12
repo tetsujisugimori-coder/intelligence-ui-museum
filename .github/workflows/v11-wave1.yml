@@ -42,7 +42,7 @@ jobs:
           EVIDENCE_DIR: ${{ github.workspace }}/.work/wave1-evidence
           CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/.work/wave1-app/node_modules
         run: node apps/v11/wave1-browser.cjs
-      - run: node apps/v11/wave1-audit.cjs .work/wave1-evidence/results.json
+      - run: node apps/v11/wave1-audit.cjs .work/wave1-evidence/results.json "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

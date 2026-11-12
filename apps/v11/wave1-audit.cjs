@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
 const zlib=require('node:zlib');
 const fail=m=>{throw Error(m)};
-const required=['query','permission','pivot','keyboard-focus','overflow','runtime','screenshot'];
+const required=['query','permission','pivot','keyboard-focus','keyboard-main','overflow','runtime','screenshot'];
 const matrix=()=>['chromium','webkit'].flatMap(engine=>[...[375,390,1280].flatMap(width=>['light','dark'].map(theme=>({engine,width,theme,zoom:1}))),{engine,width:375,theme:'dark',zoom:2}]);
 const key=x=>`${x.engine}-${x.width}-${x.theme}-${x.zoom}`;
 // PNG decoder/CRC validation reused from existing v11 result-contract.
@@ -20,7 +20,8 @@ function validatePng(file,width,height){
  if(!header||!ended||pos!==data.length)fail('PNG incomplete');const row=width*channels+1,expected=row*height;let pixels;try{pixels=zlib.inflateSync(Buffer.concat(idat),{maxOutputLength:expected})}catch{fail('PNG image data invalid')}if(pixels.length!==expected)fail('PNG image data length invalid');for(let y=0;y<height;y++)if(pixels[y*row]>4)fail('PNG row filter invalid');
 }
 
-function audit(report,dir){
+function audit(report,dir,expected={}){
+ if(expected.head)assert.equal(report.head,expected.head,'HEAD mismatch');if(expected.tree)assert.equal(report.tree,expected.tree,'tree mismatch');
  assert.equal(report.schema,1);assert.match(report.head,/^[a-f0-9]{40}$/);assert.match(report.tree,/^[a-f0-9]{40}$/);
  assert.equal(report.exitCode,0,'execution did not succeed');assert.equal(report.controls.length,10,'fault controls incomplete');for(const engine of ['chromium','webkit'])for(const fault of ['reset','undo','permission-display','pivot-display','query-display']){const c=report.controls.filter(x=>x.engine===engine&&x.fault===fault);assert.equal(c.length,1);assert.equal(c[0].detected,true);assert.equal(c[0].green,true);}assert.equal(report.results.length,14,'matrix incomplete');
  assert.deepEqual(report.results.map(key).sort(),matrix().map(key).sort(),'matrix mismatch');
@@ -29,4 +30,4 @@ function audit(report,dir){
  return {status:'PASS',conditions:14};
 }
 module.exports={audit,matrix,key,required};
-if(require.main===module){try{const file=process.argv[2];assert.ok(file,'report path required');console.log(JSON.stringify(audit(JSON.parse(fs.readFileSync(file)),path.dirname(file))));}catch(e){console.error(e.message);process.exitCode=1;}}
+if(require.main===module){try{const file=process.argv[2];assert.ok(file,'report path required');console.log(JSON.stringify(audit(JSON.parse(fs.readFileSync(file)),path.dirname(file),{head:process.argv[3],tree:process.argv[4]})));}catch(e){console.error(e.message);process.exitCode=1;}}

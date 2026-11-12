@@ -6,7 +6,7 @@ const root=path.resolve(process.env.APP_ROOT||'.work/wave1-app'),out=path.resolv
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 async function exercise(p,r){
  // Scenarios defined below. Each checkpoint is appended only after assertions succeed.
- await queryScenario(p);r.checks.push('query');await permissionScenario(p);r.checks.push('permission');await pivotScenario(p);r.checks.push('pivot');
+ await queryScenario(p);r.checks.push('query');await verifyZoom(p,r);await permissionScenario(p);r.checks.push('permission');await verifyZoom(p,r);await pivotScenario(p);r.checks.push('pivot');await verifyZoom(p,r);await keyboardScenarios(p);r.checks.push('keyboard-main');await verifyZoom(p,r);
  const button=p.locator('[data-id="126"] button').first();await button.focus();await p.keyboard.press('Tab');await p.keyboard.press('Shift+Tab');
  assert.equal(await button.evaluate(e=>e===document.activeElement),true);
  assert.equal(await button.evaluate(e=>{const s=getComputedStyle(e);return (s.outlineStyle!=='none'&&parseFloat(s.outlineWidth)>0)||s.boxShadow!=='none'}),true,'visible keyboard focus');r.checks.push('keyboard-focus');
@@ -14,6 +14,32 @@ async function exercise(p,r){
  assert.equal(await p.locator('#runtime-status').getAttribute('data-error-count'),'0');r.checks.push('runtime');
 }
 // SCENARIOS
+async function keyboardScenarios(p){
+ // Focus establishes each exhibit entry point only; all subsequent navigation uses real Tab.
+ async function tabTo(target){for(let i=0;i<80;i++){if(await target.evaluate(e=>document.activeElement===e))return;await p.keyboard.press('Tab')}throw Error('Keyboard target not reachable by Tab')}
+ const q=p.locator('[data-id="124"]'),qs=q.locator('[data-w1-state]');await q.locator('[data-q-root]').focus();
+ await tabTo(q.locator('[data-q-add="0"]'));await p.keyboard.press('Enter');assert.match(await qs.innerText(),/一致 2件/);
+ await tabTo(q.locator('[data-q-value="0,0"]'));await p.keyboard.press('ControlOrMeta+A');await p.keyboard.type('西');assert.match(await qs.innerText(),/一致 1件/);
+ // Product intentionally restores root focus after add/delete; backward tabs retain ordinary navigation.
+ await p.keyboard.press('Shift+Tab');await p.keyboard.press('Shift+Tab');await p.keyboard.press('Shift+Tab');
+ assert.equal(await q.locator('[data-q-group-op="0"]').evaluate(e=>document.activeElement===e),true);
+ await p.keyboard.press('End');await p.keyboard.press('Enter');assert.match(await qs.innerText(),/一致 4件/);
+ await tabTo(q.locator('[data-q-delete="0,1"]'));await p.keyboard.press('Enter');assert.match(await qs.innerText(),/一致 2件/);
+ await tabTo(q.locator('[data-q-add-group]'));await p.keyboard.press('Space');assert.match(await qs.innerText(),/一致 1件/);
+ await tabTo(q.locator('[data-q-delete-group="1"]'));await p.keyboard.press('Enter');assert.match(await qs.innerText(),/一致 2件/);
+ await tabTo(q.locator('[data-w1-reset]'));await p.keyboard.press('Enter');assert.match(await qs.innerText(),/一致 3件/);
+ const m=p.locator('[data-id="125"]'),ms=m.locator('[data-w1-state]');await m.locator('[data-p-role]').focus();await p.keyboard.press('Home');await p.keyboard.press('Enter');assert.match(await ms.innerText(),/閲覧者/);
+ await tabTo(m.locator('[data-p-toggle="1,0"]'));await p.keyboard.press('Space');assert.match(await ms.innerText(),/不整合/);assert.match(await ms.innerText(),/編集 無効/);
+ await tabTo(m.locator('[data-p-undo]'));await p.keyboard.press('Enter');assert.match(await ms.innerText(),/編集 有効/);
+ await tabTo(m.locator('[data-p-toggle="1,2"]'));await p.keyboard.press('Space');assert.match(await ms.innerText(),/削除 有効/);
+ await tabTo(m.locator('[data-w1-reset]'));await p.keyboard.press('Enter');assert.equal(await m.locator('[data-p-toggle="1,2"]').getAttribute('aria-pressed'),'false');
+ const t=p.locator('[data-id="126"]');await t.locator('[data-pivot-row]').focus();await p.keyboard.press('End');await p.keyboard.press('Enter');assert.match(await t.locator('[data-w1-state]').innerText(),/入力エラー/);
+ await tabTo(t.locator('[data-pivot-col]'));await p.keyboard.press('Home');await p.keyboard.press('Enter');assert.equal(await t.locator('[data-pivot-total]').innerText(),'700');
+ await tabTo(t.locator('[data-pivot-measure]'));await p.keyboard.press('End');await p.keyboard.press('Enter');assert.equal(await t.locator('[data-pivot-total]').innerText(),'175');
+ await tabTo(t.locator('[data-pivot-data]'));await p.keyboard.press('Home');await p.keyboard.press('ArrowDown');await p.keyboard.press('Enter');assert.match(await t.locator('[data-w1-state]').innerText(),/空データ/);
+ await tabTo(t.locator('[data-w1-reset]'));await p.keyboard.press('Enter');assert.equal(await t.locator('[data-pivot-total]').innerText(),'700');
+}
+async function verifyZoom(p,r){if(r.zoom!==2)return;const measurements=await p.evaluate(()=>Object.entries(window.wave1ZoomRules).flatMap(([selector,before])=>[...document.querySelectorAll(selector)].map(e=>({selector,before,after:parseFloat(getComputedStyle(e).fontSize)}))));assert.ok(measurements.length>0&&measurements.every(x=>Math.abs(x.after-x.before*2)<.1),'200% text must survive regenerated controls');r.zoomMeasurements=measurements;}
 async function queryScenario(p){
  const c=p.locator('[data-id="124"]'), state=c.locator('[data-w1-state]');assert.match(await state.innerText(),/一致 3件/);
  await c.locator('[data-q-add="0"]').click();assert.match(await state.innerText(),/一致 2件/);
@@ -53,7 +79,7 @@ async function faults(browser,url,report,save,engine){
  else if(fault==='pivot-display')host.querySelector('[data-pivot-total]').textContent='701';
  else if(fault==='permission-display')host.querySelector('[data-w1-state]').textContent='有効権限：編集 無効';
  else host.querySelector('[data-w1-state]').textContent='一致 999件';
- },{fault,id});await scenario(p);}catch(e){caught=true;error=e.message}finally{await ctx.close()}
+ },{fault,id});await scenario(p);}catch(e){caught=e.code==='ERR_ASSERTION';error=e.message}finally{await ctx.close()}
  assert.ok(caught,`fault escaped validator: ${fault}`);const control={engine,fault,detected:true,green:false,error};report.controls.push(control);save();
  // Remove each fault by creating a clean context; the same scenario must pass.
  const clean=await browser.newContext(),page=await clean.newPage();try{await page.goto(url);await scenario(page);control.green=true;save();}finally{await clean.close()}
@@ -69,10 +95,15 @@ async function main(){
  try{for(const engine of ['chromium','webkit']){let browser;try{browser=await playwright[engine].launch({headless:true,...(engine==='chromium'&&process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{})});
  await faults(browser,url,report,save,engine);
  for(const cell of matrix().filter(x=>x.engine===engine)){const r={...cell,version:browser.version(),status:'FAIL',checks:[],errors:[]};report.results.push(r);let ctx;try{ctx=await browser.newContext({viewport:{width:cell.width,height:1000},reducedMotion:cell.zoom===2?'reduce':'no-preference'});const p=await ctx.newPage();p.on('pageerror',e=>r.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')r.errors.push(m.text())});await p.goto(url);assert.equal(await p.locator('#gallery article').count(),126);if(cell.theme==='light')await p.locator('#theme').click();
- if(cell.zoom===2){r.zoomMeasurements=await p.evaluate(()=>{const nodes=[...document.querySelectorAll('[data-id="124"],[data-id="125"],[data-id="126"]')].flatMap(c=>[c,...c.querySelectorAll('*')]);const before=nodes.map(e=>parseFloat(getComputedStyle(e).fontSize));nodes.forEach((e,i)=>e.style.fontSize=before[i]*2+'px');return nodes.map((e,i)=>({before:before[i],after:parseFloat(getComputedStyle(e).fontSize)}))});assert.ok(r.zoomMeasurements.every(x=>Math.abs(x.after-x.before*2)<.1));}
+ if(cell.zoom===2){r.zoomBaseline=await p.evaluate(()=>{
+ const rules={},nodes=[...document.querySelectorAll('[data-wave1]')].flatMap(c=>[c,...c.querySelectorAll('*')]);
+ for(const e of nodes){const id=e.closest('[data-wave1]').dataset.wave1,tag=e.tagName.toLowerCase(),selector=`[data-wave1="${id}"]${e.hasAttribute('data-wave1')?'':' '+tag}`,size=parseFloat(getComputedStyle(e).fontSize);if(rules[selector]&&rules[selector]!==size)throw Error('Nonuniform font baseline '+selector);rules[selector]=size;}
+ const style=document.createElement('style');style.textContent=Object.entries(rules).map(([selector,size])=>`${selector}{font-size:${size*2}px!important}`).join('\n');document.head.append(style);window.wave1ZoomRules=rules;return rules;
+ });await verifyZoom(p,r);}
+
  await exercise(p,r);r.screenshot=key(cell)+'.png';await p.screenshot({path:path.join(out,r.screenshot),fullPage:false});r.sha256=hash(fs.readFileSync(path.join(out,r.screenshot)));r.checks.push('screenshot');assert.deepEqual(r.errors,[]);r.status='PASS';
  }catch(e){r.error=e.stack}finally{if(ctx)await ctx.close();if(r.errors.length)r.status='FAIL';save()}}
- }catch(e){report.results.push({engine,status:'BLOCKED',error:e.stack})}finally{if(browser)await browser.close()}}
+ }catch(e){report.results.push({engine,status:browser?'FAIL':'BLOCKED',error:e.stack})}finally{if(browser)await browser.close()}}
  report.exitCode=report.results.length===14&&report.results.every(r=>r.status==='PASS')?0:1;report.finished=new Date().toISOString();save();if(!report.exitCode)audit(report,out);process.exitCode=report.exitCode;
  }finally{await new Promise(resolve=>server.close(resolve))}
 }
