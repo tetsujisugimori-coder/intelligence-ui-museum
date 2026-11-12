@@ -17,3 +17,6 @@
 .wave1 :focus-visible { outline:3px solid #d68900; outline-offset:2px; }
 .wave1 [aria-invalid="true"] { border:2px solid #d68900; }
 @media (prefers-reduced-motion: reduce) { .wave1 * { animation:none!important; transition:none!important; } }
+/* Keep Query fieldsets out of WebKit 26.0 flex-item height invalidation.
+   Grid preserves the existing vertical rows/gap and fieldset semantics. */
+[data-wave1="124"] [data-w1-controls] { display:grid; }

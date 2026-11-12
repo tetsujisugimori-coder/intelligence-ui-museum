@@ -1,0 +1,87 @@
+{
+  "dateJST": "2026-11-13",
+  "scope": "Three fixed files (wave1.css, wave1-log-evidence.cjs, v11-wave1.yml), 36 existing diagnostic records and image hashes, independent preregistered two-arm one-run native comparison",
+  "hashesFile": "independent-reset-fix-hashes.json",
+  "decision": "No blocking code finding for scoped mitigation/log transport. Proceed to fixed 14-condition HTTP CI; overall HOLD/NO remains until full verification.",
+  "independentPlan": "independent-reset26-plan.md",
+  "nativeComparison": {
+    "transport": "Windows file: only",
+    "playwright": "1.56.1 (existing installation)",
+    "webkit": "26.0",
+    "viewport": "375x1000",
+    "theme": "dark",
+    "zoom": 2,
+    "reducedMotion": true,
+    "observer": "expanded",
+    "repetitionsPerArm": 1,
+    "original": {
+      "status": "FAIL",
+      "exitCode": 1,
+      "finalState": "OR / 西 / 2 matches",
+      "resetY": [
+        459.625,
+        417.625
+      ],
+      "fieldsetHeight": [
+        914.125,
+        872.125
+      ],
+      "events": [
+        "mousedown BUTTON",
+        "blur SELECT",
+        "mouseup SUMMARY",
+        "click SECTION"
+      ],
+      "record": "independent-reset26-original/result.json"
+    },
+    "candidate3": {
+      "status": "PASS",
+      "exitCode": 0,
+      "finalState": "AND / 東 / 3 matches",
+      "resetY": [
+        459.625,
+        459.625
+      ],
+      "fieldsetHeight": [
+        872.125,
+        872.125
+      ],
+      "events": [
+        "mousedown BUTTON",
+        "blur SELECT",
+        "mouseup BUTTON",
+        "click BUTTON"
+      ],
+      "record": "independent-reset26-candidate/result.json"
+    }
+  },
+  "existingEvidence": {
+    "baseline": "9/9 FAIL",
+    "candidate1ButtonBlock": "9/9 FAIL",
+    "candidate2FieldsetGrid": "9/9 FAIL",
+    "candidate3ParentGrid": "9/9 PASS",
+    "all36ScreenshotHashesMatch": true
+  },
+  "sourceReview": {
+    "singleFactor": "Query-only [data-wave1=\"124\"] [data-w1-controls] display:grid; original four other product assets byte-identical in candidate app",
+    "eventChanges": "None; native click, original sequence and existing timeout preserved",
+    "scope": "CSS selector only affects new Query exhibit 124; old 123, Permission/Pivot unaffected by selector",
+    "causalConclusion": "Evidence supports a local fieldset outer-layout/focus sizing boundary. It does not establish an internal WebKit bug mechanism."
+  },
+  "logTransfer": {
+    "status": "PASS",
+    "test": "independent-log-roundtrip.json",
+    "bytes": 408667,
+    "chunks": 67,
+    "sha256": "9b1a98ed94cfba3a97dac63c07d167f4169cb37fa1a9e3e3b7c31cca5c41cc81",
+    "exactByteRoundtrip": true,
+    "workflow": "always() secondary result-JSON log step preserves original ZIP upload and failing audit exit; source comment distinguishes secondary transport from ZIP CRC verification"
+  },
+  "limitations": [
+    "Full fixed14 Ubuntu HTTP CI still pending",
+    "No assertion of internal WebKit root cause",
+    "Log JSON is not original ZIP; original ZIP CRC/images still separate",
+    "Independent native comparison covers only Query Reset; other operations rely on forthcoming fixed14 validation"
+  ],
+  "integrity": "Three source hashes unchanged at completion; earlier failures and evidence preserved."
+}
