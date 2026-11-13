@@ -1,0 +1,78 @@
+{
+  "dateJST": "2026-11-13",
+  "scope": "Independent v4 code review; seven-file SHA256 frozen in independent-v4-hashes.json; old v1 findings retested; one fresh Windows WebKit file: native Query Reset operation; reading nine recorded diagnostic runs",
+  "decision": "No remaining blocking finding within this review scope. Overall PARTIAL/HOLD/NO; HTTP CI, final submitted commit, original ZIP and permanent archive still require separate verification.",
+  "findingsResolved": [
+    {
+      "id": "v1-zoom-string-bypass",
+      "evidence": "Independent v4 full CLI control: old exit0 -> new exit1"
+    },
+    {
+      "id": "v1-submitted-head-external-binding",
+      "evidence": "Workflow passes WAVE1_SUBMITTED_HEAD to CLI; CLI forwards argv[5]; runner passes expected submittedHead; same-tree substituted commit control old0 -> new1"
+    }
+  ],
+  "tests": {
+    "nodeSuite": {
+      "passed": 6,
+      "failed": 0
+    },
+    "synthetic": {
+      "normal": 0,
+      "negativeCount": 22,
+      "allNewExit": 1,
+      "oldAlreadyRejected": [
+        "head mismatch",
+        "tree mismatch",
+        "width string"
+      ],
+      "oldAcceptedCount": 19,
+      "record": "independent-contract-v4.json"
+    },
+    "browser": {
+      "transport": "file-local-only; NOT equivalent to Ubuntu HTTP CI",
+      "engine": "WebKit",
+      "version": "26.5",
+      "width": 375,
+      "height": 1000,
+      "theme": "dark",
+      "zoom": 2,
+      "reducedMotion": true,
+      "observer": "none",
+      "nativeRuns": 1,
+      "status": "PASS",
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "measurements": [
+        "initial",
+        "query"
+      ],
+      "finalState": "AND / region eq 東 / 3 matches",
+      "record": "independent-native-reset-installed-path/result.json",
+      "screenshot": "independent-native-reset-installed-path/reset.png",
+      "visualReview": "Dark doubled-text view with root select focused; viewport crops later content normally",
+      "priorEnvironmentFailure": "Initial launch failed because default sandbox Playwright executable location did not exist. Failure record retained under independent-native-reset/result.json. Existing installed browser path supplied for actual first native scenario; no operation retry."
+    },
+    "priorDiagnostic": {
+      "record": "source/.work/reset-file-evidence/reset-results.json",
+      "sha256": "d42fd637305ba09eb6186b00dd23cb379c3d42d2d71504a27623385b6885490d",
+      "runs": 9,
+      "original": 3,
+      "expanded": 3,
+      "none": 3,
+      "allRecordedPass": true,
+      "allScreenshotHashesMatch": true,
+      "note": "This raw report predates v4 diagnostic width field; not represented as a run of the final diagnostic code."
+    }
+  },
+  "resetConclusion": "NOT_REPRODUCED in Windows file: supplement. Old Ubuntu HTTP failure cause remains UNKNOWN. No causal resolution claim.",
+  "limitations": [
+    "No full independent 14-cell browser rerun",
+    "No HTTP access test rerun",
+    "No final GitHub commit/workflows reviewed in this v4 report",
+    "Original GitHub ZIP CRC/internal file/image verification and Windows permanent archive remain incomplete",
+    "Nine existing diagnostic reports were read and screenshot hashes checked; their new runner identity/source binding is not independently proven",
+    "No product source change is proposed or reviewed"
+  ],
+  "integrity": "All seven frozen source hashes read back unchanged after this review"
+}

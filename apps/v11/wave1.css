@@ -1,0 +1,22 @@
+/* Scoped to new independent exhibits only. */
+.wave1 { min-width:0; overflow-wrap:anywhere; }
+.wave1 [data-w1-controls] { display:flex; flex-direction:column; gap:.75rem; }
+.wave1 label { display:flex; flex-wrap:wrap; align-items:center; gap:.35rem; min-width:0; }
+.wave1 input,.wave1 select,.wave1 button { max-width:100%; min-width:0; font:inherit; }
+.wave1 input,.wave1 select { box-sizing:border-box; width:100%; }
+.wave1 button { white-space:normal; overflow-wrap:anywhere; min-height:2.5em; }
+.wave1 fieldset { min-width:0; margin:0; padding:.65rem; border:1px solid currentColor; }
+.wave1 .w1-condition { display:flex; flex-direction:column; gap:.35rem; margin:.5rem 0; padding:.5rem; border:1px dashed currentColor; }
+.wave1 output { display:block; margin:.75rem 0; white-space:normal; }
+.wave1 .w1-scroll { max-width:100%; overflow-x:auto; margin:.75rem 0; }
+.wave1 table { border-collapse:collapse; width:100%; min-width:24em; font:inherit; }
+/* Preserve numeric tokens and short labels; the named keyboard-focusable
+   region scrolls locally at narrow widths and enlarged text sizes. */
+.wave1 td { white-space:nowrap; }
+.wave1 th,.wave1 td { padding:.4rem; border:1px solid currentColor; text-align:start; }
+.wave1 :focus-visible { outline:3px solid #d68900; outline-offset:2px; }
+.wave1 [aria-invalid="true"] { border:2px solid #d68900; }
+@media (prefers-reduced-motion: reduce) { .wave1 * { animation:none!important; transition:none!important; } }
+/* Keep Query fieldsets out of WebKit 26.0 flex-item height invalidation.
+   Grid preserves the existing vertical rows/gap and fieldset semantics. */
+[data-wave1="124"] [data-w1-controls] { display:grid; }

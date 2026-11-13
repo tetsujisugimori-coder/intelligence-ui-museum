@@ -1,0 +1,9 @@
+{
+  "apps/v11/wave1-contract.cjs": "9263dfe2ffafb30119db57fd1d5e988ae3c26a963cc5536d57a6afda11b4d07f",
+  "apps/v11/wave1-audit.cjs": "a7398677d76cda083b8b611c347f5628665407a199e69124b7d5bc66827b7c0d",
+  "apps/v11/wave1-browser.cjs": "ddf2e5cb21a98e703df51e4416c9613bd8b3f464d3303afc69762f2453b7c110",
+  "apps/v11/wave1-test.cjs": "def84fd9e2ca9e5b9005e1c4db112106acb03e0b5db5432c9abd0ab422d50f57",
+  ".github/workflows/v11-wave1.yml": "b389419f2bfa45f808abfce27548380ac08c007c16d5309a79701f16fe594105",
+  "docs/v11-wave1/RESET-FOLLOWUP-PLAN.md": "faab9fd5268ac97c560deaa16749cbb6533773d9eb89bf4d1f1e7abd245b6d2b",
+  "apps/v11/wave1-reset-diagnostic.cjs": "e91b99ddb754bb8c3a6df787d569eda85cf1b9e2bd2292b5cddb9360f0baf963"
+}

@@ -31,7 +31,7 @@ const git = (...args) =>
 const server = http.createServer((req, res) => {
   const name =
     new URL(req.url, "http://localhost").pathname.slice(1) || "index.html";
-  if (!["index.html", "exhibits.js", "exhibits.css"].includes(name)) {
+  if (!["index.html", "exhibits.js", "exhibits.css", "wave1.js", "wave1.css"].includes(name) || !fs.existsSync(path.join(site,name))) {
     res.writeHead(404).end();
     return;
   }
@@ -49,7 +49,9 @@ function source(head) {
   const dir = path.join(temp, head);
   fs.mkdirSync(dir);
   const files = {};
-  for (const name of ["index.html", "exhibits.js", "exhibits.css"]) {
+  const html = git("show", `${head}:apps/v11/index.html`);
+  const required = ["index.html", "exhibits.js", "exhibits.css", ...(html.includes('src="wave1.js"') ? ["wave1.js", "wave1.css"] : [])];
+  for (const name of required) {
     const data = execFileSync("git", ["show", `${head}:apps/v11/${name}`], {
       cwd: repo,
       maxBuffer: 5e6,

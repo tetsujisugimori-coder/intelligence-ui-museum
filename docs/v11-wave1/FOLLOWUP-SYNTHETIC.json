@@ -1,0 +1,140 @@
+{
+  "kind": "synthetic-not-browser",
+  "head": "16d10c830a284f0f432f013a9efd79e518d00d94",
+  "tree": "da7e5a18385b50aa9bc0d22ea0cd26c43958cbff",
+  "normal": 0,
+  "mutations": [
+    {
+      "name": "hash missing",
+      "before": 0,
+      "after": 1,
+      "error": "source hashes missing"
+    },
+    {
+      "name": "hash invalid type",
+      "before": 0,
+      "after": 1,
+      "error": "Expected values to be strictly equal:\n\n'number' !== 'string'"
+    },
+    {
+      "name": "file set incomplete",
+      "before": 0,
+      "after": 1,
+      "error": "source file set mismatch\n+ actual - expected\n\n  [\n    'exhibits.css',\n-   'exhibits.js',\n    'index.html',\n    'wave1.css',\n    'wave1.js'\n  ]"
+    },
+    {
+      "name": "source substituted",
+      "before": 0,
+      "after": 1,
+      "error": "source hash mismatch: wave1.js\n+ actual - expected\n\n+ '0000000000000000000000000000000000000000000000000000000000000000'\n- 'f50dbe2e87b305194e5420dd71fef58c9a0cc3099157e6ccfc9349dd91ba1b11'"
+    },
+    {
+      "name": "head mismatch",
+      "before": 1,
+      "after": 1,
+      "error": "fatal: ambiguous argument '0000000000000000000000000000000000000000^{commit}': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\nCommand failed: git rev-parse 0000000000000000000000000000000000000000^{commit}\nfatal: ambiguous argument '0000000000000000000000000000000000000000^{commit}': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'"
+    },
+    {
+      "name": "tree mismatch",
+      "before": 1,
+      "after": 1,
+      "error": "commit/tree mismatch\n+ actual - expected\n\n+ 'da7e5a18385b50aa9bc0d22ea0cd26c43958cbff'\n- '0000000000000000000000000000000000000000'"
+    },
+    {
+      "name": "submitted head mismatch",
+      "before": 0,
+      "after": 1,
+      "error": "fatal: ambiguous argument '0000000000000000000000000000000000000000^{commit}': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\nCommand failed: git rev-parse 0000000000000000000000000000000000000000^{commit}\nfatal: ambiguous argument '0000000000000000000000000000000000000000^{commit}': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'"
+    },
+    {
+      "name": "same-tree submitted substitution",
+      "before": 0,
+      "after": 1,
+      "error": "submitted HEAD mismatch\n+ actual - expected\n\n+ 'c0751e223d8becbb426afdd55cf5322ce27d000a'\n- '16d10c830a284f0f432f013a9efd79e518d00d94'"
+    },
+    {
+      "name": "zoom string bypass",
+      "before": 0,
+      "after": 1,
+      "error": "zoom must be numeric 1 or 2"
+    },
+    {
+      "name": "width string",
+      "before": 1,
+      "after": 1,
+      "error": "width must be numeric matrix width"
+    },
+    {
+      "name": "baseline missing",
+      "before": 0,
+      "after": 1,
+      "error": "baseline missing"
+    },
+    {
+      "name": "baseline invalid",
+      "before": 0,
+      "after": 1,
+      "error": "invalid baseline"
+    },
+    {
+      "name": "measurements missing",
+      "before": 0,
+      "after": 1,
+      "error": "stage measurements missing"
+    },
+    {
+      "name": "stage missing",
+      "before": 0,
+      "after": 1,
+      "error": "measurement stages missing\n+ actual - expected\n\n  [\n    'initial',\n    'keyboard',\n    'permission',\n    'pivot',\n-   'query'\n  ]"
+    },
+    {
+      "name": "empty elements",
+      "before": 0,
+      "after": 1,
+      "error": "element coverage: permission\n+ actual - expected\n\n+ []\n- [\n-   '[data-wave1=\"124\"]',\n-   '[data-wave1=\"124\"] [data-w1-before]',\n-   '[data-wave1=\"124\"] [data-w1-state]',\n-   '[data-wave1=\"124\"] button',\n-   '[data-wave1=\"124\"] input',\n-   '[data-wave1=\"124\"] label',\n-   '[data-wave1=\"124\"] select',\n-   '[data-wave1=\"124\"] td',\n-   '[data-wave1=\"124\"] th',\n-   '[data-wave1=\"125\"]',\n-   '[data-wave1=\"125\"] [data-w1-before]',\n-   '[data-wave1=\"125\"] [data-w1-state]',\n-   '[data-wave1=\"125\"] button',\n-   '[data-wave1=\"125\"] label',\n-   '[data-wave1=\"125\"] select',\n-   '[data-wave1=\"125\"] td',\n-   '[data-wave1=\"125\"] th',\n-   '[data-wave1=\"126\"]',\n-   '[data-wave1=\"126\"] [data-w1-before]',\n-   '[data-wave1=\"126\"] [data-w1-state]',\n-   '[data-wave1=\"126\"] button',\n-   '[data-wave1=\"126\"] label',\n-   '[data-wave1=\"126\"] select',\n-   '[data-wave1=\"126\"] td',\n-   '[data-wave1=\"126\"] th'\n- ]"
+    },
+    {
+      "name": "required element missing",
+      "before": 0,
+      "after": 1,
+      "error": "element coverage: pivot\n+ actual - expected\n... Skipped lines\n\n  [\n    '[data-wave1=\"124\"]',\n    '[data-wave1=\"124\"] [data-w1-before]',\n    '[data-wave1=\"124\"] [data-w1-state]',\n    '[data-wave1=\"124\"] button',\n...\n    '[data-wave1=\"126\"] select',\n-   '[data-wave1=\"126\"] td',\n    '[data-wave1=\"126\"] th'\n  ]"
+    },
+    {
+      "name": "invalid value",
+      "before": 0,
+      "after": 1,
+      "error": "invalid measurement"
+    },
+    {
+      "name": "ratio mismatch",
+      "before": 0,
+      "after": 1,
+      "error": "text ratio: query [data-wave1=\"124\"]#0"
+    },
+    {
+      "name": "redraw returns normal",
+      "before": 0,
+      "after": 1,
+      "error": "text ratio: keyboard [data-wave1=\"124\"]#0"
+    },
+    {
+      "name": "motion preference absent",
+      "before": 0,
+      "after": 1,
+      "error": "reduced motion missing: pivot\n\nfalse !== true"
+    },
+    {
+      "name": "active animation",
+      "before": 0,
+      "after": 1,
+      "error": "animation active\n\n'spin' !== 'none'"
+    },
+    {
+      "name": "active transition",
+      "before": 0,
+      "after": 1,
+      "error": "transition active"
+    }
+  ]
+}

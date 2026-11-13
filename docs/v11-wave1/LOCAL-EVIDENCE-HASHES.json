@@ -1,0 +1,55 @@
+{
+  "visibility": "Raw logs remain private in execution workspace; not permanent Windows archive. Relative names only.",
+  "files": [
+    {
+      "file": "preservation-initial.log",
+      "bytes": 248,
+      "sha256": "7807c09ea49f27b5e64d987da8fed3477257047c5fd07868e9f2696030977fea"
+    },
+    {
+      "file": "old-unit-third.log",
+      "bytes": 1615,
+      "sha256": "7309e8f9bee1a2b8d256ba59210f9872006eb1f24810a8b0e5c9e6bb8ad0581a"
+    },
+    {
+      "file": "preservation-controls.log",
+      "bytes": 2163,
+      "sha256": "c68bcd67216786aa378c1875af1098b78bc0e612e4ef370e5428ea9130884b87"
+    },
+    {
+      "file": "old-unit-second.log",
+      "bytes": 3346,
+      "sha256": "fa23a6268e03bbba982bb9eac545583d596986a6c8877863b64d4e41f0457906"
+    },
+    {
+      "file": "unit-final.log",
+      "bytes": 556,
+      "sha256": "623fb3f6069bf1043d624035c0cc3c64e744e48361aa5a4cb1bb68352531c276"
+    },
+    {
+      "file": "unit-final-tests.txt",
+      "bytes": 553,
+      "sha256": "58ecad010816c729767aed1903be76f1aa4bd2aec34a9bc9f570f9e14982c478"
+    },
+    {
+      "file": "preflight.json",
+      "bytes": 514,
+      "sha256": "35e25f959f102bc1b498e50ef62737d1f54aa9dc975decf00d690bc05b4b3d71"
+    },
+    {
+      "file": "old-unit.log",
+      "bytes": 5127,
+      "sha256": "5bdeab2c6379785284be4fa1f5af1e76b0ef2a89b078e61b546790e06d2cbb35"
+    },
+    {
+      "file": "unit-first.log",
+      "bytes": 459,
+      "sha256": "0dd20cbfe0e3363b1a964aa4aa039f2c47f36d2cdaf09ad1db1b6fcfa7590e49"
+    },
+    {
+      "file": "browser-first/results.json",
+      "bytes": 7003,
+      "sha256": "73314af053e9f34ea1123b23a29755512677c6239d8c381309e0f3f2c849c88a"
+    }
+  ]
+}

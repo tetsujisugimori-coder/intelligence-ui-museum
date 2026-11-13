@@ -1,0 +1,2192 @@
+{
+  "kind": "Windows-file-local-only",
+  "repetitionsFixedBeforeExecution": true,
+  "results": [
+    {
+      "directory": "reset-file-webkit26-evidence",
+      "reportSha256": "f5267d0df92cb9d4b32f5257906ed36f14a732382e6801d3f082fd72699c89a3",
+      "version": "26.0",
+      "transport": "file-local-only",
+      "runs": [
+        {
+          "mode": "original",
+          "repetition": 1,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "original-1.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "original",
+          "repetition": 2,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "original-2.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "original",
+          "repetition": 3,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "original-3.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 1,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                914.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "expanded-1.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 2,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                914.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "expanded-2.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 3,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                914.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "expanded-3.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "none",
+          "repetition": 1,
+          "status": "FAIL",
+          "events": [],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "none-1.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "none",
+          "repetition": 2,
+          "status": "FAIL",
+          "events": [],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "none-2.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "none",
+          "repetition": 3,
+          "status": "FAIL",
+          "events": [],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "none-3.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        }
+      ]
+    },
+    {
+      "directory": "reset-candidate-webkit26-evidence",
+      "reportSha256": "cd37fc0bd274151594c6518f8f81fa2390141ff799f66363637dc314661c8c08",
+      "version": "26.0",
+      "transport": "file-local-only",
+      "runs": [
+        {
+          "mode": "original",
+          "repetition": 1,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "original-1.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "original",
+          "repetition": 2,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "original-2.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "original",
+          "repetition": 3,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "original-3.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 1,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                914.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "expanded-1.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 2,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                914.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "expanded-2.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 3,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                914.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "expanded-3.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "none",
+          "repetition": 1,
+          "status": "FAIL",
+          "events": [],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "none-1.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "none",
+          "repetition": 2,
+          "status": "FAIL",
+          "events": [],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "none-2.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "none",
+          "repetition": 3,
+          "status": "FAIL",
+          "events": [],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "none-3.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        }
+      ]
+    },
+    {
+      "directory": "reset-grid-webkit26-evidence",
+      "reportSha256": "bc1439244140230f6c41d57bbd504d9916771b4e3be360805b3a47adb31de9ee",
+      "version": "26.0",
+      "transport": "file-local-only",
+      "runs": [
+        {
+          "mode": "original",
+          "repetition": 1,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "original-1.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "original",
+          "repetition": 2,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "original-2.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "original",
+          "repetition": 3,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "original-3.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 1,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                914.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "expanded-1.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 2,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                914.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "expanded-2.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 3,
+          "status": "FAIL",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                914.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "SUMMARY",
+                "attrs": []
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "SECTION",
+                "attrs": [
+                  [
+                    "data-wave1",
+                    "124"
+                  ],
+                  [
+                    "data-initialized",
+                    "true"
+                  ]
+                ]
+              },
+              "resetY": 417.625,
+              "scroll": {
+                "x": 0,
+                "y": 64030
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "expanded-3.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "none",
+          "repetition": 1,
+          "status": "FAIL",
+          "events": [],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "none-1.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "none",
+          "repetition": 2,
+          "status": "FAIL",
+          "events": [],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "none-2.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        },
+        {
+          "mode": "none",
+          "repetition": 3,
+          "status": "FAIL",
+          "events": [],
+          "error": "page.waitForFunction: Timeout 2000ms exceeded.\n    at queryScenario (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-browser.cjs:73:76)\n    at async main (C:\\Users\\tetsu\\Documents\\Codex\\2026-11-13\\task-3\\source\\apps\\v11\\wave1-reset-diagnostic.cjs:19:36)",
+          "screenshot": "none-3.png",
+          "sha256": "bb710f59003aa4df9e5bef342b31fd7dbd3cee9a833ce0c3f72e2d5cb824d575"
+        }
+      ]
+    },
+    {
+      "directory": "reset-parent-grid-webkit26-evidence",
+      "reportSha256": "02af73e05fa99e3436d3d9e605311534ca7e1ea16b3abf5b8cbdfc3dc5809ec6",
+      "version": "26.0",
+      "transport": "file-local-only",
+      "runs": [
+        {
+          "mode": "original",
+          "repetition": 1,
+          "status": "PASS",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": null,
+          "screenshot": "original-1.png",
+          "sha256": "8e59cce84a7decf2a0bf026c0bcf1a05df84cf01a31d0e14e7004a202a7d0817"
+        },
+        {
+          "mode": "original",
+          "repetition": 2,
+          "status": "PASS",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": null,
+          "screenshot": "original-2.png",
+          "sha256": "8e59cce84a7decf2a0bf026c0bcf1a05df84cf01a31d0e14e7004a202a7d0817"
+        },
+        {
+          "mode": "original",
+          "repetition": 3,
+          "status": "PASS",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": []
+            }
+          ],
+          "error": null,
+          "screenshot": "original-3.png",
+          "sha256": "8e59cce84a7decf2a0bf026c0bcf1a05df84cf01a31d0e14e7004a202a7d0817"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 1,
+          "status": "PASS",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": null,
+          "screenshot": "expanded-1.png",
+          "sha256": "b983d9e76a6d86ea6106dcd402a8ba5ad5e78caf5061259e71b29e44d4687d73"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 2,
+          "status": "PASS",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": null,
+          "screenshot": "expanded-2.png",
+          "sha256": "8e59cce84a7decf2a0bf026c0bcf1a05df84cf01a31d0e14e7004a202a7d0817"
+        },
+        {
+          "mode": "expanded",
+          "repetition": 3,
+          "status": "PASS",
+          "events": [
+            {
+              "type": "mousedown",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "blur",
+              "target": {
+                "tag": "SELECT",
+                "attrs": [
+                  [
+                    "data-q-root",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "mouseup",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            },
+            {
+              "type": "click",
+              "target": {
+                "tag": "BUTTON",
+                "attrs": [
+                  [
+                    "data-w1-reset",
+                    ""
+                  ]
+                ]
+              },
+              "resetY": 459.625,
+              "scroll": {
+                "x": 0,
+                "y": 63988
+              },
+              "fieldsetHeights": [
+                872.125
+              ]
+            }
+          ],
+          "error": null,
+          "screenshot": "expanded-3.png",
+          "sha256": "8e59cce84a7decf2a0bf026c0bcf1a05df84cf01a31d0e14e7004a202a7d0817"
+        },
+        {
+          "mode": "none",
+          "repetition": 1,
+          "status": "PASS",
+          "events": [],
+          "error": null,
+          "screenshot": "none-1.png",
+          "sha256": "8e59cce84a7decf2a0bf026c0bcf1a05df84cf01a31d0e14e7004a202a7d0817"
+        },
+        {
+          "mode": "none",
+          "repetition": 2,
+          "status": "PASS",
+          "events": [],
+          "error": null,
+          "screenshot": "none-2.png",
+          "sha256": "8e59cce84a7decf2a0bf026c0bcf1a05df84cf01a31d0e14e7004a202a7d0817"
+        },
+        {
+          "mode": "none",
+          "repetition": 3,
+          "status": "PASS",
+          "events": [],
+          "error": null,
+          "screenshot": "none-3.png",
+          "sha256": "b983d9e76a6d86ea6106dcd402a8ba5ad5e78caf5061259e71b29e44d4687d73"
+        }
+      ]
+    }
+  ]
+}

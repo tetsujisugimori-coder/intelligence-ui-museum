@@ -1,0 +1,7 @@
+# Pre-registration 2026-11-13 JST, after WebKit26.0 baseline
+
+Matched installed Playwright1.56.1/WebKit26.0 on Windows file: reproduces Reset failure in original observation, expanded observation and no-observation conditions (3 fresh contexts each). Do not transfer Windows HTTP equivalence.
+
+Expanded evidence: Query fieldset height shrinks 914.125 to872.125 CSS px between Reset mousedown and root-select blur. Descendant control rects and computed styles do not change; trailing space below the final fieldset button shrinks by42px. Controls/host heights and following Reset position shrink by42px, scroll and before/state unchanged. Pointerup targets SUMMARY and click SECTION. Hypothesis: WebKit26.0 anonymous inline button line formatting leaves stale trailing fieldset height until focus invalidation. Engine internals remain unproven.
+
+Single-factor candidate: only `.wave1 fieldset > button { display:block; }`, making direct fieldset buttons block boxes and removing their anonymous inline line layout. No focus/event/timer modifications. Compare original existing9 runs against candidate9 fresh runs, same3 observer modes and 3 repetitions; all attempts retained. If candidate passes, run original fixed14 then candidate fixed14 using installed lock-matched1.56.1; then CI HTTP14. A pass is a local mitigation supported by layout evidence, not proof of WebKit internal root cause. No force clicks, retries to obtain pass, or changed waits.
