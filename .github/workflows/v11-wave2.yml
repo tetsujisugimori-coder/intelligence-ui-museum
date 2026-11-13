@@ -1,0 +1,60 @@
+name: v11 Wave 2
+on:
+  pull_request:
+    paths:
+      - 'apps/v11/**'
+      - '.github/workflows/v11-wave2.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  wave2:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      TMPDIR: ${{ github.workspace }}/.work/wave2-tmp
+      TMP: ${{ github.workspace }}/.work/wave2-tmp
+      TEMP: ${{ github.workspace }}/.work/wave2-tmp
+      npm_config_cache: ${{ github.workspace }}/.work/wave2-cache
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/wave2-browsers
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Isolated writable workspace
+        run: |
+          mkdir -p "$TMPDIR" "$npm_config_cache" "$PLAYWRIGHT_BROWSERS_PATH" .work/wave2-app .work/wave2-evidence
+          df -h . "$TMPDIR"
+          test -w "$TMPDIR"
+          cp -a apps/v11/. .work/wave2-app/
+          node -e "if(require('os').tmpdir()!==process.env.TMPDIR)process.exit(1)"
+      - run: npm ci --ignore-scripts
+        working-directory: .work/wave2-app
+      - run: npx playwright install --with-deps chromium webkit
+        working-directory: .work/wave2-app
+      - run: python3 apps/v11/verify.py
+      - run: node --test apps/v11/wave2-test.cjs
+      - name: Browser matrix and real negative controls
+        env:
+          WAVE2_SUBMITTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+          APP_ROOT: ${{ github.workspace }}/.work/wave2-app
+          EVIDENCE_DIR: ${{ github.workspace }}/.work/wave2-evidence
+          CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/.work/wave2-app/node_modules
+        run: node apps/v11/wave2-browser.cjs
+      - name: Independent evidence audit (including failed browser runs)
+        if: always()
+        env:
+          WAVE2_SUBMITTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: node apps/v11/wave2-audit.cjs .work/wave2-evidence/results.json "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})" "$WAVE2_SUBMITTED_HEAD"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-wave2-${{ github.sha }}
+          path: .work/wave2-evidence/
+          if-no-files-found: error
+          retention-days: 90
+
