@@ -30,3 +30,15 @@ Exact current runner selector/CSS algorithm leaves all 136 SVG node texts at 16p
 ## Decision
 
 Independent review currently **FAIL / blocking P1+P2 unresolved**. No merge recommendation. Re-review same inputs after implementation fix and final HEAD/CI/source evidence binding required. This document records the initial review; preserve it when appending correction results.
+
+## Candidate recheck (2026-11-15 JST)
+
+Candidate local commit `fbf307c00c97193b0b97cc44480f34895f817b08` was supplied after the fixes. This is an interim recheck, not final HEAD/CI/original artifact acceptance.
+
+- W5-R1: reran the initial fabricated report. Its missing newly required execution fields caused rejection, which was **not counted** as the target semantic fix. Then supplied correct candidate execution source hashes. The same invalid condition metadata was rejected specifically by `metadata identity`. After correcting only metadata, the original plain-text trace was rejected by ZIP parsing (`BadZipFile`). Records: `audit-candidate-recheck.json`. Positive normal artifact acceptance and complete final context/font corruption controls remain **NOT_TESTED** in this independent recheck.
+- W5-R2: the identical initial a→b graph now terminates at target boundary x=130, y≈63.333, not inside b. Independent Chromium screenshot visually shows the arrowhead before b. Initial-graph counterexample correction confirmed. All possible moved-node geometries were not exhaustively tested by reviewer.
+- W5-R3: revised runner selector includes SVG `text`. Independent Chromium measurements now show each node label 16→32px, ratio2, and screenshot confirms enlarged node labels. Records: `product-candidate.json`, `product-136-candidate.png`. These were captured on the modified working tree before candidate commit; recorded HEAD alone does not identify those uncommitted product bytes. Final candidate artifact linkage therefore remains pending.
+- Found a fault-runner setup defect during static review: query strings were included in filesystem paths, causing the initial query-bearing navigation to return404. Implementation owner reported pathname fix before candidate freeze. Independent browser recheck of that fix: **NOT_TESTED**.
+- Additional static gap: Overview visible aggregate and Group visible membership are not independently checked against fixed expected data by the then-reviewed exercise/audit. An attempted dynamic counterexample using a VM-loaded exercise failed on cross-realm `deepStrictEqual` for both normal and fault cases, before reaching this property. `overview-red.json` is retained as **INVALID_COUNTEREXAMPLE / harness failure**, not proof of semantic rejection or false acceptance. This static gap remains open for owner verification; no valid RED/GREEN claim is made.
+
+No further trials were run after the owner requested recording-only completion. Overall independent review remains **PARTIAL** pending full positive evidence audit, the visible semantic-content gap, final HEAD CI, and Library readback. Initial failure evidence and review are preserved above.
