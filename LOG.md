@@ -30,3 +30,5 @@ Wave3 original CI evidence correction: run43565124714 / artifact14101838513 (91,
 - 133–135追加と124–126説明map欠落修正。旧132 dataset全項目/v09 byte/v10/lockを保持。
 - 初期化呼出欠落、予約背景14分割/18枠不整合を実ブラウザ反例で発見し修正。旧失敗を別証拠に保持。
 - 通常Git push認証不足、認証済みGitHub接続の非force更新で提出。最終受入結果はPR55/Issue54で対象HEADを明記する。Draft維持、Stage3 HOLD。
+
+- 初回候補dc0a773の第4便14条件/20対照はPASSだが、CI Kanban専用配信器がwave4資源を複製/配信せず24条件で未定義エラー。旧原artifact14109674732を保持。配信と独立監査の資源一覧へwave4を条件付き追加し、旧HEADには新資源を要求しない。期待値緩和ではなくHTTP実バイト閉包の修正。
