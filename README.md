@@ -32,3 +32,7 @@ npm --prefix .work/v10 test
 Issues #12 / #13 の文字拡大と Kanban 表示の自己検証は [記録](evidence/zoom-issues-12-13-20261103/README.md) を参照。合成文字拡大は OS 設定の代替ではありません。
 
 Issue #15のKanban画像回帰検査は [設計・再現手順](docs/KANBAN-VISUAL.md) と [新規証拠](evidence/kanban-issue-15-20261104/README.md) を参照。独立レビュー前はDraft、Stage 3 HOLD。
+
+## 2026-11-14 JST：第3便（実装・検証中）
+
+132展示・11カテゴリーの候補。130 Editable Data Grid、131 Schema Form、132 Gantt Editorと127–129説明登録の修正。基準はPR51マージ後main。旧記録は当時の結果として保持。仕様と受入条件は [計画](docs/v11-wave3/PLAN.md) を参照。正式結果は対象HEADの証拠照合後に記録する。Stage3 HOLD、v10受入NO、Draft提出まで。

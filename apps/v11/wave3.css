@@ -1,0 +1,29 @@
+.wave3 { min-width:0; max-width:100%; line-height:1.55; }
+.wave3 * { box-sizing:border-box; }
+.wave3 p,.wave3 output,.wave3 pre { overflow-wrap:anywhere; white-space:pre-wrap; }
+.wave3 output { display:block; margin-block:1em; }
+.wave3 label { display:flex; flex-direction:column; gap:.35em; min-width:0; }
+.wave3 select,.wave3 input,.wave3 textarea,.wave3 button { font:inherit; max-width:100%; min-width:0; color:inherit; background:var(--panel,#202630); border:1px solid currentColor; border-radius:.3em; padding:.45em; }
+.wave3 textarea { display:block; width:100%; resize:vertical; }
+.wave3 button { min-height:44px; cursor:pointer; white-space:normal; overflow-wrap:anywhere; margin:.2em; }
+.wave3 button:disabled { opacity:.5; cursor:default; }
+.wave3 :focus-visible { outline:3px solid #d98a00; outline-offset:3px; }
+.wave3 .w3-scroll { overflow:auto; max-width:100%; }
+.wave3 table { border-collapse:collapse; width:100%; min-width:36em; }
+.wave3 td,.wave3 th { border:1px solid currentColor; padding:.4em; text-align:left; vertical-align:top; }
+.wave3 td input { width:10em; }
+.wave3 td p { margin-block:.3em; }
+.wave3 [data-schema-fields] { display:grid; grid-template-columns:minmax(0,1fr); gap:.8em; margin-block:1em; }
+/* Keep enlarged controls from imposing their intrinsic width on the grid track. */
+.wave3 [data-schema-fields] > * { min-width:0; }
+.wave3 [data-schema-fields] input:not([type=checkbox]),.wave3 [data-schema-fields] select { width:100%; }
+.wave3 [data-schema-fields] [hidden] { display:none; }
+.wave3 input[type=checkbox] { width:1.4em; height:1.4em; }
+.wave3 .w3-gantt { min-width:42em; padding:.5em; }
+.wave3 .w3-days { display:grid; grid-template-columns:repeat(14,minmax(0,1fr)); margin-left:5em; }
+.wave3 .w3-days span { text-align:center; }
+.wave3 .w3-gantt-row { display:grid; grid-template-columns:5em minmax(0,1fr); align-items:center; margin-block:.4em; }
+.wave3 .w3-track { display:grid; grid-template-columns:repeat(14,minmax(0,1fr)); background:repeating-linear-gradient(to right,transparent 0,transparent calc(100% / 14 - 1px),currentColor calc(100% / 14 - 1px),currentColor calc(100% / 14)); border:1px solid currentColor; min-height:2em; }
+.wave3 .w3-bar { background:#255d9f; color:#fff; border:2px solid currentColor; min-height:2em; text-align:center; font-weight:bold; white-space:nowrap; }
+body.light .wave3 button,body.light .wave3 input,body.light .wave3 select,body.light .wave3 textarea { color:#17233c; background:#f4f6fa; }
+@media (prefers-reduced-motion:reduce) { .wave3 * { animation:none!important; transition:none!important; } }

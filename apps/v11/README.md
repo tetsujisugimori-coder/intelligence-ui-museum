@@ -25,3 +25,7 @@ CIの `browser-v11` はv11専用lockfileのPlaywrightを導入し、ChromiumとW
 ### 実測文字2倍と従来root CSS試験の区別
 
 従来accessibility-testの `synthetic text enlargement document overflow` はroot font-size:200%のみです。固定14pxのdescriptionは14pxのままなので、結果にscopeと実測前後値を追記しました。旧assert・件数を維持し、別の `text-zoom-test.cjs` で6展示の元computed font-sizeを採取して各要素を2倍へ設定します。description 14→28pxを必須とし、各card・文書の横超過、文字range/overflow clipping、focus枠、移送・Undoの実キー操作と画像を検査します。これはブラウザ内CSSによる検証条件であり、物理OSの文字拡大や実機Safari/支援技術の成功とは扱いません。両engine×375/390/1280pxの6条件。過去の「文字200%」成功を実文字拡大の成功へ読み替えません。
+
+## 2026-11-14 JST：第3便（実装・検証中）
+
+132展示・11カテゴリーの候補。130 Editable Data Grid、131 Schema Form、132 Gantt Editorと127–129説明登録の修正。基準はPR51マージ後main。旧記録は当時の結果として保持。仕様と受入条件は [計画](../../docs/v11-wave3/PLAN.md) を参照。正式結果は対象HEADの証拠照合後に記録する。Stage3 HOLD、v10受入NO、Draft提出まで。

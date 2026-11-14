@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),cp=require('node:child_process'),crypto=require('node:crypto');
 // Complete static script/stylesheet closure of index.html; inline code is bound
 // by index.html itself. No network fonts, imports or runtime fetched assets.
-const sourceFiles=['exhibits.css','exhibits.js','index.html','wave1.css','wave1.js','wave2.css','wave2.js'];
+const sourceFiles=['exhibits.css','exhibits.js','index.html','wave1.css','wave1.js','wave2.css','wave2.js','wave3.css','wave3.js'];
 const executionFiles=['wave2-audit.cjs','wave2-browser.cjs','wave2-contract.cjs','wave2-test.cjs'];
 const stages=['initial','tree','rule','graph','reset'];
 const selectors=[127,128,129].flatMap(id=>['',' button',' select',' label',' [data-w2-state]',' [data-w2-initial]',' [data-w2-before]',' [data-w2-results]',' [data-w2-results] p',...(id===127?[' th',' td']:id===128?[' input',' fieldset',' legend',' pre']:[' li',' pre',' svg text'])].map(s=>`[data-wave2="${id}"]${s}`));

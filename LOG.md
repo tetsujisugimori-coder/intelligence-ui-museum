@@ -17,3 +17,6 @@ P2/P3実装HEAD e3679d1のCI browser-v11は正常28・新規Transfer6・実文�
 2026-11-03: Issues #12 / #13 の合成文字拡大計測と Kanban の列幅を改善。新規自己検証は evidence/zoom-issues-12-13-20261103/ を参照。Stage 3 HOLD と実機未検証を維持。
 
 2026-11-04 JST: Issue #15 Kanbanのnative select文字画像回帰ゲートを追加。固定正常画像48枚、全24操作条件、実旧版の拒否と故障CIの非zero伝播を確認。証拠は evidence/kanban-issue-15-20261104/、設計は docs/KANBAN-VISUAL.md。独立レビュー未実施・Draft PR #16・Stage 3 HOLD。
+
+## 2026-11-14 JST 第3便開始
+Issue #52。main 260173fd9e07159846c82f73f8fe40a8cedd1243を基準に132展示候補、説明欠落局所修正。仕様・固定14条件はdocs/v11-wave3/PLAN.md。結果は未確定、旧証拠保持。
