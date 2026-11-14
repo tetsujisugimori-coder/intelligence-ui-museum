@@ -1,0 +1,39 @@
+name: v11 Wave 5
+on:
+  pull_request:
+    paths: ['apps/v11/**', '.github/workflows/v11-wave5.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  wave5:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      TMPDIR: ${{ github.workspace }}/.work/wave5-temp
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/wave5-browsers
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: mkdir -p "$TMPDIR" .work/wave5-app && cp -R apps/v11/. .work/wave5-app/
+      - run: npm ci --ignore-scripts && npx playwright install --with-deps chromium webkit
+        working-directory: .work/wave5-app
+      - run: python3 apps/v11/verify.py && node --test apps/v11/wave5-test.cjs
+      - run: node apps/v11/wave5-browser.cjs
+        env:
+          APP_ROOT: .work/wave5-app
+          EVIDENCE_DIR: .work/wave5-evidence
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/.work/wave5-app/node_modules/playwright
+      - if: always()
+        run: node apps/v11/wave5-audit.cjs .work/wave5-evidence
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-wave5-evidence
+          path: .work/wave5-evidence
+          retention-days: 90

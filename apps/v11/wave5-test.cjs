@@ -1,0 +1,4 @@
+const t=require('node:test'),a=require('node:assert/strict'),w=require('./wave5.js');
+t('graph rejects self duplicate cycles, allows DAG',()=>{a.equal(w.edgeError(w.initialGraph,'a','a'),'自己接続');a.equal(w.edgeError(w.initialGraph,'a','b'),'重複接続');a.equal(w.edgeError(w.initialGraph,'b','a'),'循環接続');a.equal(w.edgeError(w.initialGraph,'b','c'),'');});
+t('semantic levels preserve record identity and reject invalid',()=>{a.equal(w.semantic(0,'b1').total,10);a.equal(w.semantic(1,'b1').group,'B');a.equal(w.semantic(2,'b1').record.id,'b1');for(const n of [-1,3,1.5])a.throws(()=>w.semantic(n,'a1'));});
+t('branch retains siblings and snapshots',()=>{const root=[{id:'h0',parent:null,value:0}];const a1=w.historyAdd(root,'h0',1),b=w.historyAdd(a1.nodes,'h0',-1);a.deepEqual(b.nodes,[...root,{id:'h1',parent:'h0',value:1},{id:'h2',parent:'h0',value:-1}]);a.equal(root.length,1);a.throws(()=>w.historyAdd(root,'bad',1));});
