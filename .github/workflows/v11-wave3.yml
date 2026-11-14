@@ -1,0 +1,60 @@
+name: v11 Wave 3
+on:
+  pull_request:
+    paths:
+      - 'apps/v11/**'
+      - '.github/workflows/v11-wave3.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  wave3:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      TMPDIR: ${{ github.workspace }}/.work/wave3-tmp
+      TMP: ${{ github.workspace }}/.work/wave3-tmp
+      TEMP: ${{ github.workspace }}/.work/wave3-tmp
+      npm_config_cache: ${{ github.workspace }}/.work/wave3-cache
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/wave3-browsers
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Isolated writable workspace
+        run: |
+          mkdir -p "$TMPDIR" "$npm_config_cache" "$PLAYWRIGHT_BROWSERS_PATH" .work/wave3-app .work/wave3-evidence
+          df -h . "$TMPDIR"
+          test -w "$TMPDIR"
+          cp -a apps/v11/. .work/wave3-app/
+          node -e "if(require('os').tmpdir()!==process.env.TMPDIR)process.exit(1)"
+      - run: npm ci --ignore-scripts
+        working-directory: .work/wave3-app
+      - run: npx playwright install --with-deps chromium webkit
+        working-directory: .work/wave3-app
+      - run: python3 apps/v11/verify.py
+      - run: node --test .work/wave3-app/wave3-test.cjs .work/wave3-app/wave3-audit-test.cjs
+      - name: Browser matrix and real negative controls
+        env:
+          WAVE3_SUBMITTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+          APP_ROOT: ${{ github.workspace }}/.work/wave3-app
+          EVIDENCE_DIR: ${{ github.workspace }}/.work/wave3-evidence
+          CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/.work/wave3-app/node_modules
+        run: node apps/v11/wave3-browser.cjs
+      - name: Independent evidence audit (including failed browser runs)
+        if: always()
+        env:
+          WAVE3_SUBMITTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: node apps/v11/wave3-audit.cjs .work/wave3-evidence/results.json "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})" "$WAVE3_SUBMITTED_HEAD"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-wave3-${{ github.sha }}
+          path: .work/wave3-evidence/
+          if-no-files-found: error
+          retention-days: 90
+
