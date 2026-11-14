@@ -32,3 +32,11 @@ Wave3 original CI evidence correction: run43565124714 / artifact14101838513 (91,
 - 通常Git push認証不足、認証済みGitHub接続の非force更新で提出。最終受入結果はPR55/Issue54で対象HEADを明記する。Draft維持、Stage3 HOLD。
 
 - 初回候補dc0a773の第4便14条件/20対照はPASSだが、CI Kanban専用配信器がwave4資源を複製/配信せず24条件で未定義エラー。旧原artifact14109674732を保持。配信と独立監査の資源一覧へwave4を条件付き追加し、旧HEADには新資源を要求しない。期待値緩和ではなくHTTP実バイト閉包の修正。
+
+## 2026-11-15 JST — 第5便候補検証
+- Issue #56 / Draft PR #57。main 62a66d1/tree d733de6、135展示/11分類から開始。受入契約先行commit 57150e9（正規GitHub提出79d91d0）。通常pushは認証不足で失敗し記録、正規GitHub接続で同一treeを親子commit提出。
+- 136〜138を教育用メモリ内教材として追加。旧135全dataset、legacy v09・v10・SDK・lockは変更なし。資源closureにwave5 JS/CSS追加。
+- 初回local browserは実行物不存在、既存PW1.56.1参照でChromium7条件PASS、WebKitは共有library不足でBLOCKED。新規インストール/回避はしていない。旧unit初回はTMPDIR未設定の試験保護FAIL。案件専用TMPDIRで44/44 PASS。
+- 独立レビューW5-R1監査誤受理、W5-R2矢印被覆、W5-R3 SVG文字2倍欠測を確認し修正。根拠と原票はdocs/wave5/INDEPENDENT-REVIEW.md。監査器はtrace/HAR/context/source/表示の照合を追加。矢印はノード境界終端、近接ノードへの移動拒否を契約に追記。
+- 初回正式wave4 CI43650608764は138!==135の旧件数期待でFAIL。原artifact14135658057は26,842,741 bytes、SHA256 56419e6a0c056777aab4f0334f768d396306537b35f4d2393d599a279df23dc0、CRC正常。wave1〜4の件数のみ138へ更新、条件・閾値は維持。
+- 原票は専用evidence領域へ保持。開始空き約34GB、途中32GB/証拠156MB。共有Temp/他案件/旧証拠は削除せず。正式CI・最終独立監査・永続読戻しは未完了。Stage3 HOLD、v10 NO、PR46 SUSPENDED、既知原因UNKNOWN、Draft維持。
