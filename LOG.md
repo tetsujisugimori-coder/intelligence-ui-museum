@@ -24,3 +24,9 @@ Issue #52。main 260173fd9e07159846c82f73f8fe40a8cedd1243を基準に132展示�
 Wave3 acceptance follow-up: independent review closes same-data render-stop and trace-substitution counterexamples; measured 2× layout corrected from document width 517 to 375 CSS px. Initial CI run 43565124611 correctly failed at legacy Wave1 gallery count (132 actual vs 129 expected). Only the dataset-derived count is updated to 132; behavioral assertions and prior failed artifacts remain. Final CI and persistent archive are reported separately in PR #53 / Issue #52, not inferred from local success.
 
 Wave3 original CI evidence correction: run43565124714 / artifact14101838513 (91,818,237 bytes, SHA256 5eb6ffb90ddc674c24ac83129084f690f26cc8c10a625a2b51f41cc87667d0cc) has 14 operational PASS cells and 16 semantic controls but overall audit FAIL. Standard Playwright trace omits JavaScript response bodies. Same-context HAR supplementation is required; incomplete original evidence is retained, not rewritten or accepted retroactively.
+
+## 2026-11-14 JST 第4便 / Issue54
+- 基準main d196ba933a0c5c08aca45e3f9c563998df320d65 / tree266b3fa055a6fc654874395ce68a65a826afbc85。PR53統合確認。
+- 133–135追加と124–126説明map欠落修正。旧132 dataset全項目/v09 byte/v10/lockを保持。
+- 初期化呼出欠落、予約背景14分割/18枠不整合を実ブラウザ反例で発見し修正。旧失敗を別証拠に保持。
+- 通常Git push認証不足、認証済みGitHub接続の非force更新で提出。最終受入結果はPR55/Issue54で対象HEADを明記する。Draft維持、Stage3 HOLD。

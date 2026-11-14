@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),cp=require('node:child_process'),crypto=require('node:crypto');
 // Complete static script/stylesheet closure of index.html; inline code is bound
 // by index.html itself. No network fonts, imports or runtime fetched assets.
-const sourceFiles=['exhibits.css','exhibits.js','index.html','wave1.css','wave1.js','wave2.css','wave2.js','wave3.css','wave3.js'];
+const sourceFiles=['exhibits.css','exhibits.js','index.html','wave1.css','wave1.js','wave2.css','wave2.js','wave3.css','wave3.js','wave4.css','wave4.js'];
 const executionFiles=['wave3-audit-test.cjs','wave3-audit.cjs','wave3-browser.cjs','wave3-contract.cjs','wave3-test.cjs'];
 const stages=['initial','grid-edit','grid-commit','grid-cancel','grid-undo','form-invalid','form-applied','form-conditional','gantt-edit','gantt-commit','gantt-cancel','gantt-undo','reset'];
 const selectors=[130,131,132].flatMap(id=>['',' button',' input',' label',' [data-w3-state]',' [data-w3-initial]',' [data-w3-before]',' [data-w3-current]',...(id===131?[' textarea',' select']:[' th',' td'])].map(s=>`[data-wave3="${id}"]${s}`));
