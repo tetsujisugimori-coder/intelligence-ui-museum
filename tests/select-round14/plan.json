@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "id": "select-round14-measurement-caller-v1",
+  "dateJST": "2026-11-11",
+  "issue": 45,
+  "baselineMain": "78e6e99fa46274cae9435dae4483c5266ad6b021",
+  "previousHead": "e05c91f7372d2ebfc724ae53f1f75446f5cb524d",
+  "viewport": {"width":375,"height":1000},
+  "theme":"light", "rootPercent":100, "deviceScaleFactor":1,"motion":"no-preference",
+  "sdkVersion":"0.2.2", "playwright":"1.56.1",
+  "engines":["webkit","chromium"],"osPopulations":["win32","linux"],
+  "conditions":["A","B","D"], "histories":{"A":[],"B":["on"],"D":["on","off"]},
+  "measurementArms":["A0","W0","A1","A2","A3","A4"],
+  "callerArms":["off","on"],
+  "definitions":{
+    "A0":"No API and no intentional delay after Escape, then common final snapshot. Not observation-free.",
+    "W0":"No API; host-only residual delay to 200ms after Escape. Time control for A1/A2/A3/A4.",
+    "A1":"One page.evaluate(() => null), then host-only residual delay to 200ms.",
+    "A2":"One target DOM/computed snapshot, then host-only residual delay to 200ms.",
+    "A3":"One full viewport screenshot, then host-only residual delay to 200ms.",
+    "A4":"Tracing ON from context creation; no added post-Escape API; host-only residual delay to 200ms. Contrast with trace OFF W0.",
+    "caller":"Separate probe OFF/ON experiment, tracing OFF, no extra delay. Probe wraps JS focus, events and MutationObserver; boundary callbacks only after Escape. Observer effects remain possible."
+  },
+  "matchDelayMs":200,
+  "pilot":{"conditions":["B"],"repeats":1,"slotsPerEnvironment":8},
+  "formal":{"conditions":["A","B","D"],"repeats":3,"slotsPerEnvironment":72},
+  "order":"iteration ascending; conditions A/B/D; measurement then caller; reverse arms on even iterations, rotate arms by condition index. Fresh context/page per slot; no retry substitution.",
+  "sequence":["initial Select/Switch read","registered Switch history","heading scroll and double frame settle","normalize empty style markers as round13","heading click","pre-focus snapshot","direct focus","Space","common popup-visible wait","Escape","registered intervention","common final snapshot","common ring PNGs","probe extraction if ON","trace export if A4","context close"],
+  "timing":"Host process.hrtime milliseconds and page performance.now are separate clocks. Report realized Escape-to-final delay. An intervention exceeding 200ms is timing-confounded, never treated as an equal-time comparison. No retrospective budget adaptation.",
+  "decisions":{
+    "measurement":"Compare each arm versus W0 within condition/iteration/engine/OS. A0 vs W0 measures elapsed-time bundle. Any DOM/geometry/scroll inequality or delay overrun marks causal equivalence UNCONFIRMED. Stable outcomes do not prove no effect. Small n cannot reject all effects.",
+    "caller":"Map recorded JS stacks to public built-source positions and static candidates. No JS call is not proof of browser-internal restoration. DOM mutations are React commit proxies, not direct React instrumentation. Prototype bypass and browser internals remain UNKNOWN.",
+    "verdict":"Privacy PASS, diagnostic completeness, causal inference and product acceptance are independent. Root cause UNKNOWN; Stage3 HOLD; PR23 NO."
+  },
+  "notTested":["physical keyboard","Safari","VoiceOver","other widths","reduced motion","offscreen option click","caller disabling","direct React commit hook","browser internal focus algorithm"],
+  "privacy":"Raw only on GitHub-hosted fresh synthetic loopback with known source/build, all mandatory phases zero and final privacy PASS. 90-day artifacts, not permanent archive. No local raw upload. No shared cleanup.",
+  "freeze":"Product/SDK/locks/all previous tests and evidence unchanged. Add only round14 diagnostic files, docs, workflow."
+}
