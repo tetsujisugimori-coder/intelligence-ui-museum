@@ -195,6 +195,8 @@ jobs:
       - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - run: npm ci --ignore-scripts
         working-directory: apps/v11
+      - name: Required resource closure and old-head compatibility
+        run: node --test apps/v11/kanban-wave4-closure.test.cjs
       - name: Native select label images, 24 operations, real old HEAD and failure controls
         run: node apps/v11/run-kanban-ci.cjs
         env:

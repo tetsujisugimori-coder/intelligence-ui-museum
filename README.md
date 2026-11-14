@@ -36,3 +36,7 @@ Issue #15のKanban画像回帰検査は [設計・再現手順](docs/KANBAN-VISU
 ## 2026-11-14 JST：第3便（実装・検証中）
 
 132展示・11カテゴリーの候補。130 Editable Data Grid、131 Schema Form、132 Gantt Editorと127–129説明登録の修正。基準はPR51マージ後main。旧記録は当時の結果として保持。仕様と受入条件は [計画](docs/v11-wave3/PLAN.md) を参照。正式結果は対象HEADの証拠照合後に記録する。Stage3 HOLD、v10受入NO、Draft提出まで。
+
+## 2026-11-14 JST：第4便（実装・検証中）
+
+135展示・11カテゴリー。133 Calendar Scheduler、134 Faceted Search、135 Master–Detail Inspector、124–126説明登録の局所修正。基準main `d196ba9`（PR53統合後）。[固定契約](docs/v11-wave4/acceptance.md)・[試験計画](docs/v11-wave4/browser-plan.md)。旧結果と原本を保持し、今回の技術受入・CI・保全は別判定。Stage3 HOLD、v10受入NO、PR46 SUSPENDED。

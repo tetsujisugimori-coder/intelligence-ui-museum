@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),cp=require('node:child_process'),crypto=require('node:crypto');
 // Complete static script/stylesheet closure of index.html; inline code is bound
 // by index.html itself. No network fonts, imports or runtime fetched assets.
-function filesAt(head){return ['exhibits.css','exhibits.js','index.html','wave1.css','wave1.js',...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave2.js"')?['wave2.css','wave2.js']:[]),...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave3.js"')?['wave3.css','wave3.js']:[])];}
+function filesAt(head){return ['exhibits.css','exhibits.js','index.html','wave1.css','wave1.js',...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave2.js"')?['wave2.css','wave2.js']:[]),...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave3.js"')?['wave3.css','wave3.js']:[]),...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave4.js"')?['wave4.css','wave4.js']:[])];}
 const sourceFiles=filesAt('HEAD');
 const stages=['initial','query','permission','pivot','keyboard'];
 const selectors=[124,125,126].flatMap(id=>['',' button',' select',' label',' [data-w1-before]',' [data-w1-state]',' th',' td',...(id===124?[' input']:[])].map(s=>`[data-wave1="${id}"]${s}`));

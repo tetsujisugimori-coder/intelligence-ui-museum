@@ -1,0 +1,30 @@
+.wave4 { min-width:0; max-width:100%; line-height:1.55; }
+.wave4 * { box-sizing:border-box; }
+.wave4 p,.wave4 output,.wave4 pre { overflow-wrap:anywhere; white-space:pre-wrap; }
+.wave4 output { display:block; margin-block:1em; }
+.wave4 label { display:flex; flex-direction:column; gap:.35em; min-width:0; }
+.wave4 select,.wave4 input,.wave4 textarea,.wave4 button { font:inherit; max-width:100%; min-width:0; color:inherit; background:var(--panel,#202630); border:1px solid currentColor; border-radius:.3em; padding:.45em; }
+.wave4 textarea { display:block; width:100%; resize:vertical; }
+.wave4 button { min-height:44px; cursor:pointer; white-space:normal; overflow-wrap:anywhere; margin:.2em; }
+.wave4 button:disabled { opacity:.5; cursor:default; }
+.wave4 :focus-visible { outline:3px solid #d98a00; outline-offset:3px; }
+.wave4 .w4-scroll { overflow:auto; max-width:100%; }
+.wave4 table { border-collapse:collapse; width:100%; min-width:36em; }
+.wave4 td,.wave4 th { border:1px solid currentColor; padding:.4em; text-align:left; vertical-align:top; }
+.wave4 td input { width:10em; }
+.wave4 td p { margin-block:.3em; }
+.wave4 [data-schema-fields] { display:grid; grid-template-columns:minmax(0,1fr); gap:.8em; margin-block:1em; }
+/* Keep enlarged controls from imposing their intrinsic width on the grid track. */
+.wave4 [data-schema-fields] > * { min-width:0; }
+.wave4 [data-schema-fields] input:not([type=checkbox]),.wave4 [data-schema-fields] select { width:100%; }
+.wave4 [data-schema-fields] [hidden] { display:none; }
+.wave4 input[type=checkbox] { width:1.4em; height:1.4em; }
+.wave4 .w4-gantt { min-width:42em; padding:.5em; }
+.wave4 .w4-days { display:grid; grid-template-columns:repeat(14,minmax(0,1fr)); margin-left:5em; }
+.wave4 .w4-days span { text-align:center; }
+.wave4 .w4-gantt-row { display:grid; grid-template-columns:5em minmax(0,1fr); align-items:center; margin-block:.4em; }
+.wave4 .w4-track { display:grid; grid-template-columns:repeat(14,minmax(0,1fr)); background:repeating-linear-gradient(to right,transparent 0,transparent calc(100% / 18 - 1px),currentColor calc(100% / 18 - 1px),currentColor calc(100% / 18)); border:1px solid currentColor; min-height:2em; }
+.wave4 .w4-bar { background:#255d9f; color:#fff; border:2px solid currentColor; min-height:2em; text-align:center; font-weight:bold; white-space:nowrap; }
+body.light .wave4 button,body.light .wave4 input,body.light .wave4 select,body.light .wave4 textarea { color:#17233c; background:#f4f6fa; }
+@media (prefers-reduced-motion:reduce) { .wave4 * { animation:none!important; transition:none!important; } }
+.wave4 fieldset{min-width:0;margin-block:.7em}.wave4 fieldset label{flex-direction:row;align-items:center;flex-wrap:wrap}.wave4 input:not([type=checkbox]),.wave4 select{width:100%}.wave4 .w4-calendar{min-width:36em}.wave4 .w4-track{grid-template-columns:repeat(18,minmax(0,1fr));margin-block:.5em}.wave4 .w4-track span{background:#255d9f;color:white;border:1px solid white;overflow-wrap:anywhere;padding:.25em}.wave4 [data-detail-list]{display:flex;flex-wrap:wrap}.wave4 [aria-pressed=true]{outline:3px solid #d98a00}.wave4 [data-detail-pending]{border:2px solid currentColor;padding:.6em;margin-block:1em}

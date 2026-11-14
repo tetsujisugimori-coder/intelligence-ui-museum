@@ -1,0 +1,60 @@
+name: v11 Wave 4
+on:
+  pull_request:
+    paths:
+      - 'apps/v11/**'
+      - '.github/workflows/v11-wave4.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  wave4:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      TMPDIR: ${{ github.workspace }}/.work/wave4-tmp
+      TMP: ${{ github.workspace }}/.work/wave4-tmp
+      TEMP: ${{ github.workspace }}/.work/wave4-tmp
+      npm_config_cache: ${{ github.workspace }}/.work/wave4-cache
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/wave4-browsers
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Isolated writable workspace
+        run: |
+          mkdir -p "$TMPDIR" "$npm_config_cache" "$PLAYWRIGHT_BROWSERS_PATH" .work/wave4-app .work/wave4-evidence
+          df -h . "$TMPDIR"
+          test -w "$TMPDIR"
+          cp -a apps/v11/. .work/wave4-app/
+          node -e "if(require('os').tmpdir()!==process.env.TMPDIR)process.exit(1)"
+      - run: npm ci --ignore-scripts
+        working-directory: .work/wave4-app
+      - run: npx playwright install --with-deps chromium webkit
+        working-directory: .work/wave4-app
+      - run: python3 apps/v11/verify.py
+      - run: node --test .work/wave4-app/wave4-test.cjs .work/wave4-app/wave4-audit-test.cjs
+      - name: Browser matrix and real negative controls
+        env:
+          WAVE4_SUBMITTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+          APP_ROOT: ${{ github.workspace }}/.work/wave4-app
+          EVIDENCE_DIR: ${{ github.workspace }}/.work/wave4-evidence
+          CODEX_PRIMARY_RUNTIME_NODE_MODULES: ${{ github.workspace }}/.work/wave4-app/node_modules
+        run: node apps/v11/wave4-browser.cjs
+      - name: Independent evidence audit (including failed browser runs)
+        if: always()
+        env:
+          WAVE4_SUBMITTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: node apps/v11/wave4-audit.cjs .work/wave4-evidence/results.json "$(git rev-parse HEAD)" "$(git rev-parse HEAD^{tree})" "$WAVE4_SUBMITTED_HEAD"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-wave4-${{ github.sha }}
+          path: .work/wave4-evidence/
+          if-no-files-found: error
+          retention-days: 90
+

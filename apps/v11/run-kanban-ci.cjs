@@ -31,7 +31,7 @@ const git = (...args) =>
 const server = http.createServer((req, res) => {
   const name =
     new URL(req.url, "http://localhost").pathname.slice(1) || "index.html";
-  if (!["index.html", "exhibits.js", "exhibits.css", "wave1.js", "wave1.css", "wave2.js", "wave2.css", "wave3.js", "wave3.css"].includes(name) || !fs.existsSync(path.join(site,name))) {
+  if (!["index.html", "exhibits.js", "exhibits.css", "wave1.js", "wave1.css", "wave2.js", "wave2.css", "wave3.js", "wave3.css", "wave4.js", "wave4.css"].includes(name) || !fs.existsSync(path.join(site,name))) {
     res.writeHead(404).end();
     return;
   }
@@ -50,7 +50,7 @@ function source(head) {
   fs.mkdirSync(dir);
   const files = {};
   const html = git("show", `${head}:apps/v11/index.html`);
-  const required = ["index.html", "exhibits.js", "exhibits.css", ...(html.includes('src="wave1.js"') ? ["wave1.js", "wave1.css"] : []), ...(html.includes('src="wave2.js"') ? ["wave2.js", "wave2.css"] : []), ...(html.includes('src="wave3.js"') ? ["wave3.js", "wave3.css"] : [])];
+  const required = ["index.html", "exhibits.js", "exhibits.css", ...(html.includes('src="wave1.js"') ? ["wave1.js", "wave1.css"] : []), ...(html.includes('src="wave2.js"') ? ["wave2.js", "wave2.css"] : []), ...(html.includes('src="wave3.js"') ? ["wave3.js", "wave3.css"] : []), ...(html.includes('src="wave4.js"') ? ["wave4.js", "wave4.css"] : [])];
   for (const name of required) {
     const data = execFileSync("git", ["show", `${head}:apps/v11/${name}`], {
       cwd: repo,
