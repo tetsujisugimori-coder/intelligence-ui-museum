@@ -69,7 +69,7 @@ function summaryContract(s) {
   for (const run of s.runs) {
     object(run, "run"); object(run.source, run.label + ".source"); object(run.identity, run.label + ".identity");
     commit(run.source.head, run.source.tree, run.label + " source");
-    const required = [...sourceFiles, ...(git("show", `${run.source.head}:apps/v11/index.html`).toString().includes('src="wave1.js"') ? ["wave1.css", "wave1.js"] : [])].sort();
+    const required = [...sourceFiles, ...(git("show", `${run.source.head}:apps/v11/index.html`).toString().includes('src="wave1.js"') ? ["wave1.css", "wave1.js"] : []), ...(git("show", `${run.source.head}:apps/v11/index.html`).toString().includes('src="wave2.js"') ? ["wave2.css", "wave2.js"] : [])].sort();
     exact(Object.keys(run.source.files || {}).sort(), required, "SOURCE_FILES", run.label + " target file set");
     for (const name of required) {
       hash(run.source.files[name], name + " SHA256", 64);

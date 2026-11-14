@@ -9,7 +9,7 @@ data=json.loads(re.search(pattern,original)[2])
 for fault in ['normal','duplicate','count','previous123','metadata']:
  with tempfile.TemporaryDirectory(prefix='preservation-') as tmp:
   d=Path(tmp)
-  for file in ['apps/v11/verify.py','apps/v11/wave1-baseline.json','legacy/v09/index.html']:
+  for file in ['apps/v11/verify.py','apps/v11/wave1-baseline.json','apps/v11/wave2-baseline.json','legacy/v09/index.html']:
    (d/file).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(root/file,d/file)
   rows=json.loads(json.dumps(data))
   if fault=='duplicate': rows[-1]['id']=125
