@@ -46,3 +46,15 @@
 - 全操作の意味をraw traceから独立再構築する万能監査ではない。traceとJSON/PNGの整合、故障対照、提出ソースとの一致を最終原artifactで追加確認する。
 - 正式CI、原ZIPの公式digest/全byte SHA/CRC/内部証拠、Library保存後の実再取得は後続追記対象。保存応答だけで保全PASSとしない。アクセス範囲の確認結果は完全性と分ける。
 - 実機Safari、VoiceOver、物理タッチ、OS文字拡大はNOT_TESTED。
+
+## 追補: 通常traceのJS本文欠測とHAR補完（2026-11-14 JST）
+
+前節の「trace.network収録9資源の実バイトを照合できる」という説明には、通常Playwright traceがJavaScript本文を省略する点の確認不足があった。合成fixtureによる流用拒否の確認自体は有効だが、そのfixtureを通常traceの収録能力の証明としては扱えない。この点を訂正する。
+
+旧公式run `43565124714`、HEAD `79f0e31497ae899e5ea8ffee7a3d46656edea494` のLibrary再取得原ZIPを独立に読み、91,818,237 bytes、SHA-256 `5eb6ffb90ddc674c24ac83129084f690f26cc8c10a625a2b51f41cc87667d0cc`、111項目CRCを確認した。原reportは14操作条件PASSだがauditは `KeyError: '_sha1'` でFAIL。実traceではexhibits.js/wave1.js/wave2.js/wave3.jsの本文参照が欠測していた。**旧CIと原証拠監査のFAILは維持**し、新結果へ書き換えない。
+
+最新runnerは同じbrowser contextで `recordHar`（full、attach）を取得する。監査はtraceのgoto.pageIdとHAR pages/pageref、条件URL/query/originを照合し、HAR内部の9資源実バイトを提出ソースまたは故障変異結合hashへ照合する。通常traceのJS省略を認める一方、HARのJS欠測を許していない。
+
+独立再実行で、正常合成fixture受理、別条件HAR流用、normal HARのfault流用、既存trace流用2反例、JS本文改変を拒否。監査試験3件は成功した。さらに独立にHARの `wave3.js` 本文だけを削除して外側ZIP hashを正しく再計算する反例を追加し、`There is no item named 'wave3.js' in the archive` により拒否することを確認した。ハッシュ一致だけで欠測をPASSにはしない。
+
+この追補は監査コードと合成故障の限定確認。最終候補による実ブラウザCIと原HAR/traceの独立監査はまだ未完了であり、現段階の総合PARTIAL・限定マージNOを変更しない。

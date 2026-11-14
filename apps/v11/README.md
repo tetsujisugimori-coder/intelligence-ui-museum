@@ -29,3 +29,6 @@ CIの `browser-v11` はv11専用lockfileのPlaywrightを導入し、ChromiumとW
 ## 2026-11-14 JST：第3便（実装・検証中）
 
 132展示・11カテゴリーの候補。130 Editable Data Grid、131 Schema Form、132 Gantt Editorと127–129説明登録の修正。基準はPR51マージ後main。旧記録は当時の結果として保持。仕様と受入条件は [計画](../../docs/v11-wave3/PLAN.md) を参照。正式結果は対象HEADの証拠照合後に記録する。Stage3 HOLD、v10受入NO、Draft提出まで。
+
+### 第3便の証拠契約
+固定14条件・16故障対照はtraceと同一contextの完全HARを分けて保存し、page ID・条件URL・配信9資源の実バイトへ結び付ける。標準Playwright traceがJavaScript本文を省くことを理由に完全性を仮定しない。最終CI、原ZIPのLibrary実再取得、独立監査の判定はPR #53でHEAD別に追跡する。旧124〜126の説明欠落は今回対象外として未解消。

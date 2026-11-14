@@ -21,7 +21,8 @@ function validatePng(file,width,height){
 }
 
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
-function verifyTrace(dir,file,sha,expected){
+function verifyTrace(dir,file,sha,expected,harFile,harSha){
+ assert.equal(typeof harFile,'string','HAR missing');assert.match(harFile,/^[a-z0-9-]+-har\.zip$/);const har=path.join(dir,harFile);assert.equal(hash(fs.readFileSync(har)),harSha,'HAR hash mismatch');
  assert.equal(typeof file,'string');assert.match(file,/^[a-z0-9-]+\.zip$/);const trace=path.join(dir,file);assert.equal(hash(fs.readFileSync(trace)),sha,'trace hash mismatch');
  const script=`import sys,zipfile,json,hashlib,urllib.parse
 z=zipfile.ZipFile(sys.argv[1]); assert z.testzip() is None
@@ -34,24 +35,50 @@ if 'width' in expected:
  assert c['options']['viewport']=={'width':expected['width'],'height':1000}, 'trace viewport mismatch'
  assert c['options'].get('hasTouch') is True, 'trace touch missing'
  assert c['options'].get('reducedMotion')==('reduce' if expected['zoom']==2 else 'no-preference'), 'trace motion mismatch'
-gotos=[e.get('params',{}).get('url','') for e in events if e.get('type')=='before' and e.get('method')=='goto']
+goto_events=[e for e in events if e.get('type')=='before' and e.get('method')=='goto']
+gotos=[e.get('params',{}).get('url','') for e in goto_events]
 assert len(gotos)==1 and urllib.parse.urlsplit(gotos[0]).query==expected['query'], 'trace condition identity mismatch'
 assert urllib.parse.urlsplit(gotos[0]).path==expected['prefix'], 'trace mode path mismatch'
 network=[json.loads(line)['snapshot'] for n in z.namelist() if n.endswith('.network') for line in z.read(n).decode().splitlines() if line.strip()]
 found={}
+# Ordinary Playwright traces intentionally omit script bodies; HAR must supply ALL bytes.
 for item in network:
  p=urllib.parse.urlsplit(item['request']['url']).path
  if not p.startswith(expected['prefix']): continue
  name=p[len(expected['prefix']):] or 'index.html'
  if name not in expected['hashes']: continue
  assert item['response']['status']==200
- body=z.read('resources/'+item['response']['content']['_sha1'])
+ content=item['response']['content']
+ if name.endswith('.js') and '_sha1' not in content: continue
+ assert '_sha1' in content, 'trace non-script body missing'
+ body=z.read('resources/'+content['_sha1'])
  value=hashlib.sha256(body).hexdigest()
  assert name not in found or found[name]==value, 'inconsistent resource bytes'
  found[name]=value
-assert found==expected['hashes'], 'trace served resource mismatch'
+assert {k:v for k,v in found.items() if not k.endswith('.js')}=={k:v for k,v in expected['hashes'].items() if not k.endswith('.js')}, 'trace non-script resource mismatch'
+assert all(expected['hashes'][k]==v for k,v in found.items()), 'trace resource mismatch'
+hz=zipfile.ZipFile(sys.argv[3]); assert hz.testzip() is None
+logs=[n for n in hz.namelist() if n.endswith('.har')]; assert len(logs)==1, 'HAR log missing'
+log=json.loads(hz.read(logs[0]))['log']; page=goto_events[0].get('pageId'); assert page, 'trace page identity missing'
+assert len(log['pages'])==1 and log['pages'][0]['id']==page, 'HAR page identity mismatch'
+entries=log['entries']; docs=[e for e in entries if e['request']['url']==gotos[0]]
+assert len(docs)==1 and docs[0]['pageref']==page, 'HAR condition identity mismatch'
+found={}
+for item in entries:
+ assert item.get('pageref')==page, 'HAR entry page mismatch'
+ u=urllib.parse.urlsplit(item['request']['url']); p=u.path
+ assert (u.scheme,u.netloc)==(urllib.parse.urlsplit(gotos[0]).scheme,urllib.parse.urlsplit(gotos[0]).netloc), 'HAR origin mismatch'
+ if not p.startswith(expected['prefix']): continue
+ name=p[len(expected['prefix']):] or 'index.html'
+ if name not in expected['hashes']: continue
+ assert item['request']['method']=='GET' and item['response']['status']==200, 'HAR response invalid'
+ content=item['response']['content']; assert '_file' in content, 'HAR body missing'
+ body=hz.read(content['_file']); value=hashlib.sha256(body).hexdigest()
+ assert name not in found, 'HAR duplicate resource'
+ found[name]=value
+assert found==expected['hashes'], 'HAR served resource mismatch'
 `;
- require('node:child_process').execFileSync(process.env.PYTHON||'python3',['-c',script,trace,JSON.stringify(expected)]);
+ require('node:child_process').execFileSync(process.env.PYTHON||'python3',['-c',script,trace,JSON.stringify(expected),har]);
 }
 
 function audit(report,dir,expected={}){
@@ -59,12 +86,12 @@ function audit(report,dir,expected={}){
  assert.deepEqual(report.results.map(key),matrix().map(key),'planned matrix/order mismatch');
  assert.equal(report.controls.length,faults.length*2,'fault coverage');
  for(const engine of ['chromium','webkit'])for(const fault of faults){const entries=report.controls.filter(c=>c.engine===engine&&c.fault===fault);assert.equal(entries.length,1,'control identity');assert.equal(entries[0].detected,true,'fault escaped');assert.equal(entries[0].green,true,'normal control failed');assert.equal(entries[0].errorCode,'ERR_ASSERTION','timeout is not detection');
- const c=entries[0];for(const mode of ['normal','fault']){assert.deepEqual(c[mode+'Errors'],[],'control runtime errors');verifyTrace(dir,c[mode+'Trace'],c[mode+'TraceSha256'],{engine,query:'wave3-control='+engine+'-'+fault+'-'+mode,prefix:mode==='fault'?'/fault/'+fault+'/':'/',hashes:{...report.sourceHashes,'wave3.js':mode==='fault'?c.faultSourceHash:report.sourceHashes['wave3.js']}});}
+ const c=entries[0];for(const mode of ['normal','fault']){assert.deepEqual(c[mode+'Errors'],[],'control runtime errors');verifyTrace(dir,c[mode+'Trace'],c[mode+'TraceSha256'],{engine,query:'wave3-control='+engine+'-'+fault+'-'+mode,prefix:mode==='fault'?'/fault/'+fault+'/':'/',hashes:{...report.sourceHashes,'wave3.js':mode==='fault'?c.faultSourceHash:report.sourceHashes['wave3.js']}},c[mode+'Har'],c[mode+'HarSha256']);}
  assert.equal(c.originalSourceHash,report.sourceHashes['wave3.js'],'fault source mismatch');
  assert.match(c.mutationFile,/^fault-[a-z-]+\.js$/);const mutation=fs.readFileSync(path.join(dir,c.mutationFile));assert.equal(hash(mutation),c.mutationSha256,'mutation bytes mismatch');assert.equal(mutation.toString(),mutationSource(fault),'wrong injected defect');const original=require('node:child_process').execFileSync('git',['show',`${report.head}:apps/v11/wave3.js`]);assert.equal(hash(Buffer.concat([original,mutation])),c.faultSourceHash,'fault copy hash mismatch');}
  for(const r of report.results){assert.equal(r.status,'PASS',key(r));measureContract(r);observationContract(r);assert.deepEqual(r.servedHashes,report.sourceHashes,'served hash set mismatch');assert.ok(r.version);assert.deepEqual(r.errors,[]);assert.deepEqual(r.checks,required,'check coverage');
  for(const [file,h] of [[r.screenshot,r.sha256],[r.trace,r.traceSha256]]){assert.match(file,/^[a-z0-9-]+\.(png|zip)$/);assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(dir,file))).digest('hex'),h,'evidence hash mismatch');}
- validatePng(path.join(dir,r.screenshot),r.width,1000);verifyTrace(dir,r.trace,r.traceSha256,{engine:r.engine,width:r.width,zoom:r.zoom,query:'wave3-condition='+key(r),prefix:'/',hashes:report.sourceHashes});
+ validatePng(path.join(dir,r.screenshot),r.width,1000);verifyTrace(dir,r.trace,r.traceSha256,{engine:r.engine,width:r.width,zoom:r.zoom,query:'wave3-condition='+key(r),prefix:'/',hashes:report.sourceHashes},r.har,r.harSha256);
  assert.deepEqual(r.exhibitScreenshots.map(x=>x.id),[130,131,132],'exhibit screenshot coverage');
  for(const shot of r.exhibitScreenshots){assert.match(shot.file,/^[a-z0-9-]+\.png$/);assert.ok(Number.isInteger(shot.width)&&shot.width>0&&shot.width<=r.width,'exhibit width');assert.ok(Number.isInteger(shot.height)&&shot.height>0,'exhibit height');assert.equal(hash(fs.readFileSync(path.join(dir,shot.file))),shot.sha256,'exhibit screenshot hash');validatePng(path.join(dir,shot.file),shot.width,shot.height);}
 
