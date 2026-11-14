@@ -29,6 +29,11 @@ jobs:
           APP_ROOT: .work/wave5-app
           EVIDENCE_DIR: .work/wave5-evidence
           PLAYWRIGHT_MODULE: ${{ github.workspace }}/.work/wave5-app/node_modules/playwright
+      - run: node apps/v11/wave5-faults.cjs
+        env:
+          APP_ROOT: .work/wave5-app
+          EVIDENCE_DIR: .work/wave5-evidence
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/.work/wave5-app/node_modules/playwright
       - if: always()
         run: node apps/v11/wave5-audit.cjs .work/wave5-evidence
       - uses: actions/upload-artifact@v4

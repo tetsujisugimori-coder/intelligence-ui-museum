@@ -12,3 +12,5 @@ Fixed browser matrix: Chromium/WebKit ×375/390/1280×light/dark (12), each375da
 Negative controls:136 cycle,duplicate,edge endpoint offset,undo mismatch;137 selection loss,level/data mismatch,level overflow,text2x obstruction;138 history deletion,wrong restored value,parent corruption,Reset stale reference. Each paired with normal control and explicit semantic rejection, not timeout/syntax/startup error. Missing description and missing resource must fail.
 
 Separate technical/CI/evidence/merge judgments. Independent reviewer checks false acceptance and protected data. Original ZIP save/refetch independent SHA/CRC/manifest; access/retention UNKNOWN unless verified. Stage3 HOLD/v10 NO/PR46 SUSPENDED, no merge/release/deploy.
+
+Independent review amendment before final verification: edge arrow endpoints stop at node rectangle boundaries instead of hidden centers. Moves that would bring node rectangles within10 logical units are rejected unchanged. SVG node labels are included in actual measured text2x. Prior center-based diagnostic and missed-label font audit retained as failed evidence, not silently treated as acceptance.
