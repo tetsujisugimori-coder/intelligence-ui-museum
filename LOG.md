@@ -20,3 +20,5 @@ P2/P3実装HEAD e3679d1のCI browser-v11は正常28・新規Transfer6・実文�
 
 ## 2026-11-14 JST 第3便開始
 Issue #52。main 260173fd9e07159846c82f73f8fe40a8cedd1243を基準に132展示候補、説明欠落局所修正。仕様・固定14条件はdocs/v11-wave3/PLAN.md。結果は未確定、旧証拠保持。
+
+Wave3 acceptance follow-up: independent review closes same-data render-stop and trace-substitution counterexamples; measured 2× layout corrected from document width 517 to 375 CSS px. Initial CI run 43565124611 correctly failed at legacy Wave1 gallery count (132 actual vs 129 expected). Only the dataset-derived count is updated to 132; behavioral assertions and prior failed artifacts remain. Final CI and persistent archive are reported separately in PR #53 / Issue #52, not inferred from local success.
