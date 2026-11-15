@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-11-15T21:55:00+09:00",
+  "head": "d454ce561cc3d4e9fbd01efe0598cb32a07ae5f6",
+  "tree": "80bbde2c499dc72642fe7474c6a05eba0f6ec50e",
+  "count": 141,
+  "categories": 11,
+  "datasetSHA256": "d7dc5e8e440bd9b1e89018bc7ad09cbf62a77683b497adb13b6bd9c3c3acf462",
+  "files": {
+    "AGENTS.md": "4156e739b8e4995c64203c73ed6242a26e6b319beab40b831caeabeb0c4ac654",
+    "README.md": "0b18f22b7c59bf14631e4b8e03d15ca450072e130d97d5be3017c77986317ea6",
+    "LOG.md": "d0eb90511cb01bbc96261a9f3ae652241ddd278979d83629b00d55208e98c2a8",
+    "docs/DEVELOPMENT.md": "62634f2a579300399db33870e96be08666047715102aa458900e8f39dc0c7288",
+    "apps/v11/index.html": "c368c09f2f81d2e6a2e84390f5afd8256bc3e791df6fa7770ad0bc8d16a1dfd0",
+    "apps/v11/wave6-audit.cjs": "9e7d18ae0c5a69eadd32087784c9aae9e6720d332625b310d7c18e9cc649df2d",
+    "apps/v11/wave6-contract.cjs": "70b5ac09aec86709ef068f194e939d92c6deba0b95f6dce2d9ef5f4677c58f3b",
+    "apps/v11/wave6-audit-negative.cjs": "e9d1f367594488283169b6636bb10ebba86695f61e497d92cfed51bfd130bd40"
+  },
+  "status": "PREPARATION_ONLY; Issue creation rejected pending authorization clarification; no product changes"
+}
