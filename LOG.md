@@ -79,3 +79,9 @@ wave1 CI43651745849は保存対照用コピーにwave5-baseline.jsonがなく正
 - 独立R7-1: 142/144のgallery説明登録欠落で初回描画117件に留まりpageerror。候補495a6c7の原票とレビュー原票を保持。3展示の説明登録と静的欠落検査を追加し同一操作を再確認する。初回検査追加時の変数名誤記NameErrorも別失敗として保持。
 - 23:00 JST: 再提出準備で既存wave2検証器の資源/総数整合が承認審査拒否。重複送信・迂回なし。局所製品は3fc95dd、Chromium7PASS/WebKit7BLOCKED。故障は18pair後resource追加consoleで工程FAIL、allowlistを緩和しない。正式CI/保全は未完、総合PARTIAL/限定マージNO。
 - 23:20 JST 第7便再開：本人の既存検証器総数/資源一覧追随承認後、同書込み審査成功。resource条件を緩めず欠測guard製品修正で同反例確認。局所04 Chromium7条件/21pair PASS、WebKitBLOCKED、独立限定原票監査PASS。最終正式CI/全監査/原ZIPはPENDING。
+
+## 2026-11-16 JST 第8便（Issue #62）開始追補
+PR #61統合main dbba2e7から専用branch。受入契約を先行固定し145–147、143 P3と現在READMEの補訂。既存144・原本/v10/lockを保護。Issue初回拒否・push認証不足・検証初回失敗は保持。局所単体42と旧回帰496/75 PASS、独立監査P2を同反例で補強中。詳細docs/wave8、正式CI/原証拠/独立最終レビューはPENDINGで総合PARTIAL・限定マージNO。Draft提出のみ、Stage3 HOLDを維持。
+
+## 2026-11-16 JST 第8便正式初回の回帰整合
+f81e4dfの12 workflowは10成功2失敗。Wave8専用成功と旧回帰失敗を分離。隔離BASELINEコピー不足・kanban資源集合不足・noJS総数旧値の3箇所を最小修正。旧失敗保全、同入力のRED/GREEN、44単体とnormal/4保全故障を確認。新HEAD正式CIと独立原証拠監査PENDING。製品・既存期待値の弱化・timeout変更なし。詳細docs/wave8/RESULTS.md。
