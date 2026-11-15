@@ -65,3 +65,7 @@ wave1 CI43651745849は保存対照用コピーにwave5-baseline.jsonがなく正
 - resource故障時の予定外pageerrorを拒否し、全画面PNGの実行時サイズ/SHA記録と監査を追加。旧原票へ実行時metadataを後付けしていない。独立helper検証と正式14条件の原artifact監査は別判定。
 - 独立状態/helper62＋製品3＝65 PASS、保存対象141/11検査、migration、runner25 PASS。広域unitは129 PASS/1 FAIL（kanban artifact必須引数不足）、最初の依存不足FAILも保持。正式CIで必要artifact付き検査を確認する。
 - この修正後HEADの正式14条件・故障/正常対照・原ZIP監査/再取得はPENDING。総合PARTIAL、限定マージNO。
+
+## 2026-11-15 JST 第6便 E2BIG局所修正
+- 保存済正式原ZIP14156471278を同一性確認。旧監査E2BIG exit1、必要4識別項目だけをargvへ渡す修正で同一原票の14条件/34pair監査exit0、11負対照全件意図理由で拒否。元500ファイル不変。
+- stdin試作の欠測trace EPIPEは却下・ログ保持。製品変更/証拠改変/検査省略なし。66単体、保全、migration成功。旧HEAD再監査と新HEAD正式CIを区別し後者は待機。
