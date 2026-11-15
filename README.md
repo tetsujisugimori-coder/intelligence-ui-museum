@@ -2,7 +2,7 @@
 
 UIを操作して、状態・仕組み・出自を比較する教材。OpenAIの公式製品ではありません。
 
-現在のmainは第6便（PR #59）まで統合済みで、141展示・11カテゴリーです。第7便142〜144はIssue #60の専用ブランチで実装・検証中であり、正式受入は未確定です。Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDEDを維持します。OpenAI公式部品や実製品と同等とは主張しません。
+2026-11-16 JST現在のmainは第7便（PR #61、merge dbba2e7）まで統合済みで、144展示・11カテゴリーです。第8便145〜147はIssue #62の専用ブランチで実装・検証中です。Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDEDを維持します。OpenAI公式部品や実製品と同等とは主張しません。
 
 開発管理先：[tetsujisugimori-coder/intelligence-ui-museum](https://github.com/tetsujisugimori-coder/intelligence-ui-museum)。過去の移行・各便の判定はその時点の記録であり、現在のGitHub状態と区別します。PR経由・force push禁止・人間によるマージ判断を守ります。
 
@@ -51,3 +51,6 @@ Issue #58、139–141（Linked Views Explorer／Conflict Resolution Editor／Pro
 
 ## 第7便（Issue #60：実装・検証中）
 142 Dependency Impact Explorer、143 What-if Scenario Workbench、144 Interaction Replay Timeline。固定架空教材で144展示・11カテゴリーへ拡張します。[受入契約](docs/wave7/ACCEPTANCE.md)を製品実装前に固定しました。正式14条件、独立レビュー、最終CI・原証拠保全は未完了。完了・PASS・マージ済みとは扱いません。
+
+## 2026-11-16 JST 現況追補
+PR #61はマージ済み。上記「第7便実装・検証中」は以前の履歴記述です。第8便の契約は[docs/wave8/ACCEPTANCE.md](docs/wave8/ACCEPTANCE.md)。145–147と143 P3の局所改善、147展示11分類。正式CI・独立レビュー・保全は結果文書へ分離して記録します。Stage3 HOLDは継続。
