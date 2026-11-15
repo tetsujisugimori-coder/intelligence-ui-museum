@@ -1,0 +1,3991 @@
+{
+  "provenance": "Existing independent Chromium observation; reduced fields, not new execution. No trace or browser PASS claimed by regression fixture.",
+  "steps": [
+    {
+      "name": "initial",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "graph-select",
+      "values": {
+        "139": {
+          "selected": [
+            "r2"
+          ],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": "graph-r2",
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "true",
+              "text": "r2 松 2 選択中"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": true,
+              "text": "\tr2 松 選択中\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "1件：r2 松"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "table-select",
+      "values": {
+        "139": {
+          "selected": [
+            "r2",
+            "r3"
+          ],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": "table-r3",
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "true",
+              "text": "r2 松 2 選択中"
+            },
+            {
+              "id": "r3",
+              "pressed": "true",
+              "text": "r3 竹 2 選択中"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": true,
+              "text": "\tr2 松 選択中\t2"
+            },
+            {
+              "id": "r3",
+              "checked": true,
+              "text": "\tr3 竹 選択中\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "2件：r2 松、r3 竹"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "sort",
+      "values": {
+        "139": {
+          "selected": [
+            "r2",
+            "r3"
+          ],
+          "sort": "desc",
+          "rows": [
+            "r4",
+            "r2",
+            "r3",
+            "r5",
+            "r1",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": "sort",
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "true",
+              "text": "r2 松 2 選択中"
+            },
+            {
+              "id": "r3",
+              "pressed": "true",
+              "text": "r3 竹 2 選択中"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r2",
+              "checked": true,
+              "text": "\tr2 松 選択中\t2"
+            },
+            {
+              "id": "r3",
+              "checked": true,
+              "text": "\tr3 竹 選択中\t2"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "2件：r2 松、r3 竹"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "deselect",
+      "values": {
+        "139": {
+          "selected": [
+            "r3"
+          ],
+          "sort": "desc",
+          "rows": [
+            "r4",
+            "r2",
+            "r3",
+            "r5",
+            "r1",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": "graph-r2",
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "true",
+              "text": "r3 竹 2 選択中"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": true,
+              "text": "\tr3 竹 選択中\t2"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "1件：r3 竹"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "clear",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "desc",
+          "rows": [
+            "r4",
+            "r2",
+            "r3",
+            "r5",
+            "r1",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": "clear",
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "linked-reset",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": "graph-r1",
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "reject-confirm",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": "confirm",
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "resolve-right",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": "青"
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "right",
+          "unresolved": 0
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": "choice",
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：青"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": "right"
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "confirmed",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": "青"
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": "青"
+          },
+          "editing": false,
+          "choice": "right",
+          "unresolved": 0
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": "edit",
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：青"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：青"
+            ]
+          ],
+          "choice": "right"
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "reedit",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": "赤"
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": "青"
+          },
+          "editing": true,
+          "choice": "left",
+          "unresolved": 0
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": "choice",
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：赤"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：青"
+            ]
+          ],
+          "choice": "left"
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "cancel",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": "青"
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": "青"
+          },
+          "editing": false,
+          "choice": "right",
+          "unresolved": 0
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": "edit",
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：青"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：青"
+            ]
+          ],
+          "choice": "right"
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "conflict-reset",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": "choice",
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": null,
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "source",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": "s1",
+          "mode": "source",
+          "origin": "s1",
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": "back",
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [],
+          "related": [
+            [
+              "c1",
+              "c1 門は東向き p.1"
+            ]
+          ],
+          "sourceText": "東の門。<img src=x onerror=alert(1)> は文字列。"
+        }
+      }
+    },
+    {
+      "name": "back",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": "s1",
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": "source-s1",
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "compare",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": "s1",
+          "compare": [
+            "s3",
+            "s1"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": "compare1",
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s3",
+              "資料1: s3 架空補記東向きとの補記。史実の証明ではない。c1 p.3"
+            ],
+            [
+              "s1",
+              "資料2: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "contradiction",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c2",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s3",
+            "s1"
+          ],
+          "links": [
+            {
+              "claim": "c2",
+              "source": "s2",
+              "locator": "p.2"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": "claim",
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s3",
+              "資料1: s3 架空補記東向きとの補記。史実の証明ではない。c1 p.3"
+            ],
+            [
+              "s1",
+              "資料2: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ]
+          ],
+          "links": [
+            [
+              "s2",
+              "s2 架空記録乙 p.2"
+            ]
+          ],
+          "registration": "対応登録1件",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "unregistered",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c3",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s3",
+            "s1"
+          ],
+          "links": [],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": "claim",
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s3",
+              "資料1: s3 架空補記東向きとの補記。史実の証明ではない。c1 p.3"
+            ],
+            [
+              "s1",
+              "資料2: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ]
+          ],
+          "links": [],
+          "registration": "未登録",
+          "related": []
+        }
+      }
+    },
+    {
+      "name": "provenance-reset",
+      "values": {
+        "139": {
+          "selected": [],
+          "sort": "id",
+          "rows": [
+            "r1",
+            "r2",
+            "r3",
+            "r4",
+            "r5",
+            "r6"
+          ]
+        },
+        "140": {
+          "pending": {
+            "title": "案内",
+            "place": "西",
+            "time": "夜",
+            "color": null
+          },
+          "confirmed": {
+            "title": "案内",
+            "place": "東",
+            "time": "昼",
+            "color": "白"
+          },
+          "editing": true,
+          "choice": "",
+          "unresolved": 1
+        },
+        "141": {
+          "claim": "c1",
+          "source": null,
+          "mode": "claim",
+          "origin": null,
+          "compare": [
+            "s1",
+            "s2"
+          ],
+          "links": [
+            {
+              "claim": "c1",
+              "source": "s1",
+              "locator": "p.1"
+            },
+            {
+              "claim": "c1",
+              "source": "s3",
+              "locator": "p.3"
+            }
+          ],
+          "claims": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        }
+      },
+      "rendered": {
+        "139": {
+          "activeKey": null,
+          "graph": [
+            {
+              "id": "r1",
+              "pressed": "false",
+              "text": "r1 桜 0 未選択"
+            },
+            {
+              "id": "r2",
+              "pressed": "false",
+              "text": "r2 松 2 未選択"
+            },
+            {
+              "id": "r3",
+              "pressed": "false",
+              "text": "r3 竹 2 未選択"
+            },
+            {
+              "id": "r4",
+              "pressed": "false",
+              "text": "r4 梅 5 未選択"
+            },
+            {
+              "id": "r5",
+              "pressed": "false",
+              "text": "r5 杉 1 未選択"
+            },
+            {
+              "id": "r6",
+              "pressed": "false",
+              "text": "r6 楓 0 未選択"
+            }
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "checked": false,
+              "text": "\tr1 桜 未選択\t0"
+            },
+            {
+              "id": "r2",
+              "checked": false,
+              "text": "\tr2 松 未選択\t2"
+            },
+            {
+              "id": "r3",
+              "checked": false,
+              "text": "\tr3 竹 未選択\t2"
+            },
+            {
+              "id": "r4",
+              "checked": false,
+              "text": "\tr4 梅 未選択\t5"
+            },
+            {
+              "id": "r5",
+              "checked": false,
+              "text": "\tr5 杉 未選択\t1"
+            },
+            {
+              "id": "r6",
+              "checked": false,
+              "text": "\tr6 楓 未選択\t0"
+            }
+          ],
+          "selection": "0件：なし"
+        },
+        "140": {
+          "activeKey": null,
+          "pending": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：西"
+            ],
+            [
+              "time",
+              "time：夜"
+            ],
+            [
+              "color",
+              "color：未解決"
+            ]
+          ],
+          "confirmed": [
+            [
+              "title",
+              "title：案内"
+            ],
+            [
+              "place",
+              "place：東"
+            ],
+            [
+              "time",
+              "time：昼"
+            ],
+            [
+              "color",
+              "color：白"
+            ]
+          ],
+          "choice": ""
+        },
+        "141": {
+          "activeKey": "claim",
+          "claims": [
+            [
+              "c1",
+              "c1 門は東向き"
+            ],
+            [
+              "c2",
+              "c2 門は西向き"
+            ],
+            [
+              "c3",
+              "c3 屋根色は不明"
+            ]
+          ],
+          "images": 0,
+          "comparison": [
+            [
+              "s1",
+              "資料1: s1 架空記録甲東の門。<img src=x onerror=alert(1)> は文字列。c1 p.1"
+            ],
+            [
+              "s2",
+              "資料2: s2 架空記録乙西の門。相反する架空の記録。c2 p.2"
+            ]
+          ],
+          "links": [
+            [
+              "s1",
+              "s1 架空記録甲 p.1"
+            ],
+            [
+              "s3",
+              "s3 架空補記 p.3"
+            ]
+          ],
+          "registration": "対応登録2件",
+          "related": []
+        }
+      }
+    }
+  ]
+}

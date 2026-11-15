@@ -41,5 +41,10 @@ Issue #15のKanban画像回帰検査は [設計・再現手順](docs/KANBAN-VISU
 
 135展示・11カテゴリー。133 Calendar Scheduler、134 Faceted Search、135 Master–Detail Inspector、124–126説明登録の局所修正。基準main `d196ba9`（PR53統合後）。[固定契約](docs/v11-wave4/acceptance.md)・[試験計画](docs/v11-wave4/browser-plan.md)。旧結果と原本を保持し、今回の技術受入・CI・保全は別判定。Stage3 HOLD、v10受入NO、PR46 SUSPENDED。
 
-## 第5便（実装中・未マージ）
-Issue #56: 136–138。受入契約はdocs/wave5/ACCEPTANCE.md。技術検証・正式CI・原証拠保全は個別に報告し、Stage 3 HOLDを維持。
+## 第5便（PR #57マージ済み）
+Issue #56: 136–138。最終HEAD345a44cの技術検証・正式CI・原証拠照合完了後PR57統合。旧記録は当時の判定。Stage 3 HOLDを維持。
+
+## 第6便（PR #59：固定自動化範囲の技術受入PASS、限定マージ審査中）
+Issue #58、139–141（Linked Views Explorer／Conflict Resolution Editor／Provenance Explorer）を追加し、全141展示・11カテゴリー。受入条件は事前固定の[契約](docs/wave6/ACCEPTANCE.md)を参照。
+検証対象実装HEAD `c9ce4490db96148421f706d243e6a52bba39c50a` で正式10 workflowすべて成功。Chromium／WebKitの固定14条件、故障・正常対照34組、監査器負対照11件、別担当による監査器再実行と代表画像確認を完了。原ZIPはLibrary保存後に実物を再取得し、別担当の全バイト・SHA-256・CRC照合PASSを記録した。旧HEADの`E2BIG`失敗と旧原票の修正後再監査は保持し、新HEADの正式成功とは区別する。
+第6便の限定技術受入PASS、限定マージ推奨YES。実機Safari・VoiceOver・物理touch・OS文字拡大はNOT_TESTED、Libraryのアクセス範囲・保持期限は未確認。Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDED、既存原因UNKNOWNは維持。製品全体の受入・公開は許可していない。
