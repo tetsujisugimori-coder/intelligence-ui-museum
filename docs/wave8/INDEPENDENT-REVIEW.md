@@ -1,5 +1,19 @@
-# 第8便 独立レビュー（進行中）
+# 第8便 独立レビュー（最終追補済・過去経過は保持）
 2026-11-16 JST。対象: tetsujisugimori-coder/intelligence-ui-museum / Issue #62。作成に関与しない別担当による読取り・独立反例照合。自己点検と区別する。
+
+## 最終独立レビュー追補（2026-11-16 JST／提出済み独立監査記録の反映）
+**対象実装HEAD `787a057b6d4f22324746e1b2cada23a97dc6b226`、tree `40d7989e1e15f44fae3ec5b1566e26a0ab621594`。第8便展示・143 P3・旧回帰追随の限定技術PASS、正式CI PASS、保全原ZIP整合PASS、今回限定マージ推奨YES、総合PARTIAL。** これは既存の別担当による最終監査結果を文書に反映したものであり、文書補訂そのものを新たな独立実験・証拠の再取得と数えない。
+
+- 正式12 workflow・17 checks success。Wave8 `43757497927`、通常CI `43757497993`、Wave1 `43757498029` を確認。最終正式44 Node test、両engine14条件×41段階、36正常／故障pair、監査器21負対照の正常受理・意図した改変拒否が最終原票で報告されている。
+- **W8-R1/R3**：チャンク本文・承認対象署名・イベント履歴欠測の旧誤受理について、同一反例の旧ACCEPT→修正後REJECTと無改変原票ACCEPTを確認して限定閉鎖。**W8-R2**：実timerのpause/resume/cancel/reset/離脱、Tab/Spaceを固定試験に追加し、正式条件と記録を確認して限定閉鎖。局所local02のsource hash不一致は当時のまま保持し、正式CI成功に流用しない。
+- 最終正式17 artifact ZIP＋3 logs ZIPの計20本はWindows保存後に別担当が実体を再取得して全byte・size・SHA・CRCを照合。17 artifactのみ公式digest/size一致、logs 3件の公式digestはNOT_PROVIDED。Wave8 manifest666件、Wave7 manifest695件、Wave8実行source11件・HAR配信19資源×14条件を照合。両engine代表4画像を実見。manifest未収録の証拠を全manifest監査済みとは扱わない。
+- 旧初回実装HEADのCI 10成功・2失敗と原票は履歴として残す。隔離コピーBASELINE、kanbanのWave8資源、noJS総数の追随漏れは旧RED→新GREENの限定修正と正常・故障対照で確認。既存製品・timeout・旧期待値を緩和していない。
+- **残る制約**：実行依存の一部未収録、旧回帰の大半は保存整合監査、全画像の目視ではない。実機Safari/VoiceOver/物理touch/OS文字拡大はNOT_TESTED。原証拠のアクセス範囲と保持期限は全面的には確認されていない。Stage 3 HOLD・v10製品受入NO・PR #46 SUSPENDED・従来の根本原因UNKNOWNを維持。未解決blocking P1/P2なしは今回限定の判断であり、製品全体の受入ではない。
+- Issue #62の最終追補は投稿審査拒否のため未投稿。結果は [PR #63最終報告](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/63#issuecomment-6901191447) に記録済み。
+
+**この追補以前の「閉鎖待ち」「PENDING」「限定マージNO」は記録当時の判定として保存。後続の文書のみのcommitは、上記の実装・CI対象版と同一HEADの実行であったことを意味しない。**
+
+---
 
 ## 対象と範囲
 基準main dbba2e7f0900191caa88497d6d3a881c16368a16、契約5722546固定後の作業treeを確認。AGENTS.md、事前ACCEPTANCE、製品wave8.js/css、ブラウザ・意味的故障・監査・監査負対照・CIを直接読んだ。
