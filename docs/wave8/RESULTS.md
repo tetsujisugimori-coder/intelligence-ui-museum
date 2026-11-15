@@ -1,5 +1,21 @@
-# 第8便 結果（進行中）
+# 第8便 結果（最終追補済・過去経過は保持）
 2026-11-16 JST。tetsujisugimori-coder/intelligence-ui-museum / Issue #62。
+
+## 最終判定・正式結果（2026-11-16 JST／実装・検証対象版）
+**限定技術PASS／正式CI PASS／原ZIP保全整合PASS／今回の展示追加に限る限定マージ推奨YES／総合PARTIAL。** 対象は第8便145–147、143のP3修正、旧回帰の最小追随修正。既存のStage 3 HOLD・v10製品受入NO・PR #46 SUSPENDED・根本原因UNKNOWNは変えない。マージと公開はこの記録の時点で未実施。
+
+- 正式に検証した実装HEAD `787a057b6d4f22324746e1b2cada23a97dc6b226`、tree `40d7989e1e15f44fae3ec5b1566e26a0ab621594`。これ以降の**文書のみ**の補訂commitは、この実行版と同一HEADであったことを意味しない。CI結果を別版の実行成功に読み替えず、補訂後の差分とチェック状態をマージ前に別途確認する。
+- 正式12 workflow・17 checksはすべてsuccess（attempt 1）。代表run: Wave8 `43757497927`、通常CI `43757497993`、Wave1 `43757498029`。Wave8の44 Node test、Chromium/WebKitの14条件×41段階、36正常／故障pair、監査器21負対照を提出原票と照合済み。timer、Tab/Space、取消、旧通知、Reset、実測文字2倍・143の数値改行抑止を含む。
+- 旧実装HEAD `f81e4df16c7716480cbd4b452ecc638434805ed1` は12 workflow中10成功・2失敗。Wave1の隔離コピーへのBASELINE欠落、kanban監査のWave8資源期待集合欠落、noJSの旧表示総数144という追随漏れを限定修正。同一固定入力で旧RED→新GREENを確認し、旧失敗と原票は上書きせず保管。従来の操作期待値・timeoutを緩めていない。
+- 最終正式原artifact 17 ZIP（合計770,332,228 bytes）＋runlogs 3 ZIP（648,954 bytes）をWindows指定領域 `C:\Users\tetsu\Dev-Artifact-Archive\intelligence-ui-museum\Wave8-20261116\HEAD-787a057` に無加工保存。保存後に別担当が20 ZIPの実物を再取得し、全byte/size/SHA/CRCを照合。17 artifactは公式digest/size一致、3 logsは公式digest NOT_PROVIDED（提供されない値を一致認定しない）。Wave8 manifest 666件、Wave7 manifest 695件は照合済み。manifestを備えない他のartifactに完全manifest検査済みという意味を付さない。
+- Wave8の実行source 11件と配信19資源×14条件を原票・HAR本文・対象Git blobへ全byte/hashで結合。後取得Git blobは当時の原証拠とは区別。独立担当は全20 ZIP、14/36/21の理由、両engine代表4画像、3回帰修正の結果を確認。独立監査の詳細は PR #63 最終報告と保存台帳を参照。
+- 旧回帰の大半は保全レベルの監査であり、依存npm/browserバイナリ実体は一部未収録。全画像目視・実機Safari/VoiceOver/物理touch/OS文字拡大はNOT_TESTED。Windows保管先ACLは「本人限定」と未認定、保持期限UNKNOWN。Issue #62への最終追補は投稿審査拒否のため未投稿で、PR #63へ記録した。これらを総合PARTIALとして維持。
+
+根拠： [PR #63 最終報告](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/63#issuecomment-6901191447) ／ [対象HEADのActions](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions?query=event%3Apull_request) 。
+
+**履歴の読み方：以下のPENDING・限定マージNO・未保存等は各節の記録時点の判定であり、上記の最終結果を上書きしない。旧失敗と途中評価を意図的に残している。**
+
+---
 
 ## 開始・提出経路
 基準main dbba2e7f0900191caa88497d6d3a881c16368a16/tree3c34ab1fd044ee446becd93369f5a1c877ce4d9a。PR61は2026-11-15T19:12:50Z merged。144登録/11分類。旧READMEは第6便141記載で、追補と先頭を現況へ補訂。旧報告履歴は保持。
