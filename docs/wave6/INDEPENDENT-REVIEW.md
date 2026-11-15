@@ -53,3 +53,24 @@ Reviewed `wave6-audit-negative.cjs` and CI wiring. The ten declared mutations ta
 Two small hardening recommendations sent to owner: require explicit dedicated TMPDIR instead of fallback to shared os.tmpdir; refuse overwriting existing audit-negative.json on rerun (exclusive creation or unique output) to preserve previous negative-run evidence. CI currently sets TMPDIR and starts a fresh evidence directory, but the local/default path should obey the same contract.
 
 This is **static review only**; original14-condition artifact positive/negative execution has not yet been performed by this reviewer and must not be reported PASS from this note.
+
+## 2026-11-15 JST 再開後独立レビュー
+# Independent resumed review — P2 findings
+2026-11-15 JST. Read-only product review; no new browser runs or public changes.
+Target local HEAD 5d6418ae50186a779d41d03355179294a1940692 / submitted HEAD 8ac5d982c9d22a6ffd0407bb69c2e563baafdff0, shared tree0f39bcbf04cbdbcc5b3f8b816e008dc08a8a63b8.
+Source: existing corrected Chromium375light normal browser observation, browser-review-fixed/results.json. This is an observation-copy mutation, not an observed product bug.
+P2 W6-R5: wave6-contract.cjs lines6–7 do not bind reedit.confirmed to last confirmed values. Change confirmed.color and rendered confirmed[color] together from blue to red; ACCEPT. Contradicts requirement that re-edit preserve confirmed state.
+P2 W6-R6: same lines do not bind back.claim to original c1. Change claim to c2 and visible links/registration consistently; ACCEPT. Focus remains source-s1. Contradicts fixed Back contract and stage identity.
+Normal unmodified observation ACCEPT. Both same-input false acceptances saved. Require independent complete expected state per stage, preserving output consistency checks, then rerun these exact files and normal.
+Static limitation: full formal14-condition artifact not available at review. No final evidence/CI acceptance granted. Viewport screenshot has only PNG structural/dimension validation, unlike exhibit PNG SHA binding; same-size substitution is not bound to normal row. This needs full artifact counterexample before definitive audit-integrity closure.
+
+## Independent recheck
+R5/R6 exact saved JSON now reject at fixed-state reedit/140 and back/141; original normal and all7 existing Chromium successful observations still accept. No observation bytes edited. All19-stage,3-exhibit explicit expected states reviewed against fixed scenario.
+Resource-pageerror static policy gap also corrected: the prior runner skipped pageerror checks for any resource mode, and auditor skipped errors in resource/fault. Existing resource normal [] and fault [ReferenceError: wave6Init is not defined] accept; adding Error: unrelated to either rejects in new helper. This is original error-list policy testing, not a full14-condition artifact false-accept reproduction. Helper invocation was verified in runner and auditor. Regression61 PASS independently rerun.
+R5/R6 and scoped resource-pageerror policy findings CLOSED for the reviewed source hashes in independent-green.json. Final CI and full formal14 artifact remain pending. Viewport PNG binding static concern remains an explicit follow-up before final evidence acceptance.
+
+## Viewport binding follow-up
+Runner now records viewport PNG file, byte length and SHA immediately from screenshot-return bytes; audit verifies all three before PNG validation. Existing real Chromium375 light/dark PNGs both have375x1000 dimensions. With an explicitly POST-CREATED helper binding, original accepts, dark replacement rejects (size), missing binding rejects. This does not retrofit execution-time metadata into old results and is not a full14 artifact audit. Same-length synthetic-byte hash mismatch also rejects in independently rerun62 state/helper tests. Source hashes and exact image hashes are in viewport-green.json.
+Additional static integration finding: forged-success audit-negative expects /confirmed display/ although new fixed-state assertion runs first; needs expectation updated to fixed state confirmed/140. Full14 final artifacts and negative runner remain pending formal CI.
+
+Final integration follow-up: forged-success expected reason now matches fixed state confirmed/140; viewport replacement explicitly matches engine/width/zoom and changes theme. Static review confirmed both corrections. Independently ran state/helper62 plus product3 =65 PASS. audit-negative SHA256 e9d1f367594488283169b6636bb10ebba86695f61e497d92cfed51bfd130bd40. Full14 artifact audit remains pending; local review does not grant final acceptance.

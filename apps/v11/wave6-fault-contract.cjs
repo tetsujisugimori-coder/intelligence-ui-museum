@@ -20,3 +20,7 @@ const cases=[
 ['focus','if(target&&!target.disabled)target.focus();',"if(target&&!target.disabled)$('[data-key=\"reset\"]').focus();"]];
 function mutate(original,id){const c=cases.find(c=>c[0]===id);if(!c)throw Error('unknown case');if(id==='resource')return original;if(original.split(c[1]).length-1!==1)throw Error('mutation unique '+id);return original.replace(c[1],c[2]);}
 module.exports={cases,mutate};
+
+// Only the missing wave6 module's specific ReferenceError is allowed in resource fault mode.
+function validatePageErrors(id,mode,errors){const a=require('node:assert/strict');a.ok(Array.isArray(errors),'pageerror list');if(id==='resource'&&mode==='fault'){a.ok(errors.length<=1,'unexpected resource pageerror count');for(const e of errors)a.ok(["ReferenceError: wave6Init is not defined","ReferenceError: Can't find variable: wave6Init"].includes(e),'unexpected resource pageerror');}else a.deepEqual(errors,[],'unexpected product pageerror');}
+module.exports.validatePageErrors=validatePageErrors;

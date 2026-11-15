@@ -58,3 +58,10 @@ wave1 CI43651745849は保存対照用コピーにwave5-baseline.jsonがなく正
 - 予備ローカルChromium7条件・17故障/17正常を確認。初回故障試験はcheckの再試行timeoutで意味的検出失敗と判定し保持、通常click後の独立assertへ修正。WebKitは共有ライブラリ不足でBLOCKED。正式CI結果の代用ではない。
 - 実機Safari/VoiceOver/物理touch/OS文字拡大NOT_TESTED。正式最終HEAD CI、原ZIP保存・実再取得・独立監査はPENDING。Stage3HOLD、v10受入NO、PR46SUSPENDED、既存原因UNKNOWNを維持。Draft解除・マージ・公開なし。
 - 追加原票: 専用TMPDIRを付け忘れた再検は49/50（環境契約違反1）として保持し、製品修正せず専用領域指定で再確認。旧FAILは成功に置換しない。
+
+## 2026-11-15 JST 第6便提出再開・独立追加指摘
+- Draft PR59へ提出。ローカル5d6418aとremote8ac5d982は同tree0f39bcbf、別commit。以前の無応答更新を盲目的再試行せず、remoteの欠測確認後にblob/treeを照合して非force更新した。旧原票は保持。
+- R5/R6: reeditで確定済色を変更、Backで別記述へ戻る相互整合原票を旧監査が誤受理。同じ保存JSONを固定段階別の独立期待値で拒否、元のChromium7条件は受理を維持。新規実ブラウザ試行ではない。
+- resource故障時の予定外pageerrorを拒否し、全画面PNGの実行時サイズ/SHA記録と監査を追加。旧原票へ実行時metadataを後付けしていない。独立helper検証と正式14条件の原artifact監査は別判定。
+- 独立状態/helper62＋製品3＝65 PASS、保存対象141/11検査、migration、runner25 PASS。広域unitは129 PASS/1 FAIL（kanban artifact必須引数不足）、最初の依存不足FAILも保持。正式CIで必要artifact付き検査を確認する。
+- この修正後HEADの正式14条件・故障/正常対照・原ZIP監査/再取得はPENDING。総合PARTIAL、限定マージNO。
