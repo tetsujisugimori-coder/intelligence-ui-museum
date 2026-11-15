@@ -23,7 +23,7 @@ jobs:
       - run: mkdir -p "$TMPDIR" .work/wave8-app && cp -R apps/v11/. .work/wave8-app/
       - run: npm ci --ignore-scripts && npx playwright install --with-deps chromium webkit
         working-directory: .work/wave8-app
-      - run: python3 apps/v11/verify.py && node --test apps/v11/wave8-test.cjs
+      - run: python3 apps/v11/verify.py && node --test apps/v11/wave8-test.cjs apps/v11/wave8-regression-closure.test.cjs
       - run: node apps/v11/wave8-browser.cjs
         env:
           APP_ROOT: .work/wave8-app

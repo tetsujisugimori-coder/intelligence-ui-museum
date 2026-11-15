@@ -82,3 +82,6 @@ wave1 CI43651745849は保存対照用コピーにwave5-baseline.jsonがなく正
 
 ## 2026-11-16 JST 第8便（Issue #62）開始追補
 PR #61統合main dbba2e7から専用branch。受入契約を先行固定し145–147、143 P3と現在READMEの補訂。既存144・原本/v10/lockを保護。Issue初回拒否・push認証不足・検証初回失敗は保持。局所単体42と旧回帰496/75 PASS、独立監査P2を同反例で補強中。詳細docs/wave8、正式CI/原証拠/独立最終レビューはPENDINGで総合PARTIAL・限定マージNO。Draft提出のみ、Stage3 HOLDを維持。
+
+## 2026-11-16 JST 第8便正式初回の回帰整合
+f81e4dfの12 workflowは10成功2失敗。Wave8専用成功と旧回帰失敗を分離。隔離BASELINEコピー不足・kanban資源集合不足・noJS総数旧値の3箇所を最小修正。旧失敗保全、同入力のRED/GREEN、44単体とnormal/4保全故障を確認。新HEAD正式CIと独立原証拠監査PENDING。製品・既存期待値の弱化・timeout変更なし。詳細docs/wave8/RESULTS.md。

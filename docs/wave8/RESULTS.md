@@ -27,3 +27,13 @@ W8-R1:整合改変chunk本文/承認対象が初回監査を通過するP2。同
 - local02は追加timer/keyboard/143scrollを含む部分回帰。記録HEADff86a79に対し起動前のLOCAL_ENGINE絞込み2行が未commitだったため実行source hashは不一致。実行コピーを保存し、この結果をHEAD一致・正式CI成功としない。現在はa50594bで同変更をcommitし、CIではLOCAL_ENGINE指定を拒否し正式14条件を維持。旧原票を後から書き換えない。
 - runner検査は最初cwd違いでENOENT失敗を保存、正しいapps/v10で25PASS。製品失敗とは別。
 - Windows ギャラリアは接続・指定archive root実在、約382GB空き。新Wave8フォルダ未作成。read-only sandboxのため保存時追加実行審査が必要。root ACLの本人以外の権限を確認しており本人だけのアクセスと断定しない。保持期限UNKNOWN。
+
+## 2026-11-16 JST 正式初回と回帰整合修正
+提出 f81e4df16c7716480cbd4b452ecc638434805ed1/tree70b82cb46ea86edc24f2105c031b1d798a85b067 の12 workflowは10成功・2失敗（すべてattempt1）。第8便43754014566は14条件・36pair・21監査負対照がログ上成功。正式原ZIP14177669653は135395972 bytes、SHA256 892393067e8c2aa1cf5ed25cd56c86c539d4b19607ac42b58ffec6ac45f3f96a。Windows保存後全byte・公式digest・CRC読戻し済、独立内部監査は進行中。この成功を後続HEADへ転用しない。
+
+旧回帰の追随漏れ3箇所を修正。製品・既存画像期待・timeout・ケース数は変更しない。
+- Wave1 43754014525: verify.pyの新しい必須BASELINEを隔離コピーし忘れ、正常入力がFileNotFoundErrorで停止。docs/wave8/BASELINE.jsonだけコピー集合へ追加。同じデータで旧exit1→新normal exit0、4変異すべて拒否。ブラウザ前停止でartifact0、原ログを別保存。結果欠落による後続ENOENTを別の製品不具合と数えない。
+- 通常CI43754014605 kanban: runnerはwave8.js/cssを収録するが監査期待集合がwave7止まり。対象固定Git sourceがwave8を参照する場合だけ2資源を追加。各Git bytes/hash・集合完全一致は維持。同一固定sourceの旧集合不一致→新一致、旧source集合は不変。
+- 同CI nojs: 静的cards117は維持し表示総数の期待117/144のみ117/147へ更新。同じ固定HTMLを旧regex拒否→新受理。ブラウザ不要の契約再生であり、新ブラウザ実測の代用ではない。
+
+追加2回帰を含む44 Node test成功。隔離保全正常/4故障成功。独立担当が3原因と最小差分方針をreadonlyで照合。追加testは正式workflowに含め、実行source収録/監査集合にも追加。旧失敗原ZIP・ログを保持し、新HEAD正式CIは別実行としてPENDING。総合PARTIAL・限定マージNO。
