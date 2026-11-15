@@ -1,0 +1,145 @@
+{
+  "sourceHead": "9c74d898fa534de6f5b380cc36b425fb854afa8c",
+  "sourceTree": "f9e2aacc7a4fe1e865fbeabf3db30531e6e721c4",
+  "normal": {
+    "status": "PASS",
+    "conditions": 14,
+    "faultPairs": 42,
+    "head": "9c74d898fa534de6f5b380cc36b425fb854afa8c",
+    "tree": "f9e2aacc7a4fe1e865fbeabf3db30531e6e721c4",
+    "auditorSHA256": "5a94905bca96cfd606062e3af9c24ae546aaa319141e2a5a035bfa4c75fed0fa",
+    "scope": "fixed automated conditions; not physical Safari or Stage3 acceptance"
+  },
+  "results": [
+    {
+      "id": "wrong-condition-viewport",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: viewport size\n\n122117 !== 119012\n"
+    },
+    {
+      "id": "missing-report",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "Error: ENOENT: no such file or directory, open '<CHECKOUT>\\.work\\pr61-audit-20261115\\negative-tmp\\wave7-audit-controls-PklWUZ\\missing-report\\results.json'"
+    },
+    {
+      "id": "missing-image",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "Error: ENOENT: no such file or directory, open '<CHECKOUT>\\.work\\pr61-audit-20261115\\negative-tmp\\wave7-audit-controls-PklWUZ\\missing-image\\chromium-375-light-1.png'"
+    },
+    {
+      "id": "missing-trace",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "Error: Command failed: python3 -c import sys,zipfile,json,urllib.parse\nz=zipfile.ZipFile(sys.argv[1]);assert z.testzip() is None\nr=json.loads(sys.argv[2]);events=[json.loads(l) for n in z.namelist() if n.endswith('.trace') for l in z.read(n).decode().splitlines() if l.strip()]\nc=[e for e in events if e.get('type')=='context-options'];assert len(c)==1\nassert c[0]['browserName']==r['engine'];o=c[0]['options'];assert o['viewport']=={'width':r['width'],'height':1000};assert o.get('hasTouch') is True\nassert o.get('reducedMotion')==('reduce' if r['zoom']==2 else 'no-preference')\ng=[e for e in events if e.get('type')=='before' and e.get('method')=='goto'];assert len(g)==1\nassert urllib.parse.urlsplit(g[0]['params']['url']).query=='wave7-condition='+r['id']\nlog=json.load(open(sys.argv[3]))['log'];assert len(log['pages'])==1 and log['pages'][0]['id']==g[0]['pageId']\nassert all(e.get('pageref')==g[0]['pageId'] for e in log['entries'])\nassert any(e.get('type')=='frame-snapshot' for e in events)\nassert sum(e.get('type')=='after' for e in events)>(1 if r['id'].startswith('fault-') else 30)\n <CHECKOUT>\\.work\\pr61-audit-20261115\\negative-tmp\\wave7-audit-controls-PklWUZ\\missing-trace\\chromium-375-light-1.zip {\"id\":\"chromium-375-light-1\",\"engine\":\"chromium\",\"width\":375,\"zoom\":1} <CHECKOUT>\\.work\\pr61-audit-20261115\\negative-tmp\\wave7-audit-controls-PklWUZ\\missing-trace\\chromium-375-light-1.har\nTraceback (most recent call last):\r\n  File \"<string>\", line 2, in <module>\r\n    z=zipfile.ZipFile(sys.argv[1]);assert z.testzip() is None\r\n  File \"<USER>\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\zipfile\\__init__.py\", line 1462, in __init__\r\n    self.fp = io.open(file, filemode)\r\n              ~~~~~~~^^^^^^^^^^^^^^^^\r\nFileNotFoundError: [Errno 2] No such file or directory: '<CHECKOUT>\\\\.work\\\\pr61-audit-20261115\\\\negative-tmp\\\\wave7-audit-controls-PklWUZ\\\\missing-trace\\\\chromium-375-light-1.zip'\r\n"
+    },
+    {
+      "id": "missing-HAR",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "Error: Command failed: python3 -c import sys,zipfile,json,urllib.parse\nz=zipfile.ZipFile(sys.argv[1]);assert z.testzip() is None\nr=json.loads(sys.argv[2]);events=[json.loads(l) for n in z.namelist() if n.endswith('.trace') for l in z.read(n).decode().splitlines() if l.strip()]\nc=[e for e in events if e.get('type')=='context-options'];assert len(c)==1\nassert c[0]['browserName']==r['engine'];o=c[0]['options'];assert o['viewport']=={'width':r['width'],'height':1000};assert o.get('hasTouch') is True\nassert o.get('reducedMotion')==('reduce' if r['zoom']==2 else 'no-preference')\ng=[e for e in events if e.get('type')=='before' and e.get('method')=='goto'];assert len(g)==1\nassert urllib.parse.urlsplit(g[0]['params']['url']).query=='wave7-condition='+r['id']\nlog=json.load(open(sys.argv[3]))['log'];assert len(log['pages'])==1 and log['pages'][0]['id']==g[0]['pageId']\nassert all(e.get('pageref')==g[0]['pageId'] for e in log['entries'])\nassert any(e.get('type')=='frame-snapshot' for e in events)\nassert sum(e.get('type')=='after' for e in events)>(1 if r['id'].startswith('fault-') else 30)\n <CHECKOUT>\\.work\\pr61-audit-20261115\\negative-tmp\\wave7-audit-controls-PklWUZ\\missing-HAR\\chromium-375-light-1.zip {\"id\":\"chromium-375-light-1\",\"engine\":\"chromium\",\"width\":375,\"zoom\":1} <CHECKOUT>\\.work\\pr61-audit-20261115\\negative-tmp\\wave7-audit-controls-PklWUZ\\missing-HAR\\chromium-375-light-1.har\nTraceback (most recent call last):\r\n  File \"<string>\", line 9, in <module>\r\n    log=json.load(open(sys.argv[3]))['log'];assert len(log['pages'])==1 and log['pages'][0]['id']==g[0]['pageId']\r\n                  ~~~~^^^^^^^^^^^^^\r\nFileNotFoundError: [Errno 2] No such file or directory: '<CHECKOUT>\\\\.work\\\\pr61-audit-20261115\\\\negative-tmp\\\\wave7-audit-controls-PklWUZ\\\\missing-HAR\\\\chromium-375-light-1.har'\r\n"
+    },
+    {
+      "id": "wrong-condition-trace",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "Error: Command failed: python3 -c import sys,zipfile,json,urllib.parse\nz=zipfile.ZipFile(sys.argv[1]);assert z.testzip() is None\nr=json.loads(sys.argv[2]);events=[json.loads(l) for n in z.namelist() if n.endswith('.trace') for l in z.read(n).decode().splitlines() if l.strip()]\nc=[e for e in events if e.get('type')=='context-options'];assert len(c)==1\nassert c[0]['browserName']==r['engine'];o=c[0]['options'];assert o['viewport']=={'width':r['width'],'height':1000};assert o.get('hasTouch') is True\nassert o.get('reducedMotion')==('reduce' if r['zoom']==2 else 'no-preference')\ng=[e for e in events if e.get('type')=='before' and e.get('method')=='goto'];assert len(g)==1\nassert urllib.parse.urlsplit(g[0]['params']['url']).query=='wave7-condition='+r['id']\nlog=json.load(open(sys.argv[3]))['log'];assert len(log['pages'])==1 and log['pages'][0]['id']==g[0]['pageId']\nassert all(e.get('pageref')==g[0]['pageId'] for e in log['entries'])\nassert any(e.get('type')=='frame-snapshot' for e in events)\nassert sum(e.get('type')=='after' for e in events)>(1 if r['id'].startswith('fault-') else 30)\n <CHECKOUT>\\.work\\pr61-audit-20261115\\negative-tmp\\wave7-audit-controls-PklWUZ\\wrong-condition-trace\\chromium-375-light-1.zip {\"id\":\"chromium-375-light-1\",\"engine\":\"chromium\",\"width\":375,\"zoom\":1} <CHECKOUT>\\.work\\pr61-audit-20261115\\negative-tmp\\wave7-audit-controls-PklWUZ\\wrong-condition-trace\\chromium-375-light-1.har\nTraceback (most recent call last):\r\n  File \"<string>\", line 5, in <module>\r\n    assert c[0]['browserName']==r['engine'];o=c[0]['options'];assert o['viewport']=={'width':r['width'],'height':1000};assert o.get('hasTouch') is True\r\n                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError\r\n"
+    },
+    {
+      "id": "wrong-ID",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: fixed state initial/142\n+ actual - expected\n... Skipped lines\n\n  {\n    count: 0,\n    cycles: [\n      [\n        'B',\n...\n    paths: {},\n+   selected: 'unknown-node'\n-   selected: null\n  }\n"
+    },
+    {
+      "id": "wrong-state",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: fixed state initial/143\n+ actual - expected\n... Skipped lines\n\n  {\n    comparison: {\n      a: {\n        daily: 8000,\n        personDays: 20,\n...\n        personDays: 20,\n+       total: 999\n-       total: 40000\n      },\n      delta: 0,\n      percent: '0.0%'\n    },\n    error: null,\n"
+    },
+    {
+      "id": "failed-result",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'FAIL' !== 'PASS'\n"
+    },
+    {
+      "id": "forged-success",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: fixed state initial/144\n+ actual - expected\n\n  {\n    current: {\n      count: 0,\n      flag: false\n    },\n+   cursor: 99,\n-   cursor: 0,\n    eventCount: 0,\n    events: [],\n    nextId: 1\n  }\n"
+    },
+    {
+      "id": "partial-text2x",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: measured2x"
+    },
+    {
+      "id": "wrong-row-head",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: row HEAD mismatch\n+ actual - expected\n\n+ '0000000000000000000000000000000000000000'\n- '9c74d898fa534de6f5b380cc36b425fb854afa8c'\n"
+    },
+    {
+      "id": "wrong-row-tree",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: row tree mismatch\n+ actual - expected\n\n+ '0000000000000000000000000000000000000000'\n- 'f9e2aacc7a4fe1e865fbeabf3db30531e6e721c4'\n"
+    },
+    {
+      "id": "missing-row-identity",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: row HEAD mismatch\n+ actual - expected\n\n+ undefined\n- '9c74d898fa534de6f5b380cc36b425fb854afa8c'\n"
+    },
+    {
+      "id": "fault-console",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: unexpected fault console\n+ actual - expected\n\n+ [\n+   'unexpected error'\n+ ]\n- []\n"
+    },
+    {
+      "id": "fault-cleanup",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: fault cleanup errors\n+ actual - expected\n\n+ [\n+   'trace stop failed'\n+ ]\n- []\n"
+    },
+    {
+      "id": "fault-mode-head",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: fault mode HEAD mismatch\n+ actual - expected\n\n+ '0000000000000000000000000000000000000000'\n- '9c74d898fa534de6f5b380cc36b425fb854afa8c'\n"
+    },
+    {
+      "id": "fault-mode-tree",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: fault mode tree mismatch\n+ actual - expected\n\n+ undefined\n- 'f9e2aacc7a4fe1e865fbeabf3db30531e6e721c4'\n"
+    },
+    {
+      "id": "fault-image-hash",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: fault screenshot hash\n+ actual - expected\n\n+ '0c832f735787f0234bf82b11ba7af31490903c819f93b0359d68339873cd5563'\n- '0000000000000000000000000000000000000000000000000000000000000000'\n"
+    },
+    {
+      "id": "fault-execution-hash",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "AssertionError [ERR_ASSERTION]: fault execution hash\n+ actual - expected\n\n+ '0000000000000000000000000000000000000000000000000000000000000000'\n- '909104f70f037d9e8a4d9db8f39093c6e77473a780ce91c7a80408c6e34b1214'\n"
+    },
+    {
+      "id": "missing-execution-source",
+      "normal": "ACCEPT",
+      "fault": "REJECT",
+      "reason": "Error: ENOENT: no such file or directory, open '<CHECKOUT>\\.work\\pr61-audit-20261115\\negative-tmp\\wave7-audit-controls-PklWUZ\\missing-execution-source\\execution\\wave7-browser.cjs'"
+    }
+  ],
+  "originalUnchanged": true,
+  "originalFileCount": 667,
+  "auditorSHA256": "5a94905bca96cfd606062e3af9c24ae546aaa319141e2a5a035bfa4c75fed0fa",
+  "negativeRunnerSHA256": "385c1e2fe2770a81b552d5544f8c7fc5bfc95898f3800d4a504f8ee6c4eb185e"
+}

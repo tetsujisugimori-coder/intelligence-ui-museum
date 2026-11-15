@@ -2,9 +2,9 @@
 
 UIを操作して、状態・仕組み・出自を比較する教材。OpenAIの公式製品ではありません。
 
-Private GitHubへの取り込みと[Draft PR #2](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/2)提出まで完了。原本保全・buildの実CIと、隔離ブランチでのCI失敗伝播RED→GREENを確認しました。PRは未マージ。総合 **PARTIAL**、Stage 3の公開・機能拡張は **HOLD** を維持します。
+現在のmainは第6便（PR #59）まで統合済みで、141展示・11カテゴリーです。第7便142〜144はIssue #60の専用ブランチで実装・検証中であり、正式受入は未確定です。Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDEDを維持します。OpenAI公式部品や実製品と同等とは主張しません。
 
-開発管理先：[intelligence-ui-museum](https://github.com/tetsujisugimori-coder/intelligence-ui-museum)。mainは運用入口のみ、移行ソースは上記PRの`chore/github-migration`ブランチです。現在の契約ではPrivateリポジトリのmain保護は強制されないため、PR経由・force push禁止を運用規則として守ります。
+開発管理先：[tetsujisugimori-coder/intelligence-ui-museum](https://github.com/tetsujisugimori-coder/intelligence-ui-museum)。過去の移行・各便の判定はその時点の記録であり、現在のGitHub状態と区別します。PR経由・force push禁止・人間によるマージ判断を守ります。
 
 ## 構成
 
@@ -27,7 +27,7 @@ npm --prefix .work/v10 run build
 npm --prefix .work/v10 test
 ```
 
-初回のmainは運用説明のみとし、ソース移行は `chore/github-migration` のDraft PRでレビューします。GitHub正式移行完了後は、Issue→作業ブランチ→検証→Draft PR→独立レビュー→人間のマージ判断を基本とします。
+初回移行時の記録：mainは運用説明のみとし、ソース移行は `chore/github-migration` のDraft PRでレビューします。GitHub正式移行完了後は、Issue→作業ブランチ→検証→Draft PR→独立レビュー→人間のマージ判断を基本とします。
 
 Issues #12 / #13 の文字拡大と Kanban 表示の自己検証は [記録](evidence/zoom-issues-12-13-20261103/README.md) を参照。合成文字拡大は OS 設定の代替ではありません。
 
@@ -44,7 +44,10 @@ Issue #15のKanban画像回帰検査は [設計・再現手順](docs/KANBAN-VISU
 ## 第5便（PR #57マージ済み）
 Issue #56: 136–138。最終HEAD345a44cの技術検証・正式CI・原証拠照合完了後PR57統合。旧記録は当時の判定。Stage 3 HOLDを維持。
 
-## 第6便（PR #59：固定自動化範囲の技術受入PASS、限定マージ審査中）
+## 第6便（PR #59マージ済み：2026-11-15確認）
 Issue #58、139–141（Linked Views Explorer／Conflict Resolution Editor／Provenance Explorer）を追加し、全141展示・11カテゴリー。受入条件は事前固定の[契約](docs/wave6/ACCEPTANCE.md)を参照。
 検証対象実装HEAD `c9ce4490db96148421f706d243e6a52bba39c50a` で正式10 workflowすべて成功。Chromium／WebKitの固定14条件、故障・正常対照34組、監査器負対照11件、別担当による監査器再実行と代表画像確認を完了。原ZIPはLibrary保存後に実物を再取得し、別担当の全バイト・SHA-256・CRC照合PASSを記録した。旧HEADの`E2BIG`失敗と旧原票の修正後再監査は保持し、新HEADの正式成功とは区別する。
 第6便の限定技術受入PASS、限定マージ推奨YES。実機Safari・VoiceOver・物理touch・OS文字拡大はNOT_TESTED、Libraryのアクセス範囲・保持期限は未確認。Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDED、既存原因UNKNOWNは維持。製品全体の受入・公開は許可していない。
+
+## 第7便（Issue #60：実装・検証中）
+142 Dependency Impact Explorer、143 What-if Scenario Workbench、144 Interaction Replay Timeline。固定架空教材で144展示・11カテゴリーへ拡張します。[受入契約](docs/wave7/ACCEPTANCE.md)を製品実装前に固定しました。正式14条件、独立レビュー、最終CI・原証拠保全は未完了。完了・PASS・マージ済みとは扱いません。

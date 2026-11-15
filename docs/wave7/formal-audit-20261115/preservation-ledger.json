@@ -1,0 +1,39 @@
+{
+  "verifiedAt": "2026-11-15T23:48:21.344018+09:00",
+  "source": "https://api.github.com/repos/tetsujisugimori-coder/intelligence-ui-museum/actions/artifacts/14166072555/zip",
+  "artifact": 14166072555,
+  "run": 43724015917,
+  "attempt": 1,
+  "head": "9c74d898fa534de6f5b380cc36b425fb854afa8c",
+  "tree": "f9e2aacc7a4fe1e865fbeabf3db30531e6e721c4",
+  "allBytesEqual": true,
+  "officialDigestMatch": true,
+  "zipMembers": 668,
+  "zipCRC": "PASS all members",
+  "manifestEntries": 667,
+  "manifest": "PASS exact set/size/hash; excludes manifest itself",
+  "access": "Dedicated NTFS folder inheritance disabled; sole allow ACE current owner SID FullControl propagated to ZIP; system administrator override outside ACL not tested",
+  "retention": "UNKNOWN; no local automatic deletion configured by this task",
+  "githubExpiresAt": "2027-02-13T14:22:33Z",
+  "storageId": "Windows archive / intelligence-ui-museum / PR-61-run-43724015917-attempt-1-artifact-14166072555",
+  "copies": [
+    {
+      "role": "download",
+      "filename": "14166072555-v11-wave7-evidence.zip",
+      "size": 107365453,
+      "sha256": "51d3ed7e79dc2b37a8c568781b2061906b1b7a43862dd79c2729fbbab9caa827"
+    },
+    {
+      "role": "archive",
+      "filename": "14166072555-v11-wave7-evidence.zip",
+      "size": 107365453,
+      "sha256": "51d3ed7e79dc2b37a8c568781b2061906b1b7a43862dd79c2729fbbab9caa827"
+    },
+    {
+      "role": "archive-readback",
+      "filename": "14166072555-v11-wave7-evidence.zip",
+      "size": 107365453,
+      "sha256": "51d3ed7e79dc2b37a8c568781b2061906b1b7a43862dd79c2729fbbab9caa827"
+    }
+  ]
+}
