@@ -53,3 +53,8 @@ baseline7=json.loads(Path("apps/v11/wave7-baseline.json").read_text())
 assert b[:141]==baseline7,"previous141 full metadata changed"
 assert [(x["name"],x["category"]) for x in b[141:]]==[('Dependency Impact Explorer', 'データ表示'), ('What-if Scenario Workbench', '入力'), ('Interaction Replay Timeline', 'インタラクション')]
 print("PASS: previous141 full metadata intact; new142-144; 11categories")
+
+# Wave7 gallery description registration is distinct from in-demo explanations.
+for name in ['Dependency Impact Explorer','What-if Scenario Workbench','Interaction Replay Timeline']:
+    assert re.search(r'"'+re.escape(name)+r'"\s*:\s*"[^"\n]{10,}"',html), 'wave7 description registration missing '+name
+print('PASS: wave7 gallery description registrations')

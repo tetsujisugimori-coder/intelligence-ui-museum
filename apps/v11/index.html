@@ -93,10 +93,11 @@ function labDemo(n) {
  if(n==='ChatGPT Tool Approval')return `<div class="lab-box"><strong>模擬ツール：メモへの書込み</strong><p>操作内容：テスト用のメモ1件を追加（実際には何も保存しません）</p>${act('承認','approve')}${act('拒否','deny')}</div>`+box('承認待ち')+note;
  return '';
 }
+Object.assign(descriptions,{"Dependency Impact Explorer":"固定依存図の選択から直接・間接影響と最短経路を確認。循環と孤立を区別し、辺を編集する129や136とは異なる。","What-if Scenario Workbench":"固定の基準Aと入力した比較Bを整数式で比較。表・棒長・差分を照合し、無効入力は計算を拒否。AI予測ではない。","Interaction Replay Timeline":"型付きイベントを初期状態から再生し、前後・任意時点へ移動。途中の操作は将来履歴を破棄し、全分岐を保持する138と区別する。"});
 Object.assign(descriptions,{"Linked Views Explorer": "6件の固定IDをグラフと表で連動選択。並べ替えは表示順だけを変え、対象ID・同値・0を保護。Bulk Selectionの一括操作やFaceted Searchの絞込みではなく表現間の対応を学ぶ。", "Conflict Resolution Editor": "base/left/rightの固定4項目を厳密文字列比較。未変更・片側・同値変更を自動解決し異値競合を明示選択。未解決確定を拒否、取消は確定値を保護。AI Answer Diffではなく三者比較教材。", "Provenance Explorer": "記述ID・資料ID・箇所の対応を双方向に追跡し2資料を並列比較。相反記述を保持、未登録は流用せず未登録。CitationやJSON Inspector、Master–Detailとは異なる根拠関係教材。"});
 Object.assign(descriptions,{"Flow Canvas Editor": "固定IDの空間配置と有向接続を編集し、循環拒否・Undo/Redo・線の追従を確認。129の依存探索に対しキャンバス配置と履歴の整合を学ぶ。", "Semantic Zoom Explorer": "Overview/Group/Detailで集計から個票へ。選択対象を維持し、ページズームとは異なる意味的詳細度を学ぶ。", "Branching History Explorer": "過去から分岐しても旧履歴を保持し、安定ID・親IDで状態復元と比較。110の直線Undoと異なる。"});
 function demo(x) {
-  if(x.id>=142)return wave7Demo(x.id);
+  if(x.id>=142)return typeof wave7Demo==='function'&&typeof wave7Init==='function'?wave7Demo(x.id):'<section data-wave7-resource-missing role="alert"><p>配信資源 wave7.js を読み込めません。展示は初期化未完了です。再読み込みしても続く場合は配信資源を確認してください。</p></section>';
   if(x.id>=139)return wave6Demo(x.id);
   if(x.id>=136)return wave5Demo(x.id);
   if(x.id>=133)return wave4Demo(x.id);
@@ -195,7 +196,7 @@ function cancel(card) {
   const s=scopes.get(card); if(s){s.epoch++;for(const id of s.timers.keys()){clearTimeout(id);clearInterval(id);}s.timers.clear();for(const a of s.animations)a.cancel();s.animations.clear();for(const fn of s.cleanup)fn();s.cleanup.clear();scopes.delete(card);}
   for(const [id,p] of [...pointers])if(p.card===card){pointers.delete(id);try{if(p.target.hasPointerCapture(id))p.target.releasePointerCapture(id);}catch{}}
 }
-function reset(card) {cancel(card);labSaved.delete(card.dataset.id);card.querySelector('.stage').innerHTML=demo(items.find(x=>x.id===+card.dataset.id));v08Init(card);v09Init(card);v11Init(card);wave1Init(card);wave2Init(card);wave3Init(card);wave4Init(card);wave5Init(card);wave6Init(card);wave7Init(card);feedback(card,'初期状態');}
+function reset(card) {cancel(card);labSaved.delete(card.dataset.id);card.querySelector('.stage').innerHTML=demo(items.find(x=>x.id===+card.dataset.id));v08Init(card);v09Init(card);v11Init(card);wave1Init(card);wave2Init(card);wave3Init(card);wave4Init(card);wave5Init(card);wave6Init(card);if(typeof wave7Demo==='function'&&typeof wave7Init==='function')wave7Init(card);feedback(card,card.querySelector('[data-wave7-resource-missing]')?'配信資源欠落・初期化未完了':'初期状態');}
 function provenanceHTML(x){const p=x.provenance;return `<details class="provenance"><summary>出自・仕組み・比較を学ぶ</summary><dl>${Object.entries(p).filter(([k])=>!['展示ID','名称','カテゴリー','参考URL'].includes(k)).map(([k,v])=>`<dt>${escapeHTML(k)}</dt><dd>${escapeHTML(v)}</dd>`).join('')}</dl><a href="${escapeHTML(p.参考URL)}" target="_blank" rel="noopener noreferrer">一次資料／Web標準を読む</a></details>`;}
 function render() {
   const filter=q('#search').value.toLocaleLowerCase(); const visible=items.filter(x=>(category==='すべて'||x.category===category)&&(String(x.id).padStart(3,'0')+' '+x.name+' '+x.category).toLocaleLowerCase().includes(filter));
@@ -203,7 +204,7 @@ function render() {
     return `<article class="card" data-id="${x.id}" aria-labelledby="exhibit-${x.id}"><small>${x.category} / ${String(x.id).padStart(3,'0')}</small><h2 id="exhibit-${x.id}">${escapeHTML(x.name)}</h2><p class="description">${escapeHTML(x.id>=127?museumDescription(x.name,descriptions):descriptions[x.name])}</p><div class="stage">${d}</div><div class="feedback" role="status" aria-live="polite" ${x.id>=118?"hidden":""}>初期状態</div>${provenanceHTML(x)}${B('↺ リセット','reset',`aria-label="${escapeHTML(x.name)}をリセット"`)}</article>`;}).join('');
   for(const card of q('#gallery').querySelectorAll('.card')) cancel(card);
   q('#gallery').innerHTML=html||'<div class="empty">該当する展示はありません。検索語を変更してください。</div>';
-  v08Init(q('#gallery'));v09Init(q('#gallery'));v11Init(q('#gallery'));wave1Init(q('#gallery'));wave2Init(q('#gallery'));wave3Init(q('#gallery'));wave4Init(q('#gallery'));wave5Init(q('#gallery'));wave6Init(q('#gallery'));wave7Init(q('#gallery'));
+  v08Init(q('#gallery'));v09Init(q('#gallery'));v11Init(q('#gallery'));wave1Init(q('#gallery'));wave2Init(q('#gallery'));wave3Init(q('#gallery'));wave4Init(q('#gallery'));wave5Init(q('#gallery'));wave6Init(q('#gallery'));if(typeof wave7Demo==='function'&&typeof wave7Init==='function')wave7Init(q('#gallery'));
   q('#count').textContent=`${visible.length} / ${items.length} 展示`;
   // Keep category buttons mounted so keyboard focus survives selection.
   q('#filters').querySelectorAll('[data-cat]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.cat===category));b.classList.toggle('active',b.dataset.cat===category);});
