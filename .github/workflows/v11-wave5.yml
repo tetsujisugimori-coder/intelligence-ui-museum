@@ -23,7 +23,7 @@ jobs:
       - run: mkdir -p "$TMPDIR" .work/wave5-app && cp -R apps/v11/. .work/wave5-app/
       - run: npm ci --ignore-scripts && npx playwright install --with-deps chromium webkit
         working-directory: .work/wave5-app
-      - run: python3 apps/v11/verify.py && node --test apps/v11/wave5-test.cjs
+      - run: python3 apps/v11/verify.py && node --test apps/v11/wave5-test.cjs apps/v11/wave5-review-test.cjs
       - run: node apps/v11/wave5-browser.cjs
         env:
           APP_ROOT: .work/wave5-app

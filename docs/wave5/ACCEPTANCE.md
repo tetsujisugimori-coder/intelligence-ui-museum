@@ -14,3 +14,5 @@ Negative controls:136 cycle,duplicate,edge endpoint offset,undo mismatch;137 sel
 Separate technical/CI/evidence/merge judgments. Independent reviewer checks false acceptance and protected data. Original ZIP save/refetch independent SHA/CRC/manifest; access/retention UNKNOWN unless verified. Stage3 HOLD/v10 NO/PR46 SUSPENDED, no merge/release/deploy.
 
 Independent review amendment before final verification: edge arrow endpoints stop at node rectangle boundaries instead of hidden centers. Moves that would bring node rectangles within10 logical units are rejected unchanged. SVG node labels are included in actual measured text2x. Prior center-based diagnostic and missed-label font audit retained as failed evidence, not silently treated as acceptance.
+
+Focus boundary clarification (before P2 re-verification): 137 upper Detail endpoint moves focus to enabled out, lower Overview endpoint to enabled in. 136 exhausted Undo moves to Redo, exhausted Redo to Undo. Otherwise initiating enabled control retains focus. Reset targets remain unchanged. These continuation targets replace the unintended Reset fallback; no state or limit changes.

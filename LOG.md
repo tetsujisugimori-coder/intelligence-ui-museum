@@ -44,3 +44,9 @@ Wave3 original CI evidence correction: run43565124714 / artifact14101838513 (91,
 ## 2026-11-15 JST — 第5便CI原票による検査基盤修正
 90bca09のwave5 CI43651745839はWebKit7条件の全操作段階後、138展示fullPage PNGが32767px上限を超え証拠採取FAIL。故障対照stepはskipでありPASSではない。原ZIP14137067856（69,535,865 bytes、SHA256 cf8c83e1c4eb1f3877b9a01172c913053c3b400a1e4d548d39883f259746e6d9）保持。検証対象を減らさずviewport PNGと3展示個別PNGへ採取を変更し、監査で3ID/寸法/CRC/SHAを必須にした。修正後WebKitの同一14条件確認は新HEAD CI待ち。
 wave1 CI43651745849は保存対照用コピーにwave5-baseline.jsonがなく正常対照FAIL。正本は存在しており製品原本破損ではない。必要ファイルをコピー対象に追加し、同一正常/4故障で修正前exit1、後正常exit0/4故障非zero確認。旧FAILとログを保持。旧run取消・手動再実行なし。
+
+## 2026-11-15 JST — 第5便独立P2追補
+- e077b22の通常画像監査が故障対照行へ重複してundefined.mapとなる反例を保持。通常14条件の画像集合/寸法/SHA/CRCは残し、故障行から不適合な要求だけを除いた。同一schema反例はRED→GREEN。画像正常・欠落・条件名/寸法/hash改変・破損・実ファイル欠測を別検査。
+- 137の上端/下端と136のUndo/Redo尽きでResetへフォーカスする実装を独立Chromiumで再現。契約に有効な反対操作へ戻す方針を固定し、同一4操作でreset→out/in/redo/undoを確認。既存状態制限は変更なし。
+- 独立レビューで故障sourceの自己申告hashだけでは無改変sourceを故障原票として誤受理する問題を追加検出。Gitの元bytesから監査側固定変換を再計算しsource/HARと照合。sourceHash・実bytes・HARを全て元sourceへ戻した偽装を期待するfixed mutation bytes理由で拒否。
+- Node製品3/検査3成功、既存135保護成功。新しい局所browser14条件はChromium7成功、WebKit7は共有library不足の起動FAIL(環境BLOCKED)。uncommitted作業コピーの局所原票であり最終HEAD CIの代替ではない。旧cross-realm試験器FAILも保持。正式両engineは新HEAD CI待ち。旧runの手動取消/再実行なし。
