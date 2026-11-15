@@ -21,3 +21,13 @@
 監査器負対照21件=18意味改変＋missing-file/source-hash/condition-id（HEAD誤認も独立試験で追加）。正常原票受理、期待値自体の弱化は固定判定との比較で拒否。固定件数は減らさない。旧失敗保持、修正なら同反例前後。
 正式14条件=Chromium/WebKit×375/390/1280×light/dark＋各375dark reduced-motion実computed文字2倍。全3展示の正常/故障/編集/選択/Reset/focus/Tab ShiftTab Enter Space/touch相当/console/pageerror/横幅を検査。実機Safari/VoiceOver/物理touch/OS拡大は未実施ならNOT_TESTED。
 専用CI source-only変更もtrigger。正式HEAD/tree/実checkout/仮merge/run/job/attempt、JSON/PNG/trace/HAR/配信原byte/source/hash/実行監査依存/manifestを収録。原ZIP正規取得・再圧縮せず承認先保存後別担当実再取得、公式size/digest/全byte/SHA/CRC/manifest/sourceと代表画像を独立照合。依存実体非収録等の範囲は明記。未確認ACL/保持期限UNKNOWN。最終CI失敗・必須未実施・blockingP1/P2ならPARTIAL/HOLD/限定mergeNO。全成功でもStage3 HOLD/v10 NO/PR46 SUSPENDED/旧原因UNKNOWN、Draftのみ。
+
+## 実装前提の追補（2026-11-16 JST）
+既存Wave8固定反例testは旧HTML147に対する修正済み検査器も固定787a057から読むよう版を明示する（現行150のnoJS期待を旧HTMLへ適用しない）。同testの旧反例は保持し、現行150/資源wave9を別の統合検査で確認。既存147操作・原本を変更する許可ではない。
+
+## 独立設計訂正 W9-R1（2026-11-16 JST、旧079f613とlocal01保持）
+初期conflict教材が「未確認」の引用を反証へ振り替えていた。未確認は9時の否定ではなく、初期設計の根拠不足としてP2を記録。合格条件を緩和せず訂正する。s3調査メモへ2行目「開館は10時です。」を固定追加し、conflictのe5はc1/s3/2行目/その完全引用/contradictのみ。e4の1行目unknownは維持し、異なる記述を区別する。
+固定関係のID・claim・source・line・quote・typeを正本の許容組に完全照合する。既知ID同士のすり替えや同じ引用を異なる意味で追加する場合もINVALID、別関係IDを発明してPASSにしない。これにより架空資料の内容と関係タグを一致させる。主張の史実確証や一般的自然言語理解の保証にはしない。旧同反例誤受理と新拒否、正常/正当conflictの維持を別記録する。
+
+## 独立レビュー R2 による監査契約追補
+既存21負対照とHEAD誤認1件を維持し、149引用改変・inspect対象置換・150欠測時の旧順位/総点・資料本文改変・構造score残存の5件を追加する（合計27監査check）。新規実行はrenderSchema=2で引用、inspect対象、資料全行、総点を記録し固定表示oracleと照合する。旧schema原票は同一反例の意味的再検証にのみ用い、新HEADの正式証拠として受理しない。検査項目を減らさず、未知の順位や旧結果残存を拒否する。

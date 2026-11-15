@@ -85,3 +85,6 @@ PR #61統合main dbba2e7から専用branch。受入契約を先行固定し145�
 
 ## 2026-11-16 JST 第8便正式初回の回帰整合
 f81e4dfの12 workflowは10成功2失敗。Wave8専用成功と旧回帰失敗を分離。隔離BASELINEコピー不足・kanban資源集合不足・noJS総数旧値の3箇所を最小修正。旧失敗保全、同入力のRED/GREEN、44単体とnormal/4保全故障を確認。新HEAD正式CIと独立原証拠監査PENDING。製品・既存期待値の弱化・timeout変更なし。詳細docs/wave8/RESULTS.md。
+
+## 2026-11-16 JST 第9便（Issue #64）
+PR #63統合後main f5b1aefから専用branch。受入契約先行固定、148–150を追加して150展示11分類。R1根拠tupleの誤受理を同一反例で修正し、R2表示oracle不足を独立指摘として修正し同3反例で独立再確認。新schemaの局所03も7条件18pair成功。局所Chromium7条件／18pairと正式14条件／36pairを分離、旧中断・失敗を保持。正式CI・保全・最終独立確認PENDING、総合PARTIAL・限定マージNO。詳細docs/wave9。

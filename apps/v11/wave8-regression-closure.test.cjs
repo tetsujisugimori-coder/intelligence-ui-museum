@@ -12,9 +12,9 @@ test('same fixed source: old source-set contract rejects actual wave8 closure; n
  const historical='3b90ddbb77787b759c014a24d99f05ca98dda89f';assert.deepEqual(required(false,historical),required(true,historical));
  for(const missing of ['wave8.js','wave8.css'])assert.notDeepEqual(expected.filter(x=>x!==missing),required(false,old));
 });
-test('same fixed static count: old no-JS total rejects, new accepts; static117 cards assertion retained',()=>{
+test('archived wave8 static count: old total rejects, fixed wave8 version accepts; current static117 cards retained',()=>{
  const html=git('show',`${old}:apps/v11/index.html`).toString(),count=html.match(/id="count"[^>]*>([^<]+)/)[1];
- const pattern=before=>new RegExp(code('nojs-test.cjs',before).match(/assert\.match\(r\.count,\/(.*?)\/\)/)[1]);
+ const pattern=before=>new RegExp((before?code('nojs-test.cjs',true):git('show','787a057b6d4f22324746e1b2cada23a97dc6b226:apps/v11/nojs-test.cjs').toString()).match(/assert\.match\(r\.count,\/(.*?)\/\)/)[1]);
  assert.throws(()=>assert.match(count,pattern(true)),{code:'ERR_ASSERTION'});assert.match(count,pattern(false));
  assert.match(code('nojs-test.cjs',false),/assert\.equal\(r\.cards,117\)/);assert.doesNotMatch('117 / 144',pattern(false));
 });
