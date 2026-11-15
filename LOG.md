@@ -50,3 +50,11 @@ wave1 CI43651745849は保存対照用コピーにwave5-baseline.jsonがなく正
 - 137の上端/下端と136のUndo/Redo尽きでResetへフォーカスする実装を独立Chromiumで再現。契約に有効な反対操作へ戻す方針を固定し、同一4操作でreset→out/in/redo/undoを確認。既存状態制限は変更なし。
 - 独立レビューで故障sourceの自己申告hashだけでは無改変sourceを故障原票として誤受理する問題を追加検出。Gitの元bytesから監査側固定変換を再計算しsource/HARと照合。sourceHash・実bytes・HARを全て元sourceへ戻した偽装を期待するfixed mutation bytes理由で拒否。
 - Node製品3/検査3成功、既存135保護成功。新しい局所browser14条件はChromium7成功、WebKit7は共有library不足の起動FAIL(環境BLOCKED)。uncommitted作業コピーの局所原票であり最終HEAD CIの代替ではない。旧cross-realm試験器FAILも保持。正式両engineは新HEAD CI待ち。旧runの手動取消/再実行なし。
+
+## 2026-11-15 JST: v11 第6便139〜141（提出準備、未マージ）
+- 基準main 6ac4cc5ca459667558c95d1c6b671e3a29c8f635 / tree 9b50ff6414c4a500fb11cf87dbfec4d7df547bd0、PR57マージを確認。Issue58、受入契約先行commit b88498b（同treeを通常GitHub接続1f39c4eへ提出）。
+- Linked Views、Conflict Resolution、Provenanceを固定架空教材として追加。旧138dataset全項目、v09/v10/SDK/lock保持。141展示11分類。
+- 独立レビューR1/R2: 表数値・資料本文の誤表示を監査が誤受理。原反例sourceを保ち期待値照合を補強、正常19段階維持。R3: 取消後の未解決選択表示矛盾を実ブラウザ再現し確定値対応へ修正。R4: graph/field ID重複の原票誤受理を完全ID検査で拒否。各RED/GREEN原票別保全。
+- 予備ローカルChromium7条件・17故障/17正常を確認。初回故障試験はcheckの再試行timeoutで意味的検出失敗と判定し保持、通常click後の独立assertへ修正。WebKitは共有ライブラリ不足でBLOCKED。正式CI結果の代用ではない。
+- 実機Safari/VoiceOver/物理touch/OS文字拡大NOT_TESTED。正式最終HEAD CI、原ZIP保存・実再取得・独立監査はPENDING。Stage3HOLD、v10受入NO、PR46SUSPENDED、既存原因UNKNOWNを維持。Draft解除・マージ・公開なし。
+- 追加原票: 専用TMPDIRを付け忘れた再検は49/50（環境契約違反1）として保持し、製品修正せず専用領域指定で再確認。旧FAILは成功に置換しない。

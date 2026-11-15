@@ -1,0 +1,45 @@
+name: v11 Wave 6
+on:
+  pull_request:
+    paths: ['apps/v11/**', '.github/workflows/v11-wave6.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  wave6:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      TMPDIR: ${{ github.workspace }}/.work/wave6-temp
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/wave6-browsers
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: mkdir -p "$TMPDIR" .work/wave6-app && cp -R apps/v11/. .work/wave6-app/
+      - run: npm ci --ignore-scripts && npx playwright install --with-deps chromium webkit
+        working-directory: .work/wave6-app
+      - run: python3 apps/v11/verify.py && node --test apps/v11/wave6-test.cjs
+      - run: node apps/v11/wave6-browser.cjs
+        env:
+          APP_ROOT: .work/wave6-app
+          EVIDENCE_DIR: .work/wave6-evidence
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/.work/wave6-app/node_modules/playwright
+      - run: node apps/v11/wave6-faults.cjs
+        env:
+          APP_ROOT: .work/wave6-app
+          EVIDENCE_DIR: .work/wave6-evidence
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/.work/wave6-app/node_modules/playwright
+      - if: always()
+        run: node apps/v11/wave6-audit.cjs .work/wave6-evidence
+      - run: node apps/v11/wave6-audit-negative.cjs .work/wave6-evidence
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-wave6-evidence
+          path: .work/wave6-evidence
+          retention-days: 90
