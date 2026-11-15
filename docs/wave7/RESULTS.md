@@ -26,3 +26,14 @@ Stage3 HOLD、v10製品受入NO、PR46 SUSPENDED、旧原因UNKNOWNを維持。m
 本人が既存検証器の展示総数/配信資源一覧の追随を含め再承認し、同書込みが審査を通過。既存操作期待値・閾値・時間予算を緩和せず提出を再開。
 resource faultの許容エラーは変更しない。製品indexにwave7.js欠測の明示表示/未初期化guardを追加し、同じ404入力で旧工程FAIL→新意味検出成功・正常初期化3を確認。旧失敗を保持。
 e227a05/tree74d575bの局所04はChromium7条件×26操作と故障/正常21組PASS、別担当がsource/Git/HAR/trace/画像を限定照合。WebKit7条件・21組は環境BLOCKED。局所両工程exit1、正式14条件成功とは扱わない。最終提出HEADの正式CI・全監査・負対照・原ZIP保全はPENDING。
+
+
+## 2026-11-15 23:54 JST 正式CI・Windows原ZIP保全・独立監査追補
+
+提出当時のPENDING/局所失敗は上記履歴として保持する。正式対象HEAD `9c74d898fa534de6f5b380cc36b425fb854afa8c` / tree `f9e2aacc7a4fe1e865fbeabf3db30531e6e721c4`、run43724015917/attempt1/artifact14166072555をGitHubで再確認。対象HEADの11 workflowは全てsuccess。
+
+正式原ZIP107365453 bytesをWindows本人指定保管先へ無改変保存し、その保存先から実再取得。保存前/保管先/再取得の3実物は全byte・公式SHA-256一致。668メンバーCRC、manifest667対象全件PASS。作成/保全担当と別の独立担当が再取得実物の14条件×26段階、42pair、原ZIP内21負対照、実行source/配信/HAR/trace、代表画像12枚を実照合。既存監査器も新規workコピーで14/42および21負対照を再実行PASS。初回環境失敗は別保持。
+
+**固定自動化範囲の限定技術受入PASS／原ZIP保全PASS／独立監査PASS／総合PARTIAL／限定マージ推奨YES（提案のみ）。** 143狭幅文字2倍の数値途中折返しは別改善提案。明示6実行sourceの全依存閉包収録、全途中画像の実見、実機全般は保証しない。並行担当のLibrary16原ZIP保全・最終レビューを保持し、今回のWindows1原ZIP追加保全と区別する。
+
+Stage3 HOLD、v10製品受入NO、PR46 SUSPENDED、既存原因UNKNOWN、実機Safari/VoiceOver/物理touch/OS拡大NOT_TESTEDを維持。文書commit後のHEAD/CIは正式実行対象版と別記録。[正式保全・独立監査報告](formal-audit-20261115/REPORT.md)、[独立報告](formal-audit-20261115/independent-report.md)。Draft維持、マージ・公開なし。

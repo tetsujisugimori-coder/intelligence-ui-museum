@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "conditions": 14,
+  "faultPairs": 42,
+  "head": "9c74d898fa534de6f5b380cc36b425fb854afa8c",
+  "tree": "f9e2aacc7a4fe1e865fbeabf3db30531e6e721c4",
+  "auditorSHA256": "5a94905bca96cfd606062e3af9c24ae546aaa319141e2a5a035bfa4c75fed0fa",
+  "scope": "fixed automated conditions; not physical Safari or Stage3 acceptance"
+}

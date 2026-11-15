@@ -1,0 +1,59 @@
+{
+  "auditor": "/root/independent_audit",
+  "role": "independent reader; no product/auditor authorship or archive transfer role",
+  "targetHead": "9c74d898fa534de6f5b380cc36b425fb854afa8c",
+  "targetTree": "f9e2aacc7a4fe1e865fbeabf3db30531e6e721c4",
+  "run": 43724015917,
+  "attempt": 1,
+  "artifact": 14166072555,
+  "zipBytes": 107365453,
+  "sha256": "51d3ed7e79dc2b37a8c568781b2061906b1b7a43862dd79c2729fbbab9caa827",
+  "copiesByteCompared": 3,
+  "officialDigestMatch": true,
+  "zipMembersCRCVerified": 668,
+  "manifestEntriesVerified": 667,
+  "manifestExcludes": [
+    "manifest.json"
+  ],
+  "conditionsVerified": 14,
+  "snapshotsVerified": 364,
+  "fontSamples2xVerified": 3788,
+  "faultPairsVerified": 42,
+  "negativeOriginalRecordsVerified": 21,
+  "negativeRerunRecordsVerified": 21,
+  "negativeRerunOriginalUnchanged": true,
+  "traceZipsVerified": 98,
+  "traceEventsRead": 31975,
+  "sourceAssetsGitHarResponseVerified": 17,
+  "executionSourceFilesVerified": 6,
+  "exhibitImageBindingsVerified": 42,
+  "imagesVisuallyInspected": [
+    "chromium-375-dark-2-exhibit-142.png",
+    "chromium-375-dark-2-exhibit-143.png",
+    "chromium-375-dark-2-exhibit-144.png",
+    "chromium-1280-light-1-exhibit-142.png",
+    "chromium-1280-light-1-exhibit-143.png",
+    "chromium-1280-light-1-exhibit-144.png",
+    "webkit-375-dark-2-exhibit-142.png",
+    "webkit-375-dark-2-exhibit-143.png",
+    "webkit-375-dark-2-exhibit-144.png",
+    "webkit-1280-light-1-exhibit-142.png",
+    "webkit-1280-light-1-exhibit-143.png",
+    "webkit-1280-light-1-exhibit-144.png"
+  ],
+  "themeCheck": "Product body.light class; no context colorScheme option present. 6 light theme clicks/class, 6 dark default, 2 dark reduced-motion; 84 fault default dark.",
+  "visualObservation": "375px text2x scenario numeric table wraps 40000 as 40/00/0; no clipping/overlap; optional separate readability improvement. Final images do not prove intermediate visuals.",
+  "status": "PASS within fixed automated evidence audit",
+  "limitations": [
+    "physical Safari NOT_TESTED",
+    "VoiceOver NOT_TESTED",
+    "physical touch NOT_TESTED",
+    "OS zoom NOT_TESTED",
+    "intermediate screenshot visual sweep NOT_TESTED"
+  ],
+  "verifiedAt": "2026-11-15T23:52:00+09:00",
+  "rerunOutputHashes": {
+    "auditor-rerun-utf8.json": "4a20063d8729972f56d40a11386127dcd9695f2faba6e16bcc6561db32ab93ef",
+    "negative-rerun-unsandboxed.json": "3d828cdbb111d5957fa7a32cc290cfd42e3cd759088c41c6e911cf5852876743"
+  }
+}

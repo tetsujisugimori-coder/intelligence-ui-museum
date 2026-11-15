@@ -1,0 +1,50 @@
+{
+  "recordedAt": "2026-11-15 23:53 JST",
+  "scope": "local raw audit outputs; originals retained separately from formal artifact ZIP",
+  "files": {
+    "auditor-rerun-utf8.json": {
+      "size": 341,
+      "sha256": "4a20063d8729972f56d40a11386127dcd9695f2faba6e16bcc6561db32ab93ef"
+    },
+    "auditor-rerun-utf8.stderr": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "auditor-rerun.json": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "auditor-rerun.stderr": {
+      "size": 4620,
+      "sha256": "b6861fbdfc3d08f054e3c8ca4f80c9f8490c8c9b8938036ee563fcf0a0226b33"
+    },
+    "independent-verification.json": {
+      "size": 2525,
+      "sha256": "4c0a92f02be93b055d61ef03f04d857b5ba0ffc53969ca0c707516a2960dfef3"
+    },
+    "negative-rerun-unsandboxed.json": {
+      "size": 12552,
+      "sha256": "3d828cdbb111d5957fa7a32cc290cfd42e3cd759088c41c6e911cf5852876743"
+    },
+    "negative-rerun-unsandboxed.stderr": {
+      "size": 1417,
+      "sha256": "8aebff8788bb0361c0cf9ffea4312d49f110990e8df55591a5efbbc01077a8ec"
+    },
+    "negative-rerun-utf8.json": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "negative-rerun-utf8.stderr": {
+      "size": 1875,
+      "sha256": "c6f7f5b67b7661bcbe6bd7d2cc22ba10efccdbbb11e3bb080e73f4699566f62f"
+    },
+    "preservation-ledger.json": {
+      "size": 1820,
+      "sha256": "d31f3ac6b2946d261a8203da278c73a08b05091a924ec231001bca2baf57c8b7"
+    },
+    "rerun-environment.json": {
+      "size": 742,
+      "sha256": "a95afc1eb29256d03c57fc4553fa99d836dd4e7a95f2074f1b0be41afe60d4e5"
+    }
+  }
+}

@@ -91,3 +91,14 @@ probeは初期文字サイズ値を固定して拡大しており、各文字の
 差分は第7便demo/initの関数存在確認と欠測メッセージ表示だけで、広範なcatch追加やerrorイベント抑制ではない。既存関数が存在して内部で例外を出す場合はこのguardで握り潰さない。pageerror許容リスト拡張はない。古いresource対照の未定義Init例外許容は残るが、新実行では発生していない。
 
 局所同反例の修正結果は確認済み。正式CI・最終HEADの原ZIP監査はまだ未実施。正常ブラウザ全14条件の成功へ読み替えない。
+
+
+## 2026-11-15 23:54 JST 正式CI・Windows原ZIP保全・独立監査追補
+
+提出当時のPENDING/局所失敗は上記履歴として保持する。正式対象HEAD `9c74d898fa534de6f5b380cc36b425fb854afa8c` / tree `f9e2aacc7a4fe1e865fbeabf3db30531e6e721c4`、run43724015917/attempt1/artifact14166072555をGitHubで再確認。対象HEADの11 workflowは全てsuccess。
+
+正式原ZIP107365453 bytesをWindows本人指定保管先へ無改変保存し、その保存先から実再取得。保存前/保管先/再取得の3実物は全byte・公式SHA-256一致。668メンバーCRC、manifest667対象全件PASS。作成/保全担当と別の独立担当が再取得実物の14条件×26段階、42pair、原ZIP内21負対照、実行source/配信/HAR/trace、代表画像12枚を実照合。既存監査器も新規workコピーで14/42および21負対照を再実行PASS。初回環境失敗は別保持。
+
+**固定自動化範囲の限定技術受入PASS／原ZIP保全PASS／独立監査PASS／総合PARTIAL／限定マージ推奨YES（提案のみ）。** 143狭幅文字2倍の数値途中折返しは別改善提案。明示6実行sourceの全依存閉包収録、全途中画像の実見、実機全般は保証しない。並行担当のLibrary16原ZIP保全・最終レビューを保持し、今回のWindows1原ZIP追加保全と区別する。
+
+Stage3 HOLD、v10製品受入NO、PR46 SUSPENDED、既存原因UNKNOWN、実機Safari/VoiceOver/物理touch/OS拡大NOT_TESTEDを維持。文書commit後のHEAD/CIは正式実行対象版と別記録。[正式保全・独立監査報告](formal-audit-20261115/REPORT.md)、[独立報告](formal-audit-20261115/independent-report.md)。Draft維持、マージ・公開なし。
