@@ -2,7 +2,7 @@
 
 UIを操作して、状態・仕組み・出自を比較する教材。OpenAIの公式製品ではありません。
 
-2026-11-16 JST現在のmainは第7便（PR #61、merge dbba2e7）まで統合済みで、144展示・11カテゴリーです。第8便145〜147はIssue #62の専用ブランチで実装・検証中です。Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDEDを維持します。OpenAI公式部品や実製品と同等とは主張しません。
+2026-11-16 JST現在のmainは第8便（PR #63、merge f5b1aef）まで統合済み、147展示・11カテゴリーです。第9便148〜150はIssue #64の専用ブランチで実装・検証中です。Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDEDを維持します。OpenAI公式部品や実製品と同等とは主張しません。
 
 開発管理先：[tetsujisugimori-coder/intelligence-ui-museum](https://github.com/tetsujisugimori-coder/intelligence-ui-museum)。過去の移行・各便の判定はその時点の記録であり、現在のGitHub状態と区別します。PR経由・force push禁止・人間によるマージ判断を守ります。
 
@@ -54,3 +54,6 @@ Issue #58、139–141（Linked Views Explorer／Conflict Resolution Editor／Pro
 
 ## 2026-11-16 JST 現況追補
 PR #61はマージ済み。上記「第7便実装・検証中」は以前の履歴記述です。第8便の契約は[docs/wave8/ACCEPTANCE.md](docs/wave8/ACCEPTANCE.md)。145–147と143 P3の局所改善、147展示11分類。正式CI・独立レビュー・保全は結果文書へ分離して記録します。Stage3 HOLDは継続。
+
+## 2026-11-16 JST 第9便（Issue #64）
+148 Structured Output Validator、149 Evidence Coverage Matrix、150 Evaluation Rubric Comparator。固定架空のJSON適合、主張別根拠、評価重みを操作する教材。事前[受入契約](docs/wave9/ACCEPTANCE.md)に基づき実装中です。前便の成功を今回の正式CIに流用せず、実サービスの自動評価と区別します。全150展示11分類。
