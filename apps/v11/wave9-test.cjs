@@ -97,6 +97,14 @@ test('W9-P3-02 requires all baseline relation IDs while preserving source exclus
   }
  }
  a.equal(w.coverage(sourceIds,baseline.slice().reverse()).status,'VALID','input order is not evidence identity');
+ // The exported demo array is mutable; completeness must use a private canonical copy.
+ const deleted=w.RELATIONS.splice(1,1);
+ try{
+  const tampered=w.coverage();
+  a.equal(tampered.status,'INVALID','mutating exported baseline does not relax the contract');
+  a.ok(tampered.errors.some(e=>e.reason==='missing fixed relation e2'));
+ }finally{w.RELATIONS.splice(1,0,...deleted);}
+ a.deepEqual(w.RELATIONS,baseline,'public demo data restored after probe');
  const conflicted=w.coverage(sourceIds,w.relationsFor('conflict'));
  a.equal(conflicted.status,'VALID','optional e5 is permitted');
  a.equal(conflicted.rows[0].status,'CONFLICT','valid contradiction preserved');
