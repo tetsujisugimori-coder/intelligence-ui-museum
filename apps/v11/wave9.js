@@ -36,7 +36,7 @@ function coverage(selectedIds=SOURCES.map(s=>s.id),relations=RELATIONS,sources=S
  const rows=CLAIMS.map(c=>{const rs=relations.filter(r=>r.claimId===c.id&&selected.has(r.sourceId)),support=rs.filter(r=>r.type==='support').length,contradict=rs.filter(r=>r.type==='contradict').length,unknown=rs.filter(r=>r.type==='unknown').length;return {...c,support,contradict,unknown,status:support&&contradict?'CONFLICT':support?'SUPPORTED':contradict?'CONTRADICTED':'UNRESOLVED',relations:clone(rs)};});return {status:'VALID',errors:[],rows};}
 const AXES=['正確性','根拠','形式','可読性'],DEFAULTS={weights:[4,3,1,1],A:[5,4,3,3],B:[2,2,5,5]};
 function numeric(v,nullable){if(nullable&&(v===null||v===''))return null;if(typeof v==='string'&&/^\d+$/.test(v))return Number(v);return typeof v==='number'?v:NaN;}
-function compareRubric(weights,A,B){const errors=[];if(![weights,A,B].every(x=>Array.isArray(x)&&x.length===4))return {status:'INVALID',errors:['four axes required'],winner:null,totals:null};
+function compareRubric(weights,A,B){const errors=[];if(![weights,A,B].every(x=>Array.isArray(x)&&x.length===4&&[0,1,2,3].every(i=>own(x,i))))return {status:'INVALID',errors:['four axes required'],winner:null,totals:null};
  const w=weights.map(x=>numeric(x,false)),a=A.map(x=>numeric(x,true)),b=B.map(x=>numeric(x,true));
  for(const [name,vs]of [['weights',w],['A',a],['B',b]])vs.forEach((x,i)=>{if(name!=='weights'&&x===null)return;if(!Number.isInteger(x)||x<0||x>5)errors.push(`${name}[${i}]: integer 0..5 required`);});
  if(errors.length)return {status:'INVALID',errors,winner:null,totals:null};const denominator=w.reduce((s,v)=>s+v,0);

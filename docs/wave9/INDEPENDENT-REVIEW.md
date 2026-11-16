@@ -52,3 +52,13 @@ local02原票でChromium7条件×56stepsおよび18正常/故障pairのPASS記�
 149/150の表示全文を固定oracleで照合し、構造欄score/quotes/inspectHeading/sourcesを追加、未確定時winner/contributions/score不存在を検査する修正を確認。正式auditはrenderSchema=2必須。旧原票の限定的なsemantic再確認と、新snapshotの実測・正式受入を分離している。R2の旧3反例見逃しはこの範囲で閉鎖可能。ただし新構造欄を伴う正常実ブラウザ原票はこの追補時点で未確認、正式14条件・36pair・27監査負対照（旧21＋HEAD＋今回5）はPENDING。
 
 この追補は中間判定を全体PASSへ変更しない。総合PARTIAL・最終受入/マージ推奨PENDING（必須未確認中はNO）を維持する。
+
+
+## P2-IR65-01 修正候補追補（2026-11-16 JST）
+旧判定・原票は履歴として保持。開始HEAD d46b2fba66d735a5160802be37029ea78c7025a3、tree e20e1516b9ae23ca0819643847bed05864c3fe99。main/base f5b1aefa3776dc7713a038cb597952a28f7912d6。対象branch feat/v11-wave9-148-150。
+長さ4だけの検査とmap/forEachの穴飛ばしが原因。製品はown-propertyを全4位置で検査し、oracleは独立した数値契約の前で各軸のown descriptorを照合する。欠損はINVALID/winner:null/totals:null、補完しない。既存のエラー形を維持しUI/正常算術を変更しない。
+baselineの同一24疎配列拒否期待は全RED（正常対照VALID）、修正候補は24全GREEN。新しい単体は既存34＋疎配列24＋Array.prototype経由24＋密配列境界2＝84件PASS。既存独立261対照も同じ入力・期待値でPASS。261対照と単体は入力目的に重複があり独立条件数として加算しない。
+既存P3-01/P3-02の試験・私有canonical関係・契約は不変。公開関数の拒否契約を修正するもので、通常UI障害と断定しない。ソース上の初期値・編集・Resetは密配列を保持するが、今回の通常UI疎配列到達性はブラウザ実操作未確認のためUNKNOWN。
+verify.pyで147metadata保持確認。既存保護/ワークフロー/依存/timeout/browser/fault/audit/negative条件は変更しない。
+提出時は既存pull_request経路13 workflow（一般CI、button、tooltip、select-return、Wave1〜9）が対象。pushはmain限定のためこのbranchのpush単独では起動せずPR同期イベントが起動する。workflow_dispatch/reusable/event経路を追加しない。既存の正式回帰は今回の依頼範囲、別のselect実験等のpathsは不一致。容量は着手時23GB空き、原ZIPは専用領域で無改変保全。正式CI・独立レビュー・新原ZIP保存後独立照合は提出後に別記録し、完了前は総合PARTIAL・マージNO。
+Stage 3 HOLD、v10製品受入NO、PR46 SUSPENDED、実機Safari/VoiceOver/物理touch/OS文字拡大NOT_TESTEDを維持。Draft解除・マージ・公開はしない。

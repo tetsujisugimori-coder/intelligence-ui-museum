@@ -111,3 +111,46 @@ test('W9-P3-02 requires all baseline relation IDs while preserving source exclus
  const badExtra=[...baseline,{id:'e5',claimId:'c1',sourceId:'s3',line:1,quote:'開館時刻は未確認です。',type:'contradict'}];
  a.equal(w.coverage(sourceIds,badExtra).status,'INVALID','unverified optional relation rejected');
 });
+
+// P2-IR65-01: named own-axis rejection cases; holes must never become missing scores.
+const oracle150=require('./wave9-contract.cjs');
+const rubricImplementations={product:w.compareRubric,oracle:oracle150.rubricResult};
+for(const field of ['weights','A','B'])for(let axis=0;axis<4;axis++)for(const [implementation,compare]of Object.entries(rubricImplementations)){
+ test('150 P2 sparse '+field+'['+axis+'] '+implementation,()=>{
+  const input={weights:[4,3,1,1],A:[5,4,3,3],B:[2,2,5,5]};
+  delete input[field][axis];
+  a.equal(input[field].length,4);a.equal(Object.hasOwn(input[field],axis),false);
+  const result=compare(input.weights,input.A,input.B);
+  a.equal(result.status,'INVALID');a.equal(result.winner,null);a.equal(result.totals,null);
+ });
+ test('150 P2 inherited axis '+field+'['+axis+'] '+implementation,()=>{
+  const input={weights:[4,3,1,1],A:[5,4,3,3],B:[2,2,5,5]};
+  const value=input[field][axis];delete input[field][axis];
+  const previous=Object.getOwnPropertyDescriptor(Array.prototype,String(axis));
+  try{
+   Object.defineProperty(Array.prototype,String(axis),{value,writable:true,configurable:true});
+   a.equal(input[field][axis],value);a.equal(Object.hasOwn(input[field],axis),false);
+   const result=compare(input.weights,input.A,input.B);
+   a.equal(result.status,'INVALID');a.equal(result.winner,null);a.equal(result.totals,null);
+  }finally{if(previous)Object.defineProperty(Array.prototype,String(axis),previous);else delete Array.prototype[axis];}
+ });
+}
+for(const [implementation,compare]of Object.entries(rubricImplementations))test('150 P2 dense boundary controls '+implementation,()=>{
+ const weights=[4,3,1,1],A=[5,4,3,3],B=[2,2,5,5];
+ a.deepEqual(compare(weights,A,B).totals,{A:38,B:24});
+ a.equal(compare(weights,A,B).winner,'A');
+ for(const value of [null,'']){
+  a.equal(compare(weights,[value,4,3,3],B).status,'INCOMPLETE');
+  a.equal(compare([0,3,1,1],[value,4,3,3],B).status,'VALID');
+  a.equal(compare([value,3,1,1],A,B).status,'INVALID');
+ }
+ for(const field of ['weights','A','B']){
+  const input={weights:weights.slice(),A:A.slice(),B:B.slice()};input[field][0]=undefined;
+  const result=compare(input.weights,input.A,input.B);
+  a.equal(result.status,'INVALID');a.equal(result.winner,null);a.equal(result.totals,null);
+ }
+ a.equal(compare(weights,[0,4,3,3],B).status,'VALID');
+ a.equal(compare([0,0,0,0],A,B).status,'NO_WEIGHT');
+ a.equal(compare(weights,A,A).winner,'TIE');
+ a.equal(compare([0,0,1,1],A,B).winner,'B');
+});
