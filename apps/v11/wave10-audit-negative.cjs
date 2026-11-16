@@ -27,7 +27,14 @@ function run(source){source=path.resolve(source);a.ok(process.env.TMPDIR&&!path.
  ['reset-tool',r=>step(r,'152-final-reset').states[152].tool='delete',/fixed full state/],
  ['reset-args',r=>step(r,'152-final-reset').states[152].args='{"key":"beta"}',/fixed full state/],
  ['reset-epoch',r=>step(r,'152-final-reset').states[152].epoch=0,/fixed full state/],
- ['initial-counter',r=>row(r).steps[0].states[152].counter=99,/fixed full state/]
+ ['initial-counter',r=>row(r).steps[0].states[152].counter=99,/fixed full state/],
+ ['priority-edit-ignored',r=>{step(r,'151-priority-input').states[151]=structuredClone(step(r,'151-restored').states[151]);},/fixed full state/],
+ ['priority-stale-result',r=>{step(r,'151-priority-input-edited').states[151].result=structuredClone(step(r,'151-restored').states[151].result);},/fixed full state/],
+ ['priority-same-value-invalidates',r=>{step(r,'151-priority-input-same').states[151].result=null;},/fixed full state/],
+ ['condition-reason',r=>{step(r,'153-normal').rendered[153].rows[0].checks[0]='required:title：FAIL / present';},/render row conditions and reasons/],
+ ['details-not-opened',r=>{step(r,'153-details-open').rendered[153].details.open=false;},/fixed visible input details/],
+ ['details-old-output',r=>{step(r,'153-details-open').rendered[153].details.texts[1]='wrong';},/fixed visible input details/],
+ ['details-expectation',r=>{step(r,'153-details-open').rendered[153].details.texts[0]='{}';},/fixed visible input details/]
  ];
  for(const[id,mutate,pattern]of cases){const d=path.join(temp,id);fs.mkdirSync(d);copy(source,d);const r=JSON.parse(fs.readFileSync(path.join(d,'results.json')));mutate(r);fs.writeFileSync(path.join(d,'results.json'),JSON.stringify(r));let error;try{audit(d);}catch(e){error=e;}a.ok(error,'false acceptance '+id);a.match(String(error),new RegExp(pattern.source+'|fixed full state'),'unrelated failure '+id);a.doesNotMatch(String(error),/E2BIG|ETIMEDOUT|spawnSync.*ENOENT/,'infrastructure failure');results.push({id,normal:'ACCEPT',fault:'REJECT',reason:String(error)});}
  a.deepEqual(inventory(source),before,'original unchanged');a.equal(audit(source).status,'PASS');const result={head:original.head,tree:original.tree,normal,results,originalUnchanged:true,originalFiles:Object.keys(before).length,auditorSHA256:hash(fs.readFileSync(path.join(__dirname,'wave10-audit.cjs'))),runnerSHA256:hash(fs.readFileSync(__filename)),capacity:'Immutable evidence hardlinked for synthetic mutants; only independent JSON copies are changed. Not an evidence preservation readback.'};fs.writeFileSync(path.join(source,'audit-negative.json'),JSON.stringify(result,null,2),{flag:'wx'});return result;
