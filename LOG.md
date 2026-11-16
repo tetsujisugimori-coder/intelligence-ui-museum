@@ -1,5 +1,9 @@
 # 開発LOG
 
+## 2026-11-17 JST — 第10便 / Issue #66（実装前・途中履歴）
+PR65 merged、main f065515b/tree478e0ec確認。受入契約と150metadata・2529path保護台帳を実装前commit a5a1d6eで固定。151〜153を固定架空データとして追加。実AI/API/通信なし。既存テストの総数150→153と配信closure二資源追加を最小追随し、旧期待/timeoutを削減しない。旧原票保持。正式・独立監査前はPARTIAL/マージNO。
+
+
 ## 2026-11-02 JST — PR #8 / Issue #6 P2
 
 独立レビューB119-STATEを局所修正。残存項目の選択を安定ID・左右別Setで保持。移送先の新項目は未選択、Undoは所属復元＋全選択解除という既存仕様を保護。実キーfocusと最終Undo後focusを確認する新規回帰と、同一試験の旧HEAD負対照をCIへ追加。旧・新Chromium154×3幅でRED exit1→GREEN exit0。初回試験不備も新規証拠へ保全。固定Chromium/WebKit全6条件は最終CIで確認予定。Stage A・過去証拠は変更せず、独立再レビュー前マージ推奨NO、Draft、Stage 3 HOLD。

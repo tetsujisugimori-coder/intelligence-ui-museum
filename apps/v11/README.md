@@ -1,5 +1,13 @@
 # v11 — Intelligence UI Museum
 
+## 第10便の追補（2026-11-17 JST）
+現在の候補は151 Context Budget Workbench、152 Tool Call Inspector、153 Prompt Regression Comparatorを含む153展示・11カテゴリーです。冒頭の123展示は初回便の歴史記述です。verify.pyは現在153登録・旧150全metadata・2529保護ファイル・各便契約を検査します。実機Safari/VoiceOver/物理touch/OS文字拡大はNOT_TESTED。
+
+151：容量・優先順位を変更して計算。必須だけで超過ならOVER_BUDGET。152：tool・JSON引数・模擬故障を選び検査。許可と応答の整合を別に表示。153：固定ケースの旧新版出力を比較。実LLMを呼ばず構造条件だけを判定。入力変更で古い結果が消え、同値選択は保持、Resetで起点focusへ戻ります。
+
+局所検査：`TMPDIR=$PWD/.work/wave10-temp node --test apps/v11/wave10-test.cjs`。先に専用TMPDIRを作成。正式条件・原票はwave10 workflowの新HEADへ帰属させ、旧CI成功を流用しません。
+
+
 117件のv09を基点に118〜123を追加した開発候補。公式OpenAI製品ではなく、追加展示はいずれもHTML/CSS/JavaScriptによる独自実装です。外部サービスへの送信はありません。v09原本と過去証拠は変更しません。
 
 ルートで `python -m http.server 8765 --bind 127.0.0.1` を起動し、`http://127.0.0.1:8765/apps/v11/` を開きます。JavaScript無効時の名前の静的表示は旧117件のみです。検索・分類・テーマ・リセットはJavaScriptを必要とします。

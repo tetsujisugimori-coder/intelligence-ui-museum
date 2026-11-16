@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),cp=require('node:child_process'),crypto=require('node:crypto');
 // Complete static script/stylesheet closure of index.html; inline code is bound
 // by index.html itself. No network fonts, imports or runtime fetched assets.
-function filesAt(head){return ['exhibits.css','exhibits.js','index.html','wave1.css','wave1.js',...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave2.js"')?['wave2.css','wave2.js']:[]),...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave3.js"')?['wave3.css','wave3.js']:[]),...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave4.js"')?['wave4.css','wave4.js']:[]), ...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave5.js"')?['wave5.css','wave5.js']:[]), ...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave6.js"')?['wave6.css','wave6.js']:[]), ...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave7.js"')?['wave7.css','wave7.js','wave8.css','wave8.js']:[]),...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave9.js"')?['wave9.css','wave9.js']:[])];}
+function filesAt(head){return ['exhibits.css','exhibits.js','index.html','wave1.css','wave1.js',...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave2.js"')?['wave2.css','wave2.js']:[]),...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave3.js"')?['wave3.css','wave3.js']:[]),...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave4.js"')?['wave4.css','wave4.js']:[]), ...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave5.js"')?['wave5.css','wave5.js']:[]), ...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave6.js"')?['wave6.css','wave6.js']:[]), ...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave7.js"')?['wave7.css','wave7.js','wave8.css','wave8.js']:[]),...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave9.js"')?['wave9.css','wave9.js']:[]),...(git('show',`${head}:apps/v11/index.html`).toString().includes('src="wave10.js"')?['wave10.css','wave10.js']:[])];}
 const sourceFiles=filesAt('HEAD');
 const stages=['initial','query','permission','pivot','keyboard'];
 const selectors=[124,125,126].flatMap(id=>['',' button',' select',' label',' [data-w1-before]',' [data-w1-state]',' th',' td',...(id===124?[' input']:[])].map(s=>`[data-wave1="${id}"]${s}`));
@@ -18,7 +18,7 @@ function sourceContract(report,expected={}){
  assert.equal(commitTree(report.submittedHead),report.tree,'submitted HEAD / checkout tree mismatch');
  if(expected.submittedHead)assert.equal(report.submittedHead,expected.submittedHead,'submitted HEAD mismatch');
  assert.ok(report.sourceHashes&&typeof report.sourceHashes==='object'&&!Array.isArray(report.sourceHashes),'source hashes missing');
- const expectedFiles=filesAt(report.head);
+ const expectedFiles=filesAt(report.head).sort();
  assert.deepEqual(Object.keys(report.sourceHashes).sort(),expectedFiles,'source file set mismatch');
  for(const name of expectedFiles){const h=report.sourceHashes[name];assert.equal(typeof h,'string');assert.match(h,/^[a-f0-9]{64}$/);assert.equal(h,digest(git('show',`${report.head}:apps/v11/${name}`)),`source hash mismatch: ${name}`);}
 }

@@ -1,5 +1,15 @@
 # Intelligence UI Museum
 
+## 2026-11-17 JST：第10便の現在状態
+第9便PR #65はmerge `f065515b3f52ade79a7e057abb86f385dfcce5e9` で統合済みです。最新mainを起点にIssue #66の第10便151〜153を専用branchで追加しています。153展示・11カテゴリーの候補であり、下記の「147展示・第9便実装中」は旧時点の履歴です。
+
+- 151 Context Budget Workbench：独自容量単位と必須項目・優先順位による決定的な選別。実token数ではありません。
+- 152 Tool Call Inspector：架空呼出しの引数・許可・ID対応と固定模擬応答。実ツール通信なし。
+- 153 Prompt Regression Comparator：固定旧新版出力の構造条件回帰。LLM評価や一般品質保証ではありません。
+
+受入契約：[docs/wave10/ACCEPTANCE.md](docs/wave10/ACCEPTANCE.md)。正式CI・独立レビュー・証拠保全の完了前は総合PARTIAL・限定マージNO。Stage 3 HOLD、v10製品受入NO、PR46 SUSPENDED維持。マージ・公開はしません。
+
+
 UIを操作して、状態・仕組み・出自を比較する教材。OpenAIの公式製品ではありません。
 
 2026-11-16 JST現在のmainは第8便（PR #63、merge f5b1aef）まで統合済み、147展示・11カテゴリーです。第9便148〜150はIssue #64の専用ブランチで実装・検証中です。Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDEDを維持します。OpenAI公式部品や実製品と同等とは主張しません。
