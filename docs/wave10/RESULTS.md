@@ -14,3 +14,6 @@ IR01/02の同3反例は修正前258件中3FAIL→修正後258PASS。IR03は正�
 
 ## 判定境界
 正式CI・独立原ZIP読戻し未完時点で総合PARTIAL、限定マージNO。新展示・既存保護・実機未検証を分離する。旧FAIL/UNKNOWNは保持。最終判定はPRの版付き追補で行う。
+
+## 初回正式CI c26af501の統合失敗履歴
+旧wave1の合成保全fixtureが新wave10 baselineを収録せず正常例でFAIL。旧wave1〜9 runnerに登録数150、wave5〜9配信source生成にlength9が残りFAIL。初回原ログを保存。登録数153とsource10便へ厳密追随し、fixtureにbaseline/2529保護原物の独立copyを追加。既存4故障の拒否は維持し、追加10対照は修正前10FAIL→修正後既存2+新10=12PASS。独立担当が9runnerについて指定count/closure差分以外byte不変、fixture故障条件不変を確認。初回正式FAILを成功へ変更せず、次HEADで正式再検証する。
