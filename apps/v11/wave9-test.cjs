@@ -59,3 +59,47 @@ test('149 R1 inspect preserves conflict scenario and its distinct second-line re
  const inspected=w.reduce(s,{type:'inspect',id:'s3'});a.equal(inspected.scenario,'conflict');a.deepEqual(inspected.result,s.result);
  a.deepEqual(w.relationsFor(inspected.scenario).filter(r=>r.sourceId===inspected.inspect).map(r=>[r.id,r.line,r.type]),[['e4',1,'unknown'],['e5',2,'contradict']]);
 });
+
+test('W9-P3-01 independent oracle rejects blank or invalid weight, preserves 0 and missing score',()=>{
+ const C=require('./wave9-contract.cjs'),{weights,A,B}=w.DEFAULTS;
+ const cases=[
+  {weights:['',3,1,1],A,B,status:'INVALID'},
+  {weights:[null,3,1,1],A,B,status:'INVALID'},
+  {weights:[' ',3,1,1],A,B,status:'INVALID'},
+  {weights:[true,3,1,1],A,B,status:'INVALID'},
+  {weights:['0',3,1,1],A,B,status:'VALID'},
+  {weights:[0,0,0,0],A,B,status:'NO_WEIGHT'},
+  {weights,A:['',4,3,3],B,status:'INCOMPLETE'},
+  {weights:[0,3,1,1],A:['',4,3,3],B,status:'VALID'},
+  {weights,A:['0',4,3,3],B,status:'VALID'},
+  {weights,A:[' ',4,3,3],B,status:'INVALID'},
+  {weights,A:[true,4,3,3],B,status:'INVALID'}
+ ];
+ for(const [i,c] of cases.entries()){
+  const actual=w.compareRubric(c.weights,c.A,c.B),oracle=C.rubricResult(c.weights,c.A,c.B);
+  a.equal(actual.status,c.status,'product '+i);
+  a.deepEqual(oracle,actual,'independent oracle '+i);
+ }
+ a.equal(C.rubricResult(['',3,1,1],A,B).status,'INVALID','blank weight must not silently become zero');
+});
+test('W9-P3-02 requires all baseline relation IDs while preserving source exclusion and optional conflict',()=>{
+ const baseline=clone(w.RELATIONS),sourceIds=w.SOURCES.map(s=>s.id);
+ a.equal(w.coverage(sourceIds,baseline).status,'VALID');
+ a.equal(w.coverage([],baseline).status,'VALID','excluding sources does not remove fixed relations');
+ a.ok(w.coverage([],baseline).rows.every(r=>r.status==='UNRESOLVED'));
+ for(const id of baseline.map(r=>r.id)){
+  const missing=baseline.filter(r=>r.id!==id);
+  for(const selection of [sourceIds,[]]){
+   const result=w.coverage(selection,missing);
+   a.equal(result.status,'INVALID','missing '+id);
+   a.deepEqual(result.rows,[],'no partial rows '+id);
+   a.ok(result.errors.some(e=>e.path==='relations'&&e.reason==='missing fixed relation '+id),'missing diagnostic '+id);
+  }
+ }
+ a.equal(w.coverage(sourceIds,baseline.slice().reverse()).status,'VALID','input order is not evidence identity');
+ const conflicted=w.coverage(sourceIds,w.relationsFor('conflict'));
+ a.equal(conflicted.status,'VALID','optional e5 is permitted');
+ a.equal(conflicted.rows[0].status,'CONFLICT','valid contradiction preserved');
+ const badExtra=[...baseline,{id:'e5',claimId:'c1',sourceId:'s3',line:1,quote:'開館時刻は未確認です。',type:'contradict'}];
+ a.equal(w.coverage(sourceIds,badExtra).status,'INVALID','unverified optional relation rejected');
+});
