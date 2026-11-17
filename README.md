@@ -1,5 +1,26 @@
 # Intelligence UI Museum
 
+## 最終追補：第10便の限定受入（2026-11-17 JST）
+
+**総合PARTIAL、第10便限定技術PASS・独立レビューPASS・専用2原ZIPの保全PASS、第10便に限るマージ推奨YES。** 実マージは行っていません。
+判定対象は `7e4cd0b2fb1340d8fe96de33c43005b0aabd0c09` / tree `e6cb5ace0f9f86479064da3eaef77bb4eb0e8e83`、Issue #66 / Draft PR #67です。
+
+153展示・11カテゴリー、151〜153の固定架空教材について、対象版の14 workflow・19 checks成功と限定受入を確認済みです。前回P2三件（旧runnerの150固定、wave5〜9の配信資源不足、保全fixture不足）は限定CLOSED。no-JSの117/153表示と静的117件を維持しています。
+詳細は[検証結果](docs/wave10/RESULTS.md)と[独立レビュー](docs/wave10/INDEPENDENT-REVIEW.md)を参照してください。専用2原ZIPの保全PASSは他13workflowの原ZIPや実機検証へ拡大しません。
+
+- [閉鎖確認レビュー #5930182776](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/67#pullrequestreview-5930182776)
+- [独立レビュー・専用原ZIP保存後再取得監査 #5929842327](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/67#pullrequestreview-5929842327)
+- [提出最終報告（A〜O）](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/67#issuecomment-6932718774)
+- [対象版の専用CI run 43978814869](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/actions/runs/43978814869)
+
+### 版と今回の作業境界
+この追補は上記対象版の確定結果を文書へ反映するものです。製品・oracle・監査器・workflow・lock・保護原物は変更しません。追補を含む新HEAD/treeと自動CIはPR #67の追補報告で別に記録します。上記版の実行・原ZIPを新HEADの実行証明へ読み替えず、今回原ZIPを再取得した、独立ブラウザを再実行したとも主張しません。
+Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDED、旧原因UNKNOWN、実機Safari・VoiceOver・物理touch・OS文字拡大NOT_TESTED、Sites公開NOを維持します。以下の失敗・PENDING・browser BLOCKED・途中判定は過去時点の履歴です。
+
+---
+
+## 以下は実装・検証途中の履歴（上記の最終追補と区別）
+
 ## 2026-11-17 JST：第10便の現在状態
 第9便PR #65はmerge `f065515b3f52ade79a7e057abb86f385dfcce5e9` で統合済みです。最新mainを起点にIssue #66の第10便151〜153を専用branchで追加しています。153展示・11カテゴリーの候補であり、下記の「147展示・第9便実装中」は旧時点の履歴です。
 
