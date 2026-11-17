@@ -1,6 +1,12 @@
 # 第11便 実装・実測・保全結果
 2026-11-17 JST / Issue #68 / Draft PR #69 / branch `feat/v11-wave11-154-156`。
 
+## 現行判定への導線（2026-11-18 JST、履歴原文は保持）
+- **最終ゲートの正本**： [PR #69の最終ゲート報告](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/69#issuecomment-6947404245)（検証対象HEAD `d16e9c58dadf3a382b327200ea9c03b5093c12c0`）。同HEADの15 workflow／20 job成功、専用Chromium／WebKit 14条件・各128操作PASS、P2 3件限定CLOSED、初回／最終専用原ZIPのLibrary保存後独立再取得照合PASSを報告。判定は**総合PARTIAL・第11便限定の技術受入PASS／独立レビューPASS／限定マージ推奨YES**。これは全製品の受入や実機・実AI連携の証明ではない。
+- **状態の時点差**：本文中の「限定マージNO」「最終CI待ち」「PENDING」「未マージ」は、それぞれ当該記述を作成した時点の判定・作業記録。失敗や保留を消さず保持する。文書だけで最終版の再実行を証明したとは扱わない。
+- **この文書追補の版**：上記成功は `d16e9c58dadf3a382b327200ea9c03b5093c12c0` に帰属する。この追補による新HEADのCI／差分は別途確認し、結果はPR #69の後続レビュー記録で明示する。旧HEADの成功を新HEADに移し替えない。
+- **継続HOLD**：Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDED、旧原因UNKNOWN。実機Safari／VoiceOver／物理touch／OS文字拡大・実LLM／実メモリ／実エージェントはNOT_TESTED。Libraryの厳密な保持期限・外部ACL一覧はUNKNOWN。
+
 ## 判定と範囲
 総合PARTIAL。154–156の固定架空教材について正式14条件PASS。製品・監査器の独立P2 3件は限定CLOSED。最終文書HEADの自動CI・原ZIP再保全を別ゲートとし、完了までは限定マージNO。Draft解除・実マージ・Sites公開なし。
 Stage3 HOLD、v10製品受入NO、PR46 SUSPENDED、旧原因UNKNOWNを維持。実LLM/API/実メモリ/実エージェントの評価ではない。
