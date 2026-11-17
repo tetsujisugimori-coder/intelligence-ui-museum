@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),cp=require('node:child_process'),crypto=require('node:crypto');
 // Complete static script/stylesheet closure of index.html; inline code is bound
 // by index.html itself. No network fonts, imports or runtime fetched assets.
-const sourceFiles=['exhibits.css','exhibits.js','index.html','wave1.css','wave1.js','wave2.css','wave2.js','wave3.css','wave3.js','wave4.css','wave4.js','wave5.css','wave5.js','wave6.css','wave6.js','wave7.css','wave7.js','wave8.css','wave8.js','wave9.css','wave9.js'];
+const sourceFiles=['exhibits.css','exhibits.js','index.html','wave1.css','wave1.js','wave2.css','wave2.js','wave3.css','wave3.js','wave4.css','wave4.js','wave5.css','wave5.js','wave6.css','wave6.js','wave7.css','wave7.js','wave8.css','wave8.js','wave9.css','wave9.js','wave10.css','wave10.js'];
 const executionFiles=['wave4-audit-test.cjs','wave4-audit.cjs','wave4-browser.cjs','wave4-contract.cjs','wave4-test.cjs'];
 const stages=['initial','calendar-adjacent','calendar-conflict','calendar-self','calendar-move','calendar-cancel','calendar-undo','calendar-delete','facets-or','facets-and','facets-keyword','facets-zero','facets-clear','detail-clean','detail-dirty','detail-invalid','detail-continue','detail-discard','detail-save','reset'];
 const selectors=[133,134,135].flatMap(id=>['',' button',' input',' label',' [data-w4-state]',' [data-w4-before]',' [data-w4-current]',...(id===135?[' select',' [data-detail-id]',' [data-detail-list]']:[' [data-w4-results] li']),...(id===133?[' [data-cal-bar]']:[])].map(s=>`[data-wave4="${id}"]${s}`));
@@ -18,7 +18,7 @@ function sourceContract(report,expected={}){
  assert.equal(commitTree(report.submittedHead),report.tree,'submitted HEAD / checkout tree mismatch');
  if(expected.submittedHead)assert.equal(report.submittedHead,expected.submittedHead,'submitted HEAD mismatch');
  assert.ok(report.sourceHashes&&typeof report.sourceHashes==='object'&&!Array.isArray(report.sourceHashes),'source hashes missing');
- assert.deepEqual(Object.keys(report.sourceHashes).sort(),sourceFiles,'source file set mismatch');
+ assert.deepEqual(Object.keys(report.sourceHashes).sort(),[...sourceFiles].sort(),'source file set mismatch');
  assert.deepEqual(Object.keys(report.executionHashes||{}).sort(),executionFiles,'execution files missing');
  for(const name of executionFiles)assert.equal(report.executionHashes[name],digest(git('show',`${report.head}:apps/v11/${name}`)),`execution hash mismatch: ${name}`);
  for(const name of sourceFiles){const h=report.sourceHashes[name];assert.equal(typeof h,'string');assert.match(h,/^[a-f0-9]{64}$/);assert.equal(h,digest(git('show',`${report.head}:apps/v11/${name}`)),`source hash mismatch: ${name}`);}

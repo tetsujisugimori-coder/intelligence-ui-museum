@@ -1,0 +1,55 @@
+name: v11 Wave 10
+on:
+  pull_request:
+    paths: ['apps/v11/**', 'scripts/**', '.github/workflows/v11-wave10.yml', 'docs/wave10/**']
+permissions:
+  contents: read
+jobs:
+  wave10:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      TMPDIR: ${{ github.workspace }}/.work/wave10-temp
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/wave10-browsers
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: mkdir -p "$TMPDIR" .work/wave10-app && cp -R apps/v11/. .work/wave10-app/
+      - run: npm ci --ignore-scripts && npx playwright install --with-deps chromium webkit
+        working-directory: .work/wave10-app
+      - name: Preservation and product-independent contracts
+        run: |
+          python3 apps/v11/verify.py
+          python3 scripts/verify-migration.py
+          node --test apps/v11/wave10-test.cjs apps/v11/wave9-test.cjs
+      - name: Formal 14 browser conditions
+        run: node apps/v11/wave10-browser.cjs
+        env:
+          APP_ROOT: .work/wave10-app
+          EVIDENCE_DIR: .work/wave10-evidence
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/.work/wave10-app/node_modules/playwright
+      - name: Bind semantic normal-fault pairs to live steps
+        run: node apps/v11/wave10-faults.cjs
+        env:
+          EVIDENCE_DIR: .work/wave10-evidence
+      - name: Audit formal evidence
+        if: always()
+        run: node apps/v11/wave10-audit.cjs .work/wave10-evidence
+      - name: Auditor negative controls
+        run: node apps/v11/wave10-audit-negative.cjs .work/wave10-evidence
+      - name: Manifest original execution evidence
+        if: always()
+        run: python3 apps/v11/wave10-manifest.py .work/wave10-evidence
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-wave10-evidence
+          path: .work/wave10-evidence
+          retention-days: 90
+          include-hidden-files: true
+          if-no-files-found: error
