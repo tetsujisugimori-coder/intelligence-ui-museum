@@ -1,3 +1,9 @@
+# 第11便 154–156（2026-11-17 JST）
+
+Issue #68。PR #67 は merge 5688d804 として統合済み。以下の第10便「実マージなし」等は当時の履歴であり現在状態とは区別する。156展示・11カテゴリーへ追加中。Retrieval Rankingは固定検索順位（真偽保証なし）、Memory Scopeは架空項目の適用/競合、Agent Handoffは担当間引継ぎの形式検査。実LLM/API/実メモリ/実エージェントなし。現時点で総合PARTIAL・限定マージNO。正式14条件・独立レビュー・原ZIP保全の結果は docs/wave11/RESULTS.md に記録する。Stage3 HOLD、v10製品受入NO、PR46 SUSPENDED、旧原因UNKNOWN、実機NOT_TESTEDを維持。Draft提出まで、マージ/公開なし。
+
+---
+
 # v11 — Intelligence UI Museum
 
 ## 第10便の追補（2026-11-17 JST）

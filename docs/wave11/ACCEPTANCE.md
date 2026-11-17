@@ -28,3 +28,9 @@ Chromium/WebKit各375/390/1280×light/darkの6+375dark/reduced/computed font-siz
 
 ## 判定
 独立差分レビューと独立原証拠監査を区別。未解決P1/P2、正式14条件・CI・保全未完なら限定マージNO。総合PARTIALと限定技術判定を分離。Stage3 HOLD/v10製品受入NO/PR46 SUSPENDED/旧原因UNKNOWN。Draft提出まで、merge・公開・force・履歴改変なし。
+
+## 実装中の曖昧点明確化（2026-11-17 JST、事前本文は保持）
+重複証拠IDは構造不正INVALID、未知参照/送受信先はRETURNED。初回単体でoracle RETURNEDと製品INVALIDが不一致だったため、拒否要件を変更せず分類を明示した。製品バグのRED→GREENとは扱わない。同一票再送は受理済み票との内容一致を指す。拒否票をpreviousとして受理済みにしない。会話/案件の入力は非空文字列で、未知値は範囲不一致となる。非空の記憶配列で適用0件はVALID+採用0、空配列自体のみEMPTY。存在と適用を分離し、採用0を不正入力と混同しない。
+
+## 独立レビュー P2-UI による不足補完（2026-11-17 JST）
+本人依頼の「記憶項目へ適用範囲を設定」に対し事前UI規定が会話/案件/時刻と固定反例に偏り、正常UIの範囲設定が不足していた。155へm1のscopeをglobal/project/conversationから設定する通常selectを追加する。初期global、変更で結果失効、同値保持、Reset globalへ戻しconversationへfocus。m1 projectならm2と同scope同version競合でstyle未採用、m1 conversationならm2より優先しm1採用。元契約の反例・固定14条件は減らさない。旧版の操作欠落は静的確認、新版で通常UIの3値と状態を検証する。旧browser REDは未実施。
