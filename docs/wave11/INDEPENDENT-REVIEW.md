@@ -34,3 +34,18 @@ result=nullの154-query-editedで、rendered.statusを旧VALID（入力版0）�
 - 原ZIPの保存後再取得監査、公式digest/CRC/manifest/source/HAR/trace/6代表画像の照合は本票では未実施。担当と対象版が明示された別監査が必要。
 - GitHub最終HEADの自動CI、提出後全変更path読戻しは本票の局所結果に混ぜない。
 - Stage 3 HOLD、v10製品受入NO、PR46 SUSPENDED、旧原因UNKNOWNを維持。Draft解除・マージ・Sites公開なし。
+
+## 追補：初回正式HEADの限定技術受入（2026-11-17）
+上記「未完」「推奨NO」は提出前時点の履歴として保持する。初回正式実測HEAD `3e05971fa3b546dae1dd31d5e33b15004717d4e2` / tree `6e767ba38d613e76116a10cd3d545f9d674b8f33` の専用CI run `44074259302` について、保存後に再取得されたresults・faults・audit-negative原票、audit.log、および別担当のcustody-verification記録を本レビュー担当が読んで対象版と件数・判定を確認した。
+
+**初回技術受入PASS。未解決P1/P2なし。最終文書HEADの自動CI・読戻し・原ZIP保存後照合の完了を条件とする限定推奨YES。** これは最終HEADの無条件マージ許可ではない。最終ゲートがPENDINGの間は実マージ不可、Draftを維持する。初回の成功を追補後HEADの成功と読み替えない。
+
+### 確認した正式証拠と担当分離
+- 正式原票はChromium/WebKitの14条件、各128操作。専用監査PASS、意味比較84pair、監査器の正常受理→改変拒否40件、原証拠不変を記録する。84pairには正常・空値・境界を含み、全件を異常故障や追加実測と呼ばない。
+- 独立保全担当が、artifact `14324636056` の原ZIPをLibraryから別pathへ再取得し、公式size/digest・全byte・外側ZIP CRC・manifest406項目・trace14本の内部CRCを照合してPASS。144,509,134 bytes、SHA-256 `1098fe7ae246ce0b3f7ddd0dd3a6d9ac8ea086890230b93b280792dd7a65fca9`。本レビュー担当がダウンロードやCRC検査を再実行したという意味ではない。
+- 同保全担当は再取得物の意味監査を再実行してPASS、375 dark computed-font-2xのChromium/WebKit各154–156、計6画像を実物表示で確認してPASS。本レビュー担当自身の新規ブラウザ実測・6画像再目視とは区別する。
+- 保全監査の初回FAIL（負対照見積り38と実40の相違、Git objectがない読戻し領域での監査起動）と、原票を改変せず条件を是正した再実行PASSを保持する。旧FAILを削除せず、製品RED→GREENとは扱わない。
+- Libraryの厳密な保持期限・外部ACL一覧は未提供でUNKNOWN。公開リンクなしという記録を、永久保存やACL完全証明へ拡大しない。
+
+### 限定受入の境界
+155scopeの正式操作を含む初回14条件が成立したため、局所レビューで別ゲートとしていた正式UI証拠は初回HEADについて充足した。IR11-01〜03の限定CLOSEDを維持する。固定架空教材の自動契約・保存証拠の範囲に限り受入とする。実機Safari、VoiceOver、物理touch、OS文字拡大、全153展示の手動受入、実AI内部や外部サービス連携は依然NOT_TESTED。Stage 3 HOLD、v10製品受入NO、PR46 SUSPENDED、旧原因UNKNOWNは変更しない。実マージ・Draft解除・Sites公開は実施しない。
