@@ -1,3 +1,9 @@
+# 第11便 154–156（2026-11-17 JST）
+
+Issue #68。PR #67 は merge 5688d804 として統合済み。以下の第10便「実マージなし」等は当時の履歴であり現在状態とは区別する。156展示・11カテゴリーへ追加中。Retrieval Rankingは固定検索順位（真偽保証なし）、Memory Scopeは架空項目の適用/競合、Agent Handoffは担当間引継ぎの形式検査。実LLM/API/実メモリ/実エージェントなし。現時点で総合PARTIAL・限定マージNO。正式14条件・独立レビュー・原ZIP保全の結果は docs/wave11/RESULTS.md に記録する。Stage3 HOLD、v10製品受入NO、PR46 SUSPENDED、旧原因UNKNOWN、実機NOT_TESTEDを維持。Draft提出まで、マージ/公開なし。
+
+---
+
 # 開発LOG
 
 ## 2026-11-17 JST — 第10便 / Issue #66（実装前・途中履歴）
@@ -92,3 +98,6 @@ f81e4dfの12 workflowは10成功2失敗。Wave8専用成功と旧回帰失敗を
 
 ## 2026-11-16 JST 第9便（Issue #64）
 PR #63統合後main f5b1aefから専用branch。受入契約先行固定、148–150を追加して150展示11分類。R1根拠tupleの誤受理を同一反例で修正し、R2表示oracle不足を独立指摘として修正し同3反例で独立再確認。新schemaの局所03も7条件18pair成功。局所Chromium7条件／18pairと正式14条件／36pairを分離、旧中断・失敗を保持。正式CI・保全・最終独立確認PENDING、総合PARTIAL・限定マージNO。詳細docs/wave9。
+
+## 2026-11-17 JST 第11便 初回正式結果追補（Issue #68 / Draft PR #69）
+契約079ffafd先行固定、main5688d804から154–156を追加。正式HEAD3e05971f/tree6e767ba3、専用run44074259302/job134008096996/attempt1成功。14条件×128操作・84意味対照・40監査負対照成立。P2-UI/P2-AUDIT/P2-STALEを同じ反例で限定CLOSED。局所7PASS/7BLOCKED、初回分類曖昧/浅いclone失敗、監査側38見積り/非Git cwd失敗は保存して正式成功と分離。旧153metadata/2539保護files維持、他runnerは156/資源/隔離fixture整合のみ。専用原ZIP144509134 bytesの公式digest一致・Library別path再取得・CRC/406manifest/14trace/source/Git/HAR/6画像独立監査PASS。Windows環境read-onlyでLibrary代替。最終文書HEAD自動CI・再保全は別ゲートでPR最終報告へ。Stage3 HOLD/v10NO/PR46 SUSPENDED/旧原因UNKNOWN、実機NOT_TESTED、マージ公開なし。
