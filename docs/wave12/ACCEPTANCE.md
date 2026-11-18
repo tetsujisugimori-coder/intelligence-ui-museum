@@ -28,3 +28,9 @@ Chromium/WebKit各375/390/1280×light/darkの6条件＋375dark/reduced-motion/co
 正式run/attempt/job/checkout HEAD/tree/source hash、原stdout/stderr、trace/HAR、画像、manifestを追跡。既存原票を上書きせず案件専用領域へ新規保存。承認済み保存先へ原ZIP無改変保存、別担当が実物を再取得しbyte/size/SHA/CRC/manifest/版/条件を照合。ACL/長期保持の未確認はUNKNOWN。再生成ZIPは正式原artifactではない。
 許容変更: wave12製品/試験/docs、indexの追加登録159とassets、既存runnerの登録数・配信資源・fixture調整のみ。旧metadata/原本/lock/過去証拠/旧検査の削除・弱化なし。
 限定技術受入、独立レビュー、原証拠保全、限定マージ推奨を別判定。未解決重大P1/P2、重大証拠欠落、危険開示はマージNO。総合PARTIAL/Stage3 HOLD/v10製品受入NO/PR46 SUSPENDED/旧原因UNKNOWN維持。Draft提出のみ、公開・mergeなし。
+
+## 独立予備審査による同値境界の明確化（2026-11-18 JST）
+事前本文の「同じ文字列」は同値要件の十分条件として狭かった。正常JSONの空白・objectキー順だけの差は入力意味同値とし、表示文字列だけ更新、入力版・有効結果・履歴は保持する。JSON配列順序は保持して比較し、自動並べ替えはしない。不正JSONはraw文字列同値だけを採用。非normal反例から通常編集へ移る場合は検査対象が変わるので失効する。元本文を削除せず本追補を適用する。これは意味同値操作の契約明確化であり、故障入力の拒否条件を緩めない。
+
+## 独立予備審査による診断入力表示の補完（2026-11-18 JST）
+診断scenario選択時に入力欄もその固定fixtureへ更新する。normal選択は正常fixtureへ戻る。NaN/Infinity/疎配列穴は入力欄に [NaN]/[Infinity]/[SPARSE HOLE] の表示用文字列として示し、実評価は内部原型を保持する。表示用表記を通常編集するとnormalへ戻り通常JSON値となることを画面に明記する。158の秘密値は入力欄以外へ複製しない。表示入力と判定対象の乖離をなくす補完であり、元反例・拒否期待値を変更しない。

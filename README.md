@@ -1,3 +1,11 @@
+# 第12便 157–159（2026-11-18 JST）
+
+Issue #70。PR69の正式merge `db57a7bb` を開始点とした追加。Uncertainty & Abstention、Disclosure Boundary、Correction & Re-evaluationの固定架空教材を159展示・11分類へ実装中。過去の第11便本文の途中判定は歴史記録であり、PR69の正式マージ状態とは区別します。
+
+[事前契約](docs/wave12/ACCEPTANCE.md) / [検証結果](docs/wave12/RESULTS.md) / [独立レビュー](docs/wave12/INDEPENDENT-REVIEW.md) / [保全台帳](docs/wave12/CUSTODY.md)。初回提出時点は総合PARTIAL・CI/独立レビュー/保全待ち、限定マージNO。Stage3 HOLD、v10受入NO、PR46 SUSPENDED、旧原因UNKNOWNは維持。
+
+---
+
 # 第11便 154–156（2026-11-17 JST）
 
 Issue #68。PR #67 は merge 5688d804 として統合済み。以下の第10便「実マージなし」等は当時の履歴であり現在状態とは区別する。156展示・11カテゴリーを実装。Retrieval Rankingは固定検索順位（真偽保証なし）、Memory Scopeは架空項目の適用/競合、Agent Handoffは担当間引継ぎの形式検査。実LLM/API/実メモリ/実エージェントなし。初回正式HEAD 3e05971fで14条件×128操作・84意味対照・監査負対照40件が成立し、独立P2三件は限定CLOSED。専用原ZIPのLibrary保存後別担当再取得・source/HAR/trace/6画像監査PASS。総合PARTIAL、最終文書HEADの自動CIと原ZIP保全を残すため限定マージNO。詳細は docs/wave11/RESULTS.md。最終ゲート結果はPR #69の最終報告へ追記する。Stage3 HOLD、v10製品受入NO、PR46 SUSPENDED、旧原因UNKNOWN、実機NOT_TESTEDを維持。Draft提出まで、マージ/公開なし。
