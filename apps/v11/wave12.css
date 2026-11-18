@@ -1,0 +1,18 @@
+.wave12 { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.wave12 *, .wave12 *::before, .wave12 *::after { box-sizing: border-box; }
+.wave12 label { display: block; margin-block: .65rem; }
+.wave12 input, .wave12 select, .wave12 textarea { display: block; width: 100%; max-width: 100%; min-width: 0; font: inherit; color: inherit; background: var(--bg, transparent); border: 1px solid currentColor; border-radius: .3rem; padding: .45rem; }
+.wave12 input { max-width: 14rem; }
+.wave12 button { font: inherit; min-height: 2.75rem; max-width: 100%; padding: .5rem .8rem; margin: .3rem .3rem .3rem 0; white-space: normal; overflow-wrap: anywhere; }
+.wave12 :focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+.wave12 output { display: block; font-weight: 700; margin-block: .8rem; }
+.wave12 pre { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; font-size: 1em; }
+.wave12 li, .wave12 summary, .wave12 p { overflow-wrap: anywhere; }
+.wave12 ul, .wave12 ol { padding-inline-start: 1.35rem; }
+.wave12 article { border: 1px solid currentColor; border-radius: .4rem; padding: .6rem; margin-block: .6rem; }
+.wave12 .w12-note { border-inline-start: .25rem solid currentColor; padding-inline-start: .6rem; }
+.wave12 h4, .wave12 h5, .wave12 h6 { font-size: 1em; margin-block: .65rem; }
+@media (prefers-reduced-motion: reduce) { .wave12 *, .wave12 *::before, .wave12 *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+/* Keep WebKit's native select text/arrow inside the control at enlarged text sizes.
+   The native selection/keyboard semantics remain; full scenario is also in current. */
+.wave12 select { appearance: none; overflow: hidden; text-overflow: ellipsis; padding-inline-end: 2rem; background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-position: calc(100% - 1rem) 50%, calc(100% - .7rem) 50%; background-size: .3rem .3rem; background-repeat: no-repeat; }

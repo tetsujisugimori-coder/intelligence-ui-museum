@@ -5,15 +5,15 @@ def data(p):
  s=Path(p).read_text(encoding='utf8')
  return json.loads(re.search(r'<script id="dataset" type="application/json">([\s\S]*?)</script>',s)[1])
 a=data('legacy/v09/index.html');b=data('apps/v11/index.html')
-assert len(b)==156 and [x['id'] for x in b]==list(range(1,157))
+assert len(b)==159 and [x['id'] for x in b]==list(range(1,160))
 assert a==b[:117], 'old dataset changed'
 expected=[('Time Picker','入力'),('Transfer List','入力'),('Kanban Board','インタラクション'),('Heatmap','データ表示'),('Keyboard Shortcut Recorder','入力'),('Notification Center','通知')]
 assert [(x['name'],x['category']) for x in b[117:123]]==expected
 assert all(x['provenance']['出自区分']=='独自実装' and x['provenance']['OpenAI公式との関連']=='公式SDK・APIを使用しない' for x in b[117:])
-print('PASS: 156 consecutive IDs, original 117 complete dataset equality, six names/categories/origins')
+print('PASS: 159 consecutive IDs, original 117 complete dataset equality, six names/categories/origins')
 
 html=Path('apps/v11/index.html').read_text(encoding='utf8')
-assert '<title>Intelligence UI Museum | v11 156 exhibits</title>' in html
+assert '<title>Intelligence UI Museum | v11 159 exhibits</title>' in html
 assert len({x['category'] for x in b})==11
 print('PASS: v11 title and 11 categories')
 
@@ -80,8 +80,16 @@ print('PASS: previous150 all metadata, protected '+str(len(base10['protected']))
 
 base11=json.loads(Path("apps/v11/wave11-baseline.json").read_text())
 assert b[:153]==base11["metadata"], "previous153 complete metadata"
-assert [(x['name'],x['category']) for x in b[153:]]==[("Retrieval Ranking Explorer","データ表示"),("Memory Scope Inspector","データ表示"),("Agent Handoff Inspector","インタラクション")]
+assert [(x['name'],x['category']) for x in b[153:156]]==[("Retrieval Ranking Explorer","データ表示"),("Memory Scope Inspector","データ表示"),("Agent Handoff Inspector","インタラクション")]
 for row in base11['protected']:
     raw=Path(row['path']).read_bytes()
     assert len(raw)==row['size'] and hashlib.sha256(raw).hexdigest()==row['sha256'], row['path']
 print('PASS previous153 metadata; wave11 protected '+str(len(base11['protected']))+'; 156 exhibits / 11 categories')
+
+base12=json.loads(Path("apps/v11/wave12-baseline.json").read_text())
+assert b[:156]==base12["metadata"], "previous156 complete metadata"
+assert [(x['name'],x['category']) for x in b[156:]]==[("Uncertainty & Abstention Workbench","データ表示"),("Disclosure Boundary Inspector","データ表示"),("Correction & Re-evaluation Studio","インタラクション")]
+for row in base12['protected']:
+    raw=Path(row['path']).read_bytes()
+    assert len(raw)==row['size'] and hashlib.sha256(raw).hexdigest()==row['sha256'], row['path']
+print('PASS previous156 metadata; wave12 protected '+str(len(base12['protected']))+'; 159 exhibits / 11 categories')

@@ -1,0 +1,60 @@
+name: v11 Wave 12
+on:
+  pull_request:
+    paths: ['apps/v11/**', 'scripts/**', '.github/workflows/v11-wave12.yml', 'docs/wave12/**']
+defaults:
+  run:
+    shell: bash
+permissions:
+  contents: read
+jobs:
+  wave12:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      TMPDIR: ${{ github.workspace }}/.work/wave12-temp
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/wave12-browsers
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: mkdir -p "$TMPDIR" .work/wave12-app .work/wave12-evidence && cp -R apps/v11/. .work/wave12-app/
+      - run: npm ci --ignore-scripts && npx playwright install --with-deps chromium webkit
+        working-directory: .work/wave12-app
+      - name: Preservation and product-independent contracts
+        run: |
+          python3 apps/v11/verify.py
+          python3 scripts/verify-migration.py
+          node --test apps/v11/wave12-test.cjs apps/v11/wave11-test.cjs | tee .work/wave12-evidence/unit.log
+      - name: Formal 14 browser conditions
+        run: node apps/v11/wave12-browser.cjs | tee .work/wave12-evidence/browser.log
+        env:
+          APP_ROOT: .work/wave12-app
+          EVIDENCE_DIR: .work/wave12-evidence
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/.work/wave12-app/node_modules/playwright
+      - name: Bind semantic normal-fault pairs to live steps
+        run: node apps/v11/wave12-faults.cjs | tee .work/wave12-evidence/faults.log
+        env:
+          EVIDENCE_DIR: .work/wave12-evidence
+      - name: Bind core evidence manifest
+        run: python3 apps/v11/wave12-manifest.py .work/wave12-evidence --core
+      - name: Audit formal evidence
+        if: always()
+        run: node apps/v11/wave12-audit.cjs .work/wave12-evidence | tee .work/wave12-evidence/audit.log
+      - name: Auditor negative controls
+        run: node apps/v11/wave12-audit-negative.cjs .work/wave12-evidence | tee .work/wave12-evidence/audit-negative.log
+      - name: Manifest original execution evidence
+        if: always()
+        run: python3 apps/v11/wave12-manifest.py .work/wave12-evidence
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-wave12-evidence
+          path: .work/wave12-evidence
+          retention-days: 90
+          include-hidden-files: true
+          if-no-files-found: error
