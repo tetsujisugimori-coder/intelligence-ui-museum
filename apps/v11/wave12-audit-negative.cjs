@@ -8,6 +8,7 @@ function copy(from,to){for(const e of fs.readdirSync(from,{withFileTypes:true}))
 function run(source){source=path.resolve(source);a.ok(process.env.TMPDIR&&!path.resolve(process.env.TMPDIR).startsWith('/tmp'),'dedicated TMPDIR');const before=inventory(source),original=JSON.parse(fs.readFileSync(path.join(source,'results.json'))),normal=audit(source),temp=fs.mkdtempSync(path.join(process.env.TMPDIR,'wave12-neg-')),results=[];
  const row=r=>r.results[0],step=(r,n)=>row(r).steps.find(x=>x.name===n);
  const cases=[
+ ['missing-start',r=>delete r.startedAt,/execution timestamps/],['wrong-theme',r=>row(r).themeObserved='wrong',/actual theme/],
  ['condition-missing',r=>r.results.pop(),/condition set/],['condition-duplicate',r=>r.results[1]=r.results[0],/condition set/],
  ['row-HEAD',r=>row(r).head='0'.repeat(40),/row HEAD/],['row-tree',r=>row(r).tree='0'.repeat(40),/row tree/],['checkout',r=>r.ci.checkout='0'.repeat(40),/checkout attribution/],
  ['source',r=>r.source['wave12.js']='0'.repeat(64),/Git\/source/],['execution',r=>r.execution['wave12-browser.cjs']='0'.repeat(64),/execution source/],
