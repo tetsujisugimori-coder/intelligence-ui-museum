@@ -1,3 +1,5 @@
+> 現行判定: [PR #71](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/71) の最新HEADに対応する本文・最終報告を参照。以下は各版の実測履歴であり、未到達・失敗を保持する。後続CIの結果を先取りしない。
+
 # 第12便 検証記録
 2026-11-18 JST / Issue #70。これは初回提出時の進行記録。
 
@@ -14,3 +16,13 @@
 製品登録補訂後、旧回帰728/728 PASS、保護検査は正常1件受理・故障4件拒否でPASS。新単体104/104 PASS。別担当Bの独立追加20件はworking版20/20 PASS、正式提出版再取得は別途実施中。
 ローカル初回browser診断はChromium7条件×119操作PASS、WebKitは起動依存不足でBLOCKED。条件を削除せず14列へ記録し、正式CI ubuntuの依存導入済み実行を別判定する。ローカル診断を正式14条件成功とは扱わない。
 初回GitHub HEAD f8414fd146f707b8af1fabecf2621f96d56fa17c、tree9ca18ba583909ec8e28f05bfc09bd6fd7c339c6b、16 workflow進行中。次の監査追補は実themeObserved・開始終了時刻・操作期限を必須化し負対照2件を追加する。初回原票は保持し、最終版の実測とは区別する。
+
+## 正式初回・第2版とWebKit補訂（2026-11-18 22:12 JST）
+- 初回 `f8414fd146f707b8af1fabecf2621f96d56fa17c` 専用run44305250232/job134805008415/attempt1。新旧単体368 PASS、browser13条件PASS、WebKit375dark・computed-font2倍だけdocument overflow FAIL。監査はFAIL行を拒否し、監査負対照は未到達NOT_TESTED。全16 workflowは10成功/1失敗/5cancelled（concurrency停止と依存導入/実行期限到達を区別）。
+- 第2版 `d1ce8211ee0dd480f2334635eaf104befe057057` 専用run44305532511/job134805985780/attempt1。368単体PASS、同13条件PASS/同1条件FAIL。正式原ZIPを双方保護し、保存後独立照合済み。既存workflowの全体終端状態はPR最終報告に帰属。
+- trace上は158のunknown-destination選択直後。local Debianで公式署名検証付きDebian packageを専用領域へ展開し、変更していないPlaywright WPE26.0 binaryを局所launcherで起動（system設定/lock更新なし）。元の環境起動BLOCKED履歴は保持。
+- local同条件118操作ではdocument幅超過自体は再現せず、6stepでnative SELECTの親scrollWidth超過を観測。unknown-destinationは323/client301、PRE301/301。text-overflowやoverflow単独では改善せず、select限定appearance:none＋省略表示＋CSS矢印で親301/301となった。全118操作の局所overflow0、ArrowDown/Enter・focus・選択全文current表示維持。正式Ubuntuとlocal Debianの環境差を残す。
+- 修正はwave12 select描画のみに限定。document/rootのoverflowを隠さず、入力判定・旧timeout・反例・14条件を緩めない。P2-WEBKITは正式修正版14条件が確認されるまでOPEN。次の固定版の結果はPR #71へ追記する。
+
+## 実原票の区分
+158の派生results/stateの入力値と操作入力はredacted、payload/audit/current/historyは秘密原文を含めない。source/trace/HAR/画面は明示入力された固定架空原文を含む原実行証拠であり、開示payloadや匿名化済みexportとは呼ばない。実秘密・個人情報は使用していない。

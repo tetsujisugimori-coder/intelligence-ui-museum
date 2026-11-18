@@ -1,3 +1,7 @@
+## 第12便の現行判定への入口
+
+**最新の固定HEAD・CI・独立審査・保全・限定マージ判定は [PR #71の現行本文と最終報告](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/71) が正本です。** 以下およびwave12文書の「初回」「追補時点」は版固定履歴であり、後続版の判定へ自動転用しません。Draftを維持し、実マージ・公開・実AI試験は行いません。
+
 # 第12便 157–159（2026-11-18 JST）
 
 Issue #70。PR69の正式merge `db57a7bb` を開始点とした追加。Uncertainty & Abstention、Disclosure Boundary、Correction & Re-evaluationの固定架空教材を159展示・11分類へ実装中。過去の第11便本文の途中判定は歴史記録であり、PR69の正式マージ状態とは区別します。

@@ -13,3 +13,6 @@
 .wave12 .w12-note { border-inline-start: .25rem solid currentColor; padding-inline-start: .6rem; }
 .wave12 h4, .wave12 h5, .wave12 h6 { font-size: 1em; margin-block: .65rem; }
 @media (prefers-reduced-motion: reduce) { .wave12 *, .wave12 *::before, .wave12 *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+/* Keep WebKit's native select text/arrow inside the control at enlarged text sizes.
+   The native selection/keyboard semantics remain; full scenario is also in current. */
+.wave12 select { appearance: none; overflow: hidden; text-overflow: ellipsis; padding-inline-end: 2rem; background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%); background-position: calc(100% - 1rem) 50%, calc(100% - .7rem) 50%; background-size: .3rem .3rem; background-repeat: no-repeat; }
