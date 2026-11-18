@@ -1,4 +1,4 @@
-> 現行判定: [PR #71](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/71) の最新HEADに対応する本文・最終報告を参照。以下は各版の実測履歴であり、未到達・失敗を保持する。後続CIの結果を先取りしない。
+> **現行判定（2026-11-18最終検証済み製品版 `c41ea995d36b2dfb6dc5a34e12bea39f210b0d3a`）:** **総合PARTIAL／第12便限定技術受入PASS／独立レビューPASS／限定マージ推奨YES**。正式CI 16 workflow・21最新checks成功、Chromium／WebKit 14条件×119操作・88意味対照・39監査負対照PASS。P1/P2残件なし、歴史原票の欠損P3は[Issue #72](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/issues/72)でOPEN（非blocking）。Stage 3 HOLD・実機未検証などの境界は維持。**この検証結果は上記製品版に帰属し、後続の文書追補HEADのCI成功を先取りしない。** PRの最終判定・マージ状況は[PR #71最終報告](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/pull/71#issuecomment-6980876912)と最新PR状態を参照。以下は当時の未到達・失敗を含む版別履歴。
 
 # 第12便 検証記録
 2026-11-18 JST / Issue #70。これは初回提出時の進行記録。
@@ -26,3 +26,13 @@
 
 ## 実原票の区分
 158の派生results/stateの入力値と操作入力はredacted、payload/audit/current/historyは秘密原文を含めない。source/trace/HAR/画面は明示入力された固定架空原文を含む原実行証拠であり、開示payloadや匿名化済みexportとは呼ばない。実秘密・個人情報は使用していない。
+
+
+## 最終検証済み製品版の追補（2026-11-18 23:07 JST時点、変更前後を分離）
+- 対象固定HEAD `c41ea995d36b2dfb6dc5a34e12bea39f210b0d3a`、tree `b7ff69155704bb2e69822fb9e7150834b235b0c8`。初回・第2版のWebKit正式FAIL（13PASS/1FAIL）は履歴のまま保持。
+- 同じ正式条件の修正版専用run `44311507240`：368単体・Chromium／WebKit各7条件の合計14条件×119操作・88意味対照・39監査負対照PASS。復旧後固定版の広域単体832/832 PASS。TMPDIR未設定だった初回831/832は旧記録として保持。
+- 固定HEADのPR関連CIは16 workflow、最新21 checksすべて成功。Select returnとbuttonの初回依存導入cancelledは消さず、それぞれ同HEADのattempt 2で成功。初回の不成功を後からPASSに変更しない。
+- 独立担当Bは固定GitHub版41変更pathの全byte・size・SHA・blobを照合。正式原ZIPをLibraryから独立再取得し、136,294,337 bytes・SHA-256・436 ZIP entries CRC・manifest 435件を照合。新独立RECOVERY-B-NEW20は未回収旧B20の再実行ではない。
+- P2-SEMANTIC／P2-INPUT／P2-WEBKITは今回固定版の審査範囲でCLOSED。**P3-REVIEW-RECORD OPEN**（未回収旧B20原入力・局所CSS票・local14終端および予備画像置換）。[Issue #72](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/issues/72)で分離追跡。手掛かりがない状態で無制限再探索しない。
+- Stage 3 HOLD、v10製品受入NO、PR #46 SUSPENDED、旧原因UNKNOWN。実機Safari・VoiceOver・物理操作・OS文字拡大・実AIはNOT_TESTED。マージや公開はこの追補自体の効力ではなく、PRの別判断による。
+- 本追補は旧結果の上書きや新CIの実測ではない。新しい**文書限定commit**が作成された場合、CI状態と対象HEADを改めて確認する。
