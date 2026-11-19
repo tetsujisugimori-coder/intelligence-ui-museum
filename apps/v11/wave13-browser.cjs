@@ -23,7 +23,7 @@ async function run(){
  }));
  fs.copyFileSync('.github/workflows/v11-wave13.yml',path.join(execRoot,'v11-wave13.yml'));
  executed['v11-wave13.yml']=hash(fs.readFileSync(path.join(execRoot,'v11-wave13.yml')));
- const report={head,tree,prHead,source,execution:executed,run:process.env.GITHUB_RUN_ID??null,attempt:process.env.GITHUB_RUN_ATTEMPT??null,node:process.version,results:[]};
+ const report={head,tree,prHead,source,execution:executed,run:process.env.GITHUB_RUN_ID??null,attempt:process.env.GITHUB_RUN_ATTEMPT??null,event:process.env.GITHUB_EVENT_NAME??null,job:process.env.GITHUB_JOB??null,node:process.version,results:[]};
  const save=()=>fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(report,null,2));
  const server=http.createServer((req,res)=>{
    const f=req.url.split('?')[0].slice(1)||'index.html';
@@ -37,7 +37,7 @@ async function run(){
  try {
   for(const c of matrix.filter(x=>!process.env.LOCAL_ENGINE||x.engine===process.env.LOCAL_ENGINE)){
    const key=[c.engine,c.width,c.theme,c.zoom].join('-');
-   const row={...c,key,status:'FAIL',steps:{},font:{},navigation:{},keyboard:{},errors:[],screenshots:[]};report.results.push(row);
+   const row={...c,key,status:'FAIL',steps:{},font:{},navigation:{},scroll:{},keyboard:{},errors:[],screenshots:[]};report.results.push(row);
    let browser,context;
    try{
     browser=await pw[c.engine].launch({headless:true,...(c.engine==='chromium'&&process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{})});
@@ -66,6 +66,15 @@ async function run(){
      await detail.press('Enter');
      await by('run').click();
      const before=await styleFor(host);
+     const last=host.locator('li').last();
+     const locate=e=>({y:window.scrollY,top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom,max:innerHeight});
+     const origin=await last.evaluate(locate);
+     await last.scrollIntoViewIfNeeded();
+     const reached=await last.evaluate(locate);
+     a.ok(reached.bottom>0&&reached.top<reached.max,'result scroll target visible');
+     if(origin.top>=origin.max||origin.bottom<=0)a.notEqual(reached.y,origin.y,'scroll movement required');
+     row.scroll[id]={origin,reached};
+
      await by('reset').click();
      if(c.zoom===2){
       const style=Object.entries(before).map(([tag,size])=>`[data-wave13="${id}"] ${tag}{font-size:${size*2}px!important}`).join('');

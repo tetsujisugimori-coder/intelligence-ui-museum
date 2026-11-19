@@ -29,3 +29,9 @@ for(const [id,from,to,exercise,expected] of [
  const actual=JSON.parse(JSON.stringify(C.project(id,exercise(mod.exports))));
  a.throws(()=>a.deepEqual(actual,expected),{name:'AssertionError'});
 });
+test('formal operation records survive JSON serialization without losing keys',()=>{
+ for(const id of [160,161,162]){
+  const plan=C.plan(id);
+  a.deepEqual(JSON.parse(JSON.stringify(plan)),plan);
+ }
+});

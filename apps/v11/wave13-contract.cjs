@@ -10,7 +10,7 @@ const comparisons={R2:['exact','exact'],R3:['format','exact'],R4:['exact','confl
 const ids='T01 T02 T03 T04 T05 T06 T07 T08 T09 T10 T11 T12 T13 T14 T15 T16 T17 T18 T19 T20'.split(' ');
 const slices={all:[18,20,90,ids],regular:[18,18,100,ids.slice(0,18)],closed:[0,2,0,['T19','T20']],night:[0,0,null,[]]};
 const x=(id,key,value,initial)=>({action:'input',id,key,value,expect:initial??null});
-const run=(id,expect,text)=>({action:'run',id,expect,text});
+const run=(id,expect,text)=>({action:'run',id,expect,...(text===undefined?{}:{text})});
 const reset=(id,focus)=>({action:'reset',id,expect:null,focus});
 function plan(id){
  if(id===160)return [
