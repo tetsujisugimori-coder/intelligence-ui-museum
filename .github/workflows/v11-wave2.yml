@@ -27,6 +27,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Trust only this checked-out workspace for Git identity
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: Isolated writable workspace
         run: |
           mkdir -p "$TMPDIR" "$npm_config_cache" "$PLAYWRIGHT_BROWSERS_PATH" .work/wave2-app .work/wave2-evidence
