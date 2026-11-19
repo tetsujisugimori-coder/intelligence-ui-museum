@@ -11,12 +11,14 @@ jobs:
   wave2:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble@sha256:42f02d323c310069b4d54c94bd91a608966a486c3492c48ae0b1cea747ec5ca2
     env:
       TMPDIR: ${{ github.workspace }}/.work/wave2-tmp
       TMP: ${{ github.workspace }}/.work/wave2-tmp
       TEMP: ${{ github.workspace }}/.work/wave2-tmp
       npm_config_cache: ${{ github.workspace }}/.work/wave2-cache
-      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/wave2-browsers
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,7 +36,8 @@ jobs:
           node -e "if(require('os').tmpdir()!==process.env.TMPDIR)process.exit(1)"
       - run: npm ci --ignore-scripts
         working-directory: .work/wave2-app
-      - run: npx playwright install --with-deps chromium webkit
+      - name: Verify pinned Playwright version (browsers supplied by container)
+        run: test "$(npx playwright --version)" = "Version 1.56.1"
         working-directory: .work/wave2-app
       - run: python3 apps/v11/verify.py
       - run: node --test apps/v11/wave2-test.cjs
