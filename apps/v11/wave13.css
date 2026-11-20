@@ -1,0 +1,8 @@
+.wave13 {display:grid;gap:.65rem;min-width:0;max-width:100%;overflow-wrap:anywhere}
+.wave13 label {display:grid;gap:.3rem;min-width:0}
+.wave13 input,.wave13 select,.wave13 button {box-sizing:border-box;width:auto;min-width:0;max-width:100%;white-space:normal;font:inherit}
+.wave13 output {display:block;min-width:0}
+.wave13 ul {margin:0;padding-inline-start:1.25em}
+.wave13 li {white-space:pre-wrap;overflow-wrap:anywhere}
+.wave13 :focus-visible {outline:2px solid currentColor;outline-offset:2px}
+.w13-actions {display:flex;flex-wrap:wrap;gap:.5rem}

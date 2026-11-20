@@ -1,0 +1,56 @@
+name: v11 Wave 13
+on:
+  pull_request:
+    paths: ['apps/v11/**', '.github/workflows/v11-wave13.yml', 'docs/wave13/**']
+defaults:
+  run:
+    shell: bash
+permissions:
+  contents: read
+jobs:
+  wave13:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble@sha256:42f02d323c310069b4d54c94bd91a608966a486c3492c48ae0b1cea747ec5ca2
+    env:
+      TMPDIR: ${{ github.workspace }}/.work/wave13-temp
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+      EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: mkdir -p "$TMPDIR" .work/wave13-app .work/wave13-evidence && cp -R apps/v11/. .work/wave13-app/
+      - name: Trust only the checked-out workspace
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - name: Install pinned test dependency
+        run: npm ci --ignore-scripts && test "$(npx playwright --version)" = "Version 1.56.1"
+        working-directory: .work/wave13-app
+      - name: Static preservation and independent contract tests
+        run: |
+          set -o pipefail
+          python3 apps/v11/verify.py | tee .work/wave13-evidence/preservation.log
+          python3 scripts/verify-migration.py | tee .work/wave13-evidence/migration.log
+          node --test apps/v11/wave13-test.cjs apps/v11/wave12-test.cjs | tee .work/wave13-evidence/unit.log
+      - name: Formal 14 browser conditions
+        run: set -o pipefail; node apps/v11/wave13-browser.cjs | tee .work/wave13-evidence/browser.log
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/.work/wave13-app/node_modules/playwright
+      - name: Audit evidence and auditor rejection controls
+        run: set -o pipefail; node apps/v11/wave13-audit.cjs .work/wave13-evidence | tee .work/wave13-evidence/audit.log
+      - name: Complete original evidence manifest
+        if: always()
+        run: python3 apps/v11/wave13-manifest.py .work/wave13-evidence
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-wave13-evidence
+          path: .work/wave13-evidence
+          retention-days: 90
+          include-hidden-files: true
+          if-no-files-found: error
