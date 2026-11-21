@@ -33,7 +33,8 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p .work
-          mkdir "$TMPDIR" "$APP_ROOT" "$EVIDENCE_DIR"
+          mkdir -p "$TMPDIR"
+          mkdir "$APP_ROOT" "$EVIDENCE_DIR"
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git rev-parse HEAD > "$EVIDENCE_DIR/commit.txt"
           git rev-parse 'HEAD^{tree}' > "$EVIDENCE_DIR/tree.txt"
