@@ -1,0 +1,27 @@
+[data-wave14] {
+  display:grid;gap:.7rem;min-width:0;max-width:100%;width:100%;overflow-wrap:anywhere;
+  --w14-panel:#232f46;--w14-edge:#8193b4;--w14-accent:#aedbff;
+}
+.light [data-wave14] {--w14-panel:#e9f0fa;--w14-edge:#6f7c98;--w14-accent:#243e68}
+[data-wave14] :is(p,output,pre,li,dd) {min-width:0;max-width:100%;overflow-wrap:anywhere}
+[data-wave14] label {display:grid;gap:.25rem;min-width:0}
+[data-wave14] :is(input,button,select) {
+  box-sizing:border-box;width:auto;min-width:0;max-width:100%;white-space:normal;font:inherit;
+}
+[data-wave14] :is(ul,ol) {margin:0;padding-inline-start:1.3em;min-width:0}
+[data-wave14] :is(ol,ul) li + li {margin-block-start:.25em}
+[data-wave14] pre {margin:0;padding:.6em;background:var(--w14-panel);border-radius:.45em;white-space:pre-wrap}
+[data-wave14] fieldset {margin:0;padding:.6em;min-width:0;max-width:100%;border:1px solid var(--w14-edge);border-radius:.45em}
+[data-wave14] legend {min-width:0;max-width:100%;font-weight:650}
+[data-wave14] [data-w14-status] {display:block;padding:.6em;border-inline-start:.2em solid var(--w14-accent);background:var(--w14-panel)}
+[data-wave14] :focus-visible {outline:2px solid currentColor;outline-offset:2px}
+[data-wave14] :is(.w14-actions,.w14-rows,.w14-branches) {display:flex;flex-wrap:wrap;gap:.5em;min-width:0}
+[data-wave14] :is(.w14-row,.w14-branch,.w14-schema) {min-width:0;max-width:100%;padding:.55em;background:var(--w14-panel);border-radius:.45em}
+[data-wave14] button[aria-pressed=true] {box-shadow:inset 0 0 0 2px currentColor}
+[data-wave14] :is(h4,p) {margin:0}
+[data-wave14] .w14-schemas {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(12rem,100%),1fr));gap:.55em;min-width:0}
+[data-wave14] .w14-schemas > div {background:var(--w14-panel);border-radius:.45em;padding:.6em;min-width:0}
+[data-wave14] .w14-schemas ul {margin-top:.4em}
+[data-wave14] [data-w14-mapping-rows] {display:grid;gap:.5em;min-width:0}
+[data-wave14] .w14-mapping-row {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(8rem,100%),1fr));gap:.45em;align-items:end;min-inline-size:0}
+[data-wave14] .w14-mapping-row button {justify-self:start}

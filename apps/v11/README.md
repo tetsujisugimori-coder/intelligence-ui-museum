@@ -1,3 +1,10 @@
+## 第14便（163–165）
+
+展示検索から 163 Data Mapping Workbench、164 Parallel Join Visualizer、165 Variable Scope Inspector を選択します。入力と出力の型付き接続、固定3枝の確定順、実行位置に応じた変数の参照範囲を比較します。165展示・11分類。JavaScriptを無効にした場合は既存117展示の静的一覧です。
+[契約と操作](../../docs/wave14/ACCEPTANCE.md) · [現行判定への入口](../../docs/wave14/RESULTS.md)。第13便までを既存履歴として保ちます。
+
+---
+
 # 第11便 154–156（2026-11-17 JST）
 
 Issue #68。PR #67 は merge 5688d804 として統合済み。以下の第10便「実マージなし」等は当時の履歴であり現在状態とは区別する。156展示・11カテゴリーを実装。Retrieval Rankingは固定検索順位（真偽保証なし）、Memory Scopeは架空項目の適用/競合、Agent Handoffは担当間引継ぎの形式検査。実LLM/API/実メモリ/実エージェントなし。初回正式HEAD 3e05971fで14条件×128操作・84意味対照・監査負対照40件が成立し、独立P2三件は限定CLOSED。専用原ZIPのLibrary保存後別担当再取得・source/HAR/trace/6画像監査PASS。総合PARTIAL、最終文書HEADの自動CIと原ZIP保全を残すため限定マージNO。詳細は docs/wave11/RESULTS.md。最終ゲート結果はPR #69の最終報告へ追記する。Stage3 HOLD、v10製品受入NO、PR46 SUSPENDED、旧原因UNKNOWN、実機NOT_TESTEDを維持。Draft提出まで、マージ/公開なし。
