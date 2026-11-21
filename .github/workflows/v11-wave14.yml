@@ -1,0 +1,87 @@
+name: v11 Wave 14
+on:
+  pull_request:
+    paths: ['apps/v11/**', '.github/workflows/v11-wave14.yml', 'docs/wave14/**']
+defaults:
+  run:
+    shell: bash
+permissions:
+  contents: read
+jobs:
+  wave14:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble@sha256:42f02d323c310069b4d54c94bd91a608966a486c3492c48ae0b1cea747ec5ca2
+    env:
+      TMPDIR: ${{ github.workspace }}/.work/wave14-temp
+      APP_ROOT: ${{ github.workspace }}/.work/wave14-app
+      EVIDENCE_DIR: ${{ github.workspace }}/.work/wave14-evidence
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+      PLAYWRIGHT_MODULE: ${{ github.workspace }}/.work/wave14-app/node_modules/playwright
+      EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fix checkout, runner and evidence directories
+        id: fixed
+        run: |
+          set -euo pipefail
+          mkdir -p .work
+          mkdir "$TMPDIR" "$APP_ROOT" "$EVIDENCE_DIR"
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git rev-parse HEAD > "$EVIDENCE_DIR/commit.txt"
+          git rev-parse 'HEAD^{tree}' > "$EVIDENCE_DIR/tree.txt"
+          test "$(cat "$EVIDENCE_DIR/commit.txt")" = "$EXPECTED_HEAD"
+          cp -R apps/v11/. "$APP_ROOT/"
+          node --version > "$EVIDENCE_DIR/node-version.txt"
+      - name: Install existing pinned browser test dependency
+        id: install
+        working-directory: .work/wave14-app
+        run: |
+          set -euo pipefail
+          npm ci --ignore-scripts 2>&1 | tee "$EVIDENCE_DIR/install.log"
+          ./node_modules/.bin/playwright --version | tee "$EVIDENCE_DIR/playwright-version.txt"
+          test "$(cat "$EVIDENCE_DIR/playwright-version.txt")" = "Version 1.56.1"
+      - name: Preservation and Wave 14 contract tests
+        id: contracts
+        run: |
+          set -euo pipefail
+          python3 apps/v11/verify.py 2>&1 | tee "$EVIDENCE_DIR/preservation.log"
+          python3 scripts/verify-migration.py 2>&1 | tee "$EVIDENCE_DIR/migration.log"
+          node --test apps/v11/wave14-{mapping,join,scope}.test.cjs apps/v11/wave14-oracle-negative.test.cjs apps/v11/wave13-test.cjs 2>&1 | tee "$EVIDENCE_DIR/unit.log"
+      - name: Formal Chromium and WebKit matrix
+        id: browser
+        run: |
+          set -euo pipefail
+          test -z "${LOCAL_ENGINE:-}${CHROMIUM_EXECUTABLE:-}"
+          node apps/v11/wave14-browser.cjs 2>&1 | tee "$EVIDENCE_DIR/browser.log"
+      - name: Check complete browser evidence
+        id: audit
+        if: always()
+        run: |
+          set -euo pipefail
+          test -d "$EVIDENCE_DIR"
+          node apps/v11/wave14-audit.cjs "$EVIDENCE_DIR" 2>&1 | tee "$EVIDENCE_DIR/audit.log"
+      - name: Record official aggregate, then manifest every original file
+        if: always()
+        env:
+          FIXED: ${{ steps.fixed.outcome }}
+          INSTALL: ${{ steps.install.outcome }}
+          CONTRACTS: ${{ steps.contracts.outcome }}
+          BROWSER: ${{ steps.browser.outcome }}
+          AUDIT: ${{ steps.audit.outcome }}
+        run: python3 apps/v11/wave14-manifest.py "$EVIDENCE_DIR"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v11-wave14-evidence
+          path: .work/wave14-evidence
+          retention-days: 90
+          include-hidden-files: true
+          if-no-files-found: error

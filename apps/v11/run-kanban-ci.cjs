@@ -31,7 +31,7 @@ const git = (...args) =>
 const server = http.createServer((req, res) => {
   const name =
     new URL(req.url, "http://localhost").pathname.slice(1) || "index.html";
-  if (!["index.html", "exhibits.js", "exhibits.css", "wave1.js", "wave1.css", "wave2.js", "wave2.css", "wave3.js", "wave3.css", "wave4.js", "wave4.css", "wave5.js", "wave5.css", "wave6.js", "wave6.css", "wave7.js", "wave7.css", "wave8.js", "wave8.css", "wave9.js", "wave9.css", "wave10.js", "wave10.css", "wave11.js", "wave11.css", "wave12.js", "wave12.css", "wave13.js", "wave13.css"].includes(name) || !fs.existsSync(path.join(site,name))) {
+  if (!["index.html", "exhibits.js", "exhibits.css", "wave1.js", "wave1.css", "wave2.js", "wave2.css", "wave3.js", "wave3.css", "wave4.js", "wave4.css", "wave5.js", "wave5.css", "wave6.js", "wave6.css", "wave7.js", "wave7.css", "wave8.js", "wave8.css", "wave9.js", "wave9.css", "wave10.js", "wave10.css", "wave11.js", "wave11.css", "wave12.js", "wave12.css", "wave13.js", "wave13.css", "wave14-mapping.js", "wave14-join.js", "wave14-scope.js", "wave14.css"].includes(name) || !fs.existsSync(path.join(site,name))) {
     res.writeHead(404).end();
     return;
   }
@@ -50,7 +50,7 @@ function source(head) {
   fs.mkdirSync(dir);
   const files = {};
   const html = git("show", `${head}:apps/v11/index.html`);
-  const required = ["index.html", "exhibits.js", "exhibits.css", ...(html.includes('src="wave1.js"') ? ["wave1.js", "wave1.css"] : []), ...(html.includes('src="wave2.js"') ? ["wave2.js", "wave2.css"] : []), ...(html.includes('src="wave3.js"') ? ["wave3.js", "wave3.css"] : []), ...(html.includes('src="wave4.js"') ? ["wave4.js", "wave4.css"] : []), ...(html.includes('src="wave5.js"') ? ["wave5.js", "wave5.css"] : []), ...(html.includes('src="wave6.js"') ? ["wave6.js", "wave6.css"] : []), ...(html.includes('src="wave7.js"') ? ["wave7.js", "wave7.css"] : []), ...(html.includes('src="wave8.js"') ? ["wave8.js", "wave8.css"] : []), ...(html.includes('src="wave9.js"') ? ["wave9.js", "wave9.css"] : []), ...(html.includes('src="wave10.js"') ? ["wave10.js", "wave10.css"] : []), ...(html.includes('src="wave11.js"') ? ["wave11.js", "wave11.css", "wave12.js", "wave12.css"] : []), ...(html.includes('src="wave13.js"') ? ["wave13.js", "wave13.css"] : [])];
+  const required = ["index.html", "exhibits.js", "exhibits.css", ...(html.includes('src="wave1.js"') ? ["wave1.js", "wave1.css"] : []), ...(html.includes('src="wave2.js"') ? ["wave2.js", "wave2.css"] : []), ...(html.includes('src="wave3.js"') ? ["wave3.js", "wave3.css"] : []), ...(html.includes('src="wave4.js"') ? ["wave4.js", "wave4.css"] : []), ...(html.includes('src="wave5.js"') ? ["wave5.js", "wave5.css"] : []), ...(html.includes('src="wave6.js"') ? ["wave6.js", "wave6.css"] : []), ...(html.includes('src="wave7.js"') ? ["wave7.js", "wave7.css"] : []), ...(html.includes('src="wave8.js"') ? ["wave8.js", "wave8.css"] : []), ...(html.includes('src="wave9.js"') ? ["wave9.js", "wave9.css"] : []), ...(html.includes('src="wave10.js"') ? ["wave10.js", "wave10.css"] : []), ...(html.includes('src="wave11.js"') ? ["wave11.js", "wave11.css", "wave12.js", "wave12.css"] : []), ...(html.includes('src="wave13.js"') ? ["wave13.js", "wave13.css"] : []), ...(html.includes('src="wave14-mapping.js"') ? ["wave14-mapping.js", "wave14-join.js", "wave14-scope.js", "wave14.css"] : [])];
   for (const name of required) {
     const data = execFileSync("git", ["show", `${head}:apps/v11/${name}`], {
       cwd: repo,
