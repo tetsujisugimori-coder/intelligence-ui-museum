@@ -110,6 +110,7 @@ Object.assign(descriptions,{"Structured Output Validator": "JSONの構文と限�
 Object.assign(descriptions,{"Uncertainty & Abstention Workbench":"固定架空証拠の不足・矛盾を分けて回答可能・保留・追加情報を学ぶ。149のcoverageと154の順位とは異なり矛盾優先と保留を扱う。","Disclosure Boundary Inspector":"架空の宛先・field分類から開示payloadを計算。152のtool構文ではなくmask・除外・拒否の開示境界を学ぶ。送信しない。","Correction & Re-evaluation Studio":"一入力への訂正と理由・再評価を扱う。153のprompt比較、150のrubric比較、156の引継ぎと異なり履歴と現在有効な判定を分離する。"});
 Object.assign(descriptions, {'Evidence Freshness Timeline':'資料を変えずに基準日を変更して発効・失効を確認。','Repeated Output Consistency':'固定質問・設定で回答間の違いを項目別に調べる。','Evaluation Slice Inspector':'条件別に絞り、同じ採点基準で失敗が集中する条件を調べる。'});
 Object.assign(descriptions, {"Data Mapping Workbench": "名前付きスキーマの接続を編集し、厳密な型と欠落をプレビューします。", "Parallel Join Visualizer": "3枝の結果を一段ずつ進め、成立・成立不能の条件と後着結果を比べます。", "Variable Scope Inspector": "現在の実行位置を変え、同じ名前の変数をどの範囲から読めるか調べます。"});
+Object.assign(descriptions, {"Event Trigger Inspector":"架空イベントの受信と起動候補を、型付き条件と再配信履歴で分けて検査します。","Retry & Backoff Simulator":"仮想時計で試行間隔・上限と締切を比較します。","Idempotency Workbench":"副作用の前にキーと本文を照合し、結果不明の再送を抑止します。"});
 function wave14Init(root) {
   if(typeof wave14MappingInit==='function')wave14MappingInit(root);
   if(typeof wave14JoinInit==='function')wave14JoinInit(root);
