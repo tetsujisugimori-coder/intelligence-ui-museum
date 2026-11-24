@@ -1,3 +1,9 @@
+## 第15便（166–168）イベント起動・再試行・重複抑止
+
+青波交流館の架空申請を題材に、166 Event Trigger Inspector、167 Retry & Backoff Simulator、168 Idempotency Workbench を追加します。登録168件・11カテゴリー。実API・外部処理に接続しません。タイムアウトは未実行の証明ではなく、再送前のキー照合で副作用を抑止する設計を比較できます。 [事前受入契約](docs/wave15/ACCEPTANCE.md)。
+
+---
+
 ## v11 第14便 163–165：ワークフローのデータ、合流、変数
 
 [Issue #77](https://github.com/tetsujisugimori-coder/intelligence-ui-museum/issues/77) の候補は165展示・11カテゴリー。統合済み第13便（PR #76）までの162展示を保持し、架空の青波交流館だけを題材に3件追加しました。

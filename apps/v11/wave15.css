@@ -1,0 +1,13 @@
+.wave15 { display: grid; gap: .55rem; min-width: 0; width: 100%; overflow-wrap: anywhere; }
+.wave15 .wave15-controls { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); min-width: 0; align-items: end; }
+.wave15 label { display: grid; gap: .25rem; min-width: 0; }
+.wave15 input, .wave15 select, .wave15 button { inline-size: 100%; min-inline-size: 0; max-inline-size: 100%; min-block-size: 2.2rem; white-space: normal; }
+.wave15 :is(input, select, button):focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.wave15 :is(p, h4, ol, pre) { margin: 0; min-width: 0; }
+.wave15 ol { padding-inline-start: 1.5em; }
+.wave15 ol:empty { display: none; }
+.wave15 li + li { margin-block-start: .3em; }
+.wave15 pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.wave15 :is([data-w15-status], pre, [data-w15-control-output]) { border: 1px solid currentColor; padding: .45rem; border-radius: .35rem; }
+.wave15 [data-w15-control-output] { padding-inline-start: 1.8em; }
+@media (prefers-reduced-motion: reduce) { .wave15 * { animation: none !important; transition: none !important; } }
