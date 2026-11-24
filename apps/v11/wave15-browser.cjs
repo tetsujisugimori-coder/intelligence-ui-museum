@@ -98,7 +98,7 @@ async function main(){
    });
    p.on('console',m=>{if(m.type()==='error')row.consoleErrors.push(m.text());});
    p.on('pageerror',e=>row.pageErrors.push(String(e)));
-   await p.goto(origin+'/',{timeout:10000});
+   await p.goto(origin+'/?wave15-condition='+key,{timeout:10000});
    if(c.theme==='light')await p.locator('#theme').click();
    row.themeObserved=await p.locator('body').evaluate(b=>b.classList.contains('light')?'light':'dark');
    row.reduced=await p.evaluate(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);

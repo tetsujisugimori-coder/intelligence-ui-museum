@@ -8,6 +8,25 @@ function checkMatrix(rows){
  a.equal(rows.length,matrix.length,'condition count');
  a.deepEqual(rows.map(r=>r.key),matrix.map(keyOf),'exact ordered unique condition keys');
 }
+function trace(dir,row,traceKey=row.key){
+ cp.execFileSync('python3',['-c',`import sys,zipfile,json,urllib.parse
+with zipfile.ZipFile(sys.argv[1]) as z:
+ names=z.namelist(); assert names and len(set(names))==len(names) and z.testzip() is None, 'trace CRC/entries'
+ events=[json.loads(l) for n in names if n.endswith('.trace') for l in z.read(n).decode().splitlines() if l.strip()]
+r=json.loads(sys.argv[2]); c=[e for e in events if e.get('type')=='context-options']; assert len(c)==1, 'trace context'
+assert c[0]['browserName']==r['engine'], 'trace engine identity'
+o=c[0]['options']; assert o['viewport']=={'width':r['width'],'height':900}, 'trace viewport'
+assert bool(o.get('hasTouch'))==(r['zoom']==2), 'trace touch'
+assert o.get('reducedMotion','no-preference')==('reduce' if r['zoom']==2 else 'no-preference'), 'trace motion'
+g=[e for e in events if e.get('type')=='before' and e.get('method')=='goto']; assert len(g)==1, 'trace navigation'
+with open(sys.argv[3],encoding='utf8') as f: log=json.load(f)['log']
+assert len(log['pages'])==1 and log['pages'][0]['id']==g[0]['pageId'], 'trace/HAR page identity'
+assert all(e.get('pageref')==g[0]['pageId'] for e in log['entries']), 'trace/HAR request page identity'
+url=g[0]['params']['url']; assert urllib.parse.urlsplit(url).query=='wave15-condition='+r['key'], 'trace condition identity'
+assert sum(e['request']['url']==url for e in log['entries'])==1, 'trace/HAR navigation identity'
+assert any(e.get('type')=='frame-snapshot' for e in events) and sum(e.get('type')=='after' for e in events)>30, 'trace interactions'
+`,path.join(dir,traceKey+'.trace.zip'),JSON.stringify({key:row.key,engine:row.engine,width:row.width,zoom:row.zoom}),path.join(dir,row.key+'.har')],{stdio:['ignore','pipe','pipe']});
+}
 function inspect(dir){
  const read=f=>fs.readFileSync(path.join(dir,f));
  const r=JSON.parse(read('results.json'));
@@ -40,7 +59,7 @@ function inspect(dir){
   const origins=new Set();
   for(const e of entries){
    const u=new URL(e.request.url),f=u.pathname.slice(1)||'index.html';
-   a.equal(u.protocol,'http:');a.equal(u.hostname,'127.0.0.1');a.equal(u.search,'');origins.add(u.origin);
+   a.equal(u.protocol,'http:');a.equal(u.hostname,'127.0.0.1');a.equal(u.search,f==='index.html'?'?wave15-condition='+row.key:'');origins.add(u.origin);
    a.equal(e.request.method,'GET');a.equal(e.response.status,200);
    const body=e.response.content;
    a.equal(typeof body.text,'string');a.ok(body.encoding===undefined||body.encoding==='base64');
@@ -49,13 +68,7 @@ function inspect(dir){
   }
   a.equal(origins.size,1,'one isolated HTTP origin');
   a.deepEqual(row.cleanupErrors,[],'browser closed without cleanup error');
-  // An apparently valid ZIP prefix is not sufficient; read every trace entry.
-  cp.execFileSync('python3',['-c',`import sys, zipfile
-with zipfile.ZipFile(sys.argv[1]) as z:
-  names = z.namelist()
-  if not names or len(set(names)) != len(names) or not any(n.endswith('.trace') for n in names) or z.testzip() is not None:
-    raise ValueError('invalid trace ZIP entries/CRC')
-`,path.join(dir,row.key+'.trace.zip')]);
+  trace(dir,row);
   a.deepEqual(row.screenshots.map(x=>x.id),c.zoom===2?C.ids:[]);
   for(const x of row.screenshots){
    a.equal(x.file,row.key+'-'+x.id+'.png','screenshot exact filename');
@@ -79,8 +92,11 @@ with zipfile.ZipFile(sys.argv[1]) as z:
  a.throws(()=>checkMatrix(rerun),/unique condition keys/);
  const incomplete={...r.execution};delete incomplete['wave15-browser.cjs'];
  a.throws(()=>expectMap(incomplete,[...execution,workflow],'execution source set'),/execution source set/);
+ const dark=r.results.find(row=>row.engine===original.engine&&row.width===original.width&&row.theme==='dark'&&row.zoom===1);
+ a.ok(dark&&dark.key!==original.key,'alternate valid trace exists');
+ a.throws(()=>trace(dir,original,dark.key),e=>/trace\/HAR page identity|trace condition identity/.test(e.stderr?.toString()??''),'swapped valid-CRC trace fails identity');
  const count=r.results.reduce((n,row)=>n+Object.values(row.steps).reduce((k,x)=>k+x.length,0),0);
- console.log('PASS '+r.results.length+' conditions / '+count+' operation records / 8 auditor negatives; HAR and Git source bytes agree; trace ZIP CRC checked');
+ console.log('PASS '+r.results.length+' conditions / '+count+' operation records / 9 auditor negatives; HAR and Git source bytes agree; trace/HAR identity and ZIP CRC checked');
 }
 if(require.main===module)inspect(process.argv[2]);
 module.exports={inspect,checkMatrix,expectMap};
