@@ -229,12 +229,24 @@ function cancel(card) {
 }
 function reset(card) {cancel(card);labSaved.delete(card.dataset.id);card.querySelector('.stage').innerHTML=demo(items.find(x=>x.id===+card.dataset.id));v08Init(card);v09Init(card);v11Init(card);wave1Init(card);wave2Init(card);wave3Init(card);wave4Init(card);wave5Init(card);wave6Init(card);if(typeof wave7Demo==='function'&&typeof wave7Init==='function')wave7Init(card);if(typeof wave8Init==='function')wave8Init(card);if(typeof wave13Init==='function')wave13Init(card);wave14Init(card);if(typeof wave15Init==='function')wave15Init(card);const w15=card.querySelector('[data-wave15]');if(w15)w15.querySelector('select,input')?.focus();const w14=card.querySelector('[data-wave14]');if(w14)(w14.querySelector('[data-w14-origin]')??w14.querySelector('select,input,button'))?.focus();feedback(card,card.querySelector('[data-wave7-resource-missing],[data-wave14-resource-missing],[data-wave15-resource-missing]')?'配信資源欠落・初期化未完了':'初期状態');}
 function provenanceHTML(x){const p=x.provenance;return `<details class="provenance"><summary>出自・仕組み・比較を学ぶ</summary><dl>${Object.entries(p).filter(([k])=>!['展示ID','名称','カテゴリー','参考URL'].includes(k)).map(([k,v])=>`<dt>${escapeHTML(k)}</dt><dd>${escapeHTML(v)}</dd>`).join('')}</dl><a href="${escapeHTML(p.参考URL)}" target="_blank" rel="noopener noreferrer">一次資料／Web標準を読む</a></details>`;}
+// Keep Wave 15 forms and their session state while the gallery filters rebuild cards.
+const hiddenWave15 = new Map();
 function render() {
   const filter=q('#search').value.toLocaleLowerCase(); const visible=items.filter(x=>(category==='すべて'||x.category===category)&&(String(x.id).padStart(3,'0')+' '+x.name+' '+x.category).toLocaleLowerCase().includes(filter));
   const html=visible.map(x=>{let d;try{d=demo(x);}catch(err){console.error(err);d='<p>この展示を読み込めません。ほかの展示は利用できます。</p>';}
     return `<article class="card" data-id="${x.id}" aria-labelledby="exhibit-${x.id}"><small>${x.category} / ${String(x.id).padStart(3,'0')}</small><h2 id="exhibit-${x.id}">${escapeHTML(x.name)}</h2><p class="description">${escapeHTML(x.id>=127?museumDescription(x.name,descriptions):descriptions[x.name])}</p><div class="stage">${d}</div><div class="feedback" role="status" aria-live="polite" ${x.id>=118?"hidden":""}>初期状態</div>${provenanceHTML(x)}${B('↺ リセット','reset',`aria-label="${escapeHTML(x.name)}をリセット"`)}</article>`;}).join('');
-  for(const card of q('#gallery').querySelectorAll('.card')) cancel(card);
-  q('#gallery').innerHTML=html||'<div class="empty">該当する展示はありません。検索語を変更してください。</div>';
+  const gallery=q('#gallery');
+  for(const host of gallery.querySelectorAll('[data-wave15]')) hiddenWave15.set(host.dataset.wave15,host);
+  for(const card of gallery.querySelectorAll('.card')) cancel(card);
+  gallery.innerHTML=html||'<div class="empty">該当する展示はありません。検索語を変更してください。</div>';
+  for(const host of gallery.querySelectorAll('[data-wave15]')){
+    const id=host.dataset.wave15;
+    const retained=hiddenWave15.get(id);
+    if(retained){
+      host.replaceWith(retained);
+      hiddenWave15.delete(id);
+    }
+  }
   v08Init(q('#gallery'));v09Init(q('#gallery'));v11Init(q('#gallery'));wave1Init(q('#gallery'));wave2Init(q('#gallery'));wave3Init(q('#gallery'));wave4Init(q('#gallery'));wave5Init(q('#gallery'));wave6Init(q('#gallery'));if(typeof wave7Demo==='function'&&typeof wave7Init==='function')wave7Init(q('#gallery'));if(typeof wave8Init==='function')wave8Init(q('#gallery'));if(typeof wave9Init==='function')wave9Init(q('#gallery'));if(typeof wave10Init==='function')wave10Init(q('#gallery'));if(typeof wave11Init==='function')wave11Init(q('#gallery'));if(typeof wave12Init==='function')wave12Init(q('#gallery'));if(typeof wave13Init==='function')wave13Init(q('#gallery'));wave14Init(q('#gallery'));if(typeof wave15Init==='function')wave15Init(q('#gallery'));
   q('#count').textContent=`${visible.length} / ${items.length} 展示`;
   // Keep category buttons mounted so keyboard focus survives selection.

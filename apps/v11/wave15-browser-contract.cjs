@@ -11,11 +11,13 @@ const stateText={
 const btn=(key,state,more={},action='enter')=>({key,action,expect:{state,...more}});
 const submitted={type:'submitted',eventId:'E-APP-01',amount:0,urgent:false,note:''};
 const edit=(key,value,action='select')=>({key,value,action,expect:{value}});
+const search=(value,state,more)=>({key:'gallery-search',action:'fill',value,expect:{value,state,...more}});
 const reset=(id)=>btn('reset','idle',{historyCount:0,focus:origin[id],...(id===168?{effects:'0',controlOutput:null}:{})});
 function plan(id){
  if(id===166)return [
   btn('run','candidate',{repeat:'false',historyCount:1,eventBody:submitted,actionShown:'起動候補：申請受付通知'}),
   btn('run','candidate',{repeat:'true',historyCount:2},'space'),
+  search('Event Trigger Inspector','candidate',{repeat:'true',historyCount:2}),
   edit('field','amount'),edit('value','0','fill'),btn('run','candidate',{repeat:'true',historyCount:3}),
   edit('value','1','fill'),btn('run','filtered',{historyCount:4,actionShown:'起動候補：なし'}),
   edit('value','"0"','fill'),btn('run','invalid-filter',{historyCount:5}),
@@ -33,6 +35,7 @@ function plan(id){
   const run=(state,timeline)=>btn('run',state,{timeline,historyCount:timeline.length});
   return [
    edit('scenario','first'),run('success',[['0','','success']]),
+   search('Retry & Backoff Simulator','success',{timeline:[['0','','success']],historyCount:1}),
    edit('scenario','recover'),edit('policy','immediate'),run('success',[['0','0','transient'],['20','0','transient'],['40','','success']]),
    edit('policy','fixed'),run('success',[['0','100','transient'],['120','100','transient'],['240','','success']]),
    edit('policy','exponential'),run('success',[['0','100','transient'],['120','200','transient'],['340','','success']]),
@@ -49,13 +52,16 @@ function plan(id){
   const s=(key,state,effects,n)=>btn(key,state,{effects:String(effects),historyCount:n});
   return [
    s('run','new',0,1),s('run','in-flight',0,2),s('complete','completed',1,3),
+   {key:'gallery-category',action:'category-cycle',expect:{hiddenCount:0,visibleCount:1,state:'completed',effects:'1',historyCount:3}},
    edit('id','E-APP-02','fill'),s('run','duplicate',1,4),
    edit('payload','alternate'),s('run','conflict',1,5),
    edit('key','','fill'),s('run','invalid',1,6),reset(id),
    s('run','new',0,1),s('lost','unknown',1,2),
    edit('id','E-APP-02','fill'),s('run','blocked-unknown',1,3),
-   s('reconcile','completed',1,4),s('run','duplicate',1,5),
-   {key:'control',action:'space',expect:{effects:'1',controlOutput:{normal:'1',fault:'2'},historyCount:5}},
+   search('Idempotency Workbench','blocked-unknown',{effects:'1',historyCount:3}),
+   s('run','blocked-unknown',1,4),
+   s('reconcile','completed',1,5),s('run','duplicate',1,6),
+   {key:'control',action:'space',expect:{effects:'1',controlOutput:{normal:'1',fault:'2'},historyCount:6}},
    reset(id)
   ];
  }
@@ -77,7 +83,7 @@ function checkRecord(id,record,op){
   a.match(record.controlText[0],/正常.*副作用 1件/);
   a.match(record.controlText[1],/故障.*副作用 2件/);
  }
- a.equal(record.control[0],({enter:'BUTTON',space:'BUTTON',select:'SELECT',fill:'INPUT'})[op.action]);
+ a.equal(record.control[0],({enter:'BUTTON',space:'BUTTON',select:'SELECT',fill:'INPUT','category-cycle':'BUTTON'})[op.action]);
  a.equal(record.controlNamed,true,'named control '+id+'/'+op.key);
  a.equal(record.controlVisible,true,'control not in viewport '+id+'/'+op.key);
  a.equal(record.fits,true,'exhibit content escaped '+id);

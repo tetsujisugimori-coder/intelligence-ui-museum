@@ -13,7 +13,11 @@ function controlFor(host,card,key){
  return key==='reset'?card.locator('[data-action=reset]'):host.locator(`[data-w15-${key}]`);
 }
 async function apply(host,card,op){
- const control=controlFor(host,card,op.key);
+ const page=card.page();
+ const categoryCycle=op.action==='category-cycle';
+ const control=op.key==='gallery-search'?page.locator('#search'):categoryCycle
+  ?page.locator('#filters button[data-cat]:not([data-cat="すべて"]):not([data-cat="インタラクション"])').first()
+  :controlFor(host,card,op.key);
  await control.scrollIntoViewIfNeeded();
  const before=await control.evaluate(e=>{
   const r=e.getBoundingClientRect();
@@ -22,6 +26,12 @@ async function apply(host,card,op){
     controlVisible:r.width>0&&r.height>0&&r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth};
  });
  const kind=before.control;
+ if(categoryCycle){
+  await control.press('Enter');
+  const hiddenCount=await card.count();
+  await page.locator('#filters button[data-cat="すべて"]').press('Enter');
+  return {...before,hiddenCount,visibleCount:await card.count()};
+ }
  if(op.action==='select'){a.equal(kind[0],'SELECT');await control.selectOption(op.value);}
  else if(op.action==='fill'){a.equal(kind[0],'INPUT');await control.fill(op.value);}
  else if(op.action==='enter'||op.action==='space'){
