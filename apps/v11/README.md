@@ -1,3 +1,9 @@
+## 第15便（166–168）イベント起動・再試行・重複抑止
+
+青波交流館の架空申請を題材に、166 Event Trigger Inspector、167 Retry & Backoff Simulator、168 Idempotency Workbench を追加します。登録168件・11カテゴリー。実API・外部処理に接続しません。タイムアウトは未実行の証明ではなく、再送前のキー照合で副作用を抑止する設計を比較できます。 [事前受入契約](../../docs/wave15/ACCEPTANCE.md)。
+
+---
+
 ## 第14便（163–165）
 
 展示検索から 163 Data Mapping Workbench、164 Parallel Join Visualizer、165 Variable Scope Inspector を選択します。入力と出力の型付き接続、固定3枝の確定順、実行位置に応じた変数の参照範囲を比較します。165展示・11分類。JavaScriptを無効にした場合は既存117展示の静的一覧です。
