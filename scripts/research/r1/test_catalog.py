@@ -63,6 +63,37 @@ class CatalogContract(unittest.TestCase):
     def test_accessibility_promoted(self):
         self.check_fault(lambda x:x[-1]['accessibility'].update(runtime='PASS'),'accessibility promotion')
 
+    def test_forged_source_line_and_checksum(self):
+        self.check_fault(lambda x:x[-1]['source']['template'].update(line=1,blobSha256='a'*64),'bad source reference')
+
+    def test_required_shared_unknown(self):
+        self.check_fault(lambda x:x[0]['unknowns'].remove('liveAccessibility'),'mandatory shared UNKNOWN')
+
+    def test_unknown_wrong_type(self):
+        self.check_fault(lambda x:x[0].update(unknowns={'error': True}),'mandatory shared UNKNOWN')
+
+    def test_classification_wrong_type(self):
+        self.check_fault(lambda x:x[0]['classification'].update(basic={"button":True}),'bad classification reference')
+
+    def test_source_wrong_type(self):
+        self.check_fault(lambda x:x[0].update(source=None),'source type')
+
+    def test_binding_scope_demoted(self):
+        self.check_fault(lambda x:x[131].update(binding={'status':'N/A','value':None}),'invalid binding evidence/status')
+
+    def test_binding_unknown_not_promoted_to_na(self):
+        self.check_fault(lambda x:x[135].update(binding={'status':'N/A','value':None}),'invalid binding evidence/status')
+
+    def test_omitted_linked_view_binding(self):
+        self.check_fault(lambda x:x[138]['relations'].remove(['shares-key','composite:chart','composite:table']),'missing shared key relation')
+
+    def test_false_wave12_history(self):
+        fixture=deepcopy(self.good)
+        fixture[156]['implementation']['state']['value']='条件と履歴'
+        validate(fixture,self.registry,self.taxonomy)
+        with self.assertRaisesRegex(ValueError,'false decision history 157'):
+            pinned_vectors(fixture)
+
     def test_same_story_wrong_semantic_tag(self):
         fixture=deepcopy(self.good)
         fixture[120]['classification']['visualize'].remove('statistics')

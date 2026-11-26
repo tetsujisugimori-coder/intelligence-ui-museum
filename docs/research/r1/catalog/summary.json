@@ -5,14 +5,15 @@
   "exhibits": 168,
   "legacyCategories": 11,
   "coverage": {
-    "SOURCE_REVIEWED": 97,
-    "TEMPLATE_REVIEWED": 71
+    "SOURCE_REVIEWED": 168,
+    "TEMPLATE_REVIEWED": 0
   },
   "unclassified": 0,
   "exhibitsWithUnknowns": 168,
-  "unknownFields": 1101,
-  "relations": 664,
+  "unknownFields": 731,
+  "relations": 673,
   "containsRelations": 76,
+  "sharedKeyRelations": 2,
   "visualizeExhibits": 70,
   "definitions": {
     "basic": 17,
@@ -23,7 +24,7 @@
   },
   "observedKinds": {
     "basic": 16,
-    "composite": 13,
+    "composite": 14,
     "pattern": 19,
     "ai": 6,
     "visualize": 12
@@ -32,7 +33,7 @@
     "basic": {
       "badge": 2,
       "button": 145,
-      "checkbox": 6,
+      "checkbox": 7,
       "color-picker": 2,
       "date-time": 3,
       "file-input": 2,
@@ -41,12 +42,12 @@
       "number": 1,
       "progress-control": 3,
       "radio": 2,
-      "select": 16,
+      "select": 18,
       "slider": 4,
       "status-text": 67,
       "summary": 22,
       "text": 168,
-      "text-input": 13
+      "text-input": 14
     },
     "composite": {
       "card": 7,
@@ -56,11 +57,11 @@
       "dialog": 1,
       "disclosure": 22,
       "form": 1,
-      "graphic": 0,
+      "graphic": 1,
       "group": 6,
       "list": 14,
       "tab-list": 1,
-      "table": 2,
+      "table": 4,
       "timeline": 6,
       "workbench": 45
     },

@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 from html.parser import HTMLParser
+from functools import lru_cache
 import json
 from pathlib import Path
 import re
@@ -14,11 +15,12 @@ BASE = '691a52f4e61fb2b3bc5943c3544eda418d3c8ef7'
 TREE = 'c8df96120fc8235cafa362ad99c82f1d0efe676c'
 ORACLE = '2e4bd6c71695adc0fadc4a6651a57b6c8fd104d6f1a69cf848c9735a9661708a'
 UNKNOWN = 'UNKNOWN'
+SHARED_UNKNOWN = {'liveAccessibility','actualAiSelection','actualAiDataExchange'}
 AXES = ('selection', 'providedData', 'receiveOperation', 'combine', 'textFallback')
 FIELDS = ('inputs', 'outputs', 'operations', 'events', 'state', 'error', 'appropriate', 'inappropriate')
 LEVELS = ('basic', 'composite', 'pattern', 'ai', 'visualize')
 READ_FIELDS = {'id', 'name', 'legacyCategory', 'purpose', 'source', 'classification', 'relations',
-               'implementation', 'accessibility', 'aiHypotheses', 'status', 'unknowns'}
+               'implementation', 'accessibility', 'aiHypotheses', 'status', 'unknowns', 'binding'}
 PARSER_VERSION = 1
 
 
@@ -129,6 +131,7 @@ def parse_registry(index):
     return rows
 
 
+@lru_cache(maxsize=1)
 def fixed_sources():
     fail(git('rev-parse', f'{BASE}^{{tree}}').decode().strip() == TREE, 'baseline tree mismatch')
     paths = git('ls-tree','-r','--name-only',BASE,'apps/v11').decode().splitlines()
@@ -136,19 +139,24 @@ def fixed_sources():
     return {p.removeprefix('apps/v11/'):git('show',f'{BASE}:{p}').decode() for p in selected}
 
 
-def loc(sources, file, symbol, i):
-    source = sources[file]
-    hit = (re.search(re.escape(symbol), source) if symbol.startswith("case '") else
+@lru_cache(maxsize=512)
+def source_identity(source, symbol):
+    hit = (re.search(re.escape(symbol.removeprefix('literal:')), source) if symbol.startswith(("case '",'literal:')) else
            re.search(r'\b(?:function\s+|(?:const|let)\s+)'+re.escape(symbol)+r'\b', source))
-    fail(hit, f'locator not found: {file} {symbol}')
-    return {'path':'apps/v11/'+file,'line':source[:hit.start()].count('\n')+1,'symbol':symbol,
-            'exhibitId':i, 'blobSha256':hashlib.sha256(source.encode()).hexdigest()}
+    fail(hit, f'locator not found: {symbol}')
+    return source[:hit.start()].count('\n')+1,hashlib.sha256(source.encode()).hexdigest()
+
+
+def loc(sources, file, symbol, i):
+    line,digest=source_identity(sources[file],symbol)
+    return {'path':'apps/v11/'+file,'line':line,'symbol':symbol,'exhibitId':i,'blobSha256':digest}
 
 
 def read_templates(sources):
     with tempfile.TemporaryDirectory(prefix='trusted-base-',dir=ROOT/'.work/research-r1') as t:
         for name, text in sources.items():
             (Path(t)/name).write_text(text,encoding='utf8')
+        subprocess.check_output(['node',str(Path(__file__).with_name('probe-bindings.cjs')),t],cwd=ROOT,timeout=25)
         return json.loads(subprocess.check_output(['node',str(Path(__file__).with_name('read-templates.cjs')),t],
                                                  cwd=ROOT, timeout=25))
 
@@ -171,6 +179,25 @@ def hypotheses(item, study, classification):
                '必要時のみ入力と状態表示を組み合わせる。接続の妥当性は未検証。')
     return dict(zip(AXES, (selection,inputs,receive,combine,
                            '一つの説明・結果で目的を満たせば文章。反復比較や入力が必要ならUIを候補とする。'),strict=True))
+
+
+DYNAMIC = {132: {'composite:table':'<table><caption>開始と期間は編集中',
+                 'composite:chart':'data-w3-bar="', 'basic:text-input':'data-key="gantt-${t.id}-start"'},
+           136: {'basic:select':"select('node','移動ノード'", 'composite:graphic':'<svg width="340"'},
+           139: {'composite:chart':'<div data-graph', 'composite:table':'<table><thead><tr><th>選択',
+                 'basic:checkbox':'data-key="table-${r.id}"', 'basic:select':"select('sort','表の順序'"}}
+BINDINGS = {132: ('t.id','確定 tasks。編集中の開始/期間は別 drafts。確定/Undoで棒と表の確定終了日が同時に更新される。',
+                  'data-gantt-row="','data-w3-bar="'),
+            139: ('r.id','表示順を変えても selected は安定IDで保持。チャートの押下とチェック済み行が同一IDを参照。',
+                  'data-record="','data-row="')}
+
+
+def binding_for(sources, file, i):
+    if i not in BINDINGS:
+        return {'status':'N/A' if i==1 else UNKNOWN,'value':None}
+    key, meaning, left, right=BINDINGS[i]
+    return {'status':'SOURCE_PROBED','key':key,'meaning':meaning,
+            'anchors':[loc(sources,file,'literal:'+token,i) for token in (left,right)]}
 
 
 def make():
@@ -202,10 +229,18 @@ def make():
                           'card':(25,28,29,30,31,88,120)}.items():
             if i in ids and comp not in c['composite']:
                 c['composite'].append(comp)
+        for component, token in DYNAMIC.get(i,{}).items():
+            kind, tag=component.split(':')
+            if tag not in c[kind]:
+                c[kind].append(tag)
+            c[kind].sort()
+            refs.setdefault('dynamic',{})[component]=loc(sources,file,'literal:'+token,i)
         c['composite'].sort()
         relations=[['uses',f'{kind}:{k}', ('static-template' if k in (e.basic if kind=='basic' else e.composite) else 'source-review')]
                    for kind in ('basic','composite') for k in c[kind]]
         relations += [['contains',f'composite:{p}',f'basic:{b}'] for p,b in sorted(e.contains)]
+        if i in BINDINGS:
+            relations.append(['shares-key','composite:chart','composite:table'])
         facts = {key:{'status':UNKNOWN,'value':None} for key in FIELDS}
         if study:
             for k,v in zip(FIELDS,study[1:],strict=True):
@@ -219,16 +254,21 @@ def make():
                       'aiConnection':{'status':'NOT_TESTED','value':None},
                       'humanOperationTest':{'status':'NOT_TESTED','value':None}})
         purpose=markup['description'] or x['dup']
-        unknowns=[k for k in FIELDS if facts[k]['status']==UNKNOWN]+['liveAccessibility','actualAiSelection','actualAiDataExchange']
+        unknowns=sorted({k for k in FIELDS if facts[k]['status']==UNKNOWN}|SHARED_UNKNOWN|
+                        ({'sharedKeyBinding'} if binding_for(sources,file,i)['status']==UNKNOWN else set()))
         out.append({'id':i,'name':x['name'],'legacyCategory':x['category'],'purpose':purpose,'source':refs,
                     'classification':c,'relations':relations,'implementation':facts,
                     'accessibility':{'status':'STATIC_ONLY','templateMarkers':sorted(e.a11y),'runtime':'NOT_TESTED'},
                     'aiHypotheses':{'status':'HYPOTHESIS','axes':hypotheses(x,study,c)},
-                    'status':'SOURCE_REVIEWED' if study else 'TEMPLATE_REVIEWED','unknowns':unknowns})
+                    'status':'SOURCE_REVIEWED' if study else 'TEMPLATE_REVIEWED','unknowns':unknowns,
+                    'binding':binding_for(sources,file,i)})
     return out, registry, t
 
 
 def validate(rows, registry, taxonomy):
+    sources=fixed_sources()
+    annotations=json.loads((DOC/'annotations.json').read_text())
+    fail(type(rows) is list and all(type(r) is dict and 'id' in r for r in rows), 'row type or missing ID')
     ids = [r['id'] for r in rows]
     fail(all(type(i) is int for i in ids), 'ID type')
     fail(len(ids) == len(set(ids)), 'duplicate exhibit ID')
@@ -239,17 +279,22 @@ def validate(rows, registry, taxonomy):
         fail((row['name'],row['legacyCategory'])==(fixed['name'],fixed['category']), 'legacy identity drift')
         fail(isinstance(row['purpose'],str) and row['purpose'].strip(), 'purpose required')
         fail(row['status'] in {'SOURCE_REVIEWED','TEMPLATE_REVIEWED'}, 'invalid review status')
-        fail(set(row['classification']) == set(LEVELS), 'classification field mismatch')
+        fail(type(row['classification']) is dict and set(row['classification']) == set(LEVELS), 'classification field mismatch')
         for kind, refs in row['classification'].items():
-            fail(isinstance(refs,list) and refs==sorted(set(refs)) and set(refs)<=taxonomy[kind].keys(), 'bad classification reference')
+            fail(type(refs) is list and all(type(x) is str for x in refs) and refs==sorted(set(refs)) and set(refs)<=taxonomy[kind].keys(), 'bad classification reference')
         source=row['source']
-        fail(set(source)==({'template','registry','behavior'} if row['status']=='SOURCE_REVIEWED' else {'template','registry'}), 'source references missing')
+        fail(type(source) is dict, 'source type')
+        studied=annotations['study'].get(str(i))
+        expected={'template','registry'}|({'behavior'} if studied else set())|({'dynamic'} if i in DYNAMIC else set())
+        fail(set(source)==expected and (row['status']=='SOURCE_REVIEWED')==bool(studied), 'source references missing')
         fail(source['registry']=={'path':'apps/v11/index.html','elementId':'dataset','exhibitId':i}, 'registry source reference')
         file,symbol=profile(i)
-        for ref in (source[k] for k in source if k!='registry'):
-            fail(ref['path']=='apps/v11/'+file and ref['exhibitId']==i and
-                 type(ref['line']) is int and ref['line']>0 and re.fullmatch(r'[0-9a-f]{64}',ref['blobSha256']), 'bad source reference')
-        fail(source['template']['symbol']==symbol, 'wrong template route')
+        fail(source['template']==loc(sources,file,symbol,i), 'bad source reference')
+        if studied:
+            fail(source['behavior']==loc(sources,file,studied[0],i), 'bad behavior source reference')
+        if i in DYNAMIC:
+            fail(source['dynamic']=={k:loc(sources,file,'literal:'+v,i) for k,v in DYNAMIC[i].items()}, 'bad dynamic source reference')
+        fail(row['binding']==binding_for(sources,file,i), 'invalid binding evidence/status')
         c=row['classification']
         members={f'{k}:{v}' for k in ('basic','composite') for v in c[k]}
         uses=set()
@@ -261,23 +306,30 @@ def validate(rows, registry, taxonomy):
             if rel=='uses':
                 fail(q in {'static-template','source-review'} and p not in uses, 'invalid uses relation')
                 uses.add(p)
+            elif rel=='shares-key':
+                fail(i in BINDINGS and p=='composite:chart' and q=='composite:table' and q in members, 'invalid shared key relation')
             else:
                 fail(rel=='contains' and p.startswith('composite:') and q.startswith('basic:') and q in members, 'invalid contains reference')
         fail(members==uses, 'component missing relation')
+        fail(sum(x[0]=='shares-key' for x in relations)==int(i in BINDINGS), 'missing shared key relation')
         hypothesis=row['aiHypotheses']
-        fail(hypothesis['status']=='HYPOTHESIS' and set(hypothesis['axes'])==set(AXES) and
+        fail(type(hypothesis) is dict and hypothesis.get('status')=='HYPOTHESIS' and set(hypothesis['axes'])==set(AXES) and
              all(isinstance(x,str) and x.strip() for x in hypothesis['axes'].values()), 'invalid AI hypothesis')
         impl=row['implementation']
-        fail(set(impl)==set(FIELDS)|{'controlsInTemplate','stateAttributesInTemplate','componentTokens','initialText','aiConnection','humanOperationTest'}, 'behavior fields missing')
+        fail(type(impl) is dict and set(impl)==set(FIELDS)|{'controlsInTemplate','stateAttributesInTemplate','componentTokens','initialText','aiConnection','humanOperationTest'}, 'behavior fields missing')
         for k in FIELDS:
             d=impl[k]
-            fail(set(d)=={'status','value'}, 'invalid fact fields')
+            fail(type(d) is dict and set(d)=={'status','value'}, 'invalid fact fields')
             if d['status']==UNKNOWN:
                 fail(d['value'] is None and k in row['unknowns'], 'UNKNOWN masked')
             else:
                 expected_status='USE_CASE' if k in {'appropriate','inappropriate'} else 'SOURCE_READ'
                 fail(d['status']==expected_status and row['status']=='SOURCE_REVIEWED' and
                      isinstance(d['value'],str) and d['value'].strip() and k not in row['unknowns'], 'unsubstantiated fact')
+        unknowns=row['unknowns']
+        expected_unknowns=sorted({k for k in FIELDS if impl[k]['status']==UNKNOWN}|SHARED_UNKNOWN|
+                                 ({'sharedKeyBinding'} if row['binding']['status']==UNKNOWN else set()))
+        fail(unknowns==expected_unknowns,'mandatory shared UNKNOWN / invalid unknown set')
         fail(all(impl[k]=={'status':'NOT_TESTED','value':None} for k in ('aiConnection','humanOperationTest')), 'unperformed activity promoted')
         fail(row['accessibility']['status']=='STATIC_ONLY' and row['accessibility']['runtime']=='NOT_TESTED', 'accessibility promotion')
 
@@ -288,9 +340,16 @@ def pinned_vectors(rows):
         return key in rows[i-1]['classification'][level]
     for i,kind,tag in ((1,'basic','button'),(24,'basic','file-input'),(33,'composite','tab-list'),
                        (106,'basic','slider'),(121,'visualize','statistics'),(121,'composite','chart'),
-                       (134,'pattern','search'),(137,'visualize','hierarchy'),
+                       (132,'composite','table'),(134,'pattern','search'),(136,'basic','select'),
+                       (136,'composite','graphic'),(137,'visualize','hierarchy'),(139,'composite','table'),
                        (164,'visualize','workflow'),(168,'pattern','validation')):
         fail(has(i,kind,tag),f'missing independent positive vector {i} {tag}')
+    for i in (132,139):
+        fail(['shares-key','composite:chart','composite:table'] in rows[i-1]['relations'], f'missing independent binding {i}')
+    for i in (157,158):
+        fail('履歴なし' in rows[i-1]['implementation']['state']['value'], f'false decision history {i}')
+    fail(rows[0]['binding']['status']=='N/A' and rows[135]['binding']['status']==UNKNOWN, 'binding NOT_APPLICABLE/UNKNOWN confusion')
+    fail('履歴保持' in rows[158]['implementation']['state']['value'], 'missing decision history 159')
     for i,kind,tag in ((1,'visualize','workflow'),(24,'basic','select'),(121,'visualize','network'),
                        (137,'visualize','spatial'),(168,'ai','select-ui')):
         fail(not has(i,kind,tag),f'false independent vector {i} {tag}')
@@ -306,6 +365,7 @@ def summary(rows, taxonomy):
             'unknownFields':sum(len(r['unknowns']) for r in rows),
             'relations':sum(len(r['relations']) for r in rows),
             'containsRelations':sum(typ=='contains' for r in rows for typ,*_ in r['relations']),
+            'sharedKeyRelations':sum(typ=='shares-key' for r in rows for typ,*_ in r['relations']),
             'visualizeExhibits':sum(bool(r['classification']['visualize']) for r in rows),
             'definitions':{k:len(taxonomy[k]) for k in LEVELS},
             'observedKinds':{k:sum(bool(n) for n in v.values()) for k,v in usage.items()},

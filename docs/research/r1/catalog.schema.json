@@ -15,7 +15,8 @@
     "implementation",
     "accessibility",
     "aiHypotheses",
-    "unknowns"
+    "unknowns",
+    "binding"
   ],
   "properties": {
     "id": {
@@ -75,6 +76,12 @@
         },
         "behavior": {
           "$ref": "#/$defs/code"
+        },
+        "dynamic": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/code"
+          }
         }
       },
       "additionalProperties": false
@@ -118,7 +125,8 @@
           {
             "enum": [
               "uses",
-              "contains"
+              "contains",
+              "shares-key"
             ]
           },
           {
@@ -267,6 +275,58 @@
     },
     "unknowns": {
       "$ref": "#/$defs/refs"
+    },
+    "binding": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "value"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "N/A"
+              ]
+            },
+            "value": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "key",
+            "meaning",
+            "anchors"
+          ],
+          "properties": {
+            "status": {
+              "const": "SOURCE_PROBED"
+            },
+            "key": {
+              "type": "string"
+            },
+            "meaning": {
+              "type": "string"
+            },
+            "anchors": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "$ref": "#/$defs/code"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
     }
   },
   "additionalProperties": false,

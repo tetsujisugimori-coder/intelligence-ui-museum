@@ -44,6 +44,7 @@ jobs:
           set -euo pipefail
           python3 scripts/research/r1/catalog.py | tee "$DIR/catalog.json"
           python3 scripts/research/r1/test_catalog.py -v 2>&1 | tee "$DIR/tests.txt"
+          node scripts/research/r1/probe-bindings.cjs apps/v11 | tee "$DIR/bindings.txt"
           python3 apps/v11/verify.py | tee "$DIR/legacy.txt"
       - name: Manifest
         if: always()
