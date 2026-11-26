@@ -1,0 +1,112 @@
+{
+  "catalogVersion": 1,
+  "baseline": "691a52f4e61fb2b3bc5943c3544eda418d3c8ef7",
+  "tree": "c8df96120fc8235cafa362ad99c82f1d0efe676c",
+  "exhibits": 168,
+  "legacyCategories": 11,
+  "coverage": {
+    "SOURCE_REVIEWED": 97,
+    "TEMPLATE_REVIEWED": 71
+  },
+  "unclassified": 0,
+  "exhibitsWithUnknowns": 168,
+  "unknownFields": 1101,
+  "relations": 664,
+  "containsRelations": 76,
+  "visualizeExhibits": 70,
+  "definitions": {
+    "basic": 17,
+    "composite": 14,
+    "pattern": 19,
+    "ai": 7,
+    "visualize": 12
+  },
+  "observedKinds": {
+    "basic": 16,
+    "composite": 13,
+    "pattern": 19,
+    "ai": 6,
+    "visualize": 12
+  },
+  "usage": {
+    "basic": {
+      "badge": 2,
+      "button": 145,
+      "checkbox": 6,
+      "color-picker": 2,
+      "date-time": 3,
+      "file-input": 2,
+      "link": 0,
+      "multiline": 5,
+      "number": 1,
+      "progress-control": 3,
+      "radio": 2,
+      "select": 16,
+      "slider": 4,
+      "status-text": 67,
+      "summary": 22,
+      "text": 168,
+      "text-input": 13
+    },
+    "composite": {
+      "card": 7,
+      "carousel": 3,
+      "chart": 5,
+      "code-panel": 14,
+      "dialog": 1,
+      "disclosure": 22,
+      "form": 1,
+      "graphic": 0,
+      "group": 6,
+      "list": 14,
+      "tab-list": 1,
+      "table": 2,
+      "timeline": 6,
+      "workbench": 45
+    },
+    "pattern": {
+      "action": 10,
+      "chat-example": 14,
+      "compare": 19,
+      "confirm": 6,
+      "data-entry": 19,
+      "disclosure": 18,
+      "evidence": 14,
+      "gesture": 9,
+      "measure": 21,
+      "motion": 21,
+      "multi-selection": 5,
+      "navigate": 14,
+      "rating": 1,
+      "search": 7,
+      "state-edit": 26,
+      "status": 20,
+      "toggle": 8,
+      "validation": 39,
+      "workflow": 25
+    },
+    "ai": {
+      "compose-views": 9,
+      "conversation": 12,
+      "handoff": 6,
+      "present": 20,
+      "re-evaluate": 8,
+      "receive-action": 10,
+      "select-ui": 0
+    },
+    "visualize": {
+      "comparison": 19,
+      "hierarchy": 9,
+      "interactive": 56,
+      "network": 3,
+      "relation": 12,
+      "simulation": 23,
+      "spatial": 3,
+      "state-transition": 21,
+      "statistics": 15,
+      "structure": 19,
+      "time": 11,
+      "workflow": 17
+    }
+  }
+}
