@@ -22,7 +22,11 @@ const plan=id=>{
   edit('target','1'),act('undo','pending',{residual:[0,1],history:'失敗・効果が残留'}),
   act('undo','invalid',{residual:[0,1]}),search('Compensation Flow Simulator','invalid',{residual:[0,1]}),
   edit('target','0'),act('undo','manual',{residual:[1],reason:'部分復旧',detailsText:'枠確保：前進済み / 初期効果なし → 現在あり'}),
-  act('undo','invalid',{residual:[1]}),reset,act('run','pending',{residual:[0,1]}),
+  {...act('undo','invalid',{residual:[1],historyCount:24,detailsAll:['枠確保：前進済み / 初期効果なし → 現在あり / 補償失敗','受付確定：前進失敗']}),times:25},
+  reset,edit('origin','0'),act('run','no-effect',{residual:[],detailsAll:['仮登録：前進失敗','枠確保：未実行','受付確定：未実行']}),
+  {...act('undo','invalid',{historyCount:24,detailsAll:['仮登録：前進失敗','枠確保：未実行']}),times:25},
+  reset,edit('origin','1'),act('run','pending',{residual:[0],detailsAll:['仮登録：前進済み','枠確保：前進失敗','受付確定：未実行']}),
+  reset,act('run','pending',{residual:[0,1]}),
   act('undo','pending',{residual:[0]}),edit('target','0'),act('undo','restored',{residual:[],reason:'全補償'}),reset
  ];
  if(id===171)return [
@@ -51,6 +55,7 @@ function checkRecord(id,record,op){
   if(k==='residual')a.deepEqual(model.remaining,v,'residual mismatch');
   else if(k==='effects'||k==='tries')a.equal(model.items[0][k],v,k+' mismatch');
   else if(k==='reason')a.ok(record.status.includes(v),'reason mismatch: '+record.status);
+  else if(k==='detailsAll')for(const x of v)a.ok(record.details.includes(x),'missing stable step status: '+x);
   else if(k==='detailsText')a.ok(record.details.includes(v),'details mismatch: '+record.details);
   else if(k==='history')a.ok(record.renderedHistory.some(x=>x.includes(v)),'missing failed compensation');
   else a.deepEqual(record[k],v,'observed '+k+' mismatch '+id+'/'+op.key);

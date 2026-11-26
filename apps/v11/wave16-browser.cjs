@@ -37,7 +37,7 @@ async function apply(host,card,op){
  else if(op.action==='enter'||op.action==='space'){
   a.equal(kind[0],'BUTTON');await control.focus();
   a.ok(await control.evaluate(e=>e===document.activeElement),'native button focus before key');
-  await control.press(op.action==='enter'?'Enter':'Space');
+  for(let i=0;i<(op.times??1);i++)await control.press(op.action==='enter'?'Enter':'Space');
  }else throw new Error('unknown operation: '+op.action);
  return {...before,value:op.action==='select'||op.action==='fill'?await control.inputValue():null};
 }

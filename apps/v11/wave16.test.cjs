@@ -22,13 +22,15 @@ function compOracle(lib, fail=true){
  a.equal(lib.undo(s,1)[0],'pending');a.equal(lib.undo(s,1)[0],'invalid');
  a.equal(lib.undo(s,0)[0],fail?'manual':'restored');
  a.deepEqual(Array.from(s.remaining),fail?[1]:[]);
+ a.deepEqual(Array.from(s.outcomes),['succeeded',fail?'failed':'succeeded',null]);
+ a.equal(s.failureStep,2);
  a.deepEqual(Array.from(s.completed),[0,1]);a.equal(lib.undo(s,0)[0],'invalid');
 }
 test('170: residual effect and manual remediation',()=>compOracle(W));
 test('170: full compensation',()=>compOracle(W,false));
 test('170: all forward success and absent completed steps',()=>{
  for(const [failAt,expected,completed] of [[-1,'finished',[0,1,2]],[0,'no-effect',[]],[1,'pending',[0]]]){
-  const s=W.newCompensation();a.equal(W.begin(s,failAt,-1)[0],expected);a.deepEqual(s.completed,completed);
+  const s=W.newCompensation();a.equal(W.begin(s,failAt,-1)[0],expected);a.deepEqual(s.completed,completed);a.equal(s.failureStep,failAt<0?null:failAt);
  }
 });
 function queueOracle(lib){
@@ -50,18 +52,15 @@ test('fresh models reset all operations',()=>{
 });
 const source=fs.readFileSync(require.resolve('./wave16.js'),'utf8');
 const mutants=[
- ['unknown routes to retry',"'unknown':'manual'","'unknown':'retry'"],
+ ['unknown routes to retry',"return result('manual'","return result('retried'"],
  ['compensate before execution',"s.phase!=='pending' || next!==index","s.phase==='finished'"],
  ['pretend failed compensation restored',"s.remaining.length?'manual':'restored'","'restored'"],
  ['ignore quarantine',"item.kind==='malformed'||item.kind==='permanent'","false"],
  ['rerun already processed',"item.state==='processed'||item.state==='running'","item.state==='running'"],
 ];
 for(const [name,from,to] of mutants) test('fault rejected: '+name,()=>{
- const target=name==='unknown routes to retry'?"return result('manual'":"return result('manual'";
- const actualFrom=name==='unknown routes to retry'?target:from;
- const actualTo=name==='unknown routes to retry'?"return result('retried'":to;
- a.ok(source.includes(actualFrom));
- const context={module:{exports:{}}};vm.runInNewContext(source.replace(actualFrom,actualTo),context);
+ a.ok(source.includes(from));
+ const context={module:{exports:{}}};vm.runInNewContext(source.replace(from,to),context);
  const lib=context.module.exports;
  a.throws(()=>name==='unknown routes to retry'?a.equal(lib.route('unknown',2,'standard',true).state,'manual'):
    name.startsWith('compensate')||name.startsWith('pretend')?compOracle(lib):queueOracle(lib),{code:'ERR_ASSERTION'});

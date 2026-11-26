@@ -86,6 +86,7 @@ function inspect(dir){
  negative(row=>{row.steps[169][0].operation.expect.state='not-real';},/operation mismatch/);
  negative(row=>{row.steps[169][0].state='not-real';row.steps[169][0].snapshot.current[0]='not-real';},/observed state mismatch/);
  negative(row=>{row.steps[170].find(x=>x.operation.expect.state==='manual').snapshot.model.remaining=[];},/residual mismatch/);
+ negative(row=>{const step=row.steps[170].find(x=>x.operation.times===25);step.details=step.details.replace('補償失敗','補償未実行');},/missing stable step status/);
  negative(row=>{row.steps[171].find(x=>x.operation.expect.state==='processed').snapshot.model.items[0].effects=2;},/effects mismatch/);
  negative(row=>{row.consoleErrors.push('unexpected');},/Expected values/);
  const rerun=structuredClone(r.results);rerun[1].key=rerun[0].key;
@@ -96,7 +97,7 @@ function inspect(dir){
  a.ok(dark&&dark.key!==original.key,'alternate valid trace exists');
  a.throws(()=>trace(dir,original,dark.key),e=>/trace\/HAR page identity|trace condition identity/.test(e.stderr?.toString()??''),'swapped valid-CRC trace fails identity');
  const count=r.results.reduce((n,row)=>n+Object.values(row.steps).reduce((k,x)=>k+x.length,0),0);
- console.log('PASS '+r.results.length+' conditions / '+count+' operation records / 9 auditor negatives; HAR and Git source bytes agree; trace/HAR identity and ZIP CRC checked');
+ console.log('PASS '+r.results.length+' conditions / '+count+' operation records / 10 auditor negatives; HAR and Git source bytes agree; trace/HAR identity and ZIP CRC checked');
 }
 if(require.main===module)inspect(process.argv[2]);
 module.exports={inspect,checkMatrix,expectMap};

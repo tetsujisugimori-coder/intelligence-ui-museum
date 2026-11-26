@@ -38,12 +38,13 @@
     return result('limit','一時障害。上限 '+cap+' 回に達し停止。');
   }
 
-  const newCompensation = () => ({phase:'idle', completed:[], remaining:[], attempted:[], history:[], failComp:-1});
+  const newCompensation = () => ({phase:'idle', completed:[], remaining:[], attempted:[], history:[], failComp:-1, failureStep:null, outcomes:[null,null,null]});
   function begin(s, failAt, failComp) {
     if (s.phase !== 'idle' || ![-1,0,1,2].includes(failAt) || ![-1,0,1,2].includes(failComp)) return ['invalid','開始済み、または設定不正。Resetで別試行を開始してください。'];
     s.failComp=failComp;
     for (let i=0;i<steps.length;i++) {
       if (i===failAt) {
+        s.failureStep=i;
         s.history.push(steps[i]+'：失敗（未確定）');
         s.phase = s.completed.length ? 'pending' : 'no-effect';
         return [s.phase,s.completed.length?'完了済み工程を後ろから補償してください。':'完了済み工程なし。補償なし。'];
@@ -61,6 +62,7 @@
     }
     s.attempted.push(index);
     const success=index!==s.failComp;
+    s.outcomes[index]=success?'succeeded':'failed';
     if(success)s.remaining=s.remaining.filter(x=>x!==index);
     s.history.push('新規の補償操作：'+steps[index]+' → '+(success?'成功':'失敗・効果が残留'));
     if(s.attempted.length===s.completed.length)s.phase=s.remaining.length?'manual':'restored';
@@ -105,7 +107,7 @@
     const forms={
       169:['障害の種類で通知処理の経路を切り替えます。正常経路：受付 → 入力確認 → 通知。異常経路：再試行・代替・人手確認・停止。',
         select('origin','障害分類',named(failureLabels))+select('cap','再試行上限（初回を除く）',[2,0,1,3].map(n=>[n,n+' 回']))+
-        select('policy','経路設定',[['standard','標準'],['missing','故障対照：未定義'],['cycle','故障対照：自己参照'],['multi-cycle','故障対照：複数箇所の循環']])+
+        select('policy','経路設定（標準／故障対照）',[['standard','標準'],['missing','未定義'],['cycle','自己参照'],['multi-cycle','複数箇所の循環']])+
         select('recovery','回復条件',[['yes','回復可能'],['no','回復不可']])+btn('run','経路を実行')],
       170:['成功した工程の効果だけに、逆順で新しい補償操作を行います。巻き戻しとは違い実行の履歴は残ります。',
         select('origin','障害を起こす工程',[['2','受付確定'],['-1','障害なし'],...stepChoices.slice(0,2)])+
@@ -142,8 +144,10 @@
         const d=$('details');d.replaceChildren();
         if(id===170) {
           const facts=add(d,'ul','');
-          for(let i=0;i<steps.length;i++) add(facts,'li',steps[i]+'：'+(comp.completed.includes(i)?'前進済み':'未完了')+
-            ' / 初期効果なし → '+(comp.remaining.includes(i)?'現在あり':'現在なし'));
+          const forward=i=>comp.completed.includes(i)?'前進済み':comp.failureStep===i?'前進失敗':'未実行';
+          const reversed={succeeded:'補償成功',failed:'補償失敗'};
+          for(let i=0;i<steps.length;i++) add(facts,'li',steps[i]+'：'+forward(i)+
+            ' / 初期効果なし → '+(comp.remaining.includes(i)?'現在あり':'現在なし')+' / '+(reversed[comp.outcomes[i]]??'補償未実行'));
         }
         if(id===171) {
           const listDetails=add(d,'ul','');

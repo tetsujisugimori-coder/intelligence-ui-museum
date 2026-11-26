@@ -9,7 +9,7 @@ data=json.loads(re.search(pattern,original)[2])
 for fault in ['normal','duplicate','count','previous123','metadata']:
  with tempfile.TemporaryDirectory(prefix='preservation-') as tmp:
   d=Path(tmp)
-  for file in ['apps/v11/verify.py','apps/v11/wave1-baseline.json','apps/v11/wave2-baseline.json','apps/v11/wave3-baseline.json','apps/v11/wave4-baseline.json','apps/v11/wave5-baseline.json','apps/v11/wave6-baseline.json','apps/v11/wave7-baseline.json','docs/wave8/BASELINE.json','docs/wave9/BASELINE.json','apps/v11/wave10-baseline.json','apps/v11/wave11-baseline.json','apps/v11/wave12-baseline.json','apps/v11/wave13-baseline.json','apps/v11/wave14-baseline.json','apps/v11/wave15-baseline.json','legacy/v09/index.html']:
+  for file in ['apps/v11/verify.py','apps/v11/wave1-baseline.json','apps/v11/wave2-baseline.json','apps/v11/wave3-baseline.json','apps/v11/wave4-baseline.json','apps/v11/wave5-baseline.json','apps/v11/wave6-baseline.json','apps/v11/wave7-baseline.json','docs/wave8/BASELINE.json','docs/wave9/BASELINE.json','apps/v11/wave10-baseline.json','apps/v11/wave11-baseline.json','apps/v11/wave12-baseline.json','apps/v11/wave13-baseline.json','apps/v11/wave14-baseline.json','apps/v11/wave15-baseline.json','apps/v11/wave16-baseline.json','legacy/v09/index.html']:
    (d/file).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(root/file,d/file)
   # verify.py now requires the complete protected set. These are separate byte
   # copies, not links: fixture mutations cannot alter an original or its mode.
