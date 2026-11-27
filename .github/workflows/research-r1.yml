@@ -1,6 +1,7 @@
 name: Research R1 inventory
 on:
   pull_request:
+    types: [opened, reopened, synchronize, edited]
     paths:
       - 'docs/research/r1/**'
       - 'scripts/research/r1/**'
@@ -13,6 +14,7 @@ jobs:
     timeout-minutes: 10
     env:
       PYTHONDONTWRITEBYTECODE: '1'
+      EXPECTED_BASE: ${{ github.event.pull_request.base.sha }}
       EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
       DIR: .work/r1-ci-evidence
     steps:
@@ -35,16 +37,25 @@ jobs:
           {
             git rev-parse HEAD
             git rev-parse 'HEAD^{tree}'
+            printf 'prBase %s\n' "$EXPECTED_BASE"
             printf '%s\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$RUNNER_OS"
             python3 --version
             node --version
           } > "$DIR/execution.txt"
-      - name: Verify inventory and fault controls
+      - name: Verify committed PR scope
+        run: |
+          set -euo pipefail
+          python3 scripts/research/r1/check_scope.py --base "$EXPECTED_BASE" --head "$EXPECTED_HEAD" | tee "$DIR/pr-scope.json"
+      - name: Verify frozen inventory and fault controls
         run: |
           set -euo pipefail
           python3 scripts/research/r1/catalog.py | tee "$DIR/catalog.json"
           python3 scripts/research/r1/test_catalog.py -v 2>&1 | tee "$DIR/tests.txt"
-          node scripts/research/r1/probe-bindings.cjs apps/v11 | tee "$DIR/bindings.txt"
+          python3 scripts/research/r1/test_scope.py -v 2>&1 | tee "$DIR/scope-tests.txt"
+          python3 scripts/research/r1/catalog.py --probe-bindings | tee "$DIR/bindings.txt"
+      - name: Verify checked-out product independently
+        run: |
+          set -euo pipefail
           python3 apps/v11/verify.py | tee "$DIR/legacy.txt"
       - name: Manifest
         if: always()

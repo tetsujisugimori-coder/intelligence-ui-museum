@@ -28,12 +28,19 @@ uses/basic:button/static-template はその展示のテンプレートにボタ�
 
     PYTHONDONTWRITEBYTECODE=1 python3 scripts/research/r1/catalog.py
     PYTHONDONTWRITEBYTECODE=1 python3 scripts/research/r1/test_catalog.py -v
-    node scripts/research/r1/probe-bindings.cjs apps/v11
+    PYTHONDONTWRITEBYTECODE=1 python3 scripts/research/r1/test_scope.py -v
+    PYTHONDONTWRITEBYTECODE=1 python3 scripts/research/r1/catalog.py --probe-bindings
     python3 scripts/verify-migration.py
     python3 apps/v11/verify.py
 
 Python 3.10以降、Node.js、Gitを使い、追加依存なし。固定コミットは取得済みであること。先にソース対応とラベル理由をレビューして、変更を明示的に再生成する場合だけ catalog.py --write。現行の固定ベースを保持し、第16便の受入後は基準commit/tree、ID/名称/分類の独立採取、表示分岐、差分台帳をレビューの上で更新する。169～171をこの基準に混入させない。
 
-専用CIは読み取り権限、固定PR HEADの取得と検証のみ。Pages、Sites、実AIへの接続を追加しない。既存CI回帰の結果は専用CIと別に報告する。R2の表示・相性判定、R3以降の模擬／実AIは対象外。
+検査は次の三つを分離する。
+
+1. **固定168件の再現:** `catalog.py` は固定BASEのGit blobから採取し、現行チェックアウトの展示数とは無関係に台帳をバイト照合する。 `--probe-bindings` も固定blobを使う。
+2. **R1 PRの変更範囲:** `python3 scripts/research/r1/check_scope.py --base <PRイベントのbase SHA> --head <PRイベントのhead SHA>`。指定HEADをチェックアウトして実行する。固定BASEのtreeと、固定BASEを祖先とする一意なmerge-baseを確認し、そこからHEADまでのコミット差分を検査する。共通祖先より後にbase側だけで増えた展示はR1差分ではない。R1側に混入した製品変更は、第16便と同じパスであっても拒否する。新旧のパスを別々に判定するため、rename検出を使わない。コミット前のローカル変更はこの検査の対象ではない。
+3. **製品の回帰:** `apps/v11/verify.py` はチェックアウトした製品を独立に検証する。固定台帳の再現とは別で、製品が171件になれば製品側の基準で検査する。
+
+専用CIは読み取り権限、PRイベントで指定されたbase/headを使った固定PR HEADの取得と検証のみ。Pages、Sites、実AIへの接続を追加しない。既存CI回帰の結果は専用CIと別に報告する。R2の表示・相性判定、R3以降の模擬／実AIは対象外。
 
 132・136・139の条件分岐後の出力と157–159の決定履歴は、最小のDOMスタブに固定ソースを読み込む追加probeでも確認した。操作ブラウザ、通信ログ、全組成を確認するものではない。
