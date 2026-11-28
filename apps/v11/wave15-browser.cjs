@@ -2,7 +2,7 @@
 const a=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http'),crypto=require('node:crypto'),cp=require('node:child_process');
 const C=require('./wave15-browser-contract.cjs');
 const matrix=['chromium','webkit'].flatMap(engine=>['light','dark'].flatMap(theme=>[375,390,1280].map(width=>({engine,theme,width,zoom:1}))).concat({engine,theme:'dark',width:375,zoom:2}));
-const assets=['index.html','exhibits.js','exhibits.css',...Array.from({length:13},(_,i)=>['wave'+(i+1)+'.js','wave'+(i+1)+'.css']).flat(),'wave14-mapping.js','wave14-join.js','wave14-scope.js','wave14.css','wave15.js','wave15.css'];
+const assets=['index.html','exhibits.js','exhibits.css',...Array.from({length:13},(_,i)=>['wave'+(i+1)+'.js','wave'+(i+1)+'.css']).flat(),'wave14-mapping.js','wave14-join.js','wave14-scope.js','wave14.css','wave15.js','wave15.css','wave16.js','wave16.css'];
 const execution=['wave15-browser.cjs','wave15-browser-contract.cjs','wave15-audit.cjs','wave15.test.cjs','wave15-manifest.py','package.json','package-lock.json'];
 const workflow='v11-wave15.yml';
 const tags=['input','select','button','output','p','li','label','h3','h4','dt','dd','pre'];
@@ -113,7 +113,7 @@ async function main(){
    row.themeObserved=await p.locator('body').evaluate(b=>b.classList.contains('light')?'light':'dark');
    row.reduced=await p.evaluate(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);
    row.viewport=await p.evaluate(()=>[innerWidth,innerHeight]);
-   a.equal(await p.locator('#gallery article').count(),168);
+   a.equal(await p.locator('#gallery article').count(),171);
    for(const id of C.ids){
     await p.locator('#search').fill(String(id));
     a.equal(await p.locator('#gallery article').count(),1);
