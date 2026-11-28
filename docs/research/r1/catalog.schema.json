@@ -1,0 +1,400 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Intelligence UI Museum R1 JSONL row",
+  "version": 1,
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "legacyCategory",
+    "purpose",
+    "status",
+    "source",
+    "classification",
+    "relations",
+    "implementation",
+    "accessibility",
+    "aiHypotheses",
+    "unknowns",
+    "binding"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "legacyCategory": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "SOURCE_REVIEWED",
+        "TEMPLATE_REVIEWED"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "registry",
+        "template"
+      ],
+      "properties": {
+        "registry": {
+          "type": "object",
+          "required": [
+            "path",
+            "elementId",
+            "exhibitId"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "elementId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "exhibitId": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "template": {
+          "$ref": "#/$defs/code"
+        },
+        "behavior": {
+          "$ref": "#/$defs/code"
+        },
+        "dynamic": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/code"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "classification": {
+      "type": "object",
+      "required": [
+        "basic",
+        "composite",
+        "pattern",
+        "ai",
+        "visualize"
+      ],
+      "properties": {
+        "basic": {
+          "$ref": "#/$defs/refs"
+        },
+        "composite": {
+          "$ref": "#/$defs/refs"
+        },
+        "pattern": {
+          "$ref": "#/$defs/refs"
+        },
+        "ai": {
+          "$ref": "#/$defs/refs"
+        },
+        "visualize": {
+          "$ref": "#/$defs/refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "relations": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "prefixItems": [
+          {
+            "enum": [
+              "uses",
+              "contains",
+              "shares-key"
+            ]
+          },
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "type": "string",
+            "minLength": 1
+          }
+        ]
+      }
+    },
+    "implementation": {
+      "type": "object",
+      "required": [
+        "inputs",
+        "outputs",
+        "operations",
+        "events",
+        "state",
+        "error",
+        "appropriate",
+        "inappropriate",
+        "aiConnection",
+        "humanOperationTest",
+        "controlsInTemplate",
+        "stateAttributesInTemplate",
+        "componentTokens",
+        "initialText"
+      ],
+      "properties": {
+        "inputs": {
+          "$ref": "#/$defs/fact"
+        },
+        "outputs": {
+          "$ref": "#/$defs/fact"
+        },
+        "operations": {
+          "$ref": "#/$defs/fact"
+        },
+        "events": {
+          "$ref": "#/$defs/fact"
+        },
+        "state": {
+          "$ref": "#/$defs/fact"
+        },
+        "error": {
+          "$ref": "#/$defs/fact"
+        },
+        "appropriate": {
+          "$ref": "#/$defs/fact"
+        },
+        "inappropriate": {
+          "$ref": "#/$defs/fact"
+        },
+        "aiConnection": {
+          "$ref": "#/$defs/fact"
+        },
+        "humanOperationTest": {
+          "$ref": "#/$defs/fact"
+        },
+        "controlsInTemplate": {
+          "$ref": "#/$defs/refs"
+        },
+        "stateAttributesInTemplate": {
+          "$ref": "#/$defs/refs"
+        },
+        "componentTokens": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/refs"
+          }
+        },
+        "initialText": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "accessibility": {
+      "type": "object",
+      "required": [
+        "status",
+        "templateMarkers",
+        "runtime"
+      ],
+      "properties": {
+        "status": {
+          "const": "STATIC_ONLY"
+        },
+        "templateMarkers": {
+          "$ref": "#/$defs/refs"
+        },
+        "runtime": {
+          "const": "NOT_TESTED"
+        }
+      },
+      "additionalProperties": false
+    },
+    "aiHypotheses": {
+      "type": "object",
+      "required": [
+        "status",
+        "axes"
+      ],
+      "properties": {
+        "status": {
+          "const": "HYPOTHESIS"
+        },
+        "axes": {
+          "type": "object",
+          "required": [
+            "selection",
+            "providedData",
+            "receiveOperation",
+            "combine",
+            "textFallback"
+          ],
+          "properties": {
+            "selection": {
+              "type": "string",
+              "minLength": 1
+            },
+            "providedData": {
+              "type": "string",
+              "minLength": 1
+            },
+            "receiveOperation": {
+              "type": "string",
+              "minLength": 1
+            },
+            "combine": {
+              "type": "string",
+              "minLength": 1
+            },
+            "textFallback": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "unknowns": {
+      "$ref": "#/$defs/refs"
+    },
+    "binding": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "value"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "N/A"
+              ]
+            },
+            "value": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "key",
+            "meaning",
+            "anchors"
+          ],
+          "properties": {
+            "status": {
+              "const": "SOURCE_PROBED"
+            },
+            "key": {
+              "type": "string"
+            },
+            "meaning": {
+              "type": "string"
+            },
+            "anchors": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "$ref": "#/$defs/code"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "refs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "fact": {
+      "type": "object",
+      "required": [
+        "status",
+        "value"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "SOURCE_READ",
+            "USE_CASE",
+            "UNKNOWN",
+            "NOT_TESTED"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "code": {
+      "type": "object",
+      "required": [
+        "path",
+        "symbol",
+        "line",
+        "exhibitId",
+        "blobSha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "symbol": {
+          "type": "string",
+          "minLength": 1
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "exhibitId": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "blobSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

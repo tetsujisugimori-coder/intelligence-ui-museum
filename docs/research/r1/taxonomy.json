@@ -1,0 +1,42 @@
+{
+  "basic": {
+    "text":"可視テキストまたは文の断片", "button":"ネイティブまたはARIAボタン",
+    "text-input":"一行テキスト入力", "multiline":"複数行入力", "select":"選択リスト・combobox",
+    "checkbox":"真偽選択", "radio":"排他的候補", "slider":"範囲入力", "number":"数値入力",
+    "date-time":"日付・時刻入力", "file-input":"ファイル入力", "color-picker":"色入力",
+    "link":"リンク", "badge":"小型の状態・カテゴリ表示", "summary":"開閉の見出し",
+    "status-text":"output又はlive region", "progress-control":"ネイティブ進捗・範囲表示"
+  },
+  "composite": {
+    "table":"列・行を持つHTML表", "form":"form要素", "list":"箇条書き又はリスト役割",
+    "disclosure":"details/summaryの開閉構造", "dialog":"ダイアログ要素・役割",
+    "group":"fieldset・groupによるグループ化", "tab-list":"ARIAタブ集合",
+    "graphic":"SVG/Canvas描画面（図種別は別軸）", "code-panel":"整形済みテキスト・コード",
+    "carousel":"複数候補を順に閲覧・選択する構成", "timeline":"順序のある履歴・遷移を表示する構成",
+    "chart":"定量値・尺度の視覚表現", "workbench":"複数の入力・結果・履歴等を比較するラボUI",
+    "card":"見出し付き情報と操作のまとまり。共通外枠ではなく展示内に現れるもの"
+  },
+  "pattern": {
+    "action":"操作の起点", "confirm":"選択・許可・取消を明示", "toggle":"値・表示設定の切替",
+    "data-entry":"データや条件を入力", "search":"検索・絞り込み", "disclosure":"詳細・補足を開閉",
+    "status":"処理段階・完了・失敗の表示", "navigate":"別のページ・粒度・順序へ移動",
+    "measure":"定量値や基準との関係を理解", "rating":"尺度による評価", "multi-selection":"複数の候補を選択",
+    "motion":"動きによる情報提示・装飾", "chat-example":"対話アプリの例を教材として再現",
+    "evidence":"出典・比較・検証可能な根拠を提示", "gesture":"ポインター等の操作と代替を比較",
+    "state-edit":"現在状態・入力・履歴を変更", "workflow":"複数ステップの状態・ルールを扱う",
+    "compare":"複数の候補・条件・結果を比較", "validation":"無効値・制約を検査"
+  },
+  "ai": {
+    "select-ui":"目的と制約に基づくUI選定（R1では実装確認なし）",
+    "present":"AI出力や提案を想定した表示", "receive-action":"利用者操作を次の判断に使う例",
+    "re-evaluate":"結果の変更・再判定", "handoff":"ツール実行や担当への引継ぎを模擬",
+    "compose-views":"複数の表示・操作の組み合わせ", "conversation":"会話内表示や状態の継続を模擬"
+  },
+  "visualize": {
+    "statistics":"定量値・分布・尺度", "comparison":"複数の比較", "time":"順序・時間軸",
+    "structure":"全体と構成", "relation":"対象間の関係", "hierarchy":"上下・包含・親子",
+    "state-transition":"状態変化", "workflow":"工程・処理順", "network":"ノードと接続",
+    "spatial":"座標や画面内位置", "simulation":"モデルによる試算・模擬処理",
+    "interactive":"ユーザー操作と動的表現の連動"
+  }
+}
