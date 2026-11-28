@@ -1,3 +1,7 @@
+## 第16便（169–171）障害経路・補償・隔離
+
+青波交流館の架空ケースで、169 Error Routing Workbench、170 Compensation Flow Simulator、171 Dead Letter Queue Inspector を追加。171展示・11分類。[受入契約](docs/wave16/ACCEPTANCE.md)を参照。Stage 3 HOLDは変更しません。
+
 ## 第15便（166–168）イベント起動・再試行・重複抑止
 
 青波交流館の架空申請を題材に、166 Event Trigger Inspector、167 Retry & Backoff Simulator、168 Idempotency Workbench を追加します。登録168件・11カテゴリー。実API・外部処理に接続しません。タイムアウトは未実行の証明ではなく、再送前のキー照合で副作用を抑止する設計を比較できます。 [事前受入契約](docs/wave15/ACCEPTANCE.md)。

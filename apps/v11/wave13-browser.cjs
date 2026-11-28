@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),
 const C=require('./wave13-contract.cjs');
 const root=path.resolve(process.env.APP_ROOT||'.work/wave13-app'),out=path.resolve(process.env.EVIDENCE_DIR||'.work/wave13-evidence');
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
-const assets=['index.html','exhibits.js','exhibits.css',...Array.from({length:13},(_,i)=>[`wave${i+1}.js`,`wave${i+1}.css`]).flat(),'wave14-mapping.js','wave14-join.js','wave14-scope.js','wave14.css','wave15.js','wave15.css'];
+const assets=['index.html','exhibits.js','exhibits.css',...Array.from({length:13},(_,i)=>[`wave${i+1}.js`,`wave${i+1}.css`]).flat(),'wave14-mapping.js','wave14-join.js','wave14-scope.js','wave14.css','wave15.js','wave15.css','wave16.js','wave16.css'];
 const execution=['wave13-browser.cjs','wave13-contract.cjs','wave13-test.cjs','wave13-audit.cjs','wave13-manifest.py','wave13-baseline.json','verify.py','package.json','package-lock.json'];
 const matrix=['chromium','webkit'].flatMap(engine=>['light','dark'].flatMap(theme=>[375,390,1280].map(width=>({engine,theme,width,zoom:1}))).concat({engine,theme:'dark',width:375,zoom:2}));
 const tags=['input','select','button','output','p','li','label'];
@@ -53,7 +53,7 @@ async function run(){
     row.themeObserved=await p.locator('body').evaluate(b=>b.classList.contains('light')?'light':'dark');
     row.reduced=await p.evaluate(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);
     a.equal(row.themeObserved,c.theme);a.equal(row.reduced,c.zoom===2);
-    a.equal(await p.locator('#gallery article').count(),168);
+    a.equal(await p.locator('#gallery article').count(),171);
     for(const id of [160,161,162]){
      await p.locator('#search').fill(String(id));
      a.equal(await p.locator('#gallery article').count(),1);

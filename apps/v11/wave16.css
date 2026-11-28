@@ -1,0 +1,6 @@
+.wave16{min-width:0;overflow-wrap:anywhere}
+.wave16-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:.6em;align-items:end}
+.wave16-controls label{display:grid;min-width:0;gap:.3em}
+.wave16-controls :is(button,input,select){min-width:0;width:100%;max-width:100%;white-space:normal;text-align:start}
+.wave16 :focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.wave16 :is(ol,ul){margin-block:.5em;padding-inline-start:1.4em}
