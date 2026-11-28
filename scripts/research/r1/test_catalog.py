@@ -19,13 +19,13 @@ class CatalogContract(unittest.TestCase):
     def test_complete_fixed_entry_set_and_literal_vectors(self):
         validate(self.good,self.registry,self.taxonomy)
         pinned_vectors(self.good)
-        self.assertEqual([r['id'] for r in self.good],list(range(1,169)))
+        self.assertEqual([r['id'] for r in self.good],list(range(1,172)))
 
     def test_duplicate_id(self):
         self.check_fault(lambda x:x.append(x[0]),'duplicate exhibit ID')
 
     def test_phantom_id(self):
-        self.check_fault(lambda x:x[-1].update(id=171),'missing, invented or reordered ID')
+        self.check_fault(lambda x:x[-1].update(id=172),'missing, invented or reordered ID')
 
     def test_missing_exhibit(self):
         self.check_fault(lambda x:x.pop(),'missing, invented or reordered ID')
@@ -93,6 +93,37 @@ class CatalogContract(unittest.TestCase):
         validate(fixture,self.registry,self.taxonomy)
         with self.assertRaisesRegex(ValueError,'false decision history 157'):
             pinned_vectors(fixture)
+
+    def test_wave16_detail_source_forgery(self):
+        self.check_fault(lambda x:x[170]['source']['dynamic']['composite:list'].update(line=1), 'bad dynamic source reference')
+
+    def test_wave16_hidden_association(self):
+        fixture=deepcopy(self.good)
+        fixture[169]['relations'].remove(['contains','composite:timeline','basic:text'])
+        validate(fixture,self.registry,self.taxonomy)
+        with self.assertRaisesRegex(ValueError,'missing Wave 16 history containment 170'):
+            pinned_vectors(fixture)
+
+    def test_wave16_classification_omission(self):
+        fixture=deepcopy(self.good)
+        fixture[170]['classification']['pattern'].remove('search')
+        validate(fixture,self.registry,self.taxonomy)
+        with self.assertRaisesRegex(ValueError,'independent positive vector 171'):
+            pinned_vectors(fixture)
+
+    def test_wave16_false_inference(self):
+        fixture=deepcopy(self.good)
+        fixture[170]['classification']['visualize'].append('network')
+        fixture[170]['classification']['visualize'].sort()
+        validate(fixture,self.registry,self.taxonomy)
+        with self.assertRaisesRegex(ValueError,'false independent vector 171'):
+            pinned_vectors(fixture)
+
+    def test_initial_text_type(self):
+        self.check_fault(lambda x:x[0]['implementation'].update(initialText=None),'initial text type')
+
+    def test_missing_template_markers(self):
+        self.check_fault(lambda x:x[0]['accessibility'].pop('templateMarkers'),'accessibility marker schema')
 
     def test_same_story_wrong_semantic_tag(self):
         fixture=deepcopy(self.good)

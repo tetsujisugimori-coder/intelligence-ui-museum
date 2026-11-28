@@ -1,6 +1,6 @@
 # 研究基盤 R1：UI分類・実装棚卸し
 
-親 #81、作業 #83。固定Gitの #80 統合main、168展示・11従来分類。
+親 #81、作業 #83。固定Gitの #84 統合main、171展示・11従来分類。旧168件のバイトと固定根拠は保全。
 従来分類はそのまま。R1は研究用の別軸であり、公開UI・本番・Stage 3 HOLDを変更しない。
 
 | 層 | 現在のラベル | #81 初期案との対応 |
@@ -14,7 +14,7 @@
 
 ## ファイルと判定の範囲
 
-- [先行受入契約](ACCEPTANCE.md)、[分類台帳](taxonomy.json)、[付与根拠・個別ソース見解](annotations.json)
+- [168件先行受入契約](ACCEPTANCE.md)、[171件追補契約](ACCEPTANCE-171.md)、[分類台帳](taxonomy.json)、[付与根拠・個別ソース見解](annotations.json)
 - [行スキーマ](catalog.schema.json)、[棚卸し・合計](catalog/summary.json)、展示ID昇順の [JSONL台帳](catalog/)
 - [集計報告](REPORT.md)
 
@@ -22,7 +22,7 @@
 
 SOURCE_REVIEWED は個別動作ソースも読んだ行。TEMPLATE_REVIEWED は登録と実際の表示生成ソースの確認までとし、入力・出力・イベント・異常時などの動作を未検証ならUNKNOWN。SOURCE_READ はソースの規則で、実操作の合格を意味しない。USE_CASE は教材の利用設計。マークアップから読める属性のみ STATIC_ONLY、実機・実操作・ATは NOT_TESTED。空タグは確認済みの不在ではなく「現在の付与なし」。3つの横断未知（live accessibility、実AI選択・データ交換）は全行に残す。全行の操作ソースに根拠位置を付けたが、実機実測ではない。
 
-uses/basic:button/static-template はその展示のテンプレートにボタンがあるという関係。uses/composite:timeline/source-review は履歴などの追加構成のソース確認。contains/composite:form/basic:button はその展示中の包含。別展示との辺の推移・共起・API互換を意味しない。shares-key は同一展示内の表とグラフが同じ固定IDを使う場合だけで、132と139を根拠付きで収録した。132は確定tasksと下書きdraftsを分離し、139は並べ替えで選択IDを変えない。001はこの表/図の関連付けに非該当（N/A）、他の未審査の関連付けはUNKNOWN。166–168は教材として関連するが実行時の横断結合を実装していない。componentTokens に確認した基礎タグ/属性を保存し、relations は展示からも部品からも逆引きできる。仮説5軸は実測と別フィールド。外部への伝達をこのPRで実装しない。
+uses/basic:button/static-template はその展示のテンプレートにボタンがあるという関係。uses/composite:timeline/source-review は履歴などの追加構成のソース確認。contains/composite:form/basic:button はその展示中の包含。別展示との辺の推移・共起・API互換を意味しない。shares-key は同一展示内の表とグラフが同じ固定IDを使う場合だけで、132と139を根拠付きで収録した。132は確定tasksと下書きdraftsを分離し、139は並べ替えで選択IDを変えない。001はこの表/図の関連付けに非該当（N/A）、他の未審査の関連付けはUNKNOWN。166–171は教材として関連するが実行時の横断結合を実装していない。169–171では履歴と文字、170・171では詳細一覧と文字の動的な包含も収録する。componentTokens に確認した基礎タグ/属性を保存し、relations は展示からも部品からも逆引きできる。仮説5軸は実測と別フィールド。外部への伝達をこのPRで実装しない。
 
 ## 検証と更新手順
 
@@ -33,13 +33,13 @@ uses/basic:button/static-template はその展示のテンプレートにボタ�
     python3 scripts/verify-migration.py
     python3 apps/v11/verify.py
 
-Python 3.10以降、Node.js、Gitを使い、追加依存なし。固定コミットは取得済みであること。先にソース対応とラベル理由をレビューして、変更を明示的に再生成する場合だけ catalog.py --write。現行の固定ベースを保持し、第16便の受入後は基準commit/tree、ID/名称/分類の独立採取、表示分岐、差分台帳をレビューの上で更新する。169～171をこの基準に混入させない。
+Python 3.10以降、Node.js、Gitを使い、追加依存なし。固定コミットは取得済みであること。先にソース対応とラベル理由をレビューして、変更を明示的に再生成する場合だけ catalog.py --write。固定根拠は `catalog/summary.json` の `sourcePartitions` に示す。001–168は旧ベース由来・既存行のバイトを維持し、169–171は第16便を統合したベース由来の独立した差分区画とする。
 
 検査は次の三つを分離する。
 
-1. **固定168件の再現:** `catalog.py` は固定BASEのGit blobから採取し、現行チェックアウトの展示数とは無関係に台帳をバイト照合する。 `--probe-bindings` も固定blobを使う。
+1. **固定171件の再現:** `catalog.py` は固定Git blobから採取し、旧6分割のバイト固定と新3件の追加および全体集計を検査する。統合後の001–168の登録全項目と抽出テンプレートも旧版と比較する。`--probe-bindings` は従来の132等を旧固定blobで検査する。
 2. **R1 PRの変更範囲:** `python3 scripts/research/r1/check_scope.py --base <PRイベントのbase SHA> --head <PRイベントのhead SHA>`。指定HEADをチェックアウトして実行する。固定BASEのtreeと、固定BASEを祖先とする一意なmerge-baseを確認し、そこからHEADまでのコミット差分を検査する。共通祖先より後にbase側だけで増えた展示はR1差分ではない。R1側に混入した製品変更は、第16便と同じパスであっても拒否する。新旧のパスを別々に判定するため、rename検出を使わない。コミット前のローカル変更はこの検査の対象ではない。
-3. **製品の回帰:** `apps/v11/verify.py` はチェックアウトした製品を独立に検証する。固定台帳の再現とは別で、製品が171件になれば製品側の基準で検査する。
+3. **製品の回帰:** `apps/v11/verify.py` はチェックアウトした製品を独立に検証する。台帳再現とは別に、製品側の基準で171件を検査する。
 
 専用CIは読み取り権限、PRイベントで指定されたbase/headを使った固定PR HEADの取得と検証のみ。Pages、Sites、実AIへの接続を追加しない。既存CI回帰の結果は専用CIと別に報告する。R2の表示・相性判定、R3以降の模擬／実AIは対象外。
 

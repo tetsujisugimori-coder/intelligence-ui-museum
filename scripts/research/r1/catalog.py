@@ -15,6 +15,11 @@ DOC = ROOT / 'docs/research/r1'
 BASE = '691a52f4e61fb2b3bc5943c3544eda418d3c8ef7'
 TREE = 'c8df96120fc8235cafa362ad99c82f1d0efe676c'
 ORACLE = '2e4bd6c71695adc0fadc4a6651a57b6c8fd104d6f1a69cf848c9735a9661708a'
+INTEGRATED_BASE = '981c0c5f402272c12470b9901545c094c27c222c'
+INTEGRATED_TREE = 'f0f7c9f416020101f00420a464fe3c66edbac9c0'
+INTEGRATED_ORACLE = 'd24f87dda668bdb3845ebb23aa6af739467c34a3d7d59fcb5fb4cebe48d8c59c'
+HISTORICAL_CATALOG = '38432449ae4fbc2141a0e1260609997481674493'
+HISTORICAL_COUNT, INTEGRATED_COUNT = 168, 171
 UNKNOWN = 'UNKNOWN'
 SHARED_UNKNOWN = {'liveAccessibility','actualAiSelection','actualAiDataExchange'}
 AXES = ('selection', 'providedData', 'receiveOperation', 'combine', 'textFallback')
@@ -40,7 +45,9 @@ def profile(i):
     if i <= 165:
         key = ('Mapping', 'Join', 'Scope')[i - 163]
         return (f'wave14-{key.lower()}.js', f'wave14{key}Demo')
-    return ('wave15.js', 'wave15Demo')
+    if i <= HISTORICAL_COUNT:
+        return ('wave15.js', 'wave15Demo')
+    return ('wave16.js', 'wave16Demo')
 
 
 class Elements(HTMLParser):
@@ -121,23 +128,23 @@ def fail(condition, reason):
         raise ValueError(reason)
 
 
-def parse_registry(index):
+def parse_registry(index, count=HISTORICAL_COUNT, digest=ORACLE):
     match = re.search(r'<script id="dataset" type="application/json">([\s\S]*?)</script>', index)
     fail(match, 'registry missing')
     rows = json.loads(match[1])
-    fail([r['id'] for r in rows] == list(range(1,169)), 'baseline id range')
+    fail([r['id'] for r in rows] == list(range(1,count+1)), 'baseline id range')
     identity = [[r['id'], r['name'], r['category']] for r in rows]
     fail(len({r[2] for r in identity}) == 11, 'baseline category count')
-    fail(hashlib.sha256(json.dumps(identity,ensure_ascii=False,separators=(',',':')).encode()).hexdigest() == ORACLE, 'baseline oracle digest')
+    fail(hashlib.sha256(json.dumps(identity,ensure_ascii=False,separators=(',',':')).encode()).hexdigest() == digest, 'baseline oracle digest')
     return rows
 
 
-@lru_cache(maxsize=1)
-def fixed_sources():
-    fail(git('rev-parse', f'{BASE}^{{tree}}').decode().strip() == TREE, 'baseline tree mismatch')
-    paths = git('ls-tree','-r','--name-only',BASE,'apps/v11').decode().splitlines()
+@lru_cache(maxsize=2)
+def fixed_sources(base=BASE, tree=TREE):
+    fail(git('rev-parse', f'{base}^{{tree}}').decode().strip() == tree, 'baseline tree mismatch')
+    paths = git('ls-tree','-r','--name-only',base,'apps/v11').decode().splitlines()
     selected = [p for p in paths if re.fullmatch(r'apps/v11/(index.html|exhibits.js|wave[\w-]+\.js)',p)]
-    return {p.removeprefix('apps/v11/'):git('show',f'{BASE}:{p}').decode() for p in selected}
+    return {p.removeprefix('apps/v11/'):git('show',f'{base}:{p}').decode() for p in selected}
 
 
 @lru_cache(maxsize=512)
@@ -167,10 +174,10 @@ def probe_bindings(directory):
                                    cwd=ROOT, timeout=25)
 
 
-def read_templates(sources):
+def read_templates(sources, count):
     with materialized_sources(sources) as t:
         probe_bindings(t)
-        return json.loads(subprocess.check_output(['node',str(Path(__file__).with_name('read-templates.cjs')),t],
+        return json.loads(subprocess.check_output(['node',str(Path(__file__).with_name('read-templates.cjs')),t,str(count)],
                                                  cwd=ROOT, timeout=25))
 
 
@@ -199,6 +206,17 @@ DYNAMIC = {132: {'composite:table':'<table><caption>開始と期間は編集中'
            136: {'basic:select':"select('node','移動ノード'", 'composite:graphic':'<svg width="340"'},
            139: {'composite:chart':'<div data-graph', 'composite:table':'<table><thead><tr><th>選択',
                  'basic:checkbox':'data-key="table-${r.id}"', 'basic:select':"select('sort','表の順序'"}}
+WAVE16_DYNAMIC = {
+    'composite:timeline': '<ol data-w16-history aria-label="操作履歴">',
+    'basic:text': 'e.textContent=value;parent.append(e)',
+}
+WAVE16_LINKS = (169,170,171)
+for exhibit in WAVE16_LINKS:
+    DYNAMIC[exhibit] = dict(WAVE16_DYNAMIC)
+# The details list is created on mount rather than emitted in the static template.
+DYNAMIC[170]['composite:list'] = "const facts=add(d,'ul','')"
+DYNAMIC[171]['composite:list'] = "const listDetails=add(d,'ul','')"
+
 BINDINGS = {132: ('t.id','確定 tasks。編集中の開始/期間は別 drafts。確定/Undoで棒と表の確定終了日が同時に更新される。',
                   'data-gantt-row="','data-w3-bar="'),
             139: ('r.id','表示順を変えても selected は安定IDで保持。チャートの押下とチェック済み行が同一IDを参照。',
@@ -214,18 +232,24 @@ def binding_for(sources, file, i):
 
 
 def make():
-    sources = fixed_sources()
-    registry = parse_registry(sources['index.html'])
-    templates = read_templates(sources)
+    past = fixed_sources()
+    current = fixed_sources(INTEGRATED_BASE, INTEGRATED_TREE)
+    old_registry = parse_registry(past['index.html'])
+    registry = parse_registry(current['index.html'], INTEGRATED_COUNT, INTEGRATED_ORACLE)
+    fail(registry[:HISTORICAL_COUNT] == old_registry, 'historical product fields drift')
+    past_templates = read_templates(past, HISTORICAL_COUNT)
+    templates = read_templates(current, INTEGRATED_COUNT)
+    fail(templates[:HISTORICAL_COUNT] == past_templates, 'historical product templates drift')
     a = json.loads((DOC/'annotations.json').read_text())
     t = json.loads((DOC/'taxonomy.json').read_text())
     fail([x['id'] for x in templates] == [x['id'] for x in registry], 'template coverage')
     for source_key, kind in [('pattern','pattern'),('visualize','visualize'),('aiTeaching','ai')]:
         for k, ids in a[source_key].items():
-            fail(k in t[kind] and len(ids) == len(set(ids)) and all(type(i) is int and 1<=i<=168 for i in ids), 'invalid annotation tag / ID')
+            fail(k in t[kind] and len(ids) == len(set(ids)) and all(type(i) is int and 1<=i<=INTEGRATED_COUNT for i in ids), 'invalid annotation tag / ID')
     out=[]
     for x, markup in zip(registry,templates,strict=True):
         i=x['id']
+        sources=past if i<=HISTORICAL_COUNT else current
         fail(markup['name'] == x['name'], 'registry/template disagreement')
         file, symbol=profile(i)
         e=Elements(markup['stage'])
@@ -238,7 +262,7 @@ def make():
            'visualize':labels_for(i,a['visualize'])}
         # Documented additional dynamic structures may be absent from the unmounted template.
         for comp, ids in {'carousel':(75,79,89), 'timeline':(51,123,138,144,160,167),
-                          'chart':(121,126,132,139,143), 'workbench':tuple(range(124,169)),
+                          'chart':(121,126,132,139,143), 'workbench':tuple(range(124,INTEGRATED_COUNT+1)),
                           'card':(25,28,29,30,31,88,120)}.items():
             if i in ids and comp not in c['composite']:
                 c['composite'].append(comp)
@@ -252,6 +276,14 @@ def make():
         relations=[['uses',f'{kind}:{k}', ('static-template' if k in (e.basic if kind=='basic' else e.composite) else 'source-review')]
                    for kind in ('basic','composite') for k in c[kind]]
         relations += [['contains',f'composite:{p}',f'basic:{b}'] for p,b in sorted(e.contains)]
+        if i in WAVE16_LINKS:
+            # Entries are generated as textContent under the labeled history list.
+            relations.append(['contains','composite:timeline','basic:text'])
+            if i in (170,171):
+                # Deduplicate the static list/text relation if present.
+                relation=['contains','composite:list','basic:text']
+                if relation not in relations:
+                    relations.append(relation)
         if i in BINDINGS:
             relations.append(['shares-key','composite:chart','composite:table'])
         facts = {key:{'status':UNKNOWN,'value':None} for key in FIELDS}
@@ -279,7 +311,8 @@ def make():
 
 
 def validate(rows, registry, taxonomy):
-    sources=fixed_sources()
+    past=fixed_sources()
+    current=fixed_sources(INTEGRATED_BASE, INTEGRATED_TREE)
     annotations=json.loads((DOC/'annotations.json').read_text())
     fail(type(rows) is list and all(type(r) is dict and 'id' in r for r in rows), 'row type or missing ID')
     ids = [r['id'] for r in rows]
@@ -289,6 +322,7 @@ def validate(rows, registry, taxonomy):
     for row, fixed in zip(rows,registry,strict=True):
         fail(set(row)==READ_FIELDS, 'mandatory exhibit fields')
         i=row['id']
+        sources=past if i<=HISTORICAL_COUNT else current
         fail((row['name'],row['legacyCategory'])==(fixed['name'],fixed['category']), 'legacy identity drift')
         fail(isinstance(row['purpose'],str) and row['purpose'].strip(), 'purpose required')
         fail(row['status'] in {'SOURCE_REVIEWED','TEMPLATE_REVIEWED'}, 'invalid review status')
@@ -344,7 +378,12 @@ def validate(rows, registry, taxonomy):
                                  ({'sharedKeyBinding'} if row['binding']['status']==UNKNOWN else set()))
         fail(unknowns==expected_unknowns,'mandatory shared UNKNOWN / invalid unknown set')
         fail(all(impl[k]=={'status':'NOT_TESTED','value':None} for k in ('aiConnection','humanOperationTest')), 'unperformed activity promoted')
-        fail(row['accessibility']['status']=='STATIC_ONLY' and row['accessibility']['runtime']=='NOT_TESTED', 'accessibility promotion')
+        fail(isinstance(impl['initialText'],str), 'initial text type')
+        markers=row['accessibility']
+        fail(type(markers) is dict and set(markers)=={'status','runtime','templateMarkers'} and
+             type(markers['templateMarkers']) is list and all(type(m) is str for m in markers['templateMarkers']),
+             'accessibility marker schema')
+        fail(markers['status']=='STATIC_ONLY' and markers['runtime']=='NOT_TESTED', 'accessibility promotion')
 
 
 def pinned_vectors(rows):
@@ -355,8 +394,17 @@ def pinned_vectors(rows):
                        (106,'basic','slider'),(121,'visualize','statistics'),(121,'composite','chart'),
                        (132,'composite','table'),(134,'pattern','search'),(136,'basic','select'),
                        (136,'composite','graphic'),(137,'visualize','hierarchy'),(139,'composite','table'),
-                       (164,'visualize','workflow'),(168,'pattern','validation')):
+                       (164,'visualize','workflow'),(168,'pattern','validation'),
+                       (169,'basic','select'),(169,'visualize','workflow'),(169,'ai','handoff'),
+                       (170,'visualize','comparison'),(170,'composite','timeline'),
+                       (171,'basic','text-input'),(171,'pattern','search'),(171,'visualize','state-transition')):
         fail(has(i,kind,tag),f'missing independent positive vector {i} {tag}')
+    for i, name in ((169,'Error Routing Workbench'),(170,'Compensation Flow Simulator'),(171,'Dead Letter Queue Inspector')):
+        row=rows[i-1]
+        fail(row['name']==name and row['legacyCategory']=='インタラクション',f'bad Wave 16 identity {i}')
+        fail(['contains','composite:timeline','basic:text'] in row['relations'],f'missing Wave 16 history containment {i}')
+    for i in (170,171):
+        fail(['contains','composite:list','basic:text'] in rows[i-1]['relations'],f'missing Wave 16 detail containment {i}')
     for i in (132,139):
         fail(['shares-key','composite:chart','composite:table'] in rows[i-1]['relations'], f'missing independent binding {i}')
     for i in (157,158):
@@ -364,13 +412,17 @@ def pinned_vectors(rows):
     fail(rows[0]['binding']['status']=='N/A' and rows[135]['binding']['status']==UNKNOWN, 'binding NOT_APPLICABLE/UNKNOWN confusion')
     fail('履歴保持' in rows[158]['implementation']['state']['value'], 'missing decision history 159')
     for i,kind,tag in ((1,'visualize','workflow'),(24,'basic','select'),(121,'visualize','network'),
-                       (137,'visualize','spatial'),(168,'ai','select-ui')):
+                       (137,'visualize','spatial'),(168,'ai','select-ui'),(170,'ai','conversation'),(171,'visualize','network')):
         fail(not has(i,kind,tag),f'false independent vector {i} {tag}')
 
 
 def summary(rows, taxonomy):
     usage={k:dict(sorted((ref,sum(ref in r['classification'][k] for r in rows)) for ref in taxonomy[k])) for k in LEVELS}
-    return {'catalogVersion':PARSER_VERSION,'baseline':BASE,'tree':TREE,'exhibits':len(rows),
+    return {'catalogVersion':PARSER_VERSION,'baseline':INTEGRATED_BASE,'tree':INTEGRATED_TREE,'exhibits':len(rows),
+            'sourcePartitions':[{'fromId':1,'toId':HISTORICAL_COUNT,'baseline':BASE,'tree':TREE,
+                                 'retainedCatalogHead':HISTORICAL_CATALOG},
+                                {'fromId':HISTORICAL_COUNT+1,'toId':INTEGRATED_COUNT,
+                                 'baseline':INTEGRATED_BASE,'tree':INTEGRATED_TREE}],
             'legacyCategories':len({r['legacyCategory'] for r in rows}),
             'coverage':{status:sum(r['status']==status for r in rows) for status in ('SOURCE_REVIEWED','TEMPLATE_REVIEWED')},
             'unclassified':sum(not r['classification']['pattern'] for r in rows),
@@ -409,6 +461,10 @@ def main():
     validate(generated,registry,taxonomy)
     pinned_vectors(generated)
     values=files(generated,taxonomy)
+    for p,v in values.items():
+        if p.suffix=='.jsonl' and int(p.stem.split('-')[1])<=HISTORICAL_COUNT:
+            fail(v.encode()==git('show',f'{HISTORICAL_CATALOG}:{p.relative_to(ROOT)}'),
+                 f'historical catalog bytes drift: {p.name}')
     if args.write:
         for p,v in values.items():
             p.write_text(v,encoding='utf8')

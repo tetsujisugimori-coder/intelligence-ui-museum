@@ -17,5 +17,5 @@ for(const m of html.matchAll(/<script src="([^"]+)"\s*><\/script>/g)){
 const inline=html.slice(html.lastIndexOf('<script>')+8,html.lastIndexOf('</script>')).replace(/render\(\);syncMotion\(\);q\('#script-status'\)\.hidden=true;\s*$/,'');
 vm.runInContext(inline,box,{filename:'index-inline.js',timeout:1000});
 const records=vm.runInContext('items.map(x=>({id:x.id,name:x.name,description:(x.id>=127?museumDescription(x.name,descriptions):descriptions[x.name])??null,stage:demo(x)}))',box);
-if(records.length!==168||records.some(x=>!x.stage||/resource-missing/.test(x.stage)))throw Error('Missing exhibit');
+if(records.length!==Number(process.argv[3]??168)||records.some(x=>!x.stage||/resource-missing/.test(x.stage)))throw Error('Missing exhibit');
 process.stdout.write(JSON.stringify(records));
